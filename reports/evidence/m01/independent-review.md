@@ -1,23 +1,25 @@
-> 🧐 **Reality Checker** | Step 1/1 | 234.1s
+> 🧐 **事实核查员（Reality Checker）** | 步骤 1/1 | 耗时 234.1 秒
+
+以下为独立审查记录的中文译文；审查时的结论与后续修复记录分开保留。
 
 ---
 
-M0.1 review: **one P2 importer validation gap remains**. Current snapshot data and local Find Fuel behavior are supported by the available evidence.
+M0.1 审查结论：**当时仍有一项 P2 级导入器校验缺口。** 现有证据支持当前快照数据及本地查找加油站功能的行为。
 
-- **P2 — Manual OSM import can omit the publisher checksum.** [common.py:43](</Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/scripts/importer/common.py:43>) checks MD5 only when supplied; [pipeline.py:56](</Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/scripts/importer/pipeline.py:56>) does not require it. Removing `md5` from otherwise valid metadata silently bypasses the available Geofabrik checksum, contrary to the documented input contract. Require valid publisher MD5 for OSM imports and add missing/mismatched-checksum cases to the existing tests. **This does not invalidate the current snapshot:** its original acquisition evidence includes the matching publisher checksum.
+- **P2 — 手动导入 OSM 时可以省略发布方校验和。** [common.py:43](</Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/scripts/importer/common.py:43>) 仅在提供 MD5 时检查；[pipeline.py:56](</Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/scripts/importer/pipeline.py:56>) 未要求必须提供 MD5。从其他字段均有效的元数据中移除 `md5`，即可无提示地跳过现成的 Geofabrik 校验和，与文档规定的输入约定不符。应要求 OSM 导入提供有效的发布方 MD5，并在现有测试中补充校验和缺失、不匹配的用例。**这不会使当前快照失效：**原始获取证据中包含与文件匹配的发布方校验和。
 
-Independently verified through read-only inspection:
+通过只读检查独立确认：
 
-- All **141 prices and dates match the original workbook’s D/F/H columns**.
-- All **47 partition counts match the parent’s independent geometry results**; all **51 referenced artifacts match their hashes and byte counts**.
-- Frozen specifications and historical M0.0 reports are unchanged.
-- Existing final evidence records **32 unit, 28 Chromium and 15 importer tests passing**. Relevant source changes precede those records.
-- Inspected screenshots across all five locales plus desktop; no visible blocking layout defect found. Code and tests support explicit geolocation, stale-callback guards, manual search without fabricated distances, destination-only navigation, and UNKNOWN handling.
+- 全部 **141 项价格及日期均与原始工作簿的 D/F/H 列一致**。
+- 全部 **47 个分区的数量均与主代理独立几何核对的结果一致**；全部 **51 个引用产物的哈希和字节数均匹配**。
+- 审查时，冻结的规格文件和历史 M0.0 报告未改变。
+- 审查时已有的最终证据记录了 **32 项单元测试、28 项 Chromium 测试和 15 项导入器测试通过**。相关源码变更早于这些证据记录。
+- 已查看五种语言及桌面截图，未发现可见的阻断性布局缺陷。代码与测试支持主动定位、过期回调防护、不编造距离的手动搜索、只含目的地的导航和 `UNKNOWN` 处理。
 
-Remaining evidence limits are correctly disclosed: automated official acquisition returns **HTTP 403**; scheduled GitHub execution, an M0.1 deployment, Safari/real-device behavior, actual map handoff, and native-language safety review remain unverified.
+剩余证据限制已如实说明：自动获取官方数据返回 **HTTP 403**；GitHub 定时执行、M0.1 部署、Safari / 真机行为、实际跳转到地图应用，以及母语安全文案审核仍未验证。
 
-Recommendation: fix the checksum gate, record targeted verification, then close **local M0.1 acceptance only** and stop for user review. No writes, test/build execution, browser launches, or live requests were performed in this review.
+建议：修复校验和门槛，记录定向验证，然后仅完成 **M0.1 本地验收**，停下等待用户审核。本次审查未执行写入、测试、构建、浏览器启动或在线请求。
 
-## Parent resolution, 2026-09-30
+## 主代理修复记录，2026-09-30
 
-The P2 finding was reproduced: absent MD5 was accepted. `verified_input` now requires a valid 32-character publisher MD5 for Geofabrik input, compares it case-insensitively, and rejects missing, malformed or mismatched values. The regression first failed and then passed; all 16 importer/discovery tests pass. The original real PBF and publisher checksum were rechecked by a successful unchanged-input import; the published candidate manifest stayed unchanged. The independent reviewer did not rerun this fix; the parent performed the targeted verification. No other actionable findings were raised. Local M0.1 acceptance is closed; production/scheduled execution/official HTTP403 limits remain as reported.
+已复现该 P2 问题：缺失 MD5 的输入会被接受。`verified_input` 现要求 Geofabrik 输入必须提供有效的 32 字符发布方 MD5，比较时忽略大小写，并拒绝缺失、格式错误或不匹配的值。回归测试先失败后通过；全部 16 项导入器与来源发现测试通过。使用原始真实 PBF 和发布方校验和重新执行了相同输入导入，执行成功且候选清单保持不变。独立审查者未重新运行修复后的测试；定向验证由主代理完成。审查未提出其他需处理的问题。本地 M0.1 验收已完成；生产部署、定时执行和官方 HTTP 403 限制仍按报告保留。

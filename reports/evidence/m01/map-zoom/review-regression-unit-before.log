@@ -1,0 +1,31 @@
+
+> fuel-me-japan@0.0.0 test
+> vitest run --run tests/unit/map-scheduling.test.ts
+
+
+ RUN  v5.0.2 /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan
+
+ ❯ tests/unit/map-scheduling.test.ts (12 tests | 1 failed) 7ms
+   ❯ map zoom input queue (10)
+     × keeps an external view ahead of an old cluster activation 1ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/map-scheduling.test.ts > map zoom input queue > keeps an external view ahead of an old cluster activation
+AssertionError: expected "vi.fn()" to be called 1 times, but got 0 times
+ ❯ tests/unit/map-scheduling.test.ts:114:22
+    112|     state.queue.zoomTo(12, "stale-cluster"); state.queue.flush();
+    113|     state.finish();
+    114|     expect(overview).toHaveBeenCalledTimes(1);
+       |                      ^
+    115|     expect(state.apply).toHaveBeenCalledTimes(1);
+    116|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 11 passed (12)
+   Start at  13:49:19
+   Duration  78ms (transform 52%, tests 26%, import 16%, worker 6%)
+

@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { filterStations, isPriceStale, mapSearchUrl, navigationUrl, prefecturalPrices } from "../../src/lib/find-fuel";
+import { filterStations, isPriceStale, navigationUrl, prefecturalPrices } from "../../src/lib/find-fuel";
 import type { DataManifest, PriceFile, StationFile } from "../../src/lib/stations";
 
 const manifest: DataManifest = JSON.parse(readFileSync("public/data/manifest.json", "utf8"));
@@ -26,13 +26,6 @@ describe("Find Fuel user-facing helpers", () => {
     expect([...apple.searchParams]).toEqual([["daddr", `${destination.lat},${destination.lon}`], ["dirflg", "d"]]);
     expect(() => navigationUrl("google", { lat: NaN, lon: 139 })).toThrow();
     expect(() => navigationUrl("apple", { lat: 48.8, lon: 2.3 })).toThrow();
-  });
-  it("encodes manual map queries without allowing extra URL parameters", () => {
-    const query = "北海道 &origin=35.123456,139.123456";
-    const url = new URL(mapSearchUrl("google", query));
-    expect(url.searchParams.get("query")).toBe(`ガソリンスタンド ${query}`);
-    expect(url.searchParams.has("origin")).toBe(false);
-    expect(new URL(mapSearchUrl("apple")).searchParams.get("q")).toBe("gas station near me");
   });
   it("keeps unknown prefecture prices unavailable and separates all three fuels", () => {
     expect(prefecturalPrices(prices, "UNKNOWN").every((row) => row.record === undefined)).toBe(true);

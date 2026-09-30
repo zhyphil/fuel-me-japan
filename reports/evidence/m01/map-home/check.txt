@@ -1,0 +1,117 @@
+
+> fuel-me-japan@0.0.0 check
+> npm run lint && npm run typecheck && npm test && npm run build && npm run test:e2e
+
+
+> fuel-me-japan@0.0.0 lint
+> eslint . --max-warnings 0
+
+
+> fuel-me-japan@0.0.0 typecheck
+> tsc --noEmit
+
+
+> fuel-me-japan@0.0.0 test
+> vitest run
+
+
+ RUN  v5.0.2 /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan
+
+
+ Test Files  7 passed (7)
+      Tests  73 passed (73)
+   Start at  12:05:27
+   Duration  225ms (transform 56%, tests 28%, import 14%, worker 2%)
+
+
+> fuel-me-japan@0.0.0 build
+> vite build && tsx scripts/prerender.tsx
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 35 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                            0.78 kB │ gzip:   0.45 kB
+dist/assets/index-TV2-gwxL.css            27.34 kB │ gzip:   9.52 kB
+dist/assets/source-registry-COQYOJk0.js    2.88 kB │ gzip:   1.24 kB
+dist/assets/leaflet-src-Cp2JfsEa.js      148.73 kB │ gzip:  43.37 kB
+dist/assets/index-BYw2iNOe.js            321.57 kB │ gzip: 101.63 kB
+
+✓ built in 99ms
+Prerendered five locales + English root; source registry validated; provenance emitted.
+
+> fuel-me-japan@0.0.0 test:e2e
+> playwright test
+
+[WebServer] (node:72256) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 48 tests using 8 workers
+
+(node:72260) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:72265) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:72262) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:72259) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:72261) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:72258) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:72263) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:72264) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   4 tests/e2e/find-fuel.spec.ts:163:3 › location denied permits manual fallback (610ms)
+  ✓   6 tests/e2e/find-fuel.spec.ts:174:1 › missing geolocation API and out-of-Japan location do not fetch stations (672ms)
+  ✓   8 tests/e2e/find-fuel.spec.ts:163:3 › location unavailable permits manual fallback (697ms)
+  ✓   1 tests/e2e/find-fuel.spec.ts:163:3 › location timeout permits manual fallback (761ms)
+  ✓   2 tests/e2e/find-fuel.spec.ts:187:1 › watchdog timeout rejects a late position and allows a fresh request (789ms)
+  ✓   5 tests/e2e/find-fuel.spec.ts:64:1 › manual prefecture fetches one region; city/address search and detail never invent distance (851ms)
+  ✓   9 tests/e2e/find-fuel.spec.ts:225:1 › station load failure retries; an older retry response cannot replace a newer prefecture (383ms)
+  ✓  10 tests/e2e/find-fuel.spec.ts:250:1 › empty search stays on site and recovers without invented stations or coordinates (336ms)
+  ✓   7 tests/e2e/find-fuel.spec.ts:200:1 › late location cannot replace manual choice; cancel, retry and close reject stale callbacks (1.0s)
+  ✓   3 tests/e2e/find-fuel.spec.ts:119:1 › explicit mocked location sorts real stations; navigation sends destination only and origin stays private (1.2s)
+  ✓  11 tests/e2e/find-fuel.spec.ts:263:1 › price failure does not block navigation; retry shows dated stale reference (496ms)
+  ✓  17 tests/e2e/find-fuel.spec.ts:307:1 › empty nearby coverage offers manual search without external map links or claiming no stations exist (352ms)
+  ✓  13 tests/e2e/find-fuel.spec.ts:280:3 › zh-Hant list/detail fit 320 and 390 pixels, retain Japanese labels and capture screenshots (741ms)
+  ✓  18 tests/e2e/find-fuel.spec.ts:320:1 › station request retry succeeds with the original real partition (365ms)
+  ✓  14 tests/e2e/find-fuel.spec.ts:280:3 › ko list/detail fit 320 and 390 pixels, retain Japanese labels and capture screenshots (755ms)
+  ✓  12 tests/e2e/find-fuel.spec.ts:280:3 › en list/detail fit 320 and 390 pixels, retain Japanese labels and capture screenshots (871ms)
+  ✓  15 tests/e2e/find-fuel.spec.ts:280:3 › zh-Hans list/detail fit 320 and 390 pixels, retain Japanese labels and capture screenshots (727ms)
+  ✓  16 tests/e2e/find-fuel.spec.ts:280:3 › th list/detail fit 320 and 390 pixels, retain Japanese labels and capture screenshots (728ms)
+  ✓  19 tests/e2e/find-fuel.spec.ts:335:1 › back from detail discards its pending price response before another prefecture opens (581ms)
+  ✓  20 tests/e2e/find-fuel.spec.ts:387:3 › en shows translated recorded hours and an optional unchanged original (548ms)
+  ✓  22 tests/e2e/find-fuel.spec.ts:387:3 › ko shows translated recorded hours and an optional unchanged original (517ms)
+  ✓  21 tests/e2e/find-fuel.spec.ts:387:3 › zh-Hant shows translated recorded hours and an optional unchanged original (548ms)
+  ✓  23 tests/e2e/find-fuel.spec.ts:387:3 › zh-Hans shows translated recorded hours and an optional unchanged original (525ms)
+  ✓  25 tests/e2e/find-fuel.spec.ts:405:1 › unsupported hours retain all rules visibly with a localized explanation (413ms)
+  ✓  26 tests/e2e/find-fuel.spec.ts:416:1 › absent hours stay unknown without offering an invented schedule (429ms)
+  ✓  27 tests/e2e/foundation.spec.ts:9:3 › mobile switching and reload: en (396ms)
+  ✓  34 tests/e2e/foundation.spec.ts:136:1 › shipped registry and build provenance match the M0.1 ingestion manifest (50ms)
+  ✓  24 tests/e2e/find-fuel.spec.ts:387:3 › th shows translated recorded hours and an optional unchanged original (649ms)
+  ✓  28 tests/e2e/foundation.spec.ts:9:3 › mobile switching and reload: zh-Hant (529ms)
+  ✓  32 tests/e2e/foundation.spec.ts:69:1 › localized static HTML is useful without JavaScript (272ms)
+  ✓  33 tests/e2e/foundation.spec.ts:91:1 › map home requests only data indexes and map configuration without location, storage or analytics (391ms)
+  ✓  29 tests/e2e/foundation.spec.ts:9:3 › mobile switching and reload: ko (502ms)
+  ✓  30 tests/e2e/foundation.spec.ts:9:3 › mobile switching and reload: zh-Hans (505ms)
+  ✓  31 tests/e2e/foundation.spec.ts:9:3 › mobile switching and reload: th (539ms)
+  ✓  40 tests/e2e/map-home.spec.ts:138:1 › production CSP injected into local HTML permits Leaflet styles, initialization and approved tiles (317ms)
+  ✓  36 tests/e2e/map-home.spec.ts:34:1 › overview counts match every manifest region; selecting and panning load only its partition (655ms)
+  ✓  35 tests/e2e/foundation.spec.ts:161:1 › desktop layout and keyboard navigation remain usable (713ms)
+  ✓  38 tests/e2e/map-home.spec.ts:66:1 › query synchronizes map and list, marker opens the real record, and Escape restores marker focus (537ms)
+  ✓  39 tests/e2e/map-home.spec.ts:115:1 › failed tile images retain list access and explicit retry reloads valid offline PNGs (557ms)
+  ✓  41 tests/e2e/map-home.spec.ts:158:3 › map and detail at 320px keep attribution and sheet visible without horizontal overflow (581ms)
+  ✓  45 tests/e2e/map-home.spec.ts:200:3 › returning to overview via cancel rejects a late station response (328ms)
+  ✓  42 tests/e2e/map-home.spec.ts:158:3 › map and detail at 390px keep attribution and sheet visible without horizontal overflow (613ms)
+  ✓  44 tests/e2e/map-home.spec.ts:180:1 › map configuration failure allows list fallback and explicit initialization retry (379ms)
+  ✓  46 tests/e2e/map-home.spec.ts:200:3 › returning to overview via overview rejects a late station response (329ms)
+  ✓  47 tests/e2e/map-home.spec.ts:225:1 › coincident Fukuoka and Saga summary anchors offer both regions instead of endless zoom (395ms)
+  ✓  48 tests/e2e/map-home.spec.ts:239:1 › overview tile retry uses integer XYZ coordinates (388ms)
+  ✓  43 tests/e2e/map-home.spec.ts:158:3 › map and detail at 1280px keep attribution and sheet visible without horizontal overflow (831ms)
+  ✓  37 tests/e2e/map-home.spec.ts:92:1 › cluster counts exceed list pagination and all 30 identical-coordinate members remain accessible (3.8s)
+
+  48 passed (7.2s)

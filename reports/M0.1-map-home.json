@@ -1,0 +1,31 @@
+{
+  "milestone": "M0.1",
+  "change": "地图首页与站点详情",
+  "date": "2026-09-30",
+  "branch": "codex/m0-1-find-fuel",
+  "localAcceptance": "PASS",
+  "checks": {
+    "lint": "PASS",
+    "typecheck": "PASS",
+    "unitTests": 73,
+    "build": "PASS",
+    "browserTests": 48,
+    "independentReview": "两项问题已复现、修复并回归；最终差异由主代理核验",
+    "tileCoordinates": "重试使用整数 XYZ 且不越界；回归先失败后通过，真实底图预览正常"
+  },
+  "dataChanged": false,
+  "deployed": false,
+  "committedOrPushed": false,
+  "limits": [
+    "仅显示当前已加载地区，拖动不自动加载邻省",
+    "自动化底图使用离线 PNG，真实服务不保证持续可用",
+    "不提供实时站点售价或实时营业判断",
+    "未进入 M0.2"
+  ],
+  "evidence": "reports/evidence/m01/map-home/",
+  "latestReviewChange": {
+    "summary": "定位改为地图右下角准星图标，保留列表入口和五语言无障碍名称",
+    "checks": "完整检查通过：73项单元测试、48项浏览器测试及lint/typecheck/build",
+    "evidence": "reports/evidence/m01/location-icon/"
+  }
+}

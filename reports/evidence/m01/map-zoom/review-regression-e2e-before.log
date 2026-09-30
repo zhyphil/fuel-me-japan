@@ -1,0 +1,72 @@
+
+> fuel-me-japan@0.0.0 test:e2e
+> playwright test tests/e2e/map-zoom.spec.ts --grep queued controls clamp|an old cluster
+
+[WebServer] (node:1054) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 2 workers
+
+(node:1055) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1056) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/map-zoom.spec.ts:195:1 › queued controls clamp at both zoom limits and can reverse away from them (1.7s)
+  ✘  2 tests/e2e/map-zoom.spec.ts:220:1 › an old cluster cannot override returning to overview during animation (1.8s)
+
+
+  1) tests/e2e/map-zoom.spec.ts:195:1 › queued controls clamp at both zoom limits and can reverse away from them 
+
+    Error: expect(received).toBeCloseTo(expected, precision)
+
+    Expected: 19
+    Received: 18
+
+    Expected precision:    3
+    Expected difference: < 0.0005
+    Received difference:   1
+
+      204 |   await expect(page.locator(".leaflet-zoom-anim")).toBeAttached();
+      205 |   await zoomIn.press("Enter"); await settle(page);
+    > 206 |   expect(await tileZoom(page)).toBeCloseTo(19, 3);
+          |                                ^
+      207 |   for (let index = 0; index < 22; index++) await zoomOut.press("Enter");
+      208 |   await settle(page);
+      209 |   expect(await tileZoom(page)).toBeCloseTo(2, 3);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/map-zoom.spec.ts:206:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/map-zoom-queued-controls-c-2f785--can-reverse-away-from-them/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/map-zoom-queued-controls-c-2f785--can-reverse-away-from-them/error-context.md
+
+  2) tests/e2e/map-zoom.spec.ts:220:1 › an old cluster cannot override returning to overview during animation 
+
+    Error: expect(received).toBeCloseTo(expected, precision)
+
+    Expected: 4.500000446440399
+    Received: 9.50000146657917
+
+    Expected precision:    3
+    Expected difference: < 0.0005
+    Received difference:   5.00000102013877
+
+      232 |   await cluster.press("Enter");
+      233 |   await settle(page);
+    > 234 |   expect(await tileZoom(page)).toBeCloseTo(overviewZoom, 3);
+          |                                ^
+      235 |   await expect(page.locator(".map-pin-station, .map-pin-cluster")).toHaveCount(0);
+      236 |   await expect(page.locator(".map-pin-region, .map-pin-region-group").first()).toBeVisible();
+      237 | });
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/map-zoom.spec.ts:234:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/map-zoom-an-old-cluster-ca-25a89-o-overview-during-animation/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/map-zoom-an-old-cluster-ca-25a89-o-overview-during-animation/error-context.md
+
+  2 failed
+    tests/e2e/map-zoom.spec.ts:195:1 › queued controls clamp at both zoom limits and can reverse away from them 
+    tests/e2e/map-zoom.spec.ts:220:1 › an old cluster cannot override returning to overview during animation 

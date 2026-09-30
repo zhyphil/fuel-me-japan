@@ -1,0 +1,61 @@
+
+> fuel-me-japan@0.0.0 check
+> npm run lint && npm run typecheck && npm test && npm run build && npm run test:e2e
+
+
+> fuel-me-japan@0.0.0 lint
+> eslint . --max-warnings 0
+
+
+> fuel-me-japan@0.0.0 typecheck
+> tsc --noEmit
+
+
+> fuel-me-japan@0.0.0 test
+> vitest run
+
+
+ RUN  v5.0.2 /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan
+
+
+ Test Files  7 passed (7)
+      Tests  73 passed (73)
+   Start at  11:47:35
+   Duration  234ms (transform 54%, tests 30%, import 14%, worker 2%)
+
+
+> fuel-me-japan@0.0.0 build
+> vite build && tsx scripts/prerender.tsx
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 35 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                            0.78 kB │ gzip:   0.45 kB
+dist/assets/index-Ccm-9Pj6.css            27.03 kB │ gzip:   9.47 kB
+dist/assets/source-registry-CbQuL2bc.js    2.88 kB │ gzip:   1.25 kB
+dist/assets/leaflet-src-Ch2rAJcF.js      148.73 kB │ gzip:  43.37 kB
+dist/assets/index-D9x9OJEG.js            320.41 kB │ gzip: 101.36 kB
+
+✓ built in 102ms
+node:net:1987
+      const error = new UVExceptionWithHostPort(rval, 'listen', address, port);
+                    ^
+
+Error: listen EPERM: operation not permitted /var/folders/x3/4w18d5zd22b9fgwfx232whhr0000gn/T/tsx-501/66510.pipe
+    at Server.setupListenHandle [as _listen2] (node:net:1987:21)
+    at listenInCluster (node:net:2066:12)
+    at Server.listen (node:net:2188:5)
+    at file:///Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel%20Me%20Japan/node_modules/tsx/dist/cli.mjs:53:32174
+    at new Promise (<anonymous>)
+    at createIpcServer (file:///Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel%20Me%20Japan/node_modules/tsx/dist/cli.mjs:53:32152)
+    at async file:///Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel%20Me%20Japan/node_modules/tsx/dist/cli.mjs:55:542 {
+  code: 'EPERM',
+  errno: -1,
+  syscall: 'listen',
+  address: '/var/folders/x3/4w18d5zd22b9fgwfx232whhr0000gn/T/tsx-501/66510.pipe',
+  port: -1
+}
+
+Node.js v24.18.0

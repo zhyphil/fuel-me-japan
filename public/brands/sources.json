@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "brand": "ENEOS",
+      "assetPath": "/brands/eneos.svg",
+      "owner": "ENEOS Holdings, Inc.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:ENEOS_logo.svg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/5/54/ENEOS_logo.svg",
+      "sha256": "34bf2fb977e3778b5ac7c4e8e1a905a980d1eaee3f6de07cf3ef72467a44d52a",
+      "purpose": "在站点标记与详情中识别数据所记录的品牌，不表示合作或背书。",
+      "licenseReference": "https://commons.wikimedia.org/wiki/File:ENEOS_logo.svg#Licensing",
+      "licenseAsDeclared": "PD-textlogo",
+      "allowedUseAssessment": "来源页面将该文件标注为简单文字或几何图形标识；按用户要求用于品牌识别，保留原图，不替换或推断站点品牌，商标权仍归各品牌。",
+      "attribution": "ENEOS Holdings, Inc. / Wikimedia Commons",
+      "refreshPolicy": "人工核对来源与品牌映射后更新，不运行时请求第三方图标服务。",
+      "reviewedAt": "2026-09-30",
+      "transformationVersion": "original-svg-v1",
+      "symbolAssetPath": "/brands/eneos-symbol.svg",
+      "symbolSha256": "cd6ed201e64afc02fbc4a953d747ce5a62c1215e946fe11d5a680506c926f2a2",
+      "symbolTransformation": {
+        "version": "symbol-only-v1",
+        "description": "按用户要求提取完整独立图标及其内部图案、字样和渐变，移除外侧品牌大字；保留原文件另存，视框留少量余量避免裁切。",
+        "sourceElementIds": [
+          "use71",
+          "use73",
+          "use75",
+          "use77",
+          "use79",
+          "use81",
+          "use83",
+          "use85",
+          "use87",
+          "use89",
+          "use91",
+          "use93",
+          "use95",
+          "use97",
+          "use99",
+          "use101",
+          "use103",
+          "use105",
+          "use107",
+          "use109",
+          "use111",
+          "use113",
+          "use115",
+          "use117",
+          "use119",
+          "use121",
+          "use123",
+          "use125",
+          "use127",
+          "use129",
+          "use131",
+          "use133",
+          "use135",
+          "use137",
+          "use139",
+          "use141",
+          "use143",
+          "use145",
+          "use147",
+          "use149",
+          "use151",
+          "use153"
+        ],
+        "sourceBounds": [
+          84.84,
+          231.93,
+          42.6,
+          42.6
+        ]
+      }
+    },
+    {
+      "brand": "Cosmo Oil",
+      "assetPath": "/brands/cosmo.svg",
+      "owner": "Cosmo Oil Co., Ltd.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cosmo_Oil_company_logo.svg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Cosmo_Oil_company_logo.svg",
+      "sha256": "78a5b3920f15cfefe0edd95284a9bb48dc5c7981707776e8ae5e0aed94aa0562",
+      "purpose": "在站点标记与详情中识别数据所记录的品牌，不表示合作或背书。",
+      "licenseReference": "https://commons.wikimedia.org/wiki/File:Cosmo_Oil_company_logo.svg#Licensing",
+      "licenseAsDeclared": "PD-textlogo",
+      "allowedUseAssessment": "来源页面将该文件标注为简单文字或几何图形标识；按用户要求用于品牌识别，保留原图，不替换或推断站点品牌，商标权仍归各品牌。",
+      "attribution": "Cosmo Oil Co., Ltd. / Wikimedia Commons",
+      "refreshPolicy": "人工核对来源与品牌映射后更新，不运行时请求第三方图标服务。",
+      "reviewedAt": "2026-09-30",
+      "transformationVersion": "original-svg-v1",
+      "symbolAssetPath": "/brands/cosmo-symbol.svg",
+      "symbolSha256": "24c101c993663ed7abbc7e9b8892c4a03f6fc0458b5b761eddd698c84af5f065",
+      "symbolTransformation": {
+        "version": "symbol-only-v1",
+        "description": "按用户要求提取完整独立图标及其内部图案、字样和渐变，移除外侧品牌大字；保留原文件另存，视框留少量余量避免裁切。",
+        "sourceElementIds": [
+          "path5-5",
+          "path7-2",
+          "path9-3",
+          "path11-1",
+          "path13-6",
+          "path15-8"
+        ],
+        "sourceBounds": [
+          223.99,
+          385,
+          23.34,
+          23.34
+        ]
+      }
+    }
+  ]
+}

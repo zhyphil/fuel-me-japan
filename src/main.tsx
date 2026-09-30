@@ -1,6 +1,7 @@
 import { createRoot, hydrateRoot } from "react-dom/client";
 import { App } from "./App";
 import { localeFromPath, messages } from "./i18n";
+import "leaflet/dist/leaflet.css";
 import "./styles.css";
 const locale = localeFromPath(window.location.pathname);
 document.documentElement.lang = locale;

@@ -1,0 +1,131 @@
+
+> fuel-me-japan@0.0.0 test
+> vitest run tests/unit/opening-hours.test.ts -t user example
+
+
+ RUN  v5.0.2 /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan
+
+ ❯ tests/unit/opening-hours.test.ts (32 tests | 5 failed | 27 skipped) 6ms
+   ❯ recorded opening hours display (32)
+     × translates the user example into en without dropping date exceptions 4ms
+     × translates the user example into zh-Hant without dropping date exceptions 0ms
+     × translates the user example into ko without dropping date exceptions 0ms
+     × translates the user example into zh-Hans without dropping date exceptions 0ms
+     × translates the user example into th without dropping date exceptions 0ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/opening-hours.test.ts > recorded opening hours display > translates the user example into en without dropping date exceptions
+AssertionError: expected { kind: 'raw', …(1) } to deeply equal { kind: 'translated', lines: [ …(3) ] }
+
+- Expected
++ Received
+
+  {
+-   "kind": "translated",
++   "kind": "raw",
+    "lines": [
+-     "Monday–Saturday: 08:00–18:00",
+-     "Sunday: Closed",
+-     "January 1–January 3: Closed",
++     "Mo-Sa 08:00-18:00; Su off; Jan 01-03 off",
+    ],
+  }
+
+ ❯ tests/unit/opening-hours.test.ts:16:49
+     14| describe("recorded opening hours display", () => {
+     15|   it.each(locales)("translates the user example into %s without droppi…
+     16|     expect(formatOpeningHours(example, locale)).toEqual({ kind: "trans…
+       |                                                 ^
+     17|   });
+     18|   it.each(locales)("localizes 24/7 in %s", (locale) => {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/5]⎯
+
+ FAIL  tests/unit/opening-hours.test.ts > recorded opening hours display > translates the user example into zh-Hant without dropping date exceptions
+ FAIL  tests/unit/opening-hours.test.ts > recorded opening hours display > translates the user example into zh-Hans without dropping date exceptions
+AssertionError: expected { kind: 'raw', …(1) } to deeply equal { kind: 'translated', lines: [ …(3) ] }
+
+- Expected
++ Received
+
+  {
+-   "kind": "translated",
++   "kind": "raw",
+    "lines": [
+-     "星期一至星期六：08:00–18:00",
+-     "星期日：休息",
+-     "1月1日至1月3日：休息",
++     "Mo-Sa 08:00-18:00; Su off; Jan 01-03 off",
+    ],
+  }
+
+ ❯ tests/unit/opening-hours.test.ts:16:49
+     14| describe("recorded opening hours display", () => {
+     15|   it.each(locales)("translates the user example into %s without droppi…
+     16|     expect(formatOpeningHours(example, locale)).toEqual({ kind: "trans…
+       |                                                 ^
+     17|   });
+     18|   it.each(locales)("localizes 24/7 in %s", (locale) => {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/5]⎯
+
+ FAIL  tests/unit/opening-hours.test.ts > recorded opening hours display > translates the user example into ko without dropping date exceptions
+AssertionError: expected { kind: 'raw', …(1) } to deeply equal { kind: 'translated', lines: [ …(3) ] }
+
+- Expected
++ Received
+
+  {
+-   "kind": "translated",
++   "kind": "raw",
+    "lines": [
+-     "월요일–토요일: 08:00–18:00",
+-     "일요일: 휴무",
+-     "1월 1일–1월 3일: 휴무",
++     "Mo-Sa 08:00-18:00; Su off; Jan 01-03 off",
+    ],
+  }
+
+ ❯ tests/unit/opening-hours.test.ts:16:49
+     14| describe("recorded opening hours display", () => {
+     15|   it.each(locales)("translates the user example into %s without droppi…
+     16|     expect(formatOpeningHours(example, locale)).toEqual({ kind: "trans…
+       |                                                 ^
+     17|   });
+     18|   it.each(locales)("localizes 24/7 in %s", (locale) => {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/5]⎯
+
+ FAIL  tests/unit/opening-hours.test.ts > recorded opening hours display > translates the user example into th without dropping date exceptions
+AssertionError: expected { kind: 'raw', …(1) } to deeply equal { kind: 'translated', lines: [ …(3) ] }
+
+- Expected
++ Received
+
+  {
+-   "kind": "translated",
++   "kind": "raw",
+    "lines": [
+-     "วันจันทร์–วันเสาร์: 08:00–18:00",
+-     "วันอาทิตย์: ปิด",
+-     "1 มกราคม–3 มกราคม: ปิด",
++     "Mo-Sa 08:00-18:00; Su off; Jan 01-03 off",
+    ],
+  }
+
+ ❯ tests/unit/opening-hours.test.ts:16:49
+     14| describe("recorded opening hours display", () => {
+     15|   it.each(locales)("translates the user example into %s without droppi…
+     16|     expect(formatOpeningHours(example, locale)).toEqual({ kind: "trans…
+       |                                                 ^
+     17|   });
+     18|   it.each(locales)("localizes 24/7 in %s", (locale) => {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/5]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  5 failed | 27 skipped (32)
+   Start at  11:18:57
+   Duration  102ms (transform 61%, import 22%, tests 12%, worker 4%)

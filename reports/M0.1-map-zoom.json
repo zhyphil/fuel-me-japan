@@ -1,0 +1,84 @@
+{
+  "date": "2026-09-30",
+  "status": "PASS",
+  "scope": "已授权M0.1地图交互的局部性能修复；无新里程碑功能。",
+  "workspace": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan",
+  "preview": "http://127.0.0.1:4174/zh-Hans/",
+  "summary": "保留缩放动画期间的连续输入，合并重复绘制、缓存聚合计算并复用地图标记。",
+  "checks": {
+    "lint": "PASS",
+    "typecheck": "PASS",
+    "unit": {
+      "status": "PASS",
+      "passed": 138
+    },
+    "build": "PASS",
+    "browser": {
+      "status": "PASS",
+      "passed": 82
+    },
+    "command": "npm run check",
+    "exitCode": 0
+  },
+  "performance": {
+    "说明": "相同东京818条真实站点记录，1280×900视口，离线瓦片；对比浏览器自动化的输入保留及DOM复用。",
+    "before": {
+      "wheel": {
+        "initial": 5.500000446440399,
+        "singleDelta": 0.24999884112390536,
+        "pairDelta": 0.24999884112390536,
+        "note": "固定视口与东京818条真实记录；离线瓦片；第二次等量输入发生在第一次动画中。"
+      },
+      "marker": {
+        "added": 3,
+        "removed": 3,
+        "before": 3,
+        "after": 3,
+        "comparable": 3,
+        "retained": 0,
+        "note": "相同地图标记身份在一次键盘平移后是否保留同一DOM元素。"
+      }
+    },
+    "after": {
+      "wheel": {
+        "initial": 5.500000446440399,
+        "singleDelta": 0.24999884112390536,
+        "pairDelta": 0.4999995535596007,
+        "note": "固定视口与东京818条真实记录；离线瓦片；第二次等量输入发生在第一次动画中。"
+      },
+      "marker": {
+        "added": 0,
+        "removed": 0,
+        "before": 3,
+        "after": 3,
+        "comparable": 3,
+        "retained": 3,
+        "note": "相同地图标记身份在一次键盘平移后是否保留同一DOM元素。"
+      }
+    },
+    "限制": "未测量真实Mac触控板的人手手势，也不代表固定60FPS或瓦片网络速度。CDP前后聚合点从无动画改为有动画，不做直接CPU降幅比较。"
+  },
+  "review": {
+    "status": "RESOLVED",
+    "p1": 0,
+    "p2Found": 2,
+    "p2Resolved": 2,
+    "note": "独立审查针对修复前版本；根代理修复并以新增回归及最终完整检查验收，未再次独立复审。"
+  },
+  "protectedFiles": {
+    "verified": 84,
+    "changed": []
+  },
+  "delivery": {
+    "commit": "NOT_RUN",
+    "push": "NOT_RUN",
+    "deploy": "NOT_RUN",
+    "note": "保留此前工作区变更；交付本地可审核版本。"
+  },
+  "limitations": [
+    "自动化测试覆盖滚轮、按钮、触摸事件；未完成真实Mac触控板的人手体验测量。",
+    "原有瓦片网络加载速度、数据范围与价格来源限制保持不变。",
+    "CDP追踪仅作辅助诊断，不代表所有设备性能或稳定60FPS。"
+  ],
+  "evidence": "reports/evidence/m01/map-zoom/"
+}

@@ -1,0 +1,19 @@
+{
+  "capturedAt": "2026-09-30T11:30:38.777580+00:00",
+  "description": "最终完整检查通过后记录的本次改动文件哈希；代码在检查后未再次修改。",
+  "digest": "0d59be7f2a2919d70258a1aeac74db7fed597cb818d78913f4a8079be2c8cb17",
+  "files": {
+    "src/styles.css": "43b1f52ac0cee9626e2f3be0e07ab96b4a0e1eb773c6902a07d1268185d3824f",
+    "src/locales/en.json": "db6b27d69c740ad0a5b9bd7920cc9f24c70240e138789a77534a1b5b437ac915",
+    "src/locales/zh-Hans.json": "1b332d2d98e86721f0dfd1ceb72156de40667f63520bc1e0013ab7c8e87d5003",
+    "src/locales/ko.json": "3553417158ccaf436dceb219e352914449aa15e300a2603c337e74d258e09496",
+    "src/locales/th.json": "82f2fd717dbbb74001bc42148af8bf9ea65bc896b2044510b2936fb3f5d02fe6",
+    "src/locales/zh-Hant.json": "771f1d4620ac717ce228348f6dda58e09b10f9a627d5c775651ceda745e32135",
+    "src/components/FindFuel.tsx": "54a7fef7618df10613a448ac2f9ef15fac0a19a7049ec256c0dc19541ee88372",
+    "src/components/Icon.tsx": "bc9a1fb38dbd64f6f87f06f4003348f62fe6eebcd370da35a91c9ff23b646015",
+    "src/lib/station-filters.ts": "90b2c8a5d44dd1112494aacb91280c39ce81952fb71f7dfc7c9f5b542d7c5cec",
+    "src/components/StationFilters.tsx": "f00869ba6a63de28839eed2746e13d07353718bfd4b69db82cf5d655e530f3f9",
+    "tests/unit/station-filters.test.ts": "3e4df31a6e80be40d7b4810209fef3c1e47d5b22222013ba2491db0b6b56a412",
+    "tests/e2e/station-filters.spec.ts": "4d428367566f3f3804f016cade278d04f1ccce45b5928402254ae2d22ea3549f"
+  }
+}

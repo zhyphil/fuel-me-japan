@@ -24,7 +24,7 @@
   ],
   "otherDnsRecordsObserved": {
     "count": 5,
-    "note": "Mail-related records appeared during setup; this task did not create, edit or remove them. Mail delivery was not tested."
+    "note": "配置期间出现了邮件相关记录；本任务未创建、编辑或删除这些记录，也未测试邮件投递。"
   },
   "customDomains": [
     {

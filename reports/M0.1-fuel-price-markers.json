@@ -1,0 +1,86 @@
+{
+  "date": "2026-09-30",
+  "change": "油种偏好与站点价格标记",
+  "branch": "codex/m0-1-find-fuel",
+  "localUiAcceptance": "PASS",
+  "stationPriceIntegration": "BLOCKED",
+  "deployment": "NOT_DEPLOYED",
+  "summary": "本地品牌标记、油种选择及记忆、灰色未知价格显示已完成；真实单站油价来源尚未接入。",
+  "checks": {
+    "command": "npm run check",
+    "exitCode": 0,
+    "lint": "PASS",
+    "typecheck": "PASS",
+    "unitTestFiles": 10,
+    "unitTests": 107,
+    "build": "PASS",
+    "browserTests": 53,
+    "failed": 0,
+    "skipped": 0,
+    "protectedFilesUnchanged": 84
+  },
+  "stationCount": 16454,
+  "stationQuoteCount": 0,
+  "prefecturalReferenceCount": 141,
+  "brandLogos": [
+    "ENEOS",
+    "Cosmo Oil"
+  ],
+  "priceComparison": "同油种、都道府县、来源、口径、单位与日本观察日内，至少3站和3档价位；低绿、中橙、高红，同价同色；目前仅合成测试验证。",
+  "preference": "主动选择后仅在本机保存燃油枚举，不保存位置或车辆信息。",
+  "review": "独立审查的测试JSON导入问题与实际预览的品牌裁切问题已修复，完整检查通过。",
+  "deployed": false,
+  "committedOrPushed": false,
+  "dataChanged": false,
+  "limits": [
+    "缺少已确认可用的单站报价来源，真实价格比较未完成。",
+    "自动化使用Chromium与离线底图，未验证真机Safari。",
+    "未进入M0.2或后续阶段。"
+  ],
+  "evidence": "reports/evidence/m01/fuel-price-markers/",
+  "reviewChangeHistory": [
+    {
+      "date": "2026-09-30",
+      "summary": "无有效单站报价时隐藏地图价格条、列表价格元素和详情空价格区域；有报价时才显示，燃油供应信息保留。",
+      "checks": {
+        "lint": "PASS",
+        "typecheck": "PASS",
+        "unitTests": 108,
+        "build": "PASS",
+        "browserTests": 53,
+        "exitCode": 0
+      },
+      "evidence": "reports/evidence/m01/hide-unknown-price/",
+      "deployed": false
+    },
+    {
+      "date": "2026-09-30",
+      "summary": "独立站点改为水滴形标记，品牌位于圆头内，尖端指向站点坐标；有价格才叠加价格条，保留无价隐藏规则。",
+      "checks": {
+        "lint": "PASS",
+        "typecheck": "PASS",
+        "unitTests": 108,
+        "build": "PASS",
+        "browserTests": 53,
+        "exitCode": 0
+      },
+      "review": "已处理手机详情裁切风险，修复并验证品牌被SVG层级覆盖的问题。",
+      "evidence": "reports/evidence/m01/droplet-markers/",
+      "deployed": false
+    }
+  ],
+  "latestReviewChange": {
+    "date": "2026-09-30",
+    "summary": "水滴内只显示独立品牌图标；无图标或加载失败时使用默认加油站图标，不显示长品牌名称。",
+    "checks": {
+      "lint": "PASS",
+      "typecheck": "PASS",
+      "unitTests": 108,
+      "build": "PASS",
+      "browserTests": 53,
+      "exitCode": 0
+    },
+    "evidence": "reports/evidence/m01/brand-symbols/",
+    "deployed": false
+  }
+}

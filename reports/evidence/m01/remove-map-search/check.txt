@@ -1,0 +1,96 @@
+
+> fuel-me-japan@0.0.0 check
+> npm run lint && npm run typecheck && npm test && npm run build && npm run test:e2e
+
+
+> fuel-me-japan@0.0.0 lint
+> eslint . --max-warnings 0
+
+
+> fuel-me-japan@0.0.0 typecheck
+> tsc --noEmit
+
+
+> fuel-me-japan@0.0.0 test
+> vitest run
+
+
+ RUN  v5.0.2 /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan
+
+
+ Test Files  5 passed (5)
+      Tests  31 passed (31)
+   Start at  11:08:57
+   Duration  229ms (transform 48%, tests 36%, import 14%, worker 3%)
+
+
+> fuel-me-japan@0.0.0 build
+> vite build && tsx scripts/prerender.tsx
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 31 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                            0.72 kB │ gzip:  0.40 kB
+dist/assets/index-BLey3BUl.css            11.97 kB │ gzip:  3.30 kB
+dist/assets/source-registry-J_Cb09k3.js    2.88 kB │ gzip:  1.24 kB
+dist/assets/index-BYe-HcIm.js            291.38 kB │ gzip: 92.59 kB
+
+✓ built in 108ms
+Prerendered five locales + English root; source registry validated; provenance emitted.
+
+> fuel-me-japan@0.0.0 test:e2e
+> playwright test
+
+[WebServer] (node:57571) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 28 tests using 8 workers
+
+(node:57576) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:57578) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:57572) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:57577) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:57574) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:57579) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:57575) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:57573) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   7 tests/e2e/find-fuel.spec.ts:170:1 › missing geolocation API and out-of-Japan location do not fetch stations (792ms)
+  ✓   8 tests/e2e/find-fuel.spec.ts:159:3 › location denied permits manual fallback (842ms)
+  ✓   4 tests/e2e/find-fuel.spec.ts:183:1 › watchdog timeout rejects a late position and allows a fresh request (865ms)
+  ✓   1 tests/e2e/find-fuel.spec.ts:159:3 › location timeout permits manual fallback (872ms)
+  ✓   5 tests/e2e/find-fuel.spec.ts:159:3 › location unavailable permits manual fallback (875ms)
+  ✓   2 tests/e2e/find-fuel.spec.ts:67:1 › manual prefecture fetches one region; city/address search and detail never invent distance (1.0s)
+  ✓   3 tests/e2e/find-fuel.spec.ts:196:1 › late location cannot replace manual choice; cancel, retry and close reject stale callbacks (1.2s)
+  ✓   6 tests/e2e/find-fuel.spec.ts:116:1 › explicit mocked location sorts real stations; navigation sends destination only and origin stays private (1.2s)
+  ✓  10 tests/e2e/find-fuel.spec.ts:246:1 › empty search stays on site and recovers without invented stations or coordinates (391ms)
+  ✓   9 tests/e2e/find-fuel.spec.ts:221:1 › station load failure retries; an older retry response cannot replace a newer prefecture (452ms)
+  ✓  11 tests/e2e/find-fuel.spec.ts:259:1 › price failure does not block navigation; retry shows dated stale reference (515ms)
+  ✓  17 tests/e2e/find-fuel.spec.ts:303:1 › empty nearby coverage offers manual search without external map links or claiming no stations exist (367ms)
+  ✓  18 tests/e2e/find-fuel.spec.ts:316:1 › station request retry succeeds with the original real partition (397ms)
+  ✓  12 tests/e2e/find-fuel.spec.ts:276:3 › zh-Hant list/detail fit 320 and 390 pixels, retain Japanese labels and capture screenshots (799ms)
+  ✓  13 tests/e2e/find-fuel.spec.ts:276:3 › en list/detail fit 320 and 390 pixels, retain Japanese labels and capture screenshots (878ms)
+  ✓  14 tests/e2e/find-fuel.spec.ts:276:3 › ko list/detail fit 320 and 390 pixels, retain Japanese labels and capture screenshots (750ms)
+  ✓  19 tests/e2e/find-fuel.spec.ts:331:1 › back from detail discards its pending price response before another prefecture opens (544ms)
+  ✓  16 tests/e2e/find-fuel.spec.ts:276:3 › th list/detail fit 320 and 390 pixels, retain Japanese labels and capture screenshots (737ms)
+  ✓  20 tests/e2e/foundation.spec.ts:41:3 › mobile switching and reload: en (355ms)
+  ✓  27 tests/e2e/foundation.spec.ts:173:1 › shipped registry and build provenance match the M0.1 ingestion manifest (21ms)
+  ✓  15 tests/e2e/find-fuel.spec.ts:276:3 › zh-Hans list/detail fit 320 and 390 pixels, retain Japanese labels and capture screenshots (808ms)
+  ✓  22 tests/e2e/foundation.spec.ts:41:3 › mobile switching and reload: ko (338ms)
+  ✓  21 tests/e2e/foundation.spec.ts:41:3 › mobile switching and reload: zh-Hant (393ms)
+  ✓  25 tests/e2e/foundation.spec.ts:105:1 › localized static HTML is useful without JavaScript (222ms)
+  ✓  23 tests/e2e/foundation.spec.ts:41:3 › mobile switching and reload: th (367ms)
+  ✓  24 tests/e2e/foundation.spec.ts:41:3 › mobile switching and reload: zh-Hans (339ms)
+  ✓  26 tests/e2e/foundation.spec.ts:126:1 › home and opening M0.1 do not request location, persist it, fetch data or send analytics (262ms)
+  ✓  28 tests/e2e/foundation.spec.ts:198:1 › desktop layout and keyboard navigation remain usable (512ms)
+
+  28 passed (3.6s)

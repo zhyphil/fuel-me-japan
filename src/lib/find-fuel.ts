@@ -22,12 +22,6 @@ export function navigationUrl(provider: MapProvider, destination: Coordinates): 
     ? `https://www.google.com/maps/dir/?${new URLSearchParams({ api: "1", destination: point, travelmode: "driving" })}`
     : `https://maps.apple.com/?${new URLSearchParams({ daddr: point, dirflg: "d" })}`;
 }
-export function mapSearchUrl(provider: MapProvider, manualPlace = ""): string {
-  const query = manualPlace.trim() ? `ガソリンスタンド ${manualPlace.trim()}` : "gas station near me";
-  return provider === "google"
-    ? `https://www.google.com/maps/search/?${new URLSearchParams({ api: "1", query })}`
-    : `https://maps.apple.com/?${new URLSearchParams({ q: query })}`;
-}
 export function filterStations<T extends Station>(stations: T[], query: string): T[] {
   const needle = query.normalize("NFKC").trim().toLocaleLowerCase();
   if (!needle) return stations;

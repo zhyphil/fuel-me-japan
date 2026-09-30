@@ -1,42 +1,10 @@
-import { expect, test } from "@playwright/test";
+import { expect, test, interceptExternal } from "./offline";
 import { readFileSync } from "node:fs";
+const manifest = JSON.parse(readFileSync("public/data/manifest.json", "utf8"));
 const languageCases = [
-  {
-    locale: "en",
-    label: "EN",
-    heading: "Japan ahead.",
-    title: "Fuel Me Japan — Refuel with confidence",
-    task: "Find fuel near me",
-  },
-  {
-    locale: "zh-Hant",
-    label: "繁中",
-    heading: "下一站，日本。",
-    title: "Fuel Me Japan — 在日本安心加油",
-    task: "尋找附近加油站",
-  },
-  {
-    locale: "ko",
-    label: "한국어",
-    heading: "다음 목적지, 일본.",
-    title: "Fuel Me Japan — 일본에서 안심하고 주유하기",
-    task: "내 주변 주유소 찾기",
-  },
-  {
-    locale: "zh-Hans",
-    label: "简中",
-    heading: "下一站，日本。",
-    title: "Fuel Me Japan — 在日本安心加油",
-    task: "寻找附近加油站",
-  },
-  {
-    locale: "th",
-    label: "ไทย",
-    heading: "จุดหมายต่อไป ญี่ปุ่น",
-    title: "Fuel Me Japan — เติมน้ำมันในญี่ปุ่นอย่างมั่นใจ",
-    task: "หาปั๊มน้ำมันใกล้ฉัน",
-  },
-];
+  { locale: "en", label: "EN" }, { locale: "zh-Hant", label: "繁中" },
+  { locale: "ko", label: "한국어" }, { locale: "zh-Hans", label: "简中" }, { locale: "th", label: "ไทย" },
+].map((language) => ({ ...language, copy: JSON.parse(readFileSync(`src/locales/${language.locale}.json`, "utf8")) }));
 for (const language of languageCases) {
   test(`mobile switching and reload: ${language.locale}`, async ({ page }) => {
     const errors: string[] = [];
@@ -51,7 +19,7 @@ for (const language of languageCases) {
       .click();
     await expect(page).toHaveURL(new RegExp(`/${language.locale}/$`));
     await expect(page.locator("html")).toHaveAttribute("lang", language.locale);
-    await expect(page).toHaveTitle(language.title);
+    await expect(page).toHaveTitle(language.copy.pageTitle);
     await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
       "href",
       `https://fuel-me-japan.com/${language.locale}/`,
@@ -69,15 +37,11 @@ for (const language of languageCases) {
       page.locator('link[rel="alternate"][hreflang="x-default"]'),
     ).toHaveAttribute("href", "https://fuel-me-japan.com/en/");
     await expect(page.getByRole("heading", { level: 1 })).toContainText(
-      language.heading,
+      language.copy.mapTitle,
     );
-    await expect(
-      page.getByRole("heading", { name: language.task, exact: true }),
-    ).toBeVisible();
-    await expect(page.locator(".task-grid article")).toHaveCount(4);
-    await expect(page.locator(".task-grid button")).toHaveCount(1);
-    await expect(page.locator(".task-grid article:not(:has(button))")).toHaveCount(3);
-    await expect(page.getByText(JSON.parse(readFileSync(`src/locales/${language.locale}.json`, "utf8")).preview, { exact: true })).toBeVisible();
+    await expect(page.locator(".map-surface.leaflet-container")).toBeVisible();
+    await expect(page.locator(".map-pin-region, .map-pin-region-group").first()).toBeVisible();
+    await expect(page.locator(".hero, .task-grid")).toHaveCount(0);
     await expect(
       page.getByRole("navigation").locator('[aria-current="page"]'),
     ).toHaveText(language.label);
@@ -90,6 +54,15 @@ for (const language of languageCases) {
           () => document.documentElement.scrollWidth <= window.innerWidth,
         ),
       ).toBe(true);
+      const locateButton = page.locator(".map-stage").getByRole("button", { name: language.copy.ffUseLocation, exact: true });
+      await expect(locateButton).toBeVisible();
+      await expect(locateButton).toHaveText("");
+      await expect(locateButton.locator('svg[aria-hidden="true"]')).toHaveCount(1);
+      const buttonBounds = await locateButton.boundingBox();
+      const mapBounds = await page.locator(".map-surface").boundingBox();
+      expect(buttonBounds?.width).toBeGreaterThanOrEqual(44);
+      expect(buttonBounds?.height).toBeGreaterThanOrEqual(44);
+      expect(Boolean(buttonBounds && mapBounds && buttonBounds.x >= mapBounds.x && buttonBounds.y >= mapBounds.y && buttonBounds.x + buttonBounds.width <= mapBounds.x + mapBounds.width && buttonBounds.y + buttonBounds.height <= mapBounds.y + mapBounds.height)).toBe(true);
       for (const link of await page
         .getByRole("navigation")
         .getByRole("link")
@@ -106,12 +79,13 @@ test("localized static HTML is useful without JavaScript", async ({
   browser,
 }) => {
   const context = await browser.newContext({ javaScriptEnabled: false });
+  await interceptExternal(context);
   const page = await context.newPage();
   await page.goto(
     `${process.env.SMOKE_BASE_URL ?? "http://127.0.0.1:4173"}/ko/`,
   );
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    "다음 목적지, 일본.",
+    languageCases.find((language) => language.locale === "ko")!.copy.mapTitle,
   );
   await expect(page.locator('meta[name="description"]')).toHaveAttribute(
     "content",
@@ -119,11 +93,11 @@ test("localized static HTML is useful without JavaScript", async ({
   );
   await page.getByRole("link", { name: "ไทย", exact: true }).click();
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    "จุดหมายต่อไป ญี่ปุ่น",
+    languageCases.find((language) => language.locale === "th")!.copy.mapTitle,
   );
   await context.close();
 });
-test("home and opening M0.1 do not request location, persist it, fetch data or send analytics", async ({
+test("map home requests only data indexes and map configuration without location, storage or analytics", async ({
   page,
   context,
 }) => {
@@ -150,17 +124,15 @@ test("home and opening M0.1 do not request location, persist it, fetch data or s
       requests.push(request.url());
   });
   await page.goto("/");
-  await expect(
-    page.getByText("Find Fuel preview", { exact: true }),
-  ).toBeVisible();
-  await expect(page.locator(".task-grid article")).toHaveCount(4);
-  await expect(page.locator(".task-grid button")).toHaveCount(1);
-  await expect(page.locator(".task-grid article:not(:has(button))")).toHaveCount(3);
-  await expect(page.locator(".task-grid .task-status").filter({ hasText: "Coming later" })).toHaveCount(3);
-  await page.getByRole("button", { name: "Find fuel near me", exact: true }).click();
-  await expect(page.getByRole("heading", { name: "Find fuel near me", level: 2 })).toBeVisible();
+  await expect(page.locator(".map-surface.leaflet-container")).toBeVisible();
+  await expect(page.locator(".map-pin-region, .map-pin-region-group").first()).toBeVisible();
+  await expect(page.locator(".hero, .task-grid")).toHaveCount(0);
   await page.getByRole("link", { name: "繁中", exact: true }).click();
-  expect(requests).toEqual([]);
+  await expect(page.locator(".map-pin-region, .map-pin-region-group").first()).toBeVisible();
+  expect(requests.length).toBeGreaterThan(0);
+  expect([...new Set(requests.map((url) => new URL(url).pathname))].sort()).toEqual([
+    "/data/manifest.json", manifest.sourceRegistry.path, "/runtime-map-provider.json",
+  ]);
   expect(await context.cookies()).toEqual([]);
   expect(
     await page.evaluate(() => ({

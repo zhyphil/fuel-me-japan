@@ -1,0 +1,37 @@
+{
+  "date": "2026-09-30",
+  "national": {
+    "stations": 16454,
+    "brandRecorded": 10652,
+    "service": {
+      "SELF": 875,
+      "UNKNOWN": 15514,
+      "FULL": 65
+    },
+    "visa": {
+      "UNKNOWN": 16450,
+      "YES": 4
+    },
+    "mastercard": {
+      "UNKNOWN": 16447,
+      "YES": 7
+    }
+  },
+  "tokyo": {
+    "stations": 818,
+    "brandRecorded": 719,
+    "service": {
+      "UNKNOWN": 773,
+      "SELF": 44,
+      "FULL": 1
+    },
+    "visa": {
+      "UNKNOWN": 818
+    },
+    "mastercard": {
+      "UNKNOWN": 818
+    }
+  },
+  "unsupported": "现金、非接触、支票、车队卡、充电、收银柜台、自动支付机、充气、免费充气、厕所、淋浴、婴儿换尿布、洗衣、重型车道与停车、AdBlue、洗车等在当前发布数据模型中没有字段，不能用于实际筛选。",
+  "semantics": "UNKNOWN不是NO；按支付已记录YES筛选不能证明被排除站点不接受该支付方式。"
+}

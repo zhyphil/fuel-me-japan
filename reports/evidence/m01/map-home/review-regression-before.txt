@@ -1,0 +1,76 @@
+
+> fuel-me-japan@0.0.0 test:e2e
+> playwright test --grep map and detail at 390px|cluster counts
+
+[WebServer] (node:68785) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 2 workers
+
+(node:68791) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:68790) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/map-home.spec.ts:155:3 › map and detail at 390px keep attribution and sheet visible without horizontal overflow (5.5s)
+  ✘  2 tests/e2e/map-home.spec.ts:89:1 › cluster counts exceed list pagination and all 30 identical-coordinate members remain accessible (6.0s)
+
+
+  1) tests/e2e/map-home.spec.ts:89:1 › cluster counts exceed list pagination and all 30 identical-coordinate members remain accessible 
+
+    Error: expect(locator).toBeInViewport() failed
+
+    Locator:  locator('[id="members-osm:node:10048963711"]')
+    Expected: in viewport
+    Received: viewport ratio 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeInViewport" locator('[id="members-osm:node:10048963711"]') with timeout 5000ms
+      - waiting for locator('[id="members-osm:node:10048963711"]')
+        14 × locator resolved to <button type="button" class="station-card" id="members-osm:node:10048963711">…</button>
+           - unexpected value "viewport ratio 0"
+
+
+      104 |     await page.getByRole("button", { name: en.mapCloseDetail, exact: true }).click();
+      105 |     await expect(page.locator(`[id="members-${station.id}"]`)).toBeFocused();
+    > 106 |     await expect(page.locator(`[id="members-${station.id}"]`)).toBeInViewport();
+          |                                                                ^
+      107 |   }
+      108 |   await page.getByRole("button", { name: en.mapCloseMembers, exact: true }).click();
+      109 |   await expect(cluster).toBeFocused();
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/map-home.spec.ts:106:64
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/map-home-cluster-counts-ex-15c88-e-members-remain-accessible/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/map-home-cluster-counts-ex-15c88-e-members-remain-accessible/error-context.md
+
+  2) tests/e2e/map-home.spec.ts:155:3 › map and detail at 390px keep attribution and sheet visible without horizontal overflow 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+    Call Log:
+    - Timeout 5000ms exceeded while waiting on the predicate
+
+      167 |       const pin = await page.locator('.map-pin[aria-pressed="true"]').boundingBox();
+      168 |       return Boolean(surface && pin && pin.x >= surface.x && pin.y >= surface.y && pin.x + pin.width <= surface.x + surface.width && pin.y + pin.height <= surface.y + surface.height);
+    > 169 |     }).toBe(true);
+          |        ^
+      170 |     await expect(page.locator(".map-attribution")).toBeInViewport();
+      171 |     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+      172 |     await page.screenshot({ path: `test-results/map-detail-${width}-offline-tiles.png`, fullPage: true });
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/map-home.spec.ts:169:8
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/map-home-map-and-detail-at-392aa-without-horizontal-overflow/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/map-home-map-and-detail-at-392aa-without-horizontal-overflow/error-context.md
+
+  2 failed
+    tests/e2e/map-home.spec.ts:89:1 › cluster counts exceed list pagination and all 30 identical-coordinate members remain accessible 
+    tests/e2e/map-home.spec.ts:155:3 › map and detail at 390px keep attribution and sheet visible without horizontal overflow 

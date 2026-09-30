@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "provider": "OpenStreetMap Foundation",
+  "tileUrl": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+  "purpose": "M0.1 找站地图底图；与已校验的站点数据清单独立配置。",
+  "termsUrl": "https://operations.osmfoundation.org/policies/tiles/",
+  "copyrightUrl": "https://www.openstreetmap.org/copyright",
+  "privacyUrl": "https://osmfoundation.org/wiki/Privacy_Policy",
+  "attribution": "© OpenStreetMap contributors",
+  "configurationReviewedAt": "2026-09-30",
+  "allowedUseAssessment": "仅加载用户当前视窗所需瓦片；显示来源署名并发送浏览器正常 Referer；禁止批量下载、预取与离线瓦片。服务可用性未经本次离线实现验证。",
+  "cachePolicy": "遵循服务端 HTTP 缓存头，使用正常浏览器缓存；不添加 cache-busting 参数、不预取、不建立离线瓦片存储。",
+  "requestDisclosure": "底图服务接收所浏览区域的瓦片请求及通常网络信息（如 IP 地址和来源站点），可据此推知浏览范围。设备精确定位仅在显式点击后请求，仅保存在内存，不进入存储、分析事件或页面 URL。",
+  "refreshPolicy": "变更服务方或上线前复核条款；配置人工更新。",
+  "prefetch": false,
+  "offlineTiles": false
+}

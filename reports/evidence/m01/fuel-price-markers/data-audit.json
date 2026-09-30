@@ -1,0 +1,13 @@
+{
+  "stationCount": 16454,
+  "stationPriceFieldsFound": [],
+  "officialReferenceRecords": 141,
+  "officialPriceBasis": "CASH_TAX_INCLUDED_PREFECTURAL_REFERENCE",
+  "protectedFilesChecked": 84,
+  "changedProtectedFiles": [],
+  "brandAssets": [
+    "ENEOS",
+    "Cosmo Oil"
+  ],
+  "note": "当前缺少单站油价来源；品牌资源与价格来源独立，不能以品牌、都道府县参考价推断售价。"
+}

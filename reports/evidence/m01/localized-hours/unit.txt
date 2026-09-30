@@ -1,0 +1,12 @@
+
+> fuel-me-japan@0.0.0 test
+> vitest run tests/unit/opening-hours.test.ts
+
+
+ RUN  v5.0.2 /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan
+
+
+ Test Files  1 passed (1)
+      Tests  32 passed (32)
+   Start at  11:20:32
+   Duration  111ms (transform 51%, tests 29%, import 17%, worker 3%)

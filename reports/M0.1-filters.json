@@ -1,0 +1,96 @@
+{
+  "date": "2026-09-30",
+  "status": "PASS",
+  "scope": "用户授权的 Gas Now 式本地筛选界面与行为调整",
+  "branch": "codex/m0-1-find-fuel",
+  "worktree": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan",
+  "preview": "http://127.0.0.1:4174/zh-Hans/",
+  "implemented": [
+    "地图及列表筛选入口，显示已应用条件数量",
+    "品牌、支付、服务三个图标页签，圆形多选选项",
+    "品牌支持现有标志及默认加油机图标；品牌搜索与完整地区计数",
+    "Visa／Mastercard仅匹配明确YES；自助／人工仅匹配明确服务记录",
+    "同类别OR，跨类别AND，与文字搜索AND；地图和列表使用同一结果",
+    "草稿预览、应用、重置、关闭或Escape取消、键盘页签和焦点恢复",
+    "应用时清理旧详情和成员并重置分页；切区、概览、新定位清除筛选",
+    "五语言；缺资料的现金、非接触及设施等选项按用户决定隐藏"
+  ],
+  "checks": {
+    "command": "npm run check",
+    "exitCode": 0,
+    "lint": "PASS",
+    "typecheck": "PASS",
+    "unit": {
+      "status": "PASS",
+      "files": 11,
+      "tests": 123
+    },
+    "build": "PASS",
+    "browser": {
+      "status": "PASS",
+      "tests": 73,
+      "newTests": 20,
+      "widths": [
+        320,
+        390,
+        1280
+      ],
+      "locales": [
+        "en",
+        "zh-Hant",
+        "ko",
+        "zh-Hans",
+        "th"
+      ],
+      "note": "Chromium 本地离线拦截测试；模拟数据仅在测试响应中，不修改发布数据。"
+    },
+    "protected": {
+      "status": "PASS",
+      "files": 84,
+      "changed": []
+    },
+    "review": {
+      "status": "RESOLVED",
+      "findings": 1,
+      "note": "独立只读审查发现P2一项，根代理修复并添加回归检查。"
+    },
+    "sourceDigest": "0d59be7f2a2919d70258a1aeac74db7fed597cb818d78913f4a8079be2c8cb17"
+  },
+  "dataCoverage": {
+    "stations": 16454,
+    "brandRecorded": 10652,
+    "self": 875,
+    "full": 65,
+    "serviceUnknown": 15514,
+    "visaYes": 4,
+    "mastercardYes": 7,
+    "anyCardYes": 7,
+    "tokyoStations": 818,
+    "tokyoAnyCardYes": 0
+  },
+  "manualVerification": "本机页面使用东京真实分区：818条；ENEOS 391条；ENEOS与自助交集18条。品牌、支付、服务页签及缺字段隐藏已目视核对。最终构建后重新核对ENEOS应用后391条。",
+  "limitations": [
+    "现金、非接触支付、洗车、厕所、充气等尚无字段，未实现相应可用数据筛选，当前隐藏。",
+    "已有字段在当前地区可能记录为0，Visa／Mastercard仍可选择；无结果不表示站点不接受该卡。",
+    "品牌元数据保留来源边界，只有已确认同品牌别名合并；不根据名称猜测缺失品牌。",
+    "浏览器自动检查不代表真实手机、真实定位授权或生产环境验收。",
+    "未部署、未推送、未提交。未新增来源、数据模型或导入管道。"
+  ],
+  "evidenceDirectory": "reports/evidence/m01/filters",
+  "modifiedFiles": [
+    "src/styles.css",
+    "src/locales/en.json",
+    "src/locales/zh-Hans.json",
+    "src/locales/ko.json",
+    "src/locales/th.json",
+    "src/locales/zh-Hant.json",
+    "src/components/FindFuel.tsx",
+    "src/components/Icon.tsx"
+  ],
+  "newCodeFiles": [
+    "src/lib/station-filters.ts",
+    "src/components/StationFilters.tsx",
+    "tests/unit/station-filters.test.ts",
+    "tests/e2e/station-filters.spec.ts"
+  ]
+}

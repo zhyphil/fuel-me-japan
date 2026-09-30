@@ -1,0 +1,18 @@
+{
+  "说明": "相对于本次修改前基线；已有未提交变更保留。",
+  "changed": [
+    "src/components/FuelMap.tsx",
+    "src/lib/map-view.ts",
+    "tests/unit/map-view.test.ts",
+    "tests/e2e/map-home.spec.ts",
+    "tests/e2e/station-filters.spec.ts"
+  ],
+  "new": [
+    "src/lib/map-markers.ts",
+    "src/lib/map-scheduling.ts",
+    "tests/unit/map-scheduling.test.ts",
+    "tests/e2e/map-zoom.spec.ts"
+  ],
+  "protected_files": 84,
+  "protected_changed": []
+}

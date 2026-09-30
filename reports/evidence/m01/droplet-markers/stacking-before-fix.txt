@@ -1,0 +1,68 @@
+
+> fuel-me-japan@0.0.0 test:e2e
+> playwright test tests/e2e/fuel-markers.spec.ts --grep local brand asset
+
+[WebServer] (node:85805) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 2 workers
+
+(node:85807) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:85806) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/e2e/fuel-markers.spec.ts:62:3 › local brand asset /brands/cosmo.svg loads and failed image falls back to recorded text at 320px (315ms)
+  ✘  1 tests/e2e/fuel-markers.spec.ts:62:3 › local brand asset /brands/eneos.svg loads and failed image falls back to recorded text at 320px (315ms)
+
+
+  1) tests/e2e/fuel-markers.spec.ts:62:3 › local brand asset /brands/eneos.svg loads and failed image falls back to recorded text at 320px 
+
+    Error: The droplet background must not cover its brand
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      81 |       return Number(brand.zIndex) > Number(shape.zIndex);
+      82 |     });
+    > 83 |     expect(brandAboveShape, "The droplet background must not cover its brand").toBe(true);
+         |                                                                                ^
+      84 |     await page.route(`**${logo}`, (route) => route.abort());
+      85 |     await page.reload();
+      86 |     await page.locator("#prefecture").selectOption("JP-01");
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-markers.spec.ts:83:80
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/fuel-markers-local-brand-a-00951-k-to-recorded-text-at-320px/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/fuel-markers-local-brand-a-00951-k-to-recorded-text-at-320px/error-context.md
+
+  2) tests/e2e/fuel-markers.spec.ts:62:3 › local brand asset /brands/cosmo.svg loads and failed image falls back to recorded text at 320px 
+
+    Error: The droplet background must not cover its brand
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      81 |       return Number(brand.zIndex) > Number(shape.zIndex);
+      82 |     });
+    > 83 |     expect(brandAboveShape, "The droplet background must not cover its brand").toBe(true);
+         |                                                                                ^
+      84 |     await page.route(`**${logo}`, (route) => route.abort());
+      85 |     await page.reload();
+      86 |     await page.locator("#prefecture").selectOption("JP-01");
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-markers.spec.ts:83:80
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/fuel-markers-local-brand-a-473cb-k-to-recorded-text-at-320px/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/fuel-markers-local-brand-a-473cb-k-to-recorded-text-at-320px/error-context.md
+
+  2 failed
+    tests/e2e/fuel-markers.spec.ts:62:3 › local brand asset /brands/eneos.svg loads and failed image falls back to recorded text at 320px 
+    tests/e2e/fuel-markers.spec.ts:62:3 › local brand asset /brands/cosmo.svg loads and failed image falls back to recorded text at 320px 

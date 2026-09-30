@@ -1,0 +1,34 @@
+[WebServer] (node:72000) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:72001) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/map-home.spec.ts:239:1 › overview tile retry uses integer XYZ coordinates (368ms)
+
+
+  1) tests/e2e/map-home.spec.ts:239:1 › overview tile retry uses integer XYZ coordinates ───────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      259 |     const [z, x, y] = match.slice(1).map(Number);
+      260 |     return x < 2 ** z && y < 2 ** z;
+    > 261 |   })).toBe(true);
+          |       ^
+      262 |   await expect(page.locator(".leaflet-tile-loaded").first()).toBeVisible();
+      263 | });
+      264 |
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/map-home.spec.ts:261:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/map-home-overview-tile-retry-uses-integer-XYZ-coordinates/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/map-home-overview-tile-retry-uses-integer-XYZ-coordinates/error-context.md
+
+  1 failed
+    tests/e2e/map-home.spec.ts:239:1 › overview tile retry uses integer XYZ coordinates ────────────

@@ -8,17 +8,17 @@
     "lint": "PASS",
     "typecheck": "PASS",
     "unitTests": {
-      "passed": 32
+      "passed": 73
     },
     "importerTests": {
       "passed": 16
     },
     "build": "PASS",
     "chromiumBrowserTests": {
-      "passed": 28
+      "passed": 48
     },
-    "independentReview": "COMPLETED; one P2 checksum omission fixed and regression-verified by parent",
-    "frozenSpecifications": "11 unchanged"
+    "independentReview": "地图改版独立只读审查完成；两项 P2 已复现、修复并回归。历史导入审查证据保留。",
+    "frozenSpecifications": "11 份规格文件未改变"
   },
   "data": {
     "stations": 16454,
@@ -30,10 +30,45 @@
     "manifestSha256": "334ce4620b9e85751876aa427b0d958eb8410d89af0bfb4fa488b2737869693d"
   },
   "limitations": {
-    "unattendedOfficialPriceAcquisition": "BLOCKED: official HTTP403; verified original browser download used",
-    "githubSchedule": "configuration authored; remote execution not verified",
-    "m01ProductionRelease": "not pushed or deployed",
-    "realDeviceSafariAndNativeLanguageReview": "not verified"
+    "unattendedOfficialPriceAcquisition": "阻塞：官方 HTTP 请求返回 403；已使用经核验的官方浏览器原始下载文件",
+    "githubSchedule": "配置已编写；远程执行尚未验证",
+    "m01ProductionRelease": "未推送或部署",
+    "realDeviceSafariAndNativeLanguageReview": "未验证",
+    "basemap": "底图服务可接收浏览区域瓦片请求；自动测试全部离线拦截，真实服务持续可用性不作保证。"
   },
-  "nextMilestone": "STOP; wait for user review before M0.2"
+  "nextMilestone": "停止；等待用户审核后才能进入 M0.2",
+  "reviewChanges": [
+    {
+      "date": "2026-09-30",
+      "summary": "按用户审核要求移除通用外部地图搜索入口及五语言引导，失败和无结果时提供站内恢复路径；已选站点目的地导航保留。",
+      "verification": "完整检查退出码 0；31 项单元测试、28 项浏览器测试通过。16 项导入器测试与原始数据比对沿用此前证据，本次未重跑。",
+      "evidence": "reports/evidence/m01/remove-map-search/"
+    },
+    {
+      "date": "2026-09-30",
+      "summary": "已记录营业时间按五种界面语言展示；支持常见星期、日期、假日及时间段，复杂规则完整原文回退；不判断实时营业。",
+      "verification": "完整检查退出码 0；63 项单元测试、35 项浏览器测试通过。原文行为的五语言示例测试先失败后通过。数据与导入器未变，沿用此前验证。",
+      "coverage": {
+        "total": 16454,
+        "withHours": 1578,
+        "translated": 1466,
+        "raw": 112,
+        "unknown": 14876
+      },
+      "evidence": "reports/evidence/m01/localized-hours/"
+    },
+    {
+      "date": "2026-09-30",
+      "summary": "按用户要求替换为地图首页，站点标记打开详情；保留五语言、营业时间翻译、未知及价格来源约束。",
+      "verification": "完整检查退出码0；73项单元测试、48项浏览器测试、lint/typecheck/build通过；数据未改。",
+      "report": "reports/M0.1-map-home.md",
+      "evidence": "reports/evidence/m01/map-home/"
+    },
+    {
+      "date": "2026-09-30",
+      "summary": "定位入口改为地图右下角图标，移除顶部长文字按钮；保留列表入口、键盘访问和五语言读屏名称。",
+      "verification": "完整检查退出码0；73项单元测试、48项浏览器测试及lint/typecheck/build通过。定位验证使用模拟数据。",
+      "evidence": "reports/evidence/m01/location-icon/"
+    }
+  ]
 }

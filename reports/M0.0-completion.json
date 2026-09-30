@@ -49,10 +49,10 @@
   },
   "humanReview": "PENDING",
   "limitations": [
-    "Chromium mobile emulation, not real-device acceptance",
-    "Source usage rights remain pending",
-    "No analytics collection enabled",
-    "No M0.1 business functionality",
-    "No GitHub Actions workflow configured"
+    "使用 Chromium 移动端模拟，未进行真机验收",
+    "数据来源的使用权仍待审查",
+    "未启用分析数据采集",
+    "未实现 M0.1 业务功能",
+    "未配置 GitHub Actions 工作流"
   ]
 }

@@ -1,5 +1,7 @@
 import { readFileSync } from "node:fs";
-import { expect, test, type Page } from "@playwright/test";
+import { createHash } from "node:crypto";
+import { type Page } from "@playwright/test";
+import { expect, test } from "./offline";
 import type { Locale } from "../../src/i18n";
 const locales = ["en", "zh-Hant", "ko", "zh-Hans", "th"] as const;
 const messages = Object.fromEntries(locales.map((locale) => [locale, JSON.parse(readFileSync(`src/locales/${locale}.json`, "utf8"))])) as Record<Locale, Record<string, string>>;
@@ -13,6 +15,7 @@ const recorded = hokkaido.find((station) => station.city && station.address)!;
 const prices: PriceFile = JSON.parse(readFileSync(`public${manifest.prices.path}`, "utf8"));
 const origin = { latitude: 35.681234567, longitude: 139.767654321 };
 const en = messages.en;
+const externalMapLinks = 'a[href^="https://www.google.com/maps/"], a[href^="https://maps.apple.com/"]';
 
 declare global {
   interface Window {
@@ -21,13 +24,7 @@ declare global {
   }
 }
 
-test.beforeEach(async ({ page, context }) => {
-  // All external navigation is intercepted: no live maps, analytics or services.
-  await context.route(/https?:\/\//, async (route) => {
-    const host = new URL(route.request().url()).hostname;
-    if (host === "127.0.0.1" || host === "localhost") await route.continue();
-    else await route.fulfill({ status: 200, contentType: "text/plain", body: "Offline external navigation interception" });
-  });
+test.beforeEach(async ({ page }) => {
   await page.addInitScript(() => {
     window.__geo = [];
     window.__leaks = [];
@@ -43,8 +40,9 @@ test.beforeEach(async ({ page, context }) => {
 
 async function open(page: Page, locale: Locale = "en") {
   await page.goto(`/${locale}/`);
-  await page.getByRole("button", { name: messages[locale].findTitle, exact: true }).click();
-  await expect(page.locator("#find-title")).toBeFocused();
+  await expect(page.locator(".map-pin-region, .map-pin-region-group").first()).toBeVisible();
+  await expect(page.locator(".map-surface.leaflet-container")).toBeVisible();
+  await page.getByRole("button", { name: messages[locale].mapList, exact: true }).click();
 }
 async function manual(page: Page, code = "JP-01") {
   await page.locator("#prefecture").selectOption(code);
@@ -67,8 +65,9 @@ test("manual prefecture fetches one region; city/address search and detail never
   const requests: string[] = [];
   page.on("request", (request) => requests.push(request.url()));
   await open(page);
+  await expect(page.locator(externalMapLinks)).toHaveCount(0);
   expect(await page.evaluate(() => window.__geo.length)).toBe(0);
-  expect(requests.filter((url) => url.includes("/data/"))).toEqual([]);
+  expect(requests.filter((url) => url.includes("/data/")).map((url) => new URL(url).pathname).sort()).toEqual(["/data/manifest.json", manifest.sourceRegistry.path].sort());
   await manual(page);
   expect(requests.filter((url) => url.includes("/data/stations/")).map((url) => new URL(url).pathname)).toEqual([partition("JP-01").path]);
   expect(requests.some((url) => url.includes("/data/prices/"))).toBe(false);
@@ -77,10 +76,10 @@ test("manual prefecture fetches one region; city/address search and detail never
   await expect(page.locator(".station-card")).toHaveCount(50);
   for (const query of [recorded.city!, recorded.address!]) {
     await page.locator("#station-search").fill(query);
-    await expect(page.locator(`[id="station-${recorded.id}"]`)).toBeVisible();
+    await expect(page.locator(`[id="list-${recorded.id}"]`)).toBeVisible();
   }
   await expect(page.locator(".distance")).toHaveCount(0);
-  await page.locator(`[id="station-${recorded.id}"]`).click();
+  await page.locator(`[id="list-${recorded.id}"]`).click();
   await expect(page.locator("#station-title")).toHaveText(recorded.name!);
   await expect(page.locator("#station-title")).toBeFocused();
   await expect(page.locator(".distance")).toHaveCount(0);
@@ -101,12 +100,18 @@ test("manual prefecture fetches one region; city/address search and detail never
   for (const [label, value] of [["レギュラー", recorded.fuelRegular], ["ハイオク", recorded.fuelHighOctane], ["軽油", recorded.fuelDiesel]] as const) {
     await expect(page.locator(".station-detail > .station-facts > div").filter({ hasText: label }).locator("dd")).toHaveText(stateCopy[value]);
   }
-  await expect(page.locator(".station-detail")).toContainText(recorded.openingHours || en.ffUnknown);
+  if (recorded.openingHours) {
+    const original = page.locator(".hours-original summary");
+    if (await original.count()) await original.click();
+    await expect(page.locator(".hours-fact code")).toHaveText(recorded.openingHours);
+    await expect(page.locator(".hours-fact code")).toBeVisible();
+  } else await expect(page.locator(".hours-fact dd")).toHaveText(en.ffUnknown);
+  await page.locator(".map-notes > summary").click();
   await expect(page.locator(".find-attribution")).toContainText("© OpenStreetMap contributors");
   await expect(page.locator(".find-attribution a[href='https://opendatacommons.org/licenses/odbl/1-0/']")).toBeVisible();
   await expect(page.locator("a[href*='gogo.gs']")).toHaveCount(0);
-  await page.getByRole("button", { name: en.ffBack }).click();
-  await expect(page.locator(`[id="station-${recorded.id}"]`)).toBeFocused();
+  await page.getByRole("button", { name: en.mapCloseDetail }).click();
+  await expect(page.locator(`[id="list-${recorded.id}"]`)).toBeFocused();
   await expect(page.locator("#station-search")).toHaveValue(recorded.address!);
   await cleanOrigin(page);
 });
@@ -115,15 +120,21 @@ test("explicit mocked location sorts real stations; navigation sends destination
   const requests: string[] = [];
   context.on("request", (request) => requests.push(`${request.url()} ${request.postData() ?? ""}`));
   await open(page);
-  await page.getByRole("button", { name: en.ffUseLocation }).click();
+  await page.getByRole("button", { name: en.mapView, exact: true }).click();
+  const locateButton = page.locator(".map-stage").getByRole("button", { name: en.ffUseLocation, exact: true });
+  await locateButton.focus();
+  await page.keyboard.press("Enter");
+  await expect(locateButton).toHaveAttribute("aria-busy", "true");
   expect(await page.evaluate(() => window.__geo.length)).toBe(1);
   await locate(page);
+  await expect(locateButton).toHaveAttribute("aria-busy", "false");
+  await page.getByRole("button", { name: en.mapList, exact: true }).click();
   await expect(page.locator(".station-card")).toHaveCount(25);
-  await expect(page.getByText(en.ffStraightLineHelp, { exact: true })).toBeVisible();
+  await expect(page.locator(".map-list-panel").getByText(en.ffStraightLineHelp, { exact: true })).toBeVisible();
   const distances = (await page.locator(".station-card .distance").allTextContents()).map((text) => Number(text.match(/·\s*([\d.]+)/)![1]));
   expect(distances).toEqual([...distances].sort((a, b) => a - b));
   expect(distances.every((distance) => distance <= 50)).toBe(true);
-  const stationId = (await page.locator(".station-card").first().getAttribute("id"))!.replace("station-", "");
+  const stationId = (await page.locator(".station-card").first().getAttribute("id"))!.replace("list-", "");
   const station = manifest.stations.partitions.flatMap((p) => stations(p.code)).find((row) => row.id === stationId)!;
   await page.locator(".station-card").first().click();
   for (const [label, key] of [[en.ffGoogle, "destination"], [en.ffApple, "daddr"]]) {
@@ -147,8 +158,9 @@ test("explicit mocked location sorts real stations; navigation sends destination
   expect(fetches.every((url) => url.startsWith("http://127.0.0.1:") && !url.includes("?"))).toBe(true);
   expect(requests.some((url) => /overpass|analytics|collect\?/.test(url))).toBe(false);
   await cleanOrigin(page);
-  await page.getByRole("button", { name: en.ffClose }).click();
-  await expect(page.getByRole("button", { name: en.findTitle, exact: true })).toBeFocused();
+  await page.getByRole("button", { name: en.mapOverview, exact: true }).click();
+  await expect(page.locator("#prefecture")).toHaveValue("");
+  await expect(page.locator(".map-pin-region, .map-pin-region-group").first()).toBeVisible();
   await page.reload();
   await cleanOrigin(page);
 });
@@ -175,7 +187,7 @@ test("missing geolocation API and out-of-Japan location do not fetch stations", 
   await page.evaluate(() => Object.defineProperty(navigator, "geolocation", { value: undefined }));
   await page.getByRole("button", { name: en.ffUseLocation }).click();
   await expect(page.getByText(en.ffUnavailable, { exact: true })).toBeVisible();
-  expect(requests).toEqual([]);
+  expect(requests.filter((url) => /\/data\/(stations|prices)\//.test(url))).toEqual([]);
 });
 
 test("watchdog timeout rejects a late position and allows a fresh request", async ({ page }) => {
@@ -201,18 +213,18 @@ test("late location cannot replace manual choice; cancel, retry and close reject
   await page.getByRole("button", { name: en.ffUseLocation }).click();
   await page.getByRole("button", { name: en.ffCancel }).click();
   await locate(page, 1);
-  await expect(page.getByText(en.ffStart, { exact: true })).toBeVisible();
+  await expect(page.locator(".map-status").getByText(en.mapOverviewCount.replace("{count}", manifest.stations.count.toLocaleString("en")), { exact: true })).toBeVisible();
   await page.getByRole("button", { name: en.ffUseLocation }).click();
   await page.getByRole("button", { name: en.ffUseLocation }).click();
   await locate(page, 2, { latitude: 48.8, longitude: 2.3 });
   await expect(page.getByText(en.ffLocating, { exact: true })).toBeVisible();
   await locate(page, 3);
+  await page.getByRole("button", { name: en.mapList, exact: true }).click();
   await expect(page.locator(".station-card")).toHaveCount(25);
   await page.getByRole("button", { name: en.ffUseLocation }).click();
-  await page.getByRole("button", { name: en.ffClose }).click();
-  await page.getByRole("button", { name: en.findTitle, exact: true }).click();
+  await page.getByRole("button", { name: en.mapOverview, exact: true }).click();
   await locate(page, 4);
-  await expect(page.getByText(en.ffStart, { exact: true })).toBeVisible();
+  await expect(page.locator(".map-status").getByText(en.mapOverviewCount.replace("{count}", manifest.stations.count.toLocaleString("en")), { exact: true })).toBeVisible();
   await cleanOrigin(page);
 });
 
@@ -231,26 +243,26 @@ test("station load failure retries; an older retry response cannot replace a new
   await open(page);
   await page.locator("#prefecture").selectOption("JP-01");
   await expect(page.getByText(en.ffLoadError, { exact: true })).toBeVisible();
-  await expect(page.getByRole("link", { name: en.ffSearchGoogle })).toBeVisible();
+  await expect(page.locator(externalMapLinks)).toHaveCount(0);
   await page.getByRole("button", { name: en.ffRetry }).click();
   await received;
   await manual(page, "JP-47");
   release();
   await expect(page.locator(".station-card").first()).toContainText(stations("JP-47")[0].name!);
   await expect(page.locator("#prefecture")).toHaveValue("JP-47");
-  await expect(page.locator(".search-status")).toContainText(String(stations("JP-47").length));
+  await expect(page.locator(".map-status")).toContainText(String(stations("JP-47").length));
 });
 
-test("empty search gives external map fallback without invented stations or coordinates", async ({ page }) => {
+test("empty search stays on site and recovers without invented stations or coordinates", async ({ page }) => {
   await open(page); await manual(page);
   const query = "NoSuchStation_zz_9213";
   await page.locator("#station-search").fill(query);
   await expect(page.locator(".station-card")).toHaveCount(0);
   await expect(page.getByText(en.ffNoResults, { exact: true })).toBeVisible();
-  for (const name of [en.ffSearchGoogle, en.ffSearchApple]) {
-    const url = new URL((await page.getByRole("link", { name }).getAttribute("href"))!);
-    expect(url.searchParams.get("query") ?? url.searchParams.get("q")).toContain(`北海道 / Hokkaido ${query}`);
-  }
+  await expect(page.locator(externalMapLinks)).toHaveCount(0);
+  await page.locator("#station-search").fill("");
+  await expect(page.locator(".station-card")).toHaveCount(25);
+  await expect(page.locator(externalMapLinks)).toHaveCount(0);
   await cleanOrigin(page);
 });
 
@@ -274,7 +286,10 @@ for (const locale of locales) {
   test(`${locale} list/detail fit 320 and 390 pixels, retain Japanese labels and capture screenshots`, async ({ page }) => {
     const errors: string[] = [];
     page.on("pageerror", (error) => errors.push(error.message));
-    await open(page, locale); await manual(page);
+    await open(page, locale);
+    await expect(page.locator(externalMapLinks)).toHaveCount(0);
+    await manual(page);
+    await expect(page.locator(externalMapLinks)).toHaveCount(0);
     for (const width of [320, 390]) {
       await page.setViewportSize({ width, height: 844 });
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
@@ -283,7 +298,7 @@ for (const locale of locales) {
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
       for (const label of ["レギュラー", "ハイオク", "軽油"]) await expect(page.locator(".station-detail [lang='ja']").filter({ hasText: label }).first()).toBeVisible();
       await page.locator("#find-fuel").screenshot({ scale: "css", path: `test-results/find-fuel-${locale}-${width}.png` });
-      await page.getByRole("button", { name: messages[locale].ffBack }).click();
+      await page.getByRole("button", { name: messages[locale].mapCloseDetail }).click();
     }
     if (locale === "en") {
       await page.setViewportSize({ width: 1280, height: 900 });
@@ -295,15 +310,17 @@ for (const locale of locales) {
 }
 
 
-test("empty nearby coverage uses map fallback without claiming that no stations exist", async ({ page }) => {
+test("empty nearby coverage offers manual search without external map links or claiming no stations exist", async ({ page }) => {
   await open(page);
   await page.getByRole("button", { name: en.ffUseLocation }).click();
   await locate(page, 0, { latitude: 30.1234567, longitude: 140.4567891 });
   await expect(page.locator("#station-search")).toBeVisible();
   await expect(page.locator(".station-card")).toHaveCount(0);
   await expect(page.getByText(en.ffNoResults, { exact: true })).toBeVisible();
-  const link = page.getByRole("link", { name: en.ffSearchGoogle });
-  expect(new URL((await link.getAttribute("href"))!).searchParams.get("query")).toBe("gas station near me");
+  await expect(page.locator(externalMapLinks)).toHaveCount(0);
+  await manual(page);
+  await expect(page.locator(".station-card")).toHaveCount(25);
+  await expect(page.locator(externalMapLinks)).toHaveCount(0);
 });
 
 test("station request retry succeeds with the original real partition", async ({ page }) => {
@@ -340,7 +357,7 @@ test("back from detail discards its pending price response before another prefec
   await page.locator(".station-card").first().click();
   await received;
   await expect(page.getByText(en.ffPriceLoading, { exact: true })).toBeVisible();
-  await page.getByRole("button", { name: en.ffBack }).click();
+  await page.getByRole("button", { name: en.mapCloseDetail }).click();
   await manual(page, "JP-47");
   await page.locator(".station-card").first().click();
   await expect(page.getByRole("link", { name: en.ffOfficialSource })).toBeVisible();
@@ -349,4 +366,63 @@ test("back from detail discards its pending price response before another prefec
   for (const row of prices.records.filter((row) => row.prefectureCode === "JP-47")) {
     await expect(page.locator(".official-price")).toContainText(`${row.priceJpy.toFixed(1)} JPY/L`);
   }
+});
+
+// Isolated display fixture: all files on disk and source snapshots remain untouched.
+async function recordedHoursFixture(page: Page, openingHours: string | undefined) {
+  const file: StationFile = JSON.parse(readFileSync(`public${partition("JP-01").path}`, "utf8"));
+  file.stations[0].openingHours = openingHours;
+  const body = JSON.stringify(file);
+  const fixtureManifest = structuredClone(manifest);
+  Object.assign(fixtureManifest.stations.partitions.find((entry) => entry.code === "JP-01")!, {
+    bytes: Buffer.byteLength(body), sha256: createHash("sha256").update(body).digest("hex"),
+  });
+  await page.route("**/data/manifest.json", (route) => route.fulfill({ json: fixtureManifest }));
+  await page.route(`**${partition("JP-01").path}`, (route) => route.fulfill({ body, contentType: "application/json" }));
+}
+
+const hoursExample = "Mo-Sa 08:00-18:00; Su off; Jan 01-03 off";
+const hoursLines: Record<Locale, string[]> = {
+  en: ["Monday–Saturday: 08:00–18:00", "Sunday: Closed", "January 1–January 3: Closed"],
+  "zh-Hans": ["星期一至星期六：08:00–18:00", "星期日：休息", "1月1日至1月3日：休息"],
+  "zh-Hant": ["星期一至星期六：08:00–18:00", "星期日：休息", "1月1日至1月3日：休息"],
+  ko: ["월요일–토요일: 08:00–18:00", "일요일: 휴무", "1월 1일–1월 3일: 휴무"],
+  th: ["วันจันทร์–วันเสาร์: 08:00–18:00", "วันอาทิตย์: ปิด", "1 มกราคม–3 มกราคม: ปิด"],
+};
+for (const locale of locales) {
+  test(`${locale} shows translated recorded hours and an optional unchanged original`, async ({ page }) => {
+    await recordedHoursFixture(page, hoursExample);
+    await open(page, locale); await manual(page);
+    await page.locator(".station-card").first().click();
+    await expect(page.locator(".hours-lines li")).toHaveText(hoursLines[locale]);
+    await expect(page.locator(".hours-fact code")).not.toBeVisible();
+    await expect(page.getByText(messages[locale].ffHoursHelp, { exact: true })).toBeVisible();
+    for (const width of [320, 390]) {
+      await page.setViewportSize({ width, height: 844 });
+      expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+    }
+    await page.locator(".hours-fact").screenshot({ scale: "css", path: `test-results/opening-hours-${locale}.png` });
+    await page.locator(".hours-original summary").click();
+    await expect(page.locator(".hours-fact code")).toBeVisible();
+    await expect(page.locator(".hours-fact code")).toHaveText(hoursExample);
+  });
+}
+
+test("unsupported hours retain all rules visibly with a localized explanation", async ({ page }) => {
+  const raw = "Mo-Fr 09:00-18:00; Su[2] off";
+  await recordedHoursFixture(page, raw);
+  await open(page, "zh-Hans"); await manual(page);
+  await page.locator(".station-card").first().click();
+  await expect(page.getByText(messages["zh-Hans"].ffHoursUntranslated, { exact: true })).toBeVisible();
+  await expect(page.locator(".hours-fact code")).toHaveText(raw);
+  await expect(page.locator(".hours-fact code")).toBeVisible();
+  await expect(page.locator(".hours-lines")).toHaveCount(0);
+});
+
+test("absent hours stay unknown without offering an invented schedule", async ({ page }) => {
+  await recordedHoursFixture(page, undefined);
+  await open(page, "zh-Hans"); await manual(page);
+  await page.locator(".station-card").first().click();
+  await expect(page.locator(".hours-fact dd")).toHaveText("未知");
+  await expect(page.locator(".hours-original, .hours-lines, .hours-fact code")).toHaveCount(0);
 });

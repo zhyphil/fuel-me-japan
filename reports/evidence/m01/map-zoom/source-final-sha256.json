@@ -1,0 +1,11 @@
+{
+  "src/components/FuelMap.tsx": "cbe942c35ff348c1fc2373fce5bde0cc616b319908c3f31ccf9a9c517860dc6e",
+  "src/lib/map-view.ts": "bb3e1af9d4b824e0765207e1704fd21a54b6626df39cc9a3bb89aa0d59a2406d",
+  "tests/unit/map-view.test.ts": "18c4bc19d68e51cbed81bc61e351cb4712dccd4cd04de56f9d35a2ed7c261378",
+  "tests/e2e/map-home.spec.ts": "943b414002b6f4df5053d861b048c306d35618de44dc744bdd969045b22694fb",
+  "tests/e2e/station-filters.spec.ts": "5cc7a13c36e82c47262537fc9cb71c6438437625a34c0fab540b47bbba9349d0",
+  "src/lib/map-markers.ts": "f10bff1bea9e871449bc18d27d2c6bf3a6d9e947d938bf61e30d7fd62680edd1",
+  "src/lib/map-scheduling.ts": "a47fe88802b73f2e35b36a4022e32fcce8de8810c24b117ad636049930260aa8",
+  "tests/unit/map-scheduling.test.ts": "462880b68aa0f07ac33a332a999c12caacc4cabd6620b2fe5a0e67ddb2bab8b2",
+  "tests/e2e/map-zoom.spec.ts": "a8f326f8545fd8ca16a4e618b2a867486d6345df120f69fb2bc6e4a9a8631a86"
+}

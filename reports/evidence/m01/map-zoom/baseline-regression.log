@@ -1,0 +1,63 @@
+
+> fuel-me-japan@0.0.0 test:e2e
+> playwright test tests/e2e/map-zoom.spec.ts --workers=1
+
+
+Running 2 tests using 1 worker
+
+(node:96015) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ZOOM_WHEEL_EVIDENCE {"initial":5.500000446440399,"singleDelta":0.24999884112390536,"pairDelta":0.24999884112390536,"note":"固定视口与东京818条真实记录；离线瓦片；第二次等量输入发生在第一次动画中。"}
+  ✘  1 tests/e2e/map-zoom.spec.ts:41:1 › a second wheel pulse during animation is retained instead of swallowed (2.1s)
+(node:96023) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ZOOM_MARKER_EVIDENCE {"added":3,"removed":3,"before":3,"after":3,"comparable":3,"retained":0,"note":"相同地图标记身份在一次键盘平移后是否保留同一DOM元素。"}
+  ✘  2 tests/e2e/map-zoom.spec.ts:67:1 › small map pans retain existing marker elements instead of rebuilding the layer (1.0s)
+
+
+  1) tests/e2e/map-zoom.spec.ts:41:1 › a second wheel pulse during animation is retained instead of swallowed 
+
+    Error: expect(received).toBeGreaterThan(expected)
+
+    Expected: > 0.37499826168585804
+    Received:   0.24999884112390536
+
+      62 |   console.log("ZOOM_WHEEL_EVIDENCE", JSON.stringify(evidence));
+      63 |   expect(singleDelta).toBeGreaterThan(0);
+    > 64 |   expect(pairDelta).toBeGreaterThan(singleDelta * 1.5);
+         |                     ^
+      65 | });
+      66 |
+      67 | test("small map pans retain existing marker elements instead of rebuilding the layer", async ({ page }, testInfo) => {
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/map-zoom.spec.ts:64:21
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/map-zoom-a-second-wheel-pu-b0faf-tained-instead-of-swallowed/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/map-zoom-a-second-wheel-pu-b0faf-tained-instead-of-swallowed/error-context.md
+
+  2) tests/e2e/map-zoom.spec.ts:67:1 › small map pans retain existing marker elements instead of rebuilding the layer 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 0
+
+      94 |   console.log("ZOOM_MARKER_EVIDENCE", JSON.stringify(evidence));
+      95 |   expect(evidence.comparable).toBeGreaterThan(0);
+    > 96 |   expect(evidence.retained).toBe(evidence.comparable);
+         |                             ^
+      97 | });
+      98 |
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/map-zoom.spec.ts:96:29
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/map-zoom-small-map-pans-re-de5f6-ead-of-rebuilding-the-layer/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/map-zoom-small-map-pans-re-de5f6-ead-of-rebuilding-the-layer/error-context.md
+
+  2 failed
+    tests/e2e/map-zoom.spec.ts:41:1 › a second wheel pulse during animation is retained instead of swallowed 
+    tests/e2e/map-zoom.spec.ts:67:1 › small map pans retain existing marker elements instead of rebuilding the layer 

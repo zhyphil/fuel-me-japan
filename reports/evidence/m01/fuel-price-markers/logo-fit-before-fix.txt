@@ -1,0 +1,68 @@
+
+> fuel-me-japan@0.0.0 test:e2e
+> playwright test tests/e2e/fuel-markers.spec.ts --grep local brand asset
+
+[WebServer] (node:80121) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 2 workers
+
+(node:80122) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:80123) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/e2e/fuel-markers.spec.ts:61:3 › local brand asset /brands/eneos.svg loads and failed image falls back to recorded text at 320px (273ms)
+  ✘  1 tests/e2e/fuel-markers.spec.ts:61:3 › local brand asset /brands/cosmo.svg loads and failed image falls back to recorded text at 320px (283ms)
+
+
+  1) tests/e2e/fuel-markers.spec.ts:61:3 › local brand asset /brands/eneos.svg loads and failed image falls back to recorded text at 320px 
+
+    Error: The complete brand logo must fit inside its marker without cropping
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      74 |       return image.left >= frame.left && image.right <= frame.right && image.top >= frame.top && image.bottom <= frame.bottom;
+      75 |     });
+    > 76 |     expect(logoFits, "The complete brand logo must fit inside its marker without cropping").toBe(true);
+         |                                                                                             ^
+      77 |     await page.route(`**${logo}`, (route) => route.abort());
+      78 |     await page.reload();
+      79 |     await page.locator("#prefecture").selectOption("JP-01");
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-markers.spec.ts:76:93
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/fuel-markers-local-brand-a-00951-k-to-recorded-text-at-320px/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/fuel-markers-local-brand-a-00951-k-to-recorded-text-at-320px/error-context.md
+
+  2) tests/e2e/fuel-markers.spec.ts:61:3 › local brand asset /brands/cosmo.svg loads and failed image falls back to recorded text at 320px 
+
+    Error: The complete brand logo must fit inside its marker without cropping
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      74 |       return image.left >= frame.left && image.right <= frame.right && image.top >= frame.top && image.bottom <= frame.bottom;
+      75 |     });
+    > 76 |     expect(logoFits, "The complete brand logo must fit inside its marker without cropping").toBe(true);
+         |                                                                                             ^
+      77 |     await page.route(`**${logo}`, (route) => route.abort());
+      78 |     await page.reload();
+      79 |     await page.locator("#prefecture").selectOption("JP-01");
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-markers.spec.ts:76:93
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/fuel-markers-local-brand-a-473cb-k-to-recorded-text-at-320px/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/fuel-markers-local-brand-a-473cb-k-to-recorded-text-at-320px/error-context.md
+
+  2 failed
+    tests/e2e/fuel-markers.spec.ts:61:3 › local brand asset /brands/eneos.svg loads and failed image falls back to recorded text at 320px 
+    tests/e2e/fuel-markers.spec.ts:61:3 › local brand asset /brands/cosmo.svg loads and failed image falls back to recorded text at 320px 

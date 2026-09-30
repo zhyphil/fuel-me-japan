@@ -1,0 +1,47 @@
+
+> fuel-me-japan@0.0.0 test:e2e
+> playwright test --grep empty search stays
+
+[WebServer] (node:57285) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:57286) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/find-fuel.spec.ts:246:1 › empty search stays on site and recovers without invented stations or coordinates (5.4s)
+
+
+  1) tests/e2e/find-fuel.spec.ts:246:1 › empty search stays on site and recovers without invented stations or coordinates
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('a[href^="https://www.google.com/maps/"], a[href^="https://maps.apple.com/"]')
+    Expected: 0
+    Received: 2
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('a[href^="https://www.google.com/maps/"], a[href^="https://maps.apple.com/"]') with timeout 5000ms
+      - waiting for locator('a[href^="https://www.google.com/maps/"], a[href^="https://maps.apple.com/"]')
+        14 × locator resolved to 2 elements
+           - unexpected value "2"
+
+
+      250 |   await expect(page.locator(".station-card")).toHaveCount(0);
+      251 |   await expect(page.getByText(en.ffNoResults, { exact: true })).toBeVisible();
+    > 252 |   await expect(page.locator(externalMapLinks)).toHaveCount(0);
+          |                                                ^
+      253 |   await page.locator("#station-search").fill("");
+      254 |   await expect(page.locator(".station-card")).toHaveCount(25);
+      255 |   await expect(page.locator(externalMapLinks)).toHaveCount(0);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/find-fuel.spec.ts:252:48
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/find-fuel-empty-search-sta-3dc35-ted-stations-or-coordinates/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/find-fuel-empty-search-sta-3dc35-ted-stations-or-coordinates/error-context.md
+
+  1 failed
+    tests/e2e/find-fuel.spec.ts:246:1 › empty search stays on site and recovers without invented stations or coordinates
