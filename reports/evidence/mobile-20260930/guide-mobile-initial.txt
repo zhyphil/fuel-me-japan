@@ -1,0 +1,487 @@
+[WebServer] (node:8007) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 58 tests using 2 workers
+
+(node:8008) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:8009) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel-preference.spec.ts:8:3 › en: manual fuel dropdown updates the map and survives reopening and reload (1.3s)
+  ✓   1 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel-preference.spec.ts:8:3 › zh-Hant: manual fuel dropdown updates the map and survives reopening and reload (1.3s)
+  ✓   4 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel-preference.spec.ts:8:3 › zh-Hans: manual fuel dropdown updates the map and survives reopening and reload (570ms)
+  ✓   3 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel-preference.spec.ts:8:3 › ko: manual fuel dropdown updates the map and survives reopening and reload (578ms)
+  ✘   6 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel-preference.spec.ts:42:1 › manual fuel replaces a multi-selection without resetting region, list mode or requesting location; reset stays in sync (434ms)
+(node:8072) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   5 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel-preference.spec.ts:8:3 › th: manual fuel dropdown updates the map and survives reopening and reload (632ms)
+  ✓   7 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel.spec.ts:8:5 › en 320px: manual-only fuel, Japanese labels and no vehicle requests (539ms)
+  ✓   8 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel-preference.spec.ts:81:1 › manual fuel works when browser storage is unavailable (696ms)
+  ✓   9 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel.spec.ts:8:5 › en 1280px: manual-only fuel, Japanese labels and no vehicle requests (886ms)
+  ✓  10 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel.spec.ts:8:5 › zh-Hant 320px: manual-only fuel, Japanese labels and no vehicle requests (557ms)
+  ✓  12 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel.spec.ts:8:5 › ko 320px: manual-only fuel, Japanese labels and no vehicle requests (506ms)
+  ✓  11 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel.spec.ts:8:5 › zh-Hant 1280px: manual-only fuel, Japanese labels and no vehicle requests (656ms)
+  ✓  14 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel.spec.ts:8:5 › zh-Hans 320px: manual-only fuel, Japanese labels and no vehicle requests (468ms)
+  ✓  13 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel.spec.ts:8:5 › ko 1280px: manual-only fuel, Japanese labels and no vehicle requests (663ms)
+  ✓  16 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel.spec.ts:8:5 › th 320px: manual-only fuel, Japanese labels and no vehicle requests (515ms)
+  ✓  15 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel.spec.ts:8:5 › zh-Hans 1280px: manual-only fuel, Japanese labels and no vehicle requests (669ms)
+  ✓  18 [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:6:1 › the map opens a five-step refuelling guide and Escape restores its trigger (312ms)
+  ✓  17 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel.spec.ts:8:5 › th 1280px: manual-only fuel, Japanese labels and no vehicle requests (679ms)
+  ✘  19 [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › en 320px: guide labels, safety, source links and accessible return to the same map (5.4s)
+(node:8130) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  20 [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › en 1280px: guide labels, safety, source links and accessible return to the same map (5.5s)
+(node:8140) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  21 [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › zh-Hant 320px: guide labels, safety, source links and accessible return to the same map (5.5s)
+(node:8161) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  22 [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › zh-Hant 1280px: guide labels, safety, source links and accessible return to the same map (5.6s)
+(node:8172) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  23 [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › ko 320px: guide labels, safety, source links and accessible return to the same map (5.5s)
+(node:8245) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  24 [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › ko 1280px: guide labels, safety, source links and accessible return to the same map (5.6s)
+(node:8258) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  25 [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › zh-Hans 320px: guide labels, safety, source links and accessible return to the same map (5.5s)
+(node:8285) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  26 [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › zh-Hans 1280px: guide labels, safety, source links and accessible return to the same map (5.6s)
+(node:8297) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  27 [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › th 320px: guide labels, safety, source links and accessible return to the same map (5.5s)
+(node:8320) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  28 [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › th 1280px: guide labels, safety, source links and accessible return to the same map (5.6s)
+(node:8336) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  29 [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:72:1 › guide shows manual and multiple display preferences without changing them or the list (776ms)
+(node:8341) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  30 [Android Chrome Chromium simulation] › tests/e2e/my-fuel-preference.spec.ts:8:3 › en: manual fuel dropdown updates the map and survives reopening and reload (547ms)
+  ✓  31 [Android Chrome Chromium simulation] › tests/e2e/my-fuel-preference.spec.ts:8:3 › zh-Hant: manual fuel dropdown updates the map and survives reopening and reload (461ms)
+  ✓  32 [Android Chrome Chromium simulation] › tests/e2e/my-fuel-preference.spec.ts:8:3 › ko: manual fuel dropdown updates the map and survives reopening and reload (413ms)
+  ✓  33 [Android Chrome Chromium simulation] › tests/e2e/my-fuel-preference.spec.ts:8:3 › zh-Hans: manual fuel dropdown updates the map and survives reopening and reload (441ms)
+  ✓  34 [Android Chrome Chromium simulation] › tests/e2e/my-fuel-preference.spec.ts:8:3 › th: manual fuel dropdown updates the map and survives reopening and reload (449ms)
+  ✓  36 [Android Chrome Chromium simulation] › tests/e2e/my-fuel-preference.spec.ts:81:1 › manual fuel works when browser storage is unavailable (285ms)
+  ✓  35 [Android Chrome Chromium simulation] › tests/e2e/my-fuel-preference.spec.ts:42:1 › manual fuel replaces a multi-selection without resetting region, list mode or requesting location; reset stays in sync (761ms)
+  ✓  37 [Android Chrome Chromium simulation] › tests/e2e/my-fuel.spec.ts:8:5 › en 320px: manual-only fuel, Japanese labels and no vehicle requests (390ms)
+  ✓  39 [Android Chrome Chromium simulation] › tests/e2e/my-fuel.spec.ts:8:5 › zh-Hant 320px: manual-only fuel, Japanese labels and no vehicle requests (412ms)
+  ✓  38 [Android Chrome Chromium simulation] › tests/e2e/my-fuel.spec.ts:8:5 › en 1280px: manual-only fuel, Japanese labels and no vehicle requests (581ms)
+  ✓  41 [Android Chrome Chromium simulation] › tests/e2e/my-fuel.spec.ts:8:5 › ko 320px: manual-only fuel, Japanese labels and no vehicle requests (402ms)
+  ✓  40 [Android Chrome Chromium simulation] › tests/e2e/my-fuel.spec.ts:8:5 › zh-Hant 1280px: manual-only fuel, Japanese labels and no vehicle requests (585ms)
+  ✓  43 [Android Chrome Chromium simulation] › tests/e2e/my-fuel.spec.ts:8:5 › zh-Hans 320px: manual-only fuel, Japanese labels and no vehicle requests (401ms)
+  ✓  42 [Android Chrome Chromium simulation] › tests/e2e/my-fuel.spec.ts:8:5 › ko 1280px: manual-only fuel, Japanese labels and no vehicle requests (593ms)
+  ✓  45 [Android Chrome Chromium simulation] › tests/e2e/my-fuel.spec.ts:8:5 › th 320px: manual-only fuel, Japanese labels and no vehicle requests (641ms)
+  ✓  44 [Android Chrome Chromium simulation] › tests/e2e/my-fuel.spec.ts:8:5 › zh-Hans 1280px: manual-only fuel, Japanese labels and no vehicle requests (843ms)
+  ✓  47 [Android Chrome Chromium simulation] › tests/e2e/refuel-guide.spec.ts:6:1 › the map opens a five-step refuelling guide and Escape restores its trigger (306ms)
+  ✓  46 [Android Chrome Chromium simulation] › tests/e2e/my-fuel.spec.ts:8:5 › th 1280px: manual-only fuel, Japanese labels and no vehicle requests (641ms)
+  ✓  48 [Android Chrome Chromium simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › en 320px: guide labels, safety, source links and accessible return to the same map (391ms)
+  ✓  49 [Android Chrome Chromium simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › en 1280px: guide labels, safety, source links and accessible return to the same map (487ms)
+  ✓  50 [Android Chrome Chromium simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › zh-Hant 320px: guide labels, safety, source links and accessible return to the same map (384ms)
+  ✓  52 [Android Chrome Chromium simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › ko 320px: guide labels, safety, source links and accessible return to the same map (380ms)
+  ✓  51 [Android Chrome Chromium simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › zh-Hant 1280px: guide labels, safety, source links and accessible return to the same map (479ms)
+  ✓  54 [Android Chrome Chromium simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › zh-Hans 320px: guide labels, safety, source links and accessible return to the same map (377ms)
+  ✓  53 [Android Chrome Chromium simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › ko 1280px: guide labels, safety, source links and accessible return to the same map (442ms)
+  ✓  56 [Android Chrome Chromium simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › th 320px: guide labels, safety, source links and accessible return to the same map (397ms)
+  ✓  55 [Android Chrome Chromium simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › zh-Hans 1280px: guide labels, safety, source links and accessible return to the same map (460ms)
+  ✓  57 [Android Chrome Chromium simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › th 1280px: guide labels, safety, source links and accessible return to the same map (468ms)
+  ✓  58 [Android Chrome Chromium simulation] › tests/e2e/refuel-guide.spec.ts:72:1 › guide shows manual and multiple display preferences without changing them or the list (538ms)
+
+
+  1) [iPhone Safari WebKit simulation] › tests/e2e/my-fuel-preference.spec.ts:42:1 › manual fuel replaces a multi-selection without resetting region, list mode or requesting location; reset stays in sync 
+
+    Error: locator.check: Clicking the checkbox did not change its state
+    Call log:
+      - waiting for locator('#display-fuel').locator('input[value="REGULAR"]')
+        - locator resolved to <input checked type="checkbox" value="REGULAR"/>
+      - attempting click action
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - performing click action
+        - click action done
+        - waiting for scheduled navigations to finish
+        - navigations have finished
+
+
+       at fuel-selection.ts:7
+
+       5 |   const selection = page.locator("#display-fuel");
+       6 |   if (await selection.getAttribute("open") === null) await selection.locator("summary").click();
+    >  7 |   for (const fuel of fuels) await selection.locator(`input[value="${fuel}"]`).check();
+         |                                                                               ^
+       8 |   for (const fuel of ["REGULAR", "HIGH_OCTANE", "DIESEL"]) {
+       9 |     if (!fuels.includes(fuel as FuelType)) await selection.locator(`input[value="${fuel}"]`).uncheck();
+      10 |   }
+        at chooseFuels (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-selection.ts:7:79)
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/my-fuel-preference.spec.ts:57:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-finish-20260930/guide-mobile-test-results/my-fuel-preference-manual--158f3-ocation-reset-stays-in-sync-iPhone-Safari-WebKit-simulation/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-finish-20260930/guide-mobile-test-results/my-fuel-preference-manual--158f3-ocation-reset-stays-in-sync-iPhone-Safari-WebKit-simulation/error-context.md
+
+  2) [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › en 320px: guide labels, safety, source links and accessible return to the same map 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  getByRole('dialog', { name: 'Refuelling guide', exact: true }).getByRole('link', { name: 'FDMA safety advice ↗' })
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" getByRole('dialog', { name: 'Refuelling guide', exact: true }).getByRole('link', { name: 'FDMA safety advice ↗' }) with timeout 5000ms
+      - waiting for getByRole('dialog', { name: 'Refuelling guide', exact: true }).getByRole('link', { name: 'FDMA safety advice ↗' })
+        14 × locator resolved to <a target="_blank" rel="noopener noreferrer" href="https://www.fdma.go.jp/laws/tutatsu/post1258/">FDMA safety advice ↗</a>
+           - unexpected value "inactive"
+
+
+      55 |       await close.focus();
+      56 |       await page.keyboard.press("Tab");
+    > 57 |       await expect(dialog.getByRole("link", { name: t.rgSourceSafety })).toBeFocused();
+         |                                                                          ^
+      58 |       await complete.focus();
+      59 |       await page.keyboard.press("Tab");
+      60 |       expect(await page.evaluate(() => document.activeElement === document.body || !!document.activeElement?.closest("dialog"))).toBe(true);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:57:74
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-en-320px-guid-27606-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-en-320px-guid-27606-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/error-context.md
+
+  3) [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › en 1280px: guide labels, safety, source links and accessible return to the same map 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  getByRole('dialog', { name: 'Refuelling guide', exact: true }).getByRole('link', { name: 'FDMA safety advice ↗' })
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" getByRole('dialog', { name: 'Refuelling guide', exact: true }).getByRole('link', { name: 'FDMA safety advice ↗' }) with timeout 5000ms
+      - waiting for getByRole('dialog', { name: 'Refuelling guide', exact: true }).getByRole('link', { name: 'FDMA safety advice ↗' })
+        14 × locator resolved to <a target="_blank" rel="noopener noreferrer" href="https://www.fdma.go.jp/laws/tutatsu/post1258/">FDMA safety advice ↗</a>
+           - unexpected value "inactive"
+
+
+      55 |       await close.focus();
+      56 |       await page.keyboard.press("Tab");
+    > 57 |       await expect(dialog.getByRole("link", { name: t.rgSourceSafety })).toBeFocused();
+         |                                                                          ^
+      58 |       await complete.focus();
+      59 |       await page.keyboard.press("Tab");
+      60 |       expect(await page.evaluate(() => document.activeElement === document.body || !!document.activeElement?.closest("dialog"))).toBe(true);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:57:74
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-en-1280px-gui-3f43f-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-en-1280px-gui-3f43f-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/error-context.md
+
+  4) [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › zh-Hant 320px: guide labels, safety, source links and accessible return to the same map 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' }) with timeout 5000ms
+      - waiting for getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })
+        14 × locator resolved to <a target="_blank" rel="noopener noreferrer" href="https://www.fdma.go.jp/laws/tutatsu/post1258/">消防庁安全提示 ↗</a>
+           - unexpected value "inactive"
+
+
+      55 |       await close.focus();
+      56 |       await page.keyboard.press("Tab");
+    > 57 |       await expect(dialog.getByRole("link", { name: t.rgSourceSafety })).toBeFocused();
+         |                                                                          ^
+      58 |       await complete.focus();
+      59 |       await page.keyboard.press("Tab");
+      60 |       expect(await page.evaluate(() => document.activeElement === document.body || !!document.activeElement?.closest("dialog"))).toBe(true);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:57:74
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-zh-Hant-320px-6e0a9-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-zh-Hant-320px-6e0a9-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/error-context.md
+
+  5) [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › zh-Hant 1280px: guide labels, safety, source links and accessible return to the same map 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' }) with timeout 5000ms
+      - waiting for getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })
+        14 × locator resolved to <a target="_blank" rel="noopener noreferrer" href="https://www.fdma.go.jp/laws/tutatsu/post1258/">消防庁安全提示 ↗</a>
+           - unexpected value "inactive"
+
+
+      55 |       await close.focus();
+      56 |       await page.keyboard.press("Tab");
+    > 57 |       await expect(dialog.getByRole("link", { name: t.rgSourceSafety })).toBeFocused();
+         |                                                                          ^
+      58 |       await complete.focus();
+      59 |       await page.keyboard.press("Tab");
+      60 |       expect(await page.evaluate(() => document.activeElement === document.body || !!document.activeElement?.closest("dialog"))).toBe(true);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:57:74
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-zh-Hant-1280p-764d5-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-zh-Hant-1280p-764d5-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/error-context.md
+
+  6) [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › ko 320px: guide labels, safety, source links and accessible return to the same map 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  getByRole('dialog', { name: '주유 안내', exact: true }).getByRole('link', { name: '일본 소방청 안전 안내 ↗' })
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" getByRole('dialog', { name: '주유 안내', exact: true }).getByRole('link', { name: '일본 소방청 안전 안내 ↗' }) with timeout 5000ms
+      - waiting for getByRole('dialog', { name: '주유 안내', exact: true }).getByRole('link', { name: '일본 소방청 안전 안내 ↗' })
+        14 × locator resolved to <a target="_blank" rel="noopener noreferrer" href="https://www.fdma.go.jp/laws/tutatsu/post1258/">일본 소방청 안전 안내 ↗</a>
+           - unexpected value "inactive"
+
+
+      55 |       await close.focus();
+      56 |       await page.keyboard.press("Tab");
+    > 57 |       await expect(dialog.getByRole("link", { name: t.rgSourceSafety })).toBeFocused();
+         |                                                                          ^
+      58 |       await complete.focus();
+      59 |       await page.keyboard.press("Tab");
+      60 |       expect(await page.evaluate(() => document.activeElement === document.body || !!document.activeElement?.closest("dialog"))).toBe(true);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:57:74
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-ko-320px-guid-1a848-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-ko-320px-guid-1a848-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/error-context.md
+
+  7) [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › ko 1280px: guide labels, safety, source links and accessible return to the same map 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  getByRole('dialog', { name: '주유 안내', exact: true }).getByRole('link', { name: '일본 소방청 안전 안내 ↗' })
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" getByRole('dialog', { name: '주유 안내', exact: true }).getByRole('link', { name: '일본 소방청 안전 안내 ↗' }) with timeout 5000ms
+      - waiting for getByRole('dialog', { name: '주유 안내', exact: true }).getByRole('link', { name: '일본 소방청 안전 안내 ↗' })
+        14 × locator resolved to <a target="_blank" rel="noopener noreferrer" href="https://www.fdma.go.jp/laws/tutatsu/post1258/">일본 소방청 안전 안내 ↗</a>
+           - unexpected value "inactive"
+
+
+      55 |       await close.focus();
+      56 |       await page.keyboard.press("Tab");
+    > 57 |       await expect(dialog.getByRole("link", { name: t.rgSourceSafety })).toBeFocused();
+         |                                                                          ^
+      58 |       await complete.focus();
+      59 |       await page.keyboard.press("Tab");
+      60 |       expect(await page.evaluate(() => document.activeElement === document.body || !!document.activeElement?.closest("dialog"))).toBe(true);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:57:74
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-ko-1280px-gui-b0eca-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-ko-1280px-gui-b0eca-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/error-context.md
+
+  8) [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › zh-Hans 320px: guide labels, safety, source links and accessible return to the same map 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' }) with timeout 5000ms
+      - waiting for getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })
+        14 × locator resolved to <a target="_blank" rel="noopener noreferrer" href="https://www.fdma.go.jp/laws/tutatsu/post1258/">消防庁安全提示 ↗</a>
+           - unexpected value "inactive"
+
+
+      55 |       await close.focus();
+      56 |       await page.keyboard.press("Tab");
+    > 57 |       await expect(dialog.getByRole("link", { name: t.rgSourceSafety })).toBeFocused();
+         |                                                                          ^
+      58 |       await complete.focus();
+      59 |       await page.keyboard.press("Tab");
+      60 |       expect(await page.evaluate(() => document.activeElement === document.body || !!document.activeElement?.closest("dialog"))).toBe(true);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:57:74
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-zh-Hans-320px-db88d-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-zh-Hans-320px-db88d-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/error-context.md
+
+  9) [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › zh-Hans 1280px: guide labels, safety, source links and accessible return to the same map 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' }) with timeout 5000ms
+      - waiting for getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })
+        14 × locator resolved to <a target="_blank" rel="noopener noreferrer" href="https://www.fdma.go.jp/laws/tutatsu/post1258/">消防庁安全提示 ↗</a>
+           - unexpected value "inactive"
+
+
+      55 |       await close.focus();
+      56 |       await page.keyboard.press("Tab");
+    > 57 |       await expect(dialog.getByRole("link", { name: t.rgSourceSafety })).toBeFocused();
+         |                                                                          ^
+      58 |       await complete.focus();
+      59 |       await page.keyboard.press("Tab");
+      60 |       expect(await page.evaluate(() => document.activeElement === document.body || !!document.activeElement?.closest("dialog"))).toBe(true);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:57:74
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-zh-Hans-1280p-c557f-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-zh-Hans-1280p-c557f-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/error-context.md
+
+  10) [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › th 320px: guide labels, safety, source links and accessible return to the same map 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  getByRole('dialog', { name: 'วิธีเติมน้ำมัน', exact: true }).getByRole('link', { name: 'คำแนะนำความปลอดภัยจาก FDMA ↗' })
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" getByRole('dialog', { name: 'วิธีเติมน้ำมัน', exact: true }).getByRole('link', { name: 'คำแนะนำความปลอดภัยจาก FDMA ↗' }) with timeout 5000ms
+      - waiting for getByRole('dialog', { name: 'วิธีเติมน้ำมัน', exact: true }).getByRole('link', { name: 'คำแนะนำความปลอดภัยจาก FDMA ↗' })
+        14 × locator resolved to <a target="_blank" rel="noopener noreferrer" href="https://www.fdma.go.jp/laws/tutatsu/post1258/">คำแนะนำความปลอดภัยจาก FDMA ↗</a>
+           - unexpected value "inactive"
+
+
+      55 |       await close.focus();
+      56 |       await page.keyboard.press("Tab");
+    > 57 |       await expect(dialog.getByRole("link", { name: t.rgSourceSafety })).toBeFocused();
+         |                                                                          ^
+      58 |       await complete.focus();
+      59 |       await page.keyboard.press("Tab");
+      60 |       expect(await page.evaluate(() => document.activeElement === document.body || !!document.activeElement?.closest("dialog"))).toBe(true);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:57:74
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-th-320px-guid-b85f1-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-th-320px-guid-b85f1-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/error-context.md
+
+  11) [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › th 1280px: guide labels, safety, source links and accessible return to the same map 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  getByRole('dialog', { name: 'วิธีเติมน้ำมัน', exact: true }).getByRole('link', { name: 'คำแนะนำความปลอดภัยจาก FDMA ↗' })
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" getByRole('dialog', { name: 'วิธีเติมน้ำมัน', exact: true }).getByRole('link', { name: 'คำแนะนำความปลอดภัยจาก FDMA ↗' }) with timeout 5000ms
+      - waiting for getByRole('dialog', { name: 'วิธีเติมน้ำมัน', exact: true }).getByRole('link', { name: 'คำแนะนำความปลอดภัยจาก FDMA ↗' })
+        14 × locator resolved to <a target="_blank" rel="noopener noreferrer" href="https://www.fdma.go.jp/laws/tutatsu/post1258/">คำแนะนำความปลอดภัยจาก FDMA ↗</a>
+           - unexpected value "inactive"
+
+
+      55 |       await close.focus();
+      56 |       await page.keyboard.press("Tab");
+    > 57 |       await expect(dialog.getByRole("link", { name: t.rgSourceSafety })).toBeFocused();
+         |                                                                          ^
+      58 |       await complete.focus();
+      59 |       await page.keyboard.press("Tab");
+      60 |       expect(await page.evaluate(() => document.activeElement === document.body || !!document.activeElement?.closest("dialog"))).toBe(true);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:57:74
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-th-1280px-gui-69779-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-th-1280px-gui-69779-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/error-context.md
+
+  12) [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:72:1 › guide shows manual and multiple display preferences without changing them or the list 
+
+    Error: locator.check: Clicking the checkbox did not change its state
+    Call log:
+      - waiting for locator('#display-fuel').locator('input[value="REGULAR"]')
+        - locator resolved to <input checked type="checkbox" value="REGULAR"/>
+      - attempting click action
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - performing click action
+        - click action done
+        - waiting for scheduled navigations to finish
+        - navigations have finished
+
+
+       at fuel-selection.ts:7
+
+       5 |   const selection = page.locator("#display-fuel");
+       6 |   if (await selection.getAttribute("open") === null) await selection.locator("summary").click();
+    >  7 |   for (const fuel of fuels) await selection.locator(`input[value="${fuel}"]`).check();
+         |                                                                               ^
+       8 |   for (const fuel of ["REGULAR", "HIGH_OCTANE", "DIESEL"]) {
+       9 |     if (!fuels.includes(fuel as FuelType)) await selection.locator(`input[value="${fuel}"]`).uncheck();
+      10 |   }
+        at chooseFuels (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-selection.ts:7:79)
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:88:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-guide-shows-m-041c4-t-changing-them-or-the-list-iPhone-Safari-WebKit-simulation/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-guide-shows-m-041c4-t-changing-them-or-the-list-iPhone-Safari-WebKit-simulation/error-context.md
+
+  12 failed
+    [iPhone Safari WebKit simulation] › tests/e2e/my-fuel-preference.spec.ts:42:1 › manual fuel replaces a multi-selection without resetting region, list mode or requesting location; reset stays in sync 
+    [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › en 320px: guide labels, safety, source links and accessible return to the same map 
+    [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › en 1280px: guide labels, safety, source links and accessible return to the same map 
+    [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › zh-Hant 320px: guide labels, safety, source links and accessible return to the same map 
+    [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › zh-Hant 1280px: guide labels, safety, source links and accessible return to the same map 
+    [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › ko 320px: guide labels, safety, source links and accessible return to the same map 
+    [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › ko 1280px: guide labels, safety, source links and accessible return to the same map 
+    [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › zh-Hans 320px: guide labels, safety, source links and accessible return to the same map 
+    [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › zh-Hans 1280px: guide labels, safety, source links and accessible return to the same map 
+    [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › th 320px: guide labels, safety, source links and accessible return to the same map 
+    [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › th 1280px: guide labels, safety, source links and accessible return to the same map 
+    [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:72:1 › guide shows manual and multiple display preferences without changing them or the list 
+  46 passed (48.7s)

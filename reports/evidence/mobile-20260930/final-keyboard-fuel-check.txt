@@ -1,0 +1,43 @@
+[WebServer] (node:14453) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+
+Running 20 tests using 2 workers
+
+(node:14457) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:14456) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/20] [iPhone Safari WebKit simulation] › tests/e2e/fuel-label.spec.ts:6:5 › mouse › fuel label text toggles exactly once and never closes its panel
+[2/20] [iPhone Safari WebKit simulation] › tests/e2e/fuel-label.spec.ts:6:5 › touch › fuel label text toggles exactly once and never closes its panel
+[3/20] [iPhone Safari WebKit simulation] › tests/e2e/fuel-label.spec.ts:63:1 › fuel panel closes when keyboard focus actually leaves, and Escape restores summary focus
+[4/20] [iPhone Safari WebKit simulation] › tests/e2e/my-fuel-preference.spec.ts:8:3 › en: manual fuel dropdown updates the map and survives reopening and reload
+[5/20] [iPhone Safari WebKit simulation] › tests/e2e/my-fuel-preference.spec.ts:8:3 › zh-Hant: manual fuel dropdown updates the map and survives reopening and reload
+[6/20] [iPhone Safari WebKit simulation] › tests/e2e/my-fuel-preference.spec.ts:8:3 › ko: manual fuel dropdown updates the map and survives reopening and reload
+[7/20] [iPhone Safari WebKit simulation] › tests/e2e/my-fuel-preference.spec.ts:8:3 › zh-Hans: manual fuel dropdown updates the map and survives reopening and reload
+[8/20] [iPhone Safari WebKit simulation] › tests/e2e/my-fuel-preference.spec.ts:8:3 › th: manual fuel dropdown updates the map and survives reopening and reload
+[9/20] [iPhone Safari WebKit simulation] › tests/e2e/my-fuel-preference.spec.ts:42:1 › manual fuel replaces a multi-selection without resetting region, list mode or requesting location; reset stays in sync
+[10/20] [iPhone Safari WebKit simulation] › tests/e2e/my-fuel-preference.spec.ts:81:1 › manual fuel works when browser storage is unavailable
+(node:14498) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[11/20] [Android Chrome Chromium simulation] › tests/e2e/fuel-label.spec.ts:6:5 › mouse › fuel label text toggles exactly once and never closes its panel
+(node:14500) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[12/20] [Android Chrome Chromium simulation] › tests/e2e/fuel-label.spec.ts:6:5 › touch › fuel label text toggles exactly once and never closes its panel
+[13/20] [Android Chrome Chromium simulation] › tests/e2e/fuel-label.spec.ts:63:1 › fuel panel closes when keyboard focus actually leaves, and Escape restores summary focus
+[14/20] [Android Chrome Chromium simulation] › tests/e2e/my-fuel-preference.spec.ts:8:3 › en: manual fuel dropdown updates the map and survives reopening and reload
+[15/20] [Android Chrome Chromium simulation] › tests/e2e/my-fuel-preference.spec.ts:8:3 › zh-Hant: manual fuel dropdown updates the map and survives reopening and reload
+[16/20] [Android Chrome Chromium simulation] › tests/e2e/my-fuel-preference.spec.ts:8:3 › ko: manual fuel dropdown updates the map and survives reopening and reload
+[17/20] [Android Chrome Chromium simulation] › tests/e2e/my-fuel-preference.spec.ts:8:3 › zh-Hans: manual fuel dropdown updates the map and survives reopening and reload
+[18/20] [Android Chrome Chromium simulation] › tests/e2e/my-fuel-preference.spec.ts:8:3 › th: manual fuel dropdown updates the map and survives reopening and reload
+[19/20] [Android Chrome Chromium simulation] › tests/e2e/my-fuel-preference.spec.ts:42:1 › manual fuel replaces a multi-selection without resetting region, list mode or requesting location; reset stays in sync
+[20/20] [Android Chrome Chromium simulation] › tests/e2e/my-fuel-preference.spec.ts:81:1 › manual fuel works when browser storage is unavailable
+  20 passed (7.8s)

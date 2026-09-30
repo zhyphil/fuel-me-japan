@@ -56,7 +56,13 @@ export function createMapMarkers(L: typeof Leaflet, layer: Leaflet.LayerGroup, s
           entry = { spec, marker, button, symbol };
           const live = entry;
           button.addEventListener("click", (event) => { event.stopPropagation(); live.spec.onClick(); });
-          L.DomEvent.disableClickPropagation(button);
+          // Keep single taps on the marker, but let a second finger reach Leaflet.
+          // disableClickPropagation also swallows touchstart and prevents pinch
+          // gestures whenever either finger lands on a station or cluster.
+          L.DomEvent.on(button, "mousedown dblclick contextmenu", L.DomEvent.stopPropagation);
+          button.addEventListener("touchstart", (event) => {
+            if (event.touches.length < 2) event.stopPropagation();
+          }, { passive: true });
           if (station) {
             symbol.className = "map-brand";
             const image = document.createElement("img"); image.alt = ""; image.width = 38; image.height = 38;

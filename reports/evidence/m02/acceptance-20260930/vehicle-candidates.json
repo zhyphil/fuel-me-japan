@@ -1,0 +1,97 @@
+{
+  "日期": "2026-09-30",
+  "status": "BLOCKED_SOURCE_APPROVAL_AND_EXACT_SCOPE",
+  "说明": "三项是有具体章节与生产期的候选/对照资料，未成为站点公开车辆映射。",
+  "sources": [
+    {
+      "id": "yaris-2503-cv",
+      "owner": "TOYOTA MOTOR CORPORATION",
+      "market": "JP",
+      "model": "YARIS",
+      "动力类别": "汽油版",
+      "productionPeriod": {
+        "from": "2025-02",
+        "through": "2026-01",
+        "basis": "MANUFACTURER_PRODUCTION_MONTH"
+      },
+      "indexUrl": "https://manual.toyota.jp/yaris/",
+      "url": "https://manual.toyota.jp/yaris/2503/cv/ja_JP/contents/vhch04se040401.php",
+      "locator": "給油口の開け方 → 給油する前に → 知識 → 燃料の種類について",
+      "原文短摘": "無鉛レギュラーガソリン",
+      "fuelTypeStatedInManual": "REGULAR",
+      "用途": "候选参考",
+      "status": "PENDING_REVIEW",
+      "productionEnabled": false,
+      "checkedAt": "2026-09-30",
+      "sourceUpdatedAt": "UNKNOWN",
+      "termsUrl": "https://toyota.jp/attribute/",
+      "归属说明": "来源为丰田日本对应版本取扱説明書，目录中的生产期与手册正文分开核对。",
+      "允许使用评估": "仅作为本地候选来源审查；未获得足以将其标记为本项目已批准商用映射的完整使用依据。未复制图片或整本手册。",
+      "仍需解决": [
+        "当前 modelYearFrom/modelYearTo 表示年款，不能直接替换成生产年月或初次登记年份。",
+        "需要建立实际车辆、精确配置与对应手册版本的可靠识别依据。",
+        "接入前完成来源登记及五语言安全文案人工审核。"
+      ]
+    },
+    {
+      "id": "yaris-2503-hev",
+      "owner": "TOYOTA MOTOR CORPORATION",
+      "market": "JP",
+      "model": "YARIS",
+      "动力类别": "混合动力版",
+      "productionPeriod": {
+        "from": "2025-02",
+        "through": "2026-01",
+        "basis": "MANUFACTURER_PRODUCTION_MONTH"
+      },
+      "indexUrl": "https://manual.toyota.jp/yaris/",
+      "url": "https://manual.toyota.jp/yaris/2503/hev/ja_JP/contents/vhch04se040401.php",
+      "locator": "給油口の開け方 → 給油する前に → 知識 → 燃料の種類について",
+      "原文短摘": "無鉛レギュラーガソリン",
+      "fuelTypeStatedInManual": "REGULAR",
+      "用途": "候选参考",
+      "status": "PENDING_REVIEW",
+      "productionEnabled": false,
+      "checkedAt": "2026-09-30",
+      "sourceUpdatedAt": "UNKNOWN",
+      "termsUrl": "https://toyota.jp/attribute/",
+      "归属说明": "来源为丰田日本对应版本取扱説明書，目录中的生产期与手册正文分开核对。",
+      "允许使用评估": "仅作为本地候选来源审查；未获得足以将其标记为本项目已批准商用映射的完整使用依据。未复制图片或整本手册。",
+      "仍需解决": [
+        "当前 modelYearFrom/modelYearTo 表示年款，不能直接替换成生产年月或初次登记年份。",
+        "需要建立实际车辆、精确配置与对应手册版本的可靠识别依据。",
+        "接入前完成来源登记及五语言安全文案人工审核。"
+      ]
+    },
+    {
+      "id": "gr-yaris-2510-cv",
+      "owner": "TOYOTA MOTOR CORPORATION",
+      "market": "JP",
+      "model": "GR YARIS",
+      "动力类别": "汽油版",
+      "productionPeriod": {
+        "from": "2025-09",
+        "through": "2026-02",
+        "basis": "MANUFACTURER_PRODUCTION_MONTH"
+      },
+      "indexUrl": "https://manual.toyota.jp/yaris/",
+      "url": "https://manual.toyota.jp/gr_yaris/2510/cv/ja_JP/contents/vhch04se040401.php",
+      "locator": "給油口の開け方 → 給油する前に → 知識 → 燃料の種類について",
+      "原文短摘": "無鉛プレミアムガソリン",
+      "fuelTypeStatedInManual": "HIGH_OCTANE",
+      "用途": "相似名称不得合并的对照",
+      "status": "PENDING_REVIEW",
+      "productionEnabled": false,
+      "checkedAt": "2026-09-30",
+      "sourceUpdatedAt": "UNKNOWN",
+      "termsUrl": "https://toyota.jp/attribute/",
+      "归属说明": "来源为丰田日本对应版本取扱説明書，目录中的生产期与手册正文分开核对。",
+      "允许使用评估": "仅作为本地候选来源审查；未获得足以将其标记为本项目已批准商用映射的完整使用依据。未复制图片或整本手册。",
+      "仍需解决": [
+        "当前 modelYearFrom/modelYearTo 表示年款，不能直接替换成生产年月或初次登记年份。",
+        "需要建立实际车辆、精确配置与对应手册版本的可靠识别依据。",
+        "接入前完成来源登记及五语言安全文案人工审核。"
+      ]
+    }
+  ]
+}

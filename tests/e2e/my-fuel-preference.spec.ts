@@ -15,6 +15,9 @@ for (const [locale, label] of Object.entries(labels)) {
     await trigger.click();
     const select = page.getByRole("dialog").getByRole("combobox", { name: label, exact: true });
     await expect(select).toHaveValue("REGULAR");
+    const bounds = await select.boundingBox();
+    expect(bounds?.height).toBeGreaterThanOrEqual(44);
+    expect(bounds?.width).toBeGreaterThanOrEqual(44);
     expect(await select.locator("option").evaluateAll((options) => options.map((node) => (node as HTMLOptionElement).value))).toEqual(["REGULAR", "HIGH_OCTANE", "DIESEL"]);
     for (const [fuel, japanese] of [["HIGH_OCTANE", "ハイオク"], ["REGULAR", "レギュラー"], ["DIESEL", "軽油"]]) {
       await select.selectOption(fuel);
@@ -22,7 +25,7 @@ for (const [locale, label] of Object.entries(labels)) {
       await expect(page.locator("#display-fuel input:checked")).toHaveCount(1);
       await expect(page.locator(`#display-fuel input[value="${fuel}"]`)).toBeChecked();
       expect(await page.evaluate((key) => localStorage.getItem(key), FUEL_PREFERENCE_KEY)).toBe(JSON.stringify([fuel]));
-      await expect(page.getByTestId("my-fuel-result")).toHaveCount(0);
+      await expect(page.getByRole("dialog").locator("[role=status], [role=alert]")).toHaveCount(0);
     }
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
     await page.keyboard.press("Escape");
@@ -75,18 +78,17 @@ test("manual fuel replaces a multi-selection without resetting region, list mode
   expect(errors).toEqual([]);
 });
 
-test("manual fuel works when vehicle data and browser storage are unavailable", async ({ page }) => {
+test("manual fuel works when browser storage is unavailable", async ({ page }) => {
   const t = JSON.parse(readFileSync("src/locales/en.json", "utf8"));
   await page.addInitScript(() => Object.defineProperty(window, "localStorage", { configurable: true, get() { throw Error("Storage blocked"); } }));
-  await page.route("**/data/vehicles/**", (route) => route.fulfill({ status: 503, body: "offline test" }));
   const errors: string[] = [];
   page.on("pageerror", (error) => errors.push(error.message));
   await page.goto("/en/");
   const trigger = page.getByRole("button", { name: t.myFuelTitle, exact: true });
   await trigger.click();
-  await expect(page.getByRole("alert")).toBeVisible();
+  await expect(page.getByRole("dialog").getByRole("combobox")).toHaveCount(1);
   await page.getByRole("combobox", { name: labels.en, exact: true }).selectOption("DIESEL");
-  await expect(page.getByTestId("my-fuel-result")).toHaveCount(0);
+  await expect(page.getByRole("dialog").locator("[role=status], [role=alert]")).toHaveCount(0);
   await page.keyboard.press("Escape");
   await expect(page.locator('#display-fuel input[value="DIESEL"]')).toBeChecked();
   await trigger.click(); await expect(page.getByRole("combobox", { name: labels.en, exact: true })).toHaveValue("DIESEL");

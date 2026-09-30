@@ -1,0 +1,942 @@
+candidate	Set up job	﻿2026-09-30T18:59:49.4919971Z Current runner version: '2.337.0'
+candidate	Set up job	2026-09-30T18:59:49.4958241Z ##[group]Runner Image Provisioner
+candidate	Set up job	2026-09-30T18:59:49.4959868Z Hosted Compute Agent
+candidate	Set up job	2026-09-30T18:59:49.4960910Z Version: 20260828.587
+candidate	Set up job	2026-09-30T18:59:49.4962210Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+candidate	Set up job	2026-09-30T18:59:49.4963504Z Build Date: 2026-08-28T16:44:25Z
+candidate	Set up job	2026-09-30T18:59:49.4964915Z Worker ID: {05e24d4c-89c6-4b43-9cc0-d13f71d3fb22}
+candidate	Set up job	2026-09-30T18:59:49.4966362Z Azure Region: northcentralus
+candidate	Set up job	2026-09-30T18:59:49.4967418Z ##[endgroup]
+candidate	Set up job	2026-09-30T18:59:49.4969913Z ##[group]Operating System
+candidate	Set up job	2026-09-30T18:59:49.4971182Z Ubuntu
+candidate	Set up job	2026-09-30T18:59:49.4972144Z 24.04.5
+candidate	Set up job	2026-09-30T18:59:49.4973221Z LTS
+candidate	Set up job	2026-09-30T18:59:49.4974114Z ##[endgroup]
+candidate	Set up job	2026-09-30T18:59:49.4975322Z ##[group]Runner Image
+candidate	Set up job	2026-09-30T18:59:49.4976560Z Image: ubuntu-24.04
+candidate	Set up job	2026-09-30T18:59:49.4977505Z Version: 20260920.314.1
+candidate	Set up job	2026-09-30T18:59:49.4979577Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260920.314/images/ubuntu/Ubuntu2404-Readme.md
+candidate	Set up job	2026-09-30T18:59:49.4982582Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260920.314
+candidate	Set up job	2026-09-30T18:59:49.4984876Z ##[endgroup]
+candidate	Set up job	2026-09-30T18:59:49.4986909Z ##[group]GITHUB_TOKEN Permissions
+candidate	Set up job	2026-09-30T18:59:49.4990144Z Contents: read
+candidate	Set up job	2026-09-30T18:59:49.4991139Z Metadata: read
+candidate	Set up job	2026-09-30T18:59:49.4992698Z ##[endgroup]
+candidate	Set up job	2026-09-30T18:59:49.4996306Z Secret source: Actions
+candidate	Set up job	2026-09-30T18:59:49.4997995Z Cache mode: write
+candidate	Set up job	2026-09-30T18:59:49.4999450Z Prepare workflow directory
+candidate	Set up job	2026-09-30T18:59:49.5496545Z Prepare all required actions
+candidate	Set up job	2026-09-30T18:59:49.5570938Z Getting action download info
+candidate	Set up job	2026-09-30T18:59:49.7917953Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+candidate	Set up job	2026-09-30T18:59:49.9502591Z Download action repository 'actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97' (SHA:5fda3b95a4ea91299a34e894583c3862153e4b97)
+candidate	Set up job	2026-09-30T18:59:50.0727298Z Download action repository 'actions/setup-node@820762786026740c76f36085b0efc47a31fe5020' (SHA:820762786026740c76f36085b0efc47a31fe5020)
+candidate	Set up job	2026-09-30T18:59:50.2391027Z Download action repository 'actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a' (SHA:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a)
+candidate	Set up job	2026-09-30T18:59:50.5500634Z Complete job name: candidate
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-09-30T18:59:50.6466236Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.6468171Z with:
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.6469075Z   persist-credentials: false
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.6470183Z   repository: zhyphil/fuel-me-japan
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.6479138Z   token: ***
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.6480048Z   ssh-strict: true
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.6480980Z   ssh-user: git
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.6481875Z   clean: true
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.6482815Z   sparse-checkout-cone-mode: true
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.6483911Z   fetch-depth: 1
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.6484950Z   fetch-tags: false
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.6485895Z   show-progress: true
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.6486859Z   lfs: false
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.6487846Z   submodules: false
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.6488830Z   set-safe-directory: true
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.6489904Z   allow-unsafe-pr-checkout: false
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.6491330Z ##[endgroup]
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7547112Z Syncing repository: zhyphil/fuel-me-japan
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7550708Z ##[group]Getting Git version info
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7552998Z Working directory is '/home/runner/work/fuel-me-japan/fuel-me-japan'
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7556229Z [command]/usr/bin/git version
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7593407Z git version 2.55.0
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7619222Z ##[endgroup]
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7634121Z Temporarily overriding HOME='/home/runner/work/_temp/fe603fcf-5676-41de-8671-84bfdef3f7bc' before making global git config changes
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7638028Z Adding repository directory to the temporary git global config as a safe directory
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7643105Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/fuel-me-japan/fuel-me-japan
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7696646Z Deleting the contents of '/home/runner/work/fuel-me-japan/fuel-me-japan'
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7700017Z ##[group]Determining repository object format
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7702574Z ##[endgroup]
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7704124Z ##[group]Initializing the repository
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7707041Z [command]/usr/bin/git init /home/runner/work/fuel-me-japan/fuel-me-japan
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7811987Z hint: Using 'master' as the name for the initial branch. This default branch name
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7815419Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7819437Z hint: to use in all of your new repositories, which will suppress this warning,
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7822027Z hint: call:
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7823675Z hint:
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7825175Z hint: 	git config --global init.defaultBranch <name>
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7826947Z hint:
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7828232Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7830955Z hint: 'development'. The just-created branch can be renamed via this command:
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7832666Z hint:
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7833546Z hint: 	git branch -m <name>
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7834525Z hint:
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7836738Z hint: Disable this message with "git config set advice.defaultBranchName false"
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7840177Z Initialized empty Git repository in /home/runner/work/fuel-me-japan/fuel-me-japan/.git/
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7846014Z [command]/usr/bin/git remote add origin https://github.com/zhyphil/fuel-me-japan
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7903171Z ##[endgroup]
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7905109Z ##[group]Disabling automatic garbage collection
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7906680Z [command]/usr/bin/git config --local gc.auto 0
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7937933Z ##[endgroup]
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7940436Z ##[group]Setting up auth
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7941578Z Removing SSH command configuration
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7944524Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.7986400Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.8346907Z Removing HTTP extra header
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.8350818Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.8392803Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.8626389Z Removing includeIf entries pointing to credentials config files
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.8630966Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.8666619Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.8901991Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-92bee5b1-cd4f-42ec-a778-3df3fba92f1b.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.8955447Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/fuel-me-japan/fuel-me-japan/.git.path /home/runner/work/_temp/git-credentials-92bee5b1-cd4f-42ec-a778-3df3fba92f1b.config
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.8983999Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/fuel-me-japan/fuel-me-japan/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-92bee5b1-cd4f-42ec-a778-3df3fba92f1b.config
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.9025079Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-92bee5b1-cd4f-42ec-a778-3df3fba92f1b.config
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.9062371Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-92bee5b1-cd4f-42ec-a778-3df3fba92f1b.config
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.9096830Z ##[endgroup]
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.9099557Z ##[group]Fetching the repository
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:50.9104448Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +6e0b98948e6bc22177db2fb624e79cf77419669a:refs/remotes/origin/main
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:52.7991724Z From https://github.com/zhyphil/fuel-me-japan
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:52.8004361Z  * [new ref]         6e0b98948e6bc22177db2fb624e79cf77419669a -> origin/main
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:52.8006741Z [command]/usr/bin/git branch --list --remote origin/main
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:52.8034525Z   origin/main
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:52.8043847Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:52.8073870Z 6e0b98948e6bc22177db2fb624e79cf77419669a
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:52.8083154Z ##[endgroup]
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:52.8083696Z ##[group]Determining the checkout info
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:52.8084212Z ##[endgroup]
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:52.8086015Z [command]/usr/bin/git sparse-checkout disable
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:52.8722040Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:52.8760711Z ##[group]Checking out the ref
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:52.8765245Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.1056603Z Switched to a new branch 'main'
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.1059967Z branch 'main' set up to track 'origin/main'.
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.1077960Z ##[endgroup]
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.1129811Z [command]/usr/bin/git log -1 --format=%H
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.1161622Z 6e0b98948e6bc22177db2fb624e79cf77419669a
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.1171226Z ##[group]Removing auth
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.1171793Z Removing SSH command configuration
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.1176778Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.1216503Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.1466227Z Removing HTTP extra header
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.1470441Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.1509161Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.1732814Z Removing includeIf entries pointing to credentials config files
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.1736201Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.1767255Z includeif.gitdir:/home/runner/work/fuel-me-japan/fuel-me-japan/.git.path
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.1768143Z includeif.gitdir:/home/runner/work/fuel-me-japan/fuel-me-japan/.git/worktrees/*.path
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.1768709Z includeif.gitdir:/github/workspace/.git.path
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.1769148Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.1775872Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/fuel-me-japan/fuel-me-japan/.git.path
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.1802579Z /home/runner/work/_temp/git-credentials-92bee5b1-cd4f-42ec-a778-3df3fba92f1b.config
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.1812023Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/fuel-me-japan/fuel-me-japan/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-92bee5b1\-cd4f\-42ec\-a778\-3df3fba92f1b\.config
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.1848833Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/fuel-me-japan/fuel-me-japan/.git/worktrees/*.path
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.1958624Z /home/runner/work/_temp/git-credentials-92bee5b1-cd4f-42ec-a778-3df3fba92f1b.config
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.1961500Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/fuel-me-japan/fuel-me-japan/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-92bee5b1\-cd4f\-42ec\-a778\-3df3fba92f1b\.config
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.1964881Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.1966083Z /github/runner_temp/git-credentials-92bee5b1-cd4f-42ec-a778-3df3fba92f1b.config
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.1977662Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-92bee5b1\-cd4f\-42ec\-a778\-3df3fba92f1b\.config
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.2016258Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.2042256Z /github/runner_temp/git-credentials-92bee5b1-cd4f-42ec-a778-3df3fba92f1b.config
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.2049670Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-92bee5b1\-cd4f\-42ec\-a778\-3df3fba92f1b\.config
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.2087042Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.2311860Z Removing credentials config '/home/runner/work/_temp/git-credentials-92bee5b1-cd4f-42ec-a778-3df3fba92f1b.config'
+candidate	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T18:59:53.2321367Z ##[endgroup]
+candidate	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	﻿2026-09-30T18:59:53.2568077Z ##[group]Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+candidate	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-09-30T18:59:53.2568516Z with:
+candidate	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-09-30T18:59:53.2568726Z   python-version: 3.13
+candidate	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-09-30T18:59:53.2568959Z   check-latest: false
+candidate	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-09-30T18:59:53.2571358Z   token: ***
+candidate	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-09-30T18:59:53.2571577Z   update-environment: true
+candidate	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-09-30T18:59:53.2571831Z   allow-prereleases: false
+candidate	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-09-30T18:59:53.2572062Z   freethreaded: false
+candidate	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-09-30T18:59:53.2572278Z ##[endgroup]
+candidate	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-09-30T18:59:53.3724501Z ##[group]Installed versions
+candidate	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-09-30T18:59:53.4383450Z Successfully set up CPython (3.13.15)
+candidate	Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	2026-09-30T18:59:53.4384830Z ##[endgroup]
+candidate	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	﻿2026-09-30T18:59:53.4602605Z ##[group]Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+candidate	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-09-30T18:59:53.4603258Z with:
+candidate	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-09-30T18:59:53.4603561Z   node-version: 24
+candidate	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-09-30T18:59:53.4603905Z   cache: npm
+candidate	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-09-30T18:59:53.4604213Z   check-latest: false
+candidate	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-09-30T18:59:53.4608751Z   token: ***
+candidate	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-09-30T18:59:53.4609105Z   package-manager-cache: true
+candidate	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-09-30T18:59:53.4609491Z env:
+candidate	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-09-30T18:59:53.4609890Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+candidate	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-09-30T18:59:53.4610637Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+candidate	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-09-30T18:59:53.4611340Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+candidate	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-09-30T18:59:53.4611961Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+candidate	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-09-30T18:59:53.4612585Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+candidate	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-09-30T18:59:53.4613222Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+candidate	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-09-30T18:59:53.4613754Z ##[endgroup]
+candidate	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-09-30T18:59:53.6272428Z Found in cache @ /opt/hostedtoolcache/node/24.21.0/x64
+candidate	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-09-30T18:59:53.6276456Z ##[group]Environment details
+candidate	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-09-30T18:59:56.8693883Z node: v24.21.0
+candidate	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-09-30T18:59:56.8694235Z npm: 11.19.0
+candidate	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-09-30T18:59:56.8694468Z yarn: 1.22.22
+candidate	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-09-30T18:59:56.8695875Z ##[endgroup]
+candidate	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-09-30T18:59:56.8717483Z [command]/opt/hostedtoolcache/node/24.21.0/x64/bin/npm config get cache
+candidate	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-09-30T18:59:57.2269520Z /home/runner/.npm
+candidate	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-09-30T18:59:57.4025768Z npm cache is not found
+candidate	Install locked data and app dependencies	﻿2026-09-30T18:59:57.4138984Z ##[group]Run sudo apt-get update
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.4139343Z [36;1msudo apt-get update[0m
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.4139645Z [36;1msudo apt-get install -y osmium-tool[0m
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.4140046Z [36;1mpython -m pip install -r requirements-data.txt[0m
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.4140379Z [36;1mnpm ci[0m
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.4140643Z [36;1mnpx playwright install --with-deps chromium[0m
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.4533191Z shell: /usr/bin/bash -e {0}
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.4533551Z env:
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.4533920Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.4534860Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.4535745Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.4536294Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.4536843Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.4537393Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.4537892Z ##[endgroup]
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.6199107Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.6326336Z Get:6 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.6599156Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.6635168Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.6683319Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.6974079Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.7758328Z Get:7 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [508 kB]
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.8010696Z Get:8 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [455 kB]
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.9081273Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1338 kB]
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.9253270Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [301 kB]
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.9296128Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [181 kB]
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.9310770Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1699 kB]
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.9423071Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [341 kB]
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.9451114Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [388 kB]
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.9481312Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1689 kB]
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.9567678Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [386 kB]
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.9597125Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+candidate	Install locked data and app dependencies	2026-09-30T18:59:57.9687895Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [40.6 kB]
+candidate	Install locked data and app dependencies	2026-09-30T18:59:58.0215482Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [5760 B]
+candidate	Install locked data and app dependencies	2026-09-30T18:59:58.0217748Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [31.0 kB]
+candidate	Install locked data and app dependencies	2026-09-30T18:59:58.0220660Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble-backports/universe Translation-en [18.6 kB]
+candidate	Install locked data and app dependencies	2026-09-30T18:59:58.0222580Z Get:22 http://azure.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [12.6 kB]
+candidate	Install locked data and app dependencies	2026-09-30T18:59:58.0239143Z Get:23 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1066 kB]
+candidate	Install locked data and app dependencies	2026-09-30T18:59:58.0308745Z Get:24 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [220 kB]
+candidate	Install locked data and app dependencies	2026-09-30T18:59:58.0328511Z Get:25 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Components [46.4 kB]
+candidate	Install locked data and app dependencies	2026-09-30T18:59:58.0343906Z Get:26 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1216 kB]
+candidate	Install locked data and app dependencies	2026-09-30T18:59:58.0411535Z Get:27 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [244 kB]
+candidate	Install locked data and app dependencies	2026-09-30T18:59:58.0436136Z Get:28 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Components [76.3 kB]
+candidate	Install locked data and app dependencies	2026-09-30T18:59:58.0453337Z Get:29 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1566 kB]
+candidate	Install locked data and app dependencies	2026-09-30T18:59:58.0536447Z Get:30 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted Translation-en [361 kB]
+candidate	Install locked data and app dependencies	2026-09-30T19:00:06.6170979Z Fetched 12.6 MB in 1s (8650 kB/s)
+candidate	Install locked data and app dependencies	2026-09-30T19:00:07.4447856Z Reading package lists...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:07.4758308Z Reading package lists...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:07.6732824Z Building dependency tree...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:07.6740482Z Reading state information...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:07.8167744Z The following additional packages will be installed:
+candidate	Install locked data and app dependencies	2026-09-30T19:00:07.8171422Z   libboost-program-options1.83.0
+candidate	Install locked data and app dependencies	2026-09-30T19:00:07.8625905Z The following NEW packages will be installed:
+candidate	Install locked data and app dependencies	2026-09-30T19:00:07.8631389Z   libboost-program-options1.83.0 osmium-tool
+candidate	Install locked data and app dependencies	2026-09-30T19:00:07.8802816Z 0 upgraded, 2 newly installed, 0 to remove and 46 not upgraded.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:07.8803306Z Need to get 902 kB of archives.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:07.8803757Z After this operation, 3982 kB of additional disk space will be used.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:07.8804264Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+candidate	Install locked data and app dependencies	2026-09-30T19:00:07.9230870Z Get:2 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libboost-program-options1.83.0 amd64 1.83.0-2.1ubuntu3.2 [321 kB]
+candidate	Install locked data and app dependencies	2026-09-30T19:00:07.9638264Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 osmium-tool amd64 1.16.0-1build1 [582 kB]
+candidate	Install locked data and app dependencies	2026-09-30T19:00:08.2487897Z Fetched 902 kB in 0s (8010 kB/s)
+candidate	Install locked data and app dependencies	2026-09-30T19:00:08.2956041Z Selecting previously unselected package libboost-program-options1.83.0:amd64.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:08.4121775Z (Reading database ... 
+candidate	Install locked data and app dependencies	2026-09-30T19:00:08.4122693Z (Reading database ... 5%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:08.4123586Z (Reading database ... 10%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:08.4124469Z (Reading database ... 15%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:08.4125501Z (Reading database ... 20%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:08.4126272Z (Reading database ... 25%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:08.4126982Z (Reading database ... 30%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:08.4127660Z (Reading database ... 35%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:08.4128021Z (Reading database ... 40%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:08.4128361Z (Reading database ... 45%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:08.4128703Z (Reading database ... 50%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:08.4228533Z (Reading database ... 55%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:08.9333253Z (Reading database ... 60%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:09.2975418Z (Reading database ... 65%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:09.7370145Z (Reading database ... 70%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:10.1363062Z (Reading database ... 75%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:10.6912090Z (Reading database ... 80%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:11.4253604Z (Reading database ... 85%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:12.4748170Z (Reading database ... 90%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:13.3879592Z (Reading database ... 95%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:13.3880453Z (Reading database ... 100%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:13.3881720Z (Reading database ... 202190 files and directories currently installed.)
+candidate	Install locked data and app dependencies	2026-09-30T19:00:13.3926066Z Preparing to unpack .../libboost-program-options1.83.0_1.83.0-2.1ubuntu3.2_amd64.deb ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:13.3970879Z Unpacking libboost-program-options1.83.0:amd64 (1.83.0-2.1ubuntu3.2) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:13.4647068Z Selecting previously unselected package osmium-tool.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:13.4776452Z Preparing to unpack .../osmium-tool_1.16.0-1build1_amd64.deb ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:13.4787100Z Unpacking osmium-tool (1.16.0-1build1) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:13.5817440Z Setting up libboost-program-options1.83.0:amd64 (1.83.0-2.1ubuntu3.2) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:13.5847914Z Setting up osmium-tool (1.16.0-1build1) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:13.5879389Z Processing triggers for libc-bin (2.39-0ubuntu8.9) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:13.6594082Z Processing triggers for man-db (2.12.0-4build2) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:13.6653268Z Not building database; man-db/auto-update is not 'true'.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:14.9941772Z 
+candidate	Install locked data and app dependencies	2026-09-30T19:00:14.9942942Z Running kernel seems to be up-to-date.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:14.9943450Z 
+candidate	Install locked data and app dependencies	2026-09-30T19:00:14.9943787Z No services need to be restarted.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:14.9944195Z 
+candidate	Install locked data and app dependencies	2026-09-30T19:00:14.9944871Z No containers need to be restarted.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:14.9945332Z 
+candidate	Install locked data and app dependencies	2026-09-30T19:00:14.9945779Z No user sessions are running outdated binaries.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:14.9946249Z 
+candidate	Install locked data and app dependencies	2026-09-30T19:00:14.9946900Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:19.4040924Z Collecting shapely==2.1.2 (from -r requirements-data.txt (line 2))
+candidate	Install locked data and app dependencies	2026-09-30T19:00:19.4531630Z   Downloading shapely-2.1.2-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.8 kB)
+candidate	Install locked data and app dependencies	2026-09-30T19:00:19.6454210Z Collecting numpy==2.5.3 (from -r requirements-data.txt (line 3))
+candidate	Install locked data and app dependencies	2026-09-30T19:00:19.6493534Z   Downloading numpy-2.5.3-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+candidate	Install locked data and app dependencies	2026-09-30T19:00:19.6640616Z Collecting openpyxl==3.1.5 (from -r requirements-data.txt (line 4))
+candidate	Install locked data and app dependencies	2026-09-30T19:00:19.6672095Z   Downloading openpyxl-3.1.5-py2.py3-none-any.whl.metadata (2.5 kB)
+candidate	Install locked data and app dependencies	2026-09-30T19:00:19.6783413Z Collecting et_xmlfile==2.0.0 (from -r requirements-data.txt (line 5))
+candidate	Install locked data and app dependencies	2026-09-30T19:00:19.6815156Z   Downloading et_xmlfile-2.0.0-py3-none-any.whl.metadata (2.7 kB)
+candidate	Install locked data and app dependencies	2026-09-30T19:00:19.6898123Z Downloading shapely-2.1.2-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.1 MB)
+candidate	Install locked data and app dependencies	2026-09-30T19:00:19.7446354Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 80.2 MB/s  0:00:00
+candidate	Install locked data and app dependencies	2026-09-30T19:00:19.7486154Z Downloading numpy-2.5.3-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+candidate	Install locked data and app dependencies	2026-09-30T19:00:19.8277521Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 218.2 MB/s  0:00:00
+candidate	Install locked data and app dependencies	2026-09-30T19:00:19.8315588Z Downloading openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
+candidate	Install locked data and app dependencies	2026-09-30T19:00:19.8380337Z Downloading et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
+candidate	Install locked data and app dependencies	2026-09-30T19:00:20.0301210Z Installing collected packages: numpy, et_xmlfile, shapely, openpyxl
+candidate	Install locked data and app dependencies	2026-09-30T19:00:22.5893396Z 
+candidate	Install locked data and app dependencies	2026-09-30T19:00:22.5907629Z Successfully installed et_xmlfile-2.0.0 numpy-2.5.3 openpyxl-3.1.5 shapely-2.1.2
+candidate	Install locked data and app dependencies	2026-09-30T19:00:29.2936350Z 
+candidate	Install locked data and app dependencies	2026-09-30T19:00:29.2937211Z added 180 packages, and audited 181 packages in 7s
+candidate	Install locked data and app dependencies	2026-09-30T19:00:29.2937850Z 
+candidate	Install locked data and app dependencies	2026-09-30T19:00:29.2938230Z 51 packages are looking for funding
+candidate	Install locked data and app dependencies	2026-09-30T19:00:29.2938972Z   run `npm fund` for details
+candidate	Install locked data and app dependencies	2026-09-30T19:00:29.2949069Z 
+candidate	Install locked data and app dependencies	2026-09-30T19:00:29.2949613Z found 0 vulnerabilities
+candidate	Install locked data and app dependencies	2026-09-30T19:00:29.2961822Z npm warn install-scripts 3 packages have install scripts not yet covered by allowScripts:
+candidate	Install locked data and app dependencies	2026-09-30T19:00:29.2963189Z npm warn install-scripts   esbuild@0.28.2 (postinstall: node install.js)
+candidate	Install locked data and app dependencies	2026-09-30T19:00:29.2964212Z npm warn install-scripts   workerd@1.20260926.1 (postinstall: node install.js)
+candidate	Install locked data and app dependencies	2026-09-30T19:00:29.2965375Z npm warn install-scripts   esbuild@0.28.1 (postinstall: node install.js)
+candidate	Install locked data and app dependencies	2026-09-30T19:00:29.2966041Z npm warn install-scripts
+candidate	Install locked data and app dependencies	2026-09-30T19:00:29.2967055Z npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:30.1737728Z Installing dependencies...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:30.1812704Z Switching to root user to install dependencies...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:30.2611802Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+candidate	Install locked data and app dependencies	2026-09-30T19:00:30.2977731Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+candidate	Install locked data and app dependencies	2026-09-30T19:00:30.2986769Z Hit:6 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease
+candidate	Install locked data and app dependencies	2026-09-30T19:00:30.2991766Z Hit:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease
+candidate	Install locked data and app dependencies	2026-09-30T19:00:30.3001999Z Hit:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease
+candidate	Install locked data and app dependencies	2026-09-30T19:00:30.3015227Z Hit:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.5525115Z Reading package lists...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.5753700Z Reading package lists...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.7791115Z Building dependency tree...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.7799477Z Reading state information...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9399852Z libasound2t64 is already the newest version (1.2.11-1ubuntu0.3).
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9400769Z libasound2t64 set to manually installed.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9401669Z libatk-bridge2.0-0t64 is already the newest version (2.52.0-1build1).
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9402511Z libatk-bridge2.0-0t64 set to manually installed.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9403425Z libatk1.0-0t64 is already the newest version (2.52.0-1build1).
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9404145Z libatk1.0-0t64 set to manually installed.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9405380Z libatspi2.0-0t64 is already the newest version (2.52.0-1build1).
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9406136Z libatspi2.0-0t64 set to manually installed.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9407428Z libcairo2 is already the newest version (1.18.0-3build1).
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9408131Z libcairo2 set to manually installed.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9408866Z libcups2t64 is already the newest version (2.4.7-1.2ubuntu7.14).
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9409713Z libcups2t64 set to manually installed.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9410641Z libdbus-1-3 is already the newest version (1.14.10-4ubuntu4.1).
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9411415Z libdbus-1-3 set to manually installed.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9412204Z libdrm2 is already the newest version (2.4.125-1ubuntu0.1~24.04.2).
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9412888Z libdrm2 set to manually installed.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9413563Z libnspr4 is already the newest version (2:4.35-1.1build1).
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9414182Z libnspr4 set to manually installed.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9415036Z libnss3 is already the newest version (2:3.98-1ubuntu0.2).
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9415675Z libnss3 set to manually installed.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9416384Z libpango-1.0-0 is already the newest version (1.52.1+ds-1build1).
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9417090Z libpango-1.0-0 set to manually installed.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9417782Z libx11-6 is already the newest version (2:1.8.7-1build1).
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9418438Z libx11-6 set to manually installed.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9419047Z libxcb1 is already the newest version (1.15-1ubuntu2).
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9419702Z libxcb1 set to manually installed.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9420474Z libxcomposite1 is already the newest version (1:0.4.5-1build3).
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9421218Z libxcomposite1 set to manually installed.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9421981Z libxdamage1 is already the newest version (1:1.1.6-1build1).
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9422673Z libxdamage1 set to manually installed.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9423373Z libxext6 is already the newest version (2:1.3.4-1build2).
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9424044Z libxext6 set to manually installed.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9424997Z libxfixes3 is already the newest version (1:6.0.0-2build1).
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9425697Z libxfixes3 set to manually installed.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9426412Z libxkbcommon0 is already the newest version (1.6.0-1build1).
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9427111Z libxkbcommon0 set to manually installed.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9427826Z libxrandr2 is already the newest version (2:1.5.2-2build1).
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9428496Z libxrandr2 set to manually installed.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9429354Z fonts-noto-color-emoji is already the newest version (2.047-0ubuntu0.24.04.1).
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9430374Z libfontconfig1 is already the newest version (2.15.0-1.1ubuntu2).
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9431130Z libfontconfig1 set to manually installed.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9431924Z libfreetype6 is already the newest version (2.13.2+dfsg-1ubuntu0.1).
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9432687Z libfreetype6 set to manually installed.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9433472Z fonts-liberation is already the newest version (1:2.1.5-3).
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9434207Z fonts-liberation set to manually installed.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9435098Z The following additional packages will be installed:
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9435933Z   gir1.2-glib-2.0 libgl1-mesa-dri libglib2.0-bin libglib2.0-data libglx-mesa0
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9436890Z   libwayland-server0 mesa-libgallium xfonts-encodings xfonts-utils
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9437530Z   xserver-common
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9437919Z Suggested packages:
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9438299Z   low-memory-monitor
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9438719Z Recommended packages:
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9439740Z   fonts-ipafont-mincho fonts-tlwg-loma xfonts-base
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9643888Z The following NEW packages will be installed:
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9650365Z   fonts-freefont-ttf fonts-ipafont-gothic fonts-tlwg-loma-otf fonts-unifont
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9651782Z   fonts-wqy-zenhei libwayland-server0 xfonts-cyrillic xfonts-encodings
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9678869Z   xfonts-scalable xfonts-utils
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9679577Z The following packages will be upgraded:
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9680326Z   gir1.2-glib-2.0 libgbm1 libgl1-mesa-dri libglib2.0-0t64 libglib2.0-bin
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9681211Z   libglib2.0-data libglx-mesa0 mesa-libgallium xserver-common xvfb
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9832675Z 10 upgraded, 10 newly installed, 0 to remove and 36 not upgraded.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9833471Z Need to get 34.9 MB of archives.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9834233Z After this operation, 79.7 MB of additional disk space will be used.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:31.9835487Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+candidate	Install locked data and app dependencies	2026-09-30T19:00:32.0215087Z Get:2 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-ipafont-gothic all 00303-21ubuntu1 [3513 kB]
+candidate	Install locked data and app dependencies	2026-09-30T19:00:32.1136675Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libglib2.0-data all 2.80.0-6ubuntu3.9 [50.1 kB]
+candidate	Install locked data and app dependencies	2026-09-30T19:00:32.1359661Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libglib2.0-bin amd64 2.80.0-6ubuntu3.9 [97.9 kB]
+candidate	Install locked data and app dependencies	2026-09-30T19:00:32.1591785Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 gir1.2-glib-2.0 amd64 2.80.0-6ubuntu3.9 [183 kB]
+candidate	Install locked data and app dependencies	2026-09-30T19:00:32.1838802Z Get:6 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libglib2.0-0t64 amd64 2.80.0-6ubuntu3.9 [1547 kB]
+candidate	Install locked data and app dependencies	2026-09-30T19:00:32.2246550Z Get:7 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 fonts-freefont-ttf all 20211204+svn4273-2 [5641 kB]
+candidate	Install locked data and app dependencies	2026-09-30T19:00:32.3145420Z Get:8 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-tlwg-loma-otf all 1:0.7.3-1 [107 kB]
+candidate	Install locked data and app dependencies	2026-09-30T19:00:32.3386796Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-unifont all 1:15.1.01-1build1 [2993 kB]
+candidate	Install locked data and app dependencies	2026-09-30T19:00:32.4465905Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-wqy-zenhei all 0.9.45-8 [7472 kB]
+candidate	Install locked data and app dependencies	2026-09-30T19:00:32.6956314Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgl1-mesa-dri amd64 25.2.8-0ubuntu0.24.04.3 [37.9 kB]
+candidate	Install locked data and app dependencies	2026-09-30T19:00:32.7217686Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libwayland-server0 amd64 1.22.0-2.1build1 [33.9 kB]
+candidate	Install locked data and app dependencies	2026-09-30T19:00:32.7479589Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libglx-mesa0 amd64 25.2.8-0ubuntu0.24.04.3 [110 kB]
+candidate	Install locked data and app dependencies	2026-09-30T19:00:32.7743183Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgbm1 amd64 25.2.8-0ubuntu0.24.04.3 [34.3 kB]
+candidate	Install locked data and app dependencies	2026-09-30T19:00:32.7999440Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 mesa-libgallium amd64 25.2.8-0ubuntu0.24.04.3 [10.8 MB]
+candidate	Install locked data and app dependencies	2026-09-30T19:00:32.9879353Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 xfonts-encodings all 1:1.0.5-0ubuntu2 [578 kB]
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.0248766Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 xfonts-utils amd64 1:7.7+6build3 [94.4 kB]
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.0506602Z Get:18 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 xfonts-cyrillic all 1:1.0.5+nmu1 [384 kB]
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.0805128Z Get:19 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 xfonts-scalable all 1:1.0.3-1.3 [304 kB]
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.1549739Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 xserver-common all 2:21.1.12-1ubuntu1.8 [34.8 kB]
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.1805647Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 xvfb amd64 2:21.1.12-1ubuntu1.8 [877 kB]
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.4407639Z Fetched 34.9 MB in 1s (28.6 MB/s)
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.4661912Z Selecting previously unselected package fonts-ipafont-gothic.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.4719387Z (Reading database ... 
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.4720001Z (Reading database ... 5%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.4720371Z (Reading database ... 10%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.4720732Z (Reading database ... 15%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.4721083Z (Reading database ... 20%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.4721637Z (Reading database ... 25%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.4722326Z (Reading database ... 30%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.4722893Z (Reading database ... 35%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.4723422Z (Reading database ... 40%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.4723951Z (Reading database ... 45%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.4724460Z (Reading database ... 50%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.4743546Z (Reading database ... 55%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.4845352Z (Reading database ... 60%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.4871694Z (Reading database ... 65%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.4893656Z (Reading database ... 70%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.4920341Z (Reading database ... 75%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.4953145Z (Reading database ... 80%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.4977976Z (Reading database ... 85%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.5163985Z (Reading database ... 90%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.5419615Z (Reading database ... 95%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.5420297Z (Reading database ... 100%
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.5421241Z (Reading database ... 202241 files and directories currently installed.)
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.5462371Z Preparing to unpack .../00-fonts-ipafont-gothic_00303-21ubuntu1_all.deb ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.5536989Z Unpacking fonts-ipafont-gothic (00303-21ubuntu1) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.8004012Z Preparing to unpack .../01-libglib2.0-data_2.80.0-6ubuntu3.9_all.deb ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.8023236Z Unpacking libglib2.0-data (2.80.0-6ubuntu3.9) over (2.80.0-6ubuntu3.8) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.8449856Z Preparing to unpack .../02-libglib2.0-bin_2.80.0-6ubuntu3.9_amd64.deb ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.8469263Z Unpacking libglib2.0-bin (2.80.0-6ubuntu3.9) over (2.80.0-6ubuntu3.8) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.8997993Z Preparing to unpack .../03-gir1.2-glib-2.0_2.80.0-6ubuntu3.9_amd64.deb ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.9017192Z Unpacking gir1.2-glib-2.0:amd64 (2.80.0-6ubuntu3.9) over (2.80.0-6ubuntu3.8) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.9500262Z Preparing to unpack .../04-libglib2.0-0t64_2.80.0-6ubuntu3.9_amd64.deb ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:33.9631237Z Unpacking libglib2.0-0t64:amd64 (2.80.0-6ubuntu3.9) over (2.80.0-6ubuntu3.8) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:34.0100035Z Selecting previously unselected package fonts-freefont-ttf.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:34.0230238Z Preparing to unpack .../05-fonts-freefont-ttf_20211204+svn4273-2_all.deb ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:34.0237933Z Unpacking fonts-freefont-ttf (20211204+svn4273-2) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:34.1032247Z Selecting previously unselected package fonts-tlwg-loma-otf.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:34.1160552Z Preparing to unpack .../06-fonts-tlwg-loma-otf_1%3a0.7.3-1_all.deb ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:34.1167396Z Unpacking fonts-tlwg-loma-otf (1:0.7.3-1) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:34.1371816Z Selecting previously unselected package fonts-unifont.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:34.1499577Z Preparing to unpack .../07-fonts-unifont_1%3a15.1.01-1build1_all.deb ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:34.1506725Z Unpacking fonts-unifont (1:15.1.01-1build1) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:34.2556447Z Selecting previously unselected package fonts-wqy-zenhei.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:34.2685479Z Preparing to unpack .../08-fonts-wqy-zenhei_0.9.45-8_all.deb ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:34.2787336Z Unpacking fonts-wqy-zenhei (0.9.45-8) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:34.7655265Z Preparing to unpack .../09-libgl1-mesa-dri_25.2.8-0ubuntu0.24.04.3_amd64.deb ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:34.7838773Z Unpacking libgl1-mesa-dri:amd64 (25.2.8-0ubuntu0.24.04.3) over (25.2.8-0ubuntu0.24.04.2) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:34.8339697Z Selecting previously unselected package libwayland-server0:amd64.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:34.8469650Z Preparing to unpack .../10-libwayland-server0_1.22.0-2.1build1_amd64.deb ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:34.8476886Z Unpacking libwayland-server0:amd64 (1.22.0-2.1build1) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:34.8806153Z Preparing to unpack .../11-libglx-mesa0_25.2.8-0ubuntu0.24.04.3_amd64.deb ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:34.8833046Z Unpacking libglx-mesa0:amd64 (25.2.8-0ubuntu0.24.04.3) over (25.2.8-0ubuntu0.24.04.2) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:34.9226354Z Preparing to unpack .../12-libgbm1_25.2.8-0ubuntu0.24.04.3_amd64.deb ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:34.9249926Z Unpacking libgbm1:amd64 (25.2.8-0ubuntu0.24.04.3) over (25.2.8-0ubuntu0.24.04.2) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:34.9717068Z Preparing to unpack .../13-mesa-libgallium_25.2.8-0ubuntu0.24.04.3_amd64.deb ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:34.9740219Z Unpacking mesa-libgallium:amd64 (25.2.8-0ubuntu0.24.04.3) over (25.2.8-0ubuntu0.24.04.2) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.1594097Z Selecting previously unselected package xfonts-encodings.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.1727625Z Preparing to unpack .../14-xfonts-encodings_1%3a1.0.5-0ubuntu2_all.deb ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.1734793Z Unpacking xfonts-encodings (1:1.0.5-0ubuntu2) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.2024315Z Selecting previously unselected package xfonts-utils.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.2153112Z Preparing to unpack .../15-xfonts-utils_1%3a7.7+6build3_amd64.deb ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.2162499Z Unpacking xfonts-utils (1:7.7+6build3) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.2778705Z Selecting previously unselected package xfonts-cyrillic.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.2908114Z Preparing to unpack .../16-xfonts-cyrillic_1%3a1.0.5+nmu1_all.deb ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.2916549Z Unpacking xfonts-cyrillic (1:1.0.5+nmu1) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.3292687Z Selecting previously unselected package xfonts-scalable.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.3422438Z Preparing to unpack .../17-xfonts-scalable_1%3a1.0.3-1.3_all.deb ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.3430185Z Unpacking xfonts-scalable (1:1.0.3-1.3) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.3845489Z Preparing to unpack .../18-xserver-common_2%3a21.1.12-1ubuntu1.8_all.deb ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.3865527Z Unpacking xserver-common (2:21.1.12-1ubuntu1.8) over (2:21.1.12-1ubuntu1.6) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.4225006Z Preparing to unpack .../19-xvfb_2%3a21.1.12-1ubuntu1.8_amd64.deb ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.4244118Z Unpacking xvfb (2:21.1.12-1ubuntu1.8) over (2:21.1.12-1ubuntu1.6) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.4854011Z Setting up libwayland-server0:amd64 (1.22.0-2.1build1) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.4889741Z Setting up mesa-libgallium:amd64 (25.2.8-0ubuntu0.24.04.3) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.4908536Z Setting up libgbm1:amd64 (25.2.8-0ubuntu0.24.04.3) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.4927566Z Setting up libgl1-mesa-dri:amd64 (25.2.8-0ubuntu0.24.04.3) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.5001699Z Setting up fonts-wqy-zenhei (0.9.45-8) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.5117214Z Setting up fonts-freefont-ttf (20211204+svn4273-2) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.5136843Z Setting up libglib2.0-0t64:amd64 (2.80.0-6ubuntu3.9) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.5349379Z Setting up libglib2.0-data (2.80.0-6ubuntu3.9) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.5371377Z Setting up fonts-tlwg-loma-otf (1:0.7.3-1) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.5391828Z Setting up xfonts-encodings (1:1.0.5-0ubuntu2) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.5410877Z Setting up gir1.2-glib-2.0:amd64 (2.80.0-6ubuntu3.9) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.5429454Z Setting up fonts-ipafont-gothic (00303-21ubuntu1) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.5496897Z update-alternatives: using /usr/share/fonts/opentype/ipafont-gothic/ipag.ttf to provide /usr/share/fonts/truetype/fonts-japanese-gothic.ttf (fonts-japanese-gothic.ttf) in auto mode
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.5512470Z Setting up xserver-common (2:21.1.12-1ubuntu1.8) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.5529821Z Setting up fonts-unifont (1:15.1.01-1build1) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.5550901Z Setting up libglx-mesa0:amd64 (25.2.8-0ubuntu0.24.04.3) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.5571694Z Setting up xvfb (2:21.1.12-1ubuntu1.8) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.5595317Z Setting up libglib2.0-bin (2.80.0-6ubuntu3.9) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.5613720Z Setting up xfonts-utils (1:7.7+6build3) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.5659782Z Setting up xfonts-cyrillic (1:1.0.5+nmu1) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.6007619Z Setting up xfonts-scalable (1:1.0.3-1.3) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.6328899Z Processing triggers for libc-bin (2.39-0ubuntu8.9) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.6467732Z Processing triggers for man-db (2.12.0-4build2) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.6483196Z Not building database; man-db/auto-update is not 'true'.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:35.6493439Z Processing triggers for fontconfig (2.15.0-1.1ubuntu2) ...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:36.3154882Z 
+candidate	Install locked data and app dependencies	2026-09-30T19:00:36.3155844Z Running kernel seems to be up-to-date.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:36.3156154Z 
+candidate	Install locked data and app dependencies	2026-09-30T19:00:36.3156311Z Restarting services...
+candidate	Install locked data and app dependencies	2026-09-30T19:00:36.3620786Z  systemctl restart packagekit.service php8.3-fpm.service polkit.service udisks2.service
+candidate	Install locked data and app dependencies	2026-09-30T19:00:36.4919501Z 
+candidate	Install locked data and app dependencies	2026-09-30T19:00:36.4920213Z Service restarts being deferred:
+candidate	Install locked data and app dependencies	2026-09-30T19:00:36.4920825Z  systemctl restart ModemManager.service
+candidate	Install locked data and app dependencies	2026-09-30T19:00:36.4921440Z  systemctl restart networkd-dispatcher.service
+candidate	Install locked data and app dependencies	2026-09-30T19:00:36.4921808Z 
+candidate	Install locked data and app dependencies	2026-09-30T19:00:36.4926811Z No containers need to be restarted.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:36.4927177Z 
+candidate	Install locked data and app dependencies	2026-09-30T19:00:36.4927511Z No user sessions are running outdated binaries.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:36.4928348Z 
+candidate	Install locked data and app dependencies	2026-09-30T19:00:36.4928872Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+candidate	Install locked data and app dependencies	2026-09-30T19:00:37.3861636Z Downloading Chrome for Testing 153.0.8010.12 (playwright chromium v1243) from https://cdn.playwright.dev/builds/cft/153.0.8010.12/linux64/chrome-linux64.zip
+candidate	Install locked data and app dependencies	2026-09-30T19:00:37.7930079Z |                                                                                |   0% of 186.8 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:38.0624146Z |■■■■■■■■                                                                        |  10% of 186.8 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:38.1975975Z |■■■■■■■■■■■■■■■■                                                                |  20% of 186.8 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:38.4211178Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 186.8 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:38.5402224Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 186.8 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:38.7029938Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 186.8 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:38.8850720Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 186.8 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:39.0357837Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 186.8 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:39.1916534Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 186.8 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:39.3079307Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 186.8 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:39.4328807Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 186.8 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:42.6315567Z Chrome for Testing 153.0.8010.12 (playwright chromium v1243) downloaded to /home/runner/.cache/ms-playwright/chromium-1243
+candidate	Install locked data and app dependencies	2026-09-30T19:00:42.6320591Z Downloading FFmpeg (playwright ffmpeg v1011) from https://cdn.playwright.dev/dbazure/download/playwright/builds/ffmpeg/1011/ffmpeg-linux.zip
+candidate	Install locked data and app dependencies	2026-09-30T19:00:43.0611122Z |                                                                                |   0% of 2.3 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:43.1075389Z |■■■■■■■■                                                                        |  10% of 2.3 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:43.1419966Z |■■■■■■■■■■■■■■■■                                                                |  20% of 2.3 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:43.1553909Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 2.3 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:43.1724094Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 2.3 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:43.1846016Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 2.3 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:43.1907846Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 2.3 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:43.2033910Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 2.3 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:43.2100613Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 2.3 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:43.2163104Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 2.3 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:43.2300036Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 2.3 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:43.2939185Z FFmpeg (playwright ffmpeg v1011) downloaded to /home/runner/.cache/ms-playwright/ffmpeg-1011
+candidate	Install locked data and app dependencies	2026-09-30T19:00:43.2943044Z Downloading Chrome Headless Shell 153.0.8010.12 (playwright chromium-headless-shell v1243) from https://cdn.playwright.dev/builds/cft/153.0.8010.12/linux64/chrome-headless-shell-linux64.zip
+candidate	Install locked data and app dependencies	2026-09-30T19:00:43.7183899Z |                                                                                |   0% of 114.3 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:43.9199308Z |■■■■■■■■                                                                        |  10% of 114.3 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:44.2325996Z |■■■■■■■■■■■■■■■■                                                                |  20% of 114.3 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:44.4432343Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 114.3 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:44.6469795Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 114.3 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:44.8210144Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 114.3 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:44.9570697Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 114.3 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:45.2077110Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 114.3 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:45.3368624Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 114.3 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:45.5167230Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 114.3 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:45.6732648Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 114.3 MiB
+candidate	Install locked data and app dependencies	2026-09-30T19:00:47.9844961Z Chrome Headless Shell 153.0.8010.12 (playwright chromium-headless-shell v1243) downloaded to /home/runner/.cache/ms-playwright/chromium_headless_shell-1243
+candidate	Acquire and validate a candidate snapshot	﻿2026-09-30T19:00:48.0192259Z ##[group]Run case "$REQUESTED_DATASET" in
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:00:48.0192652Z [36;1mcase "$REQUESTED_DATASET" in[0m
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:00:48.0192985Z [36;1m  osm|prices) dataset="$REQUESTED_DATASET" ;;[0m
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:00:48.0193317Z [36;1m  '')[0m
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:00:48.0193573Z [36;1m    if [ "$TRIGGER_SCHEDULE" = '0 0 * * 1' ]; then[0m
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:00:48.0193891Z [36;1m      dataset=osm[0m
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:00:48.0194119Z [36;1m    else[0m
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:00:48.0194331Z [36;1m      dataset=prices[0m
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:00:48.0194572Z [36;1m    fi[0m
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:00:48.0196471Z [36;1m    ;;[0m
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:00:48.0196685Z [36;1m  *) exit 1 ;;[0m
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:00:48.0197124Z [36;1mesac[0m
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:00:48.0197574Z [36;1mpython scripts/importer/refresh_sources.py "$dataset" --download-dir "$RUNNER_TEMP/fmj-inputs"[0m
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:00:48.0262401Z shell: /usr/bin/bash -e {0}
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:00:48.0262660Z env:
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:00:48.0262938Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:00:48.0263475Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:00:48.0263961Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:00:48.0264388Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:00:48.0265116Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:00:48.0265565Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:00:48.0265948Z   REQUESTED_DATASET: osm
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:00:48.0266196Z   TRIGGER_SCHEDULE: 
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:00:48.0266429Z ##[endgroup]
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:00:49.1626371Z {"kind": "osm", "sourceUrl": "https://download.geofabrik.de/asia/japan-260929.osm.pbf"}
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:18:10.2199345Z OSM input unchanged: no-op
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:18:10.2200221Z All input hashes unchanged; pointers and fetchedAt retained
+candidate	Validate importer, app and browser behavior	﻿2026-09-30T19:18:10.3836173Z ##[group]Run npm run test:data
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:10.3836505Z [36;1mnpm run test:data[0m
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:10.3836734Z [36;1mnpm run check[0m
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:10.3900950Z shell: /usr/bin/bash -e {0}
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:10.3901422Z env:
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:10.3901831Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:10.3902357Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:10.3902976Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:10.3903492Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:10.3904036Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:10.3904882Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:10.3915702Z ##[endgroup]
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:10.5017147Z 
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:10.5017785Z > fuel-me-japan@0.0.0 test:data
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:10.5018532Z > python3 -m unittest discover -s tests/data -v
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:10.5018956Z 
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:11.4280793Z test_conditional_attributes_remain_unknown (test_importer.OsmTests.test_conditional_attributes_remain_unknown) ... ok
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:11.4287080Z test_count_gate_bootstrap_all_partitions_and_manual_reason (test_importer.OsmTests.test_count_gate_bootstrap_all_partitions_and_manual_reason) ... ok
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:11.4299929Z test_osm_requires_the_available_publisher_checksum (test_importer.OsmTests.test_osm_requires_the_available_publisher_checksum) ... ok
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:11.4308341Z test_service_never_collapses_mixed_or_conditional_evidence (test_importer.OsmTests.test_service_never_collapses_mixed_or_conditional_evidence) ... ok
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:11.4364849Z test_typed_dedup_surface_point_unknown_and_repairs (test_importer.OsmTests.test_typed_dedup_surface_point_unknown_and_repairs) ... ok
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:11.4367420Z test_unknown_mapping_and_conflicting_evidence (test_importer.OsmTests.test_unknown_mapping_and_conflicting_evidence) ... ok
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:11.4665557Z test_exact_47_by_3_units_dates_and_ignore_kerosene (test_importer.PriceTests.test_exact_47_by_3_units_dates_and_ignore_kerosene) ... ok
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:11.5196162Z test_failed_import_keeps_manifest_and_registry (test_importer.PriceTests.test_failed_import_keeps_manifest_and_registry) ... ok
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:11.7360801Z test_failed_pointer_promotion_restores_registry_and_previous_manifest (test_importer.PriceTests.test_failed_pointer_promotion_restores_registry_and_previous_manifest) ... ok
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:11.7489188Z test_http403_never_replaces_local_or_published_data (test_importer.PriceTests.test_http403_never_replaces_local_or_published_data) ... ok
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:11.9089025Z test_invalid_headers_missing_prefecture_nonnumeric_and_zero (test_importer.PriceTests.test_invalid_headers_missing_prefecture_nonnumeric_and_zero) ... ok
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:11.9383810Z test_schema_missing_duplicate_nan_and_downgrade (test_importer.PriceTests.test_schema_missing_duplicate_nan_and_downgrade) ... ok
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:11.9640864Z test_source_proof_hash_domain_and_dates (test_importer.PriceTests.test_source_proof_hash_domain_and_dates) ... ok
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:11.9644432Z test_changed_layout_stops_instead_of_guessing_filename (test_refresh_sources.SourceDiscoveryTests.test_changed_layout_stops_instead_of_guessing_filename) ... ok
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:11.9649504Z test_osm_uses_dated_publisher_link_not_latest_alias_or_future_file (test_refresh_sources.SourceDiscoveryTests.test_osm_uses_dated_publisher_link_not_latest_alias_or_future_file) ... ok
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:11.9654149Z test_prices_reject_foreign_urls_wrong_dataset_and_invalid_dates (test_refresh_sources.SourceDiscoveryTests.test_prices_reject_foreign_urls_wrong_dataset_and_invalid_dates) ... ok
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:11.9655519Z 
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:11.9655914Z ----------------------------------------------------------------------
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:11.9656510Z Ran 16 tests in 0.538s
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:11.9656727Z 
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:11.9656845Z OK
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:12.0991613Z 
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:12.0992831Z > fuel-me-japan@0.0.0 check
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:12.0993825Z > npm run lint && npm run typecheck && npm test && npm run build && npm run test:e2e
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:12.0994447Z 
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:12.1952904Z 
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:12.1953576Z > fuel-me-japan@0.0.0 lint
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:12.1954081Z > eslint . --max-warnings 0
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:12.1954329Z 
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:14.8711322Z 
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:14.8712035Z > fuel-me-japan@0.0.0 typecheck
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:14.8712744Z > tsc --noEmit
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:14.8713078Z 
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:18.8354198Z 
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:18.8355017Z > fuel-me-japan@0.0.0 test
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:18.8355617Z > vitest run
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:18.8355845Z 
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:19.1519791Z 
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:19.1546856Z [1m[30m[46m RUN [49m[39m[22m [36mv5.0.2 [39m[90m/home/runner/work/fuel-me-japan/fuel-me-japan[39m
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:19.1575413Z 
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:19.4756350Z  [32m✓[39m tests/unit/map-scheduling.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:19.6946600Z  [32m✓[39m tests/unit/station-price-view.test.ts [2m([22m[2m22 tests[22m[2m)[22m[32m 70[2mms[22m[39m
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:19.8785040Z  [32m✓[39m tests/unit/vehicle-fuel.test.ts [2m([22m[2m64 tests[22m[2m)[22m[32m 225[2mms[22m[39m
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:19.9087953Z  [32m✓[39m tests/unit/station-list.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:20.1369603Z  [32m✓[39m tests/unit/map-view.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:20.1618065Z  [32m✓[39m tests/unit/station-filters.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:20.2819046Z  [32m✓[39m tests/unit/data.test.ts [2m([22m[2m8 tests[22m[2m)[22m[33m 534[2mms[22m[39m
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:20.2836282Z    [32m✓[39m M0.1 actual immutable data contracts [2m(4)[22m
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:20.2876446Z      [33m[2m✓[22m[39m verifies all 48 partitions, uniqueness, bounds, hashes and manifest totals[33m 421[2mms[22m[39m
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:20.4236681Z  [32m✓[39m tests/unit/favorites.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:20.4629239Z  [32m✓[39m tests/unit/opening-hours.test.ts [2m([22m[2m32 tests[22m[2m)[22m[32m 65[2mms[22m[39m
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:20.5236915Z  [32m✓[39m tests/unit/find-fuel.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:20.6298780Z  [32m✓[39m tests/unit/fuel-preference.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:20.7060608Z  [32m✓[39m tests/unit/source-registry.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:20.7746730Z  [32m✓[39m tests/unit/analytics.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:20.8296776Z  [32m✓[39m tests/unit/station-mini-map.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:20.9479583Z  [32m✓[39m tests/unit/i18n.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:20.9686762Z  [32m✓[39m tests/unit/station-brand.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:21.2011349Z  [32m✓[39m tests/unit/list-modes-ui.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 18[2mms[22m[39m
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:21.2047938Z 
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:21.2065777Z [2m Test Files [22m [1m[32m17 passed[39m[22m[90m (17)[39m
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:21.2066786Z [2m      Tests [22m [1m[32m247 passed[39m[22m[90m (247)[39m
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:21.2067521Z [2m   Start at [22m 19:18:19
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:21.2068432Z [2m   Duration [22m 2.04s[2m (tests 39%, transform 33%, import 24%, worker 5%)[22m
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:21.2095127Z 
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:21.2096265Z [2m    Isolate [22m [33m17 workers spawned[39m[2m · ~147ms startup each (spawn + environment, per file)[22m
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:21.2098139Z [2m            [22m [2mat least ~687ms faster with [22m[33misolate: false[39m[2m — reuses workers across files instead of one per file[22m
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:21.2099212Z 
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:21.3472987Z 
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:21.3473738Z > fuel-me-japan@0.0.0 build
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:21.3474781Z > vite build && tsx scripts/prerender.tsx
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:21.3475309Z 
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:21.5866159Z [36mvite v8.3.1 [32mbuilding client environment for production...[36m[39m
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:21.6011646Z transforming...
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:21.7318482Z ✓ 54 modules transformed.
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:21.7857399Z rendering chunks...
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:21.8382406Z computing gzip size...
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:21.8465809Z dist/index.html                            0.78 kB │ gzip:   0.44 kB
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:21.8475748Z dist/assets/index-D7lru3pg.css            43.35 kB │ gzip:  12.67 kB
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:21.8495610Z dist/assets/source-registry-DIdx1c3W.js    2.88 kB │ gzip:   1.24 kB
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:21.8496492Z dist/assets/leaflet-src-T-bklr8t.js      148.73 kB │ gzip:  43.37 kB
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:21.8497088Z dist/assets/index--u9Ier3N.js            421.01 kB │ gzip: 130.88 kB
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:21.8497383Z 
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:21.8497568Z [32m✓ built in 257ms[39m
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:22.5593912Z Prerendered five locales + English root; source registry validated; provenance emitted.
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:22.6688464Z 
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:22.6689151Z > fuel-me-japan@0.0.0 test:e2e
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:22.6689722Z > playwright test
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:22.6689917Z 
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:24.3121352Z 
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:24.3122066Z Running 179 tests using 2 workers
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:24.3122335Z 
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:27.8727407Z   ✓    1 tests/e2e/find-fuel.spec.ts:64:1 › manual prefecture fetches one region; city/address search and detail never invent distance (1.5s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:28.2158728Z   ✓    2 tests/e2e/find-fuel.spec.ts:119:1 › explicit mocked location sorts real stations; navigation sends destination only and origin stays private (1.9s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:28.7527101Z   ✓    3 tests/e2e/find-fuel.spec.ts:169:3 › location denied permits manual fallback (858ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:29.1055760Z   ✓    4 tests/e2e/find-fuel.spec.ts:169:3 › location unavailable permits manual fallback (862ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:29.6227838Z   ✓    5 tests/e2e/find-fuel.spec.ts:169:3 › location timeout permits manual fallback (849ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:29.8707040Z   ✓    6 tests/e2e/find-fuel.spec.ts:180:1 › missing geolocation API and out-of-Japan location do not fetch stations (741ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:30.4980117Z   ✓    7 tests/e2e/find-fuel.spec.ts:193:1 › watchdog timeout rejects a late position and allows a fresh request (856ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:31.2613504Z   ✓    8 tests/e2e/find-fuel.spec.ts:206:1 › late location cannot replace manual choice; cancel, retry and close reject stale callbacks (1.4s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:31.3468939Z   ✓    9 tests/e2e/find-fuel.spec.ts:231:1 › station load failure retries; an older retry response cannot replace a newer prefecture (831ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:32.0911000Z   ✓   10 tests/e2e/find-fuel.spec.ts:256:1 › empty search stays on site and recovers without invented stations or coordinates (812ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:32.3065344Z   ✓   11 tests/e2e/find-fuel.spec.ts:269:1 › price failure does not block navigation; retry shows dated stale reference (943ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:33.6225741Z   ✓   13 tests/e2e/find-fuel.spec.ts:286:3 › zh-Hant list/detail fit 320 and 390 pixels, retain Japanese labels and capture screenshots (1.3s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:33.9135260Z   ✓   12 tests/e2e/find-fuel.spec.ts:286:3 › en list/detail fit 320 and 390 pixels, retain Japanese labels and capture screenshots (1.8s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:34.9878306Z   ✓   14 tests/e2e/find-fuel.spec.ts:286:3 › ko list/detail fit 320 and 390 pixels, retain Japanese labels and capture screenshots (1.3s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:35.3083078Z   ✓   15 tests/e2e/find-fuel.spec.ts:286:3 › zh-Hans list/detail fit 320 and 390 pixels, retain Japanese labels and capture screenshots (1.4s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:36.0416969Z   ✓   17 tests/e2e/find-fuel.spec.ts:313:1 › empty nearby coverage offers manual search without external map links or claiming no stations exist (719ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:36.4190429Z   ✓   16 tests/e2e/find-fuel.spec.ts:286:3 › th list/detail fit 320 and 390 pixels, retain Japanese labels and capture screenshots (1.4s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:36.8519036Z   ✓   18 tests/e2e/find-fuel.spec.ts:326:1 › station request retry succeeds with the original real partition (793ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:37.5401249Z   ✓   19 tests/e2e/find-fuel.spec.ts:341:1 › back from detail discards its pending price response before another prefecture opens (1.1s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:37.8741699Z   ✓   20 tests/e2e/find-fuel.spec.ts:393:3 › en shows translated recorded hours and an optional unchanged original (1.0s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:38.6096770Z   ✓   21 tests/e2e/find-fuel.spec.ts:393:3 › zh-Hant shows translated recorded hours and an optional unchanged original (1.1s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:38.9089597Z   ✓   22 tests/e2e/find-fuel.spec.ts:393:3 › ko shows translated recorded hours and an optional unchanged original (1.0s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:39.6733368Z   ✓   23 tests/e2e/find-fuel.spec.ts:393:3 › zh-Hans shows translated recorded hours and an optional unchanged original (1.0s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:39.9905971Z   ✓   24 tests/e2e/find-fuel.spec.ts:393:3 › th shows translated recorded hours and an optional unchanged original (1.1s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:40.5277304Z   ✓   25 tests/e2e/find-fuel.spec.ts:411:1 › unsupported hours retain all rules visibly with a localized explanation (834ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:40.9898338Z   ✓   26 tests/e2e/find-fuel.spec.ts:422:1 › absent hours stay unknown without offering an invented schedule (981ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:41.6406310Z   ✓   27 tests/e2e/foundation.spec.ts:9:3 › mobile switching and reload: en (1.1s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:42.1222441Z   ✓   28 tests/e2e/foundation.spec.ts:9:3 › mobile switching and reload: zh-Hant (1.1s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:42.6827916Z   ✓   29 tests/e2e/foundation.spec.ts:9:3 › mobile switching and reload: ko (1.0s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:43.2370307Z   ✓   30 tests/e2e/foundation.spec.ts:9:3 › mobile switching and reload: zh-Hans (1.1s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:43.6832671Z   ✓   32 tests/e2e/foundation.spec.ts:78:1 › localized static HTML is useful without JavaScript (433ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:43.7608162Z   ✓   31 tests/e2e/foundation.spec.ts:9:3 › mobile switching and reload: th (1.1s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:43.8361947Z   ✓   34 tests/e2e/foundation.spec.ts:145:1 › shipped registry and build provenance match the M0.1 ingestion manifest (64ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:44.6496895Z   ✓   33 tests/e2e/foundation.spec.ts:100:1 › map home requests only data indexes and map configuration without location, storage or analytics (954ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:45.1886773Z   ✓   35 tests/e2e/foundation.spec.ts:170:1 › desktop layout and keyboard navigation remain usable (1.3s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:45.8555855Z   ✓   37 tests/e2e/fuel-label.spec.ts:6:5 › touch › fuel label text toggles exactly once and never closes its panel (652ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:46.3525849Z   ✓   38 tests/e2e/fuel-label.spec.ts:59:1 › fuel panel closes when keyboard focus actually leaves, and Escape restores summary focus (484ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:47.3157287Z   ✓   36 tests/e2e/fuel-label.spec.ts:6:5 › mouse › fuel label text toggles exactly once and never closes its panel (2.6s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:47.3353108Z   ✓   39 tests/e2e/fuel-markers.spec.ts:14:1 › explicit enum preference survives language and refresh; reset preserves unrelated storage (957ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:48.4549977Z   ✓   41 tests/e2e/fuel-markers.spec.ts:71:3 › local brand asset /brands/eneos-symbol.svg loads and failed image falls back to a pump icon at 320px (1.1s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:48.5754160Z   ✓   40 tests/e2e/fuel-markers.spec.ts:31:1 › real station hides missing price without an empty band; fuel change preserves viewport with no data or location requests (1.2s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:49.3220135Z   ✓   43 tests/e2e/fuel-markers.spec.ts:111:1 › invalid and blocked storage keep selection usable without auto-location (732ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:49.5412931Z   ✓   42 tests/e2e/fuel-markers.spec.ts:71:3 › local brand asset /brands/cosmo-symbol.svg loads and failed image falls back to a pump icon at 320px (1.1s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:51.1203923Z   ✓   44 tests/e2e/list-hover.spec.ts:52:1 › hovering a list station zooms its marker into the overall map without opening details or stealing focus (1.8s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:51.1565542Z   ✓   45 tests/e2e/list-hover.spec.ts:66:1 › rapid row changes keep only the last preview, and leaving a pending row cancels it (1.6s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:52.6483541Z   ✓   47 tests/e2e/list-hover.spec.ts:111:1 › keyboard focus previews a station and clicking still opens details then restores the card focus (1.5s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:52.9778346Z   ✓   46 tests/e2e/list-hover.spec.ts:96:1 › hovered coincident stations have their own marker and are excluded from the remaining cluster count (1.8s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:54.4276873Z   ✓   48 tests/e2e/list-hover.spec.ts:125:1 › hover does not overwrite the full-map view saved before entering the list (1.8s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:54.8661109Z   ✓   49 tests/e2e/list-hover.spec.ts:134:1 › changing query or area cancels an obsolete preview without fetching location (1.9s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:55.9541507Z   ✓   50 tests/e2e/list-hover.spec.ts:156:1 › opening a different detail takes precedence over an uncommitted hover (1.5s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:56.2759439Z   ✓   51 tests/e2e/list-hover.spec.ts:168:1 › touch movement does not trigger hover zoom (1.4s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:57.3999584Z   ✓   53 tests/e2e/list-minimap.spec.ts:24:3 › list and mini-map at 320px share usable space with independent list scrolling (1.1s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:57.7897490Z   ✓   52 tests/e2e/list-hover.spec.ts:178:1 › closing cluster members does not revive an earlier hover preview (1.8s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:58.6394578Z   ✓   54 tests/e2e/list-minimap.spec.ts:24:3 › list and mini-map at 390px share usable space with independent list scrolling (1.2s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:18:59.2386049Z   ✓   55 tests/e2e/list-minimap.spec.ts:24:3 › list and mini-map at 768px share usable space with independent list scrolling (1.4s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:00.2976758Z   ✓   56 tests/e2e/list-minimap.spec.ts:24:3 › list and mini-map at 1280px share usable space with independent list scrolling (1.6s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:00.4980664Z   ✓   57 tests/e2e/list-minimap.spec.ts:63:1 › a mini-map marker opens details then returns to the same list and marker focus (1.2s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:01.4022480Z   ✓   59 tests/e2e/list-minimap.spec.ts:104:1 › mini-map tile errors do not cover filter or location controls (888ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:01.5327245Z   ✓   58 tests/e2e/list-minimap.spec.ts:83:1 › favorites and query synchronize mini-map markers without loading another partition (1.2s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:02.1756867Z   ✓   61 tests/e2e/list-modes.spec.ts:4:1 › list modes are reachable from the national overview without loading station partitions (611ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:03.1736531Z   ✓   60 tests/e2e/list-minimap.spec.ts:120:1 › mini-map cluster details return through members to the list (1.8s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:03.4438513Z   ✓   62 tests/e2e/list-modes.spec.ts:75:1 › cheapest has one honest explanation and mode/fuel/query/filter changes reset pagination without new data (1.3s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:04.3481031Z   ✓   63 tests/e2e/list-modes.spec.ts:98:1 › nearest never requests location on selection, then uses numeric Haversine order after the locate icon (1.1s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:04.4546721Z   ✓   64 tests/e2e/list-modes.spec.ts:127:1 › normal list sorting preserves the map marker DOM and viewport (998ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:05.7527234Z   ✓   66 tests/e2e/list-modes.spec.ts:180:1 › favorites use saved dataset filter counts, reset pagination on fuel and restore the normal query (1.3s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:05.9900171Z   ✓   65 tests/e2e/list-modes.spec.ts:143:1 › list and detail stars persist across prefectures and reload with only saved partition requests (1.6s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:06.5793664Z   ✓   67 tests/e2e/list-modes.spec.ts:210:3 › blocked read storage keeps memory favorites usable and shows an honest notice (812ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:06.8528040Z   ✓   68 tests/e2e/list-modes.spec.ts:210:3 › blocked write storage keeps memory favorites usable and shows an honest notice (848ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:07.3917697Z   ✓   69 tests/e2e/list-modes.spec.ts:229:1 › corrupt storage does not load arbitrary paths and is replaced only by an explicit save (801ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:07.7299973Z   ✓   70 tests/e2e/list-modes.spec.ts:244:1 › favorite cap allows removal and then another save (858ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:08.2579742Z   ✓   71 tests/e2e/list-modes.spec.ts:260:1 › missing source record remains removable and UNKNOWN uses only its explicit partition (851ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:08.4882529Z   ✓   72 tests/e2e/list-modes.spec.ts:276:3 › late favorites response is isolated after mode (741ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:09.0466436Z   ✓   73 tests/e2e/list-modes.spec.ts:276:3 › late favorites response is isolated after region (773ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:09.2206396Z   ✓   74 tests/e2e/list-modes.spec.ts:276:3 › late favorites response is isolated after overview (717ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:09.8266791Z   ✓   75 tests/e2e/list-modes.spec.ts:276:3 › late favorites response is isolated after cancel (767ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:09.9946988Z   ✓   76 tests/e2e/list-modes.spec.ts:276:3 › late favorites response is isolated after unstar (762ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:10.6399114Z   ✓   77 tests/e2e/list-modes.spec.ts:276:3 › late favorites response is isolated after navigation (800ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:10.6766889Z   ✓   78 tests/e2e/list-modes.spec.ts:308:1 › failed favorite validation keeps IDs and retries the same saved partition (665ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:11.5278895Z   ✓   79 tests/e2e/list-modes.spec.ts:322:3 › localized modes and star labels remain keyboard accessible in en (873ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:11.6593542Z   ✓   80 tests/e2e/list-modes.spec.ts:322:3 › localized modes and star labels remain keyboard accessible in zh-Hant (967ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:12.4549783Z   ✓   81 tests/e2e/list-modes.spec.ts:322:3 › localized modes and star labels remain keyboard accessible in ko (914ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:12.5137020Z   ✓   82 tests/e2e/list-modes.spec.ts:322:3 › localized modes and star labels remain keyboard accessible in zh-Hans (833ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:13.4044324Z   ✓   83 tests/e2e/list-modes.spec.ts:322:3 › localized modes and star labels remain keyboard accessible in th (940ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:13.7077394Z   ✓   84 tests/e2e/list-modes.spec.ts:348:3 › list modes fit 320px with 44px controls and visible saved results (1.2s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:14.5871284Z   ✓   85 tests/e2e/list-modes.spec.ts:348:3 › list modes fit 390px with 44px controls and visible saved results (1.2s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:15.2227926Z   ✓   86 tests/e2e/list-modes.spec.ts:348:3 › list modes fit 1280px with 44px controls and visible saved results (1.5s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:15.3040622Z   ✓   87 tests/e2e/list-modes.spec.ts:365:1 › region loading resumes after visiting favorites without accepting the aborted response (706ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:16.1157101Z   ✓   88 tests/e2e/list-modes.spec.ts:390:1 › late location callback cannot replace favorites or resumed manual results (881ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:16.4119792Z   ✓   89 tests/e2e/map-home.spec.ts:46:1 › overview counts match every manifest region; selecting and panning load only its partition (1.1s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:17.0629592Z   ✓   90 tests/e2e/map-home.spec.ts:81:1 › query synchronizes map and list, marker opens the real record, and Escape restores marker focus (923ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:17.8741294Z   ✓   92 tests/e2e/map-home.spec.ts:130:1 › failed tile images retain list access and explicit retry reloads valid offline PNGs (801ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:18.4557518Z   ✓   93 tests/e2e/map-home.spec.ts:153:1 › production CSP injected into local HTML permits Leaflet styles, initialization and approved tiles (571ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:19.5506925Z   ✓   94 tests/e2e/map-home.spec.ts:173:3 › map and detail at 320px keep attribution and sheet visible without horizontal overflow (1.1s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:20.7269708Z   ✓   95 tests/e2e/map-home.spec.ts:173:3 › map and detail at 390px keep attribution and sheet visible without horizontal overflow (1.2s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:21.7680775Z   ✓   91 tests/e2e/map-home.spec.ts:107:1 › cluster counts exceed list pagination and all 30 identical-coordinate members remain accessible (5.3s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:22.5230304Z   ✓   97 tests/e2e/map-home.spec.ts:195:1 › map configuration failure allows list fallback and explicit initialization retry (742ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:22.8928603Z   ✓   96 tests/e2e/map-home.spec.ts:173:3 › map and detail at 1280px keep attribution and sheet visible without horizontal overflow (2.1s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:23.1733260Z   ✓   98 tests/e2e/map-home.spec.ts:215:3 › returning to overview via cancel rejects a late station response (637ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:23.5306398Z   ✓   99 tests/e2e/map-home.spec.ts:215:3 › returning to overview via overview rejects a late station response (624ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:24.2678125Z   ✓  101 tests/e2e/map-home.spec.ts:255:1 › overview tile retry uses integer XYZ coordinates (724ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:24.7729100Z   ✓  100 tests/e2e/map-home.spec.ts:240:1 › coincident Fukuoka and Saga summary anchors offer both regions instead of endless zoom (1.6s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:25.8782296Z ZOOM_MARKER_EVIDENCE {"added":0,"removed":0,"before":3,"after":3,"comparable":3,"retained":3,"note":"相同地图标记身份在一次键盘平移后是否保留同一DOM元素。"}
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:26.4058706Z   ✓  103 tests/e2e/map-zoom.spec.ts:67:1 › small map pans retain existing marker elements instead of rebuilding the layer (1.6s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:26.8117423Z ZOOM_WHEEL_EVIDENCE {"initial":5.500000446440399,"singleDelta":0.24999884112390536,"pairDelta":0.4999995535596007,"note":"固定视口与东京818条真实记录；离线瓦片；第二次等量输入发生在第一次动画中。"}
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:27.2202598Z   ✓  102 tests/e2e/map-zoom.spec.ts:41:1 › a second wheel pulse during animation is retained instead of swallowed (2.9s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:29.1337873Z   ✓  104 tests/e2e/map-zoom.spec.ts:99:1 › rapid zoom buttons retain each click and queued reverse input (2.7s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:29.2261774Z   ✓  105 tests/e2e/map-zoom.spec.ts:117:1 › reversing the wheel during its animation cancels the previous equal input (2.0s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:31.3009557Z   ✓  107 tests/e2e/map-zoom.spec.ts:149:1 › cluster zoom respects reduced motion and updates that preference without reloading (2.1s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:31.5416779Z   ✓  106 tests/e2e/map-zoom.spec.ts:129:1 › returning to overview during zoom discards queued wheel input (2.4s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:32.8343792Z   ✓  108 tests/e2e/map-zoom.spec.ts:177:1 › native two-finger pinch still zooms the mobile map (1.5s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:35.0749288Z   ✓  110 tests/e2e/map-zoom.spec.ts:220:1 › an old cluster cannot override returning to overview during animation (2.2s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:35.2326189Z (node:4326) ExperimentalWarning: stripTypeScriptTypes is an experimental feature and might change at any time
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:35.2327665Z (Use `node --trace-warnings ...` to show where the warning was created)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:35.6276950Z   ✓  111 tests/e2e/multi-fuel-markers.spec.ts:7:1 › three price bands fit a compact map and changing their count preserves the coordinate, DOM and focus (538ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:35.6830511Z   ✓  109 tests/e2e/map-zoom.spec.ts:195:1 › queued controls clamp at both zoom limits and can reverse away from them (4.1s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:37.1659569Z   ✓  112 tests/e2e/multi-fuel.spec.ts:9:3 › all seven fuel combinations remain usable at 320px in en (1.5s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:37.2958575Z   ✓  113 tests/e2e/multi-fuel.spec.ts:9:3 › all seven fuel combinations remain usable at 320px in zh-Hant (1.6s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:38.7114050Z   ✓  114 tests/e2e/multi-fuel.spec.ts:9:3 › all seven fuel combinations remain usable at 320px in ko (1.5s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:38.8821661Z   ✓  115 tests/e2e/multi-fuel.spec.ts:9:3 › all seven fuel combinations remain usable at 320px in zh-Hans (1.6s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:39.8052950Z   ✓  117 tests/e2e/multi-fuel.spec.ts:38:1 › old diesel preference migrates without a write, multiple fuels survive locale switch and ranking always belongs to the selection (910ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:40.3612592Z   ✓  116 tests/e2e/multi-fuel.spec.ts:9:3 › all seven fuel combinations remain usable at 320px in th (1.6s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:40.3708825Z   ✓  118 tests/e2e/multi-fuel.spec.ts:60:1 › checkboxes support keyboard interaction and close on outside click (551ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:41.4264412Z   ✓  119 tests/e2e/my-fuel-preference.spec.ts:8:3 › en: manual fuel dropdown updates the map and survives reopening and reload (1.0s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:41.5259361Z   ✓  120 tests/e2e/my-fuel-preference.spec.ts:8:3 › zh-Hant: manual fuel dropdown updates the map and survives reopening and reload (1.1s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:42.5350712Z   ✓  121 tests/e2e/my-fuel-preference.spec.ts:8:3 › ko: manual fuel dropdown updates the map and survives reopening and reload (1.1s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:42.6446105Z   ✓  122 tests/e2e/my-fuel-preference.spec.ts:8:3 › zh-Hans: manual fuel dropdown updates the map and survives reopening and reload (1.1s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:43.6149919Z   ✓  123 tests/e2e/my-fuel-preference.spec.ts:8:3 › th: manual fuel dropdown updates the map and survives reopening and reload (1.1s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:44.0960840Z   ✓  124 tests/e2e/my-fuel-preference.spec.ts:39:1 › manual fuel replaces a multi-selection without resetting region, list mode or requesting location; reset stays in sync (1.4s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:44.3037212Z   ✓  125 tests/e2e/my-fuel-preference.spec.ts:78:1 › manual fuel works when vehicle data and browser storage are unavailable (677ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:45.0581657Z   ✓  126 tests/e2e/my-fuel.spec.ts:27:5 › en 320px: shipped empty coverage, neutral labels and keyboard closure (936ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:45.7391314Z   ✓  128 tests/e2e/my-fuel.spec.ts:55:3 › en: exact fictional result uses localized copy and Japanese fuel label (665ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:45.9189312Z   ✓  127 tests/e2e/my-fuel.spec.ts:27:5 › en 1280px: shipped empty coverage, neutral labels and keyboard closure (1.6s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:46.7144498Z   ✓  129 tests/e2e/my-fuel.spec.ts:27:5 › zh-Hant 320px: shipped empty coverage, neutral labels and keyboard closure (961ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:47.3865458Z   ✓  131 tests/e2e/my-fuel.spec.ts:55:3 › zh-Hant: exact fictional result uses localized copy and Japanese fuel label (658ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:47.6078717Z   ✓  130 tests/e2e/my-fuel.spec.ts:27:5 › zh-Hant 1280px: shipped empty coverage, neutral labels and keyboard closure (1.7s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:48.3404834Z   ✓  132 tests/e2e/my-fuel.spec.ts:27:5 › ko 320px: shipped empty coverage, neutral labels and keyboard closure (941ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:49.0115630Z   ✓  134 tests/e2e/my-fuel.spec.ts:55:3 › ko: exact fictional result uses localized copy and Japanese fuel label (654ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:49.2600750Z   ✓  133 tests/e2e/my-fuel.spec.ts:27:5 › ko 1280px: shipped empty coverage, neutral labels and keyboard closure (1.6s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:50.0101646Z   ✓  135 tests/e2e/my-fuel.spec.ts:27:5 › zh-Hans 320px: shipped empty coverage, neutral labels and keyboard closure (981ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:50.6737575Z   ✓  137 tests/e2e/my-fuel.spec.ts:55:3 › zh-Hans: exact fictional result uses localized copy and Japanese fuel label (649ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:51.0061961Z   ✓  136 tests/e2e/my-fuel.spec.ts:27:5 › zh-Hans 1280px: shipped empty coverage, neutral labels and keyboard closure (1.7s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:51.6320141Z   ✓  138 tests/e2e/my-fuel.spec.ts:27:5 › th 320px: shipped empty coverage, neutral labels and keyboard closure (941ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:52.3220037Z   ✓  140 tests/e2e/my-fuel.spec.ts:55:3 › th: exact fictional result uses localized copy and Japanese fuel label (673ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:52.6369987Z   ✓  139 tests/e2e/my-fuel.spec.ts:27:5 › th 1280px: shipped empty coverage, neutral labels and keyboard closure (1.6s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:53.3216591Z   ✓  142 tests/e2e/my-fuel.spec.ts:99:1 › explicit company scope and changing company immediately invalidates the result (667ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:53.6575864Z   ✓  141 tests/e2e/my-fuel.spec.ts:65:1 › three fictional fuels and UNKNOWN, selection invalidation, clear, focus trap and session reset (1.3s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:54.1586959Z   ✓  143 tests/e2e/my-fuel.spec.ts:113:1 › error/retry is accessible; reloading clears VERIFIED before delayed data arrives (821ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:54.3892662Z   ✓  144 tests/e2e/my-fuel.spec.ts:135:1 › late response from a closed session cannot replace a reopened session (720ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:55.4148678Z   ✓  145 tests/e2e/my-fuel.spec.ts:153:1 › map, list, fuel-price preference, storage and location remain independent (1.2s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:55.8629217Z   ✓  146 tests/e2e/station-filters.spec.ts:58:1 › draft, cancel, reset and apply keep loaded counts and map/list totals consistent (1.4s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:57.6993921Z   ✓  148 tests/e2e/station-filters.spec.ts:123:1 › applying unchanged filters closes cluster members and station details (1.8s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:57.9863125Z   ✓  147 tests/e2e/station-filters.spec.ts:88:1 › payment union, service AND, zero results, independent query and stale detail cleanup (2.5s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:58.5032177Z   ✓  149 tests/e2e/station-filters.spec.ts:138:1 › query and brand search do not change complete-area option counts (791ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:59.2543280Z   ✓  151 tests/e2e/station-filters.spec.ts:181:5 › en filters at 320px: keyboard tabs, native modal, missing data and focus return (738ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:19:59.5602081Z   ✓  150 tests/e2e/station-filters.spec.ts:150:1 › changing area, returning to overview and new location clear filters without persistence or extra data fetches (1.6s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:20:00.2269909Z   ✓  152 tests/e2e/station-filters.spec.ts:181:5 › en filters at 390px: keyboard tabs, native modal, missing data and focus return (954ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:20:00.7787711Z   ✓  153 tests/e2e/station-filters.spec.ts:181:5 › en filters at 1280px: keyboard tabs, native modal, missing data and focus return (1.2s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:20:01.0893686Z   ✓  154 tests/e2e/station-filters.spec.ts:181:5 › zh-Hant filters at 320px: keyboard tabs, native modal, missing data and focus return (844ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:20:01.6965931Z   ✓  155 tests/e2e/station-filters.spec.ts:181:5 › zh-Hant filters at 390px: keyboard tabs, native modal, missing data and focus return (896ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:20:02.3617272Z   ✓  156 tests/e2e/station-filters.spec.ts:181:5 › zh-Hant filters at 1280px: keyboard tabs, native modal, missing data and focus return (1.3s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:20:02.4802238Z   ✓  157 tests/e2e/station-filters.spec.ts:181:5 › ko filters at 320px: keyboard tabs, native modal, missing data and focus return (772ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:20:03.3330096Z   ✓  158 tests/e2e/station-filters.spec.ts:181:5 › ko filters at 390px: keyboard tabs, native modal, missing data and focus return (951ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:20:03.6777020Z   ✓  159 tests/e2e/station-filters.spec.ts:181:5 › ko filters at 1280px: keyboard tabs, native modal, missing data and focus return (1.2s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:20:04.2003138Z   ✓  160 tests/e2e/station-filters.spec.ts:181:5 › zh-Hans filters at 320px: keyboard tabs, native modal, missing data and focus return (846ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:20:04.6139129Z   ✓  161 tests/e2e/station-filters.spec.ts:181:5 › zh-Hans filters at 390px: keyboard tabs, native modal, missing data and focus return (917ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:20:05.3954532Z   ✓  162 tests/e2e/station-filters.spec.ts:181:5 › zh-Hans filters at 1280px: keyboard tabs, native modal, missing data and focus return (1.2s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:20:05.4622741Z   ✓  163 tests/e2e/station-filters.spec.ts:181:5 › th filters at 320px: keyboard tabs, native modal, missing data and focus return (835ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:20:06.3411927Z   ✓  164 tests/e2e/station-filters.spec.ts:181:5 › th filters at 390px: keyboard tabs, native modal, missing data and focus return (932ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:20:06.7051156Z   ✓  165 tests/e2e/station-filters.spec.ts:181:5 › th filters at 1280px: keyboard tabs, native modal, missing data and focus return (1.2s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:20:07.6521536Z   ✓  166 tests/e2e/station-mini-map.spec.ts:21:1 › each list station has its own lazy map and returns keyboard focus after opening details (1.3s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:20:07.8535701Z   ✓  167 tests/e2e/station-mini-map.spec.ts:43:3 › station thumbnails fit each card at 320px (1.1s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:20:08.8351459Z   ✓  168 tests/e2e/station-mini-map.spec.ts:43:3 › station thumbnails fit each card at 390px (1.2s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:20:09.1356049Z   ✓  169 tests/e2e/station-mini-map.spec.ts:43:3 › station thumbnails fit each card at 768px (1.3s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:20:10.4406531Z   ✓  170 tests/e2e/station-mini-map.spec.ts:43:3 › station thumbnails fit each card at 1280px (1.6s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:20:10.5826808Z   ✓  171 tests/e2e/station-mini-map.spec.ts:71:1 › wheel over a thumbnail scrolls the list without zooming the overall map (1.4s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:20:11.6340124Z   ✓  173 tests/e2e/station-mini-map.spec.ts:111:1 › failed thumbnail tiles show a fallback and still open the correct station (1.0s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:20:11.9131057Z   ✓  172 tests/e2e/station-mini-map.spec.ts:88:1 › thumbnails follow favorites, search and fuel selection without separate configuration requests (1.5s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:20:12.6345436Z   ✓  175 tests/e2e/station-mini-map.spec.ts:140:3 › thumbnail labels and brand fallback use en (710ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:20:12.8178555Z   ✓  174 tests/e2e/station-mini-map.spec.ts:122:1 › rejected map configuration is shared with thumbnails and can be retried (1.2s)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:20:13.4349831Z   ✓  176 tests/e2e/station-mini-map.spec.ts:140:3 › thumbnail labels and brand fallback use zh-Hant (785ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:20:13.6237568Z   ✓  177 tests/e2e/station-mini-map.spec.ts:140:3 › thumbnail labels and brand fallback use ko (789ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:20:14.2426522Z   ✓  178 tests/e2e/station-mini-map.spec.ts:140:3 › thumbnail labels and brand fallback use zh-Hans (792ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:20:14.4054029Z   ✓  179 tests/e2e/station-mini-map.spec.ts:140:3 › thumbnail labels and brand fallback use th (762ms)
+candidate	Validate importer, app and browser behavior	2026-09-30T19:20:14.4851780Z 
+candidate	Validate importer, app and browser behavior	2026-09-30T19:20:14.4857676Z   179 passed (1.9m)
+candidate	Keep validated data and provenance for review	﻿2026-09-30T19:20:14.5408871Z ##[group]Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+candidate	Keep validated data and provenance for review	2026-09-30T19:20:14.5409312Z with:
+candidate	Keep validated data and provenance for review	2026-09-30T19:20:14.5409534Z   name: fuel-data-candidate-36762528314
+candidate	Keep validated data and provenance for review	2026-09-30T19:20:14.5410039Z   path: public/data/
+candidate	Keep validated data and provenance for review	dist/build-provenance.json
+candidate	Keep validated data and provenance for review	
+candidate	Keep validated data and provenance for review	2026-09-30T19:20:14.5410352Z   if-no-files-found: error
+candidate	Keep validated data and provenance for review	2026-09-30T19:20:14.5410578Z   retention-days: 14
+candidate	Keep validated data and provenance for review	2026-09-30T19:20:14.5410789Z   compression-level: 6
+candidate	Keep validated data and provenance for review	2026-09-30T19:20:14.5410995Z   overwrite: false
+candidate	Keep validated data and provenance for review	2026-09-30T19:20:14.5411200Z   include-hidden-files: false
+candidate	Keep validated data and provenance for review	2026-09-30T19:20:14.5411433Z   archive: true
+candidate	Keep validated data and provenance for review	2026-09-30T19:20:14.5411616Z env:
+candidate	Keep validated data and provenance for review	2026-09-30T19:20:14.5411859Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+candidate	Keep validated data and provenance for review	2026-09-30T19:20:14.5412318Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+candidate	Keep validated data and provenance for review	2026-09-30T19:20:14.5412750Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+candidate	Keep validated data and provenance for review	2026-09-30T19:20:14.5413123Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+candidate	Keep validated data and provenance for review	2026-09-30T19:20:14.5413490Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+candidate	Keep validated data and provenance for review	2026-09-30T19:20:14.5413898Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+candidate	Keep validated data and provenance for review	2026-09-30T19:20:14.5414210Z ##[endgroup]
+candidate	Keep validated data and provenance for review	2026-09-30T19:20:14.6963249Z Multiple search paths detected. Calculating the least common ancestor of all paths
+candidate	Keep validated data and provenance for review	2026-09-30T19:20:14.6965617Z The least common ancestor is /home/runner/work/fuel-me-japan/fuel-me-japan. This will be the root directory of the artifact
+candidate	Keep validated data and provenance for review	2026-09-30T19:20:14.6966844Z With the provided path, there will be 64 files uploaded
+candidate	Keep validated data and provenance for review	2026-09-30T19:20:14.6970946Z Artifact name is valid!
+candidate	Keep validated data and provenance for review	2026-09-30T19:20:14.6971645Z Root directory input is valid!
+candidate	Keep validated data and provenance for review	2026-09-30T19:20:14.9700356Z Uploading artifact: fuel-data-candidate-36762528314.zip
+candidate	Keep validated data and provenance for review	2026-09-30T19:20:14.9745822Z Beginning upload of artifact content to blob storage
+candidate	Keep validated data and provenance for review	2026-09-30T19:20:15.3352592Z Uploaded bytes 703240
+candidate	Keep validated data and provenance for review	2026-09-30T19:20:15.3658387Z Finished uploading artifact content to blob storage!
+candidate	Keep validated data and provenance for review	2026-09-30T19:20:15.3659797Z SHA256 digest of uploaded artifact is ca164a1434f8ce82fc79e361404334f137b646163f2402c9bc0add0c08e34ee2
+candidate	Keep validated data and provenance for review	2026-09-30T19:20:15.3660818Z Finalizing artifact upload
+candidate	Keep validated data and provenance for review	2026-09-30T19:20:15.6346680Z Artifact fuel-data-candidate-36762528314 successfully finalized. Artifact ID 11119184810
+candidate	Keep validated data and provenance for review	2026-09-30T19:20:15.6348282Z Artifact fuel-data-candidate-36762528314 has been successfully uploaded! Final size is 703240 bytes. Artifact ID is 11119184810
+candidate	Keep validated data and provenance for review	2026-09-30T19:20:15.6351034Z Artifact download URL: https://github.com/zhyphil/fuel-me-japan/actions/runs/36762528314/artifacts/11119184810
+candidate	Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	﻿2026-09-30T19:20:15.6533769Z Post job cleanup.
+candidate	Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-09-30T19:20:15.7841011Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/fuel-me-japan/fuel-me-japan --files-from manifest.txt --use-compress-program zstdmt
+candidate	Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-09-30T19:20:17.1598072Z Sent 62652416 of 116920483 (53.6%), 59.8 MBs/sec
+candidate	Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-09-30T19:20:18.1027500Z Sent 116920483 of 116920483 (100.0%), 57.4 MBs/sec
+candidate	Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-09-30T19:20:18.3391177Z Cache saved with the key: node-cache-Linux-x64-npm-7a4f40eba3b06ce00e1c2dfb41ed990a764bb7deac8c52177aae4b8f23dfdbf2
+candidate	Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97	﻿2026-09-30T19:20:18.3566811Z Post job cleanup.
+candidate	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-09-30T19:20:18.4872989Z Post job cleanup.
+candidate	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T19:20:18.5732002Z [command]/usr/bin/git version
+candidate	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T19:20:18.5776907Z git version 2.55.0
+candidate	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T19:20:18.5826437Z Temporarily overriding HOME='/home/runner/work/_temp/c131261c-a7d5-4889-896c-f1916c9e77a1' before making global git config changes
+candidate	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T19:20:18.5827587Z Adding repository directory to the temporary git global config as a safe directory
+candidate	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T19:20:18.5835950Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/fuel-me-japan/fuel-me-japan
+candidate	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T19:20:18.5866082Z Removing SSH command configuration
+candidate	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T19:20:18.5873442Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+candidate	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T19:20:18.5909076Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+candidate	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T19:20:18.6159624Z Removing HTTP extra header
+candidate	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T19:20:18.6165567Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+candidate	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T19:20:18.6204196Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+candidate	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T19:20:18.6469177Z Removing includeIf entries pointing to credentials config files
+candidate	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T19:20:18.6479251Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+candidate	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-09-30T19:20:18.6519391Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+candidate	Complete job	﻿2026-09-30T19:20:18.6921930Z Cleaning up orphan processes

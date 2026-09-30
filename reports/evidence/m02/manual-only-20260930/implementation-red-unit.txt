@@ -1,0 +1,117 @@
+
+> fuel-me-japan@0.0.0 test
+> vitest run tests/unit/my-fuel.test.ts
+
+
+ RUN  v5.0.2 /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan
+
+ ❯ tests/unit/my-fuel.test.ts (5 tests | 5 failed) 11ms
+   × en renders only the manual fuel selector, labels and on-site reminder 6ms
+   × zh-Hant renders only the manual fuel selector, labels and on-site reminder 1ms
+   × ko renders only the manual fuel selector, labels and on-site reminder 1ms
+   × zh-Hans renders only the manual fuel selector, labels and on-site reminder 1ms
+   × th renders only the manual fuel selector, labels and on-site reminder 1ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 5 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/my-fuel.test.ts > en renders only the manual fuel selector, labels and on-site reminder
+AssertionError: expected '<dialog class="my-fuel-dialog" aria-l…' not to match /<form\b|role="(?:status|alert)"/
+
+- Expected:
+/<form\b|role="(?:status|alert)"/
+
++ Received:
+"<dialog class=\"my-fuel-dialog\" aria-labelledby=\"my-fuel-title\" aria-describedby=\"my-fuel-guidance\" aria-modal=\"true\"><header class=\"my-fuel-header\"><h2 id=\"my-fuel-title\"><svg viewBox=\"0 0 26 26\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3C9 7 5 11 5 15a7 7 0 0 0 14 0c0-4-4-8-7-12Zm-3 13a3 3 0 0 0 3 3\"></path></svg>My Fuel</h2><button type=\"button\" class=\"button\" aria-label=\"Close My Fuel\"><svg viewBox=\"0 0 26 26\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m6 6 14 14M20 6 6 20\"></path></svg></button></header><div class=\"my-fuel-body\"><div class=\"my-fuel-preference\"><label for=\"my-fuel-preference\">Fuel type</label><select id=\"my-fuel-preference\" aria-describedby=\"my-fuel-preference-help\"><option value=\"REGULAR\" selected=\"\">Regular petrol / レギュラー</option><option value=\"HIGH_OCTANE\">High-octane petrol / ハイオク</option><option value=\"DIESEL\">Diesel / 軽油</option></select><p class=\"field-help\" id=\"my-fuel-preference-help\">Remembered on this device as the default fuel shown on the map. You can still select multiple fuels on the map. This is your display preference, not a verified vehicle fuel recommendation.</p></div><p class=\"my-fuel-guidance\" id=\"my-fuel-guidance\">Before filling, check your rental documents and the fuel-door label. If they disagree or you are unsure, ask the rental company before filling.</p><p class=\"field-help\">Vehicle details used for verification are cleared when this panel closes. They do not change your manually selected fuel above.</p><div role=\"status\" aria-live=\"polite\" aria-atomic=\"true\"><p>Checking vehicle data…</p></div><div role=\"status\" aria-live=\"polite\" aria-atomic=\"true\"></div><section class=\"my-fuel-labels\" aria-labelledby=\"my-fuel-labels-title\"><h3 id=\"my-fuel-labels-title\">Japanese pump labels</h3><p class=\"field-help\">Recognition guide only. These three labels do not identify the fuel your vehicle needs.</p><dl><div><dt lang=\"ja\">レギュラー</dt><dd>Regular petrol</dd></div><div><dt lang=\"ja\">ハイオク</dt><dd>High-octane petrol</dd></div><div><dt lang=\"ja\">軽油</dt><dd>Diesel</dd></div></dl></section></div></dialog>"
+
+ ❯ tests/unit/my-fuel.test.ts:21:20
+     19|   for (const label of ["レギュラー", "ハイオク", "軽油"]) expect(html).toContain(…
+     20|   // The manual screen has no vehicle lookup, pending state or result …
+     21|   expect(html).not.toMatch(/<form\b|role="(?:status|alert)"/);
+       |                    ^
+     22| });
+     23|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/5]⎯
+
+ FAIL  tests/unit/my-fuel.test.ts > zh-Hant renders only the manual fuel selector, labels and on-site reminder
+AssertionError: expected '<dialog class="my-fuel-dialog" aria-l…' not to match /<form\b|role="(?:status|alert)"/
+
+- Expected:
+/<form\b|role="(?:status|alert)"/
+
++ Received:
+"<dialog class=\"my-fuel-dialog\" aria-labelledby=\"my-fuel-title\" aria-describedby=\"my-fuel-guidance\" aria-modal=\"true\"><header class=\"my-fuel-header\"><h2 id=\"my-fuel-title\"><svg viewBox=\"0 0 26 26\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3C9 7 5 11 5 15a7 7 0 0 0 14 0c0-4-4-8-7-12Zm-3 13a3 3 0 0 0 3 3\"></path></svg>我的用油</h2><button type=\"button\" class=\"button\" aria-label=\"關閉我的用油\"><svg viewBox=\"0 0 26 26\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m6 6 14 14M20 6 6 20\"></path></svg></button></header><div class=\"my-fuel-body\"><div class=\"my-fuel-preference\"><label for=\"my-fuel-preference\">用油品類</label><select id=\"my-fuel-preference\" aria-describedby=\"my-fuel-preference-help\"><option value=\"REGULAR\" selected=\"\">普通汽油 / レギュラー</option><option value=\"HIGH_OCTANE\">高辛烷值汽油 / ハイオク</option><option value=\"DIESEL\">柴油 / 軽油</option></select><p class=\"field-help\" id=\"my-fuel-preference-help\">作為地圖預設顯示的油種，在此裝置記住。地圖中仍可多選油種。此設定僅用於顯示，不代表已核驗您的車輛用油。</p></div><p class=\"my-fuel-guidance\" id=\"my-fuel-guidance\">加油前，請核對租車文件與油箱蓋標示。如果兩者不一致或仍不確定，請先詢問租車公司。</p><p class=\"field-help\">用於車型核對的選擇在關閉面板後清除，不會改動上方手動設定的油種。</p><div role=\"status\" aria-live=\"polite\" aria-atomic=\"true\"><p>正在核驗車輛資料…</p></div><div role=\"status\" aria-live=\"polite\" aria-atomic=\"true\"></div><section class=\"my-fuel-labels\" aria-labelledby=\"my-fuel-labels-title\"><h3 id=\"my-fuel-labels-title\">日本油槍標示</h3><p class=\"field-help\">僅供辨識標示。以下三種標示不代表您的車輛所需油種。</p><dl><div><dt lang=\"ja\">レギュラー</dt><dd>普通汽油</dd></div><div><dt lang=\"ja\">ハイオク</dt><dd>高辛烷值汽油</dd></div><div><dt lang=\"ja\">軽油</dt><dd>柴油</dd></div></dl></section></div></dialog>"
+
+ ❯ tests/unit/my-fuel.test.ts:21:20
+     19|   for (const label of ["レギュラー", "ハイオク", "軽油"]) expect(html).toContain(…
+     20|   // The manual screen has no vehicle lookup, pending state or result …
+     21|   expect(html).not.toMatch(/<form\b|role="(?:status|alert)"/);
+       |                    ^
+     22| });
+     23|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/5]⎯
+
+ FAIL  tests/unit/my-fuel.test.ts > ko renders only the manual fuel selector, labels and on-site reminder
+AssertionError: expected '<dialog class="my-fuel-dialog" aria-l…' not to match /<form\b|role="(?:status|alert)"/
+
+- Expected:
+/<form\b|role="(?:status|alert)"/
+
++ Received:
+"<dialog class=\"my-fuel-dialog\" aria-labelledby=\"my-fuel-title\" aria-describedby=\"my-fuel-guidance\" aria-modal=\"true\"><header class=\"my-fuel-header\"><h2 id=\"my-fuel-title\"><svg viewBox=\"0 0 26 26\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3C9 7 5 11 5 15a7 7 0 0 0 14 0c0-4-4-8-7-12Zm-3 13a3 3 0 0 0 3 3\"></path></svg>내 차 연료</h2><button type=\"button\" class=\"button\" aria-label=\"내 차 연료 닫기\"><svg viewBox=\"0 0 26 26\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m6 6 14 14M20 6 6 20\"></path></svg></button></header><div class=\"my-fuel-body\"><div class=\"my-fuel-preference\"><label for=\"my-fuel-preference\">유종</label><select id=\"my-fuel-preference\" aria-describedby=\"my-fuel-preference-help\"><option value=\"REGULAR\" selected=\"\">일반 휘발유 / レギュラー</option><option value=\"HIGH_OCTANE\">고급 휘발유 / ハイオク</option><option value=\"DIESEL\">경유 / 軽油</option></select><p class=\"field-help\" id=\"my-fuel-preference-help\">지도에 기본으로 표시할 유종을 이 기기에 저장합니다. 지도에서는 여러 유종을 선택할 수 있습니다. 이 설정은 표시용이며 차량에 맞는 연료가 확인되었다는 뜻은 아닙니다.</p></div><p class=\"my-fuel-guidance\" id=\"my-fuel-guidance\">주유 전에 렌터카 서류와 주유구 덮개 표시를 확인하세요. 서로 다르거나 확실하지 않으면 먼저 렌터카 회사에 문의하세요.</p><p class=\"field-help\">차량 확인에 사용한 선택 정보는 패널을 닫으면 지워집니다. 위에서 직접 설정한 유종은 변경되지 않습니다.</p><div role=\"status\" aria-live=\"polite\" aria-atomic=\"true\"><p>차량 데이터 확인 중…</p></div><div role=\"status\" aria-live=\"polite\" aria-atomic=\"true\"></div><section class=\"my-fuel-labels\" aria-labelledby=\"my-fuel-labels-title\"><h3 id=\"my-fuel-labels-title\">일본 주유기 표시</h3><p class=\"field-help\">표시를 알아보기 위한 안내일 뿐입니다. 이 세 가지 표시는 차량에 필요한 연료를 알려 주지 않습니다.</p><dl><div><dt lang=\"ja\">レギュラー</dt><dd>일반 휘발유</dd></div><div><dt lang=\"ja\">ハイオク</dt><dd>고급 휘발유</dd></div><div><dt lang=\"ja\">軽油</dt><dd>경유</dd></div></dl></section></div></dialog>"
+
+ ❯ tests/unit/my-fuel.test.ts:21:20
+     19|   for (const label of ["レギュラー", "ハイオク", "軽油"]) expect(html).toContain(…
+     20|   // The manual screen has no vehicle lookup, pending state or result …
+     21|   expect(html).not.toMatch(/<form\b|role="(?:status|alert)"/);
+       |                    ^
+     22| });
+     23|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/5]⎯
+
+ FAIL  tests/unit/my-fuel.test.ts > zh-Hans renders only the manual fuel selector, labels and on-site reminder
+AssertionError: expected '<dialog class="my-fuel-dialog" aria-l…' not to match /<form\b|role="(?:status|alert)"/
+
+- Expected:
+/<form\b|role="(?:status|alert)"/
+
++ Received:
+"<dialog class=\"my-fuel-dialog\" aria-labelledby=\"my-fuel-title\" aria-describedby=\"my-fuel-guidance\" aria-modal=\"true\"><header class=\"my-fuel-header\"><h2 id=\"my-fuel-title\"><svg viewBox=\"0 0 26 26\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3C9 7 5 11 5 15a7 7 0 0 0 14 0c0-4-4-8-7-12Zm-3 13a3 3 0 0 0 3 3\"></path></svg>我的用油</h2><button type=\"button\" class=\"button\" aria-label=\"关闭我的用油\"><svg viewBox=\"0 0 26 26\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m6 6 14 14M20 6 6 20\"></path></svg></button></header><div class=\"my-fuel-body\"><div class=\"my-fuel-preference\"><label for=\"my-fuel-preference\">用油品类</label><select id=\"my-fuel-preference\" aria-describedby=\"my-fuel-preference-help\"><option value=\"REGULAR\" selected=\"\">普通汽油 / レギュラー</option><option value=\"HIGH_OCTANE\">高辛烷值汽油 / ハイオク</option><option value=\"DIESEL\">柴油 / 軽油</option></select><p class=\"field-help\" id=\"my-fuel-preference-help\">作为地图默认显示的油种，在此设备记住。地图中仍可多选油种。此设置仅用于显示，不代表已核验您的车辆用油。</p></div><p class=\"my-fuel-guidance\" id=\"my-fuel-guidance\">加油前，请核对租车文件与油箱盖标识。如果两者不一致或仍不确定，请先询问租车公司。</p><p class=\"field-help\">用于车型核对的选择在关闭面板后清除，不会改动上方手动设置的油种。</p><div role=\"status\" aria-live=\"polite\" aria-atomic=\"true\"><p>正在核验车辆数据…</p></div><div role=\"status\" aria-live=\"polite\" aria-atomic=\"true\"></div><section class=\"my-fuel-labels\" aria-labelledby=\"my-fuel-labels-title\"><h3 id=\"my-fuel-labels-title\">日本油枪标识</h3><p class=\"field-help\">仅供识别标识。以下三种标识不代表您的车辆所需油种。</p><dl><div><dt lang=\"ja\">レギュラー</dt><dd>普通汽油</dd></div><div><dt lang=\"ja\">ハイオク</dt><dd>高辛烷值汽油</dd></div><div><dt lang=\"ja\">軽油</dt><dd>柴油</dd></div></dl></section></div></dialog>"
+
+ ❯ tests/unit/my-fuel.test.ts:21:20
+     19|   for (const label of ["レギュラー", "ハイオク", "軽油"]) expect(html).toContain(…
+     20|   // The manual screen has no vehicle lookup, pending state or result …
+     21|   expect(html).not.toMatch(/<form\b|role="(?:status|alert)"/);
+       |                    ^
+     22| });
+     23|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/5]⎯
+
+ FAIL  tests/unit/my-fuel.test.ts > th renders only the manual fuel selector, labels and on-site reminder
+AssertionError: expected '<dialog class="my-fuel-dialog" aria-l…' not to match /<form\b|role="(?:status|alert)"/
+
+- Expected:
+/<form\b|role="(?:status|alert)"/
+
++ Received:
+"<dialog class=\"my-fuel-dialog\" aria-labelledby=\"my-fuel-title\" aria-describedby=\"my-fuel-guidance\" aria-modal=\"true\"><header class=\"my-fuel-header\"><h2 id=\"my-fuel-title\"><svg viewBox=\"0 0 26 26\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3C9 7 5 11 5 15a7 7 0 0 0 14 0c0-4-4-8-7-12Zm-3 13a3 3 0 0 0 3 3\"></path></svg>เชื้อเพลิงรถฉัน</h2><button type=\"button\" class=\"button\" aria-label=\"ปิดเชื้อเพลิงรถฉัน\"><svg viewBox=\"0 0 26 26\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m6 6 14 14M20 6 6 20\"></path></svg></button></header><div class=\"my-fuel-body\"><div class=\"my-fuel-preference\"><label for=\"my-fuel-preference\">ประเภทเชื้อเพลิง</label><select id=\"my-fuel-preference\" aria-describedby=\"my-fuel-preference-help\"><option value=\"REGULAR\" selected=\"\">เบนซินธรรมดา / レギュラー</option><option value=\"HIGH_OCTANE\">เบนซินออกเทนสูง / ハイオク</option><option value=\"DIESEL\">ดีเซล / 軽油</option></select><p class=\"field-help\" id=\"my-fuel-preference-help\">จดจำไว้บนอุปกรณ์นี้เป็นประเภทเชื้อเพลิงที่แสดงบนแผนที่โดยค่าเริ่มต้น คุณยังเลือกหลายประเภทบนแผนที่ได้ การตั้งค่านี้ใช้เพื่อแสดงผลเท่านั้น ไม่ใช่การยืนยันเชื้อเพลิงที่รถของคุณต้องใช้</p></div><p class=\"my-fuel-guidance\" id=\"my-fuel-guidance\">ก่อนเติมน้ำมัน ให้ตรวจเอกสารเช่ารถและป้ายที่ฝาถังน้ำมัน หากข้อมูลไม่ตรงกันหรือไม่แน่ใจ ให้สอบถามบริษัทเช่ารถก่อนเติม</p><p class=\"field-help\">ข้อมูลรถที่เลือกเพื่อตรวจสอบจะถูกล้างเมื่อปิดแผง และจะไม่เปลี่ยนประเภทเชื้อเพลิงที่คุณตั้งค่าเองด้านบน</p><div role=\"status\" aria-live=\"polite\" aria-atomic=\"true\"><p>กำลังตรวจสอบข้อมูลรถ…</p></div><div role=\"status\" aria-live=\"polite\" aria-atomic=\"true\"></div><section class=\"my-fuel-labels\" aria-labelledby=\"my-fuel-labels-title\"><h3 id=\"my-fuel-labels-title\">ป้ายบนหัวจ่ายน้ำมันญี่ปุ่น</h3><p class=\"field-help\">ใช้เพื่อรู้จักป้ายเท่านั้น ป้ายทั้งสามนี้ไม่ได้ระบุว่าเชื้อเพลิงใดเหมาะกับรถของคุณ</p><dl><div><dt lang=\"ja\">レギュラー</dt><dd>เบนซินธรรมดา</dd></div><div><dt lang=\"ja\">ハイオク</dt><dd>เบนซินออกเทนสูง</dd></div><div><dt lang=\"ja\">軽油</dt><dd>ดีเซล</dd></div></dl></section></div></dialog>"
+
+ ❯ tests/unit/my-fuel.test.ts:21:20
+     19|   for (const label of ["レギュラー", "ハイオク", "軽油"]) expect(html).toContain(…
+     20|   // The manual screen has no vehicle lookup, pending state or result …
+     21|   expect(html).not.toMatch(/<form\b|role="(?:status|alert)"/);
+       |                    ^
+     22| });
+     23|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/5]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  5 failed (5)
+   Start at  21:02:07
+   Duration  161ms (transform 62%, import 26%, tests 10%, worker 2%)
+

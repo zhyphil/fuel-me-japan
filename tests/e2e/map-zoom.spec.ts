@@ -177,7 +177,11 @@ test("cluster zoom respects reduced motion and updates that preference without r
 test("native two-finger pinch still zooms the mobile map", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 }); await load(page);
   const box = (await page.locator(".map-surface").boundingBox())!;
-  const x = box.x + box.width / 2, y = box.y + box.height / 2;
+  const marker = (await page.locator(".map-pin-cluster").first().boundingBox())!;
+  const x = marker.x + marker.width / 2 - 25, y = marker.y + marker.height / 2;
+  expect(y).toBeGreaterThan(box.y);
+  expect(y).toBeLessThan(box.y + box.height);
+  // One finger explicitly lands on a cluster, independent of toolbar height.
   const initial = (await tileZoom(page))!;
   const cdp = await page.context().newCDPSession(page);
   await cdp.send("Input.dispatchTouchEvent", { type: "touchStart", touchPoints: [{ x: x - 25, y, id: 1 }, { x: x + 25, y, id: 2 }] });

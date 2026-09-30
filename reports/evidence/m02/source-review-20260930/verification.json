@@ -1,0 +1,52 @@
+{
+  "checkedAt": "2026-09-30T18:41:45Z",
+  "status": "PASS",
+  "范围": "本轮报告、候选证据、文案版本与已有代码检查的一致性；不是 M0.2 产品验收。",
+  "完整检查本轮重跑": false,
+  "原因": "本轮没有修改产品代码、测试、配置或发布数据。",
+  "上轮完整检查证据": "reports/evidence/m02/acceptance-20260930/verification.json",
+  "源码与测试快照": {
+    "count": 91,
+    "changed": []
+  },
+  "保护文件": {
+    "count": 84,
+    "changed": []
+  },
+  "人工审核包": {
+    "locales": [
+      "en",
+      "zh-Hant",
+      "ko",
+      "zh-Hans",
+      "th"
+    ],
+    "keysPerLocale": {
+      "en": 34,
+      "zh-Hant": 34,
+      "ko": 34,
+      "zh-Hans": 34,
+      "th": 34
+    },
+    "hashesMatchRegistry": true,
+    "人工审核状态": "PENDING_REVIEW"
+  },
+  "生产数据": {
+    "真实车型数量": 0,
+    "批准来源数量": 0,
+    "安全文案状态": "PENDING_REVIEW",
+    "changed": false
+  },
+  "本轮界限": {
+    "productCodeChanged": false,
+    "pushed": false,
+    "deployed": false,
+    "messageSent": false,
+    "m03Started": false
+  },
+  "原件核对": {
+    "表格原页": "PDF 第 14 页／印刷页 55，已查看",
+    "文档版本原页": "PDF 第 15 页／印刷页 56，已查看",
+    "原件进入仓库": false
+  }
+}

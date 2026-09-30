@@ -1,0 +1,13 @@
+import { defineConfig, devices } from "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/node_modules/@playwright/test/index.mjs";
+export default defineConfig({
+ testDir: "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e", fullyParallel: true, workers: 2, retries: 0,
+ reporter: [["list"], ["json", {outputFile:"/tmp/fmj-finish-20260930/mobile-results.json"}]],
+ outputDir:"/tmp/fmj-finish-20260930/mobile-test-results",
+ use: {baseURL:"http://127.0.0.1:4175", screenshot:"only-on-failure"},
+ projects: [
+ {name:"iPhone Safari WebKit simulation", grepInvert:/native two-finger pinch|a second wheel pulse|reversing the wheel|returning to overview during zoom/, use:{...devices["iPhone 13"], browserName:"webkit"}},
+ {name:"Android Chrome Chromium simulation", use:{...devices["Pixel 7"], browserName:"chromium"}},
+ {name:"Desktop Safari WebKit wheel", testMatch:/map-zoom.spec.ts/, grep:/a second wheel pulse|reversing the wheel|returning to overview during zoom/, use:{...devices["Desktop Safari"], viewport:{width:1280,height:900}, browserName:"webkit"}}
+ ],
+ webServer:{command:"npm run preview -- --port 4175 --strictPort", cwd:"/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan", url:"http://127.0.0.1:4175", reuseExistingServer:false}
+});

@@ -1,34 +1,26 @@
-import { readFile, writeFile, mkdir, readdir } from "node:fs/promises";
+import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { renderToString } from "react-dom/server";
 import { App } from "../src/App";
 import { locales, messages, type Locale } from "../src/i18n";
 import { createHash } from "node:crypto";
 import { parseDataManifest, parseStationFile, parsePriceFile, type Artifact } from "../src/lib/stations";
 import { validateRegistry } from "../src/lib/source-registry";
-import { parseVehicleManifest, decodeVehicleArtifact } from "../src/lib/vehicle-data";
-import { validateVehicleData } from "../src/lib/vehicle-fuel";
+import { fieldGuideProvenance, validateFieldGuideSources, validateGuideMessages } from "../src/lib/field-guide";
+import { parseRentalData, rentalDataUrl } from "../src/lib/return-car";
 
-// Independent vehicle integrity gate; it does not change M0.1 source approval semantics.
-const vehicleManifestBytes = await readFile("dist/data/vehicles/manifest.json");
-const vehicleManifest = parseVehicleManifest(JSON.parse(vehicleManifestBytes.toString("utf8")));
-const vehicleFiles = await readdir("dist/data/vehicles");
-const expectedVehicleFiles = ["manifest.json", ...[vehicleManifest.registry, vehicleManifest.mappings].map((artifact) => artifact.path.split("/").at(-1)!)];
-if (vehicleFiles.length !== expectedVehicleFiles.length || vehicleFiles.some((file) => !expectedVehicleFiles.includes(file))) throw new Error("Unreferenced vehicle artifact cannot be published");
-const vehicleArtifacts = await Promise.all([vehicleManifest.registry, vehicleManifest.mappings].map(async (artifact) => decodeVehicleArtifact(await readFile(`dist${artifact.path}`), artifact)));
-const vehicleData = await validateVehicleData(vehicleArtifacts[0], vehicleArtifacts[1], vehicleManifest.version);
-await writeFile("dist/vehicle-provenance.json", JSON.stringify({
-  schemaVersion: 1,
-  milestone: "M0.2",
-  builtAt: new Date().toISOString(),
-  integrityValidation: "PASS",
-  sourceAcceptance: vehicleData.mappings.records.length ? "REVIEW_RECORDS_PRESENT" : "BLOCKED_NO_APPROVED_MAPPINGS",
-  safetyReviewStatus: vehicleData.registry.safetyReview.status,
-  manifest: { path: "/data/vehicles/manifest.json", sha256: createHash("sha256").update(vehicleManifestBytes).digest("hex") },
-  registry: vehicleManifest.registry,
-  mappings: vehicleManifest.mappings,
-  mappingCount: vehicleData.mappings.records.length,
-  note: "机器校验仅验证结构、哈希与审批记录一致性，不能代替人工来源权利及五语言安全文案审查。空映射不代表 M0.2 数据或生产验收完成。",
-}, null, 2));
+const rentalBytes = await readFile(`dist${rentalDataUrl}`);
+const rentalData = parseRentalData(JSON.parse(rentalBytes.toString("utf8")));
+await readFile(`dist${rentalData.osm.noticeUrl}`, "utf8");
+for (const locale of locales) for (const row of rentalData.records) {
+  if (!messages[locale][row.nameKey]?.trim()) throw new Error(`还车门店缺少本地化名称：${locale}/${row.id}`);
+}
+
+const guideSourceBytes = await readFile("dist/field-guides/refuel-sources.json");
+const guideSources: unknown = JSON.parse(guideSourceBytes.toString("utf8"));
+const guideErrors = [...validateFieldGuideSources(guideSources), ...validateGuideMessages(messages, locales)];
+if (guideErrors.length) throw new Error(guideErrors.join("\n"));
+if (JSON.stringify(guideSources) !== JSON.stringify(fieldGuideProvenance)) throw new Error("加油指引公开来源记录与构建时配置不一致。");
+
 const manifestBytes = await readFile("dist/data/manifest.json");
 const manifest = parseDataManifest(JSON.parse(manifestBytes.toString("utf8")));
 async function checkedArtifact(artifact: Artifact) {
@@ -103,9 +95,11 @@ await writeFile(
       ingestedSources: manifest.sources,
       stationCount: manifest.stations.count,
       priceRecordCount: manifest.prices.count,
+      fieldGuides: { refuel: { path: "/field-guides/refuel-sources.json", sha256: createHash("sha256").update(guideSourceBytes).digest("hex"), reviewDate: fieldGuideProvenance.reviewDate, transformationVersion: fieldGuideProvenance.transformationVersion } },
+      rentalLocations: { path: rentalDataUrl, sha256: createHash("sha256").update(rentalBytes).digest("hex"), count: rentalData.count, reviewDate: rentalData.reviewDate, transformationVersion: rentalData.transformationVersion, sourceIds: rentalData.sources.map(source => source.id), note: "仅三条Times门店事实核对；不表示公司整库授权。" },
       surveyDate: manifest.prices.surveyDate,
       publishedAt: manifest.prices.publishedAt,
-      note: "Partial OSM coverage; official prefectural references are separate from station data. No live station prices. No scheduler or deployment performed by the importer.",
+      note: "OSM 覆盖不完整；官方都道府县参考价与站点数据分开存储。没有站点即时报价。导入器不执行定时调度或部署。",
     },
     null,
     2,

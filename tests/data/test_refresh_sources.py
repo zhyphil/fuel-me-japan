@@ -2,9 +2,13 @@ from datetime import date
 from pathlib import Path
 import sys
 import unittest
+import tempfile
+import json
+from unittest.mock import patch
+from urllib.error import HTTPError
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'scripts/importer'))
-from refresh_sources import latest_url, OSM_INDEX, PRICE_INDEX
+from refresh_sources import latest_url, OSM_INDEX, PRICE_INDEX, main
 
 
 class SourceDiscoveryTests(unittest.TestCase):
@@ -20,6 +24,30 @@ class SourceDiscoveryTests(unittest.TestCase):
         for kind, index in [('osm', OSM_INDEX), ('prices', PRICE_INDEX)]:
             with self.subTest(kind=kind), self.assertRaisesRegex(ValueError, 'No reviewed'):
                 latest_url('<p>403 or redesigned source page</p>', index, kind)
+
+
+class RefreshFailureEvidenceTests(unittest.TestCase):
+    def test_index_denial_emits_blocked_report_and_keeps_both_pointers(self):
+        with tempfile.TemporaryDirectory() as temp:
+            base = Path(temp)
+            output = base / 'published'
+            output.mkdir()
+            (output / 'manifest.json').write_bytes(b'unchanged manifest')
+            (output / 'source-registry.json').write_bytes(b'unchanged registry')
+            report = base / 'evidence' / 'refresh.json'
+            argv = ['refresh_sources.py', 'prices', '--download-dir', str(base / 'raw'), '--output', str(output), '--report', str(report)]
+            with patch('sys.argv', argv), patch('refresh_sources.fetch_bytes', side_effect=HTTPError(PRICE_INDEX, 403, 'Forbidden', {}, None)):
+                with self.assertRaises(SystemExit) as result:
+                    main()
+            self.assertEqual(result.exception.code, 1)
+            data = json.loads(report.read_text())
+            self.assertEqual(data['status'], 'BLOCKED')
+            self.assertEqual(data['stage'], 'DISCOVERY')
+            self.assertEqual(data['sourceUrl'], PRICE_INDEX)
+            self.assertTrue(data['retainedPreviousPointers'])
+            self.assertEqual(data['before'], data['after'])
+            self.assertEqual((output / 'manifest.json').read_bytes(), b'unchanged manifest')
+            self.assertEqual((output / 'source-registry.json').read_bytes(), b'unchanged registry')
 
 
 if __name__ == '__main__':

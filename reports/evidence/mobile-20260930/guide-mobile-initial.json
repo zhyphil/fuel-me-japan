@@ -1,0 +1,2517 @@
+{
+  "config": {
+    "argv": [
+      "/Users/haoyuzuo/.nvm/versions/node/v24.18.0/bin/node",
+      "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/node_modules/.bin/playwright",
+      "test",
+      "--config=/tmp/fmj-finish-20260930/guide-mobile.config.mts",
+      "my-fuel",
+      "refuel-guide"
+    ],
+    "configFile": "/tmp/fmj-finish-20260930/guide-mobile.config.mts",
+    "rootDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/fmj-finish-20260930/guide-mobile-test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "iPhone Safari WebKit simulation",
+        "name": "iPhone Safari WebKit simulation",
+        "testDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/tmp/fmj-finish-20260930/guide-mobile-test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "Android Chrome Chromium simulation",
+        "name": "Android Chrome Chromium simulation",
+        "testDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/tmp/fmj-finish-20260930/guide-mobile-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 2,
+    "webServer": {
+      "command": "npm run preview -- --port 4176 --strictPort --outDir /tmp/fmj-finish-20260930/guide-dist",
+      "cwd": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan",
+      "url": "http://127.0.0.1:4176",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "my-fuel-preference.spec.ts",
+      "file": "my-fuel-preference.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "en: manual fuel dropdown updates the map and survives reopening and reload",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone Safari WebKit simulation",
+              "projectName": "iPhone Safari WebKit simulation",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1280,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:23:52.772Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cf002d4c63f786eec645-40b71f3e80da1ae80e9d",
+          "file": "my-fuel-preference.spec.ts",
+          "line": 8,
+          "column": 3
+        },
+        {
+          "title": "zh-Hant: manual fuel dropdown updates the map and survives reopening and reload",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone Safari WebKit simulation",
+              "projectName": "iPhone Safari WebKit simulation",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1289,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:23:52.772Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cf002d4c63f786eec645-23d4e3d35671c18e932b",
+          "file": "my-fuel-preference.spec.ts",
+          "line": 8,
+          "column": 3
+        },
+        {
+          "title": "ko: manual fuel dropdown updates the map and survives reopening and reload",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone Safari WebKit simulation",
+              "projectName": "iPhone Safari WebKit simulation",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 578,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:23:58.468Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cf002d4c63f786eec645-1a0c7d85e4c07e7ee933",
+          "file": "my-fuel-preference.spec.ts",
+          "line": 8,
+          "column": 3
+        },
+        {
+          "title": "zh-Hans: manual fuel dropdown updates the map and survives reopening and reload",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone Safari WebKit simulation",
+              "projectName": "iPhone Safari WebKit simulation",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 570,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:23:58.475Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cf002d4c63f786eec645-54636ec8fa6087bd1185",
+          "file": "my-fuel-preference.spec.ts",
+          "line": 8,
+          "column": 3
+        },
+        {
+          "title": "th: manual fuel dropdown updates the map and survives reopening and reload",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone Safari WebKit simulation",
+              "projectName": "iPhone Safari WebKit simulation",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 632,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:23:59.050Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cf002d4c63f786eec645-d4102c99d6da44febc3b",
+          "file": "my-fuel-preference.spec.ts",
+          "line": 8,
+          "column": 3
+        },
+        {
+          "title": "manual fuel replaces a multi-selection without resetting region, list mode or requesting location; reset stays in sync",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone Safari WebKit simulation",
+              "projectName": "iPhone Safari WebKit simulation",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 434,
+                  "error": {
+                    "message": "Error: locator.check: Clicking the checkbox did not change its state\nCall log:\n\u001b[2m  - waiting for locator('#display-fuel').locator('input[value=\"REGULAR\"]')\u001b[22m\n\u001b[2m    - locator resolved to <input checked type=\"checkbox\" value=\"REGULAR\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\u001b[2m    - click action done\u001b[22m\n\u001b[2m    - waiting for scheduled navigations to finish\u001b[22m\n\u001b[2m    - navigations have finished\u001b[22m\n",
+                    "stack": "Error: locator.check: Clicking the checkbox did not change its state\nCall log:\n\u001b[2m  - waiting for locator('#display-fuel').locator('input[value=\"REGULAR\"]')\u001b[22m\n\u001b[2m    - locator resolved to <input checked type=\"checkbox\" value=\"REGULAR\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\u001b[2m    - click action done\u001b[22m\n\u001b[2m    - waiting for scheduled navigations to finish\u001b[22m\n\u001b[2m    - navigations have finished\u001b[22m\n\n    at chooseFuels (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-selection.ts:7:79)\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/my-fuel-preference.spec.ts:57:3",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-selection.ts",
+                      "column": 79,
+                      "line": 7
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mfuel-selection.ts:7\n\n   5 |   const selection = page.locator(\"#display-fuel\");\n   6 |   if (await selection.getAttribute(\"open\") === null) await selection.locator(\"summary\").click();\n>  7 |   for (const fuel of fuels) await selection.locator(`input[value=\"${fuel}\"]`).check();\n     |                                                                               ^\n   8 |   for (const fuel of [\"REGULAR\", \"HIGH_OCTANE\", \"DIESEL\"]) {\n   9 |     if (!fuels.includes(fuel as FuelType)) await selection.locator(`input[value=\"${fuel}\"]`).uncheck();\n  10 |   }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-selection.ts",
+                        "column": 79,
+                        "line": 7
+                      },
+                      "message": "Error: locator.check: Clicking the checkbox did not change its state\nCall log:\n\u001b[2m  - waiting for locator('#display-fuel').locator('input[value=\"REGULAR\"]')\u001b[22m\n\u001b[2m    - locator resolved to <input checked type=\"checkbox\" value=\"REGULAR\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\u001b[2m    - click action done\u001b[22m\n\u001b[2m    - waiting for scheduled navigations to finish\u001b[22m\n\u001b[2m    - navigations have finished\u001b[22m\n\n\n   at fuel-selection.ts:7\n\n   5 |   const selection = page.locator(\"#display-fuel\");\n   6 |   if (await selection.getAttribute(\"open\") === null) await selection.locator(\"summary\").click();\n>  7 |   for (const fuel of fuels) await selection.locator(`input[value=\"${fuel}\"]`).check();\n     |                                                                               ^\n   8 |   for (const fuel of [\"REGULAR\", \"HIGH_OCTANE\", \"DIESEL\"]) {\n   9 |     if (!fuels.includes(fuel as FuelType)) await selection.locator(`input[value=\"${fuel}\"]`).uncheck();\n  10 |   }\n    at chooseFuels (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-selection.ts:7:79)\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/my-fuel-preference.spec.ts:57:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:23:59.051Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/tmp/fmj-finish-20260930/guide-mobile-test-results/my-fuel-preference-manual--158f3-ocation-reset-stays-in-sync-iPhone-Safari-WebKit-simulation/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/fmj-finish-20260930/guide-mobile-test-results/my-fuel-preference-manual--158f3-ocation-reset-stays-in-sync-iPhone-Safari-WebKit-simulation/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-selection.ts",
+                    "column": 79,
+                    "line": 7
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "cf002d4c63f786eec645-6e815b165b3756160757",
+          "file": "my-fuel-preference.spec.ts",
+          "line": 42,
+          "column": 1
+        },
+        {
+          "title": "manual fuel works when browser storage is unavailable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone Safari WebKit simulation",
+              "projectName": "iPhone Safari WebKit simulation",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 696,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:23:59.700Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cf002d4c63f786eec645-cf32e53321a1333666ab",
+          "file": "my-fuel-preference.spec.ts",
+          "line": 81,
+          "column": 1
+        },
+        {
+          "title": "en: manual fuel dropdown updates the map and survives reopening and reload",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Android Chrome Chromium simulation",
+              "projectName": "Android Chrome Chromium simulation",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 547,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:33.255Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cf002d4c63f786eec645-64306eb5451026f2dfa5",
+          "file": "my-fuel-preference.spec.ts",
+          "line": 8,
+          "column": 3
+        },
+        {
+          "title": "zh-Hant: manual fuel dropdown updates the map and survives reopening and reload",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Android Chrome Chromium simulation",
+              "projectName": "Android Chrome Chromium simulation",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 461,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:33.711Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cf002d4c63f786eec645-9341011e21b57ebe4137",
+          "file": "my-fuel-preference.spec.ts",
+          "line": 8,
+          "column": 3
+        },
+        {
+          "title": "ko: manual fuel dropdown updates the map and survives reopening and reload",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Android Chrome Chromium simulation",
+              "projectName": "Android Chrome Chromium simulation",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 413,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:34.127Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cf002d4c63f786eec645-46700ef52ca1a286e5ba",
+          "file": "my-fuel-preference.spec.ts",
+          "line": 8,
+          "column": 3
+        },
+        {
+          "title": "zh-Hans: manual fuel dropdown updates the map and survives reopening and reload",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Android Chrome Chromium simulation",
+              "projectName": "Android Chrome Chromium simulation",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 441,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:34.367Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cf002d4c63f786eec645-f0a5a21f1cebbe64b8aa",
+          "file": "my-fuel-preference.spec.ts",
+          "line": 8,
+          "column": 3
+        },
+        {
+          "title": "th: manual fuel dropdown updates the map and survives reopening and reload",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Android Chrome Chromium simulation",
+              "projectName": "Android Chrome Chromium simulation",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 449,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:34.545Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cf002d4c63f786eec645-d5aaa57d75be1fe58493",
+          "file": "my-fuel-preference.spec.ts",
+          "line": 8,
+          "column": 3
+        },
+        {
+          "title": "manual fuel replaces a multi-selection without resetting region, list mode or requesting location; reset stays in sync",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Android Chrome Chromium simulation",
+              "projectName": "Android Chrome Chromium simulation",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 761,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:34.813Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cf002d4c63f786eec645-7ada1d3a431361f5a17b",
+          "file": "my-fuel-preference.spec.ts",
+          "line": 42,
+          "column": 1
+        },
+        {
+          "title": "manual fuel works when browser storage is unavailable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Android Chrome Chromium simulation",
+              "projectName": "Android Chrome Chromium simulation",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 285,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:34.999Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cf002d4c63f786eec645-13ce767070ca43a9c4ee",
+          "file": "my-fuel-preference.spec.ts",
+          "line": 81,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "my-fuel.spec.ts",
+      "file": "my-fuel.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "en 320px: manual-only fuel, Japanese labels and no vehicle requests",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone Safari WebKit simulation",
+              "projectName": "iPhone Safari WebKit simulation",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 539,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:23:59.690Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "77adc7ef39665e51d45b-4ae29e5c6b17e0d3ae6b",
+          "file": "my-fuel.spec.ts",
+          "line": 8,
+          "column": 5
+        },
+        {
+          "title": "en 1280px: manual-only fuel, Japanese labels and no vehicle requests",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone Safari WebKit simulation",
+              "projectName": "iPhone Safari WebKit simulation",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 886,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:00.233Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "77adc7ef39665e51d45b-00520bcbcb241f1d330f",
+          "file": "my-fuel.spec.ts",
+          "line": 8,
+          "column": 5
+        },
+        {
+          "title": "zh-Hant 320px: manual-only fuel, Japanese labels and no vehicle requests",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone Safari WebKit simulation",
+              "projectName": "iPhone Safari WebKit simulation",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 557,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:00.590Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "77adc7ef39665e51d45b-7c92025c023258a391ff",
+          "file": "my-fuel.spec.ts",
+          "line": 8,
+          "column": 5
+        },
+        {
+          "title": "zh-Hant 1280px: manual-only fuel, Japanese labels and no vehicle requests",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone Safari WebKit simulation",
+              "projectName": "iPhone Safari WebKit simulation",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 656,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:01.123Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "77adc7ef39665e51d45b-913fc8c34108c6891cf3",
+          "file": "my-fuel.spec.ts",
+          "line": 8,
+          "column": 5
+        },
+        {
+          "title": "ko 320px: manual-only fuel, Japanese labels and no vehicle requests",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone Safari WebKit simulation",
+              "projectName": "iPhone Safari WebKit simulation",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 506,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:01.153Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "77adc7ef39665e51d45b-89efe347b2b7eb2ae3f7",
+          "file": "my-fuel.spec.ts",
+          "line": 8,
+          "column": 5
+        },
+        {
+          "title": "ko 1280px: manual-only fuel, Japanese labels and no vehicle requests",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone Safari WebKit simulation",
+              "projectName": "iPhone Safari WebKit simulation",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 663,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:01.663Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "77adc7ef39665e51d45b-b717fc7c2e16cfdeedbc",
+          "file": "my-fuel.spec.ts",
+          "line": 8,
+          "column": 5
+        },
+        {
+          "title": "zh-Hans 320px: manual-only fuel, Japanese labels and no vehicle requests",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone Safari WebKit simulation",
+              "projectName": "iPhone Safari WebKit simulation",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 468,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:01.783Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "77adc7ef39665e51d45b-f8499a0dcb09715da804",
+          "file": "my-fuel.spec.ts",
+          "line": 8,
+          "column": 5
+        },
+        {
+          "title": "zh-Hans 1280px: manual-only fuel, Japanese labels and no vehicle requests",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone Safari WebKit simulation",
+              "projectName": "iPhone Safari WebKit simulation",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 669,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:02.255Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "77adc7ef39665e51d45b-dc07aea1ee63ab621303",
+          "file": "my-fuel.spec.ts",
+          "line": 8,
+          "column": 5
+        },
+        {
+          "title": "th 320px: manual-only fuel, Japanese labels and no vehicle requests",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone Safari WebKit simulation",
+              "projectName": "iPhone Safari WebKit simulation",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 515,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:02.330Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "77adc7ef39665e51d45b-462ac8194727420698d8",
+          "file": "my-fuel.spec.ts",
+          "line": 8,
+          "column": 5
+        },
+        {
+          "title": "th 1280px: manual-only fuel, Japanese labels and no vehicle requests",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone Safari WebKit simulation",
+              "projectName": "iPhone Safari WebKit simulation",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 679,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:02.849Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "77adc7ef39665e51d45b-629018e29ac95eb31513",
+          "file": "my-fuel.spec.ts",
+          "line": 8,
+          "column": 5
+        },
+        {
+          "title": "en 320px: manual-only fuel, Japanese labels and no vehicle requests",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Android Chrome Chromium simulation",
+              "projectName": "Android Chrome Chromium simulation",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 390,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:35.291Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "77adc7ef39665e51d45b-92e5dd61e938aec08a7c",
+          "file": "my-fuel.spec.ts",
+          "line": 8,
+          "column": 5
+        },
+        {
+          "title": "en 1280px: manual-only fuel, Japanese labels and no vehicle requests",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Android Chrome Chromium simulation",
+              "projectName": "Android Chrome Chromium simulation",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 581,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:35.580Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "77adc7ef39665e51d45b-c87d5b276908c16cdaca",
+          "file": "my-fuel.spec.ts",
+          "line": 8,
+          "column": 5
+        },
+        {
+          "title": "zh-Hant 320px: manual-only fuel, Japanese labels and no vehicle requests",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Android Chrome Chromium simulation",
+              "projectName": "Android Chrome Chromium simulation",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 412,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:35.685Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "77adc7ef39665e51d45b-1b33fc648cd8a1dcabd6",
+          "file": "my-fuel.spec.ts",
+          "line": 8,
+          "column": 5
+        },
+        {
+          "title": "zh-Hant 1280px: manual-only fuel, Japanese labels and no vehicle requests",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Android Chrome Chromium simulation",
+              "projectName": "Android Chrome Chromium simulation",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 585,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:36.102Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "77adc7ef39665e51d45b-760af858227f77416339",
+          "file": "my-fuel.spec.ts",
+          "line": 8,
+          "column": 5
+        },
+        {
+          "title": "ko 320px: manual-only fuel, Japanese labels and no vehicle requests",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Android Chrome Chromium simulation",
+              "projectName": "Android Chrome Chromium simulation",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 402,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:36.164Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "77adc7ef39665e51d45b-2c7ffe92d6a6aae39799",
+          "file": "my-fuel.spec.ts",
+          "line": 8,
+          "column": 5
+        },
+        {
+          "title": "ko 1280px: manual-only fuel, Japanese labels and no vehicle requests",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Android Chrome Chromium simulation",
+              "projectName": "Android Chrome Chromium simulation",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 593,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:36.570Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "77adc7ef39665e51d45b-a63867b6111623f050bd",
+          "file": "my-fuel.spec.ts",
+          "line": 8,
+          "column": 5
+        },
+        {
+          "title": "zh-Hans 320px: manual-only fuel, Japanese labels and no vehicle requests",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Android Chrome Chromium simulation",
+              "projectName": "Android Chrome Chromium simulation",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 401,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:36.692Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "77adc7ef39665e51d45b-ff673ccaae11413cd847",
+          "file": "my-fuel.spec.ts",
+          "line": 8,
+          "column": 5
+        },
+        {
+          "title": "zh-Hans 1280px: manual-only fuel, Japanese labels and no vehicle requests",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Android Chrome Chromium simulation",
+              "projectName": "Android Chrome Chromium simulation",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 843,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:37.096Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "77adc7ef39665e51d45b-a2ec495a344309423da3",
+          "file": "my-fuel.spec.ts",
+          "line": 8,
+          "column": 5
+        },
+        {
+          "title": "th 320px: manual-only fuel, Japanese labels and no vehicle requests",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Android Chrome Chromium simulation",
+              "projectName": "Android Chrome Chromium simulation",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 641,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:37.173Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "77adc7ef39665e51d45b-d08a2fbd4adf5fbf41c5",
+          "file": "my-fuel.spec.ts",
+          "line": 8,
+          "column": 5
+        },
+        {
+          "title": "th 1280px: manual-only fuel, Japanese labels and no vehicle requests",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Android Chrome Chromium simulation",
+              "projectName": "Android Chrome Chromium simulation",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 641,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:37.822Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "77adc7ef39665e51d45b-67e2a27a2777e0a21747",
+          "file": "my-fuel.spec.ts",
+          "line": 8,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "refuel-guide.spec.ts",
+      "file": "refuel-guide.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "the map opens a five-step refuelling guide and Escape restores its trigger",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone Safari WebKit simulation",
+              "projectName": "iPhone Safari WebKit simulation",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 312,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:02.933Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6d9ed3ff7d8b77759ce7-b2fa87b7ff692d9ec576",
+          "file": "refuel-guide.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "en 320px: guide labels, safety, source links and accessible return to the same map",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone Safari WebKit simulation",
+              "projectName": "iPhone Safari WebKit simulation",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 5387,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: 'Refuelling guide', exact: true }).getByRole('link', { name: 'FDMA safety advice ↗' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('dialog', { name: 'Refuelling guide', exact: true }).getByRole('link', { name: 'FDMA safety advice ↗' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'Refuelling guide', exact: true }).getByRole('link', { name: 'FDMA safety advice ↗' })\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.fdma.go.jp/laws/tutatsu/post1258/\">FDMA safety advice ↗</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: 'Refuelling guide', exact: true }).getByRole('link', { name: 'FDMA safety advice ↗' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('dialog', { name: 'Refuelling guide', exact: true }).getByRole('link', { name: 'FDMA safety advice ↗' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'Refuelling guide', exact: true }).getByRole('link', { name: 'FDMA safety advice ↗' })\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.fdma.go.jp/laws/tutatsu/post1258/\">FDMA safety advice ↗</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:57:74",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts",
+                      "column": 74,
+                      "line": 57
+                    },
+                    "snippet": "  55 |       await close.focus();\n  56 |       await page.keyboard.press(\"Tab\");\n> 57 |       await expect(dialog.getByRole(\"link\", { name: t.rgSourceSafety })).toBeFocused();\n     |                                                                          ^\n  58 |       await complete.focus();\n  59 |       await page.keyboard.press(\"Tab\");\n  60 |       expect(await page.evaluate(() => document.activeElement === document.body || !!document.activeElement?.closest(\"dialog\"))).toBe(true);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts",
+                        "column": 74,
+                        "line": 57
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: 'Refuelling guide', exact: true }).getByRole('link', { name: 'FDMA safety advice ↗' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('dialog', { name: 'Refuelling guide', exact: true }).getByRole('link', { name: 'FDMA safety advice ↗' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'Refuelling guide', exact: true }).getByRole('link', { name: 'FDMA safety advice ↗' })\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.fdma.go.jp/laws/tutatsu/post1258/\">FDMA safety advice ↗</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n\n  55 |       await close.focus();\n  56 |       await page.keyboard.press(\"Tab\");\n> 57 |       await expect(dialog.getByRole(\"link\", { name: t.rgSourceSafety })).toBeFocused();\n     |                                                                          ^\n  58 |       await complete.focus();\n  59 |       await page.keyboard.press(\"Tab\");\n  60 |       expect(await page.evaluate(() => document.activeElement === document.body || !!document.activeElement?.closest(\"dialog\"))).toBe(true);\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:57:74"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:03.248Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-en-320px-guid-27606-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-en-320px-guid-27606-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts",
+                    "column": 74,
+                    "line": 57
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6d9ed3ff7d8b77759ce7-07660b75ecfbc672468e",
+          "file": "refuel-guide.spec.ts",
+          "line": 20,
+          "column": 5
+        },
+        {
+          "title": "en 1280px: guide labels, safety, source links and accessible return to the same map",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone Safari WebKit simulation",
+              "projectName": "iPhone Safari WebKit simulation",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5494,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: 'Refuelling guide', exact: true }).getByRole('link', { name: 'FDMA safety advice ↗' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('dialog', { name: 'Refuelling guide', exact: true }).getByRole('link', { name: 'FDMA safety advice ↗' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'Refuelling guide', exact: true }).getByRole('link', { name: 'FDMA safety advice ↗' })\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.fdma.go.jp/laws/tutatsu/post1258/\">FDMA safety advice ↗</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: 'Refuelling guide', exact: true }).getByRole('link', { name: 'FDMA safety advice ↗' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('dialog', { name: 'Refuelling guide', exact: true }).getByRole('link', { name: 'FDMA safety advice ↗' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'Refuelling guide', exact: true }).getByRole('link', { name: 'FDMA safety advice ↗' })\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.fdma.go.jp/laws/tutatsu/post1258/\">FDMA safety advice ↗</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:57:74",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts",
+                      "column": 74,
+                      "line": 57
+                    },
+                    "snippet": "  55 |       await close.focus();\n  56 |       await page.keyboard.press(\"Tab\");\n> 57 |       await expect(dialog.getByRole(\"link\", { name: t.rgSourceSafety })).toBeFocused();\n     |                                                                          ^\n  58 |       await complete.focus();\n  59 |       await page.keyboard.press(\"Tab\");\n  60 |       expect(await page.evaluate(() => document.activeElement === document.body || !!document.activeElement?.closest(\"dialog\"))).toBe(true);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts",
+                        "column": 74,
+                        "line": 57
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: 'Refuelling guide', exact: true }).getByRole('link', { name: 'FDMA safety advice ↗' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('dialog', { name: 'Refuelling guide', exact: true }).getByRole('link', { name: 'FDMA safety advice ↗' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'Refuelling guide', exact: true }).getByRole('link', { name: 'FDMA safety advice ↗' })\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.fdma.go.jp/laws/tutatsu/post1258/\">FDMA safety advice ↗</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n\n  55 |       await close.focus();\n  56 |       await page.keyboard.press(\"Tab\");\n> 57 |       await expect(dialog.getByRole(\"link\", { name: t.rgSourceSafety })).toBeFocused();\n     |                                                                          ^\n  58 |       await complete.focus();\n  59 |       await page.keyboard.press(\"Tab\");\n  60 |       expect(await page.evaluate(() => document.activeElement === document.body || !!document.activeElement?.closest(\"dialog\"))).toBe(true);\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:57:74"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:03.535Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-en-1280px-gui-3f43f-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-en-1280px-gui-3f43f-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts",
+                    "column": 74,
+                    "line": 57
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6d9ed3ff7d8b77759ce7-d07499a6bc9f38c32a35",
+          "file": "refuel-guide.spec.ts",
+          "line": 20,
+          "column": 5
+        },
+        {
+          "title": "zh-Hant 320px: guide labels, safety, source links and accessible return to the same map",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone Safari WebKit simulation",
+              "projectName": "iPhone Safari WebKit simulation",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 5520,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.fdma.go.jp/laws/tutatsu/post1258/\">消防庁安全提示 ↗</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.fdma.go.jp/laws/tutatsu/post1258/\">消防庁安全提示 ↗</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:57:74",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts",
+                      "column": 74,
+                      "line": 57
+                    },
+                    "snippet": "  55 |       await close.focus();\n  56 |       await page.keyboard.press(\"Tab\");\n> 57 |       await expect(dialog.getByRole(\"link\", { name: t.rgSourceSafety })).toBeFocused();\n     |                                                                          ^\n  58 |       await complete.focus();\n  59 |       await page.keyboard.press(\"Tab\");\n  60 |       expect(await page.evaluate(() => document.activeElement === document.body || !!document.activeElement?.closest(\"dialog\"))).toBe(true);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts",
+                        "column": 74,
+                        "line": 57
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.fdma.go.jp/laws/tutatsu/post1258/\">消防庁安全提示 ↗</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n\n  55 |       await close.focus();\n  56 |       await page.keyboard.press(\"Tab\");\n> 57 |       await expect(dialog.getByRole(\"link\", { name: t.rgSourceSafety })).toBeFocused();\n     |                                                                          ^\n  58 |       await complete.focus();\n  59 |       await page.keyboard.press(\"Tab\");\n  60 |       expect(await page.evaluate(() => document.activeElement === document.body || !!document.activeElement?.closest(\"dialog\"))).toBe(true);\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:57:74"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:08.844Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-zh-Hant-320px-6e0a9-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-zh-Hant-320px-6e0a9-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts",
+                    "column": 74,
+                    "line": 57
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6d9ed3ff7d8b77759ce7-443a7dd0b1b9168032f8",
+          "file": "refuel-guide.spec.ts",
+          "line": 20,
+          "column": 5
+        },
+        {
+          "title": "zh-Hant 1280px: guide labels, safety, source links and accessible return to the same map",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone Safari WebKit simulation",
+              "projectName": "iPhone Safari WebKit simulation",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5593,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.fdma.go.jp/laws/tutatsu/post1258/\">消防庁安全提示 ↗</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.fdma.go.jp/laws/tutatsu/post1258/\">消防庁安全提示 ↗</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:57:74",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts",
+                      "column": 74,
+                      "line": 57
+                    },
+                    "snippet": "  55 |       await close.focus();\n  56 |       await page.keyboard.press(\"Tab\");\n> 57 |       await expect(dialog.getByRole(\"link\", { name: t.rgSourceSafety })).toBeFocused();\n     |                                                                          ^\n  58 |       await complete.focus();\n  59 |       await page.keyboard.press(\"Tab\");\n  60 |       expect(await page.evaluate(() => document.activeElement === document.body || !!document.activeElement?.closest(\"dialog\"))).toBe(true);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts",
+                        "column": 74,
+                        "line": 57
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.fdma.go.jp/laws/tutatsu/post1258/\">消防庁安全提示 ↗</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n\n  55 |       await close.focus();\n  56 |       await page.keyboard.press(\"Tab\");\n> 57 |       await expect(dialog.getByRole(\"link\", { name: t.rgSourceSafety })).toBeFocused();\n     |                                                                          ^\n  58 |       await complete.focus();\n  59 |       await page.keyboard.press(\"Tab\");\n  60 |       expect(await page.evaluate(() => document.activeElement === document.body || !!document.activeElement?.closest(\"dialog\"))).toBe(true);\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:57:74"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:09.259Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-zh-Hant-1280p-764d5-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-zh-Hant-1280p-764d5-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts",
+                    "column": 74,
+                    "line": 57
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6d9ed3ff7d8b77759ce7-ead2065f8d4abe0c456b",
+          "file": "refuel-guide.spec.ts",
+          "line": 20,
+          "column": 5
+        },
+        {
+          "title": "ko 320px: guide labels, safety, source links and accessible return to the same map",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone Safari WebKit simulation",
+              "projectName": "iPhone Safari WebKit simulation",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 5516,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: '주유 안내', exact: true }).getByRole('link', { name: '일본 소방청 안전 안내 ↗' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('dialog', { name: '주유 안내', exact: true }).getByRole('link', { name: '일본 소방청 안전 안내 ↗' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: '주유 안내', exact: true }).getByRole('link', { name: '일본 소방청 안전 안내 ↗' })\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.fdma.go.jp/laws/tutatsu/post1258/\">일본 소방청 안전 안내 ↗</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: '주유 안내', exact: true }).getByRole('link', { name: '일본 소방청 안전 안내 ↗' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('dialog', { name: '주유 안내', exact: true }).getByRole('link', { name: '일본 소방청 안전 안내 ↗' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: '주유 안내', exact: true }).getByRole('link', { name: '일본 소방청 안전 안내 ↗' })\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.fdma.go.jp/laws/tutatsu/post1258/\">일본 소방청 안전 안내 ↗</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:57:74",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts",
+                      "column": 74,
+                      "line": 57
+                    },
+                    "snippet": "  55 |       await close.focus();\n  56 |       await page.keyboard.press(\"Tab\");\n> 57 |       await expect(dialog.getByRole(\"link\", { name: t.rgSourceSafety })).toBeFocused();\n     |                                                                          ^\n  58 |       await complete.focus();\n  59 |       await page.keyboard.press(\"Tab\");\n  60 |       expect(await page.evaluate(() => document.activeElement === document.body || !!document.activeElement?.closest(\"dialog\"))).toBe(true);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts",
+                        "column": 74,
+                        "line": 57
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: '주유 안내', exact: true }).getByRole('link', { name: '일본 소방청 안전 안내 ↗' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('dialog', { name: '주유 안내', exact: true }).getByRole('link', { name: '일본 소방청 안전 안내 ↗' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: '주유 안내', exact: true }).getByRole('link', { name: '일본 소방청 안전 안내 ↗' })\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.fdma.go.jp/laws/tutatsu/post1258/\">일본 소방청 안전 안내 ↗</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n\n  55 |       await close.focus();\n  56 |       await page.keyboard.press(\"Tab\");\n> 57 |       await expect(dialog.getByRole(\"link\", { name: t.rgSourceSafety })).toBeFocused();\n     |                                                                          ^\n  58 |       await complete.focus();\n  59 |       await page.keyboard.press(\"Tab\");\n  60 |       expect(await page.evaluate(() => document.activeElement === document.body || !!document.activeElement?.closest(\"dialog\"))).toBe(true);\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:57:74"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:14.756Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-ko-320px-guid-1a848-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-ko-320px-guid-1a848-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts",
+                    "column": 74,
+                    "line": 57
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6d9ed3ff7d8b77759ce7-1c17a15b06b11bc55abe",
+          "file": "refuel-guide.spec.ts",
+          "line": 20,
+          "column": 5
+        },
+        {
+          "title": "ko 1280px: guide labels, safety, source links and accessible return to the same map",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone Safari WebKit simulation",
+              "projectName": "iPhone Safari WebKit simulation",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5617,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: '주유 안내', exact: true }).getByRole('link', { name: '일본 소방청 안전 안내 ↗' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('dialog', { name: '주유 안내', exact: true }).getByRole('link', { name: '일본 소방청 안전 안내 ↗' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: '주유 안내', exact: true }).getByRole('link', { name: '일본 소방청 안전 안내 ↗' })\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.fdma.go.jp/laws/tutatsu/post1258/\">일본 소방청 안전 안내 ↗</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: '주유 안내', exact: true }).getByRole('link', { name: '일본 소방청 안전 안내 ↗' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('dialog', { name: '주유 안내', exact: true }).getByRole('link', { name: '일본 소방청 안전 안내 ↗' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: '주유 안내', exact: true }).getByRole('link', { name: '일본 소방청 안전 안내 ↗' })\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.fdma.go.jp/laws/tutatsu/post1258/\">일본 소방청 안전 안내 ↗</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:57:74",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts",
+                      "column": 74,
+                      "line": 57
+                    },
+                    "snippet": "  55 |       await close.focus();\n  56 |       await page.keyboard.press(\"Tab\");\n> 57 |       await expect(dialog.getByRole(\"link\", { name: t.rgSourceSafety })).toBeFocused();\n     |                                                                          ^\n  58 |       await complete.focus();\n  59 |       await page.keyboard.press(\"Tab\");\n  60 |       expect(await page.evaluate(() => document.activeElement === document.body || !!document.activeElement?.closest(\"dialog\"))).toBe(true);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts",
+                        "column": 74,
+                        "line": 57
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: '주유 안내', exact: true }).getByRole('link', { name: '일본 소방청 안전 안내 ↗' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('dialog', { name: '주유 안내', exact: true }).getByRole('link', { name: '일본 소방청 안전 안내 ↗' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: '주유 안내', exact: true }).getByRole('link', { name: '일본 소방청 안전 안내 ↗' })\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.fdma.go.jp/laws/tutatsu/post1258/\">일본 소방청 안전 안내 ↗</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n\n  55 |       await close.focus();\n  56 |       await page.keyboard.press(\"Tab\");\n> 57 |       await expect(dialog.getByRole(\"link\", { name: t.rgSourceSafety })).toBeFocused();\n     |                                                                          ^\n  58 |       await complete.focus();\n  59 |       await page.keyboard.press(\"Tab\");\n  60 |       expect(await page.evaluate(() => document.activeElement === document.body || !!document.activeElement?.closest(\"dialog\"))).toBe(true);\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:57:74"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:15.259Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-ko-1280px-gui-b0eca-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-ko-1280px-gui-b0eca-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts",
+                    "column": 74,
+                    "line": 57
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6d9ed3ff7d8b77759ce7-215e057a92b40d0027a0",
+          "file": "refuel-guide.spec.ts",
+          "line": 20,
+          "column": 5
+        },
+        {
+          "title": "zh-Hans 320px: guide labels, safety, source links and accessible return to the same map",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone Safari WebKit simulation",
+              "projectName": "iPhone Safari WebKit simulation",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 5517,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.fdma.go.jp/laws/tutatsu/post1258/\">消防庁安全提示 ↗</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.fdma.go.jp/laws/tutatsu/post1258/\">消防庁安全提示 ↗</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:57:74",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts",
+                      "column": 74,
+                      "line": 57
+                    },
+                    "snippet": "  55 |       await close.focus();\n  56 |       await page.keyboard.press(\"Tab\");\n> 57 |       await expect(dialog.getByRole(\"link\", { name: t.rgSourceSafety })).toBeFocused();\n     |                                                                          ^\n  58 |       await complete.focus();\n  59 |       await page.keyboard.press(\"Tab\");\n  60 |       expect(await page.evaluate(() => document.activeElement === document.body || !!document.activeElement?.closest(\"dialog\"))).toBe(true);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts",
+                        "column": 74,
+                        "line": 57
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.fdma.go.jp/laws/tutatsu/post1258/\">消防庁安全提示 ↗</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n\n  55 |       await close.focus();\n  56 |       await page.keyboard.press(\"Tab\");\n> 57 |       await expect(dialog.getByRole(\"link\", { name: t.rgSourceSafety })).toBeFocused();\n     |                                                                          ^\n  58 |       await complete.focus();\n  59 |       await page.keyboard.press(\"Tab\");\n  60 |       expect(await page.evaluate(() => document.activeElement === document.body || !!document.activeElement?.closest(\"dialog\"))).toBe(true);\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:57:74"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:20.660Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-zh-Hans-320px-db88d-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-zh-Hans-320px-db88d-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts",
+                    "column": 74,
+                    "line": 57
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6d9ed3ff7d8b77759ce7-5c3112e906a1f7cb5aaf",
+          "file": "refuel-guide.spec.ts",
+          "line": 20,
+          "column": 5
+        },
+        {
+          "title": "zh-Hans 1280px: guide labels, safety, source links and accessible return to the same map",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone Safari WebKit simulation",
+              "projectName": "iPhone Safari WebKit simulation",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5591,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.fdma.go.jp/laws/tutatsu/post1258/\">消防庁安全提示 ↗</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.fdma.go.jp/laws/tutatsu/post1258/\">消防庁安全提示 ↗</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:57:74",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts",
+                      "column": 74,
+                      "line": 57
+                    },
+                    "snippet": "  55 |       await close.focus();\n  56 |       await page.keyboard.press(\"Tab\");\n> 57 |       await expect(dialog.getByRole(\"link\", { name: t.rgSourceSafety })).toBeFocused();\n     |                                                                          ^\n  58 |       await complete.focus();\n  59 |       await page.keyboard.press(\"Tab\");\n  60 |       expect(await page.evaluate(() => document.activeElement === document.body || !!document.activeElement?.closest(\"dialog\"))).toBe(true);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts",
+                        "column": 74,
+                        "line": 57
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: '加油指引', exact: true }).getByRole('link', { name: '消防庁安全提示 ↗' })\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.fdma.go.jp/laws/tutatsu/post1258/\">消防庁安全提示 ↗</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n\n  55 |       await close.focus();\n  56 |       await page.keyboard.press(\"Tab\");\n> 57 |       await expect(dialog.getByRole(\"link\", { name: t.rgSourceSafety })).toBeFocused();\n     |                                                                          ^\n  58 |       await complete.focus();\n  59 |       await page.keyboard.press(\"Tab\");\n  60 |       expect(await page.evaluate(() => document.activeElement === document.body || !!document.activeElement?.closest(\"dialog\"))).toBe(true);\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:57:74"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:21.279Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-zh-Hans-1280p-c557f-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-zh-Hans-1280p-c557f-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts",
+                    "column": 74,
+                    "line": 57
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6d9ed3ff7d8b77759ce7-54b6a9a11aebf69e26d2",
+          "file": "refuel-guide.spec.ts",
+          "line": 20,
+          "column": 5
+        },
+        {
+          "title": "th 320px: guide labels, safety, source links and accessible return to the same map",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone Safari WebKit simulation",
+              "projectName": "iPhone Safari WebKit simulation",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 5549,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: 'วิธีเติมน้ำมัน', exact: true }).getByRole('link', { name: 'คำแนะนำความปลอดภัยจาก FDMA ↗' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('dialog', { name: 'วิธีเติมน้ำมัน', exact: true }).getByRole('link', { name: 'คำแนะนำความปลอดภัยจาก FDMA ↗' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'วิธีเติมน้ำมัน', exact: true }).getByRole('link', { name: 'คำแนะนำความปลอดภัยจาก FDMA ↗' })\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.fdma.go.jp/laws/tutatsu/post1258/\">คำแนะนำความปลอดภัยจาก FDMA ↗</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: 'วิธีเติมน้ำมัน', exact: true }).getByRole('link', { name: 'คำแนะนำความปลอดภัยจาก FDMA ↗' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('dialog', { name: 'วิธีเติมน้ำมัน', exact: true }).getByRole('link', { name: 'คำแนะนำความปลอดภัยจาก FDMA ↗' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'วิธีเติมน้ำมัน', exact: true }).getByRole('link', { name: 'คำแนะนำความปลอดภัยจาก FDMA ↗' })\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.fdma.go.jp/laws/tutatsu/post1258/\">คำแนะนำความปลอดภัยจาก FDMA ↗</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:57:74",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts",
+                      "column": 74,
+                      "line": 57
+                    },
+                    "snippet": "  55 |       await close.focus();\n  56 |       await page.keyboard.press(\"Tab\");\n> 57 |       await expect(dialog.getByRole(\"link\", { name: t.rgSourceSafety })).toBeFocused();\n     |                                                                          ^\n  58 |       await complete.focus();\n  59 |       await page.keyboard.press(\"Tab\");\n  60 |       expect(await page.evaluate(() => document.activeElement === document.body || !!document.activeElement?.closest(\"dialog\"))).toBe(true);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts",
+                        "column": 74,
+                        "line": 57
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: 'วิธีเติมน้ำมัน', exact: true }).getByRole('link', { name: 'คำแนะนำความปลอดภัยจาก FDMA ↗' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('dialog', { name: 'วิธีเติมน้ำมัน', exact: true }).getByRole('link', { name: 'คำแนะนำความปลอดภัยจาก FDMA ↗' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'วิธีเติมน้ำมัน', exact: true }).getByRole('link', { name: 'คำแนะนำความปลอดภัยจาก FDMA ↗' })\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.fdma.go.jp/laws/tutatsu/post1258/\">คำแนะนำความปลอดภัยจาก FDMA ↗</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n\n  55 |       await close.focus();\n  56 |       await page.keyboard.press(\"Tab\");\n> 57 |       await expect(dialog.getByRole(\"link\", { name: t.rgSourceSafety })).toBeFocused();\n     |                                                                          ^\n  58 |       await complete.focus();\n  59 |       await page.keyboard.press(\"Tab\");\n  60 |       expect(await page.evaluate(() => document.activeElement === document.body || !!document.activeElement?.closest(\"dialog\"))).toBe(true);\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:57:74"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:26.573Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-th-320px-guid-b85f1-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-th-320px-guid-b85f1-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts",
+                    "column": 74,
+                    "line": 57
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6d9ed3ff7d8b77759ce7-264045a9f23851f1902c",
+          "file": "refuel-guide.spec.ts",
+          "line": 20,
+          "column": 5
+        },
+        {
+          "title": "th 1280px: guide labels, safety, source links and accessible return to the same map",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone Safari WebKit simulation",
+              "projectName": "iPhone Safari WebKit simulation",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5623,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: 'วิธีเติมน้ำมัน', exact: true }).getByRole('link', { name: 'คำแนะนำความปลอดภัยจาก FDMA ↗' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('dialog', { name: 'วิธีเติมน้ำมัน', exact: true }).getByRole('link', { name: 'คำแนะนำความปลอดภัยจาก FDMA ↗' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'วิธีเติมน้ำมัน', exact: true }).getByRole('link', { name: 'คำแนะนำความปลอดภัยจาก FDMA ↗' })\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.fdma.go.jp/laws/tutatsu/post1258/\">คำแนะนำความปลอดภัยจาก FDMA ↗</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: 'วิธีเติมน้ำมัน', exact: true }).getByRole('link', { name: 'คำแนะนำความปลอดภัยจาก FDMA ↗' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('dialog', { name: 'วิธีเติมน้ำมัน', exact: true }).getByRole('link', { name: 'คำแนะนำความปลอดภัยจาก FDMA ↗' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'วิธีเติมน้ำมัน', exact: true }).getByRole('link', { name: 'คำแนะนำความปลอดภัยจาก FDMA ↗' })\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.fdma.go.jp/laws/tutatsu/post1258/\">คำแนะนำความปลอดภัยจาก FDMA ↗</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:57:74",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts",
+                      "column": 74,
+                      "line": 57
+                    },
+                    "snippet": "  55 |       await close.focus();\n  56 |       await page.keyboard.press(\"Tab\");\n> 57 |       await expect(dialog.getByRole(\"link\", { name: t.rgSourceSafety })).toBeFocused();\n     |                                                                          ^\n  58 |       await complete.focus();\n  59 |       await page.keyboard.press(\"Tab\");\n  60 |       expect(await page.evaluate(() => document.activeElement === document.body || !!document.activeElement?.closest(\"dialog\"))).toBe(true);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts",
+                        "column": 74,
+                        "line": 57
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('dialog', { name: 'วิธีเติมน้ำมัน', exact: true }).getByRole('link', { name: 'คำแนะนำความปลอดภัยจาก FDMA ↗' })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('dialog', { name: 'วิธีเติมน้ำมัน', exact: true }).getByRole('link', { name: 'คำแนะนำความปลอดภัยจาก FDMA ↗' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'วิธีเติมน้ำมัน', exact: true }).getByRole('link', { name: 'คำแนะนำความปลอดภัยจาก FDMA ↗' })\u001b[22m\n\u001b[2m    14 × locator resolved to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.fdma.go.jp/laws/tutatsu/post1258/\">คำแนะนำความปลอดภัยจาก FDMA ↗</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n\n  55 |       await close.focus();\n  56 |       await page.keyboard.press(\"Tab\");\n> 57 |       await expect(dialog.getByRole(\"link\", { name: t.rgSourceSafety })).toBeFocused();\n     |                                                                          ^\n  58 |       await complete.focus();\n  59 |       await page.keyboard.press(\"Tab\");\n  60 |       expect(await page.evaluate(() => document.activeElement === document.body || !!document.activeElement?.closest(\"dialog\"))).toBe(true);\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:57:74"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:27.262Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-th-1280px-gui-69779-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-th-1280px-gui-69779-ible-return-to-the-same-map-iPhone-Safari-WebKit-simulation/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts",
+                    "column": 74,
+                    "line": 57
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6d9ed3ff7d8b77759ce7-ed7a054b1f69131a323a",
+          "file": "refuel-guide.spec.ts",
+          "line": 20,
+          "column": 5
+        },
+        {
+          "title": "guide shows manual and multiple display preferences without changing them or the list",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone Safari WebKit simulation",
+              "projectName": "iPhone Safari WebKit simulation",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 776,
+                  "error": {
+                    "message": "Error: locator.check: Clicking the checkbox did not change its state\nCall log:\n\u001b[2m  - waiting for locator('#display-fuel').locator('input[value=\"REGULAR\"]')\u001b[22m\n\u001b[2m    - locator resolved to <input checked type=\"checkbox\" value=\"REGULAR\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\u001b[2m    - click action done\u001b[22m\n\u001b[2m    - waiting for scheduled navigations to finish\u001b[22m\n\u001b[2m    - navigations have finished\u001b[22m\n",
+                    "stack": "Error: locator.check: Clicking the checkbox did not change its state\nCall log:\n\u001b[2m  - waiting for locator('#display-fuel').locator('input[value=\"REGULAR\"]')\u001b[22m\n\u001b[2m    - locator resolved to <input checked type=\"checkbox\" value=\"REGULAR\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\u001b[2m    - click action done\u001b[22m\n\u001b[2m    - waiting for scheduled navigations to finish\u001b[22m\n\u001b[2m    - navigations have finished\u001b[22m\n\n    at chooseFuels (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-selection.ts:7:79)\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:88:3",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-selection.ts",
+                      "column": 79,
+                      "line": 7
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mfuel-selection.ts:7\n\n   5 |   const selection = page.locator(\"#display-fuel\");\n   6 |   if (await selection.getAttribute(\"open\") === null) await selection.locator(\"summary\").click();\n>  7 |   for (const fuel of fuels) await selection.locator(`input[value=\"${fuel}\"]`).check();\n     |                                                                               ^\n   8 |   for (const fuel of [\"REGULAR\", \"HIGH_OCTANE\", \"DIESEL\"]) {\n   9 |     if (!fuels.includes(fuel as FuelType)) await selection.locator(`input[value=\"${fuel}\"]`).uncheck();\n  10 |   }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-selection.ts",
+                        "column": 79,
+                        "line": 7
+                      },
+                      "message": "Error: locator.check: Clicking the checkbox did not change its state\nCall log:\n\u001b[2m  - waiting for locator('#display-fuel').locator('input[value=\"REGULAR\"]')\u001b[22m\n\u001b[2m    - locator resolved to <input checked type=\"checkbox\" value=\"REGULAR\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\u001b[2m    - click action done\u001b[22m\n\u001b[2m    - waiting for scheduled navigations to finish\u001b[22m\n\u001b[2m    - navigations have finished\u001b[22m\n\n\n   at fuel-selection.ts:7\n\n   5 |   const selection = page.locator(\"#display-fuel\");\n   6 |   if (await selection.getAttribute(\"open\") === null) await selection.locator(\"summary\").click();\n>  7 |   for (const fuel of fuels) await selection.locator(`input[value=\"${fuel}\"]`).check();\n     |                                                                               ^\n   8 |   for (const fuel of [\"REGULAR\", \"HIGH_OCTANE\", \"DIESEL\"]) {\n   9 |     if (!fuels.includes(fuel as FuelType)) await selection.locator(`input[value=\"${fuel}\"]`).uncheck();\n  10 |   }\n    at chooseFuels (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-selection.ts:7:79)\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/refuel-guide.spec.ts:88:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:32.498Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-guide-shows-m-041c4-t-changing-them-or-the-list-iPhone-Safari-WebKit-simulation/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/fmj-finish-20260930/guide-mobile-test-results/refuel-guide-guide-shows-m-041c4-t-changing-them-or-the-list-iPhone-Safari-WebKit-simulation/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-selection.ts",
+                    "column": 79,
+                    "line": 7
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6d9ed3ff7d8b77759ce7-16c31ac0656b2aba8ad5",
+          "file": "refuel-guide.spec.ts",
+          "line": 72,
+          "column": 1
+        },
+        {
+          "title": "the map opens a five-step refuelling guide and Escape restores its trigger",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Android Chrome Chromium simulation",
+              "projectName": "Android Chrome Chromium simulation",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 306,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:37.947Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6d9ed3ff7d8b77759ce7-a3d8afec0e3b13161bed",
+          "file": "refuel-guide.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "en 320px: guide labels, safety, source links and accessible return to the same map",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Android Chrome Chromium simulation",
+              "projectName": "Android Chrome Chromium simulation",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 391,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:38.257Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6d9ed3ff7d8b77759ce7-3171ad3d4743fe7afe04",
+          "file": "refuel-guide.spec.ts",
+          "line": 20,
+          "column": 5
+        },
+        {
+          "title": "en 1280px: guide labels, safety, source links and accessible return to the same map",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Android Chrome Chromium simulation",
+              "projectName": "Android Chrome Chromium simulation",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 487,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:38.475Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6d9ed3ff7d8b77759ce7-b4af3659c0b03d85fe2a",
+          "file": "refuel-guide.spec.ts",
+          "line": 20,
+          "column": 5
+        },
+        {
+          "title": "zh-Hant 320px: guide labels, safety, source links and accessible return to the same map",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Android Chrome Chromium simulation",
+              "projectName": "Android Chrome Chromium simulation",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 384,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:38.652Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6d9ed3ff7d8b77759ce7-3e2f5f8bac88dcad7f66",
+          "file": "refuel-guide.spec.ts",
+          "line": 20,
+          "column": 5
+        },
+        {
+          "title": "zh-Hant 1280px: guide labels, safety, source links and accessible return to the same map",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Android Chrome Chromium simulation",
+              "projectName": "Android Chrome Chromium simulation",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 479,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:38.965Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6d9ed3ff7d8b77759ce7-037dc2cb64eafda30c83",
+          "file": "refuel-guide.spec.ts",
+          "line": 20,
+          "column": 5
+        },
+        {
+          "title": "ko 320px: guide labels, safety, source links and accessible return to the same map",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Android Chrome Chromium simulation",
+              "projectName": "Android Chrome Chromium simulation",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 380,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:39.041Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6d9ed3ff7d8b77759ce7-8987f03f7c1e1a625dfa",
+          "file": "refuel-guide.spec.ts",
+          "line": 20,
+          "column": 5
+        },
+        {
+          "title": "ko 1280px: guide labels, safety, source links and accessible return to the same map",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Android Chrome Chromium simulation",
+              "projectName": "Android Chrome Chromium simulation",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 442,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:39.424Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6d9ed3ff7d8b77759ce7-5da92ff202e9ccf1fc94",
+          "file": "refuel-guide.spec.ts",
+          "line": 20,
+          "column": 5
+        },
+        {
+          "title": "zh-Hans 320px: guide labels, safety, source links and accessible return to the same map",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Android Chrome Chromium simulation",
+              "projectName": "Android Chrome Chromium simulation",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 377,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:39.449Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6d9ed3ff7d8b77759ce7-d720152ec57579ffc591",
+          "file": "refuel-guide.spec.ts",
+          "line": 20,
+          "column": 5
+        },
+        {
+          "title": "zh-Hans 1280px: guide labels, safety, source links and accessible return to the same map",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Android Chrome Chromium simulation",
+              "projectName": "Android Chrome Chromium simulation",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 460,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:39.830Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6d9ed3ff7d8b77759ce7-75e98992e52903ad6774",
+          "file": "refuel-guide.spec.ts",
+          "line": 20,
+          "column": 5
+        },
+        {
+          "title": "th 320px: guide labels, safety, source links and accessible return to the same map",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Android Chrome Chromium simulation",
+              "projectName": "Android Chrome Chromium simulation",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 397,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:39.871Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6d9ed3ff7d8b77759ce7-4488901a9a2975d3f8c0",
+          "file": "refuel-guide.spec.ts",
+          "line": 20,
+          "column": 5
+        },
+        {
+          "title": "th 1280px: guide labels, safety, source links and accessible return to the same map",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Android Chrome Chromium simulation",
+              "projectName": "Android Chrome Chromium simulation",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 468,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:40.272Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6d9ed3ff7d8b77759ce7-b062ddaa8309127043a0",
+          "file": "refuel-guide.spec.ts",
+          "line": 20,
+          "column": 5
+        },
+        {
+          "title": "guide shows manual and multiple display preferences without changing them or the list",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Android Chrome Chromium simulation",
+              "projectName": "Android Chrome Chromium simulation",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 538,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T19:24:40.294Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6d9ed3ff7d8b77759ce7-85228ed8d78d2433918f",
+          "file": "refuel-guide.spec.ts",
+          "line": 72,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-30T19:23:52.172Z",
+    "duration": 48699.88,
+    "expected": 46,
+    "skipped": 0,
+    "unexpected": 12,
+    "flaky": 0
+  }
+}

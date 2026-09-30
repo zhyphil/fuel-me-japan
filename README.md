@@ -1,74 +1,68 @@
 # Fuel Me Japan
 
-Find fuel stations across Japan, in your language.
+面向赴日自驾游客的多语言加油站地图。正式网站：[fuel-me-japan.com](https://fuel-me-japan.com/zh-Hans/)。
 
-**M0.1 地图增强已发布。** 首页保留地图模式，包含列表排序与收藏、总地图及逐站小地图、悬停联动、油种多选和文字点击崩溃修复。用户已授权发布，并继续 M0.2「我的车辆用油」。
+本轮已完成手动选油收尾、加油指引和还车前加油；正在统一验收与发布。最新任务状态见 [TASKS.md](TASKS.md)，原始 00–10 规格保持不变。车型识别和厂家资料咨询已暂缓。
 
-正式网站：https://fuel-me-japan.com/ 。本次发布记录见[中文发布报告](reports/M0.1-enhancements-release.md)。历史发布和基础配置保留在 `reports/M0.1-release.md` 与 `reports/M0.0-domain-configuration.md`。
+## 当前功能
 
-最终完整检查通过 lint、typecheck、180 项单元测试、构建和 152 项浏览器测试；发布前源码与证据快照一致，生产 HTTP 与实际页面交互已核验。详见[中文修复报告](reports/M0.1-fuel-label-fix.md)。gogo.gs 咨询已由用户发送，仍待答复，站点即时报价尚未接入。
+- 地图与列表、品牌水滴、显式定位、已有数据支持的筛选、最便宜／最近／收藏、逐站小地图、悬停联动和油种多选。
+- “我的用油”只提供普通汽油／高辛烷值汽油／柴油的手动下拉选择，在当前浏览器保存并联动地图；地图多选时不擅自猜测单一偏好。无法使用本地存储时，当前页面仍可操作。
+- “加油指引”提供五个短步骤、七个日文识别标签和安全提示。手动选择只是显示设置，不代表核验车辆用油；实际以租车文件和油箱盖为准。
+- “还车加油”目前只收录 Times 那霸、新千岁和福冈机场国际线三家门店，显示门店 10 公里内最多 10 个加油候选。选站后先导航至站点，明确点击“已完成加油”后再显示返店导航。本次油种选择不会修改地图偏好。
 
-## M0.2 当前状态
+界面提供 en、zh-Hant、ko、zh-Hans、th 五种语言，保留日文油种及现场标签。
 
-“我的用油”入口、手动油种下拉菜单、地图联动和本地偏好保存已发布到正式网站，代码提交 `511cf9c`，Cloudflare 部署 `232c2e4c`。已通过 lint、typecheck、247 项单元测试、构建及 179 项浏览器测试；正式域名 19 项资源比对与实际油种选择、刷新保存通过。详见[中文发布报告](reports/M0.2-release.md)。
+## 本地运行与检查
 
-真实车型映射仍为空，五语言安全文案的独立审核仍待完成；手动显示偏好不代表车型用油已核验，完整 M0.2 数据验收仍未完成。初始[本地阶段报告](reports/M0.2-completion.md)、[手动设置报告](reports/M0.2-manual-fuel.md)和[来源核查](reports/M0.2-source-review.md)保留历史记录。
-
-## Local setup
-
-Use Node 24 (`.nvmrc`) and existing npm dependencies. On a fresh development machine:
+使用 `.nvmrc` 指定的 Node 24 和锁定依赖：
 
 ```sh
 npm ci
 npx playwright install chromium
 npm run dev
-```
-
-```sh
 npm run check
 ```
 
-`check` runs lint, TypeScript, unit tests, static build/prerender, then Chromium browser tests against a local preview server. No environment variables are required. Browser tests use mocked geolocation, shipped data and intercepted external navigation/basemap tiles (synthetic PNG); they never request the developer's actual position. Find Fuel screenshots are written to `test-results/find-fuel-*.png` when browser execution succeeds.
+`check` 依次运行 lint、TypeScript、单元测试、静态构建和 Chromium 浏览器测试。测试使用拦截的外部导航、模拟定位及合成底图；不会读取开发者真实位置。额外的 WebKit／Android 模拟和 macOS Safari 实测应按报告的实际范围理解，不等同于实体手机测试。
 
-For the previously published map version, the standard check passed locally with Node 24.18.0: lint, TypeScript, 138 unit tests, build/prerender and 82 Chromium browser tests. The current published enhancement has 180 passing unit tests and 152 passing Chromium browser tests after the fuel-label crash fix; see `reports/M0.1-fuel-label-fix.md` for the final complete check. The separate importer suite has 16 passing tests. See the Chinese `reports/M0.1-map-zoom.md`, `reports/M0.1-filters.md` and `reports/M0.1-completion.md` for evidence and limits. Python importer setup and refresh commands are in `docs/data-pipeline.md`.
+独立数据检查：`npm run test:data`。Python 环境和数据更新命令见 [数据流程说明](docs/data-pipeline.md)。
 
-## Architecture and privacy
+## 架构、来源与隐私
 
-React + TypeScript + Vite; static HTML at `/en/`, `/zh-Hant/`, `/ko/`, `/zh-Hans/`, `/th/`, with an English `/` fallback. No backend, database, accounts, internal navigation engine, payments or live-price scraping.
+React + TypeScript + Vite 静态网站，五语言各有静态目录，根路径为英文后备页。无后台、数据库、账号、支付或站内路线引擎。
 
-- `src/components/FindFuel.tsx`: explicit location action or manual prefecture selection, recorded city/address filtering, station list/detail, official references and destination-only navigation links. General external map search is removed following user review.
-- `src/components/FuelMap.tsx` and `src/lib/map-view.ts`: client-only Leaflet map, regional summaries, viewport clustering, overlap selection and responsive detail focus. Panning does not load another prefecture.
-- `public/runtime-map-provider.json`: separate OSM basemap service record. Tile requests reveal the viewed area and ordinary network information to the provider; no prefetch or offline tile storage. The data registry and POI hashes are unchanged.
-- `src/lib/find-fuel.ts`: search, reference-date and destination-only map helpers. Manual search shows no distance; location search shows straight-line distance within 50 km, never driving distance/time.
-- `src/lib/opening-hours.ts`: conservative display-only localization of recorded OSM hours in five locales, with the complete source retained for unsupported rules. No open-now calculation.
-- `src/lib/stations.ts`: static manifest/artifact validation and regional loading. Manual selection loads one prefecture; nearby selection loads intersecting partitions. There is no runtime Overpass request.
-- `src/locales`: exactly five UI dictionaries. Japanese pump labels remain visible. Vehicle fuel is not inferred from station availability.
-- `src/lib/analytics.ts`: no-op default; the runtime payload allowlist contains only the locale enum. Precise position remains in panel memory and is not persisted or attached to navigation links. Language preference lives in the URL.
-- `public/data/source-registry.json`: OSM, Geofabrik and official METI price data are approved in the current registry; gogo.gs and rental guidance remain pending and disabled.
-- `public/data/manifest.json`: versioned station partitions, a separate official price file, checksums, source timestamps and registry snapshot. Build provenance matches the ingested sources.
-- `public/data/OSM-NOTICE.txt`: station database attribution, ODbL licensing and source provenance. Data downloads and attribution are visible in the UI.
+- 地图复用 Leaflet 实例。选择都道府县加载相应分区；拖图只浏览已加载数据，不自动下载邻省。
+- 显式点击定位才请求权限；精确位置不持久化、不进入分析事件。分析默认 no-op。
+- 导航链接只传送选定目的地，路线和定位权限由用户选择的外部地图处理。没有通用外部地图搜索入口。
+- OSM 标准瓦片独立配置在 `public/runtime-map-provider.json`；瓦片服务会收到浏览区域及普通网络信息。无预取和离线瓦片缓存，保留可见署名。
+- `public/data/manifest.json` 和来源登记记录版本、校验和、采集时间及来源时间。站点信息缺失保持 UNKNOWN；已记录营业时间按界面语言显示，不推断实时营业状态。
+- 官方都道府县价格为注明调查／发布日期的参考价，不能替代单站报价。当前没有站点即时报价；gogo.gs 咨询等待外部答复，不运行抓取。
+- `public/field-guides/refuel-sources.json` 独立记录消防庁资料整理、翻译和 JAF 事实交叉核对范围。
+- `public/data/rental/locations.json` 是三条有限门店记录及出处，不是租车公司整库授权。两个 OSM 参考点遵循 ODbL 并提供署名和下载；规则仅适用于 Times，个人合同优先，资料满 90 天提示重新核对。
+- 构建校验核心数据、指引及门店来源并写入 `dist/build-provenance.json`。其中 `milestone: M0.1` 标识核心站点导入数据阶段，新增模块另有独立版本。
 
-OSM coverage and tags may be incomplete or old; absent facts remain UNKNOWN. Official prices are dated, cash/tax-included prefectural JPY/litre references, not a station price or live quote. Price load failure leaves station navigation available. References older than 14 days receive a warning. No gogo price is fetched or displayed.
+保留 `noindex`，没有启用坐标分析。自动化检查和 AI 来源核对不能作为母语真人安全审查或实体手机验收。
 
-Pages remain `noindex` pending review. Safety-copy review and real-browser acceptance must not be inferred from static checks.
+## 数据维护与部署
 
-## Refresh and deployment boundaries
+既有 GitHub 更新任务只生成待审候选，不推送或部署；任务失败也保留诊断。已完成一次真实 OSM 远端运行，候选与现有 51 个核心文件相同。官方参考价自动获取仍返回 HTTP 403，保留旧数据和真实日期，不能称为更新成功。具体运行记录见 [维护报告](reports/data-maintenance-completion.md)。
 
-The offline importer and `.github/workflows/data-refresh.yml` check weekly OSM and publication-day official prices. The workflow produces a validated candidate artifact with read-only repository permissions; it cannot push or deploy. Its actual scheduled execution has not yet been verified; entering the default branch makes its configured schedule eligible to run. The official HTTP fetch still returns 403 here; browser-acquired original workbook import is supported. See `docs/data-pipeline.md`.
-
-Cloudflare uses prebuilt static Pages assets. The reviewed M0.1 enhancements are published under the latest authorization in `AGENTS.md`. M0.2 work follows separately and does not form part of that reviewed deployment. Future deployments require task authorization and successful checks:
+使用现有 Cloudflare Pages 和项目 Wrangler 配置。部署需要任务授权和检查证据，不由数据工作流自动执行：
 
 ```sh
 npx wrangler login
 npm run deploy
 ```
 
-`deploy` uploads `dist` to the production branch after checks. Keep credentials out of Git. The data workflow never uses Cloudflare credentials or deploys to production.
+凭据、原始 PBF／表格、依赖和构建缓存不进入 Git。
 
-## Scope and evidence
+## 完成报告
 
-Frozen specifications: `Fuel-Me-Japan-M0-Handoff-Package/00–10` (unchanged).
+- [手动选油收尾](reports/M0.2-manual-only-completion.md)
+- [M0.3 加油指引](reports/M0.3-completion.md)
+- [M0.4 还车前加油](reports/M0.4-completion.md)
+- [浏览器和移动布局验收](reports/mobile-browser-acceptance.md)
+- 历史发布：[M0.2 手动设置](reports/M0.2-release.md)、[M0.1 地图增强](reports/M0.1-enhancements-release.md)、[M0.0 域名配置](reports/M0.0-domain-configuration.md)。这些报告保留当时的版本、检查数量和限制。
 
-- Historical foundation evidence: `reports/M0.0-completion.md` and `reports/M0.0-domain-configuration.md`.
-- Current completion report, explicit acceptance limits and check output: `reports/M0.1-completion.md` and `reports/evidence/m01/`.
-- Data-source provenance and importer verification: `reports/M0.1-data.md`.
+M0.4 完成后停止新增功能，交回实际用户使用验证。

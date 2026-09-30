@@ -1,0 +1,136 @@
+{
+  "日期": "2026-09-30",
+  "checkedAt": "2026-09-30T18:41:45Z",
+  "status": "REVIEW_PACKET_READY_DATA_BLOCKED",
+  "说明": "本地审查候选，不是 VehicleMapping 或已批准生产数据；不读取、不导入至 public/data/vehicles。",
+  "productionEnabled": false,
+  "sources": [
+    {
+      "id": "yaris-catalog",
+      "url": "https://toyota.jp/pages/contents/carlineup/archive/yaris/2025-02/pdf/yaris_main_s_202502_202511.pdf",
+      "checkedAt": "2026-09-30T18:41:45Z",
+      "bytes": 2639198,
+      "sha256": "9108ffea6ee8b21c7c8d1755ab84bb782693480be4a70f613c7714fe534c93f1",
+      "说明": "PDF 第 14 页（印刷页 55）的配置、完整车辆型号与使用燃油行；第 15 页（印刷页 56）标明目录内容截至 2025-11。已查看原页，未将搜索摘要作为表格证据。",
+      "原件处理": "临时目录只读核对；不复制进仓库或站点发布目录。"
+    },
+    {
+      "id": "catalog-terms",
+      "url": "https://toyota.jp/request/webcatalog/#conditional",
+      "checkedAt": "2026-09-30T18:41:45Z",
+      "bytes": 82007,
+      "sha256": "e7e1c9e4221fe41251948656184cd0aeb78b56b8fef31a5269a2e75fca162b3e",
+      "说明": "目录页面“ご利用の条件”明确限制未经许可复制、修改或分发目录的全部或部分；未找到对本项目结构化事实再利用的明确许可。",
+      "原件处理": "临时目录只读核对；不复制进仓库或站点发布目录。"
+    },
+    {
+      "id": "manual-index",
+      "url": "https://manual.toyota.jp/yaris/",
+      "checkedAt": "2026-09-30T18:41:45Z",
+      "bytes": 21636,
+      "sha256": "0f2ecb30e7c02cc3ec97a3a432d986fed98148dc21ee0658b44f3e38b784affc",
+      "说明": "目录以生产年月区分汽油与混动手册；2025-02 至 2026-01 是该版本的生产期，不能直接写作车型年款。",
+      "原件处理": "临时目录只读核对；不复制进仓库或站点发布目录。"
+    },
+    {
+      "id": "manual-terms-loader",
+      "url": "https://manual.toyota.jp/pages/contents/ownersmanual/js/om_terms.js",
+      "checkedAt": "2026-09-30T18:41:45Z",
+      "bytes": 6694,
+      "sha256": "144fbeb94ffcad8cbe2f9405f48026dceef874a8f29a03a2d4fb33c368bf4bbe",
+      "说明": "Yaris 手册目录实际引用此脚本；脚本按页面语言加载 common/lang/ja-jp/partial_terms.html，仅按文本检查，未执行下载的脚本。",
+      "原件处理": "临时目录只读核对；不复制进仓库或站点发布目录。"
+    },
+    {
+      "id": "manual-terms",
+      "url": "https://manual.toyota.jp/common/lang/ja-jp/partial_terms.html",
+      "checkedAt": "2026-09-30T18:41:45Z",
+      "bytes": 26341,
+      "sha256": "72f03a7b1b8182ab0a3fdea2fcd0b6ee87878270a9a42b919af08c72e1abf89f",
+      "说明": "手册使用条件同样限制未经许可复制、修改或分发手册全部或部分，并说明网页手册可能与用户车辆年式不符。",
+      "原件处理": "临时目录只读核对；不复制进仓库或站点发布目录。"
+    }
+  ],
+  "候选": [
+    {
+      "id": "yaris-g-15-cvt-2wd-catalog-202511",
+      "market": "JP",
+      "make": "TOYOTA",
+      "model": "YARIS",
+      "完整车辆型号": "5BA-MXPA10-AHXGB",
+      "配置说明": "G，汽油 1.5L，CVT，2WD",
+      "目录记录的油种": "REGULAR",
+      "sourceId": "yaris-catalog",
+      "locator": "印刷页 55：汽油 1.5L CVT 的 G 列，2WD 型号行；使用燃料行跨列标注。",
+      "catalogueAsOf": "2025-11",
+      "modelYearRange": null,
+      "productionPeriodForExactCode": null,
+      "status": "PENDING_REVIEW",
+      "productionEnabled": false
+    },
+    {
+      "id": "yaris-g-hybrid-2wd-catalog-202511",
+      "market": "JP",
+      "make": "TOYOTA",
+      "model": "YARIS",
+      "完整车辆型号": "6AA-MXPH14-AHXGB",
+      "配置说明": "G，混合动力 1.5L，2WD",
+      "目录记录的油种": "REGULAR",
+      "sourceId": "yaris-catalog",
+      "locator": "印刷页 55：混合动力的 G 列，2WD 型号行；使用燃料行跨列标注。",
+      "catalogueAsOf": "2025-11",
+      "modelYearRange": null,
+      "productionPeriodForExactCode": null,
+      "status": "PENDING_REVIEW",
+      "productionEnabled": false
+    }
+  ],
+  "时间语义": {
+    "目录内容基准": "2025-11，仅为该文档快照，不是车型年款或车辆生产范围。",
+    "手册目录生产期": {
+      "from": "2025-02",
+      "through": "2026-01",
+      "basis": "MANUFACTURER_PRODUCTION_MONTH"
+    },
+    "关联状态": "NOT_ESTABLISHED",
+    "说明": "未证明两个完整型号在全部生产期的适用范围，也没有实际租车交付资料验证识别流程；不把目录与手册时间强行拼接。"
+  },
+  "允许使用评估": {
+    "status": "PENDING_REVIEW",
+    "reviewer": null,
+    "reviewDate": null,
+    "approvalEvidenceUrl": null,
+    "拟用方式": "人工核对少量日本市场车辆的型号、配置、适用范围与燃油事实，以自有文字和枚举整理；用于面向赴日自驾游客的商业网站。结构化记录可能随静态 JSON 和公开 GitHub 仓库分发。附来源链接、适用范围及核查日期。",
+    "不包含": "目录图片、品牌图标、表格原图、手册整段说明或 PDF 的复制再分发；不自动批量抓取。",
+    "结论": "官方目录和手册有具体再利用限制，本次没有取得允许上述结构化商用方式的依据。工程状态保持未批准；此结论不是对所有车辆事实版权属性的法律裁定。",
+    "解除所需": "针对上述用途的来源方许可或其他经负责人确认、可追溯的兼容使用依据；明确适用型号、更新与署名要求。"
+  },
+  "识别流程评估": {
+    "status": "PENDING_EXACT_IDENTITY",
+    "referenceUrl": "https://www.toyota.co.jp/grade/dc/top",
+    "说明": "官方等级查询依赖车台号码，页面说明结果仅供参考且可能缺项。此次未输入任何车台号码，也不在本产品新增其查询集成。完整型号应由实际交付文件或租车公司确认；不能假设车检证上的短型号包含配置后缀。",
+    "当前实现": "只支持 modelYearFrom/modelYearTo。证据只提供生产月份时不得填入年款字段；在获准来源与可操作识别方式确定前，不扩展数据格式。"
+  },
+  "验收前置": [
+    {
+      "id": "allowed-use",
+      "status": "PENDING_REVIEW",
+      "说明": "允许使用依据"
+    },
+    {
+      "id": "exact-identity",
+      "status": "PENDING_REVIEW",
+      "说明": "实际用户可辨识的精确车辆及适用范围"
+    },
+    {
+      "id": "safety-copy",
+      "status": "PENDING_REVIEW",
+      "说明": "五语言实际文字的母语人工审核"
+    },
+    {
+      "id": "physical-mobile",
+      "status": "NOT_TESTED",
+      "说明": "真实 iPhone 与 Android 设备验证"
+    }
+  ]
+}

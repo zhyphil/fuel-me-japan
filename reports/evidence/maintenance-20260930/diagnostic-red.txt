@@ -1,0 +1,21 @@
+test_index_denial_emits_blocked_report_and_keeps_both_pointers (test_refresh_sources.RefreshFailureEvidenceTests.test_index_denial_emits_blocked_report_and_keeps_both_pointers) ... usage: python -m unittest [-h] --download-dir DOWNLOAD_DIR [--output OUTPUT]
+                          {osm,prices}
+python -m unittest: error: unrecognized arguments: --report /var/folders/x3/4w18d5zd22b9fgwfx232whhr0000gn/T/tmpvr4t08pn/evidence/refresh.json
+FAIL
+test_changed_layout_stops_instead_of_guessing_filename (test_refresh_sources.SourceDiscoveryTests.test_changed_layout_stops_instead_of_guessing_filename) ... ok
+test_osm_uses_dated_publisher_link_not_latest_alias_or_future_file (test_refresh_sources.SourceDiscoveryTests.test_osm_uses_dated_publisher_link_not_latest_alias_or_future_file) ... ok
+test_prices_reject_foreign_urls_wrong_dataset_and_invalid_dates (test_refresh_sources.SourceDiscoveryTests.test_prices_reject_foreign_urls_wrong_dataset_and_invalid_dates) ... ok
+
+======================================================================
+FAIL: test_index_denial_emits_blocked_report_and_keeps_both_pointers (test_refresh_sources.RefreshFailureEvidenceTests.test_index_denial_emits_blocked_report_and_keeps_both_pointers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/data/test_refresh_sources.py", line 46, in test_index_denial_emits_blocked_report_and_keeps_both_pointers
+    self.assertEqual(result.exception.code, 1)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 1
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.002s
+
+FAILED (failures=1)

@@ -1,0 +1,6 @@
+{
+  "startedAt": "2026-09-30T19:31:38.405971+00:00",
+  "finishedAt": "2026-09-30T19:33:22.141675+00:00",
+  "exitCode": 1,
+  "说明": "Playwright WebKit iPhone 13 与 Chromium Pixel 7 模拟；不是实体手机。以输出内实际用例与结果为准；测试前已有PNG已恢复。"
+}

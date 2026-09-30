@@ -63,3 +63,11 @@ Geolocation selects intersecting occupied geographic cells across prefecture bor
 The complete OSM derivative is available through all `stations.partitions[*].path` entries in `/data/manifest.json`, including UNKNOWN, without registration. `/data/OSM-NOTICE.txt` offers the derivative and its spatial metadata/audit under ODbL 1.0. Preserve the visible attribution and license links when redistributing it. Official price facts are a separately attributed dataset.
 
 Reviewed sources (2026-09-30): [OSM copyright](https://www.openstreetmap.org/copyright), [Geofabrik Japan](https://download.geofabrik.de/asia/japan.html), [OSM fuel service semantics](https://wiki.openstreetmap.org/wiki/Tag:amenity=fuel#Service), [official survey index](https://www.enecho.meti.go.jp/statistics/petroleum_and_lpgas/pl007/results.html), [agency reuse terms](https://www.enecho.meti.go.jp/about/linksto_thissite/), [Public Data License 1.0](https://www.digital.go.jp/resources/open_data/public_data_license_v1.0).
+
+## 2026-09-30 后续核验与诊断
+
+GitHub 真实参考价定时运行 `36761672931` 在官方索引返回 HTTP 403 后失败；本机复核同样为403，manifest及registry的前后哈希一致。不能称为自动参考价更新成功。OSM远端候选任务另行记录实际结果。
+
+更新程序支持 `--report /tmp/fmj-refresh-report.json`，报告失败阶段、准确来源URL、开始结束时间以及前后数据指针SHA-256；报告必须在发布数据目录外。工作流先运行导入器回归，再获取来源；即使来源失败也上传诊断文件，仍只有完整验证成功时才上传候选数据，不自动发布。
+
+最新中文报告和远端运行证据将在 `reports/data-maintenance-completion.md` 汇总。上方旧的“尚未运行”叙述对应初始实现时点，不能视为当前状态。

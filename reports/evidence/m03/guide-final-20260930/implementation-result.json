@@ -1,0 +1,94 @@
+{
+  "task": "M0.3",
+  "status": "IMPLEMENTED_BROWSER_CHECK_BLOCKED",
+  "description": "仅实现加油指引；保留 M0.2 手动选油、地图首页和其他工作者已有改动。未提交、推送、部署或测试线上服务。",
+  "files": [
+    "src/App.tsx",
+    "src/components/RefuelGuide.tsx",
+    "src/styles.css",
+    "src/locales/en.json",
+    "src/locales/zh-Hant.json",
+    "src/locales/ko.json",
+    "src/locales/zh-Hans.json",
+    "src/locales/th.json",
+    "src/lib/field-guide.ts",
+    "public/field-guides/refuel-sources.json",
+    "scripts/prerender.tsx",
+    "tests/e2e/refuel-guide.spec.ts",
+    "tests/unit/field-guide.test.ts",
+    "tests/unit/analytics.test.ts"
+  ],
+  "checks": [
+    {
+      "command": "npm run lint",
+      "status": "PASS",
+      "log": "lint.log"
+    },
+    {
+      "command": "npm run typecheck",
+      "status": "PASS",
+      "log": "typecheck.log"
+    },
+    {
+      "command": "npm test",
+      "status": "PASS",
+      "tests": 213,
+      "files": 18,
+      "log": "unit.log"
+    },
+    {
+      "command": "npm run build",
+      "status": "BLOCKED_ENVIRONMENT",
+      "log": "build.log",
+      "note": "Vite 成功；tsx CLI 创建本地 IPC 时收到 listen EPERM，标准整条命令未通过。"
+    },
+    {
+      "command": "./node_modules/.bin/vite build",
+      "status": "PASS",
+      "log": "vite-final.log",
+      "note": "最终文案对应的客户端构建。"
+    },
+    {
+      "command": "node --import tsx scripts/prerender.tsx",
+      "status": "PASS",
+      "log": "prerender-direct.log",
+      "note": "使用现有 tsx 加载器直接执行同一预渲染脚本，未修改构建配置；五语言、来源字段与独立指引来源校验成功。"
+    },
+    {
+      "command": "npm run test:e2e -- tests/e2e/refuel-guide.spec.ts --list --reporter=list",
+      "status": "PASS",
+      "tests": 12,
+      "log": "browser-list.log",
+      "note": "仅发现测试，不代表执行通过。"
+    },
+    {
+      "command": "npm run test:e2e -- tests/e2e/refuel-guide.spec.ts --reporter=list --output=/tmp/fmj-finish-20260930/guide/browser-red",
+      "status": "BLOCKED_ENVIRONMENT",
+      "log": "browser-red.log",
+      "note": "实现前已写真实按钮打开弹窗行为测试；浏览器服务器监听 127.0.0.1:4173 被沙箱拒绝，未取得有效行为红灯。"
+    },
+    {
+      "command": "npm run test:e2e -- tests/e2e/refuel-guide.spec.ts --reporter=list --output=/tmp/fmj-finish-20260930/guide/browser-after",
+      "status": "BLOCKED_ENVIRONMENT",
+      "log": "browser-after.log",
+      "note": "实现后同样的端口限制，12 项浏览器测试未执行，未修改浏览器配置绕过。"
+    },
+    {
+      "command": "git diff --check",
+      "status": "PASS"
+    }
+  ],
+  "runtime": {
+    "node": "v22.23.1",
+    "npm": "10.9.8",
+    "note": "当前沙箱 Node 低于 package.json 要求的 >=24；未安装或变更依赖。根代理应在项目要求的环境重新运行标准检查。"
+  },
+  "review": {
+    "sourceBasis": "/tmp/fmj-finish-20260930/source-notes.md 的 M0.3 已核对内容",
+    "independentSafetyReview": "NOT_PERFORMED",
+    "nativeLanguageReview": "NOT_PERFORMED",
+    "realDeviceReview": "NOT_PERFORMED",
+    "note": "不将编译或单元测试结果冒充母语审核、安全独立审查、手机真机或无障碍验收。"
+  },
+  "handoff": "根代理可以在 App.tsx 的 field-tools 容器追加 M0.4 入口；本任务没有新增 nav，语言切换仍为原有唯一 navigation。需要根代理完成独立安全文案审查、12 项目标浏览器测试和最终完整检查。"
+}

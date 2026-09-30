@@ -44,6 +44,8 @@ jobs:
           python -m pip install -r requirements-data.txt
           npm ci
           npx playwright install --with-deps chromium
+      - name: Verify importer failure retention before acquisition
+        run: npm run test:data
       - name: Acquire and validate a candidate snapshot
         env:
           REQUESTED_DATASET: ${{ inputs.dataset }}
@@ -60,11 +62,9 @@ jobs:
               ;;
             *) exit 1 ;;
           esac
-          python scripts/importer/refresh_sources.py "$dataset" --download-dir "$RUNNER_TEMP/fmj-inputs"
-      - name: Validate importer, app and browser behavior
-        run: |
-          npm run test:data
-          npm run check
+          python scripts/importer/refresh_sources.py "$dataset" --download-dir "$RUNNER_TEMP/fmj-inputs" --report "$RUNNER_TEMP/fmj-refresh-report.json"
+      - name: Validate app and browser behavior
+        run: npm run check
       - name: Keep validated data and provenance for review
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
         with:
@@ -73,4 +73,12 @@ jobs:
             public/data/
             dist/build-provenance.json
           if-no-files-found: error
+          retention-days: 14
+      - name: Keep refresh diagnostics, including source failures
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        with:
+          name: fuel-data-diagnostics-${{ github.run_id }}
+          path: ${{ runner.temp }}/fmj-refresh-report.json
+          if-no-files-found: warn
           retention-days: 14

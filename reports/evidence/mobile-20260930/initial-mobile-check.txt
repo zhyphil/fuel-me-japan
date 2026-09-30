@@ -1,0 +1,415 @@
+[WebServer] (node:10702) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 245 tests using 2 workers
+
+(node:10703) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:10704) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓    2 [iPhone Safari WebKit simulation] › tests/e2e/fuel-label.spec.ts:6:5 › mouse › fuel label text toggles exactly once and never closes its panel (2.6s)
+  ✓    3 [iPhone Safari WebKit simulation] › tests/e2e/fuel-label.spec.ts:59:1 › fuel panel closes when keyboard focus actually leaves, and Escape restores summary focus (327ms)
+  ✓    4 [iPhone Safari WebKit simulation] › tests/e2e/list-modes.spec.ts:4:1 › list modes are reachable from the national overview without loading station partitions (363ms)
+  ✓    5 [iPhone Safari WebKit simulation] › tests/e2e/list-modes.spec.ts:75:1 › cheapest has one honest explanation and mode/fuel/query/filter changes reset pagination without new data (979ms)
+  ✓    6 [iPhone Safari WebKit simulation] › tests/e2e/list-modes.spec.ts:98:1 › nearest never requests location on selection, then uses numeric Haversine order after the locate icon (727ms)
+  ✓    7 [iPhone Safari WebKit simulation] › tests/e2e/list-modes.spec.ts:127:1 › normal list sorting preserves the map marker DOM and viewport (520ms)
+  ✘    1 [iPhone Safari WebKit simulation] › tests/e2e/fuel-label.spec.ts:6:5 › touch › fuel label text toggles exactly once and never closes its panel (5.7s)
+(node:10789) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓    8 [iPhone Safari WebKit simulation] › tests/e2e/list-modes.spec.ts:143:1 › list and detail stars persist across prefectures and reload with only saved partition requests (1.1s)
+  ✓    9 [iPhone Safari WebKit simulation] › tests/e2e/list-modes.spec.ts:180:1 › favorites use saved dataset filter counts, reset pagination on fuel and restore the normal query (1.0s)
+  ✓   10 [iPhone Safari WebKit simulation] › tests/e2e/list-modes.spec.ts:210:3 › blocked read storage keeps memory favorites usable and shows an honest notice (534ms)
+  ✓   12 [iPhone Safari WebKit simulation] › tests/e2e/list-modes.spec.ts:229:1 › corrupt storage does not load arbitrary paths and is replaced only by an explicit save (477ms)
+  ✓   11 [iPhone Safari WebKit simulation] › tests/e2e/list-modes.spec.ts:210:3 › blocked write storage keeps memory favorites usable and shows an honest notice (534ms)
+  ✓   13 [iPhone Safari WebKit simulation] › tests/e2e/list-modes.spec.ts:244:1 › favorite cap allows removal and then another save (546ms)
+  ✓   14 [iPhone Safari WebKit simulation] › tests/e2e/list-modes.spec.ts:260:1 › missing source record remains removable and UNKNOWN uses only its explicit partition (514ms)
+  ✓   15 [iPhone Safari WebKit simulation] › tests/e2e/list-modes.spec.ts:276:3 › late favorites response is isolated after mode (460ms)
+  ✓   16 [iPhone Safari WebKit simulation] › tests/e2e/list-modes.spec.ts:276:3 › late favorites response is isolated after region (457ms)
+  ✓   17 [iPhone Safari WebKit simulation] › tests/e2e/list-modes.spec.ts:276:3 › late favorites response is isolated after overview (483ms)
+  ✓   18 [iPhone Safari WebKit simulation] › tests/e2e/list-modes.spec.ts:276:3 › late favorites response is isolated after cancel (496ms)
+  ✓   20 [iPhone Safari WebKit simulation] › tests/e2e/list-modes.spec.ts:276:3 › late favorites response is isolated after navigation (495ms)
+  ✓   19 [iPhone Safari WebKit simulation] › tests/e2e/list-modes.spec.ts:276:3 › late favorites response is isolated after unstar (528ms)
+  ✓   21 [iPhone Safari WebKit simulation] › tests/e2e/list-modes.spec.ts:308:1 › failed favorite validation keeps IDs and retries the same saved partition (416ms)
+  ✓   22 [iPhone Safari WebKit simulation] › tests/e2e/list-modes.spec.ts:322:3 › localized modes and star labels remain keyboard accessible in en (465ms)
+  ✓   23 [iPhone Safari WebKit simulation] › tests/e2e/list-modes.spec.ts:322:3 › localized modes and star labels remain keyboard accessible in zh-Hant (451ms)
+  ✓   24 [iPhone Safari WebKit simulation] › tests/e2e/list-modes.spec.ts:322:3 › localized modes and star labels remain keyboard accessible in ko (433ms)
+  ✓   25 [iPhone Safari WebKit simulation] › tests/e2e/list-modes.spec.ts:322:3 › localized modes and star labels remain keyboard accessible in zh-Hans (457ms)
+  ✓   26 [iPhone Safari WebKit simulation] › tests/e2e/list-modes.spec.ts:322:3 › localized modes and star labels remain keyboard accessible in th (491ms)
+  ✓   27 [iPhone Safari WebKit simulation] › tests/e2e/list-modes.spec.ts:348:3 › list modes fit 320px with 44px controls and visible saved results (574ms)
+  ✓   28 [iPhone Safari WebKit simulation] › tests/e2e/list-modes.spec.ts:348:3 › list modes fit 390px with 44px controls and visible saved results (558ms)
+  ✓   30 [iPhone Safari WebKit simulation] › tests/e2e/list-modes.spec.ts:365:1 › region loading resumes after visiting favorites without accepting the aborted response (465ms)
+  ✓   29 [iPhone Safari WebKit simulation] › tests/e2e/list-modes.spec.ts:348:3 › list modes fit 1280px with 44px controls and visible saved results (751ms)
+  ✓   31 [iPhone Safari WebKit simulation] › tests/e2e/list-modes.spec.ts:390:1 › late location callback cannot replace favorites or resumed manual results (527ms)
+  ✓   32 [iPhone Safari WebKit simulation] › tests/e2e/map-home.spec.ts:46:1 › overview counts match every manifest region; selecting and panning load only its partition (633ms)
+  ✓   33 [iPhone Safari WebKit simulation] › tests/e2e/map-home.spec.ts:81:1 › query synchronizes map and list, marker opens the real record, and Escape restores marker focus (677ms)
+  ✓   35 [iPhone Safari WebKit simulation] › tests/e2e/map-home.spec.ts:130:1 › failed tile images retain list access and explicit retry reloads valid offline PNGs (546ms)
+  ✓   36 [iPhone Safari WebKit simulation] › tests/e2e/map-home.spec.ts:153:1 › production CSP injected into local HTML permits Leaflet styles, initialization and approved tiles (384ms)
+  ✓   37 [iPhone Safari WebKit simulation] › tests/e2e/map-home.spec.ts:173:3 › map and detail at 320px keep attribution and sheet visible without horizontal overflow (611ms)
+  ✓   38 [iPhone Safari WebKit simulation] › tests/e2e/map-home.spec.ts:173:3 › map and detail at 390px keep attribution and sheet visible without horizontal overflow (589ms)
+  ✓   39 [iPhone Safari WebKit simulation] › tests/e2e/map-home.spec.ts:173:3 › map and detail at 1280px keep attribution and sheet visible without horizontal overflow (971ms)
+  ✓   40 [iPhone Safari WebKit simulation] › tests/e2e/map-home.spec.ts:195:1 › map configuration failure allows list fallback and explicit initialization retry (437ms)
+  ✓   41 [iPhone Safari WebKit simulation] › tests/e2e/map-home.spec.ts:215:3 › returning to overview via cancel rejects a late station response (415ms)
+  ✓   42 [iPhone Safari WebKit simulation] › tests/e2e/map-home.spec.ts:215:3 › returning to overview via overview rejects a late station response (345ms)
+  ✓   34 [iPhone Safari WebKit simulation] › tests/e2e/map-home.spec.ts:107:1 › cluster counts exceed list pagination and all 30 identical-coordinate members remain accessible (4.9s)
+  ✓   44 [iPhone Safari WebKit simulation] › tests/e2e/map-home.spec.ts:255:1 › overview tile retry uses integer XYZ coordinates (380ms)
+  ✘   45 [iPhone Safari WebKit simulation] › tests/e2e/map-zoom.spec.ts:41:1 › a second wheel pulse during animation is retained instead of swallowed (675ms)
+(node:10893) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ZOOM_MARKER_EVIDENCE {"added":0,"removed":0,"before":2,"after":2,"comparable":2,"retained":2,"note":"相同地图标记身份在一次键盘平移后是否保留同一DOM元素。"}
+  ✓   46 [iPhone Safari WebKit simulation] › tests/e2e/map-zoom.spec.ts:67:1 › small map pans retain existing marker elements instead of rebuilding the layer (944ms)
+  ✓   47 [iPhone Safari WebKit simulation] › tests/e2e/map-zoom.spec.ts:99:1 › rapid zoom buttons retain each click and queued reverse input (2.4s)
+  ✘   48 [iPhone Safari WebKit simulation] › tests/e2e/map-zoom.spec.ts:117:1 › reversing the wheel during its animation cancels the previous equal input (695ms)
+(node:10937) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   49 [iPhone Safari WebKit simulation] › tests/e2e/map-zoom.spec.ts:129:1 › returning to overview during zoom discards queued wheel input (1.3s)
+(node:10958) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   50 [iPhone Safari WebKit simulation] › tests/e2e/map-zoom.spec.ts:149:1 › cluster zoom respects reduced motion and updates that preference without reloading (1.5s)
+  ✓   51 [iPhone Safari WebKit simulation] › tests/e2e/map-zoom.spec.ts:199:1 › queued controls clamp at both zoom limits and can reverse away from them (3.7s)
+  ✓   52 [iPhone Safari WebKit simulation] › tests/e2e/map-zoom.spec.ts:224:1 › an old cluster cannot override returning to overview during animation (1.5s)
+  ✓   53 [iPhone Safari WebKit simulation] › tests/e2e/multi-fuel.spec.ts:9:3 › all seven fuel combinations remain usable at 320px in en (1.2s)
+  ✓   54 [iPhone Safari WebKit simulation] › tests/e2e/multi-fuel.spec.ts:9:3 › all seven fuel combinations remain usable at 320px in zh-Hant (1.1s)
+  ✓   55 [iPhone Safari WebKit simulation] › tests/e2e/multi-fuel.spec.ts:9:3 › all seven fuel combinations remain usable at 320px in ko (1.1s)
+  ✓   56 [iPhone Safari WebKit simulation] › tests/e2e/multi-fuel.spec.ts:9:3 › all seven fuel combinations remain usable at 320px in zh-Hans (1.1s)
+  ✓   57 [iPhone Safari WebKit simulation] › tests/e2e/multi-fuel.spec.ts:9:3 › all seven fuel combinations remain usable at 320px in th (1.1s)
+  ✓   58 [iPhone Safari WebKit simulation] › tests/e2e/multi-fuel.spec.ts:38:1 › old diesel preference migrates without a write, multiple fuels survive locale switch and ranking always belongs to the selection (612ms)
+  ✓   59 [iPhone Safari WebKit simulation] › tests/e2e/multi-fuel.spec.ts:60:1 › checkboxes support keyboard interaction and close on outside click (302ms)
+  ✓   60 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel-preference.spec.ts:8:3 › en: manual fuel dropdown updates the map and survives reopening and reload (579ms)
+  ✓   61 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel-preference.spec.ts:8:3 › zh-Hant: manual fuel dropdown updates the map and survives reopening and reload (543ms)
+  ✓   62 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel-preference.spec.ts:8:3 › ko: manual fuel dropdown updates the map and survives reopening and reload (545ms)
+  ✓   63 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel-preference.spec.ts:8:3 › zh-Hans: manual fuel dropdown updates the map and survives reopening and reload (543ms)
+  ✓   64 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel-preference.spec.ts:8:3 › th: manual fuel dropdown updates the map and survives reopening and reload (568ms)
+  ✓   65 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel-preference.spec.ts:42:1 › manual fuel replaces a multi-selection without resetting region, list mode or requesting location; reset stays in sync (793ms)
+  ✓   66 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel-preference.spec.ts:81:1 › manual fuel works when browser storage is unavailable (335ms)
+  ✓   67 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel.spec.ts:8:5 › en 320px: manual-only fuel, Japanese labels and no vehicle requests (474ms)
+  ✓   68 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel.spec.ts:8:5 › en 1280px: manual-only fuel, Japanese labels and no vehicle requests (661ms)
+  ✓   69 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel.spec.ts:8:5 › zh-Hant 320px: manual-only fuel, Japanese labels and no vehicle requests (501ms)
+  ✓   70 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel.spec.ts:8:5 › zh-Hant 1280px: manual-only fuel, Japanese labels and no vehicle requests (670ms)
+  ✓   71 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel.spec.ts:8:5 › ko 320px: manual-only fuel, Japanese labels and no vehicle requests (496ms)
+  ✓   72 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel.spec.ts:8:5 › ko 1280px: manual-only fuel, Japanese labels and no vehicle requests (646ms)
+  ✓   73 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel.spec.ts:8:5 › zh-Hans 320px: manual-only fuel, Japanese labels and no vehicle requests (476ms)
+  ✓   74 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel.spec.ts:8:5 › zh-Hans 1280px: manual-only fuel, Japanese labels and no vehicle requests (679ms)
+  ✓   75 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel.spec.ts:8:5 › th 320px: manual-only fuel, Japanese labels and no vehicle requests (522ms)
+  ✘   43 [iPhone Safari WebKit simulation] › tests/e2e/map-home.spec.ts:240:1 › coincident Fukuoka and Saga summary anchors offer both regions instead of endless zoom (30.1s)
+(node:11070) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   76 [iPhone Safari WebKit simulation] › tests/e2e/my-fuel.spec.ts:8:5 › th 1280px: manual-only fuel, Japanese labels and no vehicle requests (801ms)
+  ✓   77 [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:6:1 › the map opens a five-step refuelling guide and Escape restores its trigger (498ms)
+  ✓   78 [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › en 320px: guide labels, safety, source links and accessible return to the same map (545ms)
+  ✓   79 [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › en 1280px: guide labels, safety, source links and accessible return to the same map (623ms)
+  ✓   80 [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › zh-Hant 320px: guide labels, safety, source links and accessible return to the same map (518ms)
+  ✓   81 [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › zh-Hant 1280px: guide labels, safety, source links and accessible return to the same map (626ms)
+  ✓   82 [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › ko 320px: guide labels, safety, source links and accessible return to the same map (525ms)
+  ✓   84 [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › zh-Hans 320px: guide labels, safety, source links and accessible return to the same map (504ms)
+  ✓   83 [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › ko 1280px: guide labels, safety, source links and accessible return to the same map (600ms)
+  ✓   85 [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › zh-Hans 1280px: guide labels, safety, source links and accessible return to the same map (603ms)
+  ✓   86 [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › th 320px: guide labels, safety, source links and accessible return to the same map (613ms)
+  ✓   87 [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › th 1280px: guide labels, safety, source links and accessible return to the same map (672ms)
+  ✓   88 [iPhone Safari WebKit simulation] › tests/e2e/refuel-guide.spec.ts:72:1 › guide shows manual and multiple display preferences without changing them or the list (711ms)
+  ✓   90 [iPhone Safari WebKit simulation] › tests/e2e/return-car.spec.ts:91:31 › en: 320px dialog, Japanese labels, source policy, focus and mounted map (494ms)
+  ✓   89 [iPhone Safari WebKit simulation] › tests/e2e/return-car.spec.ts:50:1 › filters selected fuel independently, retains unknowns, and requires explicit completion before return navigation (980ms)
+  ✓   91 [iPhone Safari WebKit simulation] › tests/e2e/return-car.spec.ts:91:31 › zh-Hant: 320px dialog, Japanese labels, source policy, focus and mounted map (537ms)
+  ✓   92 [iPhone Safari WebKit simulation] › tests/e2e/return-car.spec.ts:91:31 › ko: 320px dialog, Japanese labels, source policy, focus and mounted map (541ms)
+  ✓   93 [iPhone Safari WebKit simulation] › tests/e2e/return-car.spec.ts:91:31 › zh-Hans: 320px dialog, Japanese labels, source policy, focus and mounted map (496ms)
+  ✓   94 [iPhone Safari WebKit simulation] › tests/e2e/return-car.spec.ts:91:31 › th: 320px dialog, Japanese labels, source policy, focus and mounted map (546ms)
+  ✓   95 [iPhone Safari WebKit simulation] › tests/e2e/return-car.spec.ts:124:1 › single preference seeds the flow; multiple map fuels require a choice and preserve map, filters and storage (620ms)
+  ✓   96 [iPhone Safari WebKit simulation] › tests/e2e/return-car.spec.ts:147:1 › late results from a previous branch cannot replace current results; closing cancels and reopening resets (463ms)
+  ✓   97 [iPhone Safari WebKit simulation] › tests/e2e/return-car.spec.ts:162:57 › rental data network is rejected and retry succeeds (340ms)
+  ✓   98 [iPhone Safari WebKit simulation] › tests/e2e/return-car.spec.ts:162:57 › rental data unapproved source is rejected and retry succeeds (353ms)
+  ✓   99 [iPhone Safari WebKit simulation] › tests/e2e/return-car.spec.ts:175:1 › station network failure supports retry with no return navigation (444ms)
+  ✓  100 [iPhone Safari WebKit simulation] › tests/e2e/return-car.spec.ts:183:1 › empty nearby records are explicit and offer the map (388ms)
+  ✓  101 [iPhone Safari WebKit simulation] › tests/e2e/return-car.spec.ts:189:1 › ninety-day-old sources retain their real check date and require rechecking (345ms)
+  ✓  102 [iPhone Safari WebKit simulation] › tests/e2e/return-car.spec.ts:195:1 › closing while a branch request is pending aborts the request and cannot restore its address on reopen (419ms)
+  ✓  103 [iPhone Safari WebKit simulation] › tests/e2e/station-filters.spec.ts:58:1 › draft, cancel, reset and apply keep loaded counts and map/list totals consistent (972ms)
+  ✓  104 [iPhone Safari WebKit simulation] › tests/e2e/station-filters.spec.ts:88:1 › payment union, service AND, zero results, independent query and stale detail cleanup (2.1s)
+  ✓  105 [iPhone Safari WebKit simulation] › tests/e2e/station-filters.spec.ts:123:1 › applying unchanged filters closes cluster members and station details (1.6s)
+  ✓  106 [iPhone Safari WebKit simulation] › tests/e2e/station-filters.spec.ts:138:1 › query and brand search do not change complete-area option counts (483ms)
+  ✓  108 [iPhone Safari WebKit simulation] › tests/e2e/station-filters.spec.ts:181:5 › en filters at 320px: keyboard tabs, native modal, missing data and focus return (468ms)
+  ✓  107 [iPhone Safari WebKit simulation] › tests/e2e/station-filters.spec.ts:150:1 › changing area, returning to overview and new location clear filters without persistence or extra data fetches (1.0s)
+  ✓  109 [iPhone Safari WebKit simulation] › tests/e2e/station-filters.spec.ts:181:5 › en filters at 390px: keyboard tabs, native modal, missing data and focus return (448ms)
+  ✓  110 [iPhone Safari WebKit simulation] › tests/e2e/station-filters.spec.ts:181:5 › en filters at 1280px: keyboard tabs, native modal, missing data and focus return (589ms)
+  ✓  111 [iPhone Safari WebKit simulation] › tests/e2e/station-filters.spec.ts:181:5 › zh-Hant filters at 320px: keyboard tabs, native modal, missing data and focus return (495ms)
+  ✓  112 [iPhone Safari WebKit simulation] › tests/e2e/station-filters.spec.ts:181:5 › zh-Hant filters at 390px: keyboard tabs, native modal, missing data and focus return (439ms)
+  ✓  113 [iPhone Safari WebKit simulation] › tests/e2e/station-filters.spec.ts:181:5 › zh-Hant filters at 1280px: keyboard tabs, native modal, missing data and focus return (576ms)
+  ✓  114 [iPhone Safari WebKit simulation] › tests/e2e/station-filters.spec.ts:181:5 › ko filters at 320px: keyboard tabs, native modal, missing data and focus return (486ms)
+  ✓  115 [iPhone Safari WebKit simulation] › tests/e2e/station-filters.spec.ts:181:5 › ko filters at 390px: keyboard tabs, native modal, missing data and focus return (500ms)
+  ✓  116 [iPhone Safari WebKit simulation] › tests/e2e/station-filters.spec.ts:181:5 › ko filters at 1280px: keyboard tabs, native modal, missing data and focus return (543ms)
+  ✓  117 [iPhone Safari WebKit simulation] › tests/e2e/station-filters.spec.ts:181:5 › zh-Hans filters at 320px: keyboard tabs, native modal, missing data and focus return (437ms)
+  ✓  118 [iPhone Safari WebKit simulation] › tests/e2e/station-filters.spec.ts:181:5 › zh-Hans filters at 390px: keyboard tabs, native modal, missing data and focus return (431ms)
+  ✓  119 [iPhone Safari WebKit simulation] › tests/e2e/station-filters.spec.ts:181:5 › zh-Hans filters at 1280px: keyboard tabs, native modal, missing data and focus return (587ms)
+  ✓  120 [iPhone Safari WebKit simulation] › tests/e2e/station-filters.spec.ts:181:5 › th filters at 320px: keyboard tabs, native modal, missing data and focus return (529ms)
+  ✓  121 [iPhone Safari WebKit simulation] › tests/e2e/station-filters.spec.ts:181:5 › th filters at 390px: keyboard tabs, native modal, missing data and focus return (503ms)
+(node:11194) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  122 [iPhone Safari WebKit simulation] › tests/e2e/station-filters.spec.ts:181:5 › th filters at 1280px: keyboard tabs, native modal, missing data and focus return (611ms)
+(node:11196) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  124 [Android Chrome Chromium simulation] › tests/e2e/fuel-label.spec.ts:6:5 › touch › fuel label text toggles exactly once and never closes its panel (532ms)
+  ✓  125 [Android Chrome Chromium simulation] › tests/e2e/fuel-label.spec.ts:59:1 › fuel panel closes when keyboard focus actually leaves, and Escape restores summary focus (248ms)
+  ✓  126 [Android Chrome Chromium simulation] › tests/e2e/list-modes.spec.ts:4:1 › list modes are reachable from the national overview without loading station partitions (344ms)
+  ✓  127 [Android Chrome Chromium simulation] › tests/e2e/list-modes.spec.ts:75:1 › cheapest has one honest explanation and mode/fuel/query/filter changes reset pagination without new data (727ms)
+  ✓  123 [Android Chrome Chromium simulation] › tests/e2e/fuel-label.spec.ts:6:5 › mouse › fuel label text toggles exactly once and never closes its panel (2.1s)
+  ✓  128 [Android Chrome Chromium simulation] › tests/e2e/list-modes.spec.ts:98:1 › nearest never requests location on selection, then uses numeric Haversine order after the locate icon (654ms)
+  ✓  129 [Android Chrome Chromium simulation] › tests/e2e/list-modes.spec.ts:127:1 › normal list sorting preserves the map marker DOM and viewport (605ms)
+  ✓  131 [Android Chrome Chromium simulation] › tests/e2e/list-modes.spec.ts:180:1 › favorites use saved dataset filter counts, reset pagination on fuel and restore the normal query (678ms)
+  ✓  130 [Android Chrome Chromium simulation] › tests/e2e/list-modes.spec.ts:143:1 › list and detail stars persist across prefectures and reload with only saved partition requests (942ms)
+  ✓  132 [Android Chrome Chromium simulation] › tests/e2e/list-modes.spec.ts:210:3 › blocked read storage keeps memory favorites usable and shows an honest notice (431ms)
+  ✓  133 [Android Chrome Chromium simulation] › tests/e2e/list-modes.spec.ts:210:3 › blocked write storage keeps memory favorites usable and shows an honest notice (398ms)
+  ✓  134 [Android Chrome Chromium simulation] › tests/e2e/list-modes.spec.ts:229:1 › corrupt storage does not load arbitrary paths and is replaced only by an explicit save (331ms)
+  ✓  135 [Android Chrome Chromium simulation] › tests/e2e/list-modes.spec.ts:244:1 › favorite cap allows removal and then another save (384ms)
+  ✓  136 [Android Chrome Chromium simulation] › tests/e2e/list-modes.spec.ts:260:1 › missing source record remains removable and UNKNOWN uses only its explicit partition (358ms)
+  ✓  137 [Android Chrome Chromium simulation] › tests/e2e/list-modes.spec.ts:276:3 › late favorites response is isolated after mode (352ms)
+  ✓  138 [Android Chrome Chromium simulation] › tests/e2e/list-modes.spec.ts:276:3 › late favorites response is isolated after region (358ms)
+  ✓  139 [Android Chrome Chromium simulation] › tests/e2e/list-modes.spec.ts:276:3 › late favorites response is isolated after overview (413ms)
+  ✓  140 [Android Chrome Chromium simulation] › tests/e2e/list-modes.spec.ts:276:3 › late favorites response is isolated after cancel (387ms)
+  ✓  141 [Android Chrome Chromium simulation] › tests/e2e/list-modes.spec.ts:276:3 › late favorites response is isolated after unstar (425ms)
+  ✓  142 [Android Chrome Chromium simulation] › tests/e2e/list-modes.spec.ts:276:3 › late favorites response is isolated after navigation (353ms)
+  ✓  143 [Android Chrome Chromium simulation] › tests/e2e/list-modes.spec.ts:308:1 › failed favorite validation keeps IDs and retries the same saved partition (362ms)
+  ✓  144 [Android Chrome Chromium simulation] › tests/e2e/list-modes.spec.ts:322:3 › localized modes and star labels remain keyboard accessible in en (372ms)
+  ✓  145 [Android Chrome Chromium simulation] › tests/e2e/list-modes.spec.ts:322:3 › localized modes and star labels remain keyboard accessible in zh-Hant (336ms)
+  ✓  146 [Android Chrome Chromium simulation] › tests/e2e/list-modes.spec.ts:322:3 › localized modes and star labels remain keyboard accessible in ko (306ms)
+  ✓  147 [Android Chrome Chromium simulation] › tests/e2e/list-modes.spec.ts:322:3 › localized modes and star labels remain keyboard accessible in zh-Hans (319ms)
+  ✓  148 [Android Chrome Chromium simulation] › tests/e2e/list-modes.spec.ts:322:3 › localized modes and star labels remain keyboard accessible in th (368ms)
+  ✓  149 [Android Chrome Chromium simulation] › tests/e2e/list-modes.spec.ts:348:3 › list modes fit 320px with 44px controls and visible saved results (462ms)
+  ✓  150 [Android Chrome Chromium simulation] › tests/e2e/list-modes.spec.ts:348:3 › list modes fit 390px with 44px controls and visible saved results (480ms)
+  ✓  152 [Android Chrome Chromium simulation] › tests/e2e/list-modes.spec.ts:365:1 › region loading resumes after visiting favorites without accepting the aborted response (417ms)
+  ✓  151 [Android Chrome Chromium simulation] › tests/e2e/list-modes.spec.ts:348:3 › list modes fit 1280px with 44px controls and visible saved results (624ms)
+  ✓  153 [Android Chrome Chromium simulation] › tests/e2e/list-modes.spec.ts:390:1 › late location callback cannot replace favorites or resumed manual results (449ms)
+  ✓  155 [Android Chrome Chromium simulation] › tests/e2e/map-home.spec.ts:81:1 › query synchronizes map and list, marker opens the real record, and Escape restores marker focus (487ms)
+  ✓  154 [Android Chrome Chromium simulation] › tests/e2e/map-home.spec.ts:46:1 › overview counts match every manifest region; selecting and panning load only its partition (1.1s)
+  ✓  157 [Android Chrome Chromium simulation] › tests/e2e/map-home.spec.ts:130:1 › failed tile images retain list access and explicit retry reloads valid offline PNGs (496ms)
+  ✓  158 [Android Chrome Chromium simulation] › tests/e2e/map-home.spec.ts:153:1 › production CSP injected into local HTML permits Leaflet styles, initialization and approved tiles (273ms)
+  ✓  159 [Android Chrome Chromium simulation] › tests/e2e/map-home.spec.ts:173:3 › map and detail at 320px keep attribution and sheet visible without horizontal overflow (593ms)
+  ✓  160 [Android Chrome Chromium simulation] › tests/e2e/map-home.spec.ts:173:3 › map and detail at 390px keep attribution and sheet visible without horizontal overflow (535ms)
+  ✓  161 [Android Chrome Chromium simulation] › tests/e2e/map-home.spec.ts:173:3 › map and detail at 1280px keep attribution and sheet visible without horizontal overflow (741ms)
+  ✓  162 [Android Chrome Chromium simulation] › tests/e2e/map-home.spec.ts:195:1 › map configuration failure allows list fallback and explicit initialization retry (386ms)
+  ✓  163 [Android Chrome Chromium simulation] › tests/e2e/map-home.spec.ts:215:3 › returning to overview via cancel rejects a late station response (269ms)
+  ✓  164 [Android Chrome Chromium simulation] › tests/e2e/map-home.spec.ts:215:3 › returning to overview via overview rejects a late station response (331ms)
+  ✓  156 [Android Chrome Chromium simulation] › tests/e2e/map-home.spec.ts:107:1 › cluster counts exceed list pagination and all 30 identical-coordinate members remain accessible (4.4s)
+  ✓  166 [Android Chrome Chromium simulation] › tests/e2e/map-home.spec.ts:255:1 › overview tile retry uses integer XYZ coordinates (375ms)
+  ✓  165 [Android Chrome Chromium simulation] › tests/e2e/map-home.spec.ts:240:1 › coincident Fukuoka and Saga summary anchors offer both regions instead of endless zoom (1.1s)
+ZOOM_MARKER_EVIDENCE {"added":0,"removed":0,"before":2,"after":2,"comparable":2,"retained":2,"note":"相同地图标记身份在一次键盘平移后是否保留同一DOM元素。"}
+  ✓  168 [Android Chrome Chromium simulation] › tests/e2e/map-zoom.spec.ts:67:1 › small map pans retain existing marker elements instead of rebuilding the layer (720ms)
+ZOOM_WHEEL_EVIDENCE {"initial":5.250003499950653,"singleDelta":0.24999694648974646,"pairDelta":0.4999957876136518,"note":"固定视口与东京818条真实记录；离线瓦片；第二次等量输入发生在第一次动画中。"}
+  ✓  167 [Android Chrome Chromium simulation] › tests/e2e/map-zoom.spec.ts:41:1 › a second wheel pulse during animation is retained instead of swallowed (2.2s)
+  ✓  169 [Android Chrome Chromium simulation] › tests/e2e/map-zoom.spec.ts:99:1 › rapid zoom buttons retain each click and queued reverse input (2.1s)
+  ✓  170 [Android Chrome Chromium simulation] › tests/e2e/map-zoom.spec.ts:117:1 › reversing the wheel during its animation cancels the previous equal input (1.3s)
+  ✓  171 [Android Chrome Chromium simulation] › tests/e2e/map-zoom.spec.ts:129:1 › returning to overview during zoom discards queued wheel input (1.7s)
+  ✓  172 [Android Chrome Chromium simulation] › tests/e2e/map-zoom.spec.ts:149:1 › cluster zoom respects reduced motion and updates that preference without reloading (1.2s)
+  ✓  173 [Android Chrome Chromium simulation] › tests/e2e/map-zoom.spec.ts:177:1 › native two-finger pinch still zooms the mobile map (1.2s)
+  ✓  175 [Android Chrome Chromium simulation] › tests/e2e/map-zoom.spec.ts:224:1 › an old cluster cannot override returning to overview during animation (1.3s)
+  ✓  176 [Android Chrome Chromium simulation] › tests/e2e/multi-fuel.spec.ts:9:3 › all seven fuel combinations remain usable at 320px in en (951ms)
+  ✓  174 [Android Chrome Chromium simulation] › tests/e2e/map-zoom.spec.ts:199:1 › queued controls clamp at both zoom limits and can reverse away from them (3.6s)
+  ✓  177 [Android Chrome Chromium simulation] › tests/e2e/multi-fuel.spec.ts:9:3 › all seven fuel combinations remain usable at 320px in zh-Hant (936ms)
+  ✓  178 [Android Chrome Chromium simulation] › tests/e2e/multi-fuel.spec.ts:9:3 › all seven fuel combinations remain usable at 320px in ko (964ms)
+  ✓  179 [Android Chrome Chromium simulation] › tests/e2e/multi-fuel.spec.ts:9:3 › all seven fuel combinations remain usable at 320px in zh-Hans (949ms)
+  ✓  180 [Android Chrome Chromium simulation] › tests/e2e/multi-fuel.spec.ts:9:3 › all seven fuel combinations remain usable at 320px in th (1.0s)
+  ✓  181 [Android Chrome Chromium simulation] › tests/e2e/multi-fuel.spec.ts:38:1 › old diesel preference migrates without a write, multiple fuels survive locale switch and ranking always belongs to the selection (512ms)
+  ✓  182 [Android Chrome Chromium simulation] › tests/e2e/multi-fuel.spec.ts:60:1 › checkboxes support keyboard interaction and close on outside click (257ms)
+  ✓  183 [Android Chrome Chromium simulation] › tests/e2e/my-fuel-preference.spec.ts:8:3 › en: manual fuel dropdown updates the map and survives reopening and reload (427ms)
+  ✓  184 [Android Chrome Chromium simulation] › tests/e2e/my-fuel-preference.spec.ts:8:3 › zh-Hant: manual fuel dropdown updates the map and survives reopening and reload (419ms)
+  ✓  185 [Android Chrome Chromium simulation] › tests/e2e/my-fuel-preference.spec.ts:8:3 › ko: manual fuel dropdown updates the map and survives reopening and reload (394ms)
+  ✓  186 [Android Chrome Chromium simulation] › tests/e2e/my-fuel-preference.spec.ts:8:3 › zh-Hans: manual fuel dropdown updates the map and survives reopening and reload (411ms)
+  ✓  187 [Android Chrome Chromium simulation] › tests/e2e/my-fuel-preference.spec.ts:8:3 › th: manual fuel dropdown updates the map and survives reopening and reload (449ms)
+  ✓  188 [Android Chrome Chromium simulation] › tests/e2e/my-fuel-preference.spec.ts:42:1 › manual fuel replaces a multi-selection without resetting region, list mode or requesting location; reset stays in sync (689ms)
+  ✓  189 [Android Chrome Chromium simulation] › tests/e2e/my-fuel-preference.spec.ts:81:1 › manual fuel works when browser storage is unavailable (310ms)
+  ✓  190 [Android Chrome Chromium simulation] › tests/e2e/my-fuel.spec.ts:8:5 › en 320px: manual-only fuel, Japanese labels and no vehicle requests (445ms)
+  ✓  191 [Android Chrome Chromium simulation] › tests/e2e/my-fuel.spec.ts:8:5 › en 1280px: manual-only fuel, Japanese labels and no vehicle requests (612ms)
+  ✓  192 [Android Chrome Chromium simulation] › tests/e2e/my-fuel.spec.ts:8:5 › zh-Hant 320px: manual-only fuel, Japanese labels and no vehicle requests (446ms)
+  ✓  193 [Android Chrome Chromium simulation] › tests/e2e/my-fuel.spec.ts:8:5 › zh-Hant 1280px: manual-only fuel, Japanese labels and no vehicle requests (620ms)
+  ✓  194 [Android Chrome Chromium simulation] › tests/e2e/my-fuel.spec.ts:8:5 › ko 320px: manual-only fuel, Japanese labels and no vehicle requests (420ms)
+  ✓  196 [Android Chrome Chromium simulation] › tests/e2e/my-fuel.spec.ts:8:5 › zh-Hans 320px: manual-only fuel, Japanese labels and no vehicle requests (419ms)
+  ✓  195 [Android Chrome Chromium simulation] › tests/e2e/my-fuel.spec.ts:8:5 › ko 1280px: manual-only fuel, Japanese labels and no vehicle requests (591ms)
+  ✓  198 [Android Chrome Chromium simulation] › tests/e2e/my-fuel.spec.ts:8:5 › th 320px: manual-only fuel, Japanese labels and no vehicle requests (492ms)
+  ✓  197 [Android Chrome Chromium simulation] › tests/e2e/my-fuel.spec.ts:8:5 › zh-Hans 1280px: manual-only fuel, Japanese labels and no vehicle requests (640ms)
+  ✓  200 [Android Chrome Chromium simulation] › tests/e2e/refuel-guide.spec.ts:6:1 › the map opens a five-step refuelling guide and Escape restores its trigger (252ms)
+  ✓  199 [Android Chrome Chromium simulation] › tests/e2e/my-fuel.spec.ts:8:5 › th 1280px: manual-only fuel, Japanese labels and no vehicle requests (577ms)
+  ✓  201 [Android Chrome Chromium simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › en 320px: guide labels, safety, source links and accessible return to the same map (361ms)
+  ✓  202 [Android Chrome Chromium simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › en 1280px: guide labels, safety, source links and accessible return to the same map (480ms)
+  ✓  203 [Android Chrome Chromium simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › zh-Hant 320px: guide labels, safety, source links and accessible return to the same map (389ms)
+  ✓  205 [Android Chrome Chromium simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › ko 320px: guide labels, safety, source links and accessible return to the same map (385ms)
+  ✓  204 [Android Chrome Chromium simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › zh-Hant 1280px: guide labels, safety, source links and accessible return to the same map (462ms)
+  ✓  207 [Android Chrome Chromium simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › zh-Hans 320px: guide labels, safety, source links and accessible return to the same map (350ms)
+  ✓  206 [Android Chrome Chromium simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › ko 1280px: guide labels, safety, source links and accessible return to the same map (473ms)
+  ✓  209 [Android Chrome Chromium simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › th 320px: guide labels, safety, source links and accessible return to the same map (385ms)
+  ✓  208 [Android Chrome Chromium simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › zh-Hans 1280px: guide labels, safety, source links and accessible return to the same map (435ms)
+  ✓  210 [Android Chrome Chromium simulation] › tests/e2e/refuel-guide.spec.ts:20:5 › th 1280px: guide labels, safety, source links and accessible return to the same map (451ms)
+  ✓  211 [Android Chrome Chromium simulation] › tests/e2e/refuel-guide.spec.ts:72:1 › guide shows manual and multiple display preferences without changing them or the list (529ms)
+  ✓  213 [Android Chrome Chromium simulation] › tests/e2e/return-car.spec.ts:91:31 › en: 320px dialog, Japanese labels, source policy, focus and mounted map (487ms)
+  ✓  212 [Android Chrome Chromium simulation] › tests/e2e/return-car.spec.ts:50:1 › filters selected fuel independently, retains unknowns, and requires explicit completion before return navigation (783ms)
+  ✓  214 [Android Chrome Chromium simulation] › tests/e2e/return-car.spec.ts:91:31 › zh-Hant: 320px dialog, Japanese labels, source policy, focus and mounted map (460ms)
+  ✓  215 [Android Chrome Chromium simulation] › tests/e2e/return-car.spec.ts:91:31 › ko: 320px dialog, Japanese labels, source policy, focus and mounted map (482ms)
+  ✓  216 [Android Chrome Chromium simulation] › tests/e2e/return-car.spec.ts:91:31 › zh-Hans: 320px dialog, Japanese labels, source policy, focus and mounted map (483ms)
+  ✓  217 [Android Chrome Chromium simulation] › tests/e2e/return-car.spec.ts:91:31 › th: 320px dialog, Japanese labels, source policy, focus and mounted map (486ms)
+  ✓  218 [Android Chrome Chromium simulation] › tests/e2e/return-car.spec.ts:124:1 › single preference seeds the flow; multiple map fuels require a choice and preserve map, filters and storage (518ms)
+  ✓  219 [Android Chrome Chromium simulation] › tests/e2e/return-car.spec.ts:147:1 › late results from a previous branch cannot replace current results; closing cancels and reopening resets (462ms)
+  ✓  220 [Android Chrome Chromium simulation] › tests/e2e/return-car.spec.ts:162:57 › rental data network is rejected and retry succeeds (373ms)
+  ✓  221 [Android Chrome Chromium simulation] › tests/e2e/return-car.spec.ts:162:57 › rental data unapproved source is rejected and retry succeeds (373ms)
+  ✓  222 [Android Chrome Chromium simulation] › tests/e2e/return-car.spec.ts:175:1 › station network failure supports retry with no return navigation (364ms)
+  ✓  223 [Android Chrome Chromium simulation] › tests/e2e/return-car.spec.ts:183:1 › empty nearby records are explicit and offer the map (363ms)
+  ✓  224 [Android Chrome Chromium simulation] › tests/e2e/return-car.spec.ts:189:1 › ninety-day-old sources retain their real check date and require rechecking (275ms)
+  ✓  225 [Android Chrome Chromium simulation] › tests/e2e/return-car.spec.ts:195:1 › closing while a branch request is pending aborts the request and cannot restore its address on reopen (360ms)
+  ✓  226 [Android Chrome Chromium simulation] › tests/e2e/station-filters.spec.ts:58:1 › draft, cancel, reset and apply keep loaded counts and map/list totals consistent (755ms)
+  ✓  228 [Android Chrome Chromium simulation] › tests/e2e/station-filters.spec.ts:123:1 › applying unchanged filters closes cluster members and station details (1.4s)
+  ✓  227 [Android Chrome Chromium simulation] › tests/e2e/station-filters.spec.ts:88:1 › payment union, service AND, zero results, independent query and stale detail cleanup (2.0s)
+  ✓  229 [Android Chrome Chromium simulation] › tests/e2e/station-filters.spec.ts:138:1 › query and brand search do not change complete-area option counts (453ms)
+  ✓  231 [Android Chrome Chromium simulation] › tests/e2e/station-filters.spec.ts:181:5 › en filters at 320px: keyboard tabs, native modal, missing data and focus return (332ms)
+  ✓  230 [Android Chrome Chromium simulation] › tests/e2e/station-filters.spec.ts:150:1 › changing area, returning to overview and new location clear filters without persistence or extra data fetches (845ms)
+  ✓  232 [Android Chrome Chromium simulation] › tests/e2e/station-filters.spec.ts:181:5 › en filters at 390px: keyboard tabs, native modal, missing data and focus return (368ms)
+  ✓  233 [Android Chrome Chromium simulation] › tests/e2e/station-filters.spec.ts:181:5 › en filters at 1280px: keyboard tabs, native modal, missing data and focus return (477ms)
+  ✓  234 [Android Chrome Chromium simulation] › tests/e2e/station-filters.spec.ts:181:5 › zh-Hant filters at 320px: keyboard tabs, native modal, missing data and focus return (314ms)
+  ✓  235 [Android Chrome Chromium simulation] › tests/e2e/station-filters.spec.ts:181:5 › zh-Hant filters at 390px: keyboard tabs, native modal, missing data and focus return (353ms)
+  ✓  236 [Android Chrome Chromium simulation] › tests/e2e/station-filters.spec.ts:181:5 › zh-Hant filters at 1280px: keyboard tabs, native modal, missing data and focus return (454ms)
+  ✓  237 [Android Chrome Chromium simulation] › tests/e2e/station-filters.spec.ts:181:5 › ko filters at 320px: keyboard tabs, native modal, missing data and focus return (377ms)
+  ✓  238 [Android Chrome Chromium simulation] › tests/e2e/station-filters.spec.ts:181:5 › ko filters at 390px: keyboard tabs, native modal, missing data and focus return (346ms)
+  ✓  239 [Android Chrome Chromium simulation] › tests/e2e/station-filters.spec.ts:181:5 › ko filters at 1280px: keyboard tabs, native modal, missing data and focus return (417ms)
+  ✓  240 [Android Chrome Chromium simulation] › tests/e2e/station-filters.spec.ts:181:5 › zh-Hans filters at 320px: keyboard tabs, native modal, missing data and focus return (333ms)
+  ✓  241 [Android Chrome Chromium simulation] › tests/e2e/station-filters.spec.ts:181:5 › zh-Hans filters at 390px: keyboard tabs, native modal, missing data and focus return (387ms)
+  ✓  242 [Android Chrome Chromium simulation] › tests/e2e/station-filters.spec.ts:181:5 › zh-Hans filters at 1280px: keyboard tabs, native modal, missing data and focus return (425ms)
+  ✓  243 [Android Chrome Chromium simulation] › tests/e2e/station-filters.spec.ts:181:5 › th filters at 320px: keyboard tabs, native modal, missing data and focus return (389ms)
+  ✓  244 [Android Chrome Chromium simulation] › tests/e2e/station-filters.spec.ts:181:5 › th filters at 390px: keyboard tabs, native modal, missing data and focus return (463ms)
+  ✓  245 [Android Chrome Chromium simulation] › tests/e2e/station-filters.spec.ts:181:5 › th filters at 1280px: keyboard tabs, native modal, missing data and focus return (419ms)
+
+
+  1) [iPhone Safari WebKit simulation] › tests/e2e/fuel-label.spec.ts:6:5 › touch › fuel label text toggles exactly once and never closes its panel 
+
+    Error: expect(locator).toBeChecked() failed
+
+    Locator:  locator('#display-fuel').locator('input[type="checkbox"]').nth(2)
+    Expected: checked
+    Received: unchecked
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeChecked" locator('#display-fuel').locator('input[type="checkbox"]').nth(2) with timeout 5000ms
+      - waiting for locator('#display-fuel').locator('input[type="checkbox"]').nth(2)
+        14 × locator resolved to <input value="DIESEL" type="checkbox"/>
+           - unexpected value "unchecked"
+
+
+      34 |       await pressAt(group!.x + 3, group!.y + group!.height / 2);
+      35 |       await selectText(2);
+    > 36 |       await expect(inputs.nth(2)).toBeChecked();
+         |                                   ^
+      37 |       await expect(panel.locator("input:checked")).toHaveCount(2);
+      38 |       await selectText(1);
+      39 |       await expect(panel.locator("input:checked")).toHaveCount(3);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-label.spec.ts:36:35
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-finish-20260930/mobile-test-results/fuel-label-touch-fuel-labe-7e523--and-never-closes-its-panel-iPhone-Safari-WebKit-simulation/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-finish-20260930/mobile-test-results/fuel-label-touch-fuel-labe-7e523--and-never-closes-its-panel-iPhone-Safari-WebKit-simulation/error-context.md
+
+  2) [iPhone Safari WebKit simulation] › tests/e2e/map-home.spec.ts:240:1 › coincident Fukuoka and Saga summary anchors offer both regions instead of endless zoom 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('.map-pin-region-group[data-region-codes*="JP-40"]')
+        - locator resolved to <button type="button" class="map-pin map-pin-region-group" title="9 regions, 1,782 recorded stations. Zoom in to choose a region." data-region-codes="JP-35,JP-38,JP-39,JP-40,JP-41,JP-43,JP-44,JP-45,JP-46" aria-label="9 regions, 1,782 recorded stations. Zoom in to choose a region." data-map-key="regions:["JP-35","JP-38","JP-39","JP-40","JP-41","JP-43","JP-44","JP-45","JP-46"]">…</button>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <span class="filter-entry-help">Choose a region and wait for stations to load.</span> from <div class="station-filter-entry">…</div> subtree intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <span class="filter-entry-help">Choose a region and wait for stations to load.</span> from <div class="station-filter-entry">…</div> subtree intercepts pointer events
+        - retrying click action
+          - waiting 100ms
+        57 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <span class="filter-entry-help">Choose a region and wait for stations to load.</span> from <div class="station-filter-entry">…</div> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+
+
+      241 |   await home(page);
+      242 |   for (let step = 0; step < 10 && !await page.locator(".region-list").isVisible(); step++) {
+    > 243 |     await page.locator('.map-pin-region-group[data-region-codes*="JP-40"]').click();
+          |                                                                             ^
+      244 |     await waitForMapAnimation(page);
+      245 |   }
+      246 |   await expect(page.locator(".region-list .station-card")).toHaveCount(2);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/map-home.spec.ts:243:77
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-finish-20260930/mobile-test-results/map-home-coincident-Fukuok-784c5-ons-instead-of-endless-zoom-iPhone-Safari-WebKit-simulation/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-finish-20260930/mobile-test-results/map-home-coincident-Fukuok-784c5-ons-instead-of-endless-zoom-iPhone-Safari-WebKit-simulation/error-context.md
+
+  3) [iPhone Safari WebKit simulation] › tests/e2e/map-zoom.spec.ts:41:1 › a second wheel pulse during animation is retained instead of swallowed 
+
+    Error: mouse.wheel: Mouse wheel is not supported in mobile WebKit
+
+      46 |   await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
+      47 |   const initial = (await tileZoom(page))!;
+    > 48 |   await page.mouse.wheel(0, -60);
+         |                    ^
+      49 |   await expect(page.locator(".leaflet-zoom-anim")).toBeAttached();
+      50 |   await settle(page);
+      51 |   const singleDelta = (await tileZoom(page))! - initial;
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/map-zoom.spec.ts:48:20
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-finish-20260930/mobile-test-results/map-zoom-a-second-wheel-pu-b0faf-tained-instead-of-swallowed-iPhone-Safari-WebKit-simulation/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-finish-20260930/mobile-test-results/map-zoom-a-second-wheel-pu-b0faf-tained-instead-of-swallowed-iPhone-Safari-WebKit-simulation/error-context.md
+
+  4) [iPhone Safari WebKit simulation] › tests/e2e/map-zoom.spec.ts:117:1 › reversing the wheel during its animation cancels the previous equal input 
+
+    Error: mouse.wheel: Mouse wheel is not supported in mobile WebKit
+
+      120 |   await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
+      121 |   const initial = (await tileZoom(page))!;
+    > 122 |   await page.mouse.wheel(0, -60);
+          |                    ^
+      123 |   await expect(page.locator(".leaflet-zoom-anim")).toBeAttached();
+      124 |   await page.mouse.wheel(0, 60);
+      125 |   await settle(page);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/map-zoom.spec.ts:122:20
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-finish-20260930/mobile-test-results/map-zoom-reversing-the-whe-b5f97-ls-the-previous-equal-input-iPhone-Safari-WebKit-simulation/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-finish-20260930/mobile-test-results/map-zoom-reversing-the-whe-b5f97-ls-the-previous-equal-input-iPhone-Safari-WebKit-simulation/error-context.md
+
+  5) [iPhone Safari WebKit simulation] › tests/e2e/map-zoom.spec.ts:129:1 › returning to overview during zoom discards queued wheel input 
+
+    Error: mouse.wheel: Mouse wheel is not supported in mobile WebKit
+
+      137 |   const box = (await page.locator(".map-surface").boundingBox())!;
+      138 |   await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
+    > 139 |   await page.mouse.wheel(0, -60);
+          |                    ^
+      140 |   await expect(page.locator(".leaflet-zoom-anim")).toBeAttached();
+      141 |   await page.mouse.wheel(0, -60);
+      142 |   await page.getByRole("button", { name: "Japan overview", exact: true }).click();
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/map-zoom.spec.ts:139:20
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-finish-20260930/mobile-test-results/map-zoom-returning-to-over-063f6-discards-queued-wheel-input-iPhone-Safari-WebKit-simulation/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-finish-20260930/mobile-test-results/map-zoom-returning-to-over-063f6-discards-queued-wheel-input-iPhone-Safari-WebKit-simulation/error-context.md
+
+  5 failed
+    [iPhone Safari WebKit simulation] › tests/e2e/fuel-label.spec.ts:6:5 › touch › fuel label text toggles exactly once and never closes its panel 
+    [iPhone Safari WebKit simulation] › tests/e2e/map-home.spec.ts:240:1 › coincident Fukuoka and Saga summary anchors offer both regions instead of endless zoom 
+    [iPhone Safari WebKit simulation] › tests/e2e/map-zoom.spec.ts:41:1 › a second wheel pulse during animation is retained instead of swallowed 
+    [iPhone Safari WebKit simulation] › tests/e2e/map-zoom.spec.ts:117:1 › reversing the wheel during its animation cancels the previous equal input 
+    [iPhone Safari WebKit simulation] › tests/e2e/map-zoom.spec.ts:129:1 › returning to overview during zoom discards queued wheel input 
+  240 passed (1.7m)

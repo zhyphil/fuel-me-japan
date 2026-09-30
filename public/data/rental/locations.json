@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "transformationVersion": "m04-limited-times-1",
+  "count": 3,
+  "reviewDate": "2026-09-30",
+  "sources": [
+    {
+      "id": "rental-osm",
+      "owner": "OpenStreetMap contributors",
+      "url": "https://www.openstreetmap.org/copyright",
+      "termsUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "allowedUseAssessment": "ODBL_DERIVED",
+      "purpose": "那霸及新千岁两个门店参考点；ODbL衍生数据，提供本JSON下载。",
+      "attribution": "© OpenStreetMap contributors",
+      "refreshPolicy": "逐条复核；90天起需重新核对，不自动续期。",
+      "reviewDate": "2026-09-30",
+      "transformationVersion": "m04-limited-times-1"
+    },
+    {
+      "id": "rental-geofabrik",
+      "owner": "Geofabrik GmbH / OpenStreetMap contributors",
+      "url": "https://download.geofabrik.de/asia/japan-260929.osm.pbf",
+      "termsUrl": "https://download.geofabrik.de/",
+      "allowedUseAssessment": "ODBL_DISTRIBUTION",
+      "purpose": "分发已批准OSM原始快照；不使用瓦片图像。",
+      "attribution": "OpenStreetMap data distributed by Geofabrik",
+      "refreshPolicy": "逐条复核；90天起需重新核对，不自动续期。",
+      "reviewDate": "2026-09-30",
+      "transformationVersion": "m04-limited-times-1"
+    },
+    {
+      "id": "times-limited-facts",
+      "owner": "Times Mobility Co., Ltd.",
+      "url": "https://www.timescar-rental.com/en/",
+      "termsUrl": "https://www.timescar-rental.com/en/aboutlink/",
+      "allowedUseAssessment": "LIMITED_FACTS_MANUAL",
+      "purpose": "仅逐条核对三条门店身份及地址、一条福冈门店坐标与满油/可能要求收据的短事实；不是公司整库授权，不批量抓取，不复制网页文字、图片、地图或商标素材。",
+      "attribution": "门店事实与还车规则逐条核对：Times CAR RENTAL；摘要由Fuel Me Japan独立编写。",
+      "refreshPolicy": "逐条复核；90天起需重新核对，不自动续期。",
+      "reviewDate": "2026-09-30",
+      "transformationVersion": "m04-limited-times-1"
+    }
+  ],
+  "records": [
+    {
+      "id": "times-naha-airport",
+      "nameKey": "rcNaha",
+      "nameJa": "タイムズカー 那覇空港店",
+      "prefectureCode": "JP-47",
+      "lat": 26.2110555,
+      "lon": 127.6582094,
+      "addressJa": "沖縄県那覇市鏡水457-1",
+      "officialCheckUrl": "https://www.timescar-rental.com/en/okinawa/shop/4701/",
+      "positionSourceId": "rental-osm",
+      "osmId": 4716765290,
+      "companyId": "times",
+      "factSourceId": "times-limited-facts",
+      "checkedAt": "2026-09-30",
+      "positionKind": "SHOP_REFERENCE"
+    },
+    {
+      "id": "times-new-chitose-airport",
+      "nameKey": "rcChitose",
+      "nameJa": "タイムズカー 新千歳空港店",
+      "prefectureCode": "JP-01",
+      "lat": 42.8165023,
+      "lon": 141.678983,
+      "addressJa": "北海道千歳市柏台南2-1-4",
+      "officialCheckUrl": "https://www.timescar-rental.com/en/hokkaido/shop/0105/",
+      "positionSourceId": "rental-osm",
+      "osmId": 13042879292,
+      "companyId": "times",
+      "factSourceId": "times-limited-facts",
+      "checkedAt": "2026-09-30",
+      "positionKind": "SHOP_REFERENCE"
+    },
+    {
+      "id": "times-fukuoka-airport-international",
+      "nameKey": "rcFukuoka",
+      "nameJa": "タイムズカー 福岡空港国際線店",
+      "prefectureCode": "JP-40",
+      "lat": 33.580013935265356,
+      "lon": 130.44219502340152,
+      "addressJa": "福岡県福岡市博多区東那珂2-1-48",
+      "officialCheckUrl": "https://www.timescar-rental.com/en/fukuoka/shop/4034/",
+      "positionSourceId": "times-limited-facts",
+      "companyId": "times",
+      "factSourceId": "times-limited-facts",
+      "checkedAt": "2026-09-30",
+      "positionKind": "SHOP_REFERENCE"
+    }
+  ],
+  "rule": {
+    "companyId": "times",
+    "sourceId": "times-limited-facts",
+    "officialCheckUrl": "https://www.timescar-rental.com/en/agreement/gas.html",
+    "checkedAt": "2026-09-30",
+    "fullTank": "STANDARD_SUBJECT_TO_CONTRACT",
+    "receipt": "MAY_BE_REQUESTED"
+  },
+  "osm": {
+    "inputSha256": "c083bcad49fa77462f8f3c5cb5f4fda5f346f6f69f45075c61b71b4ac199ecdd",
+    "sourceDate": "2026-09-29",
+    "license": "ODbL-1.0",
+    "licenseUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
+    "noticeUrl": "/data/rental/NOTICE.txt",
+    "downloadUrl": "/data/rental/locations.json",
+    "excludedOsmIds": [
+      4926916121
+    ]
+  }
+}

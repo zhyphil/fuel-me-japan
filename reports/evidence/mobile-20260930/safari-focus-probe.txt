@@ -1,0 +1,54 @@
+tab {
+  tag: 'BODY',
+  text: '\n' +
+    '    Skip to contentFuel Me JapanMy FuelEN繁中한국어简中ไทยRefuelling guideJapan fuel s'
+}
+altTab { tag: 'A', text: 'FDMA safety advice ↗' }
+events [
+  {
+    type: 'pointerdown',
+    id: '',
+    tag: 'INPUT',
+    value: 'REGULAR',
+    related: undefined,
+    open: true,
+    checked: false
+  },
+  {
+    type: 'mousedown',
+    id: '',
+    tag: 'INPUT',
+    value: 'REGULAR',
+    related: undefined,
+    open: true,
+    checked: false
+  },
+  {
+    type: 'focusout',
+    id: '',
+    tag: 'SUMMARY',
+    value: undefined,
+    related: 'MAIN',
+    open: true,
+    checked: undefined
+  },
+  {
+    type: 'focusin',
+    id: 'main',
+    tag: 'MAIN',
+    value: undefined,
+    related: 'SUMMARY',
+    open: false,
+    checked: undefined
+  },
+  {
+    type: 'click',
+    id: 'find-fuel',
+    tag: 'SECTION',
+    value: undefined,
+    related: undefined,
+    open: false,
+    checked: undefined
+  }
+]
+selection { open: false, fuels: [ 'DIESEL' ] }

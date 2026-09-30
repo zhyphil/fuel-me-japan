@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-09-30T19:42:00.805809+00:00",
+  "checks": {
+    "fullUnit": 248,
+    "fullChromium": 196,
+    "data": 17,
+    "crossBrowserFuel": 20,
+    "priorMatrix": 247
+  },
+  "说明": "矩阵247项在最终焦点微任务补充前通过；此后只修改FuelSelection及焦点回归，重跑完整检查和20项WebKit/Chromium油种回归均通过。真实iPhone/Android未测。",
+  "sourceSha256": {
+    "src/components/FuelSelection.tsx": "8a39280054e7f39702580aa1aea3fae1f738f7b81a32f5b8f6a879c9aefa10cd",
+    "tests/e2e/fuel-label.spec.ts": "f3badc63d12b7bf3d527b298ef3ccd312d67fd9385a2390879a88cd2e082c3ee"
+  }
+}

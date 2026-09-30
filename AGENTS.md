@@ -2,7 +2,7 @@
 
 Read every file in `Fuel-Me-Japan-M0-Handoff-Package/00–10` (actual filenames are numbered 00 through 10) before changing scope. `10-CLAUDE-CODEX-HANDOFF.md` defines the handoff requirements.
 
-Current authorization: **Publish the user-reviewed M0.1 list, map and multi-fuel enhancements (including the fuel-label crash fix) to GitHub and fuel-me-japan.com, verify production, then proceed to M0.2 My Fuel within the frozen scope. M0.2 data integration and production promotion remain subject to verified sources, allowed-use assessment and safety-copy review.** No UHR game-engine rules apply here.
+Current authorization: **The user has now requested completion of all remaining tasks in TASKS.md: manual-only M0.2 cleanup, mobile/browser verification, existing data-refresh reliability, M0.3 refuelling guidance and M0.4 return-car refuelling. Finish checks, Chinese reports, commit/push and deployment to the existing production project. Stop adding features after M0.4. Vehicle-based recommendations and manufacturer data enquiries remain deferred.** No UHR game-engine rules apply here.
 
 2026-09-30 用户已授权 M0.1 首页改为找站地图：替换旧 hero 和四卡，保留五语言、地区选择、显式定位、列表与完整站点详情。全国概览只读取 manifest 及 registry；拖图只浏览已加载数据，不自动下载邻省。底图独立配置为 OSM 标准瓦片，披露外部浏览区域请求，保留可见署名；不预取、不离线缓存。此次调整不修改原 00–10 规格，不授权 M0.2、部署或新 POI 数据。
 
@@ -53,3 +53,17 @@ Current authorization: **Publish the user-reviewed M0.1 list, map and multi-fuel
 ## 最新手动油种发布授权
 
 2026-09-30 用户审核“我的用油”手动下拉菜单后明确要求“很好，代码commit，push，部署上线”。允许提交、推送当前已审核的 M0.2 界面、独立核验基础和手动显示油种设置，发布到既有 Cloudflare Pages 生产项目并验证。此授权覆盖此前该界面仅本地的限制；真实车型映射保持为空，来源与安全文案登记维持原审核状态，不宣称车型服务已完成验收，不进入 M0.3。
+
+## 最新范围调整：我的用油仅手动选择
+
+2026-09-30 用户明确：“目前只需要通过用户自己手动选择就行，现在还有什么任务要继续做的”。此要求覆盖原 M0.2 的车型自动核验目标及上方历史计划：当前只需要普通汽油／高辛烷值汽油／柴油的手动下拉选择、本地记忆、地图默认显示联动；地图仍允许多选。用户选择不代表车型核验结果。
+
+- 车型数据库、按配置或年款判断用油、丰田等厂家的车型资料与相关授权咨询暂缓，不再作为当前手动功能的阻塞项。
+- 下一项建议为清理现有车型核验界面、无数据提示、运行时请求及不再需要的依赖，再按手动功能重新验收。当前代码尚未完成该清理，不能仅因改了范围就记录为完成。
+- 保留日文油种识别标签和简短的现场核对提示；不扩展车型推荐。
+- 原 00–10 规格和历史报告保持原样，当前范围以本条及 TASKS.md 为准。此前的来源待审、车型核验人工审核报告作为暂缓功能的历史记录，不继续推动其对外咨询。
+- 本轮只更新范围与待办，不表示已执行清理、重新发布或开始 M0.3／M0.4。后续开发仍保持地图首页、五语言、UNKNOWN、定位隐私等既有要求。
+
+## 当前执行授权：完成剩余任务
+
+2026-09-30 用户明确要求“把该做的任务都做完”，授权按 TASKS.md 完成手动选油收尾、浏览器与移动布局验收、现有数据更新核验、M0.3 加油指引及 M0.4 还车前加油，并按已约定流程提交、推送和部署。此条覆盖上方历史阶段的暂不进入下一阶段或仅更新待办限制。保留地图首页、五语言、隐私、noindex、分析 no-op 和未知数据边界；不研究车型、不接入未经许可的即时油价。真实设备或外部许可缺失应如实记录，不冒充验收通过。完成 M0.4 后停止新增功能。

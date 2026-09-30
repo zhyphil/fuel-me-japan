@@ -1,0 +1,44 @@
+{
+  "scope": "仅M0.4还车前加油；保留已有M0.2/M0.3和地图改动。",
+  "status": "IMPLEMENTED_PENDING_ROOT_ACCEPTANCE",
+  "checks": {
+    "lint": "PASS",
+    "typecheck": "PASS",
+    "unit": {
+      "status": "PASS",
+      "files": 19,
+      "tests": 248,
+      "m04Tests": 35
+    },
+    "redTest": "明确NO供油被错误保留的断言先失败，修复后通过。",
+    "viteBundle": "PASS",
+    "build": "BLOCKED_SANDBOX_IPC",
+    "browser": "BLOCKED_SANDBOX_PORT",
+    "browserDiscovery": {
+      "status": "PASS",
+      "tests": 14
+    }
+  },
+  "blockers": [
+    "npm run build 的 tsx CLI 无法监听临时IPC pipe，EPERM；完整预渲染/provenance输出未获本轮成功证据。",
+    "Playwright preview无法监听127.0.0.1:4173，EPERM；14项定向浏览器用例未执行。",
+    "未执行真人设备或母语安全审查。"
+  ],
+  "releaseActions": "未提交、推送、部署或执行线上服务测试。",
+  "hashes": {
+    "src/App.tsx": "cdd9e69515b9b4c875183fb8809b2d478a4796ed6c3ced424a9b96494a2eb9a2",
+    "src/components/ReturnCar.tsx": "b243abc7bba5fca1c6cb3f5c10debb8846c48ed10356bfabd63a991788b2d7cc",
+    "src/lib/return-car.ts": "447afb31ddb08d940c43ee644182d878ea40108f486dfaadea96e82f6a7fcf99",
+    "src/styles.css": "bc7180673b940c4b3d7cc1c9c88773d7539a114dcb05e0f5666f34f768dd1470",
+    "scripts/prerender.tsx": "f90a8fdb541a8e14d24e850056bea9694ca1601d013a7c974e5e5c67fa3c431c",
+    "public/data/rental/locations.json": "094caee1875ed485d85f55d6d09aa26a359467e1389facf753514ac9bfac8766",
+    "public/data/rental/NOTICE.txt": "53dd402bea6696fcbe83ae349551560a1c7d62c20d05f0b0f8cc2cc00eedbc6d",
+    "tests/unit/return-car.test.ts": "968ff9267f6da2fa5614b431393b5a71f4bb11beeae16926daae620ded3de4e0",
+    "tests/e2e/return-car.spec.ts": "ff71dd9bf3eb36c9cf768c846c38f56b20496cf40c80439c44455fa9a60c4ef5",
+    "src/locales/en.json": "f38a9383619c49584a386172890bf970f46ab65348e464e070fa9f16982da1da",
+    "src/locales/zh-Hant.json": "489269f863377e27fdde2cdd51cf3b05e42a2f31da0234c995baa8aa5a98828b",
+    "src/locales/ko.json": "f17fff7a46049cf3871b4f9136fd36fd01c6d549fe74ad5c8dc73f98824f0373",
+    "src/locales/zh-Hans.json": "152b8af0f2cc8709178b9ecb54a24d3dc938c266b01f47cb330ea02f7eec79a1",
+    "src/locales/th.json": "43298aee34493a589412466b1ce0c0ff92ebf889a4720d3cd3b49b74443808f0"
+  }
+}

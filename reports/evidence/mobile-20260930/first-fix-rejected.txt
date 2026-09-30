@@ -1,0 +1,174 @@
+[WebServer] (node:11704) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+
+Running 6 tests using 2 workers
+
+(node:11707) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:11708) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/6] [iPhone Safari WebKit simulation] › tests/e2e/fuel-label.spec.ts:6:5 › mouse › fuel label text toggles exactly once and never closes its panel
+[2/6] [iPhone Safari WebKit simulation] › tests/e2e/fuel-label.spec.ts:6:5 › touch › fuel label text toggles exactly once and never closes its panel
+  1) [iPhone Safari WebKit simulation] › tests/e2e/fuel-label.spec.ts:6:5 › touch › fuel label text toggles exactly once and never closes its panel 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('#display-fuel')
+    Expected: ""
+    Received: serializes to the same string
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('#display-fuel') with timeout 5000ms
+      - waiting for locator('#display-fuel')
+        14 × locator resolved to <details id="display-fuel" class="fuel-selection">…</details>
+           - unexpected value "null"
+
+
+      21 |           await page.mouse.up();
+      22 |         }
+    > 23 |         await expect(panel).toHaveAttribute("open", "");
+         |                             ^
+      24 |       };
+      25 |       const selectText = async (index: number) => {
+      26 |         const box = await labels.nth(index).boundingBox();
+        at pressAt (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-label.spec.ts:23:29)
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-label.spec.ts:34:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-finish-20260930/mobile-test-results/fuel-label-touch-fuel-labe-7e523--and-never-closes-its-panel-iPhone-Safari-WebKit-simulation/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-finish-20260930/mobile-test-results/fuel-label-touch-fuel-labe-7e523--and-never-closes-its-panel-iPhone-Safari-WebKit-simulation/error-context.md
+
+
+(node:11733) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[3/6] [iPhone Safari WebKit simulation] › tests/e2e/fuel-label.spec.ts:59:1 › fuel panel closes when keyboard focus actually leaves, and Escape restores summary focus
+  2) [iPhone Safari WebKit simulation] › tests/e2e/fuel-label.spec.ts:6:5 › mouse › fuel label text toggles exactly once and never closes its panel 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('#display-fuel')
+    Expected: ""
+    Received: serializes to the same string
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('#display-fuel') with timeout 5000ms
+      - waiting for locator('#display-fuel')
+        14 × locator resolved to <details id="display-fuel" class="fuel-selection">…</details>
+           - unexpected value "null"
+
+
+      16 |           await page.mouse.down();
+      17 |           // Exercise a held label press, before the native click/focus activation.
+    > 18 |           await expect(panel).toHaveAttribute("open", "");
+         |                               ^
+      19 |           await page.waitForTimeout(150);
+      20 |           await expect(panel).toHaveAttribute("open", "");
+      21 |           await page.mouse.up();
+        at pressAt (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-label.spec.ts:18:31)
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-label.spec.ts:41:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-finish-20260930/mobile-test-results/fuel-label-mouse-fuel-labe-0022c--and-never-closes-its-panel-iPhone-Safari-WebKit-simulation/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-finish-20260930/mobile-test-results/fuel-label-mouse-fuel-labe-0022c--and-never-closes-its-panel-iPhone-Safari-WebKit-simulation/error-context.md
+
+
+(node:11752) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[4/6] [Android Chrome Chromium simulation] › tests/e2e/fuel-label.spec.ts:6:5 › mouse › fuel label text toggles exactly once and never closes its panel
+(node:11753) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[5/6] [Android Chrome Chromium simulation] › tests/e2e/fuel-label.spec.ts:6:5 › touch › fuel label text toggles exactly once and never closes its panel
+  3) [Android Chrome Chromium simulation] › tests/e2e/fuel-label.spec.ts:6:5 › touch › fuel label text toggles exactly once and never closes its panel 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('#display-fuel')
+    Expected: ""
+    Received: serializes to the same string
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('#display-fuel') with timeout 5000ms
+      - waiting for locator('#display-fuel')
+        14 × locator resolved to <details id="display-fuel" class="fuel-selection">…</details>
+           - unexpected value "null"
+
+
+      21 |           await page.mouse.up();
+      22 |         }
+    > 23 |         await expect(panel).toHaveAttribute("open", "");
+         |                             ^
+      24 |       };
+      25 |       const selectText = async (index: number) => {
+      26 |         const box = await labels.nth(index).boundingBox();
+        at pressAt (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-label.spec.ts:23:29)
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-label.spec.ts:41:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-finish-20260930/mobile-test-results/fuel-label-touch-fuel-labe-7e523--and-never-closes-its-panel-Android-Chrome-Chromium-simulation/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-finish-20260930/mobile-test-results/fuel-label-touch-fuel-labe-7e523--and-never-closes-its-panel-Android-Chrome-Chromium-simulation/error-context.md
+
+
+(node:11770) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[6/6] [Android Chrome Chromium simulation] › tests/e2e/fuel-label.spec.ts:59:1 › fuel panel closes when keyboard focus actually leaves, and Escape restores summary focus
+  4) [Android Chrome Chromium simulation] › tests/e2e/fuel-label.spec.ts:6:5 › mouse › fuel label text toggles exactly once and never closes its panel 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('#display-fuel')
+    Expected: ""
+    Received: serializes to the same string
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('#display-fuel') with timeout 5000ms
+      - waiting for locator('#display-fuel')
+        14 × locator resolved to <details id="display-fuel" class="fuel-selection">…</details>
+           - unexpected value "null"
+
+
+      16 |           await page.mouse.down();
+      17 |           // Exercise a held label press, before the native click/focus activation.
+    > 18 |           await expect(panel).toHaveAttribute("open", "");
+         |                               ^
+      19 |           await page.waitForTimeout(150);
+      20 |           await expect(panel).toHaveAttribute("open", "");
+      21 |           await page.mouse.up();
+        at pressAt (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-label.spec.ts:18:31)
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-label.spec.ts:41:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-finish-20260930/mobile-test-results/fuel-label-mouse-fuel-labe-0022c--and-never-closes-its-panel-Android-Chrome-Chromium-simulation/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-finish-20260930/mobile-test-results/fuel-label-mouse-fuel-labe-0022c--and-never-closes-its-panel-Android-Chrome-Chromium-simulation/error-context.md
+
+
+  4 failed
+    [iPhone Safari WebKit simulation] › tests/e2e/fuel-label.spec.ts:6:5 › mouse › fuel label text toggles exactly once and never closes its panel 
+    [iPhone Safari WebKit simulation] › tests/e2e/fuel-label.spec.ts:6:5 › touch › fuel label text toggles exactly once and never closes its panel 
+    [Android Chrome Chromium simulation] › tests/e2e/fuel-label.spec.ts:6:5 › mouse › fuel label text toggles exactly once and never closes its panel 
+    [Android Chrome Chromium simulation] › tests/e2e/fuel-label.spec.ts:6:5 › touch › fuel label text toggles exactly once and never closes its panel 
+  2 passed (13.4s)

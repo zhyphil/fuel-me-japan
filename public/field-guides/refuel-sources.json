@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "refuel-guide",
+  "reviewDate": "2026-09-30",
+  "transformationVersion": "field-guide-m03-1",
+  "reviewNote": "根代理已核对公开来源与使用条款；本记录不代表已完成独立安全文案审查或母语人工审核。文案为 Fuel Me Japan 原创事实性短提示与翻译，不复制第三方段落、图片或维修说明。",
+  "sources": [
+    {
+      "id": "fdma-safety",
+      "owner": "日本总务省消防庁",
+      "sourceURL": "https://www.fdma.go.jp/laws/tutatsu/post1258/",
+      "publicURL": "https://www.fdma.go.jp/laws/tutatsu/post1258/",
+      "purpose": "核对熄火、禁止火源、消除静电及遵循现场告示等核心安全事实。",
+      "termsURL": "https://www.fdma.go.jp/about/others/post3.html",
+      "allowedUseAssessment": "按消防庁网站 PDL1.0 条款，对机构正文中的安全事实独立概括与翻译，署名并注明加工；排除另行标注的第三方内容，不转载图片。",
+      "attribution": "Fuel Me Japan 根据消防庁资料整理与翻译。",
+      "refreshPolicy": "每次修改对应提示或发布前重新核对来源与条款；至少每年核对一次。无法确认时保留上次已核对文案并记录阻塞，不声称来源实时更新。",
+      "reviewDate": "2026-09-30",
+      "transformationVersion": "field-guide-m03-1"
+    },
+    {
+      "id": "fdma-self-service",
+      "owner": "日本总务省消防庁",
+      "sourceURL": "https://www.fdma.go.jp/publication/ugoki/items/190507-3.pdf",
+      "publicURL": "https://www.fdma.go.jp/publication/ugoki/items/190507-3.pdf",
+      "purpose": "2007年5月《消防の動き》印刷页10–11，方法见印刷页11；核对先触静电垫、喷嘴充分插入及持续握持、自动停枪后结束、不补加、过早反复停枪请店员处理及归还喷嘴。文件名不作为出版年份。",
+      "termsURL": "https://www.fdma.go.jp/about/others/post3.html",
+      "allowedUseAssessment": "按消防庁网站 PDL1.0 条款，仅概括并翻译消防庁正文所需的少量安全事实；不发布 PDF、图片、商标、第三方素材或调查数据。",
+      "attribution": "Fuel Me Japan 根据消防庁资料整理与翻译。",
+      "refreshPolicy": "每次修改步骤或发布前重新核对原文与条款；至少每年核对一次。历史资料保留真实出版年份，不标为实时指引。",
+      "reviewDate": "2026-09-30",
+      "transformationVersion": "field-guide-m03-1"
+    },
+    {
+      "id": "jaf-label-crosscheck",
+      "owner": "日本自動車連盟（JAF）",
+      "sourceURL": "https://jaf.or.jp/common/kuruma-qa/category-drive/subcategory-knowledge/faq258",
+      "publicURL": "https://jaf.or.jp/",
+      "purpose": "仅交叉核对レギュラー／ハイオク／軽油的对应含义、軽自動車不代表使用柴油及一般现场安全事实。",
+      "termsURL": "https://jaf.or.jp/common/websitepolicy",
+      "allowedUseAssessment": "未取得 JAF 转载许可，不将网站作为获准复用数据集，不复制其原文、页面、图片或表达。只核对普遍事实并自行写短提示；用户界面仅链接 JAF 首页，详细 URL 仅作出处记录，不向外发送咨询。",
+      "attribution": "一般事实交叉核对机构：JAF；产品提示由 Fuel Me Japan 独立撰写，不代表 JAF 授权或背书。",
+      "refreshPolicy": "每次变更对应提示或公开链接前核对事实与条款；至少每年核对一次。未经许可不改为深链或复制资料。",
+      "reviewDate": "2026-09-30",
+      "transformationVersion": "field-guide-m03-1"
+    },
+    {
+      "id": "jaf-misfuel-crosscheck",
+      "owner": "日本自動車連盟（JAF）",
+      "sourceURL": "https://jaf.or.jp/common/car-trouble-qa/gasoline/refueling/faq78",
+      "publicURL": "https://jaf.or.jp/",
+      "purpose": "仅交叉核对误加后不要启动引擎或打开车辆电源、应联系店员或租车公司寻求专业协助的事实，不提供维修指导。",
+      "termsURL": "https://jaf.or.jp/common/websitepolicy",
+      "allowedUseAssessment": "未取得 JAF 转载许可，不复制原文、图片或维修处理流程；仅据核对的通用事实独立撰写一句保守提示。产品公开链接仅为 JAF 首页，详细页面仅用于出处记录。",
+      "attribution": "一般事实交叉核对机构：JAF；产品提示由 Fuel Me Japan 独立撰写，不代表 JAF 授权或背书。",
+      "refreshPolicy": "每次变更误加提示或公开链接前核对事实与条款；至少每年核对一次。不因无法访问来源而推断新的处理方法。",
+      "reviewDate": "2026-09-30",
+      "transformationVersion": "field-guide-m03-1"
+    }
+  ]
+}

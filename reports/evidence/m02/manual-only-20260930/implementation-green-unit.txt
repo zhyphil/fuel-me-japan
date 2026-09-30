@@ -1,0 +1,13 @@
+
+> fuel-me-japan@0.0.0 test
+> vitest run tests/unit/my-fuel.test.ts
+
+
+ RUN  v5.0.2 /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan
+
+
+ Test Files  1 passed (1)
+      Tests  5 passed (5)
+   Start at  21:02:43
+   Duration  136ms (transform 61%, import 28%, tests 9%, worker 2%)
+

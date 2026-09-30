@@ -1,0 +1,31 @@
+[WebServer] (node:4566) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 18 tests using 2 workers
+
+(node:4567) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:4568) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/list-hover.spec.ts:66:1 › rapid row changes keep only the last preview, and leaving a pending row cancels it (1.1s)
+  ✓   2 tests/e2e/list-hover.spec.ts:52:1 › hovering a list station zooms its marker into the overall map without opening details or stealing focus (1.3s)
+  ✓   4 tests/e2e/list-hover.spec.ts:111:1 › keyboard focus previews a station and clicking still opens details then restores the card focus (515ms)
+  ✓   3 tests/e2e/list-hover.spec.ts:96:1 › hovered coincident stations have their own marker and are excluded from the remaining cluster count (841ms)
+  ✓   5 tests/e2e/list-hover.spec.ts:125:1 › hover does not overwrite the full-map view saved before entering the list (878ms)
+  ✓   6 tests/e2e/list-hover.spec.ts:134:1 › changing query or area cancels an obsolete preview without fetching location (958ms)
+  ✓   7 tests/e2e/list-hover.spec.ts:156:1 › opening a different detail takes precedence over an uncommitted hover (633ms)
+  ✓   8 tests/e2e/list-hover.spec.ts:168:1 › touch movement does not trigger hover zoom (630ms)
+  ✓   9 tests/e2e/list-hover.spec.ts:178:1 › closing cluster members does not revive an earlier hover preview (886ms)
+ZOOM_MARKER_EVIDENCE {"added":0,"removed":0,"before":2,"after":2,"comparable":2,"retained":2,"note":"相同地图标记身份在一次键盘平移后是否保留同一DOM元素。"}
+  ✓  11 tests/e2e/map-zoom.spec.ts:67:1 › small map pans retain existing marker elements instead of rebuilding the layer (753ms)
+ZOOM_WHEEL_EVIDENCE {"initial":5.250003499950653,"singleDelta":0.24999694648974646,"pairDelta":0.4999957876136518,"note":"固定视口与东京818条真实记录；离线瓦片；第二次等量输入发生在第一次动画中。"}
+  ✓  10 tests/e2e/map-zoom.spec.ts:41:1 › a second wheel pulse during animation is retained instead of swallowed (2.2s)
+  ✓  12 tests/e2e/map-zoom.spec.ts:99:1 › rapid zoom buttons retain each click and queued reverse input (2.2s)
+  ✓  13 tests/e2e/map-zoom.spec.ts:117:1 › reversing the wheel during its animation cancels the previous equal input (1.4s)
+  ✓  15 tests/e2e/map-zoom.spec.ts:149:1 › cluster zoom respects reduced motion and updates that preference without reloading (1.2s)
+  ✓  14 tests/e2e/map-zoom.spec.ts:129:1 › returning to overview during zoom discards queued wheel input (1.7s)
+  ✓  16 tests/e2e/map-zoom.spec.ts:177:1 › native two-finger pinch still zooms the mobile map (1.2s)
+  ✓  18 tests/e2e/map-zoom.spec.ts:224:1 › an old cluster cannot override returning to overview during animation (1.4s)
+  ✓  17 tests/e2e/map-zoom.spec.ts:199:1 › queued controls clamp at both zoom limits and can reverse away from them (3.6s)
+
+  18 passed (13.2s)

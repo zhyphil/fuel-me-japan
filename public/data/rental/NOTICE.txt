@@ -1,0 +1,20 @@
+M0.4 三条 Times CAR RENTAL 门店的有限事实记录
+核对日期：2026-09-30。转换版本：m04-limited-times-1。
+
+© OpenStreetMap contributors — https://www.openstreetmap.org/copyright
+那霸 n4716765290、新千岁 n13042879292 的OSM门店参考点为ODbL 1.0衍生数据。
+许可：https://opendatacommons.org/licenses/odbl/1-0/
+可机器读取的衍生数据库下载：/data/rental/locations.json
+来源分发：Geofabrik Japan 260929 PBF。
+原始SHA256：c083bcad49fa77462f8f3c5cb5f4fda5f346f6f69f45075c61b71b4ac199ecdd
+转换：osmium tags-filter nwr/amenity=car_rental 后导出并按记录选择两点，与官方门店地址核对。
+排除旧千岁点 n4926916121（旧地址1-3-2），不沿用其营业时间。
+
+福冈点是逐条核对官方门店导航链接中的一条坐标事实，不是OSM点。
+Times来源仅用于三条身份/地址、福冈单条坐标和一条还车规则的有限事实核对。
+这不是Times整库许可，也不改变主source-registry中rental-guidance的PENDING状态。
+不复制网页原文、图片、地图或品牌素材，不批量抓取公司数据库。
+用户界面的Times外链只使用 https://www.timescar-rental.com/en/ ，文本含Times CAR RENTAL。
+详细审查URL只保留在本数据来源记录中。标准满油规则及可能要求收据以本人预订/合同为准。
+坐标是门店参考点，不是已核实的车辆入口；门店、通道和实际还车安排应自行核对。
+逐条复核，满90天提示重新核对，不自动更新checkedAt。未收录门店没有覆盖保证。

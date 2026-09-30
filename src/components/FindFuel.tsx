@@ -210,6 +210,14 @@ export function FindFuel({ locale, selectedFuels, onChangeFuels: changeFuels, on
     if (previewPending.current) clearTimeout(previewPending.current.timer);
     previewPending.current = null;
   }
+  function onListScroll() {
+    const pending = previewPending.current;
+    if (!pending) return;
+    // Browser scroll-to-view can fire after pointermove. Keep the new request
+    // if the pointer still rests on its row, while cancelling rows scrolled away.
+    const row = document.getElementById(`list-${pending.id}`)?.closest(".station-row");
+    if (!row?.matches(":hover")) cancelPreviewRequest();
+  }
   function openStation(station: Station, kind: "map" | "list" | "members" | "thumbnail") {
     cancelPreviewRequest();
     origin.current = { kind, id: station.id, view };
@@ -285,7 +293,7 @@ export function FindFuel({ locale, selectedFuels, onChangeFuels: changeFuels, on
     {favoritesActive && favorites.missing.length > 0 && <div className="favorite-recovery"><p>{t.lmMissing}</p><ul>{favorites.missing.map((entry) => <li key={entry.id}><span>{entry.id} · {entry.partition}</span><FavoriteButton locale={locale} name={entry.id} saved onClick={() => toggleFavorite(entry)} /></li>)}</ul><button type="button" className="text-button" onClick={favorites.retry}>{t.ffRetry}</button></div>}
     <div className={`map-workspace${drawer ? " has-drawer" : ""}${hasPriceStack ? " has-price-stack" : ""}${view === "list" && !drawer ? " show-list" : ""}`}>
       <div className="map-stage"><FuelMap ref={map} previewId={previewId} onTileProvider={setMapTileUrl} layout={drawer ? "detail" : view} locale={locale} manifest={activeManifest} stations={filtered} selectedFuels={selectedFuels} priceViews={pricesByFuel} overview={overview} viewRevision={viewRevision} selectedId={selected?.id} onPrefecture={choosePrefecture} onRegions={(codes) => { setRegionOptions(codes); setView("list"); }} onStation={(station) => openStation(station, "map")} onMembers={(stations) => { setSelected(null); setMembers(stations); }} />{locationButton}{filterButton}</div>
-      {view === "list" && !drawer && <div className="map-list-panel" onScroll={cancelPreviewRequest}>
+      {view === "list" && !drawer && <div className="map-list-panel" onScroll={onListScroll}>
         {listMode === "cheapest" && !overview && selectedFuels.length > 1 && <div className="price-sort-fuel"><label htmlFor="price-sort-fuel">{t.mfSortFuel}</label><select id="price-sort-fuel" value={selectedFuel} onChange={(event) => { const fuel = event.target.value; if (isFuelType(fuel) && selectedFuels.includes(fuel)) changeFuels([fuel, ...selectedFuels.filter((item) => item !== fuel)]); }}>{selectedFuels.map((fuel) => <option key={fuel} value={fuel}>{fuelDisplayName(fuel, locale)}</option>)}</select></div>}
         {listMode === "cheapest" && !overview && status === "ready" && <p className="list-mode-help" role="status">{t[cheapest.ranking === "ranked" ? "lmPriceRanked" : cheapest.ranking === "no-quotes" ? "lmNoPrices" : "lmNotComparable"]}</p>}
         {listMode === "nearest" && (scope !== "nearby" || normalStatus !== "ready") && <p className="list-mode-help">{t.lmNearestHint}</p>}

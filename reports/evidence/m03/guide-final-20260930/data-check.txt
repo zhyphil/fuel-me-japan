@@ -1,0 +1,27 @@
+
+> fuel-me-japan@0.0.0 test:data
+> python3 -m unittest discover -s tests/data -v
+
+test_conditional_attributes_remain_unknown (test_importer.OsmTests.test_conditional_attributes_remain_unknown) ... ok
+test_count_gate_bootstrap_all_partitions_and_manual_reason (test_importer.OsmTests.test_count_gate_bootstrap_all_partitions_and_manual_reason) ... ok
+test_osm_requires_the_available_publisher_checksum (test_importer.OsmTests.test_osm_requires_the_available_publisher_checksum) ... ok
+test_service_never_collapses_mixed_or_conditional_evidence (test_importer.OsmTests.test_service_never_collapses_mixed_or_conditional_evidence) ... ok
+test_typed_dedup_surface_point_unknown_and_repairs (test_importer.OsmTests.test_typed_dedup_surface_point_unknown_and_repairs) ... ok
+test_unknown_mapping_and_conflicting_evidence (test_importer.OsmTests.test_unknown_mapping_and_conflicting_evidence) ... ok
+test_exact_47_by_3_units_dates_and_ignore_kerosene (test_importer.PriceTests.test_exact_47_by_3_units_dates_and_ignore_kerosene) ... ok
+test_failed_import_keeps_manifest_and_registry (test_importer.PriceTests.test_failed_import_keeps_manifest_and_registry) ... ok
+test_failed_pointer_promotion_restores_registry_and_previous_manifest (test_importer.PriceTests.test_failed_pointer_promotion_restores_registry_and_previous_manifest) ... ok
+test_http403_never_replaces_local_or_published_data (test_importer.PriceTests.test_http403_never_replaces_local_or_published_data) ... ok
+test_invalid_headers_missing_prefecture_nonnumeric_and_zero (test_importer.PriceTests.test_invalid_headers_missing_prefecture_nonnumeric_and_zero) ... ok
+test_schema_missing_duplicate_nan_and_downgrade (test_importer.PriceTests.test_schema_missing_duplicate_nan_and_downgrade) ... ok
+test_source_proof_hash_domain_and_dates (test_importer.PriceTests.test_source_proof_hash_domain_and_dates) ... ok
+test_index_denial_emits_blocked_report_and_keeps_both_pointers (test_refresh_sources.RefreshFailureEvidenceTests.test_index_denial_emits_blocked_report_and_keeps_both_pointers) ... BLOCKED: HTTP Error 403: Forbidden. No source substitution and no deployment; retain the published snapshot.
+ok
+test_changed_layout_stops_instead_of_guessing_filename (test_refresh_sources.SourceDiscoveryTests.test_changed_layout_stops_instead_of_guessing_filename) ... ok
+test_osm_uses_dated_publisher_link_not_latest_alias_or_future_file (test_refresh_sources.SourceDiscoveryTests.test_osm_uses_dated_publisher_link_not_latest_alias_or_future_file) ... ok
+test_prices_reject_foreign_urls_wrong_dataset_and_invalid_dates (test_refresh_sources.SourceDiscoveryTests.test_prices_reject_foreign_urls_wrong_dataset_and_invalid_dates) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.275s
+
+OK

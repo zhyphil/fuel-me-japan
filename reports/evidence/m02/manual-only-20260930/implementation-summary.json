@@ -1,0 +1,123 @@
+{
+  "scope": "仅 M0.2 手动选油全链路清理",
+  "node": "v24.18.0",
+  "modified": [
+    "src/components/MyFuel.tsx",
+    "src/styles.css",
+    "scripts/prerender.tsx",
+    "README.md",
+    "tests/e2e/my-fuel.spec.ts",
+    "tests/e2e/my-fuel-preference.spec.ts",
+    "src/locales/en.json",
+    "src/locales/zh-Hant.json",
+    "src/locales/ko.json",
+    "src/locales/zh-Hans.json",
+    "src/locales/th.json"
+  ],
+  "added": [
+    "tests/unit/my-fuel.test.ts"
+  ],
+  "deleted": [
+    "src/lib/vehicle-data.ts",
+    "src/lib/vehicle-fuel.ts",
+    "src/lib/vehicle-sources.ts",
+    "tests/fixtures/vehicles.ts",
+    "tests/unit/vehicle-fuel.test.ts",
+    "public/data/vehicles/manifest.json",
+    "public/data/vehicles/mappings-m02-empty-1.json",
+    "public/data/vehicles/registry-m02-empty-1.json"
+  ],
+  "checks": {
+    "red_component": {
+      "status": "EXPECTED_FAILURE",
+      "exitCode": 1,
+      "failed": 5,
+      "log": "red-unit.log",
+      "note": "清理前，五语言组件渲染均因仍存在车型状态节点而失败；这是真实行为断言失败。"
+    },
+    "green_component": {
+      "status": "PASS",
+      "exitCode": 0,
+      "passed": 5,
+      "log": "green-unit.log"
+    },
+    "lint": {
+      "status": "PASS",
+      "exitCode": 0,
+      "log": "lint.log"
+    },
+    "typecheck": {
+      "status": "PASS",
+      "exitCode": 0,
+      "log": "typecheck.log"
+    },
+    "unit": {
+      "status": "PASS",
+      "exitCode": 0,
+      "files": 17,
+      "passed": 188,
+      "log": "unit.log"
+    },
+    "npm_build": {
+      "status": "BLOCKED_ENVIRONMENT",
+      "exitCode": 1,
+      "log": "build.log",
+      "note": "Vite 已打包通过，但 tsx CLI 创建 IPC 管道遭沙箱 EPERM；标准 npm run build 不能记作通过。"
+    },
+    "prerender_without_ipc": {
+      "status": "PASS",
+      "exitCode": 0,
+      "command": "node --import tsx scripts/prerender.tsx",
+      "log": "prerender.log",
+      "note": "对同一份 Vite 产物执行同一预渲染脚本，保留来源和 noindex 校验。"
+    },
+    "target_e2e_collection": {
+      "status": "PASS",
+      "exitCode": 0,
+      "tests": 17,
+      "files": 2,
+      "log": "target-e2e-list.log",
+      "note": "先发现测试直接导入 JSON 的 ESM 属性错误，改用现有 readFileSync 方式后收集通过；不是浏览器执行通过。"
+    },
+    "target_e2e_execution": {
+      "status": "BLOCKED_ENVIRONMENT",
+      "exitCode": 1,
+      "log": "target-e2e.log",
+      "note": "沙箱禁止本地 preview 监听 127.0.0.1:4173；浏览器用例未执行，无交互或网络请求行为 PASS。"
+    },
+    "artifact_and_reference_audit": {
+      "status": "PASS",
+      "note": "源码调用链无车型加载/解析/匹配及表单状态残留，public 和 dist 无车型数据或车型溯源；bundle 无车型请求路径；五语言 noindex 保留；历史报告 diff 与起始快照一致。"
+    }
+  },
+  "fileSha256": {
+    "src/components/MyFuel.tsx": "6bbef11e0e0aea910fa8ce88f3a11e93348908a2b7798500aef37b56e45f15ad",
+    "src/styles.css": "1fe59b66eb517c393f2fec77fa53ec3dc225efe5cfedea0ab6c2aa2aa63bada6",
+    "scripts/prerender.tsx": "6736207aea718c6c110b6733743e7b658709c2483cc62bd90bf1e14e23e3f189",
+    "README.md": "f08297a58c656c84cf2542190e11e9d61b784a8e6044c8b0a7b15f6ab1549c87",
+    "tests/e2e/my-fuel.spec.ts": "79210b78ef8079e2711f0cf94ea67e3b0720a23e6d35593940a9046483d6b570",
+    "tests/e2e/my-fuel-preference.spec.ts": "99518a0014cc7b8bea5efeef3dc5a2133a236698db4ad4dd2e740a3f94f9957e",
+    "src/locales/en.json": "e6df5dcb70192b3507ba2f62020e28423e055da9d67caa7fbe4e480c3ad9d87f",
+    "src/locales/zh-Hant.json": "ca4b4ff932a6f9bd7e3f4e02ec522d85f3a4fb97afcd631ca7fe89d6ede75340",
+    "src/locales/ko.json": "fa2e59c1a3ad1b7a8791554d69626d1ebb35344564630e7077c549a5cd3a1505",
+    "src/locales/zh-Hans.json": "63ed6e24e27181df17dce5cfb251a0ce7ead892be1e1806f19aa01003378bdac",
+    "src/locales/th.json": "652e2fafcbf3003402cc35fa8ffe553f8524d9cad3e4a069842058d5d88b1780",
+    "tests/unit/my-fuel.test.ts": "1d53390296eea89e3c771cf53100c7e0c1ba65cf82f0827305896c3c557375cb"
+  },
+  "notPerformed": [
+    "完整浏览器套件",
+    "真实设备验收",
+    "外部服务测试",
+    "commit",
+    "push",
+    "部署"
+  ],
+  "preserved": [
+    "已有 Safari select height:44px 修复及尺寸断言",
+    "本地偏好、旧单选兼容、地图多选与无存储兜底",
+    "dialog Escape、关闭与焦点恢复实现",
+    "五语言及三种日文油种标签和现场提醒",
+    "生产 OSM/price 数据、原始 00–10 规格、历史 reports",
+    "地图业务、定位边界、analytics no-op、noindex"
+  ]
+}

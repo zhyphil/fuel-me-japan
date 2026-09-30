@@ -21,6 +21,7 @@ for (const mode of ["mouse", "touch"] as const) {
           await page.mouse.up();
         }
         await expect(panel).toHaveAttribute("open", "");
+        await expect.poll(() => panel.evaluate(node => node.contains(document.activeElement))).toBe(true);
       };
       const selectText = async (index: number) => {
         const box = await labels.nth(index).boundingBox();
@@ -51,6 +52,9 @@ for (const mode of ["mouse", "touch"] as const) {
       await expect(inputs.nth(2)).toBeChecked();
       await selectText(0);
       await expect(panel.locator("input:checked")).toHaveCount(2);
+      await page.keyboard.press("Escape");
+      await expect(panel).not.toHaveAttribute("open", "");
+      await expect(panel.locator("summary")).toBeFocused();
       await expect(page.locator("#find-title")).toBeVisible();
     });
   });

@@ -1,0 +1,84 @@
+{
+  "date": "2026-09-30",
+  "status": "LOCAL_FIX_VERIFIED_DATA_BLOCKED",
+  "baselineCommit": "6e0b98948e6bc22177db2fb624e79cf77419669a",
+  "说明": "本轮完成 Safari 原生下拉框高度修复、五语言小屏检查、机器辅助安全文案核对及精确来源候选审查；未提交、推送、部署或进入 M0.3。",
+  "complexity": "NORMAL",
+  "修改文件": [
+    "src/styles.css",
+    "tests/e2e/my-fuel-preference.spec.ts"
+  ],
+  "checks": {
+    "lint": "PASS",
+    "typecheck": "PASS",
+    "build": "PASS",
+    "unitTests": 247,
+    "chromiumBrowserTests": 179,
+    "browserFailures": 0,
+    "skipped": 0,
+    "flaky": 0,
+    "nativeSafari": {
+      "version": "26.6.2",
+      "platform": "macOS",
+      "locale": "zh-Hans",
+      "status": "PASS",
+      "已操作": [
+        "打开面板及三种原生油种选项",
+        "选择柴油后地图同步",
+        "刷新后柴油偏好保留",
+        "Escape 关闭后焦点回到入口",
+        "修复后下拉框恢复标准高度",
+        "修复后选择高辛烷值汽油并恢复普通汽油"
+      ],
+      "限制": "实际 Mac Safari 界面检查；不是 iOS Safari 或真实手机验收，未运行 Safari 自动化套件。"
+    },
+    "mobileViewport": {
+      "engine": "Chromium",
+      "widths": [
+        320,
+        1280
+      ],
+      "locales": [
+        "en",
+        "zh-Hant",
+        "ko",
+        "zh-Hans",
+        "th"
+      ],
+      "status": "PASS",
+      "说明": "检查真实空数据界面、无横向溢出、标签、关闭焦点和手动偏好；长内容在面板内滚动。"
+    },
+    "physicalPhone": "NOT_TESTED",
+    "webkitAutomation": "NOT_RUN"
+  },
+  "sourceReview": {
+    "status": "BLOCKED_SOURCE_APPROVAL_AND_EXACT_SCOPE",
+    "candidateCount": 3,
+    "productionMappingCount": 0,
+    "evidence": "evidence/m02/acceptance-20260930/vehicle-candidates.json"
+  },
+  "safetyCopy": {
+    "status": "AI_PRECHECK_COMPLETE_HUMAN_REVIEW_PENDING",
+    "copyVersion": "my-fuel-1",
+    "changed": false,
+    "productionApproval": "PENDING_REVIEW",
+    "evidence": "evidence/m02/acceptance-20260930/safety-copy-precheck.json"
+  },
+  "保护": {
+    "startedAt": "2026-09-30T18:24:41.092653+00:00",
+    "finishedAt": "2026-09-30T18:25:04.102417+00:00",
+    "exitCode": 0,
+    "保护文件数量": 84,
+    "保护文件变化": [],
+    "历史截图恢复": 11,
+    "历史截图核对": 161,
+    "源码与新数据快照文件数": 91,
+    "说明": "本轮检查 Safari 原生下拉框高度修复与既有功能；自动浏览器套件使用 Chromium，不代表真实手机或母语人工审核。"
+  },
+  "deployment": "NOT_DEPLOYED",
+  "下一步": [
+    "为首批真实车型确认来源允许使用依据及精确车辆身份与生产期识别方式。",
+    "按待审快照完成五语言母语安全文案审核与真实手机操作确认。",
+    "上述 M0.2 验收缺口闭合后，再进入 M0.3。"
+  ]
+}
