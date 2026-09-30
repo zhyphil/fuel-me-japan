@@ -46,5 +46,13 @@
     "未进行 Safari 或真实手机验收",
     "真实车型资料与五语言安全文案仍待审核"
   ],
-  "证据目录": "reports/evidence/m02/manual-fuel-20260930/"
+  "证据目录": "reports/evidence/m02/manual-fuel-20260930/",
+  "后续发布": {
+    "日期": "2026-09-30",
+    "状态": "PUBLISHED_VERIFIED",
+    "代码提交": "511cf9c089e9d0770da045fed909cb058ef7df58",
+    "部署ID": "232c2e4c-fb23-4233-85ba-5efa4d96a0fe",
+    "报告": "reports/M0.2-release.md",
+    "说明": "此条记录用户后续授权的发布，不更改原始本地验收历史。"
+  }
 }

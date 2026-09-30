@@ -8,9 +8,11 @@ Find fuel stations across Japan, in your language.
 
 最终完整检查通过 lint、typecheck、180 项单元测试、构建和 152 项浏览器测试；发布前源码与证据快照一致，生产 HTTP 与实际页面交互已核验。详见[中文修复报告](reports/M0.1-fuel-label-fix.md)。gogo.gs 咨询已由用户发送，仍待答复，站点即时报价尚未接入。
 
-## M0.2 本地进展
+## M0.2 当前状态
 
-“我的用油”面板已增加手动油种下拉菜单，选择后同步为地图默认显示油种，并在当前浏览器保存；地图仍可多选。最终完整检查通过 247 项单元测试和 179 项浏览器测试，详见[手动油种设置报告](reports/M0.2-manual-fuel.md)。独立车辆数据校验、精确匹配和安全 UNKNOWN 也已在本地实现。真实车型映射保持为空，五语言安全文案仍待审核，因此 M0.2 尚未完成整体验收、未发布。详见[中文阶段报告](reports/M0.2-completion.md)与[车型来源核查](reports/M0.2-source-review.md)。正式网站仍运行上方记录的 M0.1 版本。
+“我的用油”入口、手动油种下拉菜单、地图联动和本地偏好保存已发布到正式网站，代码提交 `511cf9c`，Cloudflare 部署 `232c2e4c`。已通过 lint、typecheck、247 项单元测试、构建及 179 项浏览器测试；正式域名 19 项资源比对与实际油种选择、刷新保存通过。详见[中文发布报告](reports/M0.2-release.md)。
+
+真实车型映射仍为空，五语言安全文案的独立审核仍待完成；手动显示偏好不代表车型用油已核验，完整 M0.2 数据验收仍未完成。初始[本地阶段报告](reports/M0.2-completion.md)、[手动设置报告](reports/M0.2-manual-fuel.md)和[来源核查](reports/M0.2-source-review.md)保留历史记录。
 
 ## Local setup
 
