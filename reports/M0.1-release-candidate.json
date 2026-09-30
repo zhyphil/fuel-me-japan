@@ -43,5 +43,11 @@
     "unit": 180,
     "browser": 152,
     "报告": "reports/M0.1-fuel-label-fix.md"
+  },
+  "后续发布": {
+    "日期": "2026-09-30",
+    "状态": "PUBLISHED_VERIFIED",
+    "报告": "reports/M0.1-enhancements-release.md",
+    "说明": "上方记录保留初次候选验收时的历史事实。"
   }
 }

@@ -2,11 +2,11 @@
 
 Find fuel stations across Japan, in your language.
 
-**M0.1 map-first release.** The home screen is an interactive station map with region selection, explicit location, filtering, an auxiliary list and station details. The former hero and four task cards are removed. The user has approved publication of this reviewed version; M0.2+ is not authorized.
+**M0.1 地图增强已发布。** 首页保留地图模式，包含列表排序与收藏、总地图及逐站小地图、悬停联动、油种多选和文字点击崩溃修复。用户已授权发布，并继续 M0.2「我的车辆用油」。
 
-Production URL: https://fuel-me-japan.com/. The last verified publication is recorded in the Chinese `reports/M0.1-release.md`; historical foundation/domain evidence remains in `reports/M0.0-domain-configuration.md`.
+正式网站：https://fuel-me-japan.com/ 。本次发布记录见[中文发布报告](reports/M0.1-enhancements-release.md)。历史发布和基础配置保留在 `reports/M0.1-release.md` 与 `reports/M0.0-domain-configuration.md`。
 
-**当前本地候选（尚未发布）：** 列表排序与收藏、列表总地图及逐站小地图、悬停联动、油种多选已完成本地实现与检查。油种面板文字点击崩溃已复现并修复，最终重新运行完整检查：180 项单元测试和 152 项浏览器测试通过，详见[中文修复报告](reports/M0.1-fuel-label-fix.md)。本批尚未提交、推送或部署，详见[中文发布候选报告](reports/M0.1-release-candidate.md)。gogo.gs 咨询已由用户发送，仍待答复，站点即时报价尚未接入。
+最终完整检查通过 lint、typecheck、180 项单元测试、构建和 152 项浏览器测试；发布前源码与证据快照一致，生产 HTTP 与实际页面交互已核验。详见[中文修复报告](reports/M0.1-fuel-label-fix.md)。gogo.gs 咨询已由用户发送，仍待答复，站点即时报价尚未接入。
 
 ## Local setup
 
@@ -24,7 +24,7 @@ npm run check
 
 `check` runs lint, TypeScript, unit tests, static build/prerender, then Chromium browser tests against a local preview server. No environment variables are required. Browser tests use mocked geolocation, shipped data and intercepted external navigation/basemap tiles (synthetic PNG); they never request the developer's actual position. Find Fuel screenshots are written to `test-results/find-fuel-*.png` when browser execution succeeds.
 
-For the previously published map version, the standard check passed locally with Node 24.18.0: lint, TypeScript, 138 unit tests, build/prerender and 82 Chromium browser tests. The newer local candidate has 180 passing unit tests and 152 passing Chromium browser tests after the fuel-label crash fix; see `reports/M0.1-fuel-label-fix.md` for the final complete check. The separate importer suite has 16 passing tests. See the Chinese `reports/M0.1-map-zoom.md`, `reports/M0.1-filters.md` and `reports/M0.1-completion.md` for evidence and limits. Python importer setup and refresh commands are in `docs/data-pipeline.md`.
+For the previously published map version, the standard check passed locally with Node 24.18.0: lint, TypeScript, 138 unit tests, build/prerender and 82 Chromium browser tests. The current published enhancement has 180 passing unit tests and 152 passing Chromium browser tests after the fuel-label crash fix; see `reports/M0.1-fuel-label-fix.md` for the final complete check. The separate importer suite has 16 passing tests. See the Chinese `reports/M0.1-map-zoom.md`, `reports/M0.1-filters.md` and `reports/M0.1-completion.md` for evidence and limits. Python importer setup and refresh commands are in `docs/data-pipeline.md`.
 
 ## Architecture and privacy
 
@@ -50,7 +50,7 @@ Pages remain `noindex` pending review. Safety-copy review and real-browser accep
 
 The offline importer and `.github/workflows/data-refresh.yml` check weekly OSM and publication-day official prices. The workflow produces a validated candidate artifact with read-only repository permissions; it cannot push or deploy. Its actual scheduled execution has not yet been verified; entering the default branch makes its configured schedule eligible to run. The official HTTP fetch still returns 403 here; browser-acquired original workbook import is supported. See `docs/data-pipeline.md`.
 
-Cloudflare uses prebuilt static Pages assets. The previously authorized map publication is complete. The newer local candidate awaits separate publication authorization under `AGENTS.md`. Future deployments require task authorization and successful checks:
+Cloudflare uses prebuilt static Pages assets. The reviewed M0.1 enhancements are published under the latest authorization in `AGENTS.md`. M0.2 work follows separately and does not form part of that reviewed deployment. Future deployments require task authorization and successful checks:
 
 ```sh
 npx wrangler login

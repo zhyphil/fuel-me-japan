@@ -1,0 +1,131 @@
+{
+  "checkedAt": "2026-09-30T15:50:47.277284+00:00",
+  "checks": [
+    {
+      "url": "https://fuel-me-japan.com/",
+      "finalUrl": "https://fuel-me-japan.com/",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "98470f6809e6f0d3df7ed438664fbdbde0e17b650131015b4f738d6398dc107c"
+    },
+    {
+      "url": "https://fuel-me-japan.com/en/",
+      "finalUrl": "https://fuel-me-japan.com/en/",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "98470f6809e6f0d3df7ed438664fbdbde0e17b650131015b4f738d6398dc107c"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hans/",
+      "finalUrl": "https://fuel-me-japan.com/zh-Hans/",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "da1c636e7f44dafceb1abd014f200a144edb7a0f4ff7f26f6c21c57a62e59e7b"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hant/",
+      "finalUrl": "https://fuel-me-japan.com/zh-Hant/",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "f18261cd976cd1f6fd712a391b1dadd941c49c9e54c862e56b53e74fbe65a875"
+    },
+    {
+      "url": "https://fuel-me-japan.com/ko/",
+      "finalUrl": "https://fuel-me-japan.com/ko/",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "f7155b75e15518d44c0da985b6ea3edd5cfbcdfe1242b4b286386cb6582821d1"
+    },
+    {
+      "url": "https://fuel-me-japan.com/th/",
+      "finalUrl": "https://fuel-me-japan.com/th/",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "3b06110ab87f6b7156c95ad96153a7f38b7fe25f7175f16d27bdeffd08e46e9d"
+    },
+    {
+      "url": "https://fuel-me-japan.com/runtime-map-provider.json",
+      "finalUrl": "https://fuel-me-japan.com/runtime-map-provider.json",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "5f5b86a46a83a22dfa345fab478e98c359271bdb3e68aa90868c7a19461ae20e"
+    },
+    {
+      "url": "https://fuel-me-japan.com/data/manifest.json",
+      "finalUrl": "https://fuel-me-japan.com/data/manifest.json",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "334ce4620b9e85751876aa427b0d958eb8410d89af0bfb4fa488b2737869693d"
+    },
+    {
+      "url": "https://fuel-me-japan.com/data/source-registry.json",
+      "finalUrl": "https://fuel-me-japan.com/data/source-registry.json",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "3ad895fc107a0ce94271817df97de8f6de23c43e8a222b1a594a37a5f6459a5b"
+    },
+    {
+      "url": "https://fuel-me-japan.com/data/OSM-NOTICE.txt",
+      "finalUrl": "https://fuel-me-japan.com/data/OSM-NOTICE.txt",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "323d834a526942743a397f8cacb9f51a16550952c2bbe71ea640cc5ea2063c75"
+    },
+    {
+      "url": "https://fuel-me-japan.com/build-provenance.json",
+      "finalUrl": "https://fuel-me-japan.com/build-provenance.json",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "ec2cd886f97f9d46db630cbc2892c99f6d2174f9ddccc4b98bbe96f455c23b63"
+    },
+    {
+      "url": "https://fuel-me-japan.com/assets/index-Bqi4oJhj.css",
+      "finalUrl": "https://fuel-me-japan.com/assets/index-Bqi4oJhj.css",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "8891781f0799b7dc18594727a6d3fc2e476ece9c95c05a62ac38ad8c1cdb46ba"
+    },
+    {
+      "url": "https://fuel-me-japan.com/assets/source-registry-DA9K_k21.js",
+      "finalUrl": "https://fuel-me-japan.com/assets/source-registry-DA9K_k21.js",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "d48893f5bde5b7f85251a1fa43e188b710a63785c574350ae4c92c7b5eed51c0"
+    },
+    {
+      "url": "https://fuel-me-japan.com/assets/index-DNFRi5yQ.js",
+      "finalUrl": "https://fuel-me-japan.com/assets/index-DNFRi5yQ.js",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "bf59b5af6bca5d79880c8683167389905f3edd0ac2810b4f9a1a7a71bea2dd11"
+    },
+    {
+      "url": "https://fuel-me-japan.com/assets/leaflet-src-BXJ3q75V.js",
+      "finalUrl": "https://fuel-me-japan.com/assets/leaflet-src-BXJ3q75V.js",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "58416329d9ed075c517fc2517216e8c2695a91edb21e1f4d0c278d50e6c33602"
+    },
+    {
+      "url": "https://www.fuel-me-japan.com/zh-Hans/",
+      "finalUrl": "https://fuel-me-japan.com/zh-Hans/",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "da1c636e7f44dafceb1abd014f200a144edb7a0f4ff7f26f6c21c57a62e59e7b"
+    },
+    {
+      "url": "https://fuel-me-japan.pages.dev/zh-Hans/",
+      "finalUrl": "https://fuel-me-japan.com/zh-Hans/",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "da1c636e7f44dafceb1abd014f200a144edb7a0f4ff7f26f6c21c57a62e59e7b"
+    },
+    {
+      "url": "https://76736e97.fuel-me-japan.pages.dev/zh-Hans/",
+      "finalUrl": "https://76736e97.fuel-me-japan.pages.dev/zh-Hans/",
+      "status": 200,
+      "matchesBuild": true,
+      "sha256": "da1c636e7f44dafceb1abd014f200a144edb7a0f4ff7f26f6c21c57a62e59e7b"
+    }
+  ]
+}
