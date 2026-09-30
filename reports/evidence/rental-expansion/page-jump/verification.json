@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-01",
+  "status": "PASS",
+  "scope": "页码输入、回车或按钮直接跳转，支持末页和输入边界。",
+  "check": {
+    "command": "npm run check",
+    "exitCode": 0,
+    "lint": "PASS",
+    "typecheck": "PASS",
+    "unitPassed": 314,
+    "build": "PASS",
+    "chromium": {
+      "startTime": "2026-09-30T22:15:19.378Z",
+      "duration": 34072.743,
+      "expected": 267,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "webkit": {
+      "startTime": "2026-09-30T22:16:13.939Z",
+      "duration": 5462.227,
+      "expected": 6,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "notes": [
+    "3个新增回归在实现前因缺少输入框失败，最终全部通过。",
+    "首次修复验证发现英文跳转按钮不足44px，已补足点击区域并完成最终检查。",
+    "本机内置浏览器实测输入295后进入第295页并显示最后3家门店。",
+    "WebKit为模拟桌面与手机配置，非实体手机验收。当前更新本地预览，未提交或发布。"
+  ],
+  "sha256": {
+    "src/components/RentalDirectory.tsx": "e023b1615380452651f3a18eb076d6a7ccc03f3834edb4f38730aa5efd8aaa96",
+    "src/styles.css": "e5bad60885f94621e86bc4f10c6b8f0d3f73f780027c088e434e1e32c2f187f7",
+    "tests/e2e/rental-directory.spec.ts": "2a2528e42d3ed8fd2a6343dee6d27039625a613d878c22a69d01f8b58acb854f",
+    "src/locales/en.json": "fd5c0b4552d249870521b0f10493380165b182822889504308272374315f8070",
+    "src/locales/zh-Hant.json": "243a85873c2434c37176a4bf741743566d02c94db37b6c0d47d7e2a8d573b5d8",
+    "src/locales/ko.json": "34895ff0bcf1783afa54a3a1c1ec53b7696da56f8cfa74af66d7085ed63da8fb",
+    "src/locales/zh-Hans.json": "2e2e91ec3e7050e211bc22421ee7adcfbe26b07314242f97e2d909131f27549d",
+    "src/locales/th.json": "fdbf75cd1751411733f9a6868aa8663299f229c0e48ac005beae847ab9613fd7"
+  }
+}

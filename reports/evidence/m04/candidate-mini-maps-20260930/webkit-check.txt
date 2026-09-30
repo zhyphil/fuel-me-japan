@@ -1,0 +1,36 @@
+[WebServer] (node:26826) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 23 tests using 2 workers
+
+(node:26846) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:26847) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 [iPhone WebKit] › tests/e2e/return-car.spec.ts:91:31 › en: 320px dialog, Japanese labels, source policy, focus and mounted map (1.0s)
+  ✓   1 [iPhone WebKit] › tests/e2e/return-car.spec.ts:50:1 › filters selected fuel independently, retains unknowns, and requires explicit completion before return navigation (1.7s)
+  ✓   3 [iPhone WebKit] › tests/e2e/return-car.spec.ts:91:31 › zh-Hant: 320px dialog, Japanese labels, source policy, focus and mounted map (768ms)
+  ✓   4 [iPhone WebKit] › tests/e2e/return-car.spec.ts:91:31 › ko: 320px dialog, Japanese labels, source policy, focus and mounted map (1.0s)
+  ✓   5 [iPhone WebKit] › tests/e2e/return-car.spec.ts:91:31 › zh-Hans: 320px dialog, Japanese labels, source policy, focus and mounted map (1.3s)
+  ✓   6 [iPhone WebKit] › tests/e2e/return-car.spec.ts:91:31 › th: 320px dialog, Japanese labels, source policy, focus and mounted map (879ms)
+  ✓   7 [iPhone WebKit] › tests/e2e/return-car.spec.ts:126:1 › single preference seeds the flow; multiple map fuels require a choice and preserve map, filters and storage (1.0s)
+  ✓   8 [iPhone WebKit] › tests/e2e/return-car.spec.ts:149:1 › late results from a previous branch cannot replace current results; closing cancels and reopening resets (724ms)
+  ✓   9 [iPhone WebKit] › tests/e2e/return-car.spec.ts:164:57 › rental data network is rejected and retry succeeds (510ms)
+  ✓  10 [iPhone WebKit] › tests/e2e/return-car.spec.ts:164:57 › rental data unapproved source is rejected and retry succeeds (511ms)
+  ✓  11 [iPhone WebKit] › tests/e2e/return-car.spec.ts:177:1 › station network failure supports retry with no return navigation (641ms)
+  ✓  12 [iPhone WebKit] › tests/e2e/return-car.spec.ts:185:1 › empty nearby records are explicit and offer the map (615ms)
+  ✓  13 [iPhone WebKit] › tests/e2e/return-car.spec.ts:191:1 › ninety-day-old sources retain their real check date and require rechecking (518ms)
+  ✓  14 [iPhone WebKit] › tests/e2e/return-car.spec.ts:197:1 › closing while a branch request is pending aborts the request and cannot restore its address on reopen (594ms)
+  ✓  16 [iPhone WebKit] › tests/e2e/return-car.spec.ts:236:1 › candidate mini maps show each station, load only visible rows, and keep selection independent (981ms)
+  ✓  15 [iPhone WebKit] › tests/e2e/return-car.spec.ts:212:1 › shipped branch records load real station candidates and keep each return destination distinct (1.4s)
+  ✓  17 [iPhone WebKit] › tests/e2e/return-car.spec.ts:282:44 › candidate mini maps fit 320px (709ms)
+  ✓  18 [iPhone WebKit] › tests/e2e/return-car.spec.ts:282:44 › candidate mini maps fit 390px (812ms)
+  ✓  19 [iPhone WebKit] › tests/e2e/return-car.spec.ts:282:44 › candidate mini maps fit 768px (984ms)
+  ✓  20 [iPhone WebKit] › tests/e2e/return-car.spec.ts:282:44 › candidate mini maps fit 1280px (991ms)
+  ✓  21 [iPhone WebKit] › tests/e2e/return-car.spec.ts:328:46 › candidate mini maps tolerate tiles failure without blocking station selection (591ms)
+  ✓  22 [iPhone WebKit] › tests/e2e/return-car.spec.ts:328:46 › candidate mini maps tolerate provider failure without blocking station selection (557ms)
+(node:27150) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  23 [Desktop Safari wheel] › tests/e2e/return-car.spec.ts:311:1 › candidate mini maps preserve dialog wheel scrolling (953ms)
+
+  23 passed (11.9s)

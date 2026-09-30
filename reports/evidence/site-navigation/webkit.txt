@@ -1,0 +1,31 @@
+
+Running 18 tests using 2 workers
+
+(node:3403) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3402) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 [Navigation-iPhone-WebKit] › tests/e2e/refuel-guide.spec.ts:65:3 › en: direct guide load, reload and language switching retain the page without fetching map or rental data (909ms)
+  ✓   1 [Navigation-iPhone-WebKit] › tests/e2e/refuel-guide.spec.ts:8:5 › en 320px: header navigation opens the standalone guide and preserves the fuel map (1.0s)
+  ✓   4 [Navigation-iPhone-WebKit] › tests/e2e/refuel-guide.spec.ts:65:3 › zh-Hant: direct guide load, reload and language switching retain the page without fetching map or rental data (339ms)
+  ✓   3 [Navigation-iPhone-WebKit] › tests/e2e/refuel-guide.spec.ts:8:5 › zh-Hant 320px: header navigation opens the standalone guide and preserves the fuel map (466ms)
+  ✓   6 [Navigation-iPhone-WebKit] › tests/e2e/refuel-guide.spec.ts:65:3 › ko: direct guide load, reload and language switching retain the page without fetching map or rental data (341ms)
+  ✓   5 [Navigation-iPhone-WebKit] › tests/e2e/refuel-guide.spec.ts:8:5 › ko 320px: header navigation opens the standalone guide and preserves the fuel map (445ms)
+  ✓   8 [Navigation-iPhone-WebKit] › tests/e2e/refuel-guide.spec.ts:65:3 › zh-Hans: direct guide load, reload and language switching retain the page without fetching map or rental data (342ms)
+  ✓   7 [Navigation-iPhone-WebKit] › tests/e2e/refuel-guide.spec.ts:8:5 › zh-Hans 320px: header navigation opens the standalone guide and preserves the fuel map (532ms)
+  ✓  10 [Navigation-iPhone-WebKit] › tests/e2e/refuel-guide.spec.ts:65:3 › th: direct guide load, reload and language switching retain the page without fetching map or rental data (330ms)
+  ✓   9 [Navigation-iPhone-WebKit] › tests/e2e/refuel-guide.spec.ts:8:5 › th 320px: header navigation opens the standalone guide and preserves the fuel map (442ms)
+(node:3460) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  11 [Navigation-iPhone-WebKit] › tests/e2e/refuel-guide.spec.ts:94:1 › guide static HTML includes complete content and working navigation without JavaScript (462ms)
+(node:3472) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  12 [Navigation-Desktop-WebKit] › tests/e2e/refuel-guide.spec.ts:8:5 › en 1280px: header navigation opens the standalone guide and preserves the fuel map (622ms)
+  ✓  13 [Navigation-Desktop-WebKit] › tests/e2e/refuel-guide.spec.ts:8:5 › zh-Hant 1280px: header navigation opens the standalone guide and preserves the fuel map (690ms)
+  ✓  14 [Navigation-Desktop-WebKit] › tests/e2e/refuel-guide.spec.ts:8:5 › ko 1280px: header navigation opens the standalone guide and preserves the fuel map (600ms)
+  ✓  15 [Navigation-Desktop-WebKit] › tests/e2e/refuel-guide.spec.ts:8:5 › zh-Hans 1280px: header navigation opens the standalone guide and preserves the fuel map (660ms)
+  ✓  16 [Navigation-Desktop-WebKit] › tests/e2e/refuel-guide.spec.ts:8:5 › th 1280px: header navigation opens the standalone guide and preserves the fuel map (591ms)
+  ✓  17 [Navigation-Desktop-WebKit] › tests/e2e/refuel-guide.spec.ts:115:1 › guide navigation and browser history preserve the station list and all fuel preferences (589ms)
+  ✓  18 [Navigation-Desktop-WebKit] › tests/e2e/refuel-guide.spec.ts:137:1 › rental directory and detail share the three header links with the independent guide (1.4s)
+
+  18 passed (7.3s)

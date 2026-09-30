@@ -1,0 +1,598 @@
+{
+  "config": {
+    "argv": [
+      "/Users/haoyuzuo/.nvm/versions/node/v24.18.0/bin/node",
+      "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/node_modules/@playwright/test/cli.js",
+      "test",
+      "--config=/tmp/fmj-return-candidate-webkit.config.mts"
+    ],
+    "configFile": "/tmp/fmj-return-candidate-webkit.config.mts",
+    "rootDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/fmj-return-candidate-webkit-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "Return-iPhone-WebKit",
+        "name": "Return-iPhone-WebKit",
+        "testDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "return-candidate-browser.spec.ts",
+          "return-car.spec.ts",
+          "rental-directory.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/tmp/fmj-return-candidate-webkit-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "Return-Desktop-WebKit",
+        "name": "Return-Desktop-WebKit",
+        "testDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "return-candidate-browser.spec.ts",
+          "return-car.spec.ts",
+          "rental-directory.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/tmp/fmj-return-candidate-webkit-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "rental-directory.spec.ts",
+      "file": "rental-directory.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "320px: page number entry jumps directly to the final page and keeps keyboard and button navigation in sync",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Return-iPhone-WebKit",
+              "projectName": "Return-iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1657,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T22:36:34.476Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-6e0ed23ecd7a46187a8c",
+          "file": "rental-directory.spec.ts",
+          "line": 481,
+          "column": 34
+        },
+        {
+          "title": "1280px: page number entry jumps directly to the final page and keeps keyboard and button navigation in sync",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Return-iPhone-WebKit",
+              "projectName": "Return-iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1747,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T22:36:34.476Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-d6fe2836727e894d5892",
+          "file": "rental-directory.spec.ts",
+          "line": 481,
+          "column": 34
+        },
+        {
+          "title": "page number entry preserves filters, clamps bounds and rejects empty or non-integer drafts",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Return-iPhone-WebKit",
+              "projectName": "Return-iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1163,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T22:36:37.077Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-610ad917be329e238643",
+          "file": "rental-directory.spec.ts",
+          "line": 511,
+          "column": 1
+        },
+        {
+          "title": "1280px: page number entry jumps directly to the final page and keeps keyboard and button navigation in sync",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Return-Desktop-WebKit",
+              "projectName": "Return-Desktop-WebKit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1578,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T22:36:40.652Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-c3c24904484b6363ae25",
+          "file": "rental-directory.spec.ts",
+          "line": 481,
+          "column": 34
+        },
+        {
+          "title": "page number entry preserves filters, clamps bounds and rejects empty or non-integer drafts",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Return-Desktop-WebKit",
+              "projectName": "Return-Desktop-WebKit",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1274,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T22:36:41.091Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-16b4d3282608977aba00",
+          "file": "rental-directory.spec.ts",
+          "line": 511,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "return-candidate-browser.spec.ts",
+      "file": "return-candidate-browser.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "return candidates paginate all nearby stations with direct page entry and preserve explicit selection",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Return-iPhone-WebKit",
+              "projectName": "Return-iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1454,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T22:36:37.168Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ec322eb6ce4fe001714-7c81692c1d2aeced7a31",
+          "file": "return-candidate-browser.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "return browser columns align and fit 320px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Return-iPhone-WebKit",
+              "projectName": "Return-iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1069,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T22:36:38.248Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ec322eb6ce4fe001714-88ab3ac28be23332bff0",
+          "file": "return-candidate-browser.spec.ts",
+          "line": 71,
+          "column": 44
+        },
+        {
+          "title": "return browser columns align and fit 390px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Return-iPhone-WebKit",
+              "projectName": "Return-iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1087,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T22:36:38.627Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ec322eb6ce4fe001714-9f116b35b0367a62ecd7",
+          "file": "return-candidate-browser.spec.ts",
+          "line": 71,
+          "column": 44
+        },
+        {
+          "title": "return browser columns align and fit 768px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Return-iPhone-WebKit",
+              "projectName": "Return-iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1085,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T22:36:39.321Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ec322eb6ce4fe001714-a894f144cbb84d61dbbb",
+          "file": "return-candidate-browser.spec.ts",
+          "line": 71,
+          "column": 44
+        },
+        {
+          "title": "return browser columns align and fit 1280px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Return-iPhone-WebKit",
+              "projectName": "Return-iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1127,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T22:36:39.718Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ec322eb6ce4fe001714-a89ad555ddc0b0257c9a",
+          "file": "return-candidate-browser.spec.ts",
+          "line": 71,
+          "column": 44
+        },
+        {
+          "title": "return candidates paginate all nearby stations with direct page entry and preserve explicit selection",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Return-Desktop-WebKit",
+              "projectName": "Return-Desktop-WebKit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1404,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T22:36:42.391Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ec322eb6ce4fe001714-b3dbeda6ffef3516a1da",
+          "file": "return-candidate-browser.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "candidate hover and keyboard focus preview the right map without changing the upper map or selecting a station",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Return-Desktop-WebKit",
+              "projectName": "Return-Desktop-WebKit",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 2435,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T22:36:42.522Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ec322eb6ce4fe001714-38caf41bed5292b343fa",
+          "file": "return-candidate-browser.spec.ts",
+          "line": 41,
+          "column": 1
+        },
+        {
+          "title": "return browser columns align and fit 1280px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Return-Desktop-WebKit",
+              "projectName": "Return-Desktop-WebKit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1094,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T22:36:43.799Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ec322eb6ce4fe001714-54fa22ae5a27b216bfe9",
+          "file": "return-candidate-browser.spec.ts",
+          "line": 71,
+          "column": 44
+        }
+      ]
+    },
+    {
+      "title": "return-car.spec.ts",
+      "file": "return-car.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "candidate mini maps scroll the bounded list without moving the upper map",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Return-Desktop-WebKit",
+              "projectName": "Return-Desktop-WebKit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1172,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T22:36:44.904Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-2ca12d4620a5098e50e9",
+          "file": "return-car.spec.ts",
+          "line": 287,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-30T22:36:34.196Z",
+    "duration": 11913.66,
+    "expected": 14,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

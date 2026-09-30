@@ -1,0 +1,3254 @@
+{
+  "config": {
+    "argv": [
+      "/Users/haoyuzuo/.nvm/versions/node/v24.18.0/bin/node",
+      "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/node_modules/@playwright/test/cli.js",
+      "test",
+      "--config",
+      "/tmp/fmj-rental-browser-webkit.config.ts",
+      "--timeout=25000"
+    ],
+    "configFile": "/tmp/fmj-rental-browser-webkit.config.ts",
+    "rootDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/reports/evidence/rental-expansion/browser/webkit-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "iPhone-WebKit",
+        "name": "iPhone-WebKit",
+        "testDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "return-car.spec.ts",
+          "rental-directory.spec.ts"
+        ],
+        "timeout": 25000
+      },
+      {
+        "outputDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/reports/evidence/rental-expansion/browser/webkit-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "Desktop-WebKit",
+        "name": "Desktop-WebKit",
+        "testDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "return-car.spec.ts",
+          "rental-directory.spec.ts"
+        ],
+        "timeout": 25000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/reports/evidence/rental-expansion/browser/webkit-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 2,
+    "webServer": {
+      "command": "npm run preview -- --port 4175 --strictPort",
+      "cwd": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan",
+      "url": "http://127.0.0.1:4175",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "rental-directory.spec.ts",
+      "file": "rental-directory.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "homepage remains fuel-first and loads no national rental data until the real same-site link is followed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1407,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:22.042Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-c95a9d2e6ea1127d43e0",
+          "file": "rental-directory.spec.ts",
+          "line": 49,
+          "column": 1
+        },
+        {
+          "title": "en: 320px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1622,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:22.043Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-b3e1c00538d3bb681272",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "en: 390px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1454,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:25.609Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-7246ba31285e6a53514e",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "en: 1280px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1542,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:25.823Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-c699523bc9192d8108c1",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "zh-Hant: 320px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1404,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:27.068Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-5415a44df684b19d0c8b",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "zh-Hant: 390px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1495,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:27.370Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-370eddac8290981348f2",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "zh-Hant: 1280px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1661,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:28.476Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-3445c4d8bae536bd7454",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "ko: 320px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1409,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:28.869Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-4295066e28d2f576cdbf",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "ko: 390px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1394,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:30.141Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-d2ae3b57e2d62ccfcaad",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "ko: 1280px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1488,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:30.283Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-51538c746f89bdecada0",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "zh-Hans: 320px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1350,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:31.539Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-cf72cee054896480e48b",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "zh-Hans: 390px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1368,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:31.775Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-e923cbe726d0d06e3ca0",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "zh-Hans: 1280px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1493,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:32.893Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-794ab5e76ecbe27c20ee",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "th: 320px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1408,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:33.148Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-3306e5a971c82ded92ed",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "th: 390px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1469,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:34.389Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-0b1b840bbe2531bab4aa",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "th: 1280px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1558,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:34.560Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-42e497d8779803e72a23",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "NGO: official Times detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1245,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:35.863Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-0e8df397681d9b39367d",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "FUK: official Times detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1248,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:36.122Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-37cb48070337264ff63a",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "HND: official Times detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1277,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:37.112Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-47bfc3a1357c58f38e7b",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "KIX: official Times detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1240,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:37.373Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-9b4e6ac445039a4c0cc8",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "OKA: official Times detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1269,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:38.393Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-b2559a3152ecd9d175d0",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "NRT: official Times detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1231,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:38.617Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-205ca7fcf3cfe8ad79df",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "CTS: official Times detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1244,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:39.666Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-4f5e9e2ea05ce00e65dd",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "en: locale links retain detail ID/query and synchronize metadata on directory navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1246,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:39.852Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-27832996f0e9ede07750",
+          "file": "rental-directory.spec.ts",
+          "line": 146,
+          "column": 31
+        },
+        {
+          "title": "zh-Hant: locale links retain detail ID/query and synchronize metadata on directory navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1266,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:40.914Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-a741692a131a94122300",
+          "file": "rental-directory.spec.ts",
+          "line": 146,
+          "column": 31
+        },
+        {
+          "title": "ko: locale links retain detail ID/query and synchronize metadata on directory navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1245,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:41.102Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-68b34a87b37b1d9508e7",
+          "file": "rental-directory.spec.ts",
+          "line": 146,
+          "column": 31
+        },
+        {
+          "title": "zh-Hans: locale links retain detail ID/query and synchronize metadata on directory navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1272,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:42.184Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-67003aa1665fe9df431a",
+          "file": "rental-directory.spec.ts",
+          "line": 146,
+          "column": 31
+        },
+        {
+          "title": "th: locale links retain detail ID/query and synchronize metadata on directory navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1248,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:42.351Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-518e8c3af469ac0643c3",
+          "file": "rental-directory.spec.ts",
+          "line": 146,
+          "column": 31
+        },
+        {
+          "title": "unknown or malformed detail does-not-exist has accessible not-found and a directory return",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1088,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:43.461Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-9b40fd3ec2e4925285e3",
+          "file": "rental-directory.spec.ts",
+          "line": 169,
+          "column": 52
+        },
+        {
+          "title": "unknown or malformed detail %2F has accessible not-found and a directory return",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1074,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:43.603Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-7ce3ef18a6d64dc00691",
+          "file": "rental-directory.spec.ts",
+          "line": 169,
+          "column": 52
+        },
+        {
+          "title": "unknown or malformed detail a/b has accessible not-found and a directory return",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1079,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:44.552Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-5af0b290037bd329561d",
+          "file": "rental-directory.spec.ts",
+          "line": 169,
+          "column": 52
+        },
+        {
+          "title": "local preview rejects malformed UTF-8 before application routing",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 167,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:44.680Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-700b0ffa677956c49c04",
+          "file": "rental-directory.spec.ts",
+          "line": 180,
+          "column": 1
+        },
+        {
+          "title": "retired duplicate alias replaces the URL with its canonical ID and preserves the directory query",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1142,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:44.852Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-e82083589feb15e4216c",
+          "file": "rental-directory.spec.ts",
+          "line": 188,
+          "column": 1
+        },
+        {
+          "title": "detail return and browser back restore region/company/name/page, exact card focus and scroll",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6205,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[id=\"rental-card-rental-osm-n6814489385\"]')\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('[id=\"rental-card-rental-osm-n6814489385\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[id=\"rental-card-rental-osm-n6814489385\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <a lang=\"ja\" id=\"rental-card-rental-osm-n6814489385\" href=\"/en/return-car/rental-osm-n6814489385/?region=JP-01&company=toyota&q=%E3%83%88%E3%83%A8%E3%82%BF&page=2\">トヨタレンタカー</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[id=\"rental-card-rental-osm-n6814489385\"]')\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('[id=\"rental-card-rental-osm-n6814489385\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[id=\"rental-card-rental-osm-n6814489385\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <a lang=\"ja\" id=\"rental-card-rental-osm-n6814489385\" href=\"/en/return-car/rental-osm-n6814489385/?region=JP-01&company=toyota&q=%E3%83%88%E3%83%A8%E3%82%BF&page=2\">トヨタレンタカー</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:208:46",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                      "column": 46,
+                      "line": 208
+                    },
+                    "snippet": "  206 |   await page.locator(\"[data-return-directory]\").click();\n  207 |   await expect(page).toHaveURL(/region=JP-01&company=toyota&q=.*&page=2$/);\n> 208 |   await expect(page.locator(`[id=\"${id}\"]`)).toBeFocused();\n      |                                              ^\n  209 |   await expect.poll(async () => Math.abs(await page.evaluate(() => scrollY) - originalScroll)).toBeLessThan(3);\n  210 |   await expect(page.locator(\"#rental-region\")).toHaveValue(\"JP-01\"); await expect(page.locator(\"#rental-company\")).toHaveValue(\"toyota\"); await expect(page.locator(\"#rental-query\")).toHaveValue(\"トヨタ\");\n  211 |   expect(await map!.evaluate(node => node.isConnected)).toBe(true);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                        "column": 46,
+                        "line": 208
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[id=\"rental-card-rental-osm-n6814489385\"]')\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('[id=\"rental-card-rental-osm-n6814489385\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[id=\"rental-card-rental-osm-n6814489385\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <a lang=\"ja\" id=\"rental-card-rental-osm-n6814489385\" href=\"/en/return-car/rental-osm-n6814489385/?region=JP-01&company=toyota&q=%E3%83%88%E3%83%A8%E3%82%BF&page=2\">トヨタレンタカー</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n\n  206 |   await page.locator(\"[data-return-directory]\").click();\n  207 |   await expect(page).toHaveURL(/region=JP-01&company=toyota&q=.*&page=2$/);\n> 208 |   await expect(page.locator(`[id=\"${id}\"]`)).toBeFocused();\n      |                                              ^\n  209 |   await expect.poll(async () => Math.abs(await page.evaluate(() => scrollY) - originalScroll)).toBeLessThan(3);\n  210 |   await expect(page.locator(\"#rental-region\")).toHaveValue(\"JP-01\"); await expect(page.locator(\"#rental-company\")).toHaveValue(\"toyota\"); await expect(page.locator(\"#rental-query\")).toHaveValue(\"トヨタ\");\n  211 |   expect(await map!.evaluate(node => node.isConnected)).toBe(true);\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:208:46"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:45.636Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/reports/evidence/rental-expansion/browser/webkit-artifacts/rental-directory-detail-re-132b6-exact-card-focus-and-scroll-iPhone-WebKit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/reports/evidence/rental-expansion/browser/webkit-artifacts/rental-directory-detail-re-132b6-exact-card-focus-and-scroll-iPhone-WebKit/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                    "column": 46,
+                    "line": 208
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-628e9057eba01d59d8bf",
+          "file": "rental-directory.spec.ts",
+          "line": 196,
+          "column": 1
+        },
+        {
+          "title": "mouse hover, rapid preview changes and keyboard focus highlight the final branch without rebuilding the map",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1987,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:45.997Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-f6f143844d8a8d8641d0",
+          "file": "rental-directory.spec.ts",
+          "line": 218,
+          "column": 1
+        },
+        {
+          "title": "touch scrolling does not preview a branch; only visible thumbnail rows request tiles and old rows unload",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1392,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:47.988Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-d768a49f7a6d7b6b2a21",
+          "file": "rental-directory.spec.ts",
+          "line": 256,
+          "column": 1
+        },
+        {
+          "title": "directory tiles failure keeps names, links and attribution usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1067,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:49.384Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-3373b91ecfaf72a78b61",
+          "file": "rental-directory.spec.ts",
+          "line": 278,
+          "column": 46
+        },
+        {
+          "title": "directory provider failure keeps names, links and attribution usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1072,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:50.456Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-3a3c2504ee9c223e6b71",
+          "file": "rental-directory.spec.ts",
+          "line": 278,
+          "column": 46
+        },
+        {
+          "title": "counter opt-in is explicit and counter detail cannot become a return destination",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1248,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:51.533Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-2efb0ce475c958013dfb",
+          "file": "rental-directory.spec.ts",
+          "line": 295,
+          "column": 1
+        },
+        {
+          "title": "index network fails closed and retries the signed artifact",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 986,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:52.101Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-2679ab30e4ab77aede9e",
+          "file": "rental-directory.spec.ts",
+          "line": 307,
+          "column": 147
+        },
+        {
+          "title": "index same-size hash corruption fails closed and retries the signed artifact",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1417,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:52.786Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-6a0c3f1695e043551de4",
+          "file": "rental-directory.spec.ts",
+          "line": 307,
+          "column": 147
+        },
+        {
+          "title": "index truncated bytes fails closed and retries the signed artifact",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1351,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:53.242Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-6b62821a3d28d3159bcf",
+          "file": "rental-directory.spec.ts",
+          "line": 307,
+          "column": 147
+        },
+        {
+          "title": "partition network fails closed and retries the signed artifact",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1162,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:54.209Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-375d981497ba2ecd1f65",
+          "file": "rental-directory.spec.ts",
+          "line": 307,
+          "column": 147
+        },
+        {
+          "title": "partition same-size hash corruption fails closed and retries the signed artifact",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1216,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:54.598Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-3c1796082c148fadb847",
+          "file": "rental-directory.spec.ts",
+          "line": 307,
+          "column": 147
+        },
+        {
+          "title": "partition truncated bytes fails closed and retries the signed artifact",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1296,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:55.375Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-0ae4557aa5ad35ac4aae",
+          "file": "rental-directory.spec.ts",
+          "line": 307,
+          "column": 147
+        },
+        {
+          "title": "leaving a pending rental detail aborts its partition and a late response cannot replace another branch",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 901,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:55.818Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-49160ed8a55ea70b8b41",
+          "file": "rental-directory.spec.ts",
+          "line": 325,
+          "column": 1
+        },
+        {
+          "title": "source downloads expose all 59 manifest artifacts, every partition and original provenance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1549,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:56.676Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-1a27adfb1c8bbb75bb57",
+          "file": "rental-directory.spec.ts",
+          "line": 342,
+          "column": 1
+        },
+        {
+          "title": "changing region while a name is being edited cannot display results for invisible stale criteria",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1030,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:56.724Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-ebe133c15184b10de9bb",
+          "file": "rental-directory.spec.ts",
+          "line": 371,
+          "column": 1
+        },
+        {
+          "title": "cluster keyboard activation offers bounded members and clears them on filtering",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3696,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:57.758Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-89e87cc535a69a3140ef",
+          "file": "rental-directory.spec.ts",
+          "line": 383,
+          "column": 1
+        },
+        {
+          "title": "en: 1280px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop-WebKit",
+              "projectName": "Desktop-WebKit",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1476,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:30.869Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-66ecb3789c412adf792d",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "zh-Hant: 1280px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop-WebKit",
+              "projectName": "Desktop-WebKit",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1473,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:31.639Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-b8e1f38b7e0f7f22726e",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "ko: 1280px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop-WebKit",
+              "projectName": "Desktop-WebKit",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1370,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:32.510Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-0802b3f8d38d5c5185c5",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "zh-Hans: 1280px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop-WebKit",
+              "projectName": "Desktop-WebKit",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1347,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:33.269Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-a2e3d31b1d9d7c67b39f",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "th: 1280px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop-WebKit",
+              "projectName": "Desktop-WebKit",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1356,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:33.884Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-3ecd85e28f4f9810296d",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "detail return and browser back restore region/company/name/page, exact card focus and scroll",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop-WebKit",
+              "projectName": "Desktop-WebKit",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6187,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[id=\"rental-card-rental-osm-n6814489385\"]')\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('[id=\"rental-card-rental-osm-n6814489385\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[id=\"rental-card-rental-osm-n6814489385\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <a lang=\"ja\" id=\"rental-card-rental-osm-n6814489385\" href=\"/en/return-car/rental-osm-n6814489385/?region=JP-01&company=toyota&q=%E3%83%88%E3%83%A8%E3%82%BF&page=2\">トヨタレンタカー</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[id=\"rental-card-rental-osm-n6814489385\"]')\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('[id=\"rental-card-rental-osm-n6814489385\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[id=\"rental-card-rental-osm-n6814489385\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <a lang=\"ja\" id=\"rental-card-rental-osm-n6814489385\" href=\"/en/return-car/rental-osm-n6814489385/?region=JP-01&company=toyota&q=%E3%83%88%E3%83%A8%E3%82%BF&page=2\">トヨタレンタカー</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:208:46",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                      "column": 46,
+                      "line": 208
+                    },
+                    "snippet": "  206 |   await page.locator(\"[data-return-directory]\").click();\n  207 |   await expect(page).toHaveURL(/region=JP-01&company=toyota&q=.*&page=2$/);\n> 208 |   await expect(page.locator(`[id=\"${id}\"]`)).toBeFocused();\n      |                                              ^\n  209 |   await expect.poll(async () => Math.abs(await page.evaluate(() => scrollY) - originalScroll)).toBeLessThan(3);\n  210 |   await expect(page.locator(\"#rental-region\")).toHaveValue(\"JP-01\"); await expect(page.locator(\"#rental-company\")).toHaveValue(\"toyota\"); await expect(page.locator(\"#rental-query\")).toHaveValue(\"トヨタ\");\n  211 |   expect(await map!.evaluate(node => node.isConnected)).toBe(true);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                        "column": 46,
+                        "line": 208
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[id=\"rental-card-rental-osm-n6814489385\"]')\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('[id=\"rental-card-rental-osm-n6814489385\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[id=\"rental-card-rental-osm-n6814489385\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <a lang=\"ja\" id=\"rental-card-rental-osm-n6814489385\" href=\"/en/return-car/rental-osm-n6814489385/?region=JP-01&company=toyota&q=%E3%83%88%E3%83%A8%E3%82%BF&page=2\">トヨタレンタカー</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n\n  206 |   await page.locator(\"[data-return-directory]\").click();\n  207 |   await expect(page).toHaveURL(/region=JP-01&company=toyota&q=.*&page=2$/);\n> 208 |   await expect(page.locator(`[id=\"${id}\"]`)).toBeFocused();\n      |                                              ^\n  209 |   await expect.poll(async () => Math.abs(await page.evaluate(() => scrollY) - originalScroll)).toBeLessThan(3);\n  210 |   await expect(page.locator(\"#rental-region\")).toHaveValue(\"JP-01\"); await expect(page.locator(\"#rental-company\")).toHaveValue(\"toyota\"); await expect(page.locator(\"#rental-query\")).toHaveValue(\"トヨタ\");\n  211 |   expect(await map!.evaluate(node => node.isConnected)).toBe(true);\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:208:46"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:34.621Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/reports/evidence/rental-expansion/browser/webkit-artifacts/rental-directory-detail-re-132b6-exact-card-focus-and-scroll-Desktop-WebKit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/reports/evidence/rental-expansion/browser/webkit-artifacts/rental-directory-detail-re-132b6-exact-card-focus-and-scroll-Desktop-WebKit/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                    "column": 46,
+                    "line": 208
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-d5d55bfb2a1d5cfb3931",
+          "file": "rental-directory.spec.ts",
+          "line": 196,
+          "column": 1
+        },
+        {
+          "title": "mouse hover, rapid preview changes and keyboard focus highlight the final branch without rebuilding the map",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop-WebKit",
+              "projectName": "Desktop-WebKit",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1967,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:35.244Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-33095bf1842c5a903a4f",
+          "file": "rental-directory.spec.ts",
+          "line": 218,
+          "column": 1
+        },
+        {
+          "title": "cluster keyboard activation offers bounded members and clears them on filtering",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop-WebKit",
+              "projectName": "Desktop-WebKit",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 3549,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:37.215Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-12f5807474b9413395e7",
+          "file": "rental-directory.spec.ts",
+          "line": 383,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "return-car.spec.ts",
+      "file": "return-car.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "filters selected fuel independently, retains unknowns, and requires explicit completion before return navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 2038,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:18:58.237Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-0ff9e8455670ec395335",
+          "file": "return-car.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "en: 320px detail, Japanese labels, source policy, navigation focus and mounted home map",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 6357,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[id=\"rental-card-times-naha-airport\"]')\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('[id=\"rental-card-times-naha-airport\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[id=\"rental-card-times-naha-airport\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <a lang=\"ja\" id=\"rental-card-times-naha-airport\" href=\"/en/return-car/times-naha-airport/?q=OKA\">タイムズカー 那覇空港店</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[id=\"rental-card-times-naha-airport\"]')\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('[id=\"rental-card-times-naha-airport\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[id=\"rental-card-times-naha-airport\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <a lang=\"ja\" id=\"rental-card-times-naha-airport\" href=\"/en/return-car/times-naha-airport/?q=OKA\">タイムズカー 那覇空港店</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts:89:63",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts",
+                      "column": 63,
+                      "line": 89
+                    },
+                    "snippet": "  87 |   // The old modal focus trap/Escape assertions are replaced by actual page navigation.\n  88 |   await detail.locator(\"[data-return-directory]\").click();\n> 89 |   await expect(page.locator(`[id=\"rental-card-${naha.id}\"]`)).toBeFocused();\n     |                                                               ^\n  90 |   await expect(page.getByRole(\"dialog\")).toHaveCount(0);\n  91 |   await page.getByRole(\"link\", { name: t.rdBackFuel, exact: true }).click();\n  92 |   await expect(page.locator(\"#return-car-link\")).toBeVisible();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts",
+                        "column": 63,
+                        "line": 89
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[id=\"rental-card-times-naha-airport\"]')\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('[id=\"rental-card-times-naha-airport\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[id=\"rental-card-times-naha-airport\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <a lang=\"ja\" id=\"rental-card-times-naha-airport\" href=\"/en/return-car/times-naha-airport/?q=OKA\">タイムズカー 那覇空港店</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n\n  87 |   // The old modal focus trap/Escape assertions are replaced by actual page navigation.\n  88 |   await detail.locator(\"[data-return-directory]\").click();\n> 89 |   await expect(page.locator(`[id=\"rental-card-${naha.id}\"]`)).toBeFocused();\n     |                                                               ^\n  90 |   await expect(page.getByRole(\"dialog\")).toHaveCount(0);\n  91 |   await page.getByRole(\"link\", { name: t.rdBackFuel, exact: true }).click();\n  92 |   await expect(page.locator(\"#return-car-link\")).toBeVisible();\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts:89:63"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:00.279Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/reports/evidence/rental-expansion/browser/webkit-artifacts/return-car-en-320px-detail-d7dbf--focus-and-mounted-home-map-iPhone-WebKit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/reports/evidence/rental-expansion/browser/webkit-artifacts/return-car-en-320px-detail-d7dbf--focus-and-mounted-home-map-iPhone-WebKit/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts",
+                    "column": 63,
+                    "line": 89
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-a7d3558aa52fc956f363",
+          "file": "return-car.spec.ts",
+          "line": 52,
+          "column": 31
+        },
+        {
+          "title": "zh-Hant: 320px detail, Japanese labels, source policy, navigation focus and mounted home map",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6413,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[id=\"rental-card-times-naha-airport\"]')\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('[id=\"rental-card-times-naha-airport\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[id=\"rental-card-times-naha-airport\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <a lang=\"ja\" id=\"rental-card-times-naha-airport\" href=\"/zh-Hant/return-car/times-naha-airport/?q=OKA\">タイムズカー 那覇空港店</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[id=\"rental-card-times-naha-airport\"]')\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('[id=\"rental-card-times-naha-airport\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[id=\"rental-card-times-naha-airport\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <a lang=\"ja\" id=\"rental-card-times-naha-airport\" href=\"/zh-Hant/return-car/times-naha-airport/?q=OKA\">タイムズカー 那覇空港店</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts:89:63",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts",
+                      "column": 63,
+                      "line": 89
+                    },
+                    "snippet": "  87 |   // The old modal focus trap/Escape assertions are replaced by actual page navigation.\n  88 |   await detail.locator(\"[data-return-directory]\").click();\n> 89 |   await expect(page.locator(`[id=\"rental-card-${naha.id}\"]`)).toBeFocused();\n     |                                                               ^\n  90 |   await expect(page.getByRole(\"dialog\")).toHaveCount(0);\n  91 |   await page.getByRole(\"link\", { name: t.rdBackFuel, exact: true }).click();\n  92 |   await expect(page.locator(\"#return-car-link\")).toBeVisible();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts",
+                        "column": 63,
+                        "line": 89
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[id=\"rental-card-times-naha-airport\"]')\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('[id=\"rental-card-times-naha-airport\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[id=\"rental-card-times-naha-airport\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <a lang=\"ja\" id=\"rental-card-times-naha-airport\" href=\"/zh-Hant/return-car/times-naha-airport/?q=OKA\">タイムズカー 那覇空港店</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n\n  87 |   // The old modal focus trap/Escape assertions are replaced by actual page navigation.\n  88 |   await detail.locator(\"[data-return-directory]\").click();\n> 89 |   await expect(page.locator(`[id=\"rental-card-${naha.id}\"]`)).toBeFocused();\n     |                                                               ^\n  90 |   await expect(page.getByRole(\"dialog\")).toHaveCount(0);\n  91 |   await page.getByRole(\"link\", { name: t.rdBackFuel, exact: true }).click();\n  92 |   await expect(page.locator(\"#return-car-link\")).toBeVisible();\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts:89:63"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:01.467Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/reports/evidence/rental-expansion/browser/webkit-artifacts/return-car-zh-Hant-320px-d-2b495--focus-and-mounted-home-map-iPhone-WebKit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/reports/evidence/rental-expansion/browser/webkit-artifacts/return-car-zh-Hant-320px-d-2b495--focus-and-mounted-home-map-iPhone-WebKit/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts",
+                    "column": 63,
+                    "line": 89
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-916e2ffc761e84d9b9c2",
+          "file": "return-car.spec.ts",
+          "line": 52,
+          "column": 31
+        },
+        {
+          "title": "ko: 320px detail, Japanese labels, source policy, navigation focus and mounted home map",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 6440,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[id=\"rental-card-times-naha-airport\"]')\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('[id=\"rental-card-times-naha-airport\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[id=\"rental-card-times-naha-airport\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <a lang=\"ja\" id=\"rental-card-times-naha-airport\" href=\"/ko/return-car/times-naha-airport/?q=OKA\">タイムズカー 那覇空港店</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[id=\"rental-card-times-naha-airport\"]')\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('[id=\"rental-card-times-naha-airport\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[id=\"rental-card-times-naha-airport\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <a lang=\"ja\" id=\"rental-card-times-naha-airport\" href=\"/ko/return-car/times-naha-airport/?q=OKA\">タイムズカー 那覇空港店</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts:89:63",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts",
+                      "column": 63,
+                      "line": 89
+                    },
+                    "snippet": "  87 |   // The old modal focus trap/Escape assertions are replaced by actual page navigation.\n  88 |   await detail.locator(\"[data-return-directory]\").click();\n> 89 |   await expect(page.locator(`[id=\"rental-card-${naha.id}\"]`)).toBeFocused();\n     |                                                               ^\n  90 |   await expect(page.getByRole(\"dialog\")).toHaveCount(0);\n  91 |   await page.getByRole(\"link\", { name: t.rdBackFuel, exact: true }).click();\n  92 |   await expect(page.locator(\"#return-car-link\")).toBeVisible();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts",
+                        "column": 63,
+                        "line": 89
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[id=\"rental-card-times-naha-airport\"]')\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('[id=\"rental-card-times-naha-airport\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[id=\"rental-card-times-naha-airport\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <a lang=\"ja\" id=\"rental-card-times-naha-airport\" href=\"/ko/return-car/times-naha-airport/?q=OKA\">タイムズカー 那覇空港店</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n\n  87 |   // The old modal focus trap/Escape assertions are replaced by actual page navigation.\n  88 |   await detail.locator(\"[data-return-directory]\").click();\n> 89 |   await expect(page.locator(`[id=\"rental-card-${naha.id}\"]`)).toBeFocused();\n     |                                                               ^\n  90 |   await expect(page.getByRole(\"dialog\")).toHaveCount(0);\n  91 |   await page.getByRole(\"link\", { name: t.rdBackFuel, exact: true }).click();\n  92 |   await expect(page.locator(\"#return-car-link\")).toBeVisible();\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts:89:63"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:06.917Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/reports/evidence/rental-expansion/browser/webkit-artifacts/return-car-ko-320px-detail-a6f95--focus-and-mounted-home-map-iPhone-WebKit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/reports/evidence/rental-expansion/browser/webkit-artifacts/return-car-ko-320px-detail-a6f95--focus-and-mounted-home-map-iPhone-WebKit/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts",
+                    "column": 63,
+                    "line": 89
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-8b89a71b904b5ba6faba",
+          "file": "return-car.spec.ts",
+          "line": 52,
+          "column": 31
+        },
+        {
+          "title": "zh-Hans: 320px detail, Japanese labels, source policy, navigation focus and mounted home map",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6458,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[id=\"rental-card-times-naha-airport\"]')\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('[id=\"rental-card-times-naha-airport\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[id=\"rental-card-times-naha-airport\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <a lang=\"ja\" id=\"rental-card-times-naha-airport\" href=\"/zh-Hans/return-car/times-naha-airport/?q=OKA\">タイムズカー 那覇空港店</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[id=\"rental-card-times-naha-airport\"]')\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('[id=\"rental-card-times-naha-airport\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[id=\"rental-card-times-naha-airport\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <a lang=\"ja\" id=\"rental-card-times-naha-airport\" href=\"/zh-Hans/return-car/times-naha-airport/?q=OKA\">タイムズカー 那覇空港店</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts:89:63",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts",
+                      "column": 63,
+                      "line": 89
+                    },
+                    "snippet": "  87 |   // The old modal focus trap/Escape assertions are replaced by actual page navigation.\n  88 |   await detail.locator(\"[data-return-directory]\").click();\n> 89 |   await expect(page.locator(`[id=\"rental-card-${naha.id}\"]`)).toBeFocused();\n     |                                                               ^\n  90 |   await expect(page.getByRole(\"dialog\")).toHaveCount(0);\n  91 |   await page.getByRole(\"link\", { name: t.rdBackFuel, exact: true }).click();\n  92 |   await expect(page.locator(\"#return-car-link\")).toBeVisible();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts",
+                        "column": 63,
+                        "line": 89
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[id=\"rental-card-times-naha-airport\"]')\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('[id=\"rental-card-times-naha-airport\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[id=\"rental-card-times-naha-airport\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <a lang=\"ja\" id=\"rental-card-times-naha-airport\" href=\"/zh-Hans/return-car/times-naha-airport/?q=OKA\">タイムズカー 那覇空港店</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n\n  87 |   // The old modal focus trap/Escape assertions are replaced by actual page navigation.\n  88 |   await detail.locator(\"[data-return-directory]\").click();\n> 89 |   await expect(page.locator(`[id=\"rental-card-${naha.id}\"]`)).toBeFocused();\n     |                                                               ^\n  90 |   await expect(page.getByRole(\"dialog\")).toHaveCount(0);\n  91 |   await page.getByRole(\"link\", { name: t.rdBackFuel, exact: true }).click();\n  92 |   await expect(page.locator(\"#return-car-link\")).toBeVisible();\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts:89:63"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:08.122Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/reports/evidence/rental-expansion/browser/webkit-artifacts/return-car-zh-Hans-320px-d-57740--focus-and-mounted-home-map-iPhone-WebKit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/reports/evidence/rental-expansion/browser/webkit-artifacts/return-car-zh-Hans-320px-d-57740--focus-and-mounted-home-map-iPhone-WebKit/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts",
+                    "column": 63,
+                    "line": 89
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-aefb8968b066349ef3cc",
+          "file": "return-car.spec.ts",
+          "line": 52,
+          "column": 31
+        },
+        {
+          "title": "th: 320px detail, Japanese labels, source policy, navigation focus and mounted home map",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 6481,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[id=\"rental-card-times-naha-airport\"]')\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('[id=\"rental-card-times-naha-airport\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[id=\"rental-card-times-naha-airport\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <a lang=\"ja\" id=\"rental-card-times-naha-airport\" href=\"/th/return-car/times-naha-airport/?q=OKA\">タイムズカー 那覇空港店</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[id=\"rental-card-times-naha-airport\"]')\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('[id=\"rental-card-times-naha-airport\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[id=\"rental-card-times-naha-airport\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <a lang=\"ja\" id=\"rental-card-times-naha-airport\" href=\"/th/return-car/times-naha-airport/?q=OKA\">タイムズカー 那覇空港店</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts:89:63",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts",
+                      "column": 63,
+                      "line": 89
+                    },
+                    "snippet": "  87 |   // The old modal focus trap/Escape assertions are replaced by actual page navigation.\n  88 |   await detail.locator(\"[data-return-directory]\").click();\n> 89 |   await expect(page.locator(`[id=\"rental-card-${naha.id}\"]`)).toBeFocused();\n     |                                                               ^\n  90 |   await expect(page.getByRole(\"dialog\")).toHaveCount(0);\n  91 |   await page.getByRole(\"link\", { name: t.rdBackFuel, exact: true }).click();\n  92 |   await expect(page.locator(\"#return-car-link\")).toBeVisible();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts",
+                        "column": 63,
+                        "line": 89
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('[id=\"rental-card-times-naha-airport\"]')\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('[id=\"rental-card-times-naha-airport\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[id=\"rental-card-times-naha-airport\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <a lang=\"ja\" id=\"rental-card-times-naha-airport\" href=\"/th/return-car/times-naha-airport/?q=OKA\">タイムズカー 那覇空港店</a>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n\n  87 |   // The old modal focus trap/Escape assertions are replaced by actual page navigation.\n  88 |   await detail.locator(\"[data-return-directory]\").click();\n> 89 |   await expect(page.locator(`[id=\"rental-card-${naha.id}\"]`)).toBeFocused();\n     |                                                               ^\n  90 |   await expect(page.getByRole(\"dialog\")).toHaveCount(0);\n  91 |   await page.getByRole(\"link\", { name: t.rdBackFuel, exact: true }).click();\n  92 |   await expect(page.locator(\"#return-car-link\")).toBeVisible();\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts:89:63"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:13.771Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/reports/evidence/rental-expansion/browser/webkit-artifacts/return-car-th-320px-detail-87545--focus-and-mounted-home-map-iPhone-WebKit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/reports/evidence/rental-expansion/browser/webkit-artifacts/return-car-th-320px-detail-87545--focus-and-mounted-home-map-iPhone-WebKit/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts",
+                    "column": 63,
+                    "line": 89
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-9e1a12181cc333fc7058",
+          "file": "return-car.spec.ts",
+          "line": 52,
+          "column": 31
+        },
+        {
+          "title": "single preference seeds the flow; multiple map fuels require a choice and preserve map, filters and storage",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1881,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:14.949Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-f11d2629e80012873e42",
+          "file": "return-car.spec.ts",
+          "line": 101,
+          "column": 1
+        },
+        {
+          "title": "late results from a previous branch cannot replace current results; leaving cancels and returning resets",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1391,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:16.976Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-b40a1ed1428f0d75b793",
+          "file": "return-car.spec.ts",
+          "line": 131,
+          "column": 1
+        },
+        {
+          "title": "rental data network is rejected and retry succeeds",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1265,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:18.372Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-48b0d2765188aa156991",
+          "file": "return-car.spec.ts",
+          "line": 151,
+          "column": 66
+        },
+        {
+          "title": "rental data unapproved source is rejected and retry succeeds",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1273,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:19.641Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-499a81f02ea2750b9ab2",
+          "file": "return-car.spec.ts",
+          "line": 151,
+          "column": 66
+        },
+        {
+          "title": "station network failure supports retry with no return navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1156,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:20.652Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-eb73902a96b82cdc4b59",
+          "file": "return-car.spec.ts",
+          "line": 167,
+          "column": 1
+        },
+        {
+          "title": "empty nearby records are explicit and offer a return to the fuel map",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1070,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:20.918Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-d4b0d7c4479328536dde",
+          "file": "return-car.spec.ts",
+          "line": 175,
+          "column": 1
+        },
+        {
+          "title": "ninety-day-old sources retain their real check date and require rechecking",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1062,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:21.976Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-a7fd287262c792a2c2ab",
+          "file": "return-car.spec.ts",
+          "line": 183,
+          "column": 1
+        },
+        {
+          "title": "leaving while a branch request is pending aborts it and cannot restore its address in the directory",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1088,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:21.992Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-678957caf660b4117c87",
+          "file": "return-car.spec.ts",
+          "line": 190,
+          "column": 1
+        },
+        {
+          "title": "all seven shipped branches load real station candidates and keep every return destination distinct",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 2916,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:23.043Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-531095b81694464943af",
+          "file": "return-car.spec.ts",
+          "line": 207,
+          "column": 1
+        },
+        {
+          "title": "candidate mini maps show each station, load only visible rows, and keep selection independent",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1567,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:23.084Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-3c2ddfe31f06c42ea0d0",
+          "file": "return-car.spec.ts",
+          "line": 228,
+          "column": 1
+        },
+        {
+          "title": "candidate mini maps fit 320px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1127,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:24.654Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-6e3d239f39ad48f68e63",
+          "file": "return-car.spec.ts",
+          "line": 268,
+          "column": 44
+        },
+        {
+          "title": "candidate mini maps fit 390px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1123,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:25.786Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-5e5a21f631c04d22e944",
+          "file": "return-car.spec.ts",
+          "line": 268,
+          "column": 44
+        },
+        {
+          "title": "candidate mini maps fit 768px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1168,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:25.965Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-82b48001b3f843985eec",
+          "file": "return-car.spec.ts",
+          "line": 268,
+          "column": 44
+        },
+        {
+          "title": "candidate mini maps fit 1280px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1260,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:26.913Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-d413d84eb36171374f52",
+          "file": "return-car.spec.ts",
+          "line": 268,
+          "column": 44
+        },
+        {
+          "title": "candidate mini maps tolerate tiles failure without blocking station selection",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1132,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:27.137Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-90808ff518cf7bfab2a4",
+          "file": "return-car.spec.ts",
+          "line": 301,
+          "column": 46
+        },
+        {
+          "title": "candidate mini maps tolerate provider failure without blocking station selection",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1116,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:28.176Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-1e5f9fd11c58cdfed106",
+          "file": "return-car.spec.ts",
+          "line": 301,
+          "column": 46
+        },
+        {
+          "title": "pending fuel change and explicit cancellation abort stale requests without changing persisted preferences",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1149,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:28.274Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-d9c72b97ff859566eea3",
+          "file": "return-car.spec.ts",
+          "line": 316,
+          "column": 1
+        },
+        {
+          "title": "10km search caps at ten, excludes known NO and retains UNKNOWN",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1039,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:29.296Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-f81cc5a7864d42b5efb4",
+          "file": "return-car.spec.ts",
+          "line": 335,
+          "column": 1
+        },
+        {
+          "title": "ordinary non-Times candidates require reservation-address confirmation and never inherit Times rules",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1202,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:29.427Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-1af746c0a41ad4b295aa",
+          "file": "return-car.spec.ts",
+          "line": 344,
+          "column": 1
+        },
+        {
+          "title": "station integrity failure is fail-closed and retry keeps the real manifest hash check",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1065,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:30.339Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-4b35b641a75fa53aa97d",
+          "file": "return-car.spec.ts",
+          "line": 365,
+          "column": 1
+        },
+        {
+          "title": "candidate mini maps fit 1280px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop-WebKit",
+              "projectName": "Desktop-WebKit",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1162,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:40.774Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-44bf3f642bbed215ecd1",
+          "file": "return-car.spec.ts",
+          "line": 268,
+          "column": 44
+        },
+        {
+          "title": "candidate mini maps preserve page wheel scrolling",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 25000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop-WebKit",
+              "projectName": "Desktop-WebKit",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1260,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:19:41.042Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-f21770966483cb3f3b4d",
+          "file": "return-car.spec.ts",
+          "line": 288,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-30T21:18:21.376Z",
+    "duration": 81106.383,
+    "expected": 78,
+    "skipped": 0,
+    "unexpected": 7,
+    "flaky": 0
+  }
+}

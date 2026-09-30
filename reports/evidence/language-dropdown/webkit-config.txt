@@ -1,0 +1,13 @@
+import { defineConfig, devices } from "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/node_modules/@playwright/test/index.mjs";
+export default defineConfig({
+  testDir: "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+  testMatch: ["foundation.spec.ts"],
+  fullyParallel: true, workers: 2, retries: 0,
+  reporter: [["list"], ["json", { outputFile: "/tmp/fmj-language-webkit-results.json" }]],
+  outputDir: "/tmp/fmj-language-webkit-artifacts",
+  use: { baseURL: "http://127.0.0.1:4174", screenshot: "only-on-failure" },
+  projects: [
+    { name: "Language-iPhone-WebKit", grep: /mobile switching|localized static HTML|language dropdown 320px/, use: { ...devices["iPhone 13"], browserName: "webkit" } },
+    { name: "Language-Desktop-WebKit", grep: /localized static HTML|language dropdown 1280px/, use: { ...devices["Desktop Safari"], browserName: "webkit" } },
+  ],
+});

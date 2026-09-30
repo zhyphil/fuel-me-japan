@@ -1,0 +1,14 @@
+import { defineConfig, devices } from "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/node_modules/@playwright/test/index.mjs";
+export default defineConfig({
+  testDir: "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+  testMatch: ["about.spec.ts", "station-filters.spec.ts"],
+  grep: /reviewed logos|all shipped brand files|zh-Hans 320px|zh-Hans 1280px/,
+  fullyParallel: true, workers: 2, retries: 0,
+  reporter: [["list"], ["json", { outputFile: "/tmp/fmj-brand-webkit-results.json" }]],
+  outputDir: "/tmp/fmj-brand-webkit-artifacts",
+  use: { baseURL: "http://127.0.0.1:4174", screenshot: "only-on-failure" },
+  projects: [
+    { name: "Brand-iPhone-WebKit", use: { ...devices["iPhone 13"], browserName: "webkit" } },
+    { name: "Brand-Desktop-WebKit", use: { ...devices["Desktop Safari"], browserName: "webkit" } },
+  ],
+});

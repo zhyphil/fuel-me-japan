@@ -1,0 +1,340 @@
+[WebServer] (node:67612) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 85 tests using 2 workers
+
+(node:67617) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:67616) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:49:1 › homepage remains fuel-first and loads no national rental data until the real same-site link is followed (1.4s)
+  ✓   2 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › en: 320px directory combines region/company/name, resets, paginates and fits (1.6s)
+  ✓   3 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › en: 390px directory combines region/company/name, resets, paginates and fits (1.5s)
+  ✓   4 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › en: 1280px directory combines region/company/name, resets, paginates and fits (1.5s)
+  ✓   5 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › zh-Hant: 320px directory combines region/company/name, resets, paginates and fits (1.4s)
+  ✓   6 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › zh-Hant: 390px directory combines region/company/name, resets, paginates and fits (1.5s)
+  ✓   7 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › zh-Hant: 1280px directory combines region/company/name, resets, paginates and fits (1.7s)
+  ✓   8 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › ko: 320px directory combines region/company/name, resets, paginates and fits (1.4s)
+  ✓   9 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › ko: 390px directory combines region/company/name, resets, paginates and fits (1.4s)
+  ✓  10 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › ko: 1280px directory combines region/company/name, resets, paginates and fits (1.5s)
+  ✓  11 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › zh-Hans: 320px directory combines region/company/name, resets, paginates and fits (1.4s)
+  ✓  12 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › zh-Hans: 390px directory combines region/company/name, resets, paginates and fits (1.4s)
+  ✓  13 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › zh-Hans: 1280px directory combines region/company/name, resets, paginates and fits (1.5s)
+  ✓  14 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › th: 320px directory combines region/company/name, resets, paginates and fits (1.4s)
+  ✓  15 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › th: 390px directory combines region/company/name, resets, paginates and fits (1.5s)
+  ✓  16 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › th: 1280px directory combines region/company/name, resets, paginates and fits (1.6s)
+  ✓  17 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:111:40 › NGO: official Times detail is directly addressable, refreshable and honest about the entrance (1.2s)
+  ✓  18 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:111:40 › FUK: official Times detail is directly addressable, refreshable and honest about the entrance (1.2s)
+  ✓  19 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:111:40 › HND: official Times detail is directly addressable, refreshable and honest about the entrance (1.3s)
+  ✓  20 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:111:40 › KIX: official Times detail is directly addressable, refreshable and honest about the entrance (1.2s)
+  ✓  21 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:111:40 › OKA: official Times detail is directly addressable, refreshable and honest about the entrance (1.3s)
+  ✓  22 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:111:40 › NRT: official Times detail is directly addressable, refreshable and honest about the entrance (1.2s)
+  ✓  23 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:111:40 › CTS: official Times detail is directly addressable, refreshable and honest about the entrance (1.2s)
+  ✓  24 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:146:31 › en: locale links retain detail ID/query and synchronize metadata on directory navigation (1.2s)
+  ✓  25 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:146:31 › zh-Hant: locale links retain detail ID/query and synchronize metadata on directory navigation (1.3s)
+  ✓  26 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:146:31 › ko: locale links retain detail ID/query and synchronize metadata on directory navigation (1.2s)
+  ✓  27 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:146:31 › zh-Hans: locale links retain detail ID/query and synchronize metadata on directory navigation (1.3s)
+  ✓  28 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:146:31 › th: locale links retain detail ID/query and synchronize metadata on directory navigation (1.2s)
+  ✓  29 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:169:52 › unknown or malformed detail does-not-exist has accessible not-found and a directory return (1.1s)
+  ✓  30 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:169:52 › unknown or malformed detail %2F has accessible not-found and a directory return (1.1s)
+  ✓  32 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:180:1 › local preview rejects malformed UTF-8 before application routing (167ms)
+  ✓  31 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:169:52 › unknown or malformed detail a/b has accessible not-found and a directory return (1.1s)
+  ✓  33 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:188:1 › retired duplicate alias replaces the URL with its canonical ID and preserves the directory query (1.1s)
+  ✓  35 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:218:1 › mouse hover, rapid preview changes and keyboard focus highlight the final branch without rebuilding the map (2.0s)
+  ✓  36 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:256:1 › touch scrolling does not preview a branch; only visible thumbnail rows request tiles and old rows unload (1.4s)
+  ✓  37 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:278:46 › directory tiles failure keeps names, links and attribution usable (1.1s)
+  ✓  38 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:278:46 › directory provider failure keeps names, links and attribution usable (1.1s)
+  ✘  34 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:196:1 › detail return and browser back restore region/company/name/page, exact card focus and scroll (6.2s)
+(node:67867) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  39 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:295:1 › counter opt-in is explicit and counter detail cannot become a return destination (1.2s)
+  ✓  40 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:307:147 › index network fails closed and retries the signed artifact (986ms)
+  ✓  41 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:307:147 › index same-size hash corruption fails closed and retries the signed artifact (1.4s)
+  ✓  42 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:307:147 › index truncated bytes fails closed and retries the signed artifact (1.4s)
+  ✓  43 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:307:147 › partition network fails closed and retries the signed artifact (1.2s)
+  ✓  44 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:307:147 › partition same-size hash corruption fails closed and retries the signed artifact (1.2s)
+  ✓  45 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:307:147 › partition truncated bytes fails closed and retries the signed artifact (1.3s)
+  ✓  46 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:325:1 › leaving a pending rental detail aborts its partition and a late response cannot replace another branch (901ms)
+  ✓  48 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:371:1 › changing region while a name is being edited cannot display results for invisible stale criteria (1.0s)
+  ✓  47 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:342:1 › source downloads expose all 59 manifest artifacts, every partition and original provenance (1.5s)
+  ✓  50 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:9:1 › filters selected fuel independently, retains unknowns, and requires explicit completion before return navigation (2.0s)
+  ✓  49 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:383:1 › cluster keyboard activation offers bounded members and clears them on filtering (3.7s)
+  ✘  51 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:52:31 › en: 320px detail, Japanese labels, source policy, navigation focus and mounted home map (6.4s)
+(node:68752) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  52 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:52:31 › zh-Hant: 320px detail, Japanese labels, source policy, navigation focus and mounted home map (6.4s)
+(node:68769) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  53 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:52:31 › ko: 320px detail, Japanese labels, source policy, navigation focus and mounted home map (6.4s)
+(node:68803) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  54 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:52:31 › zh-Hans: 320px detail, Japanese labels, source policy, navigation focus and mounted home map (6.5s)
+(node:68831) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  56 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:101:1 › single preference seeds the flow; multiple map fuels require a choice and preserve map, filters and storage (1.9s)
+  ✓  57 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:131:1 › late results from a previous branch cannot replace current results; leaving cancels and returning resets (1.4s)
+  ✓  58 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:151:66 › rental data network is rejected and retry succeeds (1.3s)
+  ✘  55 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:52:31 › th: 320px detail, Japanese labels, source policy, navigation focus and mounted home map (6.5s)
+(node:68871) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  59 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:151:66 › rental data unapproved source is rejected and retry succeeds (1.3s)
+  ✓  60 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:167:1 › station network failure supports retry with no return navigation (1.2s)
+  ✓  61 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:175:1 › empty nearby records are explicit and offer a return to the fuel map (1.1s)
+  ✓  62 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:183:1 › ninety-day-old sources retain their real check date and require rechecking (1.1s)
+  ✓  63 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:190:1 › leaving while a branch request is pending aborts it and cannot restore its address in the directory (1.1s)
+  ✓  65 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:228:1 › candidate mini maps show each station, load only visible rows, and keep selection independent (1.6s)
+  ✓  66 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:268:44 › candidate mini maps fit 320px (1.1s)
+  ✓  64 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:207:1 › all seven shipped branches load real station candidates and keep every return destination distinct (2.9s)
+  ✓  67 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:268:44 › candidate mini maps fit 390px (1.1s)
+  ✓  68 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:268:44 › candidate mini maps fit 768px (1.2s)
+  ✓  69 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:268:44 › candidate mini maps fit 1280px (1.3s)
+  ✓  70 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:301:46 › candidate mini maps tolerate tiles failure without blocking station selection (1.1s)
+  ✓  71 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:301:46 › candidate mini maps tolerate provider failure without blocking station selection (1.1s)
+  ✓  72 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:316:1 › pending fuel change and explicit cancellation abort stale requests without changing persisted preferences (1.1s)
+  ✓  73 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:335:1 › 10km search caps at ten, excludes known NO and retains UNKNOWN (1.0s)
+  ✓  74 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:344:1 › ordinary non-Times candidates require reservation-address confirmation and never inherit Times rules (1.2s)
+(node:68955) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  75 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:365:1 › station integrity failure is fail-closed and retry keeps the real manifest hash check (1.1s)
+(node:68972) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  76 [Desktop-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › en: 1280px directory combines region/company/name, resets, paginates and fits (1.5s)
+  ✓  77 [Desktop-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › zh-Hant: 1280px directory combines region/company/name, resets, paginates and fits (1.5s)
+  ✓  78 [Desktop-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › ko: 1280px directory combines region/company/name, resets, paginates and fits (1.4s)
+  ✓  79 [Desktop-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › zh-Hans: 1280px directory combines region/company/name, resets, paginates and fits (1.3s)
+  ✓  80 [Desktop-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › th: 1280px directory combines region/company/name, resets, paginates and fits (1.4s)
+  ✓  82 [Desktop-WebKit] › tests/e2e/rental-directory.spec.ts:218:1 › mouse hover, rapid preview changes and keyboard focus highlight the final branch without rebuilding the map (2.0s)
+  ✓  83 [Desktop-WebKit] › tests/e2e/rental-directory.spec.ts:383:1 › cluster keyboard activation offers bounded members and clears them on filtering (3.5s)
+  ✘  81 [Desktop-WebKit] › tests/e2e/rental-directory.spec.ts:196:1 › detail return and browser back restore region/company/name/page, exact card focus and scroll (6.2s)
+(node:69029) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  84 [Desktop-WebKit] › tests/e2e/return-car.spec.ts:268:44 › candidate mini maps fit 1280px (1.2s)
+  ✓  85 [Desktop-WebKit] › tests/e2e/return-car.spec.ts:288:1 › candidate mini maps preserve page wheel scrolling (1.3s)
+
+
+  1) [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:196:1 › detail return and browser back restore region/company/name/page, exact card focus and scroll 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  locator('[id="rental-card-rental-osm-n6814489385"]')
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" locator('[id="rental-card-rental-osm-n6814489385"]') with timeout 5000ms
+      - waiting for locator('[id="rental-card-rental-osm-n6814489385"]')
+        14 × locator resolved to <a lang="ja" id="rental-card-rental-osm-n6814489385" href="/en/return-car/rental-osm-n6814489385/?region=JP-01&company=toyota&q=%E3%83%88%E3%83%A8%E3%82%BF&page=2">トヨタレンタカー</a>
+           - unexpected value "inactive"
+
+
+      206 |   await page.locator("[data-return-directory]").click();
+      207 |   await expect(page).toHaveURL(/region=JP-01&company=toyota&q=.*&page=2$/);
+    > 208 |   await expect(page.locator(`[id="${id}"]`)).toBeFocused();
+          |                                              ^
+      209 |   await expect.poll(async () => Math.abs(await page.evaluate(() => scrollY) - originalScroll)).toBeLessThan(3);
+      210 |   await expect(page.locator("#rental-region")).toHaveValue("JP-01"); await expect(page.locator("#rental-company")).toHaveValue("toyota"); await expect(page.locator("#rental-query")).toHaveValue("トヨタ");
+      211 |   expect(await map!.evaluate(node => node.isConnected)).toBe(true);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:208:46
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    reports/evidence/rental-expansion/browser/webkit-artifacts/rental-directory-detail-re-132b6-exact-card-focus-and-scroll-iPhone-WebKit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: reports/evidence/rental-expansion/browser/webkit-artifacts/rental-directory-detail-re-132b6-exact-card-focus-and-scroll-iPhone-WebKit/error-context.md
+
+  2) [iPhone-WebKit] › tests/e2e/return-car.spec.ts:52:31 › en: 320px detail, Japanese labels, source policy, navigation focus and mounted home map 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  locator('[id="rental-card-times-naha-airport"]')
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" locator('[id="rental-card-times-naha-airport"]') with timeout 5000ms
+      - waiting for locator('[id="rental-card-times-naha-airport"]')
+        14 × locator resolved to <a lang="ja" id="rental-card-times-naha-airport" href="/en/return-car/times-naha-airport/?q=OKA">タイムズカー 那覇空港店</a>
+           - unexpected value "inactive"
+
+
+      87 |   // The old modal focus trap/Escape assertions are replaced by actual page navigation.
+      88 |   await detail.locator("[data-return-directory]").click();
+    > 89 |   await expect(page.locator(`[id="rental-card-${naha.id}"]`)).toBeFocused();
+         |                                                               ^
+      90 |   await expect(page.getByRole("dialog")).toHaveCount(0);
+      91 |   await page.getByRole("link", { name: t.rdBackFuel, exact: true }).click();
+      92 |   await expect(page.locator("#return-car-link")).toBeVisible();
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts:89:63
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    reports/evidence/rental-expansion/browser/webkit-artifacts/return-car-en-320px-detail-d7dbf--focus-and-mounted-home-map-iPhone-WebKit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: reports/evidence/rental-expansion/browser/webkit-artifacts/return-car-en-320px-detail-d7dbf--focus-and-mounted-home-map-iPhone-WebKit/error-context.md
+
+  3) [iPhone-WebKit] › tests/e2e/return-car.spec.ts:52:31 › zh-Hant: 320px detail, Japanese labels, source policy, navigation focus and mounted home map 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  locator('[id="rental-card-times-naha-airport"]')
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" locator('[id="rental-card-times-naha-airport"]') with timeout 5000ms
+      - waiting for locator('[id="rental-card-times-naha-airport"]')
+        14 × locator resolved to <a lang="ja" id="rental-card-times-naha-airport" href="/zh-Hant/return-car/times-naha-airport/?q=OKA">タイムズカー 那覇空港店</a>
+           - unexpected value "inactive"
+
+
+      87 |   // The old modal focus trap/Escape assertions are replaced by actual page navigation.
+      88 |   await detail.locator("[data-return-directory]").click();
+    > 89 |   await expect(page.locator(`[id="rental-card-${naha.id}"]`)).toBeFocused();
+         |                                                               ^
+      90 |   await expect(page.getByRole("dialog")).toHaveCount(0);
+      91 |   await page.getByRole("link", { name: t.rdBackFuel, exact: true }).click();
+      92 |   await expect(page.locator("#return-car-link")).toBeVisible();
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts:89:63
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    reports/evidence/rental-expansion/browser/webkit-artifacts/return-car-zh-Hant-320px-d-2b495--focus-and-mounted-home-map-iPhone-WebKit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: reports/evidence/rental-expansion/browser/webkit-artifacts/return-car-zh-Hant-320px-d-2b495--focus-and-mounted-home-map-iPhone-WebKit/error-context.md
+
+  4) [iPhone-WebKit] › tests/e2e/return-car.spec.ts:52:31 › ko: 320px detail, Japanese labels, source policy, navigation focus and mounted home map 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  locator('[id="rental-card-times-naha-airport"]')
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" locator('[id="rental-card-times-naha-airport"]') with timeout 5000ms
+      - waiting for locator('[id="rental-card-times-naha-airport"]')
+        14 × locator resolved to <a lang="ja" id="rental-card-times-naha-airport" href="/ko/return-car/times-naha-airport/?q=OKA">タイムズカー 那覇空港店</a>
+           - unexpected value "inactive"
+
+
+      87 |   // The old modal focus trap/Escape assertions are replaced by actual page navigation.
+      88 |   await detail.locator("[data-return-directory]").click();
+    > 89 |   await expect(page.locator(`[id="rental-card-${naha.id}"]`)).toBeFocused();
+         |                                                               ^
+      90 |   await expect(page.getByRole("dialog")).toHaveCount(0);
+      91 |   await page.getByRole("link", { name: t.rdBackFuel, exact: true }).click();
+      92 |   await expect(page.locator("#return-car-link")).toBeVisible();
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts:89:63
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    reports/evidence/rental-expansion/browser/webkit-artifacts/return-car-ko-320px-detail-a6f95--focus-and-mounted-home-map-iPhone-WebKit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: reports/evidence/rental-expansion/browser/webkit-artifacts/return-car-ko-320px-detail-a6f95--focus-and-mounted-home-map-iPhone-WebKit/error-context.md
+
+  5) [iPhone-WebKit] › tests/e2e/return-car.spec.ts:52:31 › zh-Hans: 320px detail, Japanese labels, source policy, navigation focus and mounted home map 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  locator('[id="rental-card-times-naha-airport"]')
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" locator('[id="rental-card-times-naha-airport"]') with timeout 5000ms
+      - waiting for locator('[id="rental-card-times-naha-airport"]')
+        14 × locator resolved to <a lang="ja" id="rental-card-times-naha-airport" href="/zh-Hans/return-car/times-naha-airport/?q=OKA">タイムズカー 那覇空港店</a>
+           - unexpected value "inactive"
+
+
+      87 |   // The old modal focus trap/Escape assertions are replaced by actual page navigation.
+      88 |   await detail.locator("[data-return-directory]").click();
+    > 89 |   await expect(page.locator(`[id="rental-card-${naha.id}"]`)).toBeFocused();
+         |                                                               ^
+      90 |   await expect(page.getByRole("dialog")).toHaveCount(0);
+      91 |   await page.getByRole("link", { name: t.rdBackFuel, exact: true }).click();
+      92 |   await expect(page.locator("#return-car-link")).toBeVisible();
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts:89:63
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    reports/evidence/rental-expansion/browser/webkit-artifacts/return-car-zh-Hans-320px-d-57740--focus-and-mounted-home-map-iPhone-WebKit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: reports/evidence/rental-expansion/browser/webkit-artifacts/return-car-zh-Hans-320px-d-57740--focus-and-mounted-home-map-iPhone-WebKit/error-context.md
+
+  6) [iPhone-WebKit] › tests/e2e/return-car.spec.ts:52:31 › th: 320px detail, Japanese labels, source policy, navigation focus and mounted home map 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  locator('[id="rental-card-times-naha-airport"]')
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" locator('[id="rental-card-times-naha-airport"]') with timeout 5000ms
+      - waiting for locator('[id="rental-card-times-naha-airport"]')
+        14 × locator resolved to <a lang="ja" id="rental-card-times-naha-airport" href="/th/return-car/times-naha-airport/?q=OKA">タイムズカー 那覇空港店</a>
+           - unexpected value "inactive"
+
+
+      87 |   // The old modal focus trap/Escape assertions are replaced by actual page navigation.
+      88 |   await detail.locator("[data-return-directory]").click();
+    > 89 |   await expect(page.locator(`[id="rental-card-${naha.id}"]`)).toBeFocused();
+         |                                                               ^
+      90 |   await expect(page.getByRole("dialog")).toHaveCount(0);
+      91 |   await page.getByRole("link", { name: t.rdBackFuel, exact: true }).click();
+      92 |   await expect(page.locator("#return-car-link")).toBeVisible();
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts:89:63
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    reports/evidence/rental-expansion/browser/webkit-artifacts/return-car-th-320px-detail-87545--focus-and-mounted-home-map-iPhone-WebKit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: reports/evidence/rental-expansion/browser/webkit-artifacts/return-car-th-320px-detail-87545--focus-and-mounted-home-map-iPhone-WebKit/error-context.md
+
+  7) [Desktop-WebKit] › tests/e2e/rental-directory.spec.ts:196:1 › detail return and browser back restore region/company/name/page, exact card focus and scroll 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  locator('[id="rental-card-rental-osm-n6814489385"]')
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" locator('[id="rental-card-rental-osm-n6814489385"]') with timeout 5000ms
+      - waiting for locator('[id="rental-card-rental-osm-n6814489385"]')
+        14 × locator resolved to <a lang="ja" id="rental-card-rental-osm-n6814489385" href="/en/return-car/rental-osm-n6814489385/?region=JP-01&company=toyota&q=%E3%83%88%E3%83%A8%E3%82%BF&page=2">トヨタレンタカー</a>
+           - unexpected value "inactive"
+
+
+      206 |   await page.locator("[data-return-directory]").click();
+      207 |   await expect(page).toHaveURL(/region=JP-01&company=toyota&q=.*&page=2$/);
+    > 208 |   await expect(page.locator(`[id="${id}"]`)).toBeFocused();
+          |                                              ^
+      209 |   await expect.poll(async () => Math.abs(await page.evaluate(() => scrollY) - originalScroll)).toBeLessThan(3);
+      210 |   await expect(page.locator("#rental-region")).toHaveValue("JP-01"); await expect(page.locator("#rental-company")).toHaveValue("toyota"); await expect(page.locator("#rental-query")).toHaveValue("トヨタ");
+      211 |   expect(await map!.evaluate(node => node.isConnected)).toBe(true);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:208:46
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    reports/evidence/rental-expansion/browser/webkit-artifacts/rental-directory-detail-re-132b6-exact-card-focus-and-scroll-Desktop-WebKit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: reports/evidence/rental-expansion/browser/webkit-artifacts/rental-directory-detail-re-132b6-exact-card-focus-and-scroll-Desktop-WebKit/error-context.md
+
+  7 failed
+    [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:196:1 › detail return and browser back restore region/company/name/page, exact card focus and scroll 
+    [iPhone-WebKit] › tests/e2e/return-car.spec.ts:52:31 › en: 320px detail, Japanese labels, source policy, navigation focus and mounted home map 
+    [iPhone-WebKit] › tests/e2e/return-car.spec.ts:52:31 › zh-Hant: 320px detail, Japanese labels, source policy, navigation focus and mounted home map 
+    [iPhone-WebKit] › tests/e2e/return-car.spec.ts:52:31 › ko: 320px detail, Japanese labels, source policy, navigation focus and mounted home map 
+    [iPhone-WebKit] › tests/e2e/return-car.spec.ts:52:31 › zh-Hans: 320px detail, Japanese labels, source policy, navigation focus and mounted home map 
+    [iPhone-WebKit] › tests/e2e/return-car.spec.ts:52:31 › th: 320px detail, Japanese labels, source policy, navigation focus and mounted home map 
+    [Desktop-WebKit] › tests/e2e/rental-directory.spec.ts:196:1 › detail return and browser back restore region/company/name/page, exact card focus and scroll 
+  78 passed (1.4m)

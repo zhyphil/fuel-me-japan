@@ -1,0 +1,76 @@
+{
+  "date": "2026-09-30",
+  "scope": "独立还车业务核心UI、本地化、路由、地图与构建；无发布操作",
+  "checks": {
+    "lint": "PASS",
+    "typecheck": "PASS",
+    "targetedUnit": {
+      "status": "PASS",
+      "files": 5,
+      "tests": 101
+    },
+    "viteBuild": "PASS",
+    "nodeImportPrerender": "PASS",
+    "standardBuildCommand": "BLOCKED",
+    "preview": "BLOCKED",
+    "browserSmoke": "NOT_RUN",
+    "fullE2e": "NOT_RUN"
+  },
+  "blockers": [
+    "tsx CLI 的 IPC 管道创建遭 EPERM；改用同一脚本的 node --import tsx 执行完成预渲染。",
+    "Vite preview 监听 127.0.0.1:4178 遭 EPERM。",
+    "Playwright Chromium 启动报 Target page, context or browser has been closed，未运行页面检查。"
+  ],
+  "rentalProvenance": {
+    "path": "/data/rental/nationwide/manifest.json",
+    "sha256": "db9e6daa567c697997e49cbc941b56e3f75dede23bbaf99868143cc10556eff4",
+    "count": 7387,
+    "reviewDate": "2026-09-30",
+    "transformationVersion": "rental-v1",
+    "version": "rental-v1-8f12d997103769bc",
+    "sourceIds": [
+      "osm",
+      "overture",
+      "times-official"
+    ],
+    "counterCount": 32,
+    "officialFacilityCount": 7,
+    "reviewedAirports": [
+      "CTS",
+      "FUK",
+      "HND",
+      "KIX",
+      "NGO",
+      "NRT",
+      "OKA"
+    ],
+    "note": "全国候选库；7机场各核对1家Times设施，非完整覆盖或公司整库授权；全部车辆入口未现场核实。"
+  },
+  "staticHtmlCount": 11,
+  "fileSha256": {
+    "public/_redirects": "99c9327096f299fca48b199522c57aa2c3d3fe8a0b5769a15ca38ea5f5469a7f",
+    "public/icons/rental-car.svg": "c94b540a6bbee6dc1150dc038f1f8b7eba482991b22aa263a9049e350353d89b",
+    "scripts/prerender.tsx": "2ffe33c3ac3de2339eae601bbb6b140148fbca282adb0f0ab9683e810a5727ab",
+    "src/App.tsx": "038f4a6146e0954046f52a986da44305c95b522d8b3d251522b8b417774e78f5",
+    "src/components/LocaleSwitcher.tsx": "c7dfe8a890906d8ea2f22fad3f8aa1d60634660301c2c5e2c52ee7f910e69dc1",
+    "src/components/MapThumbnail.tsx": "eda7c5474735392c6356bf0be8031f49b529c08d23b4e760712b1550c5c4b81e",
+    "src/components/RentalBusiness.tsx": "0c4577c45d8bf41869398aef7727be2cb735b1463a07ed60538b73c82c746cf5",
+    "src/components/RentalDetail.tsx": "1c395930ebe8acbf4f2af37c8b69895da28aed665e3729a9c4df0bab2a654bed",
+    "src/components/RentalDirectory.tsx": "15f6b06e3211760e9950cccf2b638405ace5e96de6d6efe422cfcd64c9e5d134",
+    "src/components/RentalMap.tsx": "6e61ff7ec35ed5b4d12913dbbc71db271ca7803bf82eb14b700f62c6c67a8ff0",
+    "src/components/RentalSources.tsx": "740511d3242bda5eb65589cb1e57ceeb74034f6f0c23af95766db02de739f65b",
+    "src/components/ReturnCar.tsx": "ad62a2529c8115acccfcd89e4a75dd94ba7a6898a2fb4db0c20629a635ff43d5",
+    "src/components/StationMiniMap.tsx": "425cfac0f4b8a8d868c65239ba2baa928f2c2213d6838dfe750e0a7de7361b9a",
+    "src/lib/rental-view.ts": "31ef4053f0c6491d3211e066606b46bc61e1e7c363c2b0c8da8aa8a77ba7bf45",
+    "src/lib/return-car.ts": "1c3d1bf3bddeb735148e3a064e0bcd924ac76a8281b33568f79eacfc4b7158b3",
+    "src/lib/routes.ts": "eaae0fe01ae83261aa20641b68571f6391ee545e18515d0f9473248864880124",
+    "src/locales/en.json": "f36bd287bb41a8a53bbc033f54aecca523339357a038866f1a83f830591607fa",
+    "src/locales/ko.json": "1be21b57b5cb88eb653b55b435dde06e5a7a34ec79eb246d6d556935659e7f63",
+    "src/locales/th.json": "6ea664f3ac0a5f28b5ec38acfedb9938054c96ae0fd30feafcc6249e8fdb834d",
+    "src/locales/zh-Hans.json": "e42f752d3b456d364b5100d099c6ff268c2d24b31e3b92637783834c169ef0f5",
+    "src/locales/zh-Hant.json": "faa283c932b4b78fec87f3478f8a782080128bff0918b8d46507970250d96186",
+    "src/main.tsx": "21a0c2a02cdb4955596390184a7d2716ca717b381435ffe15489db80fd921f34",
+    "src/styles.css": "09ecb90d37c098e0767b3c786fcc6c3036d07717d4255c618f34785082f8d58e",
+    "tests/unit/rental-routes.test.ts": "4849205ef17340dbc1ee537accd7a749e5e84b71a6ed7cf758a608fbc29ed5af"
+  }
+}

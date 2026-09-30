@@ -51,6 +51,7 @@ test("old diesel preference migrates without a write, multiple fuels survive loc
   await chooseFuels(page, ["DIESEL", "HIGH_OCTANE"]);
   await expect(page.locator("#price-sort-fuel")).toHaveValue("DIESEL");
   await expect(page.locator('.station-card .station-price, .map-pin-station .station-price')).toHaveCount(0);
+  await page.locator(".locale-trigger").click();
   await page.locator('.locale-switcher a[lang="zh-Hans"]').click();
   await expect(page.locator('#display-fuel input[value="DIESEL"]')).toBeChecked();
   await expect(page.locator('#display-fuel input[value="HIGH_OCTANE"]')).toBeChecked();

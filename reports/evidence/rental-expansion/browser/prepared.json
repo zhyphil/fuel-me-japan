@@ -1,0 +1,81 @@
+{
+  "status": "READY_FOR_PARENT_RUN",
+  "说明": "只交付浏览器测试迁移和离线发现检查；本叶子未启动浏览器或端口，未运行完整 check。相关既有单元通过不等于浏览器验收。",
+  "dataVersion": "rental-v1-8f12d997103769bc",
+  "checks": [
+    {
+      "command": "npm run lint",
+      "status": "PASS",
+      "说明": "最终测试文件 ESLint 检查，无警告。"
+    },
+    {
+      "command": "npm run typecheck",
+      "status": "PASS",
+      "说明": "TypeScript 检查通过。"
+    },
+    {
+      "command": "npm test -- tests/unit/rental.test.ts tests/unit/rental-routes.test.ts tests/unit/return-car.test.ts tests/unit/station-mini-map.test.ts tests/unit/opening-hours.test.ts",
+      "status": "PASS",
+      "passed": 124,
+      "failed": 0,
+      "files": 5
+    },
+    {
+      "command": "playwright test tests/e2e/return-car.spec.ts tests/e2e/rental-directory.spec.ts --list",
+      "status": "PASS",
+      "discovered": 76,
+      "executed": 0,
+      "perFile": {
+        "tests/e2e/return-car.spec.ts": 27,
+        "tests/e2e/rental-directory.spec.ts": 49
+      }
+    },
+    {
+      "command": "playwright test --config /tmp/fmj-rental-browser-webkit.config.ts --list",
+      "status": "PASS",
+      "discovered": 85,
+      "executed": 0
+    },
+    {
+      "command": "npm run test:e2e -- --list",
+      "status": "PASS",
+      "discovered": 257,
+      "files": 18,
+      "executed": 0
+    },
+    {
+      "command": "npm run check",
+      "status": "NOT_RUN",
+      "说明": "按本节点补充授权，由父级获准本机环境执行。"
+    }
+  ],
+  "fixedTestFailure": {
+    "status": "FIXED",
+    "说明": "首次 --list 因测试直接导入 i18n JSON 触发 Node24 import attribute 错误；改用已有 readFileSync 方式读取语言资源，去除 opening-hours 运行时导入，并保留五语言营业时间明确断言。",
+    "before": "test-list-before-fix.log",
+    "after": "test-list.log"
+  },
+  "productionFilesChanged": [],
+  "files": [
+    {
+      "path": "tests/e2e/return-car.spec.ts",
+      "sha256": "125a51ffedce7e2b626f77c39e1d1f284132b6163a862cb237dbd0725f8ab900"
+    },
+    {
+      "path": "tests/e2e/rental-directory.spec.ts",
+      "sha256": "bd9026e14f7643a4919eaca5b8ac25c90a2c5cccc5624e3e8e0d49ad6711dc07"
+    },
+    {
+      "path": "tests/e2e/rental-fixtures.ts",
+      "sha256": "d57746cfe7c55d0873fc3d62829c56d2c2be32a1f0304241f8765d9b75c316b8"
+    }
+  ],
+  "浏览器待核实": [
+    "44px门店标记/返回链接/目录控件",
+    "390px加油候选小地图宽度与上下布局",
+    "编辑名称后改变筛选时可见条件与 URL 同步",
+    "目录返回卡片焦点和滚动",
+    "完整76项及WebKit85项运行结果"
+  ],
+  "说明_限制": "未发布；未实体手机测试；未真人母语校对；未访问外部服务。默认离线灰色瓦片不代表 OSM 线上可用性。"
+}

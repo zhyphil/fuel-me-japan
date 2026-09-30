@@ -1,0 +1,136 @@
+
+> fuel-me-japan@0.0.0 test
+> vitest run tests/unit/rental.test.ts
+
+
+ RUN  v5.0.2 /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan
+
+ ❯ tests/unit/rental.test.ts (37 tests | 1 failed) 390ms
+   ❯ search, aliases, freshness and lazy requests (8)
+     × treats a complete supported airport code as an exact airport lookup 17ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/rental.test.ts > search, aliases, freshness and lazy requests > treats a complete supported airport code as an exact airport lookup
+AssertionError: expected [ 'rental-osm-n13437034611', …(97) ] to deeply equal [ 'times-naha-airport' ]
+
+- Expected
++ Received
+
+  [
++   "rental-osm-n13437034611",
++   "rental-osm-n4551175891",
++   "rental-osm-n5885062556",
++   "rental-osm-w383398527",
++   "rental-overture-08a72aad-60eb-4a36-b882-9411651f3347",
++   "rental-overture-08b2023f-b646-4685-82a3-76d63f57ed08",
++   "rental-overture-08be5d76-8e1b-449f-8438-dd25f9c65be1",
++   "rental-overture-0968b6ed-7b8a-4701-9d5f-cbf4916b5f2f",
++   "rental-overture-0ad9b787-3578-4f35-aad0-95e0e069a008",
++   "rental-overture-0cc967df-dcc3-43f0-a307-6942d186b5cd",
++   "rental-overture-18782e83-629b-4eb5-a3c1-10c92516f92e",
++   "rental-overture-18ca79b4-16ab-4b53-b02b-7c2c81ca21b6",
++   "rental-overture-1f8a429f-0570-48b1-a64c-9691763a8cfc",
++   "rental-overture-21c882a4-68a7-4ff8-b43f-a56af47fd225",
++   "rental-overture-23bbdd75-a41c-42b2-9ba2-790bdb4337c3",
++   "rental-overture-27b3d8f2-ad19-4a99-b283-a3a251f164c7",
++   "rental-overture-2d9b58b3-12dc-4e3c-b719-9201484452f6",
++   "rental-overture-2ff92be9-5612-4fb0-be4e-011afb1c0288",
++   "rental-overture-316bcc63-3ad4-4467-a058-d0b5f388476d",
++   "rental-overture-32a09c46-c169-4fc9-921f-3d5f750fa354",
++   "rental-overture-33f80901-dd1d-4dd5-ac24-d3dbb2a557e1",
++   "rental-overture-352103f5-1a60-4052-bc33-ca95515bc332",
++   "rental-overture-354acb13-f11d-4984-9d70-bad57cd45083",
++   "rental-overture-3c431efb-1d66-41f1-ae86-cde353aa03dc",
++   "rental-overture-3e1fa0a1-3255-4da5-869d-243974d768fc",
++   "rental-overture-45b4d233-5f80-4a52-a523-ced614a14d8b",
++   "rental-overture-470e951e-9aa8-4196-8dd9-2d035272586d",
++   "rental-overture-491542f4-4d22-4fde-8151-42faa3e64e48",
++   "rental-overture-4f2d3289-ffc4-484b-8fb2-2e52e381fd26",
++   "rental-overture-51ba9a0f-f3ab-4782-b0d7-7159fe3e2c0a",
++   "rental-overture-57300b20-ef30-43e9-b518-6a303795a9f4",
++   "rental-overture-58147fb1-f22c-41ff-a875-791a70bec194",
++   "rental-overture-5a6d11c4-a31b-488d-8cdb-35ee1f0b1619",
++   "rental-overture-63ec15a9-b3b8-448a-971a-125676ffe359",
++   "rental-overture-64d50114-3f28-4cc0-a9b5-119c8c4c07a6",
++   "rental-overture-6a29da68-ee62-487f-a425-8c2e02845f74",
++   "rental-overture-6e109748-6548-4bcf-8b15-a13bc2acfcb3",
++   "rental-overture-6e6e0195-a815-463b-8a8f-1c10681d6624",
++   "rental-overture-6fa289b0-40f9-4964-9c0d-8c15b126c8d4",
++   "rental-overture-7276c3c5-f73d-407c-9f85-9e9306e85f3a",
++   "rental-overture-7f8400d8-e0a6-4977-bea7-8fced9564c65",
++   "rental-overture-88694722-b7c6-4303-86a0-d9f7b8a5cab4",
++   "rental-overture-88c2a52d-a804-4f3f-b56a-cda6930acd43",
++   "rental-overture-88dbd895-dd55-4cb7-b8e5-9870bc3eeea2",
++   "rental-overture-8926d91c-313a-4d49-9b16-55d7a1c33b09",
++   "rental-overture-8a85d655-0a62-429d-ac9b-51309094d895",
++   "rental-overture-8b124f3b-19b8-4d5f-b8bd-5be9afe13749",
++   "rental-overture-8cf6813a-7d57-4cb4-be50-304046736622",
++   "rental-overture-8d68e8b6-8fca-4f43-9c35-5a6dac38be6f",
++   "rental-overture-8e59e797-381d-4ecf-9dd5-07c89a435eae",
++   "rental-overture-8fdded72-d72a-4621-8e90-730ddb472caa",
++   "rental-overture-94cbeaa2-c824-4b78-ac20-a7922557bf3d",
++   "rental-overture-99b42a6f-5030-4d17-a73d-d53badc63b19",
++   "rental-overture-99dfcf91-d017-4c51-bf9b-3bf8cecc429d",
++   "rental-overture-99e11ae9-65c8-4e39-ab8c-250cada0aaaf",
++   "rental-overture-9b1afabc-0510-4d3b-91ac-10d2f596b4d4",
++   "rental-overture-9b3a637c-40c2-4f37-ba4d-c12040dab0cb",
++   "rental-overture-a430125b-71d8-44b1-9b59-0ddfe235289f",
++   "rental-overture-a5021f22-6edc-444c-8f23-f2173caf3c03",
++   "rental-overture-a862dd4f-b710-4c24-a889-ec4593fd5227",
++   "rental-overture-ac02b3d7-a677-48d5-93ad-81feb3b9e912",
++   "rental-overture-adf31ced-52d8-434d-bdf5-61b45f284618",
++   "rental-overture-b56b6b2c-3459-4849-a4dd-506dfcd36130",
++   "rental-overture-b6205c71-0fd6-4c35-a5ac-e772e43d3594",
++   "rental-overture-ba5b33d1-e01f-4f80-9585-531c65074ba7",
++   "rental-overture-bcfe5ba8-2dfa-47e3-9e9a-c6a8b725a79c",
++   "rental-overture-c3588416-ff52-49fa-bfc7-ccddd9f7192f",
++   "rental-overture-c72357a8-be86-4878-80c2-8033aaa807dc",
++   "rental-overture-c77694a8-b34e-4bea-ac34-6f5b42a21f9e",
++   "rental-overture-c93ec82e-e29d-4e29-897e-483950cc4aaf",
++   "rental-overture-caeb7b53-69ea-4385-9e57-0b33c66a8464",
++   "rental-overture-cb9dbb84-1748-40a0-bf89-bb0cd8ce9f6a",
++   "rental-overture-cdf2e1d0-50ab-4430-8832-250d5e82fedf",
++   "rental-overture-cea9f259-f549-48ca-b4a2-64cee4fb4f5d",
++   "rental-overture-cf305fc3-b753-42ca-ab24-8e5434fb3bee",
++   "rental-overture-cf9af4d8-6379-4c9b-b954-979b72e27010",
++   "rental-overture-d098ae38-42a5-4b9f-82fd-252880e6bc95",
++   "rental-overture-d19b6529-b7d2-4311-9ad2-1fadff545821",
++   "rental-overture-d337d81f-b141-4df4-864d-fcfb656b2a0b",
++   "rental-overture-d5db2b30-ec35-45e2-ba2d-b44e6d99fdfe",
++   "rental-overture-d783e270-2052-4ee5-9778-364ae54365a8",
++   "rental-overture-d94bc5c0-5ad3-4bf2-ab57-462b82e96c91",
++   "rental-overture-da61ee51-0f94-4e3c-9e8d-1cacc5b99edb",
++   "rental-overture-de7a654f-da4a-450f-b7ef-253050c628d3",
++   "rental-overture-e3940529-ac14-4f07-8422-763b6e42a9f1",
++   "rental-overture-e86a4882-1c77-470a-8428-620ce9c9bf00",
++   "rental-overture-e8e3437e-6bfd-4b39-a1e8-df9df6ff8ec2",
++   "rental-overture-ee0c17ca-521d-4d52-a2a3-14bb5d329552",
++   "rental-overture-ef9ca2bf-0cac-47bc-b88a-84a01d701438",
++   "rental-overture-f0f4f421-da42-4a9f-8625-20cd0c74360e",
++   "rental-overture-f27a6199-f03e-4cc2-b20d-eeed0c77e4fe",
++   "rental-overture-f2b5c099-7fcd-4c4c-93bd-b430e0616867",
++   "rental-overture-f31681eb-13d4-4155-8001-996338c5ddd1",
++   "rental-overture-f36ed5d7-c8cb-4faf-91ab-95941a6c92bf",
++   "rental-overture-fc155bf2-7535-4d3e-9649-fe71394c6925",
++   "rental-overture-fe055d23-1c23-4ff6-abeb-31cd17021262",
++   "times-fukuoka-airport-international",
+    "times-naha-airport",
+  ]
+
+ ❯ tests/unit/rental.test.ts:133:85
+    131| describe("search, aliases, freshness and lazy requests", () => {
+    132|   it("treats a complete supported airport code as an exact airport loo…
+    133|     expect(searchRentals(index, { query: "ＯＫＡ", limit: 10000 }).map(ro…
+       |                                                                                     ^
+    134|     expect(searchRentals(index, { query: "fuk", limit: 10000 }).map(ro…
+    135|     expect(searchRentals(index, { query: "Fukuoka", limit: 10000 }).le…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 36 passed (37)
+   Start at  23:16:50
+   Duration  672ms (tests 64%, import 32%, transform 4%)
+

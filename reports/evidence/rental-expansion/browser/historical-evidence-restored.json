@@ -1,0 +1,9 @@
+{
+  "说明": "本叶子未运行浏览器。工作期间观察到最初干净的历史截图被并行检查覆盖；将观察到的新截图保存在本轮目录后恢复 HEAD 历史字节，未将截图视为本叶子验收证据。",
+  "restored": [
+    "reports/evidence/m01/station-mini-maps/layout-1280-offline.png",
+    "reports/evidence/m01/station-mini-maps/layout-320-offline.png",
+    "reports/evidence/m01/station-mini-maps/layout-390-offline.png",
+    "reports/evidence/m01/station-mini-maps/layout-768-offline.png"
+  ]
+}

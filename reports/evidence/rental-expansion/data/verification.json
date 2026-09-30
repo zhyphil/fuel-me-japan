@@ -1,0 +1,19 @@
+{
+  "date": "2026-09-30",
+  "status": "PASS",
+  "dataTests": 39,
+  "contractTests": 36,
+  "typecheck": "PASS",
+  "lint": "PASS",
+  "version": "rental-v1-d9a65721e77f1607",
+  "count": 7390,
+  "officialAirports": 7,
+  "counterOnly": 32,
+  "note": "数据专项检查通过；页面、构建及浏览器完整检查尚待下一阶段。AO 数据步骤在整理报告前超时，根代理核对产物并修复边界后运行以上检查。",
+  "sourceHashes": {
+    "src/lib/rental.ts": "31b827445bf03d2a6a44194513a21f6dedc7ac6c7aece0b01729acaf6462ee67",
+    "scripts/importer/rental.py": "62aa83a869488cd7f903f58db0544e930e477dbf05adc7487e82fc2621a256dd",
+    "tests/data/test_rental.py": "a523b39b547f65181bc3e672acbe7b7aad7135aa49c89f41aee1fa0aa281aa83",
+    "tests/unit/rental.test.ts": "0a0495df81b8c27a9a595a4d45803510b901e23b949568aeab847fb5aadb1b50"
+  }
+}

@@ -1,4 +1,5 @@
 import { filterStations } from "./find-fuel";
+import { normalizeBrandAlias, recordedBrand } from "./station-brand";
 import type { Station } from "./stations";
 
 export type PaymentFilter = "visa" | "mastercard";
@@ -15,27 +16,15 @@ export const activeFilterCount = (value: StationFilterState) => value.brands.len
 export function sameStationFilters(a: StationFilterState, b: StationFilterState): boolean {
   return (["brands", "payments", "services"] as const).every((key) => a[key].length === b[key].length && a[key].every((value) => (b[key] as string[]).includes(value)));
 }
-const normalize = (value: string) => value.normalize("NFKC").trim().toLocaleLowerCase("en");
-function sameBrandAlias(value: string): string {
-  const key = normalize(value);
-  if (["eneos", "エネオス"].includes(key)) return "eneos";
-  if (["cosmo", "cosmo oil", "コスモ", "コスモ石油"].includes(key)) return "cosmo";
-  if (["出光", "idemitsu"].includes(key)) return "idemitsu";
-  if (["shell", "昭和シェル石油"].includes(key)) return "shell";
-  if (["apollostation", "アポロステーション"].includes(key)) return "apollostation";
-  return key;
-}
 export function filterBrand(station: Pick<Station, "originalBrand" | "normalizedBrand">): { key: string; label: string; logo?: string } {
   const original = station.originalBrand?.normalize("NFKC").trim();
   if (!original) return { key: UNKNOWN_BRAND, label: "" };
-  // Normalized metadata is usable only when it denotes the same recorded brand.
-  // A stale Shell/Idemitsu record must never be upgraded to apollostation.
-  const recorded = sameBrandAlias(original);
-  const normalized = station.normalizedBrand?.trim();
-  const value = normalized && sameBrandAlias(normalized) === recorded ? normalized : original;
-  const key = sameBrandAlias(value);
-  return { key: `brand:${key}`, label: key === "eneos" ? "ENEOS" : key === "cosmo" ? "Cosmo" : key === "idemitsu" ? "Idemitsu" : key === "shell" ? "Shell" : key === "apollostation" ? "apollostation" : value.normalize("NFKC").trim(),
-    ...(key === "eneos" || key === "cosmo" ? { logo: `/brands/${key}-symbol.svg` } : {}) };
+  const brand = recordedBrand(original);
+  if (brand) return { key: `brand:${brand.key}`, label: brand.label, ...(brand.logo ? { logo: brand.logo } : {}) };
+  // Unknown dealer names and stale normalized metadata cannot supply a logo.
+  const key = normalizeBrandAlias(original);
+  const normalized = station.normalizedBrand?.normalize("NFKC").trim();
+  return { key: `brand:${key}`, label: normalized && normalizeBrandAlias(normalized) === key ? normalized : original };
 }
 export interface BrandOption { key: string; label: string; logo?: string; count: number }
 export function stationFilterOptions(stations: Station[]) {

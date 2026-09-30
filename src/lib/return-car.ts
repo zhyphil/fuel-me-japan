@@ -9,7 +9,7 @@ const fuelField = { REGULAR: "fuelRegular", HIGH_OCTANE: "fuelHighOctane", DIESE
 export function returnFuelSupply(station: Station, fuel: FuelType) { return station[fuelField[fuel]]; }
 export function returnCandidates(stations: Station[], point: Coordinates, fuel: FuelType) {
   if (!isJapanCoordinates(point) || !(fuel in fuelField)) throw new Error("Invalid return search");
-  return nearbyStations(stations, point, 10).filter(station => returnFuelSupply(station, fuel) !== "NO").slice(0, 10);
+  return nearbyStations(stations, point, 10).filter(station => returnFuelSupply(station, fuel) !== "NO");
 }
 export type ReturnCandidate = ReturnType<typeof returnCandidates>[number];
 export interface RentalLocation extends Coordinates {
@@ -78,7 +78,7 @@ export async function loadRentalData(signal?: AbortSignal, now = Date.now()) {
   signal?.throwIfAborted();
   return data;
 }
-export async function loadReturnCandidates(point: RentalLocation, fuel: FuelType, signal?: AbortSignal) {
+export async function loadReturnCandidates(point: Coordinates, fuel: FuelType, signal?: AbortSignal) {
   const manifest = await loadDataManifest(signal);
   const stations = await loadNearbyStations(manifest, point, signal, 10);
   signal?.throwIfAborted();

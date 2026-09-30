@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-01",
+  "timezone": "Europe/Paris",
+  "status": "PASS",
+  "scope": "门店目录卡片压缩、列表限高和每页条数分页；保留地图联动、查询及详情返回位置。",
+  "baselineCommit": "9c8151de6a2bb56372eb3698efecbdba986e8b85",
+  "checks": {
+    "command": "npm run check",
+    "exitCode": 0,
+    "lint": "PASS",
+    "typecheck": "PASS",
+    "unit": {
+      "files": 21,
+      "passed": 314
+    },
+    "build": "PASS",
+    "chromium": {
+      "startTime": "2026-09-30T22:04:40.858Z",
+      "duration": 33539.772,
+      "expected": 264,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "webkit": {
+      "startTime": "2026-09-30T22:03:32.521Z",
+      "duration": 15243.422,
+      "expected": 14,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "diffWhitespace": "PASS"
+  },
+  "browserNotes": "WebKit为7个定向场景各运行2遍，共14次，非完整业务套件；覆盖小屏和桌面，不代表实体手机验收。自动化瓦片请求被拦截，desktop.png为本机内置浏览器真实OSM底图截图。",
+  "evidenceNotes": "unit-before-fix.txt保留实现前的预期失败；先前阶段截图与报告已保留。原始工具日志和JSON字段保留原文。",
+  "limits": [
+    "本次没有修改或重新导入门店数据；没有重跑数据Python测试。",
+    "当前仅更新本地预览；尚未提交、推送或部署本次独立还车业务。"
+  ],
+  "sha256": {
+    "src/lib/rental-view.ts": "72550844299757b1535deef042e72861847869545ee231bd1ef09094b6730c72",
+    "src/lib/routes.ts": "ec122e59561cfacb128b3e6b40ed09f27f1d715e7a53c01aeba64a57c270d4d2",
+    "src/components/RentalDirectory.tsx": "13114927459b382bcd102f41a370515f59c4bad276b2aeb889912000aa1156ab",
+    "src/styles.css": "2518542bc9a293c6b4d20323b8598e59c166c6d463d33f744ccf9909f10314b2",
+    "tests/unit/rental-routes.test.ts": "a7a7ebf3615203e08fe21891ae3f11f63ea9bc4c5aa6d4fcae62067f6f86b83f",
+    "tests/e2e/rental-directory.spec.ts": "9143c4f3de78027ce11c0fcf5aaec19a37e1fec9c69574124584cf9883171cb2",
+    "src/locales/en.json": "90beb7f9253a589e3b5550139c3e9fa4f51ea6b604227967eca39bccde38ea4a",
+    "src/locales/zh-Hant.json": "ca5e171a05c436ff98e09ea2d7a1c4a713050177aa9f7cc8f9409ed6c2d51547",
+    "src/locales/ko.json": "923d298058f9fa5324659712518c434877fdf20f127089322c6969a643e262d6",
+    "src/locales/zh-Hans.json": "01c91b98503b5b1ddb0b600cd369a5eeca4198b56ecc99633b13d1d8d83a3f5c",
+    "src/locales/th.json": "38df1399809b92994b7ac077fb4a8099abddbf8288db4b2661e11a57275d4e75"
+  }
+}

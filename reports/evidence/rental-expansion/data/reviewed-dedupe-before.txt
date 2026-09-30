@@ -1,0 +1,36 @@
+test_all_downloads_hashes_counts_and_licenses (test_rental.PublishedRentalTests.test_all_downloads_hashes_counts_and_licenses) ... ok
+test_company_rule_isolation_and_counter_status (test_rental.PublishedRentalTests.test_company_rule_isolation_and_counter_status) ... ok
+test_every_source_accounted_for_and_original_licenses_retained (test_rental.PublishedRentalTests.test_every_source_accounted_for_and_original_licenses_retained) ... ok
+test_seven_airports_official_evidence_no_entrance_claim (test_rental.PublishedRentalTests.test_seven_airports_official_evidence_no_entrance_claim) ... ok
+test_adjacent_same_company_and_generic_name_not_merged (test_rental.RentalDedupTests.test_adjacent_same_company_and_generic_name_not_merged) ... ok
+test_branch_url_across_times_domains_and_distance (test_rental.RentalDedupTests.test_branch_url_across_times_domains_and_distance) ... ok
+test_brand_does_not_override_branch_name (test_rental.RentalDedupTests.test_brand_does_not_override_branch_name) ... ok
+test_complete_link_prevents_chain_merge (test_rental.RentalDedupTests.test_complete_link_prevents_chain_merge) ... ok
+test_counter_never_merges_into_shop (test_rental.RentalDedupTests.test_counter_never_merges_into_shop) ... ok
+test_different_branch_url_blocks_other_matching_evidence (test_rental.RentalDedupTests.test_different_branch_url_blocks_other_matching_evidence) ... ok
+test_homepage_and_shared_toll_free_phone_are_not_identity (test_rental.RentalDedupTests.test_homepage_and_shared_toll_free_phone_are_not_identity) ... ok
+test_missing_coordinates_and_invalid_bounds_fail (test_rental.RentalDedupTests.test_missing_coordinates_and_invalid_bounds_fail) ... ok
+test_nonshared_phone_needs_branch_or_address (test_rental.RentalDedupTests.test_nonshared_phone_needs_branch_or_address) ... ok
+test_official_preserves_existing_ids_and_aliases (test_rental.RentalDedupTests.test_official_preserves_existing_ids_and_aliases) ... ok
+test_osm_same_id_prefers_area_preserves_variants_and_conflicts (test_rental.RentalDedupTests.test_osm_same_id_prefers_area_preserves_variants_and_conflicts) ... ok
+test_overture_category_country_and_language_map (test_rental.RentalDedupTests.test_overture_category_country_and_language_map) ... ok
+test_prototype_pollution_rejected (test_rental.RentalDedupTests.test_prototype_pollution_rejected) ... ok
+test_reviewed_cross_language_source_mapping_is_guarded (test_rental.RentalDedupTests.test_reviewed_cross_language_source_mapping_is_guarded) ... FAIL
+test_shared_local_phone_different_branches_not_merged (test_rental.RentalDedupTests.test_shared_local_phone_different_branches_not_merged) ... ok
+test_spatial_boundaries_unknown_and_ambiguous (test_rental.RentalDedupTests.test_spatial_boundaries_unknown_and_ambiguous) ... ok
+test_stable_id_after_rename_reorder_and_merge_alias (test_rental.RentalDedupTests.test_stable_id_after_rename_reorder_and_merge_alias) ... ok
+test_support_objects_excluded_and_official_never_upgrades_counter (test_rental.RentalDedupTests.test_support_objects_excluded_and_official_never_upgrades_counter) ... ok
+test_toyota_official_branch_identifiers_ignore_tracking (test_rental.RentalDedupTests.test_toyota_official_branch_identifiers_ignore_tracking) ... ok
+
+======================================================================
+FAIL: test_reviewed_cross_language_source_mapping_is_guarded (test_rental.RentalDedupTests.test_reviewed_cross_language_source_mapping_is_guarded)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/data/test_rental.py", line 151, in test_reviewed_cross_language_source_mapping_is_guarded
+    self.assertEqual(len(groups), 1)
+AssertionError: 2 != 1
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.212s
+
+FAILED (failures=1)

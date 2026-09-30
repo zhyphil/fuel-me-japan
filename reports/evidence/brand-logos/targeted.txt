@@ -1,0 +1,55 @@
+
+Running 34 tests using 8 workers
+
+(node:14120) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:14121) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:14115) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:14118) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:14117) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:14116) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:14122) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:14119) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/about.spec.ts:5:3 › en 320px: About renders accurate project information, contact email and localized navigation (931ms)
+  ✓   8 tests/e2e/about.spec.ts:5:3 › zh-Hant 320px: About renders accurate project information, contact email and localized navigation (951ms)
+  ✓   6 tests/e2e/about.spec.ts:5:3 › ko 320px: About renders accurate project information, contact email and localized navigation (967ms)
+  ✓   2 tests/e2e/about.spec.ts:5:3 › en 1280px: About renders accurate project information, contact email and localized navigation (1.0s)
+  ✓   4 tests/e2e/about.spec.ts:5:3 › ko 1280px: About renders accurate project information, contact email and localized navigation (1.0s)
+  ✓   7 tests/e2e/about.spec.ts:5:3 › zh-Hant 1280px: About renders accurate project information, contact email and localized navigation (1.1s)
+  ✓   3 tests/e2e/about.spec.ts:5:3 › zh-Hans 320px: About renders accurate project information, contact email and localized navigation (1.1s)
+  ✓   5 tests/e2e/about.spec.ts:5:3 › zh-Hans 1280px: About renders accurate project information, contact email and localized navigation (1.2s)
+  ✓   9 tests/e2e/about.spec.ts:5:3 › th 320px: About renders accurate project information, contact email and localized navigation (456ms)
+  ✓  12 tests/e2e/about.spec.ts:70:1 › About remains useful without JavaScript and links to the guide (428ms)
+  ✓  11 tests/e2e/about.spec.ts:54:1 › About is reachable from the header and preserves the user's map settings on return (548ms)
+  ✓  10 tests/e2e/about.spec.ts:5:3 › th 1280px: About renders accurate project information, contact email and localized navigation (614ms)
+  ✓  16 tests/e2e/station-filters.spec.ts:138:1 › query and brand search do not change complete-area option counts (416ms)
+  ✓  18 tests/e2e/station-filters.spec.ts:181:5 › en filters at 320px: keyboard tabs, native modal, missing data and focus return (387ms)
+  ✓  19 tests/e2e/station-filters.spec.ts:181:5 › en filters at 390px: keyboard tabs, native modal, missing data and focus return (454ms)
+  ✓  13 tests/e2e/station-filters.spec.ts:58:1 › draft, cancel, reset and apply keep loaded counts and map/list totals consistent (954ms)
+  ✓  21 tests/e2e/station-filters.spec.ts:181:5 › zh-Hant filters at 320px: keyboard tabs, native modal, missing data and focus return (418ms)
+  ✓  20 tests/e2e/station-filters.spec.ts:181:5 › en filters at 1280px: keyboard tabs, native modal, missing data and focus return (639ms)
+  ✓  17 tests/e2e/station-filters.spec.ts:150:1 › changing area, returning to overview and new location clear filters without persistence or extra data fetches (900ms)
+  ✓  22 tests/e2e/station-filters.spec.ts:181:5 › zh-Hant filters at 390px: keyboard tabs, native modal, missing data and focus return (434ms)
+  ✓  24 tests/e2e/station-filters.spec.ts:181:5 › ko filters at 320px: keyboard tabs, native modal, missing data and focus return (431ms)
+  ✓  25 tests/e2e/station-filters.spec.ts:181:5 › ko filters at 390px: keyboard tabs, native modal, missing data and focus return (470ms)
+  ✓  23 tests/e2e/station-filters.spec.ts:181:5 › zh-Hant filters at 1280px: keyboard tabs, native modal, missing data and focus return (659ms)
+  ✓  15 tests/e2e/station-filters.spec.ts:123:1 › applying unchanged filters closes cluster members and station details (1.6s)
+  ✓  26 tests/e2e/station-filters.spec.ts:181:5 › ko filters at 1280px: keyboard tabs, native modal, missing data and focus return (611ms)
+  ✓  27 tests/e2e/station-filters.spec.ts:181:5 › zh-Hans filters at 320px: keyboard tabs, native modal, missing data and focus return (570ms)
+  ✓  28 tests/e2e/station-filters.spec.ts:181:5 › zh-Hans filters at 390px: keyboard tabs, native modal, missing data and focus return (567ms)
+  ✓  30 tests/e2e/station-filters.spec.ts:181:5 › th filters at 320px: keyboard tabs, native modal, missing data and focus return (534ms)
+  ✓  29 tests/e2e/station-filters.spec.ts:181:5 › zh-Hans filters at 1280px: keyboard tabs, native modal, missing data and focus return (676ms)
+  ✓  31 tests/e2e/station-filters.spec.ts:181:5 › th filters at 390px: keyboard tabs, native modal, missing data and focus return (522ms)
+  ✓  14 tests/e2e/station-filters.spec.ts:88:1 › payment union, service AND, zero results, independent query and stale detail cleanup (2.2s)
+  ✓  33 tests/e2e/station-filters.spec.ts:217:1 › reviewed logos and alias search agree across filters, map markers and thumbnails (525ms)
+  ✓  32 tests/e2e/station-filters.spec.ts:181:5 › th filters at 1280px: keyboard tabs, native modal, missing data and focus return (706ms)
+  ✓  34 tests/e2e/station-filters.spec.ts:236:1 › all shipped brand files decode and a missing new logo retains the pump fallback (525ms)
+
+  34 passed (4.4s)

@@ -1,0 +1,60 @@
+{
+  "note": "最终回归截图另存，恢复最初干净的历史M0.1截图。",
+  "files": [
+    {
+      "path": "reports/evidence/m01/list-minimap/layout-1280-offline.png",
+      "testCaptureSha256": "d5b5f14e6e115aeb6fdbf7b0c1beeb241204c66b8687bdef28677f148949853a",
+      "restoredSha256": "3ee2a4fedbd6b3dd9e7c6b4f545ab7e4a26d02897d101334f68913b0202fab6c"
+    },
+    {
+      "path": "reports/evidence/m01/list-minimap/layout-320-offline.png",
+      "testCaptureSha256": "aa4fa1aff3783c7c9856f30b80c3f1a8fde3632237946075300231e19e5879b5",
+      "restoredSha256": "a64291b542bb6f9e9a43c2752099c230ca3457ccf503e5da6a21cdf98f64e586"
+    },
+    {
+      "path": "reports/evidence/m01/list-minimap/layout-390-offline.png",
+      "testCaptureSha256": "7d290a7335b121f2ba8d13bbd2094f3be8f83c59f0ca454ac0de7871140916fd",
+      "restoredSha256": "97de9981a9bec0dd718fb9566e9873cc1482e1350e9ae403e9a4702cf89ecd99"
+    },
+    {
+      "path": "reports/evidence/m01/list-minimap/layout-768-offline.png",
+      "testCaptureSha256": "7ccbe0bdd0a780bacccea263886ba6f6a2475008d7a01ca143bdba9220160ca3",
+      "restoredSha256": "193705174bf09cb8c4c141571ff7d6c14ac37033ec511d0ea76fce467d64a30a"
+    },
+    {
+      "path": "reports/evidence/m01/list-modes/favorites-1280-offline.png",
+      "testCaptureSha256": "8256805575143846ed0b24801a9094d0ab51fd32f76d5d3b5eea0dd9087cc9ef",
+      "restoredSha256": "f7f3242ee1ca8027187d807b7bf148730d49cce25c59de45a5816879a161acab"
+    },
+    {
+      "path": "reports/evidence/m01/list-modes/favorites-320-offline.png",
+      "testCaptureSha256": "2666da107a71e3682f9b77a22ddb5d1717413a013617d30cff83f85a39736694",
+      "restoredSha256": "2411ae185e16c773178608e6cd0ac0dbcea915f666971579dadc8c5e09b785f9"
+    },
+    {
+      "path": "reports/evidence/m01/list-modes/favorites-390-offline.png",
+      "testCaptureSha256": "43b3d2c1591c8feadbe5b02521a67ac1cfb9e46393c1c5a7b9a6c91fe7548d33",
+      "restoredSha256": "d87a0b4138d483032d468e13f6c60e3c9fbcd74b50b04d2c590ae0ef641dda53"
+    },
+    {
+      "path": "reports/evidence/m01/station-mini-maps/layout-1280-offline.png",
+      "testCaptureSha256": "d9c280d9389a76f8a5c524f666a359b10be4685ddf87f136922cb58b0dd15f71",
+      "restoredSha256": "bb0ca75ec9e4a92b9490a2813ca066a3e1d38aeec9299145357037ad16121070"
+    },
+    {
+      "path": "reports/evidence/m01/station-mini-maps/layout-320-offline.png",
+      "testCaptureSha256": "0152dcec2060f51084ac00a40b5cf69c6db295bb52e1a39d6a5994a8056ee496",
+      "restoredSha256": "956e7ecf59b859e8438a4ed49ec9a335e61fdd88d7ba6a8271927bb3bd5c7e93"
+    },
+    {
+      "path": "reports/evidence/m01/station-mini-maps/layout-390-offline.png",
+      "testCaptureSha256": "6a5cb6740ceb633d7d00e6ae22dfabb86689c277b7fd21c2bef77cefa61088a9",
+      "restoredSha256": "d88806814bc3e621814c5d2cfecdce381e51dac58b74a17f9b9aaab9ad9cf356"
+    },
+    {
+      "path": "reports/evidence/m01/station-mini-maps/layout-768-offline.png",
+      "testCaptureSha256": "caba5204eff2d580fa5158d2809fe2154dcb512cc3c29081bd1949b4e88098a6",
+      "restoredSha256": "9e2a080086996a5776bd0921844c271b13c7e59532357cf765e61a1be5593fa3"
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+
+> fuel-me-japan@0.0.0 test
+> vitest run tests/unit/rental-routes.test.ts
+
+
+ RUN  v5.0.2 /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan
+
+ ❯ tests/unit/rental-routes.test.ts (29 tests | 14 failed) 65ms
+   ❯ independent rental routes (26)
+     × round-trips directory filters without coordinates or arbitrary query fields 3ms
+     × round-trips the supported 10 rows per page with directory filters 1ms
+     × round-trips the supported 25 rows per page with directory filters 0ms
+     × round-trips the supported 50 rows per page with directory filters 0ms
+     × round-trips the supported 100 rows per page with directory filters 0ms
+     × falls back to 25 for an absent or invalid per-page value:  1ms
+     × falls back to 25 for an absent or invalid per-page value: 20 0ms
+     × falls back to 25 for an absent or invalid per-page value: 0 0ms
+     × falls back to 25 for an absent or invalid per-page value: -10 0ms
+     × falls back to 25 for an absent or invalid per-page value: 500 1ms
+     × falls back to 25 for an absent or invalid per-page value: 25.5 0ms
+     × falls back to 25 for an absent or invalid per-page value: garbage 0ms
+     × allows pages beyond 500 so all nationwide records remain reachable at ten per page 0ms
+   × renders only one result page and escapes untrusted branch text 17ms
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 14 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/rental-routes.test.ts > independent rental routes > round-trips directory filters without coordinates or arbitrary query fields
+AssertionError: expected { prefecture: 'JP-12', …(4) } to deeply equal { prefecture: 'JP-12', …(5) }
+
+- Expected
++ Received
+
+  {
+    "company": "times",
+    "counters": true,
+    "page": 2,
+-   "pageSize": 25,
+    "prefecture": "JP-12",
+    "query": "NRT",
+  }
+
+ ❯ tests/unit/rental-routes.test.ts:40:19
+     38|   it("round-trips directory filters without coordinates or arbitrary q…
+     39|     const query = readRentalQuery("?region=JP-12&company=times&q=NRT&p…
+     40|     expect(query).toEqual({ prefecture: "JP-12", company: "times", que…
+       |                   ^
+     41|     expect(rentalQueryString(query)).toBe("?region=JP-12&company=times…
+     42|     expect(readRentalQuery("?region=JP-99&company=FAKE&page=-2", index…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/14]⎯
+
+ FAIL  tests/unit/rental-routes.test.ts > independent rental routes > round-trips the supported 10 rows per page with directory filters
+AssertionError: expected { prefecture: 'JP-12', …(4) } to match object { prefecture: 'JP-12', …(5) }
+
+- Expected
++ Received
+
+  {
+    "company": "times",
+    "counters": true,
+    "page": 2,
+-   "pageSize": 10,
+    "prefecture": "JP-12",
+    "query": "NRT",
+  }
+
+ ❯ tests/unit/rental-routes.test.ts:46:19
+     44|   it.each([10, 25, 50, 100])("round-trips the supported %i rows per pa…
+     45|     const query = readRentalQuery(`?region=JP-12&company=times&q=NRT&p…
+     46|     expect(query).toMatchObject({ prefecture: "JP-12", company: "times…
+       |                   ^
+     47|     const serialized = rentalQueryString(query);
+     48|     expect(new URLSearchParams(serialized).get("perPage")).toBe(pageSi…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/14]⎯
+
+ FAIL  tests/unit/rental-routes.test.ts > independent rental routes > round-trips the supported 25 rows per page with directory filters
+AssertionError: expected { prefecture: 'JP-12', …(4) } to match object { prefecture: 'JP-12', …(5) }
+
+- Expected
++ Received
+
+  {
+    "company": "times",
+    "counters": true,
+    "page": 2,
+-   "pageSize": 25,
+    "prefecture": "JP-12",
+    "query": "NRT",
+  }
+
+ ❯ tests/unit/rental-routes.test.ts:46:19
+     44|   it.each([10, 25, 50, 100])("round-trips the supported %i rows per pa…
+     45|     const query = readRentalQuery(`?region=JP-12&company=times&q=NRT&p…
+     46|     expect(query).toMatchObject({ prefecture: "JP-12", company: "times…
+       |                   ^
+     47|     const serialized = rentalQueryString(query);
+     48|     expect(new URLSearchParams(serialized).get("perPage")).toBe(pageSi…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/14]⎯
+
+ FAIL  tests/unit/rental-routes.test.ts > independent rental routes > round-trips the supported 50 rows per page with directory filters
+AssertionError: expected { prefecture: 'JP-12', …(4) } to match object { prefecture: 'JP-12', …(5) }
+
+- Expected
++ Received
+
+  {
+    "company": "times",
+    "counters": true,
+    "page": 2,
+-   "pageSize": 50,
+    "prefecture": "JP-12",
+    "query": "NRT",
+  }
+
+ ❯ tests/unit/rental-routes.test.ts:46:19
+     44|   it.each([10, 25, 50, 100])("round-trips the supported %i rows per pa…
+     45|     const query = readRentalQuery(`?region=JP-12&company=times&q=NRT&p…
+     46|     expect(query).toMatchObject({ prefecture: "JP-12", company: "times…
+       |                   ^
+     47|     const serialized = rentalQueryString(query);
+     48|     expect(new URLSearchParams(serialized).get("perPage")).toBe(pageSi…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/14]⎯
+
+ FAIL  tests/unit/rental-routes.test.ts > independent rental routes > round-trips the supported 100 rows per page with directory filters
+AssertionError: expected { prefecture: 'JP-12', …(4) } to match object { prefecture: 'JP-12', …(5) }
+
+- Expected
++ Received
+
+  {
+    "company": "times",
+    "counters": true,
+    "page": 2,
+-   "pageSize": 100,
+    "prefecture": "JP-12",
+    "query": "NRT",
+  }
+
+ ❯ tests/unit/rental-routes.test.ts:46:19
+     44|   it.each([10, 25, 50, 100])("round-trips the supported %i rows per pa…
+     45|     const query = readRentalQuery(`?region=JP-12&company=times&q=NRT&p…
+     46|     expect(query).toMatchObject({ prefecture: "JP-12", company: "times…
+       |                   ^
+     47|     const serialized = rentalQueryString(query);
+     48|     expect(new URLSearchParams(serialized).get("perPage")).toBe(pageSi…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/14]⎯
+
+ FAIL  tests/unit/rental-routes.test.ts > independent rental routes > falls back to 25 for an absent or invalid per-page value: 
+ FAIL  tests/unit/rental-routes.test.ts > independent rental routes > falls back to 25 for an absent or invalid per-page value: 20
+ FAIL  tests/unit/rental-routes.test.ts > independent rental routes > falls back to 25 for an absent or invalid per-page value: 0
+ FAIL  tests/unit/rental-routes.test.ts > independent rental routes > falls back to 25 for an absent or invalid per-page value: -10
+ FAIL  tests/unit/rental-routes.test.ts > independent rental routes > falls back to 25 for an absent or invalid per-page value: 500
+ FAIL  tests/unit/rental-routes.test.ts > independent rental routes > falls back to 25 for an absent or invalid per-page value: 25.5
+ FAIL  tests/unit/rental-routes.test.ts > independent rental routes > falls back to 25 for an absent or invalid per-page value: garbage
+AssertionError: expected { prefecture: '', company: '', …(3) } to match object { pageSize: 25 }
+(5 matching properties omitted from actual)
+
+- Expected
++ Received
+
+  {
+-   "pageSize": 25,
++   "company": "",
++   "counters": false,
++   "page": 1,
++   "prefecture": "",
++   "query": "",
+  }
+
+ ❯ tests/unit/rental-routes.test.ts:52:57
+     50|   });
+     51|   it.each(["", "20", "0", "-10", "500", "25.5", "garbage"])("falls bac…
+     52|     expect(readRentalQuery(`?perPage=${value}`, index)).toMatchObject(…
+       |                                                         ^
+     53|   });
+     54|   it("allows pages beyond 500 so all nationwide records remain reachab…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/14]⎯
+
+ FAIL  tests/unit/rental-routes.test.ts > independent rental routes > allows pages beyond 500 so all nationwide records remain reachable at ten per page
+AssertionError: expected { prefecture: '', company: '', …(3) } to match object { page: 739, pageSize: 10 }
+(4 matching properties omitted from actual)
+
+- Expected
++ Received
+
+  {
+-   "page": 739,
+-   "pageSize": 10,
++   "page": 500,
+  }
+
+ ❯ tests/unit/rental-routes.test.ts:55:60
+     53|   });
+     54|   it("allows pages beyond 500 so all nationwide records remain reachab…
+     55|     expect(readRentalQuery("?page=739&perPage=10", index)).toMatchObje…
+       |                                                            ^
+     56|   });
+     57|   it("only enables safe https recorded websites", () => {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/14]⎯
+
+ FAIL  tests/unit/rental-routes.test.ts > renders only one result page and escapes untrusted branch text
+AssertionError: expected [ 'class="rental-card"', …(19) ] to have a length of 25 but got 20
+
+- Expected
++ Received
+
+- 25
++ 20
+
+ ❯ tests/unit/rental-routes.test.ts:72:46
+     70| it("renders only one result page and escapes untrusted branch text", (…
+     71|   const html = renderToStaticMarkup(createElement(RentalDirectory, { i…
+     72|   expect(html.match(/class="rental-card"/g)).toHaveLength(25);
+       |                                              ^
+     73|   expect(html.match(/class="station-mini-map"/g)).toHaveLength(25);
+     74|   expect(html).not.toContain('status-counter_only');
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/14]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  14 failed | 15 passed (29)
+   Start at  23:51:37
+   Duration  365ms (transform 51%, import 27%, tests 21%, worker 1%)
+

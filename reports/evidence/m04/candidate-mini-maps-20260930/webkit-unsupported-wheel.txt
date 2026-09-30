@@ -1,0 +1,123 @@
+[WebServer] (node:25272) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 22 tests using 2 workers
+
+(node:25276) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:25277) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/return-car.spec.ts:91:31 › en: 320px dialog, Japanese labels, source policy, focus and mounted map (793ms)
+  ✓   2 tests/e2e/return-car.spec.ts:50:1 › filters selected fuel independently, retains unknowns, and requires explicit completion before return navigation (1.3s)
+  ✓   3 tests/e2e/return-car.spec.ts:91:31 › zh-Hant: 320px dialog, Japanese labels, source policy, focus and mounted map (514ms)
+  ✓   4 tests/e2e/return-car.spec.ts:91:31 › ko: 320px dialog, Japanese labels, source policy, focus and mounted map (512ms)
+  ✓   5 tests/e2e/return-car.spec.ts:91:31 › zh-Hans: 320px dialog, Japanese labels, source policy, focus and mounted map (494ms)
+  ✓   6 tests/e2e/return-car.spec.ts:91:31 › th: 320px dialog, Japanese labels, source policy, focus and mounted map (538ms)
+  ✓   7 tests/e2e/return-car.spec.ts:126:1 › single preference seeds the flow; multiple map fuels require a choice and preserve map, filters and storage (589ms)
+  ✓   9 tests/e2e/return-car.spec.ts:164:57 › rental data network is rejected and retry succeeds (336ms)
+  ✓   8 tests/e2e/return-car.spec.ts:149:1 › late results from a previous branch cannot replace current results; closing cancels and reopening resets (459ms)
+  ✓  10 tests/e2e/return-car.spec.ts:164:57 › rental data unapproved source is rejected and retry succeeds (346ms)
+  ✓  11 tests/e2e/return-car.spec.ts:177:1 › station network failure supports retry with no return navigation (421ms)
+  ✓  12 tests/e2e/return-car.spec.ts:185:1 › empty nearby records are explicit and offer the map (364ms)
+  ✓  13 tests/e2e/return-car.spec.ts:191:1 › ninety-day-old sources retain their real check date and require rechecking (330ms)
+  ✓  14 tests/e2e/return-car.spec.ts:197:1 › closing while a branch request is pending aborts the request and cannot restore its address on reopen (386ms)
+  ✓  15 tests/e2e/return-car.spec.ts:212:1 › shipped branch records load real station candidates and keep each return destination distinct (925ms)
+  ✓  16 tests/e2e/return-car.spec.ts:236:1 › candidate mini maps show each station, load only visible rows, and keep selection independent (734ms)
+  ✘  17 tests/e2e/return-car.spec.ts:282:44 › candidate mini maps fit 320px and preserve dialog scrolling (569ms)
+  ✘  18 tests/e2e/return-car.spec.ts:282:44 › candidate mini maps fit 390px and preserve dialog scrolling (617ms)
+(node:25324) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:25325) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  19 tests/e2e/return-car.spec.ts:282:44 › candidate mini maps fit 768px and preserve dialog scrolling (738ms)
+(node:25352) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  20 tests/e2e/return-car.spec.ts:282:44 › candidate mini maps fit 1280px and preserve dialog scrolling (772ms)
+(node:25353) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  21 tests/e2e/return-car.spec.ts:318:46 › candidate mini maps tolerate tiles failure without blocking station selection (558ms)
+  ✓  22 tests/e2e/return-car.spec.ts:318:46 › candidate mini maps tolerate provider failure without blocking station selection (533ms)
+
+
+  1) tests/e2e/return-car.spec.ts:282:44 › candidate mini maps fit 320px and preserve dialog scrolling 
+
+    Error: mouse.wheel: Mouse wheel is not supported in mobile WebKit
+
+      310 |   const scrollBefore = await pane.evaluate(node => node.scrollTop);
+      311 |   const mapTransform = await page.locator(".leaflet-map-pane").getAttribute("style");
+    > 312 |   await preview.hover(); await page.mouse.wheel(0, 280);
+          |                                           ^
+      313 |   await expect.poll(() => pane.evaluate(node => node.scrollTop)).toBeGreaterThan(scrollBefore + 50);
+      314 |   expect(await page.locator(".leaflet-map-pane").getAttribute("style")).toBe(mapTransform);
+      315 |   await expect(dialog.locator(".return-navigation")).toHaveCount(0);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts:312:43
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-return-minimaps-webkit-results/return-car-candidate-mini--6d8ff-d-preserve-dialog-scrolling/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-return-minimaps-webkit-results/return-car-candidate-mini--6d8ff-d-preserve-dialog-scrolling/error-context.md
+
+  2) tests/e2e/return-car.spec.ts:282:44 › candidate mini maps fit 390px and preserve dialog scrolling 
+
+    Error: mouse.wheel: Mouse wheel is not supported in mobile WebKit
+
+      310 |   const scrollBefore = await pane.evaluate(node => node.scrollTop);
+      311 |   const mapTransform = await page.locator(".leaflet-map-pane").getAttribute("style");
+    > 312 |   await preview.hover(); await page.mouse.wheel(0, 280);
+          |                                           ^
+      313 |   await expect.poll(() => pane.evaluate(node => node.scrollTop)).toBeGreaterThan(scrollBefore + 50);
+      314 |   expect(await page.locator(".leaflet-map-pane").getAttribute("style")).toBe(mapTransform);
+      315 |   await expect(dialog.locator(".return-navigation")).toHaveCount(0);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts:312:43
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-return-minimaps-webkit-results/return-car-candidate-mini--39341-d-preserve-dialog-scrolling/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-return-minimaps-webkit-results/return-car-candidate-mini--39341-d-preserve-dialog-scrolling/error-context.md
+
+  3) tests/e2e/return-car.spec.ts:282:44 › candidate mini maps fit 768px and preserve dialog scrolling 
+
+    Error: mouse.wheel: Mouse wheel is not supported in mobile WebKit
+
+      310 |   const scrollBefore = await pane.evaluate(node => node.scrollTop);
+      311 |   const mapTransform = await page.locator(".leaflet-map-pane").getAttribute("style");
+    > 312 |   await preview.hover(); await page.mouse.wheel(0, 280);
+          |                                           ^
+      313 |   await expect.poll(() => pane.evaluate(node => node.scrollTop)).toBeGreaterThan(scrollBefore + 50);
+      314 |   expect(await page.locator(".leaflet-map-pane").getAttribute("style")).toBe(mapTransform);
+      315 |   await expect(dialog.locator(".return-navigation")).toHaveCount(0);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts:312:43
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-return-minimaps-webkit-results/return-car-candidate-mini--f7801-d-preserve-dialog-scrolling/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-return-minimaps-webkit-results/return-car-candidate-mini--f7801-d-preserve-dialog-scrolling/error-context.md
+
+  4) tests/e2e/return-car.spec.ts:282:44 › candidate mini maps fit 1280px and preserve dialog scrolling 
+
+    Error: mouse.wheel: Mouse wheel is not supported in mobile WebKit
+
+      310 |   const scrollBefore = await pane.evaluate(node => node.scrollTop);
+      311 |   const mapTransform = await page.locator(".leaflet-map-pane").getAttribute("style");
+    > 312 |   await preview.hover(); await page.mouse.wheel(0, 280);
+          |                                           ^
+      313 |   await expect.poll(() => pane.evaluate(node => node.scrollTop)).toBeGreaterThan(scrollBefore + 50);
+      314 |   expect(await page.locator(".leaflet-map-pane").getAttribute("style")).toBe(mapTransform);
+      315 |   await expect(dialog.locator(".return-navigation")).toHaveCount(0);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts:312:43
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-return-minimaps-webkit-results/return-car-candidate-mini--7982d-d-preserve-dialog-scrolling/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-return-minimaps-webkit-results/return-car-candidate-mini--7982d-d-preserve-dialog-scrolling/error-context.md
+
+  4 failed
+    tests/e2e/return-car.spec.ts:282:44 › candidate mini maps fit 320px and preserve dialog scrolling 
+    tests/e2e/return-car.spec.ts:282:44 › candidate mini maps fit 390px and preserve dialog scrolling 
+    tests/e2e/return-car.spec.ts:282:44 › candidate mini maps fit 768px and preserve dialog scrolling 
+    tests/e2e/return-car.spec.ts:282:44 › candidate mini maps fit 1280px and preserve dialog scrolling 
+  18 passed (8.2s)

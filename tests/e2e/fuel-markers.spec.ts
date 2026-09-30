@@ -17,6 +17,7 @@ test("explicit enum preference survives language and refresh; reset preserves un
   expect(await page.evaluate(() => localStorage.length)).toBe(0);
   await chooseFuels(page, ["DIESEL"]);
   expect(await page.evaluate(() => ({ ...localStorage }))).toEqual({ [FUEL_PREFERENCE_KEY]: JSON.stringify(["DIESEL"]) });
+  await page.locator(".locale-trigger").click();
   await page.locator('.locale-switcher a[lang="zh-Hans"]').click();
   await expect(page.locator('#display-fuel input[value="DIESEL"]')).toBeChecked();
   await expect(page.locator('#display-fuel input[value="DIESEL"]').locator("..")).toHaveText(`${messages["zh-Hans"].ffDiesel} / 軽油`);

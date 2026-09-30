@@ -1,0 +1,174 @@
+[WebServer] (node:77101) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 91 tests using 2 workers
+
+(node:77102) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:77103) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:49:1 › homepage remains fuel-first and loads no national rental data until the real same-site link is followed (1.4s)
+  ✓   2 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › en: 320px directory combines region/company/name, resets, paginates and fits (1.7s)
+  ✓   3 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › en: 390px directory combines region/company/name, resets, paginates and fits (1.4s)
+  ✓   4 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › en: 1280px directory combines region/company/name, resets, paginates and fits (1.5s)
+  ✓   5 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › zh-Hant: 320px directory combines region/company/name, resets, paginates and fits (1.4s)
+  ✓   6 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › zh-Hant: 390px directory combines region/company/name, resets, paginates and fits (1.4s)
+  ✓   7 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › zh-Hant: 1280px directory combines region/company/name, resets, paginates and fits (1.5s)
+  ✓   8 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › ko: 320px directory combines region/company/name, resets, paginates and fits (1.4s)
+  ✓   9 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › ko: 390px directory combines region/company/name, resets, paginates and fits (1.4s)
+  ✓  10 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › ko: 1280px directory combines region/company/name, resets, paginates and fits (1.5s)
+  ✓  11 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › zh-Hans: 320px directory combines region/company/name, resets, paginates and fits (1.4s)
+  ✓  12 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › zh-Hans: 390px directory combines region/company/name, resets, paginates and fits (1.4s)
+  ✓  13 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › zh-Hans: 1280px directory combines region/company/name, resets, paginates and fits (1.5s)
+  ✓  14 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › th: 320px directory combines region/company/name, resets, paginates and fits (1.4s)
+  ✓  15 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › th: 390px directory combines region/company/name, resets, paginates and fits (1.4s)
+  ✓  16 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › th: 1280px directory combines region/company/name, resets, paginates and fits (1.5s)
+  ✓  17 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:111:40 › NGO: official Times detail is directly addressable, refreshable and honest about the entrance (1.3s)
+  ✓  18 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:111:40 › FUK: official Times detail is directly addressable, refreshable and honest about the entrance (1.2s)
+  ✓  19 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:111:40 › HND: official Times detail is directly addressable, refreshable and honest about the entrance (1.3s)
+  ✓  20 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:111:40 › KIX: official Times detail is directly addressable, refreshable and honest about the entrance (1.2s)
+  ✓  21 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:111:40 › OKA: official Times detail is directly addressable, refreshable and honest about the entrance (1.3s)
+  ✓  22 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:111:40 › NRT: official Times detail is directly addressable, refreshable and honest about the entrance (1.2s)
+  ✓  23 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:111:40 › CTS: official Times detail is directly addressable, refreshable and honest about the entrance (1.2s)
+  ✓  24 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:146:31 › en: locale links retain detail ID/query and synchronize metadata on directory navigation (1.2s)
+  ✓  25 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:146:31 › zh-Hant: locale links retain detail ID/query and synchronize metadata on directory navigation (1.3s)
+  ✓  26 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:146:31 › ko: locale links retain detail ID/query and synchronize metadata on directory navigation (1.2s)
+  ✓  27 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:146:31 › zh-Hans: locale links retain detail ID/query and synchronize metadata on directory navigation (1.3s)
+  ✓  28 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:146:31 › th: locale links retain detail ID/query and synchronize metadata on directory navigation (1.2s)
+  ✓  29 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:169:52 › unknown or malformed detail does-not-exist has accessible not-found and a directory return (1.1s)
+  ✓  30 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:169:52 › unknown or malformed detail %2F has accessible not-found and a directory return (1.1s)
+  ✓  32 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:180:1 › local preview rejects malformed UTF-8 before application routing (168ms)
+  ✓  31 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:169:52 › unknown or malformed detail a/b has accessible not-found and a directory return (1.1s)
+  ✓  33 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:188:1 › retired duplicate alias replaces the URL with its canonical ID and preserves the directory query (1.1s)
+  ✓  34 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:196:1 › detail return and browser back restore region/company/name/page, exact card focus and scroll (1.3s)
+  ✓  35 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:218:1 › mouse hover, rapid preview changes and keyboard focus highlight the final branch without rebuilding the map (1.9s)
+  ✓  36 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:256:1 › touch scrolling does not preview a branch; only visible thumbnail rows request tiles and old rows unload (1.4s)
+  ✓  37 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:278:46 › directory tiles failure keeps names, links and attribution usable (1.1s)
+  ✓  38 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:278:46 › directory provider failure keeps names, links and attribution usable (1.1s)
+  ✓  39 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:295:1 › counter opt-in is explicit and counter detail cannot become a return destination (1.2s)
+  ✓  40 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:307:147 › index network fails closed and retries the signed artifact (1.4s)
+  ✓  41 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:307:147 › index same-size hash corruption fails closed and retries the signed artifact (1.3s)
+  ✓  42 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:307:147 › index truncated bytes fails closed and retries the signed artifact (1.3s)
+  ✓  43 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:307:147 › partition network fails closed and retries the signed artifact (1.2s)
+  ✓  44 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:307:147 › partition same-size hash corruption fails closed and retries the signed artifact (1.1s)
+  ✓  46 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:325:1 › leaving a pending rental detail aborts its partition and a late response cannot replace another branch (869ms)
+  ✓  45 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:307:147 › partition truncated bytes fails closed and retries the signed artifact (1.1s)
+  ✓  48 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:371:1 › changing region while a name is being edited cannot display results for invisible stale criteria (1.0s)
+  ✓  47 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:342:1 › source downloads expose all 59 manifest artifacts, every partition and original provenance (1.5s)
+  ✓  50 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:404:87 › same-page skip link moves keyboard focus into main on /en/ (259ms)
+  ✓  51 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:404:87 › same-page skip link moves keyboard focus into main on /en/return-car/ (1.0s)
+  ✓  52 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:404:87 › same-page skip link moves keyboard focus into main on /en/return-car/times-naha-airport/ (1.1s)
+  ✓  53 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:9:1 › filters selected fuel independently, retains unknowns, and requires explicit completion before return navigation (1.9s)
+  ✘  49 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:383:1 › cluster keyboard activation offers bounded members and clears them on filtering (6.2s)
+  ✓  54 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:52:31 › en: 320px detail, Japanese labels, source policy, navigation focus and mounted home map (1.6s)
+(node:77239) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  55 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:52:31 › ko: 320px detail, Japanese labels, source policy, navigation focus and mounted home map (1.5s)
+  ✓  56 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:52:31 › zh-Hant: 320px detail, Japanese labels, source policy, navigation focus and mounted home map (1.7s)
+  ✓  57 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:52:31 › zh-Hans: 320px detail, Japanese labels, source policy, navigation focus and mounted home map (1.5s)
+  ✓  58 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:52:31 › th: 320px detail, Japanese labels, source policy, navigation focus and mounted home map (1.6s)
+  ✓  59 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:101:1 › single preference seeds the flow; multiple map fuels require a choice and preserve map, filters and storage (1.8s)
+  ✓  60 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:131:1 › late results from a previous branch cannot replace current results; leaving cancels and returning resets (1.4s)
+  ✓  61 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:151:66 › rental data network is rejected and retry succeeds (1.3s)
+  ✓  62 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:151:66 › rental data unapproved source is rejected and retry succeeds (1.2s)
+  ✓  63 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:167:1 › station network failure supports retry with no return navigation (1.1s)
+  ✓  64 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:175:1 › empty nearby records are explicit and offer a return to the fuel map (1.0s)
+  ✓  65 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:183:1 › ninety-day-old sources retain their real check date and require rechecking (1.0s)
+  ✓  66 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:190:1 › leaving while a branch request is pending aborts it and cannot restore its address in the directory (1.1s)
+  ✓  68 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:228:1 › candidate mini maps show each station, load only visible rows, and keep selection independent (1.6s)
+  ✓  69 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:268:44 › candidate mini maps fit 320px (1.1s)
+  ✓  67 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:207:1 › all seven shipped branches load real station candidates and keep every return destination distinct (3.2s)
+  ✓  70 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:268:44 › candidate mini maps fit 390px (1.2s)
+  ✓  71 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:268:44 › candidate mini maps fit 768px (1.2s)
+  ✓  72 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:268:44 › candidate mini maps fit 1280px (1.2s)
+  ✓  73 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:301:46 › candidate mini maps tolerate tiles failure without blocking station selection (1.1s)
+  ✓  74 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:301:46 › candidate mini maps tolerate provider failure without blocking station selection (1.1s)
+  ✓  75 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:316:1 › pending fuel change and explicit cancellation abort stale requests without changing persisted preferences (1.1s)
+  ✓  76 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:335:1 › 10km search caps at ten, excludes known NO and retains UNKNOWN (1.0s)
+  ✓  77 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:344:1 › ordinary non-Times candidates require reservation-address confirmation and never inherit Times rules (1.2s)
+(node:77305) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  78 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:365:1 › station integrity failure is fail-closed and retry keeps the real manifest hash check (1.1s)
+(node:77316) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  79 [Desktop-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › en: 1280px directory combines region/company/name, resets, paginates and fits (1.5s)
+  ✓  80 [Desktop-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › zh-Hant: 1280px directory combines region/company/name, resets, paginates and fits (1.5s)
+  ✓  81 [Desktop-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › ko: 1280px directory combines region/company/name, resets, paginates and fits (1.4s)
+  ✓  82 [Desktop-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › zh-Hans: 1280px directory combines region/company/name, resets, paginates and fits (1.4s)
+  ✓  83 [Desktop-WebKit] › tests/e2e/rental-directory.spec.ts:71:69 › th: 1280px directory combines region/company/name, resets, paginates and fits (1.4s)
+  ✓  84 [Desktop-WebKit] › tests/e2e/rental-directory.spec.ts:196:1 › detail return and browser back restore region/company/name/page, exact card focus and scroll (1.3s)
+  ✓  85 [Desktop-WebKit] › tests/e2e/rental-directory.spec.ts:218:1 › mouse hover, rapid preview changes and keyboard focus highlight the final branch without rebuilding the map (1.8s)
+  ✓  87 [Desktop-WebKit] › tests/e2e/rental-directory.spec.ts:404:87 › same-page skip link moves keyboard focus into main on /en/ (260ms)
+  ✓  88 [Desktop-WebKit] › tests/e2e/rental-directory.spec.ts:404:87 › same-page skip link moves keyboard focus into main on /en/return-car/ (1.0s)
+  ✓  89 [Desktop-WebKit] › tests/e2e/rental-directory.spec.ts:404:87 › same-page skip link moves keyboard focus into main on /en/return-car/times-naha-airport/ (1.1s)
+  ✓  90 [Desktop-WebKit] › tests/e2e/return-car.spec.ts:268:44 › candidate mini maps fit 1280px (1.1s)
+  ✓  91 [Desktop-WebKit] › tests/e2e/return-car.spec.ts:288:1 › candidate mini maps preserve page wheel scrolling (1.1s)
+  ✘  86 [Desktop-WebKit] › tests/e2e/rental-directory.spec.ts:383:1 › cluster keyboard activation offers bounded members and clears them on filtering (6.1s)
+
+
+  1) [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:383:1 › cluster keyboard activation offers bounded members and clears them on filtering 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  getByTestId('rental-directory').locator('.rental-cluster-members').locator('li a').first()
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" getByTestId('rental-directory').locator('.rental-cluster-members').locator('li a').first() with timeout 5000ms
+      - waiting for getByTestId('rental-directory').locator('.rental-cluster-members').locator('li a').first()
+        14 × locator resolved to <a href="/en/return-car/rental-osm-n10004313834/">レンタカーこまち</a>
+           - unexpected value "inactive"
+
+
+      392 |   await expect(members).toBeVisible(); await expect(members.locator("li")).toHaveCount(20);
+      393 |   await expect(members.locator("summary")).toBeFocused();
+    > 394 |   await page.keyboard.press("Tab"); await expect(members.locator("li a").first()).toBeFocused();
+          |                                                                                   ^
+      395 |   const links = await members.locator("li a").evaluateAll(nodes => nodes.map(node => node.getAttribute("href")));
+      396 |   expect(links.every(href => href?.startsWith("/en/return-car/"))).toBe(true);
+      397 |   await members.getByRole("button", { name: messages.en.rdMore, exact: true }).click();
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:394:83
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    reports/evidence/rental-expansion/browser/webkit-artifacts/rental-directory-cluster-k-ceda9-nd-clears-them-on-filtering-iPhone-WebKit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: reports/evidence/rental-expansion/browser/webkit-artifacts/rental-directory-cluster-k-ceda9-nd-clears-them-on-filtering-iPhone-WebKit/error-context.md
+
+  2) [Desktop-WebKit] › tests/e2e/rental-directory.spec.ts:383:1 › cluster keyboard activation offers bounded members and clears them on filtering 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  getByTestId('rental-directory').locator('.rental-cluster-members').locator('li a').first()
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" getByTestId('rental-directory').locator('.rental-cluster-members').locator('li a').first() with timeout 5000ms
+      - waiting for getByTestId('rental-directory').locator('.rental-cluster-members').locator('li a').first()
+        14 × locator resolved to <a href="/en/return-car/rental-osm-n10004313834/">レンタカーこまち</a>
+           - unexpected value "inactive"
+
+
+      392 |   await expect(members).toBeVisible(); await expect(members.locator("li")).toHaveCount(20);
+      393 |   await expect(members.locator("summary")).toBeFocused();
+    > 394 |   await page.keyboard.press("Tab"); await expect(members.locator("li a").first()).toBeFocused();
+          |                                                                                   ^
+      395 |   const links = await members.locator("li a").evaluateAll(nodes => nodes.map(node => node.getAttribute("href")));
+      396 |   expect(links.every(href => href?.startsWith("/en/return-car/"))).toBe(true);
+      397 |   await members.getByRole("button", { name: messages.en.rdMore, exact: true }).click();
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:394:83
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    reports/evidence/rental-expansion/browser/webkit-artifacts/rental-directory-cluster-k-ceda9-nd-clears-them-on-filtering-Desktop-WebKit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: reports/evidence/rental-expansion/browser/webkit-artifacts/rental-directory-cluster-k-ceda9-nd-clears-them-on-filtering-Desktop-WebKit/error-context.md
+
+  2 failed
+    [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:383:1 › cluster keyboard activation offers bounded members and clears them on filtering 
+    [Desktop-WebKit] › tests/e2e/rental-directory.spec.ts:383:1 › cluster keyboard activation offers bounded members and clears them on filtering 
+  89 passed (1.1m)

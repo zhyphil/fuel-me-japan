@@ -1,0 +1,27 @@
+
+Running 14 tests using 2 workers
+
+(node:93201) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:93200) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [Return-iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:481:34 › 320px: page number entry jumps directly to the final page and keeps keyboard and button navigation in sync (1.7s)
+  ✓   2 [Return-iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:481:34 › 1280px: page number entry jumps directly to the final page and keeps keyboard and button navigation in sync (1.7s)
+  ✓   3 [Return-iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:511:1 › page number entry preserves filters, clamps bounds and rejects empty or non-integer drafts (1.2s)
+  ✓   4 [Return-iPhone-WebKit] › tests/e2e/return-candidate-browser.spec.ts:6:1 › return candidates paginate all nearby stations with direct page entry and preserve explicit selection (1.5s)
+  ✓   5 [Return-iPhone-WebKit] › tests/e2e/return-candidate-browser.spec.ts:71:44 › return browser columns align and fit 320px (1.1s)
+  ✓   6 [Return-iPhone-WebKit] › tests/e2e/return-candidate-browser.spec.ts:71:44 › return browser columns align and fit 390px (1.1s)
+  ✓   7 [Return-iPhone-WebKit] › tests/e2e/return-candidate-browser.spec.ts:71:44 › return browser columns align and fit 768px (1.1s)
+(node:93241) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   8 [Return-iPhone-WebKit] › tests/e2e/return-candidate-browser.spec.ts:71:44 › return browser columns align and fit 1280px (1.1s)
+(node:93252) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   9 [Return-Desktop-WebKit] › tests/e2e/rental-directory.spec.ts:481:34 › 1280px: page number entry jumps directly to the final page and keeps keyboard and button navigation in sync (1.6s)
+  ✓  10 [Return-Desktop-WebKit] › tests/e2e/rental-directory.spec.ts:511:1 › page number entry preserves filters, clamps bounds and rejects empty or non-integer drafts (1.3s)
+  ✓  11 [Return-Desktop-WebKit] › tests/e2e/return-candidate-browser.spec.ts:6:1 › return candidates paginate all nearby stations with direct page entry and preserve explicit selection (1.4s)
+  ✓  13 [Return-Desktop-WebKit] › tests/e2e/return-candidate-browser.spec.ts:71:44 › return browser columns align and fit 1280px (1.1s)
+  ✓  12 [Return-Desktop-WebKit] › tests/e2e/return-candidate-browser.spec.ts:41:1 › candidate hover and keyboard focus preview the right map without changing the upper map or selecting a station (2.4s)
+  ✓  14 [Return-Desktop-WebKit] › tests/e2e/return-car.spec.ts:287:1 › candidate mini maps scroll the bounded list without moving the upper map (1.2s)
+
+  14 passed (11.9s)

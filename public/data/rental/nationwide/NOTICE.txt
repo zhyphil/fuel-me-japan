@@ -1,0 +1,7 @@
+全国租车候选衍生数据库：ODbL 1.0。© OpenStreetMap contributors，Geofabrik 分发；Overture Maps、Meta、© 2026 Foursquare Labs, Inc.、AllThePlaces。
+修改：筛选日本租赁分类、排除共享汽车/停业、选取几何、空间分区、公司归一化、保守去重及官方有限事实核对。保留来源记录ID、原始属性及各自许可。
+ODbL全文、Apache 2.0全文、Foursquare完整NOTICE、CDLA 2.0全文、CC0全文见 licenses/。公司网页仅有限事实，不包含原网页正文/图片/商标，不代表整库授权。
+manifest.json 的 downloads 列出完整48分区、索引、审计、来源、identity和许可证下载。sources字段及详情sources.attributes保留上游归属。
+https://www.openstreetmap.org/copyright
+https://docs.overturemaps.org/attribution/
+https://docs.overturemaps.org/guides/places/

@@ -1,0 +1,23 @@
+
+> fuel-me-japan@0.0.0 test:e2e
+> playwright test --config /tmp/fmj-rental-page-jump-checks/webkit.config.ts
+
+
+Running 6 tests using 2 workers
+
+(node:88911) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:88910) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:481:34 › 320px: page number entry jumps directly to the final page and keeps keyboard and button navigation in sync (1.8s)
+  ✓  2 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:481:34 › 1280px: page number entry jumps directly to the final page and keeps keyboard and button navigation in sync (1.8s)
+(node:88946) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:511:1 › page number entry preserves filters, clamps bounds and rejects empty or non-integer drafts (1.2s)
+(node:88962) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  4 [Desktop-WebKit] › tests/e2e/rental-directory.spec.ts:481:34 › 320px: page number entry jumps directly to the final page and keeps keyboard and button navigation in sync (1.5s)
+  ✓  5 [Desktop-WebKit] › tests/e2e/rental-directory.spec.ts:481:34 › 1280px: page number entry jumps directly to the final page and keeps keyboard and button navigation in sync (1.5s)
+  ✓  6 [Desktop-WebKit] › tests/e2e/rental-directory.spec.ts:511:1 › page number entry preserves filters, clamps bounds and rejects empty or non-integer drafts (1.2s)
+
+  6 passed (5.5s)

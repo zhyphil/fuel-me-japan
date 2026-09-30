@@ -1,0 +1,548 @@
+{
+  "config": {
+    "argv": [
+      "/Users/haoyuzuo/.nvm/versions/node/v24.18.0/bin/node",
+      "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/node_modules/.bin/playwright",
+      "test",
+      "--config=/tmp/fmj-language-webkit.config.mts"
+    ],
+    "configFile": "/tmp/fmj-language-webkit.config.mts",
+    "rootDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/fmj-language-webkit-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "Language-iPhone-WebKit",
+        "name": "Language-iPhone-WebKit",
+        "testDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "foundation.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/tmp/fmj-language-webkit-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "Language-Desktop-WebKit",
+        "name": "Language-Desktop-WebKit",
+        "testDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "foundation.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/tmp/fmj-language-webkit-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "foundation.spec.ts",
+      "file": "foundation.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "mobile switching and reload: en",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Language-iPhone-WebKit",
+              "projectName": "Language-iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 890,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T23:17:43.174Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6b60d0cacd30be8ae473-1aec81f1db82993cbc0e",
+          "file": "foundation.spec.ts",
+          "line": 9,
+          "column": 3
+        },
+        {
+          "title": "mobile switching and reload: zh-Hant",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Language-iPhone-WebKit",
+              "projectName": "Language-iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 911,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T23:17:43.174Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6b60d0cacd30be8ae473-de7751bd6f05650bb075",
+          "file": "foundation.spec.ts",
+          "line": 9,
+          "column": 3
+        },
+        {
+          "title": "mobile switching and reload: ko",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Language-iPhone-WebKit",
+              "projectName": "Language-iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 607,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T23:17:44.295Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6b60d0cacd30be8ae473-a72f2da4af063a83840e",
+          "file": "foundation.spec.ts",
+          "line": 9,
+          "column": 3
+        },
+        {
+          "title": "mobile switching and reload: zh-Hans",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Language-iPhone-WebKit",
+              "projectName": "Language-iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 598,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T23:17:44.314Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6b60d0cacd30be8ae473-e6225aee7220a7070627",
+          "file": "foundation.spec.ts",
+          "line": 9,
+          "column": 3
+        },
+        {
+          "title": "mobile switching and reload: th",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Language-iPhone-WebKit",
+              "projectName": "Language-iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 645,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T23:17:44.907Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6b60d0cacd30be8ae473-f4363f441a16c6fb2c21",
+          "file": "foundation.spec.ts",
+          "line": 9,
+          "column": 3
+        },
+        {
+          "title": "localized static HTML is useful without JavaScript",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Language-iPhone-WebKit",
+              "projectName": "Language-iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 146,
+                  "error": {
+                    "message": "Error: page.goto: Could not connect to the server.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:4173/ko/\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Could not connect to the server.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:4173/ko/\", waiting until \"load\"\u001b[22m\n\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/foundation.spec.ts:87:14",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/foundation.spec.ts",
+                      "column": 14,
+                      "line": 87
+                    },
+                    "snippet": "  85 |   await interceptExternal(context);\n  86 |   const page = await context.newPage();\n> 87 |   await page.goto(\n     |              ^\n  88 |     `${process.env.SMOKE_BASE_URL ?? \"http://127.0.0.1:4173\"}/ko/`,\n  89 |   );\n  90 |   await expect(page.getByRole(\"heading\", { level: 1 })).toContainText("
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/foundation.spec.ts",
+                        "column": 14,
+                        "line": 87
+                      },
+                      "message": "Error: page.goto: Could not connect to the server.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:4173/ko/\", waiting until \"load\"\u001b[22m\n\n\n  85 |   await interceptExternal(context);\n  86 |   const page = await context.newPage();\n> 87 |   await page.goto(\n     |              ^\n  88 |     `${process.env.SMOKE_BASE_URL ?? \"http://127.0.0.1:4173\"}/ko/`,\n  89 |   );\n  90 |   await expect(page.getByRole(\"heading\", { level: 1 })).toContainText(\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/foundation.spec.ts:87:14"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T23:17:44.919Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/tmp/fmj-language-webkit-artifacts/foundation-localized-stati-5fdd9-s-useful-without-JavaScript-Language-iPhone-WebKit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/fmj-language-webkit-artifacts/foundation-localized-stati-5fdd9-s-useful-without-JavaScript-Language-iPhone-WebKit/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/foundation.spec.ts",
+                    "column": 14,
+                    "line": 87
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6b60d0cacd30be8ae473-7f3a290f79ec58e74a19",
+          "file": "foundation.spec.ts",
+          "line": 81,
+          "column": 1
+        },
+        {
+          "title": "language dropdown 320px: compact globe, keyboard and dismissal",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Language-iPhone-WebKit",
+              "projectName": "Language-iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 5397,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.locale-switcher details').getByRole('link', { name: 'English', exact: true })\nExpected: focused\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('.locale-switcher details').getByRole('link', { name: 'English', exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.locale-switcher details').getByRole('link', { name: 'English', exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.locale-switcher details').getByRole('link', { name: 'English', exact: true })\nExpected: focused\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('.locale-switcher details').getByRole('link', { name: 'English', exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.locale-switcher details').getByRole('link', { name: 'English', exact: true })\u001b[22m\n\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/foundation.spec.ts:219:74",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/foundation.spec.ts",
+                      "column": 74,
+                      "line": 219
+                    },
+                    "snippet": "  217 |   await expect(menu.getByRole(\"link\")).toHaveText([\"English\", \"繁體中文\", \"한국어\", \"简体中文\", \"ไทย\"]);\n  218 |   await page.keyboard.press(\"Tab\");\n> 219 |   await expect(menu.getByRole(\"link\", { name: \"English\", exact: true })).toBeFocused();\n      |                                                                          ^\n  220 |   const dropdown = await menu.locator(\".locale-menu\").boundingBox();\n  221 |   expect(dropdown!.x).toBeGreaterThanOrEqual(0); expect(dropdown!.x + dropdown!.width).toBeLessThanOrEqual(width);\n  222 |   expect(await menu.locator('a[lang=\"en\"]').evaluate(node => {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/foundation.spec.ts",
+                        "column": 74,
+                        "line": 219
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.locale-switcher details').getByRole('link', { name: 'English', exact: true })\nExpected: focused\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('.locale-switcher details').getByRole('link', { name: 'English', exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.locale-switcher details').getByRole('link', { name: 'English', exact: true })\u001b[22m\n\n\n  217 |   await expect(menu.getByRole(\"link\")).toHaveText([\"English\", \"繁體中文\", \"한국어\", \"简体中文\", \"ไทย\"]);\n  218 |   await page.keyboard.press(\"Tab\");\n> 219 |   await expect(menu.getByRole(\"link\", { name: \"English\", exact: true })).toBeFocused();\n      |                                                                          ^\n  220 |   const dropdown = await menu.locator(\".locale-menu\").boundingBox();\n  221 |   expect(dropdown!.x).toBeGreaterThanOrEqual(0); expect(dropdown!.x + dropdown!.width).toBeLessThanOrEqual(width);\n  222 |   expect(await menu.locator('a[lang=\"en\"]').evaluate(node => {\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/foundation.spec.ts:219:74"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T23:17:45.277Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/tmp/fmj-language-webkit-artifacts/foundation-language-dropdo-8d958-lobe-keyboard-and-dismissal-Language-iPhone-WebKit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/fmj-language-webkit-artifacts/foundation-language-dropdo-8d958-lobe-keyboard-and-dismissal-Language-iPhone-WebKit/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/foundation.spec.ts",
+                    "column": 74,
+                    "line": 219
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6b60d0cacd30be8ae473-76ea61d1e0c85cf8baa1",
+          "file": "foundation.spec.ts",
+          "line": 202,
+          "column": 34
+        },
+        {
+          "title": "localized static HTML is useful without JavaScript",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Language-Desktop-WebKit",
+              "projectName": "Language-Desktop-WebKit",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 304,
+                  "error": {
+                    "message": "Error: page.goto: Could not connect to the server.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:4173/ko/\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: Could not connect to the server.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:4173/ko/\", waiting until \"load\"\u001b[22m\n\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/foundation.spec.ts:87:14",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/foundation.spec.ts",
+                      "column": 14,
+                      "line": 87
+                    },
+                    "snippet": "  85 |   await interceptExternal(context);\n  86 |   const page = await context.newPage();\n> 87 |   await page.goto(\n     |              ^\n  88 |     `${process.env.SMOKE_BASE_URL ?? \"http://127.0.0.1:4173\"}/ko/`,\n  89 |   );\n  90 |   await expect(page.getByRole(\"heading\", { level: 1 })).toContainText("
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/foundation.spec.ts",
+                        "column": 14,
+                        "line": 87
+                      },
+                      "message": "Error: page.goto: Could not connect to the server.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:4173/ko/\", waiting until \"load\"\u001b[22m\n\n\n  85 |   await interceptExternal(context);\n  86 |   const page = await context.newPage();\n> 87 |   await page.goto(\n     |              ^\n  88 |     `${process.env.SMOKE_BASE_URL ?? \"http://127.0.0.1:4173\"}/ko/`,\n  89 |   );\n  90 |   await expect(page.getByRole(\"heading\", { level: 1 })).toContainText(\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/foundation.spec.ts:87:14"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T23:17:45.759Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/tmp/fmj-language-webkit-artifacts/foundation-localized-stati-5fdd9-s-useful-without-JavaScript-Language-Desktop-WebKit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/fmj-language-webkit-artifacts/foundation-localized-stati-5fdd9-s-useful-without-JavaScript-Language-Desktop-WebKit/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/foundation.spec.ts",
+                    "column": 14,
+                    "line": 87
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6b60d0cacd30be8ae473-f059000e9b6f2987865b",
+          "file": "foundation.spec.ts",
+          "line": 81,
+          "column": 1
+        },
+        {
+          "title": "language dropdown 1280px: compact globe, keyboard and dismissal",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Language-Desktop-WebKit",
+              "projectName": "Language-Desktop-WebKit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5419,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.locale-switcher details').getByRole('link', { name: 'English', exact: true })\nExpected: focused\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('.locale-switcher details').getByRole('link', { name: 'English', exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.locale-switcher details').getByRole('link', { name: 'English', exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.locale-switcher details').getByRole('link', { name: 'English', exact: true })\nExpected: focused\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('.locale-switcher details').getByRole('link', { name: 'English', exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.locale-switcher details').getByRole('link', { name: 'English', exact: true })\u001b[22m\n\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/foundation.spec.ts:219:74",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/foundation.spec.ts",
+                      "column": 74,
+                      "line": 219
+                    },
+                    "snippet": "  217 |   await expect(menu.getByRole(\"link\")).toHaveText([\"English\", \"繁體中文\", \"한국어\", \"简体中文\", \"ไทย\"]);\n  218 |   await page.keyboard.press(\"Tab\");\n> 219 |   await expect(menu.getByRole(\"link\", { name: \"English\", exact: true })).toBeFocused();\n      |                                                                          ^\n  220 |   const dropdown = await menu.locator(\".locale-menu\").boundingBox();\n  221 |   expect(dropdown!.x).toBeGreaterThanOrEqual(0); expect(dropdown!.x + dropdown!.width).toBeLessThanOrEqual(width);\n  222 |   expect(await menu.locator('a[lang=\"en\"]').evaluate(node => {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/foundation.spec.ts",
+                        "column": 74,
+                        "line": 219
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.locale-switcher details').getByRole('link', { name: 'English', exact: true })\nExpected: focused\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('.locale-switcher details').getByRole('link', { name: 'English', exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.locale-switcher details').getByRole('link', { name: 'English', exact: true })\u001b[22m\n\n\n  217 |   await expect(menu.getByRole(\"link\")).toHaveText([\"English\", \"繁體中文\", \"한국어\", \"简体中文\", \"ไทย\"]);\n  218 |   await page.keyboard.press(\"Tab\");\n> 219 |   await expect(menu.getByRole(\"link\", { name: \"English\", exact: true })).toBeFocused();\n      |                                                                          ^\n  220 |   const dropdown = await menu.locator(\".locale-menu\").boundingBox();\n  221 |   expect(dropdown!.x).toBeGreaterThanOrEqual(0); expect(dropdown!.x + dropdown!.width).toBeLessThanOrEqual(width);\n  222 |   expect(await menu.locator('a[lang=\"en\"]').evaluate(node => {\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/foundation.spec.ts:219:74"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T23:17:46.412Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/tmp/fmj-language-webkit-artifacts/foundation-language-dropdo-40162-lobe-keyboard-and-dismissal-Language-Desktop-WebKit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/tmp/fmj-language-webkit-artifacts/foundation-language-dropdo-40162-lobe-keyboard-and-dismissal-Language-Desktop-WebKit/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/foundation.spec.ts",
+                    "column": 74,
+                    "line": 219
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6b60d0cacd30be8ae473-b07263e789c707aabd0c",
+          "file": "foundation.spec.ts",
+          "line": 202,
+          "column": 34
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-30T23:17:42.988Z",
+    "duration": 9018.952000000001,
+    "expected": 5,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

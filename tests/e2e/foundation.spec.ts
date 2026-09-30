@@ -2,8 +2,8 @@ import { expect, test, interceptExternal } from "./offline";
 import { readFileSync } from "node:fs";
 const manifest = JSON.parse(readFileSync("public/data/manifest.json", "utf8"));
 const languageCases = [
-  { locale: "en", label: "EN" }, { locale: "zh-Hant", label: "繁中" },
-  { locale: "ko", label: "한국어" }, { locale: "zh-Hans", label: "简中" }, { locale: "th", label: "ไทย" },
+  { locale: "en", label: "English" }, { locale: "zh-Hant", label: "繁體中文" },
+  { locale: "ko", label: "한국어" }, { locale: "zh-Hans", label: "简体中文" }, { locale: "th", label: "ไทย" },
 ].map((language) => ({ ...language, copy: JSON.parse(readFileSync(`src/locales/${language.locale}.json`, "utf8")) }));
 for (const language of languageCases) {
   test(`mobile switching and reload: ${language.locale}`, async ({ page }) => {
@@ -13,8 +13,9 @@ for (const language of languageCases) {
       if (message.type() === "error") errors.push(message.text());
     });
     await page.goto("/");
+    await page.locator(".locale-trigger").click();
     await page
-      .getByRole("navigation")
+      .locator(".locale-switcher")
       .getByRole("link", { name: language.label, exact: true })
       .click();
     await expect(page).toHaveURL(new RegExp(`/${language.locale}/$`));
@@ -43,7 +44,7 @@ for (const language of languageCases) {
     await expect(page.locator(".map-pin-region, .map-pin-region-group").first()).toBeVisible();
     await expect(page.locator(".hero, .task-grid")).toHaveCount(0);
     await expect(
-      page.getByRole("navigation").locator('[aria-current="page"]'),
+      page.locator(".locale-switcher").locator('[aria-current="page"]'),
     ).toHaveText(language.label);
     await page.reload();
     await expect(page.locator("html")).toHaveAttribute("lang", language.locale);
@@ -63,14 +64,16 @@ for (const language of languageCases) {
       expect(buttonBounds?.width).toBeGreaterThanOrEqual(44);
       expect(buttonBounds?.height).toBeGreaterThanOrEqual(44);
       expect(Boolean(buttonBounds && mapBounds && buttonBounds.x >= mapBounds.x && buttonBounds.y >= mapBounds.y && buttonBounds.x + buttonBounds.width <= mapBounds.x + mapBounds.width && buttonBounds.y + buttonBounds.height <= mapBounds.y + mapBounds.height)).toBe(true);
+      await page.locator(".locale-trigger").click();
       for (const link of await page
-        .getByRole("navigation")
+        .locator(".locale-switcher")
         .getByRole("link")
         .all()) {
         const size = await link.boundingBox();
         expect(size?.height).toBeGreaterThanOrEqual(44);
         expect(size?.width).toBeGreaterThanOrEqual(44);
       }
+      await page.locator(".locale-trigger").click();
     }
     expect(errors).toEqual([]);
   });
@@ -91,6 +94,7 @@ test("localized static HTML is useful without JavaScript", async ({
     "content",
     /일본/,
   );
+  await page.locator(".locale-trigger").click();
   await page.getByRole("link", { name: "ไทย", exact: true }).click();
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
     languageCases.find((language) => language.locale === "th")!.copy.mapTitle,
@@ -127,7 +131,8 @@ test("map home requests only data indexes and map configuration without location
   await expect(page.locator(".map-surface.leaflet-container")).toBeVisible();
   await expect(page.locator(".map-pin-region, .map-pin-region-group").first()).toBeVisible();
   await expect(page.locator(".hero, .task-grid")).toHaveCount(0);
-  await page.getByRole("link", { name: "繁中", exact: true }).click();
+  await page.locator(".locale-trigger").click();
+  await page.getByRole("link", { name: "繁體中文", exact: true }).click();
   await expect(page.locator(".map-pin-region, .map-pin-region-group").first()).toBeVisible();
   expect(requests.length).toBeGreaterThan(0);
   expect([...new Set(requests.map((url) => new URL(url).pathname))].sort()).toEqual([
@@ -192,4 +197,42 @@ test("desktop layout and keyboard navigation remain usable", async ({
     path: "test-results/foundation-mobile.png",
     fullPage: true,
   });
+});
+
+for (const width of [320, 1280]) test(`language dropdown ${width}px: compact globe, keyboard and dismissal`, async ({ page, browserName }) => {
+  await page.setViewportSize({ width, height: 844 });
+  await page.goto("/zh-Hans/");
+  const menu = page.locator(".locale-switcher details");
+  const trigger = menu.locator("summary");
+  await expect(trigger).toHaveAccessibleName("语言: 简体中文");
+  await expect(trigger).toHaveText("");
+  await expect(trigger.locator('svg[aria-hidden="true"]')).toHaveCount(1);
+  await expect(menu.locator(".locale-menu")).not.toBeVisible();
+  const bounds = await trigger.boundingBox();
+  expect(bounds!.width).toBeGreaterThanOrEqual(44); expect(bounds!.height).toBeGreaterThanOrEqual(44);
+  const brandBounds = await page.locator(".brand").boundingBox();
+  expect(bounds!.x).toBeGreaterThan(brandBounds!.x + brandBounds!.width);
+  expect(Math.abs(bounds!.y - brandBounds!.y)).toBeLessThan(5);
+  await trigger.focus(); await page.keyboard.press("Enter");
+  await expect(menu.getByRole("link")).toHaveText(["English", "繁體中文", "한국어", "简体中文", "ไทย"]);
+  await page.keyboard.press("Tab");
+  await expect(menu.getByRole("link", { name: "English", exact: true })).toBeFocused();
+  const dropdown = await menu.locator(".locale-menu").boundingBox();
+  expect(dropdown!.x).toBeGreaterThanOrEqual(0); expect(dropdown!.x + dropdown!.width).toBeLessThanOrEqual(width);
+  expect(await menu.locator('a[lang="en"]').evaluate(node => {
+    const rect = node.getBoundingClientRect();
+    return node.contains(document.elementFromPoint(rect.x + rect.width / 2, rect.y + rect.height / 2));
+  })).toBe(true);
+  await page.keyboard.press("Escape");
+  await expect(menu).not.toHaveAttribute("open"); await expect(trigger).toBeFocused();
+  await trigger.click(); await page.getByRole("heading", { level: 1 }).click();
+  await expect(menu).not.toHaveAttribute("open");
+  await trigger.focus(); await page.keyboard.press("Enter");
+  await menu.getByRole("link", { name: "ไทย", exact: true }).focus(); await page.keyboard.press("Tab");
+  await expect(menu).not.toHaveAttribute("open");
+  await trigger.click();
+  await page.screenshot({ path: `reports/evidence/language-dropdown/${browserName}-${width}.png` });
+  await menu.getByRole("link", { name: "English", exact: true }).click();
+  await expect(page).toHaveURL("/en/"); await expect(menu).not.toHaveAttribute("open");
+  await expect(trigger).toHaveAccessibleName("Language: English");
 });

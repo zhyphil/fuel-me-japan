@@ -1,0 +1,104 @@
+
+> fuel-me-japan@0.0.0 test:e2e
+> playwright test tests/e2e/rental-directory.spec.ts --grep page number entry --workers=2
+
+
+Running 3 tests using 2 workers
+
+(node:87679) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:87678) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/rental-directory.spec.ts:481:34 › 320px: page number entry jumps directly to the final page and keeps keyboard and button navigation in sync (6.2s)
+  ✘  2 tests/e2e/rental-directory.spec.ts:481:34 › 1280px: page number entry jumps directly to the final page and keeps keyboard and button navigation in sync (6.3s)
+(node:87701) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 tests/e2e/rental-directory.spec.ts:511:1 › page number entry preserves filters, clamps bounds and rejects empty or non-integer drafts (30.1s)
+
+
+  1) tests/e2e/rental-directory.spec.ts:481:34 › 320px: page number entry jumps directly to the final page and keeps keyboard and button navigation in sync 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('rental-directory').locator('#rental-page-number')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByTestId('rental-directory').locator('#rental-page-number') with timeout 5000ms
+      - waiting for getByTestId('rental-directory').locator('#rental-page-number')
+
+
+      484 |   const pageNumber = directory.locator("#rental-page-number");
+      485 |   const jump = directory.locator(".rental-page-jump button");
+    > 486 |   await expect(pageNumber).toBeVisible(); await expect(pageNumber).toHaveValue("1");
+          |                            ^
+      487 |   const last = Math.ceil(defaultCount / 25);
+      488 |   await pageNumber.fill(String(last)); await pageNumber.press("Enter");
+      489 |   await expect(page).toHaveURL(new RegExp(`page=${last}$`));
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:486:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/rental-directory-320px-pag-24590-d-button-navigation-in-sync/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/rental-directory-320px-pag-24590-d-button-navigation-in-sync/error-context.md
+
+  2) tests/e2e/rental-directory.spec.ts:481:34 › 1280px: page number entry jumps directly to the final page and keeps keyboard and button navigation in sync 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('rental-directory').locator('#rental-page-number')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByTestId('rental-directory').locator('#rental-page-number') with timeout 5000ms
+      - waiting for getByTestId('rental-directory').locator('#rental-page-number')
+
+
+      484 |   const pageNumber = directory.locator("#rental-page-number");
+      485 |   const jump = directory.locator(".rental-page-jump button");
+    > 486 |   await expect(pageNumber).toBeVisible(); await expect(pageNumber).toHaveValue("1");
+          |                            ^
+      487 |   const last = Math.ceil(defaultCount / 25);
+      488 |   await pageNumber.fill(String(last)); await pageNumber.press("Enter");
+      489 |   await expect(page).toHaveURL(new RegExp(`page=${last}$`));
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:486:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/rental-directory-1280px-pa-f3f88-d-button-navigation-in-sync/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/rental-directory-1280px-pa-f3f88-d-button-navigation-in-sync/error-context.md
+
+  3) tests/e2e/rental-directory.spec.ts:511:1 › page number entry preserves filters, clamps bounds and rejects empty or non-integer drafts 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByTestId('rental-directory').locator('#rental-page-number')
+
+
+      515 |   const count = Number((await directory.locator(".rental-results-count").innerText()).replace(/\D/g, ""));
+      516 |   const last = Math.ceil(count / 10); expect(last).toBeGreaterThan(1);
+    > 517 |   await pageNumber.fill("999999"); await pageNumber.press("Enter");
+          |                    ^
+      518 |   await expect(pageNumber).toHaveValue(String(last));
+      519 |   const params = new URL(page.url()).searchParams;
+      520 |   expect(Object.fromEntries(params)).toEqual({ region: "JP-01", company: "toyota", q: "トヨタ", page: String(last), perPage: "10" });
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:517:20
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/rental-directory-page-numb-31938-empty-or-non-integer-drafts/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/rental-directory-page-numb-31938-empty-or-non-integer-drafts/error-context.md
+
+  3 failed
+    tests/e2e/rental-directory.spec.ts:481:34 › 320px: page number entry jumps directly to the final page and keeps keyboard and button navigation in sync 
+    tests/e2e/rental-directory.spec.ts:481:34 › 1280px: page number entry jumps directly to the final page and keeps keyboard and button navigation in sync 
+    tests/e2e/rental-directory.spec.ts:511:1 › page number entry preserves filters, clamps bounds and rejects empty or non-integer drafts 

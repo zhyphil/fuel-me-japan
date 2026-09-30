@@ -1,0 +1,27 @@
+
+> fuel-me-japan@0.0.0 test:e2e
+> playwright test tests/e2e/return-candidate-browser.spec.ts
+
+
+Running 6 tests using 6 workers
+
+(node:91701) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:91705) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:91702) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:91704) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:91700) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:91703) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 tests/e2e/return-candidate-browser.spec.ts:71:44 › return browser columns align and fit 320px (1.3s)
+  ✓  1 tests/e2e/return-candidate-browser.spec.ts:71:44 › return browser columns align and fit 390px (1.4s)
+  ✓  5 tests/e2e/return-candidate-browser.spec.ts:71:44 › return browser columns align and fit 768px (1.4s)
+  ✓  4 tests/e2e/return-candidate-browser.spec.ts:71:44 › return browser columns align and fit 1280px (1.4s)
+  ✓  6 tests/e2e/return-candidate-browser.spec.ts:6:1 › return candidates paginate all nearby stations with direct page entry and preserve explicit selection (1.7s)
+  ✓  3 tests/e2e/return-candidate-browser.spec.ts:41:1 › candidate hover and keyboard focus preview the right map without changing the upper map or selecting a station (2.4s)
+
+  6 passed (3.1s)

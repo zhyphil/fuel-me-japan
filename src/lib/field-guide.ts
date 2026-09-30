@@ -22,7 +22,7 @@ export const guideMachineLabels = [
 ] as const;
 
 export const guideMessageKeys = [
-  "rgTitle", "rgClose", "rgPreference", "rgMultiple", "rgPreferenceHelp", "rgLabels", "rgLightVehicle",
+  "rgTitle", "rgIntro", "rgLabels", "rgLightVehicle",
   ...guideSteps.flatMap((step) => [step.title, step.body]),
   ...guideFuelLabels.map((label) => label.key),
   ...guideMachineLabels.map((label) => label.key),

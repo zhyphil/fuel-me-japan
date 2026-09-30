@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "version": "rental-v1-d9a65721e77f1607",
+  "manifestByteIdentical": true,
+  "identityByteIdentical": true,
+  "note": "以现有identity重放相同输入，全部分区哈希和manifest保持一致；输出只写临时目录。"
+}

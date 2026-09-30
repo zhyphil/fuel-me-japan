@@ -14,10 +14,10 @@ export const messages: Record<Locale, Record<MessageKey, string>> = {
   th,
 };
 export const localeNames: Record<Locale, string> = {
-  en: "EN",
-  "zh-Hant": "繁中",
+  en: "English",
+  "zh-Hant": "繁體中文",
   ko: "한국어",
-  "zh-Hans": "简中",
+  "zh-Hans": "简体中文",
   th: "ไทย",
 };
 export function isLocale(value: unknown): value is Locale {

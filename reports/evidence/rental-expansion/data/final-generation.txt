@@ -1,0 +1,32 @@
+{
+  "count": 7385,
+  "osmInputFeatures": 2800,
+  "osmUniqueObjects": 2307,
+  "osmRentalUniqueObjects": 2297,
+  "osmGeometryDuplicatesRemoved": 493,
+  "overtureInputRecords": 5259,
+  "sourceObjectsMerged": 56,
+  "excludedCount": 133,
+  "unknownCount": 0,
+  "statusCounts": {
+    "CANDIDATE": 7346,
+    "COUNTER_ONLY": 32,
+    "OFFICIAL_RETURN_FACILITY": 7
+  },
+  "companyCounts": {
+    "UNKNOWN": 2383,
+    "budget": 105,
+    "ekiren": 119,
+    "honda": 28,
+    "niconico": 491,
+    "nippon": 771,
+    "nissan": 379,
+    "orix": 485,
+    "ots": 14,
+    "times": 348,
+    "toyota": 2262
+  },
+  "version": "rental-v1-1b43cbc1f43d95a5",
+  "indexBytes": 3460282,
+  "partitionBytes": 14005914
+}

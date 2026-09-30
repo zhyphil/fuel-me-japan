@@ -1,4 +1,5 @@
 import { chooseFuels } from "./fuel-selection";
+import { stationBrand } from "../../src/lib/station-brand";
 import { readFileSync, mkdirSync } from "node:fs";
 import type { Page } from "@playwright/test";
 import { test, expect } from "./offline";
@@ -146,8 +147,7 @@ for (const locale of ["en", "zh-Hant", "ko", "zh-Hans", "th"]) {
     await expect(maps.first()).toHaveAccessibleName(copy.smOpen.replace("{name}", first.name || copy.ffUnnamed));
     for (const station of records.stations.slice(0, 25)) {
       const logo = page.locator(`[id="thumbnail-${station.id}"] .station-mini-map-pin img`);
-      const brand = station.originalBrand?.trim().toLowerCase();
-      const expected = ["eneos", "エネオス"].includes(brand ?? "") ? "/brands/eneos-symbol.svg" : ["cosmo", "コスモ", "コスモ石油"].includes(brand ?? "") ? "/brands/cosmo-symbol.svg" : "/brands/fuel-pump.svg";
+      const expected = stationBrand(station).logo ?? "/brands/fuel-pump.svg";
       await expect(logo).toHaveAttribute("src", expected);
     }
   });

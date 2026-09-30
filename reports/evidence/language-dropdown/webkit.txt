@@ -1,0 +1,22 @@
+
+Running 9 tests using 2 workers
+
+(node:8318) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:8317) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 [Language-iPhone-WebKit] › tests/e2e/foundation.spec.ts:9:3 › mobile switching and reload: en (1.0s)
+  ✓  1 [Language-iPhone-WebKit] › tests/e2e/foundation.spec.ts:9:3 › mobile switching and reload: zh-Hant (1.0s)
+  ✓  3 [Language-iPhone-WebKit] › tests/e2e/foundation.spec.ts:9:3 › mobile switching and reload: ko (597ms)
+  ✓  4 [Language-iPhone-WebKit] › tests/e2e/foundation.spec.ts:9:3 › mobile switching and reload: zh-Hans (586ms)
+  ✓  6 [Language-iPhone-WebKit] › tests/e2e/foundation.spec.ts:81:1 › localized static HTML is useful without JavaScript (297ms)
+  ✓  5 [Language-iPhone-WebKit] › tests/e2e/foundation.spec.ts:9:3 › mobile switching and reload: th (610ms)
+(node:8357) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  7 [Language-iPhone-WebKit] › tests/e2e/foundation.spec.ts:202:34 › language dropdown 320px: compact globe, keyboard and dismissal (517ms)
+(node:8365) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  8 [Language-Desktop-WebKit] › tests/e2e/foundation.spec.ts:81:1 › localized static HTML is useful without JavaScript (467ms)
+  ✓  9 [Language-Desktop-WebKit] › tests/e2e/foundation.spec.ts:202:34 › language dropdown 1280px: compact globe, keyboard and dismissal (618ms)
+
+  9 passed (3.9s)

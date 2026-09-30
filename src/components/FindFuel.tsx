@@ -26,7 +26,7 @@ const fuelKeys = { REGULAR: "ffRegular", HIGH_OCTANE: "ffHighOctane", DIESEL: "f
 const fuelJapanese = { REGULAR: japaneseLabels.regular, HIGH_OCTANE: japaneseLabels.highOctane, DIESEL: japaneseLabels.diesel };
 const fuelFields = { REGULAR: "fuelRegular", HIGH_OCTANE: "fuelHighOctane", DIESEL: "fuelDiesel" } as const;
 
-export function FindFuel({ locale, selectedFuels, onChangeFuels: changeFuels, onResetFuels }: { locale: Locale; selectedFuels: FuelType[]; onChangeFuels: (fuels: FuelType[]) => void; onResetFuels: () => void }) {
+export function FindFuel({ locale, selectedFuels, onChangeFuels: changeFuels, onResetFuels, mapTileUrl, onTileProvider, onOpenMyFuel }: { onOpenMyFuel: (trigger: HTMLButtonElement) => void; locale: Locale; selectedFuels: FuelType[]; onChangeFuels: (fuels: FuelType[]) => void; onResetFuels: () => void; mapTileUrl: string | null | undefined; onTileProvider: (url: string | null | undefined) => void }) {
   const t = messages[locale];
   const selectedFuel = selectedFuels[0];
   const [normalStatus, setStatus] = useState<Status>("overviewLoading");
@@ -54,7 +54,6 @@ export function FindFuel({ locale, selectedFuels, onChangeFuels: changeFuels, on
   const [viewRevision, setViewRevision] = useState(0);
   const [preview, setPreview] = useState<{ id: string; stations: Station[]; revision: number; mode: ListMode } | null>(null);
   const previewPending = useRef<{ id: string; timer: ReturnType<typeof setTimeout> } | null>(null);
-  const [mapTileUrl, setMapTileUrl] = useState<string | null | undefined>(undefined);
   const epoch = useRef(0);
   const controller = useRef<AbortController | null>(null);
   const locationTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
@@ -269,7 +268,7 @@ export function FindFuel({ locale, selectedFuels, onChangeFuels: changeFuels, on
   const filterButton = <FilterTrigger locale={locale} count={appliedCount} disabled={status !== "ready" || overview} onOpen={setFilterTrigger} />;
   const locationButton = <button type="button" className="button location-button" aria-label={t.ffUseLocation} title={status === "location" ? t.ffLocating : t.ffUseLocation} aria-busy={status === "location"} onClick={useLocation}><Icon name="locate" /></button>;
   return <section className="fuel-home" id="find-fuel" aria-labelledby="find-title">
-    <div className="map-heading"><h1 id="find-title">{t.mapTitle}</h1><button type="button" className="button button-quiet" onClick={goOverview}>{t.mapOverview}</button></div>
+    <div className="map-heading"><h1 id="find-title">{t.mapTitle}</h1><div className="map-heading-actions"><button type="button" className="button my-fuel-trigger" aria-haspopup="dialog" onClick={event => onOpenMyFuel(event.currentTarget)}><Icon name="fuel" /><span>{t.myFuelTitle}</span></button><button type="button" className="button button-quiet" onClick={goOverview}>{t.mapOverview}</button></div></div>
     <div className="map-toolbar">
       <div className="region-field"><label htmlFor="prefecture">{t.mapRegion}</label><select id="prefecture" ref={regionSelect} value={favoritesActive ? "" : prefecture} onChange={(event) => choosePrefecture(event.target.value)}><option value="">{t.ffChoosePrefecture}</option>{prefectures.map((p) => <option key={p.code} value={p.code} lang="ja">{p.name}</option>)}</select></div>
       <FuelSelection fuels={selectedFuels} locale={locale} onChange={changeFuels} />
@@ -292,7 +291,7 @@ export function FindFuel({ locale, selectedFuels, onChangeFuels: changeFuels, on
     {favoritesActive && favorites.entries.length > 0 && status !== "ready" && <details className="favorite-recovery"><summary>{t.lmManageSaved}</summary><ul>{favorites.entries.map((entry) => <li key={entry.id}><span>{entry.id} · {entry.partition}</span><FavoriteButton locale={locale} name={entry.id} saved onClick={() => toggleFavorite(entry)} /></li>)}</ul></details>}
     {favoritesActive && favorites.missing.length > 0 && <div className="favorite-recovery"><p>{t.lmMissing}</p><ul>{favorites.missing.map((entry) => <li key={entry.id}><span>{entry.id} · {entry.partition}</span><FavoriteButton locale={locale} name={entry.id} saved onClick={() => toggleFavorite(entry)} /></li>)}</ul><button type="button" className="text-button" onClick={favorites.retry}>{t.ffRetry}</button></div>}
     <div className={`map-workspace${drawer ? " has-drawer" : ""}${hasPriceStack ? " has-price-stack" : ""}${view === "list" && !drawer ? " show-list" : ""}`}>
-      <div className="map-stage"><FuelMap ref={map} previewId={previewId} onTileProvider={setMapTileUrl} layout={drawer ? "detail" : view} locale={locale} manifest={activeManifest} stations={filtered} selectedFuels={selectedFuels} priceViews={pricesByFuel} overview={overview} viewRevision={viewRevision} selectedId={selected?.id} onPrefecture={choosePrefecture} onRegions={(codes) => { setRegionOptions(codes); setView("list"); }} onStation={(station) => openStation(station, "map")} onMembers={(stations) => { setSelected(null); setMembers(stations); }} />{locationButton}{filterButton}</div>
+      <div className="map-stage"><FuelMap ref={map} previewId={previewId} onTileProvider={onTileProvider} layout={drawer ? "detail" : view} locale={locale} manifest={activeManifest} stations={filtered} selectedFuels={selectedFuels} priceViews={pricesByFuel} overview={overview} viewRevision={viewRevision} selectedId={selected?.id} onPrefecture={choosePrefecture} onRegions={(codes) => { setRegionOptions(codes); setView("list"); }} onStation={(station) => openStation(station, "map")} onMembers={(stations) => { setSelected(null); setMembers(stations); }} />{locationButton}{filterButton}</div>
       {view === "list" && !drawer && <div className="map-list-panel" onScroll={onListScroll}>
         {listMode === "cheapest" && !overview && selectedFuels.length > 1 && <div className="price-sort-fuel"><label htmlFor="price-sort-fuel">{t.mfSortFuel}</label><select id="price-sort-fuel" value={selectedFuel} onChange={(event) => { const fuel = event.target.value; if (isFuelType(fuel) && selectedFuels.includes(fuel)) changeFuels([fuel, ...selectedFuels.filter((item) => item !== fuel)]); }}>{selectedFuels.map((fuel) => <option key={fuel} value={fuel}>{fuelDisplayName(fuel, locale)}</option>)}</select></div>}
         {listMode === "cheapest" && !overview && status === "ready" && <p className="list-mode-help" role="status">{t[cheapest.ranking === "ranked" ? "lmPriceRanked" : cheapest.ranking === "no-quotes" ? "lmNoPrices" : "lmNotComparable"]}</p>}

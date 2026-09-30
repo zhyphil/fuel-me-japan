@@ -1,0 +1,148 @@
+[WebServer] (node:76064) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 2 workers
+
+(node:76065) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:76066) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/e2e/rental-directory.spec.ts:404:87 › same-page skip link moves keyboard focus into main on /en/ (5.3s)
+(node:76081) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/rental-directory.spec.ts:383:1 › cluster keyboard activation offers bounded members and clears them on filtering (6.2s)
+(node:76088) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 tests/e2e/rental-directory.spec.ts:404:87 › same-page skip link moves keyboard focus into main on /en/return-car/ (6.0s)
+  ✘  4 tests/e2e/rental-directory.spec.ts:404:87 › same-page skip link moves keyboard focus into main on /en/return-car/times-naha-airport/ (6.0s)
+
+
+  1) tests/e2e/rental-directory.spec.ts:383:1 › cluster keyboard activation offers bounded members and clears them on filtering 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  getByTestId('rental-directory').locator('.rental-cluster-members').locator('summary')
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" getByTestId('rental-directory').locator('.rental-cluster-members').locator('summary') with timeout 5000ms
+      - waiting for getByTestId('rental-directory').locator('.rental-cluster-members').locator('summary')
+        14 × locator resolved to <summary>521 rental records · zoom or choose a branch</summary>
+           - unexpected value "inactive"
+
+
+      391 |   const members = directory.locator(".rental-cluster-members");
+      392 |   await expect(members).toBeVisible(); await expect(members.locator("li")).toHaveCount(20);
+    > 393 |   await expect(members.locator("summary")).toBeFocused();
+          |                                            ^
+      394 |   await page.keyboard.press("Tab"); await expect(members.locator("li a").first()).toBeFocused();
+      395 |   const links = await members.locator("li a").evaluateAll(nodes => nodes.map(node => node.getAttribute("href")));
+      396 |   expect(links.every(href => href?.startsWith("/en/return-car/"))).toBe(true);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:393:44
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-review-browser-before/rental-directory-cluster-k-ceda9-nd-clears-them-on-filtering/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-review-browser-before/rental-directory-cluster-k-ceda9-nd-clears-them-on-filtering/error-context.md
+
+  2) tests/e2e/rental-directory.spec.ts:404:87 › same-page skip link moves keyboard focus into main on /en/ 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  locator('#main')
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" locator('#main') with timeout 5000ms
+      - waiting for locator('#main')
+        14 × locator resolved to <main id="main" tabindex="-1" class="map-main">…</main>
+           - unexpected value "inactive"
+
+
+      411 |   await expect(page.locator(".skip-link")).toBeFocused();
+      412 |   await page.keyboard.press("Enter");
+    > 413 |   await expect(page.locator("#main")).toBeFocused();
+          |                                       ^
+      414 |   await expect(page).toHaveURL(new RegExp(`${path}#main$`));
+      415 | });
+      416 |
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:413:39
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-review-browser-before/rental-directory-same-page-c830e-oard-focus-into-main-on-en-/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-review-browser-before/rental-directory-same-page-c830e-oard-focus-into-main-on-en-/error-context.md
+
+  3) tests/e2e/rental-directory.spec.ts:404:87 › same-page skip link moves keyboard focus into main on /en/return-car/ 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  locator('#main')
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" locator('#main') with timeout 5000ms
+      - waiting for locator('#main')
+        14 × locator resolved to <main id="main" tabindex="-1" class="rental-main">…</main>
+           - unexpected value "inactive"
+
+
+      411 |   await expect(page.locator(".skip-link")).toBeFocused();
+      412 |   await page.keyboard.press("Enter");
+    > 413 |   await expect(page.locator("#main")).toBeFocused();
+          |                                       ^
+      414 |   await expect(page).toHaveURL(new RegExp(`${path}#main$`));
+      415 | });
+      416 |
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:413:39
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-review-browser-before/rental-directory-same-page-dcd6e-into-main-on-en-return-car-/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-review-browser-before/rental-directory-same-page-dcd6e-into-main-on-en-return-car-/error-context.md
+
+  4) tests/e2e/rental-directory.spec.ts:404:87 › same-page skip link moves keyboard focus into main on /en/return-car/times-naha-airport/ 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  locator('#main')
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" locator('#main') with timeout 5000ms
+      - waiting for locator('#main')
+        14 × locator resolved to <main id="main" tabindex="-1" class="rental-main">…</main>
+           - unexpected value "inactive"
+
+
+      411 |   await expect(page.locator(".skip-link")).toBeFocused();
+      412 |   await page.keyboard.press("Enter");
+    > 413 |   await expect(page.locator("#main")).toBeFocused();
+          |                                       ^
+      414 |   await expect(page).toHaveURL(new RegExp(`${path}#main$`));
+      415 | });
+      416 |
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:413:39
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-review-browser-before/rental-directory-same-page-45974-urn-car-times-naha-airport-/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-review-browser-before/rental-directory-same-page-45974-urn-car-times-naha-airport-/error-context.md
+
+  4 failed
+    tests/e2e/rental-directory.spec.ts:383:1 › cluster keyboard activation offers bounded members and clears them on filtering 
+    tests/e2e/rental-directory.spec.ts:404:87 › same-page skip link moves keyboard focus into main on /en/ 
+    tests/e2e/rental-directory.spec.ts:404:87 › same-page skip link moves keyboard focus into main on /en/return-car/ 
+    tests/e2e/rental-directory.spec.ts:404:87 › same-page skip link moves keyboard focus into main on /en/return-car/times-naha-airport/ 

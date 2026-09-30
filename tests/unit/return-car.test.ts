@@ -17,10 +17,10 @@ describe("return-car candidates", () => {
     expect(returnCandidates(rows, point, "DIESEL").map(s => s.id)).toEqual(["osm:node:1", "osm:node:2"]);
     expect(returnCandidates(rows, point, "HIGH_OCTANE")[0].fuelHighOctane).toBe("UNKNOWN");
   });
-  it("uses the return point for distance, excludes beyond 10km, sorts and limits to ten", () => {
+  it("uses the return point for distance, excludes beyond 10km, sorts all candidates for pagination", () => {
     const rows = Array.from({ length: 12 }, (_, i) => station(i + 1, point.lat + (i + 1) / 1000)).reverse();
     const result = returnCandidates([...rows, station(99, 26.5)], point, "REGULAR");
-    expect(result.map(s => s.osmId)).toEqual([1,2,3,4,5,6,7,8,9,10]);
+    expect(result.map(s => s.osmId)).toEqual([1,2,3,4,5,6,7,8,9,10,11,12]);
     expect(result[0].distanceKm).toBeCloseTo(0.1112, 4);
     expect(result[0]).not.toHaveProperty("priceJpy");
   });

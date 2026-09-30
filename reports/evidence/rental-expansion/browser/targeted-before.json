@@ -1,0 +1,2057 @@
+{
+  "config": {
+    "argv": [
+      "/Users/haoyuzuo/.nvm/versions/node/v24.18.0/bin/node",
+      "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/node_modules/.bin/playwright",
+      "test",
+      "tests/e2e/return-car.spec.ts",
+      "tests/e2e/rental-directory.spec.ts",
+      "--workers=2",
+      "--max-failures=8",
+      "--timeout=20000"
+    ],
+    "configFile": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/playwright.config.ts",
+    "rootDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 8,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 2,
+    "webServer": {
+      "command": "npm run preview -- --port 4173 --strictPort",
+      "url": "http://127.0.0.1:4173",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "rental-directory.spec.ts",
+      "file": "rental-directory.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "homepage remains fuel-first and loads no national rental data until the real same-site link is followed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1260,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:12:40.490Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-197b942e6c5866b8fb6f",
+          "file": "rental-directory.spec.ts",
+          "line": 49,
+          "column": 1
+        },
+        {
+          "title": "en: 320px directory combines region/company/name, resets, paginates and fits",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 1422,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m44\u001b[39m\nReceived:    \u001b[31m43.625\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m44\u001b[39m\nReceived:    \u001b[31m43.625\u001b[39m\n    at targetSize (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:32:70)\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:95:433",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                      "column": 70,
+                      "line": 32
+                    },
+                    "snippet": "  30 |   const box = await control.boundingBox();\n  31 |   expect(box, await control.evaluate(node => node.outerHTML)).not.toBeNull();\n> 32 |   expect(box!.width).toBeGreaterThanOrEqual(44); expect(box!.height).toBeGreaterThanOrEqual(44);\n     |                                                                      ^\n  33 | }\n  34 | // Recover the map center from the tile URL and CSS offset, independently of the\n  35 | // application's thumbnail helper. A different shop's copied thumbnail cannot pass."
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                        "column": 70,
+                        "line": 32
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m44\u001b[39m\nReceived:    \u001b[31m43.625\u001b[39m\n\n  30 |   const box = await control.boundingBox();\n  31 |   expect(box, await control.evaluate(node => node.outerHTML)).not.toBeNull();\n> 32 |   expect(box!.width).toBeGreaterThanOrEqual(44); expect(box!.height).toBeGreaterThanOrEqual(44);\n     |                                                                      ^\n  33 | }\n  34 | // Recover the map center from the tile URL and CSS offset, independently of the\n  35 | // application's thumbnail helper. A different shop's copied thumbnail cannot pass.\n    at targetSize (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:32:70)\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:95:433"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:12:40.491Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/test-results/rental-directory-en-320px--2a32f-e-resets-paginates-and-fits/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/test-results/rental-directory-en-320px--2a32f-e-resets-paginates-and-fits/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                    "column": 70,
+                    "line": 32
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-b4e69dfb9aa4b0dd164e",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "en: 390px directory combines region/company/name, resets, paginates and fits",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1160,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m44\u001b[39m\nReceived:    \u001b[31m26\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m44\u001b[39m\nReceived:    \u001b[31m26\u001b[39m\n    at targetSize (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:32:70)\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:95:433",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                      "column": 70,
+                      "line": 32
+                    },
+                    "snippet": "  30 |   const box = await control.boundingBox();\n  31 |   expect(box, await control.evaluate(node => node.outerHTML)).not.toBeNull();\n> 32 |   expect(box!.width).toBeGreaterThanOrEqual(44); expect(box!.height).toBeGreaterThanOrEqual(44);\n     |                                                                      ^\n  33 | }\n  34 | // Recover the map center from the tile URL and CSS offset, independently of the\n  35 | // application's thumbnail helper. A different shop's copied thumbnail cannot pass."
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                        "column": 70,
+                        "line": 32
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m44\u001b[39m\nReceived:    \u001b[31m26\u001b[39m\n\n  30 |   const box = await control.boundingBox();\n  31 |   expect(box, await control.evaluate(node => node.outerHTML)).not.toBeNull();\n> 32 |   expect(box!.width).toBeGreaterThanOrEqual(44); expect(box!.height).toBeGreaterThanOrEqual(44);\n     |                                                                      ^\n  33 | }\n  34 | // Recover the map center from the tile URL and CSS offset, independently of the\n  35 | // application's thumbnail helper. A different shop's copied thumbnail cannot pass.\n    at targetSize (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:32:70)\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:95:433"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:12:42.000Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/test-results/rental-directory-en-390px--3752b-e-resets-paginates-and-fits/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/test-results/rental-directory-en-390px--3752b-e-resets-paginates-and-fits/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                    "column": 70,
+                    "line": 32
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-74fad9bff8e15ce5656c",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "en: 1280px directory combines region/company/name, resets, paginates and fits",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 1233,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m44\u001b[39m\nReceived:    \u001b[31m37.8125\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m44\u001b[39m\nReceived:    \u001b[31m37.8125\u001b[39m\n    at targetSize (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:32:70)\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:95:433",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                      "column": 70,
+                      "line": 32
+                    },
+                    "snippet": "  30 |   const box = await control.boundingBox();\n  31 |   expect(box, await control.evaluate(node => node.outerHTML)).not.toBeNull();\n> 32 |   expect(box!.width).toBeGreaterThanOrEqual(44); expect(box!.height).toBeGreaterThanOrEqual(44);\n     |                                                                      ^\n  33 | }\n  34 | // Recover the map center from the tile URL and CSS offset, independently of the\n  35 | // application's thumbnail helper. A different shop's copied thumbnail cannot pass."
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                        "column": 70,
+                        "line": 32
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m44\u001b[39m\nReceived:    \u001b[31m37.8125\u001b[39m\n\n  30 |   const box = await control.boundingBox();\n  31 |   expect(box, await control.evaluate(node => node.outerHTML)).not.toBeNull();\n> 32 |   expect(box!.width).toBeGreaterThanOrEqual(44); expect(box!.height).toBeGreaterThanOrEqual(44);\n     |                                                                      ^\n  33 | }\n  34 | // Recover the map center from the tile URL and CSS offset, independently of the\n  35 | // application's thumbnail helper. A different shop's copied thumbnail cannot pass.\n    at targetSize (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:32:70)\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:95:433"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:12:42.395Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/test-results/rental-directory-en-1280px-69ae9-e-resets-paginates-and-fits/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/test-results/rental-directory-en-1280px-69ae9-e-resets-paginates-and-fits/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                    "column": 70,
+                    "line": 32
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-3a787b14fd81e0db0c52",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "zh-Hant: 320px directory combines region/company/name, resets, paginates and fits",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1189,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m44\u001b[39m\nReceived:    \u001b[31m26\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m44\u001b[39m\nReceived:    \u001b[31m26\u001b[39m\n    at targetSize (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:32:70)\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:95:433",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                      "column": 70,
+                      "line": 32
+                    },
+                    "snippet": "  30 |   const box = await control.boundingBox();\n  31 |   expect(box, await control.evaluate(node => node.outerHTML)).not.toBeNull();\n> 32 |   expect(box!.width).toBeGreaterThanOrEqual(44); expect(box!.height).toBeGreaterThanOrEqual(44);\n     |                                                                      ^\n  33 | }\n  34 | // Recover the map center from the tile URL and CSS offset, independently of the\n  35 | // application's thumbnail helper. A different shop's copied thumbnail cannot pass."
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                        "column": 70,
+                        "line": 32
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m44\u001b[39m\nReceived:    \u001b[31m26\u001b[39m\n\n  30 |   const box = await control.boundingBox();\n  31 |   expect(box, await control.evaluate(node => node.outerHTML)).not.toBeNull();\n> 32 |   expect(box!.width).toBeGreaterThanOrEqual(44); expect(box!.height).toBeGreaterThanOrEqual(44);\n     |                                                                      ^\n  33 | }\n  34 | // Recover the map center from the tile URL and CSS offset, independently of the\n  35 | // application's thumbnail helper. A different shop's copied thumbnail cannot pass.\n    at targetSize (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:32:70)\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:95:433"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:12:43.387Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/test-results/rental-directory-zh-Hant-3-4d1df-e-resets-paginates-and-fits/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/test-results/rental-directory-zh-Hant-3-4d1df-e-resets-paginates-and-fits/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                    "column": 70,
+                    "line": 32
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-e7d47b60a2418870c39d",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "zh-Hant: 390px directory combines region/company/name, resets, paginates and fits",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 1190,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m44\u001b[39m\nReceived:    \u001b[31m26\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m44\u001b[39m\nReceived:    \u001b[31m26\u001b[39m\n    at targetSize (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:32:70)\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:95:433",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                      "column": 70,
+                      "line": 32
+                    },
+                    "snippet": "  30 |   const box = await control.boundingBox();\n  31 |   expect(box, await control.evaluate(node => node.outerHTML)).not.toBeNull();\n> 32 |   expect(box!.width).toBeGreaterThanOrEqual(44); expect(box!.height).toBeGreaterThanOrEqual(44);\n     |                                                                      ^\n  33 | }\n  34 | // Recover the map center from the tile URL and CSS offset, independently of the\n  35 | // application's thumbnail helper. A different shop's copied thumbnail cannot pass."
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                        "column": 70,
+                        "line": 32
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m44\u001b[39m\nReceived:    \u001b[31m26\u001b[39m\n\n  30 |   const box = await control.boundingBox();\n  31 |   expect(box, await control.evaluate(node => node.outerHTML)).not.toBeNull();\n> 32 |   expect(box!.width).toBeGreaterThanOrEqual(44); expect(box!.height).toBeGreaterThanOrEqual(44);\n     |                                                                      ^\n  33 | }\n  34 | // Recover the map center from the tile URL and CSS offset, independently of the\n  35 | // application's thumbnail helper. A different shop's copied thumbnail cannot pass.\n    at targetSize (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:32:70)\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:95:433"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:12:43.938Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/test-results/rental-directory-zh-Hant-3-bd5ee-e-resets-paginates-and-fits/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/test-results/rental-directory-zh-Hant-3-bd5ee-e-resets-paginates-and-fits/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                    "column": 70,
+                    "line": 32
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-81e9d8daeb8973f74184",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "zh-Hant: 1280px directory combines region/company/name, resets, paginates and fits",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1226,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m44\u001b[39m\nReceived:    \u001b[31m37.8125\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m44\u001b[39m\nReceived:    \u001b[31m37.8125\u001b[39m\n    at targetSize (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:32:70)\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:95:433",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                      "column": 70,
+                      "line": 32
+                    },
+                    "snippet": "  30 |   const box = await control.boundingBox();\n  31 |   expect(box, await control.evaluate(node => node.outerHTML)).not.toBeNull();\n> 32 |   expect(box!.width).toBeGreaterThanOrEqual(44); expect(box!.height).toBeGreaterThanOrEqual(44);\n     |                                                                      ^\n  33 | }\n  34 | // Recover the map center from the tile URL and CSS offset, independently of the\n  35 | // application's thumbnail helper. A different shop's copied thumbnail cannot pass."
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                        "column": 70,
+                        "line": 32
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m44\u001b[39m\nReceived:    \u001b[31m37.8125\u001b[39m\n\n  30 |   const box = await control.boundingBox();\n  31 |   expect(box, await control.evaluate(node => node.outerHTML)).not.toBeNull();\n> 32 |   expect(box!.width).toBeGreaterThanOrEqual(44); expect(box!.height).toBeGreaterThanOrEqual(44);\n     |                                                                      ^\n  33 | }\n  34 | // Recover the map center from the tile URL and CSS offset, independently of the\n  35 | // application's thumbnail helper. A different shop's copied thumbnail cannot pass.\n    at targetSize (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:32:70)\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:95:433"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:12:44.898Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/test-results/rental-directory-zh-Hant-1-304ec-e-resets-paginates-and-fits/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/test-results/rental-directory-zh-Hant-1-304ec-e-resets-paginates-and-fits/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                    "column": 70,
+                    "line": 32
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-4b291bfa87b797a39881",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "ko: 320px directory combines region/company/name, resets, paginates and fits",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 1200,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m44\u001b[39m\nReceived:    \u001b[31m26\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m44\u001b[39m\nReceived:    \u001b[31m26\u001b[39m\n    at targetSize (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:32:70)\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:95:433",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                      "column": 70,
+                      "line": 32
+                    },
+                    "snippet": "  30 |   const box = await control.boundingBox();\n  31 |   expect(box, await control.evaluate(node => node.outerHTML)).not.toBeNull();\n> 32 |   expect(box!.width).toBeGreaterThanOrEqual(44); expect(box!.height).toBeGreaterThanOrEqual(44);\n     |                                                                      ^\n  33 | }\n  34 | // Recover the map center from the tile URL and CSS offset, independently of the\n  35 | // application's thumbnail helper. A different shop's copied thumbnail cannot pass."
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                        "column": 70,
+                        "line": 32
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m44\u001b[39m\nReceived:    \u001b[31m26\u001b[39m\n\n  30 |   const box = await control.boundingBox();\n  31 |   expect(box, await control.evaluate(node => node.outerHTML)).not.toBeNull();\n> 32 |   expect(box!.width).toBeGreaterThanOrEqual(44); expect(box!.height).toBeGreaterThanOrEqual(44);\n     |                                                                      ^\n  33 | }\n  34 | // Recover the map center from the tile URL and CSS offset, independently of the\n  35 | // application's thumbnail helper. A different shop's copied thumbnail cannot pass.\n    at targetSize (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:32:70)\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:95:433"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:12:45.456Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/test-results/rental-directory-ko-320px--4d9cc-e-resets-paginates-and-fits/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/test-results/rental-directory-ko-320px--4d9cc-e-resets-paginates-and-fits/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                    "column": 70,
+                    "line": 32
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-da934f59753e2d3a54c8",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "ko: 390px directory combines region/company/name, resets, paginates and fits",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1210,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m44\u001b[39m\nReceived:    \u001b[31m26\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m44\u001b[39m\nReceived:    \u001b[31m26\u001b[39m\n    at targetSize (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:32:70)\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:95:433",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                      "column": 70,
+                      "line": 32
+                    },
+                    "snippet": "  30 |   const box = await control.boundingBox();\n  31 |   expect(box, await control.evaluate(node => node.outerHTML)).not.toBeNull();\n> 32 |   expect(box!.width).toBeGreaterThanOrEqual(44); expect(box!.height).toBeGreaterThanOrEqual(44);\n     |                                                                      ^\n  33 | }\n  34 | // Recover the map center from the tile URL and CSS offset, independently of the\n  35 | // application's thumbnail helper. A different shop's copied thumbnail cannot pass."
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                        "column": 70,
+                        "line": 32
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m44\u001b[39m\nReceived:    \u001b[31m26\u001b[39m\n\n  30 |   const box = await control.boundingBox();\n  31 |   expect(box, await control.evaluate(node => node.outerHTML)).not.toBeNull();\n> 32 |   expect(box!.width).toBeGreaterThanOrEqual(44); expect(box!.height).toBeGreaterThanOrEqual(44);\n     |                                                                      ^\n  33 | }\n  34 | // Recover the map center from the tile URL and CSS offset, independently of the\n  35 | // application's thumbnail helper. A different shop's copied thumbnail cannot pass.\n    at targetSize (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:32:70)\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:95:433"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:12:46.434Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/test-results/rental-directory-ko-390px--c69e8-e-resets-paginates-and-fits/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/test-results/rental-directory-ko-390px--c69e8-e-resets-paginates-and-fits/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                    "column": 70,
+                    "line": 32
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-b6e71b49eade33e8ff5f",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "ko: 1280px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 1,
+                  "status": "interrupted",
+                  "duration": 824,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:12:46.962Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/test-results/rental-directory-ko-1280px-7a1e7-e-resets-paginates-and-fits/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/test-results/rental-directory-ko-1280px-7a1e7-e-resets-paginates-and-fits/error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-91efcfe403388d77f9e7",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "zh-Hans: 320px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-1b176c385835ad57bed6",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "zh-Hans: 390px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-ed1c9b71b01b875c7d96",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "zh-Hans: 1280px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-9afd4c0d842c252265da",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "th: 320px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-ce57cc7dd2d3d776fad5",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "th: 390px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-6142fe42da8cba92e24b",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "th: 1280px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-4eb3455bf30797b741fc",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "NGO: official Times detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-7d67d16b6eb7ed682ac9",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "FUK: official Times detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-d686f8dfb6487e5c5bed",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "HND: official Times detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-30daca6bbc9db8200a52",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "KIX: official Times detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-d1d98dec4767bf79a49a",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "OKA: official Times detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-feae3a39870dae5548b1",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "NRT: official Times detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-b501520e05293689ec91",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "CTS: official Times detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-cd30606b29b7ac4341d9",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "en: locale links retain detail ID/query and synchronize metadata on directory navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-582554c650dc46dd981c",
+          "file": "rental-directory.spec.ts",
+          "line": 146,
+          "column": 31
+        },
+        {
+          "title": "zh-Hant: locale links retain detail ID/query and synchronize metadata on directory navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-a56bf1795e2f2e3c1562",
+          "file": "rental-directory.spec.ts",
+          "line": 146,
+          "column": 31
+        },
+        {
+          "title": "ko: locale links retain detail ID/query and synchronize metadata on directory navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-a2532ba8a8fa06f24c97",
+          "file": "rental-directory.spec.ts",
+          "line": 146,
+          "column": 31
+        },
+        {
+          "title": "zh-Hans: locale links retain detail ID/query and synchronize metadata on directory navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-90316e361b363cfd1e56",
+          "file": "rental-directory.spec.ts",
+          "line": 146,
+          "column": 31
+        },
+        {
+          "title": "th: locale links retain detail ID/query and synchronize metadata on directory navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-0e9461cb065536e1dc24",
+          "file": "rental-directory.spec.ts",
+          "line": 146,
+          "column": 31
+        },
+        {
+          "title": "unknown or malformed detail does-not-exist has accessible not-found and a directory return",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-be44787a118617db4ff9",
+          "file": "rental-directory.spec.ts",
+          "line": 169,
+          "column": 64
+        },
+        {
+          "title": "unknown or malformed detail %2F has accessible not-found and a directory return",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-0e689e2677280e68fc71",
+          "file": "rental-directory.spec.ts",
+          "line": 169,
+          "column": 64
+        },
+        {
+          "title": "unknown or malformed detail %E0%A4%A has accessible not-found and a directory return",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-d6fb7a49cedd7a8ec6f7",
+          "file": "rental-directory.spec.ts",
+          "line": 169,
+          "column": 64
+        },
+        {
+          "title": "unknown or malformed detail a/b has accessible not-found and a directory return",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-e3d8798527941a0037f0",
+          "file": "rental-directory.spec.ts",
+          "line": 169,
+          "column": 64
+        },
+        {
+          "title": "retired duplicate alias replaces the URL with its canonical ID and preserves the directory query",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-e4f063c2de7b65a515ee",
+          "file": "rental-directory.spec.ts",
+          "line": 180,
+          "column": 1
+        },
+        {
+          "title": "detail return and browser back restore region/company/name/page, exact card focus and scroll",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-383acbc8d25799fd617d",
+          "file": "rental-directory.spec.ts",
+          "line": 188,
+          "column": 1
+        },
+        {
+          "title": "mouse hover, rapid preview changes and keyboard focus highlight the final branch without rebuilding the map",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-5a6fcfb3950b684eb38c",
+          "file": "rental-directory.spec.ts",
+          "line": 210,
+          "column": 1
+        },
+        {
+          "title": "touch scrolling does not preview a branch; only visible thumbnail rows request tiles and old rows unload",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-495a909aff329428b0ca",
+          "file": "rental-directory.spec.ts",
+          "line": 248,
+          "column": 1
+        },
+        {
+          "title": "directory tiles failure keeps names, links and attribution usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-b9929338ade5eeb1a001",
+          "file": "rental-directory.spec.ts",
+          "line": 270,
+          "column": 46
+        },
+        {
+          "title": "directory provider failure keeps names, links and attribution usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-5d8039c3f589ff3c0161",
+          "file": "rental-directory.spec.ts",
+          "line": 270,
+          "column": 46
+        },
+        {
+          "title": "counter opt-in is explicit and counter detail cannot become a return destination",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-df287c4e33ed25f32699",
+          "file": "rental-directory.spec.ts",
+          "line": 287,
+          "column": 1
+        },
+        {
+          "title": "index network fails closed and retries the signed artifact",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-b9d05f1651a62650c333",
+          "file": "rental-directory.spec.ts",
+          "line": 299,
+          "column": 147
+        },
+        {
+          "title": "index same-size hash corruption fails closed and retries the signed artifact",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-aa6730b6974b337db407",
+          "file": "rental-directory.spec.ts",
+          "line": 299,
+          "column": 147
+        },
+        {
+          "title": "index truncated bytes fails closed and retries the signed artifact",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-1134e9d98e4ea3df7041",
+          "file": "rental-directory.spec.ts",
+          "line": 299,
+          "column": 147
+        },
+        {
+          "title": "partition network fails closed and retries the signed artifact",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-94b1a26f7ac6f002324a",
+          "file": "rental-directory.spec.ts",
+          "line": 299,
+          "column": 147
+        },
+        {
+          "title": "partition same-size hash corruption fails closed and retries the signed artifact",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-b34ac5de1f4303b2b419",
+          "file": "rental-directory.spec.ts",
+          "line": 299,
+          "column": 147
+        },
+        {
+          "title": "partition truncated bytes fails closed and retries the signed artifact",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-a08da06f824509d3e14b",
+          "file": "rental-directory.spec.ts",
+          "line": 299,
+          "column": 147
+        },
+        {
+          "title": "leaving a pending rental detail aborts its partition and a late response cannot replace another branch",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-d2079d3fc348bd95a008",
+          "file": "rental-directory.spec.ts",
+          "line": 317,
+          "column": 1
+        },
+        {
+          "title": "source downloads expose all 59 manifest artifacts, every partition and original provenance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-971161c6c132e6e83b7e",
+          "file": "rental-directory.spec.ts",
+          "line": 334,
+          "column": 1
+        },
+        {
+          "title": "changing region while a name is being edited cannot display results for invisible stale criteria",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-408ec67d450bf9b0bb76",
+          "file": "rental-directory.spec.ts",
+          "line": 363,
+          "column": 1
+        },
+        {
+          "title": "cluster keyboard activation offers bounded members and clears them on filtering",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-13534f2dc3f0be9b20de",
+          "file": "rental-directory.spec.ts",
+          "line": 375,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "return-car.spec.ts",
+      "file": "return-car.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "filters selected fuel independently, retains unknowns, and requires explicit completion before return navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-b4738057920bcc8185fc",
+          "file": "return-car.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "en: 320px detail, Japanese labels, source policy, navigation focus and mounted home map",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-657bef37f617e55c0dd5",
+          "file": "return-car.spec.ts",
+          "line": 52,
+          "column": 31
+        },
+        {
+          "title": "zh-Hant: 320px detail, Japanese labels, source policy, navigation focus and mounted home map",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-3888213bd45255673f57",
+          "file": "return-car.spec.ts",
+          "line": 52,
+          "column": 31
+        },
+        {
+          "title": "ko: 320px detail, Japanese labels, source policy, navigation focus and mounted home map",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-f95660040a10e9e772cc",
+          "file": "return-car.spec.ts",
+          "line": 52,
+          "column": 31
+        },
+        {
+          "title": "zh-Hans: 320px detail, Japanese labels, source policy, navigation focus and mounted home map",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-590b6bb9c20d0253891d",
+          "file": "return-car.spec.ts",
+          "line": 52,
+          "column": 31
+        },
+        {
+          "title": "th: 320px detail, Japanese labels, source policy, navigation focus and mounted home map",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-2f930fbb33559ffeba6c",
+          "file": "return-car.spec.ts",
+          "line": 52,
+          "column": 31
+        },
+        {
+          "title": "single preference seeds the flow; multiple map fuels require a choice and preserve map, filters and storage",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-b9f08791617c95c965a6",
+          "file": "return-car.spec.ts",
+          "line": 101,
+          "column": 1
+        },
+        {
+          "title": "late results from a previous branch cannot replace current results; leaving cancels and returning resets",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-fbddf32cc4ff63fce719",
+          "file": "return-car.spec.ts",
+          "line": 131,
+          "column": 1
+        },
+        {
+          "title": "rental data network is rejected and retry succeeds",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-5e76b1491d0d3c8b8500",
+          "file": "return-car.spec.ts",
+          "line": 151,
+          "column": 66
+        },
+        {
+          "title": "rental data unapproved source is rejected and retry succeeds",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-0819579e71ccb3b2ad2b",
+          "file": "return-car.spec.ts",
+          "line": 151,
+          "column": 66
+        },
+        {
+          "title": "station network failure supports retry with no return navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-ee70b197e204844ca769",
+          "file": "return-car.spec.ts",
+          "line": 167,
+          "column": 1
+        },
+        {
+          "title": "empty nearby records are explicit and offer a return to the fuel map",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-a8254a7cd43284fd28c8",
+          "file": "return-car.spec.ts",
+          "line": 175,
+          "column": 1
+        },
+        {
+          "title": "ninety-day-old sources retain their real check date and require rechecking",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-9094513bc14f0abb6fcb",
+          "file": "return-car.spec.ts",
+          "line": 183,
+          "column": 1
+        },
+        {
+          "title": "leaving while a branch request is pending aborts it and cannot restore its address in the directory",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-6481d9a9006969a4964b",
+          "file": "return-car.spec.ts",
+          "line": 190,
+          "column": 1
+        },
+        {
+          "title": "all seven shipped branches load real station candidates and keep every return destination distinct",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-fa7db541c89059cfa232",
+          "file": "return-car.spec.ts",
+          "line": 207,
+          "column": 1
+        },
+        {
+          "title": "candidate mini maps show each station, load only visible rows, and keep selection independent",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-0d5391afa160dfb1e909",
+          "file": "return-car.spec.ts",
+          "line": 228,
+          "column": 1
+        },
+        {
+          "title": "candidate mini maps fit 320px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-a7e8b178aec8123bde7c",
+          "file": "return-car.spec.ts",
+          "line": 268,
+          "column": 44
+        },
+        {
+          "title": "candidate mini maps fit 390px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-26102ebe67c0cf2de3a0",
+          "file": "return-car.spec.ts",
+          "line": 268,
+          "column": 44
+        },
+        {
+          "title": "candidate mini maps fit 768px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-1c9df90c9d9ab207978f",
+          "file": "return-car.spec.ts",
+          "line": 268,
+          "column": 44
+        },
+        {
+          "title": "candidate mini maps fit 1280px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-12bda71478cc41dba68a",
+          "file": "return-car.spec.ts",
+          "line": 268,
+          "column": 44
+        },
+        {
+          "title": "candidate mini maps preserve page wheel scrolling",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-f4590f297ea78839a437",
+          "file": "return-car.spec.ts",
+          "line": 288,
+          "column": 1
+        },
+        {
+          "title": "candidate mini maps tolerate tiles failure without blocking station selection",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-e241c8fae2df6be70180",
+          "file": "return-car.spec.ts",
+          "line": 301,
+          "column": 46
+        },
+        {
+          "title": "candidate mini maps tolerate provider failure without blocking station selection",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-26ee28559f4a2ef6d23a",
+          "file": "return-car.spec.ts",
+          "line": 301,
+          "column": 46
+        },
+        {
+          "title": "pending fuel change and explicit cancellation abort stale requests without changing persisted preferences",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-d52248121148ec578ddd",
+          "file": "return-car.spec.ts",
+          "line": 316,
+          "column": 1
+        },
+        {
+          "title": "10km search caps at ten, excludes known NO and retains UNKNOWN",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-6056d489dc92aa04df2e",
+          "file": "return-car.spec.ts",
+          "line": 335,
+          "column": 1
+        },
+        {
+          "title": "ordinary non-Times candidates require reservation-address confirmation and never inherit Times rules",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-4af4a9be59bacc8cbe1f",
+          "file": "return-car.spec.ts",
+          "line": 344,
+          "column": 1
+        },
+        {
+          "title": "station integrity failure is fail-closed and retry keeps the real manifest hash check",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-989da6213113177b941f",
+          "file": "return-car.spec.ts",
+          "line": 365,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "message": "\u001b[31mTesting stopped early after 8 maximum allowed failures.\u001b[39m"
+    }
+  ],
+  "stats": {
+    "startTime": "2026-09-30T21:12:39.761Z",
+    "duration": 8129.579,
+    "expected": 1,
+    "skipped": 67,
+    "unexpected": 8,
+    "flaky": 0
+  }
+}

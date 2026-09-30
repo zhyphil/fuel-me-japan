@@ -1,0 +1,20 @@
+[WebServer] (node:69291) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 7 tests using 2 workers
+
+(node:69294) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:69295) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 [iPhone-WebKit] › tests/e2e/rental-directory.spec.ts:196:1 › detail return and browser back restore region/company/name/page, exact card focus and scroll (1.8s)
+  ✓  1 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:52:31 › en: 320px detail, Japanese labels, source policy, navigation focus and mounted home map (2.1s)
+  ✓  3 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:52:31 › zh-Hant: 320px detail, Japanese labels, source policy, navigation focus and mounted home map (1.6s)
+  ✓  4 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:52:31 › ko: 320px detail, Japanese labels, source policy, navigation focus and mounted home map (1.6s)
+  ✓  5 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:52:31 › zh-Hans: 320px detail, Japanese labels, source policy, navigation focus and mounted home map (1.6s)
+(node:69341) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  6 [iPhone-WebKit] › tests/e2e/return-car.spec.ts:52:31 › th: 320px detail, Japanese labels, source policy, navigation focus and mounted home map (1.6s)
+  ✓  7 [Desktop-WebKit] › tests/e2e/rental-directory.spec.ts:196:1 › detail return and browser back restore region/company/name/page, exact card focus and scroll (1.8s)
+
+  7 passed (8.2s)

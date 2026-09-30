@@ -1,0 +1,65 @@
+
+> fuel-me-japan@0.0.0 test:data
+> python3 -m unittest discover -s tests/data -v
+
+test_importer (unittest.loader._FailedTest.test_importer) ... ERROR
+test_refresh_sources (unittest.loader._FailedTest.test_refresh_sources) ... ERROR
+test_rental (unittest.loader._FailedTest.test_rental) ... ERROR
+
+======================================================================
+ERROR: test_importer (unittest.loader._FailedTest.test_importer)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_importer
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/loader.py", line 426, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/loader.py", line 367, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/data/test_importer.py", line 16, in <module>
+    import openpyxl
+ModuleNotFoundError: No module named 'openpyxl'
+
+
+======================================================================
+ERROR: test_refresh_sources (unittest.loader._FailedTest.test_refresh_sources)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_refresh_sources
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/loader.py", line 426, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/loader.py", line 367, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/data/test_refresh_sources.py", line 11, in <module>
+    from refresh_sources import latest_url, OSM_INDEX, PRICE_INDEX, main
+  File "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/scripts/importer/refresh_sources.py", line 16, in <module>
+    from pipeline import fetch_price
+  File "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/scripts/importer/pipeline.py", line 13, in <module>
+    from osm import parse_osm
+  File "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/scripts/importer/osm.py", line 5, in <module>
+    from shapely import make_valid
+ModuleNotFoundError: No module named 'shapely'
+
+
+======================================================================
+ERROR: test_rental (unittest.loader._FailedTest.test_rental)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_rental
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/loader.py", line 426, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/loader.py", line 367, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/data/test_rental.py", line 12, in <module>
+    import rental
+  File "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/scripts/importer/rental.py", line 12, in <module>
+    from shapely import make_valid
+ModuleNotFoundError: No module named 'shapely'
+
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+FAILED (errors=3)

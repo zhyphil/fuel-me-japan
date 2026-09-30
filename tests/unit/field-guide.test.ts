@@ -41,29 +41,21 @@ describe("field guide sources stay separate and publish only reviewed links", ()
   });
 });
 
-it.each(locales)("%s renders five steps, seven Japanese labels, display-only reminder and permitted sources", (locale) => {
+it.each(locales)("%s renders a standalone article with five steps, seven Japanese labels and permitted sources", (locale) => {
   const html = renderToStaticMarkup(createElement(RefuelGuide, {
-    locale, selectedFuels: ["DIESEL"], trigger: {} as HTMLButtonElement, onClose: () => undefined,
+    locale,
   }));
   const steps = html.match(/<ol\b[^>]*>([\s\S]*?)<\/ol>/)?.[1];
   expect(steps?.match(/<li>/g)).toHaveLength(5);
   for (const label of ["レギュラー", "ハイオク", "軽油", "セルフ", "現金", "会員", "満タン"]) expect(html).toContain(`<dt lang="ja">${label}</dt>`);
-  for (const key of ["rgPreferenceHelp", "rgStep1Body", "rgStep2Body", "rgStep3Body", "rgStep4Body", "rgStep5Body", "rgLightVehicle", "rgMisfuelBody", "rgStaff", "rgAttribution"] as const) expect(html).toContain(messages[locale][key]);
+  for (const key of ["rgIntro", "rgStep1Body", "rgStep2Body", "rgStep3Body", "rgStep4Body", "rgStep5Body", "rgLightVehicle", "rgMisfuelBody", "rgStaff", "rgAttribution"] as const) expect(html).toContain(messages[locale][key]);
   expect(html.match(/href="([^"]+)"/g)).toEqual([
     'href="https://www.fdma.go.jp/laws/tutatsu/post1258/"',
     'href="https://www.fdma.go.jp/publication/ugoki/items/190507-3.pdf"',
     'href="https://www.fdma.go.jp/about/others/post3.html"',
     'href="https://jaf.or.jp/"',
+    `href="/${locale}/"`,
   ]);
-  expect(html).not.toMatch(/<nav\b|<img\b|<form\b|<select\b/);
-});
-
-it("shows all chosen fuels without asserting that one is correct for the vehicle", () => {
-  const html = renderToStaticMarkup(createElement(RefuelGuide, {
-    locale: "en", selectedFuels: ["REGULAR", "DIESEL", "HIGH_OCTANE"], trigger: {} as HTMLButtonElement, onClose: () => undefined,
-  }));
-  expect(html).toContain("Multiple fuels shown");
-  expect(html).toContain("Display settings only: they do not confirm the fuel your vehicle needs.");
-  const preference = html.match(/<aside\b[^>]*>([\s\S]*?)<\/aside>/)?.[1];
-  expect(preference?.match(/<li>/g)).toHaveLength(3);
+  expect(html).not.toMatch(/<dialog\b|<nav\b|<img\b|<form\b|<select\b/);
+  expect(html).toContain('<h1 id="refuel-guide-title">');
 });

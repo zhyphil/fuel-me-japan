@@ -1,0 +1,21 @@
+
+Running 8 tests using 2 workers
+
+(node:16128) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:16127) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 [Brand-iPhone-WebKit] › tests/e2e/about.spec.ts:5:3 › zh-Hans 320px: About renders accurate project information, contact email and localized navigation (741ms)
+  ✓  1 [Brand-iPhone-WebKit] › tests/e2e/about.spec.ts:5:3 › zh-Hans 1280px: About renders accurate project information, contact email and localized navigation (865ms)
+  ✓  3 [Brand-iPhone-WebKit] › tests/e2e/station-filters.spec.ts:217:1 › reviewed logos and alias search agree across filters, map markers and thumbnails (519ms)
+  ✓  4 [Brand-iPhone-WebKit] › tests/e2e/station-filters.spec.ts:236:1 › all shipped brand files decode and a missing new logo retains the pump fallback (570ms)
+(node:16167) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:16168) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  5 [Brand-Desktop-WebKit] › tests/e2e/about.spec.ts:5:3 › zh-Hans 320px: About renders accurate project information, contact email and localized navigation (548ms)
+  ✓  6 [Brand-Desktop-WebKit] › tests/e2e/about.spec.ts:5:3 › zh-Hans 1280px: About renders accurate project information, contact email and localized navigation (611ms)
+  ✓  7 [Brand-Desktop-WebKit] › tests/e2e/station-filters.spec.ts:217:1 › reviewed logos and alias search agree across filters, map markers and thumbnails (502ms)
+  ✓  8 [Brand-Desktop-WebKit] › tests/e2e/station-filters.spec.ts:236:1 › all shipped brand files decode and a missing new logo retains the pump fallback (638ms)
+
+  8 passed (5.2s)

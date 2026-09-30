@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { japaneseLabels, messages, type Locale, type MessageKey } from "../i18n";
 import { activeFilterCount, applyStationFilters, copyStationFilters, emptyStationFilters, stationFilterOptions, UNKNOWN_BRAND, type StationFilterState } from "../lib/station-filters";
 import type { Station } from "../lib/stations";
+import { brandIdentities, normalizeBrandAlias } from "../lib/station-brand";
 import { Icon, type IconName } from "./Icon";
 
 const tabs = ["brands", "payments", "services"] as const;
@@ -49,7 +50,11 @@ export function StationFilters({ locale, stations, query, applied, trigger, onCl
     });
   }
   function selectTab(index: number) { setTab(tabs[index]); tabRefs.current[index]?.focus(); }
-  const visibleBrands = options.brands.filter((brand) => (brand.key === UNKNOWN_BRAND ? t.sfUnknownBrand : brand.label).normalize("NFKC").toLocaleLowerCase(locale).includes(brandQuery.normalize("NFKC").trim().toLocaleLowerCase(locale)));
+  const search = normalizeBrandAlias(brandQuery);
+  const visibleBrands = options.brands.filter((brand) => {
+    const names = brand.key === UNKNOWN_BRAND ? [t.sfUnknownBrand] : [brand.label, ...(brandIdentities.find(identity => `brand:${identity.key}` === brand.key)?.aliases ?? [])];
+    return names.some(name => normalizeBrandAlias(name).includes(search));
+  });
   return <dialog ref={dialog} className="station-filters-dialog" aria-labelledby="station-filters-title" aria-modal="true" onCancel={(event) => { event.preventDefault(); onClose(); }}>
     <header className="filter-header"><h2 id="station-filters-title"><Icon name="filter" />{t.sfTitle}</h2><button type="button" className="button filter-close" aria-label={t.sfClose} onClick={onClose}><Icon name="close" /></button></header>
     <div className="filter-tabs" role="tablist" aria-label={t.sfCategories}>{tabs.map((item, index) => <button key={item} ref={(node) => { tabRefs.current[index] = node; }} id={`filter-tab-${item}`} type="button" role="tab" aria-selected={tab === item} aria-controls={`filter-panel-${item}`} tabIndex={tab === item ? 0 : -1} onClick={() => selectTab(index)} onKeyDown={(event) => { const next = event.key === "ArrowRight" ? (index + 1) % 3 : event.key === "ArrowLeft" ? (index + 2) % 3 : event.key === "Home" ? 0 : event.key === "End" ? 2 : -1; if (next >= 0) { event.preventDefault(); selectTab(next); } }}><Icon name={tabIcons[item]} /><span>{t[tabKeys[item]]}</span></button>)}</div>

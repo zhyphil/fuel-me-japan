@@ -1,0 +1,2156 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-01",
+  "scope": "仅核对当前已加载数据文件中的全部非空 originalBrand 写法；不改写源站点、即时价格或地图服务，不代表日本实际站点品牌的最新普查。",
+  "method": "先遍历47个站点分区，归并明确大小写/日英别名；逐一检索其余84种写法。每个复用素材按文件来源页记录来源、版权标注及哈希。搜索未检得明确依据仅表示本轮未确认，不表示品牌永远不可使用。",
+  "rightsBoundary": "PD-textlogo 是来源文件页的版权状态标注，不是品牌方授予本站的商标许可、合作或背书；需要书面许可而未获得、文件授权链不清、身份不明或同名误配风险的内容保留默认图标。",
+  "summary": {
+    "stationCount": 16454,
+    "nonemptySpellings": 178,
+    "unknownCount": 5802,
+    "brandGroups": {
+      "eneos": {
+        "label": "ENEOS",
+        "logo": "/brands/eneos-symbol.svg",
+        "count": 5390
+      },
+      "cosmo": {
+        "label": "Cosmo",
+        "logo": "/brands/cosmo-symbol.svg",
+        "count": 1097
+      },
+      "idemitsu": {
+        "label": "Idemitsu",
+        "logo": "/brands/idemitsu.svg",
+        "count": 1110
+      },
+      "hokuren": {
+        "label": "ホクレン",
+        "logo": "/brands/hokuren.svg",
+        "count": 199
+      },
+      "ja": {
+        "label": "JA",
+        "logo": "/brands/ja.svg",
+        "count": 492
+      },
+      "mobil": {
+        "label": "Mobil",
+        "logo": "/brands/mobil.svg",
+        "count": 98
+      },
+      "esso": {
+        "label": "Esso",
+        "logo": "/brands/esso.svg",
+        "count": 202
+      },
+      "iwatani": {
+        "label": "Iwatani",
+        "logo": "/brands/iwatani.png",
+        "count": 7
+      },
+      "inpex": {
+        "label": "INPEX",
+        "logo": "/brands/inpex.svg",
+        "count": 1
+      },
+      "seven-eleven": {
+        "label": "7-Eleven",
+        "logo": "/brands/seven-eleven.svg",
+        "count": 7
+      },
+      "costco": {
+        "label": "Costco",
+        "logo": "/brands/costco.svg",
+        "count": 10
+      },
+      "lawson": {
+        "label": "LAWSON",
+        "logo": "/brands/lawson.svg",
+        "count": 2
+      },
+      "tokyo-gas": {
+        "label": "Tokyo Gas",
+        "logo": "/brands/tokyo-gas.svg",
+        "count": 1
+      },
+      "kirkland": {
+        "label": "Kirkland Signature",
+        "logo": "/brands/kirkland.svg",
+        "count": 1
+      }
+    },
+    "previousLogoStationCount": 6345,
+    "logoStationCount": 8617,
+    "additionalLogoStationCount": 2272,
+    "logoSpellingCount": 49,
+    "fallbackNonemptyStationCount": 2035,
+    "newAssetCount": 12,
+    "totalLogoIdentities": 14
+  },
+  "unknownBrand": {
+    "stationCount": 5802,
+    "status": "UNKNOWN",
+    "reason": "原始记录未提供品牌，不从站名、地图照片或已标准化字段猜测。"
+  },
+  "statusTotals": {
+    "LOCAL_ASSET": 49,
+    "PERMISSION_UNCONFIRMED": 48,
+    "LICENSE_CHAIN_UNCONFIRMED": 7,
+    "ASSET_UNCONFIRMED": 8,
+    "IDENTITY_OR_ASSET_UNCONFIRMED": 35,
+    "NON_BRAND_OR_GENERIC": 8,
+    "MALFORMED_OR_AMBIGUOUS": 12,
+    "DEALER_OR_BRANCH_REVIEW": 11
+  },
+  "brands": [
+    {
+      "originalBrand": "ENEOS",
+      "stationCount": 3957,
+      "status": "LOCAL_ASSET",
+      "identity": "eneos",
+      "assetPath": "/brands/eneos-symbol.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:ENEOS_logo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "エネオス",
+      "stationCount": 1255,
+      "status": "LOCAL_ASSET",
+      "identity": "eneos",
+      "assetPath": "/brands/eneos-symbol.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:ENEOS_logo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "出光",
+      "stationCount": 872,
+      "status": "LOCAL_ASSET",
+      "identity": "idemitsu",
+      "assetPath": "/brands/idemitsu.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Idemitsu_Kosan_wordmark.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "コスモ",
+      "stationCount": 802,
+      "status": "LOCAL_ASSET",
+      "identity": "cosmo",
+      "assetPath": "/brands/cosmo-symbol.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Cosmo_Oil_company_logo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "apollostation",
+      "stationCount": 757,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.idemitsu.com/jp/news/2020/200619.html",
+        "https://www.idemitsu.com/jp/siteuse/index.html"
+      ],
+      "reason": "已确认品牌身份，但出光官网条款要求事先许可或适用法定例外；未建立阿波罗图形的可复用依据，不以 Idemitsu 企业字标冒充 apollostation 站点标识。",
+      "assetPath": null,
+      "researchGroup": "apollostation",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "JA",
+      "stationCount": 357,
+      "status": "LOCAL_ASSET",
+      "identity": "ja",
+      "assetPath": "/brands/ja.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:JA_logo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "昭和シェル",
+      "stationCount": 263,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.shell.com/terms-of-use.html"
+      ],
+      "reason": "Shell 官方条款未提供面向本站的标识复用许可，文字可继续用于识别记录；本轮不下载贝壳图案用于展示。",
+      "assetPath": null,
+      "researchGroup": "shell",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "シェル",
+      "stationCount": 261,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.shell.com/terms-of-use.html"
+      ],
+      "reason": "Shell 官方条款未提供面向本站的标识复用许可，文字可继续用于识别记录；本轮不下载贝壳图案用于展示。",
+      "assetPath": null,
+      "researchGroup": "shell",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "IDEMITSU",
+      "stationCount": 209,
+      "status": "LOCAL_ASSET",
+      "identity": "idemitsu",
+      "assetPath": "/brands/idemitsu.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Idemitsu_Kosan_wordmark.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "Shell",
+      "stationCount": 204,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.shell.com/terms-of-use.html"
+      ],
+      "reason": "Shell 官方条款未提供面向本站的标识复用许可，文字可继续用于识别记录；本轮不下载贝壳图案用于展示。",
+      "assetPath": null,
+      "researchGroup": "shell",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "ホクレン",
+      "stationCount": 199,
+      "status": "LOCAL_ASSET",
+      "identity": "hokuren",
+      "assetPath": "/brands/hokuren.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:HOKUREN_Logo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "COSMO",
+      "stationCount": 166,
+      "status": "LOCAL_ASSET",
+      "identity": "cosmo",
+      "assetPath": "/brands/cosmo-symbol.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Cosmo_Oil_company_logo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "キグナス石油",
+      "stationCount": 142,
+      "status": "LICENSE_CHAIN_UNCONFIRMED",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Kygnus_logo.svg",
+        "https://kygnus.jp/"
+      ],
+      "reason": "Commons 文件标为 CC BY 2.5，但作者指向公司，未找到公司到上传者的授权链。已检查研究副本，未纳入应用。",
+      "assetPath": null,
+      "researchGroup": "kygnus",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "JA-SS",
+      "stationCount": 130,
+      "status": "LOCAL_ASSET",
+      "identity": "ja",
+      "assetPath": "/brands/ja.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:JA_logo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "ENEOS EneJet",
+      "stationCount": 100,
+      "status": "LOCAL_ASSET",
+      "identity": "eneos",
+      "assetPath": "/brands/eneos-symbol.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:ENEOS_logo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "コスモ石油",
+      "stationCount": 96,
+      "status": "LOCAL_ASSET",
+      "identity": "cosmo",
+      "assetPath": "/brands/cosmo-symbol.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Cosmo_Oil_company_logo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "Esso",
+      "stationCount": 88,
+      "status": "LOCAL_ASSET",
+      "identity": "esso",
+      "assetPath": "/brands/esso.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Esso_textlogo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "Mobil",
+      "stationCount": 83,
+      "status": "LOCAL_ASSET",
+      "identity": "mobil",
+      "assetPath": "/brands/mobil.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Mobil_logo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "ESSO",
+      "stationCount": 59,
+      "status": "LOCAL_ASSET",
+      "identity": "esso",
+      "assetPath": "/brands/esso.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Esso_textlogo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "SOLATO",
+      "stationCount": 59,
+      "status": "LICENSE_CHAIN_UNCONFIRMED",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Solato_brandlogo.svg"
+      ],
+      "reason": "Commons 文件标为 CC BY 2.5，但未找到品牌权利人对上传者的授权链；研究副本不纳入应用。",
+      "assetPath": null,
+      "researchGroup": "solato",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "ゼネラル",
+      "stationCount": 47,
+      "status": "ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "属于石油品牌历史写法，检索容易混入其他行业同名企业；未找到可确认使用依据的正确素材，不能自动升级成 ENEOS。",
+      "assetPath": null,
+      "researchGroup": "general",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "エッソ",
+      "stationCount": 46,
+      "status": "LOCAL_ASSET",
+      "identity": "esso",
+      "assetPath": "/brands/esso.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Esso_textlogo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "Carenex",
+      "stationCount": 38,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.itcenex.com/ja/corporate/profile/",
+        "https://www.itcenex.com/ja/terms/"
+      ],
+      "reason": "已查到伊藤忠エネクス的品牌与网站条款，但没有找到该站点品牌图案可用于本站的明确复用依据。不以母公司其他标识替代。",
+      "assetPath": null,
+      "researchGroup": "carenex",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "エネオス エネジェット",
+      "stationCount": 35,
+      "status": "LOCAL_ASSET",
+      "identity": "eneos",
+      "assetPath": "/brands/eneos-symbol.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:ENEOS_logo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "Eneos",
+      "stationCount": 34,
+      "status": "LOCAL_ASSET",
+      "identity": "eneos",
+      "assetPath": "/brands/eneos-symbol.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:ENEOS_logo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "KYGNUS",
+      "stationCount": 31,
+      "status": "LICENSE_CHAIN_UNCONFIRMED",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Kygnus_logo.svg",
+        "https://kygnus.jp/"
+      ],
+      "reason": "Commons 文件标为 CC BY 2.5，但作者指向公司，未找到公司到上传者的授权链。已检查研究副本，未纳入应用。",
+      "assetPath": null,
+      "researchGroup": "kygnus",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "Cosmo",
+      "stationCount": 22,
+      "status": "LOCAL_ASSET",
+      "identity": "cosmo",
+      "assetPath": "/brands/cosmo-symbol.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Cosmo_Oil_company_logo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "MITSUI",
+      "stationCount": 18,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "MITSUI、三井、MOL 的原始字段不足以确认同一品牌；不使用匈牙利 MOL 石油公司的同名字标，保留各原始记录。",
+      "assetPath": null,
+      "researchGroup": "mitsui",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "丸紅エネルギー",
+      "stationCount": 17,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.marubeni-energy.co.jp/business/ss-chain.html"
+      ],
+      "reason": "官方区分丸紅エネルギー站点品牌和其他元売品牌，未找到可复用的加油站标识素材；丸红集团企业 Logo 不是本站应自动套用的站点 Logo。",
+      "assetPath": null,
+      "researchGroup": "marubeni-energy",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "Independent",
+      "stationCount": 16,
+      "status": "NON_BRAND_OR_GENERIC",
+      "sourceUrls": [],
+      "reason": "独立站、服务方式或设施类型等通用字段，无法分配唯一企业 Logo，保留默认加油站图标。",
+      "assetPath": null,
+      "researchGroup": "nobrand",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "Idemitsu",
+      "stationCount": 12,
+      "status": "LOCAL_ASSET",
+      "identity": "idemitsu",
+      "assetPath": "/brands/idemitsu.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Idemitsu_Kosan_wordmark.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "モービル",
+      "stationCount": 12,
+      "status": "LOCAL_ASSET",
+      "identity": "mobil",
+      "assetPath": "/brands/mobil.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Mobil_logo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "三菱商事エネルギー",
+      "stationCount": 11,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "这些记录包含母公司、石油企业与历史品牌名称，不能统一套用三菱汽车或其他三菱公司 Logo；本轮未建立站点品牌素材及使用依据。",
+      "assetPath": null,
+      "researchGroup": "mitsubishi-energy",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "cosmo",
+      "stationCount": 10,
+      "status": "LOCAL_ASSET",
+      "identity": "cosmo",
+      "assetPath": "/brands/cosmo-symbol.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Cosmo_Oil_company_logo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "Esso Express",
+      "stationCount": 9,
+      "status": "LOCAL_ASSET",
+      "identity": "esso",
+      "assetPath": "/brands/esso.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Esso_textlogo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "carenex",
+      "stationCount": 8,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.itcenex.com/ja/corporate/profile/",
+        "https://www.itcenex.com/ja/terms/"
+      ],
+      "reason": "已查到伊藤忠エネクス的品牌与网站条款，但没有找到该站点品牌图案可用于本站的明确复用依据。不以母公司其他标识替代。",
+      "assetPath": null,
+      "researchGroup": "carenex",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "idemitsu",
+      "stationCount": 8,
+      "status": "LOCAL_ASSET",
+      "identity": "idemitsu",
+      "assetPath": "/brands/idemitsu.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Idemitsu_Kosan_wordmark.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "7-Eleven",
+      "stationCount": 7,
+      "status": "LOCAL_ASSET",
+      "identity": "seven-eleven",
+      "assetPath": "/brands/seven-eleven.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:7-eleven_logo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "コストコ　ガスステーション",
+      "stationCount": 7,
+      "status": "LOCAL_ASSET",
+      "identity": "costco",
+      "assetPath": "/brands/costco.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Costco_Wholesale_logo_2010-10-26.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "JOMO",
+      "stationCount": 5,
+      "status": "ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "属于历史品牌记录，本轮未找到可确认使用依据的对应站点 Logo；不能自动升级成 ENEOS。",
+      "assetPath": null,
+      "researchGroup": "jomo",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "キグナス",
+      "stationCount": 5,
+      "status": "LICENSE_CHAIN_UNCONFIRMED",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Kygnus_logo.svg",
+        "https://kygnus.jp/"
+      ],
+      "reason": "Commons 文件标为 CC BY 2.5，但作者指向公司，未找到公司到上传者的授权链。已检查研究副本，未纳入应用。",
+      "assetPath": null,
+      "researchGroup": "kygnus",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "三菱商事石油",
+      "stationCount": 5,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "这些记录包含母公司、石油企业与历史品牌名称，不能统一套用三菱汽车或其他三菱公司 Logo；本轮未建立站点品牌素材及使用依据。",
+      "assetPath": null,
+      "researchGroup": "mitsubishi-energy",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "JA SS",
+      "stationCount": 4,
+      "status": "LOCAL_ASSET",
+      "identity": "ja",
+      "assetPath": "/brands/ja.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:JA_logo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "navi",
+      "stationCount": 4,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.marubeni-energy.co.jp/business/ss-retail.html"
+      ],
+      "reason": "丸红能源官网确认 navi 是其私有站点品牌，未找到 Logo 的第三方复用许可，不使用母公司标识替代。",
+      "assetPath": null,
+      "searchQuery": "\"navi\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "出光興産",
+      "stationCount": 4,
+      "status": "LOCAL_ASSET",
+      "identity": "idemitsu",
+      "assetPath": "/brands/idemitsu.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Idemitsu_Kosan_wordmark.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "昭和シェル石油",
+      "stationCount": 4,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.shell.com/terms-of-use.html"
+      ],
+      "reason": "Shell 官方条款未提供面向本站的标识复用许可，文字可继续用于识别记录；本轮不下载贝壳图案用于展示。",
+      "assetPath": null,
+      "researchGroup": "shell",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "ENEOS Enejet",
+      "stationCount": 3,
+      "status": "LOCAL_ASSET",
+      "identity": "eneos",
+      "assetPath": "/brands/eneos-symbol.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:ENEOS_logo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "Iwatani",
+      "stationCount": 3,
+      "status": "LOCAL_ASSET",
+      "identity": "iwatani",
+      "assetPath": "/brands/iwatani.png",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Iwatani_Corporation_logo.png"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "Kokuwa",
+      "stationCount": 3,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://kokuwa-ds.jp/service/energy/card-payment/"
+      ],
+      "reason": "找到コクワ流通服务能源业务资料，但未找到可确认复用依据的品牌 Logo 文件。",
+      "assetPath": null,
+      "searchQuery": "\"Kokuwa\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "eneos",
+      "stationCount": 3,
+      "status": "LOCAL_ASSET",
+      "identity": "eneos",
+      "assetPath": "/brands/eneos-symbol.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:ENEOS_logo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "shell",
+      "stationCount": 3,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.shell.com/terms-of-use.html"
+      ],
+      "reason": "Shell 官方条款未提供面向本站的标识复用许可，文字可继续用于识别记录；本轮不下载贝壳图案用于展示。",
+      "assetPath": null,
+      "researchGroup": "shell",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "イワタニ",
+      "stationCount": 3,
+      "status": "LOCAL_ASSET",
+      "identity": "iwatani",
+      "assetPath": "/brands/iwatani.png",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Iwatani_Corporation_logo.png"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "オカモト",
+      "stationCount": 3,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://okamoto-self.com/company"
+      ],
+      "reason": "确认オカモトセルフ加油站经营主体，未找到其站点 Logo 的复用依据；不使用同名其他行业公司的标识。",
+      "assetPath": null,
+      "researchGroup": "okamoto",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "セルフ",
+      "stationCount": 3,
+      "status": "NON_BRAND_OR_GENERIC",
+      "sourceUrls": [],
+      "reason": "独立站、服务方式或设施类型等通用字段，无法分配唯一企业 Logo，保留默认加油站图标。",
+      "assetPath": null,
+      "researchGroup": "nobrand",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "ペトラス",
+      "stationCount": 3,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://megapetro.co.jp/about/"
+      ],
+      "reason": "确认 Megapetro 的 PETRAS 业务身份，但未找到面向第三方网站的可复用素材或明确许可。",
+      "assetPath": null,
+      "researchGroup": "petras",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "三菱",
+      "stationCount": 3,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "这些记录包含母公司、石油企业与历史品牌名称，不能统一套用三菱汽车或其他三菱公司 Logo；本轮未建立站点品牌素材及使用依据。",
+      "assetPath": null,
+      "researchGroup": "mitsubishi-energy",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "三菱商事",
+      "stationCount": 3,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "这些记录包含母公司、石油企业与历史品牌名称，不能统一套用三菱汽车或其他三菱公司 Logo；本轮未建立站点品牌素材及使用依据。",
+      "assetPath": null,
+      "researchGroup": "mitsubishi-energy",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "丸紅",
+      "stationCount": 3,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.marubeni-energy.co.jp/business/ss-chain.html"
+      ],
+      "reason": "官方区分丸紅エネルギー站点品牌和其他元売品牌，未找到可复用的加油站标识素材；丸红集团企业 Logo 不是本站应自动套用的站点 Logo。",
+      "assetPath": null,
+      "researchGroup": "marubeni-energy",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "出光昭和シェル",
+      "stationCount": 3,
+      "status": "MALFORMED_OR_AMBIGUOUS",
+      "sourceUrls": [
+        "https://www.idemitsu.com/jp/news/2020/200619.html"
+      ],
+      "reason": "是企业合并时期组合名称，不足以确定站点应使用 Shell、出光还是 apollostation 图案。",
+      "assetPath": null,
+      "searchQuery": "\"出光昭和シェル\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "出光石油",
+      "stationCount": 3,
+      "status": "LOCAL_ASSET",
+      "identity": "idemitsu",
+      "assetPath": "/brands/idemitsu.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Idemitsu_Kosan_wordmark.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "Costco Gasoline",
+      "stationCount": 2,
+      "status": "LOCAL_ASSET",
+      "identity": "costco",
+      "assetPath": "/brands/costco.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Costco_Wholesale_logo_2010-10-26.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "Gasta",
+      "stationCount": 2,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.1484c.com/"
+      ],
+      "reason": "检索到经营主体石橋的官方站点，未找到品牌 Logo 的复用许可。",
+      "assetPath": null,
+      "searchQuery": "\"Gasta\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "JA児湯",
+      "stationCount": 2,
+      "status": "DEALER_OR_BRANCH_REVIEW",
+      "sourceUrls": [
+        "https://ja-lupin-koyu.com/about/"
+      ],
+      "reason": "可查到地区农协相关公司，但未确认对应记录所需的专属标识及复用依据。",
+      "assetPath": null,
+      "searchQuery": "\"JA児湯\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "Kygnus",
+      "stationCount": 2,
+      "status": "LICENSE_CHAIN_UNCONFIRMED",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Kygnus_logo.svg",
+        "https://kygnus.jp/"
+      ],
+      "reason": "Commons 文件标为 CC BY 2.5，但作者指向公司，未找到公司到上传者的授权链。已检查研究副本，未纳入应用。",
+      "assetPath": null,
+      "researchGroup": "kygnus",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "Mobile",
+      "stationCount": 2,
+      "status": "MALFORMED_OR_AMBIGUOUS",
+      "sourceUrls": [],
+      "reason": "不是已经核对的 Mobil 写法，不基于拼写相似自动使用 Mobil Logo。",
+      "assetPath": null,
+      "searchQuery": "\"Mobile\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "SogoEnergy",
+      "stationCount": 2,
+      "status": "ASSET_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.cosmo-energy.co.jp/content/dam/corp/jp/en/ir/financial/presentation/2016/pdf/glossary_fy2016e.pdf"
+      ],
+      "reason": "在 Cosmo 企业资料中找到名称线索，未找到可复用 Logo 文件；不套用 Cosmo 图案。",
+      "assetPath": null,
+      "searchQuery": "\"SogoEnergy\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "eco Station",
+      "stationCount": 2,
+      "status": "NON_BRAND_OR_GENERIC",
+      "sourceUrls": [],
+      "reason": "可能是天然气加气设施类型或不同企业名称，不能直接套用同名公司的 Logo。",
+      "assetPath": null,
+      "searchQuery": "\"eco Station\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "mobil",
+      "stationCount": 2,
+      "status": "LOCAL_ASSET",
+      "identity": "mobil",
+      "assetPath": "/brands/mobil.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Mobil_logo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "アポロステーション",
+      "stationCount": 2,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.idemitsu.com/jp/news/2020/200619.html",
+        "https://www.idemitsu.com/jp/siteuse/index.html"
+      ],
+      "reason": "已确认品牌身份，但出光官网条款要求事先许可或适用法定例外；未建立阿波罗图形的可复用依据，不以 Idemitsu 企业字标冒充 apollostation 站点标识。",
+      "assetPath": null,
+      "researchGroup": "apollostation",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "カーエネクス",
+      "stationCount": 2,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.itcenex.com/ja/corporate/profile/",
+        "https://www.itcenex.com/ja/terms/"
+      ],
+      "reason": "已查到伊藤忠エネクス的品牌与网站条款，但没有找到该站点品牌图案可用于本站的明确复用依据。不以母公司其他标识替代。",
+      "assetPath": null,
+      "researchGroup": "carenex",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "ユニーオイル",
+      "stationCount": 2,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.unyoil.com/gas_station/"
+      ],
+      "reason": "已检索到相关官方企业或门店资料，但本轮没有找到可用于本站的明确 Logo 复用依据，继续显示默认图标。",
+      "assetPath": null,
+      "searchQuery": "\"ユニーオイル\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "宇佐美",
+      "stationCount": 2,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://usami-net.com/"
+      ],
+      "reason": "已找到官方加油站企业资料，但未找到可确认复用依据的 Logo 文件；不套用其经销的某一家元売标志。",
+      "assetPath": null,
+      "searchQuery": "\"宇佐美\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "独自ブランド",
+      "stationCount": 2,
+      "status": "NON_BRAND_OR_GENERIC",
+      "sourceUrls": [],
+      "reason": "独立站、服务方式或设施类型等通用字段，无法分配唯一企业 Logo，保留默认加油站图标。",
+      "assetPath": null,
+      "researchGroup": "nobrand",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "総合エネルギー",
+      "stationCount": 2,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "已按原始写法检索，本轮未找到能够同时确认品牌身份与复用依据的 Logo 文件；不使用同名、近似拼写或经销商品牌猜测。",
+      "assetPath": null,
+      "searchQuery": "\"総合エネルギー\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "(有)東重機運輸",
+      "stationCount": 1,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "已按原始写法检索，本轮未找到能够同时确认品牌身份与复用依据的 Logo 文件；不使用同名、近似拼写或经销商品牌猜测。",
+      "assetPath": null,
+      "searchQuery": "\"(有)東重機運輸\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "(有)藤井油店",
+      "stationCount": 1,
+      "status": "DEALER_OR_BRANCH_REVIEW",
+      "sourceUrls": [
+        "https://www.city.sumida.lg.jp/kenko_fukushi/syougai/waribiki/taxi.files/R80401_taxi_list_s.pdf"
+      ],
+      "reason": "原始字段为经销商名称；地方资料中的元売关联不等于该经销商 Logo 授权，也不自动把记录改为 ENEOS。",
+      "assetPath": null,
+      "searchQuery": "\"(有)藤井油店\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "(株)オカモト",
+      "stationCount": 1,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://okamoto-self.com/company"
+      ],
+      "reason": "确认オカモトセルフ加油站经营主体，未找到其站点 Logo 的复用依据；不使用同名其他行业公司的标识。",
+      "assetPath": null,
+      "researchGroup": "okamoto",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "(株)永吉給油所",
+      "stationCount": 1,
+      "status": "ASSET_UNCONFIRMED",
+      "sourceUrls": [
+        "https://chibakenseikyo.or.jp/pdf/oshirase/ichiran.pdf"
+      ],
+      "reason": "行业资料中可找到企业名称，但没有可复用企业标识素材。",
+      "assetPath": null,
+      "searchQuery": "\"(株)永吉給油所\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "Abura油",
+      "stationCount": 1,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.lifehakudo.co.jp/wp-content/uploads/2023/04/35e4dab55834b9b233dd662b3f244f3c.pdf"
+      ],
+      "reason": "找到经营方资料线索，未找到可确认身份且可复用的独立标识文件。",
+      "assetPath": null,
+      "searchQuery": "\"Abura油\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "Apollo Station",
+      "stationCount": 1,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.idemitsu.com/jp/news/2020/200619.html",
+        "https://www.idemitsu.com/jp/siteuse/index.html"
+      ],
+      "reason": "已确认品牌身份，但出光官网条款要求事先许可或适用法定例外；未建立阿波罗图形的可复用依据，不以 Idemitsu 企业字标冒充 apollostation 站点标识。",
+      "assetPath": null,
+      "researchGroup": "apollostation",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "Aコープ",
+      "stationCount": 1,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://kyodokiko.acoop.jp/about/index.html"
+      ],
+      "reason": "A コープ 有自己的业务标识，不因农协关系就自动使用 JA 图形；未找到对应可复用素材。",
+      "assetPath": null,
+      "searchQuery": "\"Aコープ\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "Cosmos",
+      "stationCount": 1,
+      "status": "MALFORMED_OR_AMBIGUOUS",
+      "sourceUrls": [],
+      "reason": "存在多个同名品牌，不能基于相似拼写自动使用 Cosmo Logo。",
+      "assetPath": null,
+      "searchQuery": "\"Cosmos\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "DM Gas",
+      "stationCount": 1,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "已按原始写法检索，本轮未找到能够同时确认品牌身份与复用依据的 Logo 文件；不使用同名、近似拼写或经销商品牌猜测。",
+      "assetPath": null,
+      "searchQuery": "\"DM Gas\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "ENESTA",
+      "stationCount": 1,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.tokyo-gas.co.jp/Press/20151224-01_01.pdf"
+      ],
+      "reason": "属于东京燃气服务网点品牌，不能直接视为 Tokyo Gas 字标的站点别名。",
+      "assetPath": null,
+      "searchQuery": "\"ENESTA\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "EV充電スタンド",
+      "stationCount": 1,
+      "status": "NON_BRAND_OR_GENERIC",
+      "sourceUrls": [],
+      "reason": "独立站、服务方式或设施类型等通用字段，无法分配唯一企业 Logo，保留默认加油站图标。",
+      "assetPath": null,
+      "researchGroup": "nobrand",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "EneDy",
+      "stationCount": 1,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "已按原始写法检索，本轮未找到能够同时确认品牌身份与复用依据的 Logo 文件；不使用同名、近似拼写或经销商品牌猜测。",
+      "assetPath": null,
+      "searchQuery": "\"EneDy\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "EneJet",
+      "stationCount": 1,
+      "status": "LOCAL_ASSET",
+      "identity": "eneos",
+      "assetPath": "/brands/eneos-symbol.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:ENEOS_logo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "INPEX",
+      "stationCount": 1,
+      "status": "LOCAL_ASSET",
+      "identity": "inpex",
+      "assetPath": "/brands/inpex.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Inpex_logo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "Isuzu",
+      "stationCount": 1,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.isuzu.co.jp/"
+      ],
+      "reason": "检索主要指向汽车制造商，原始站点品牌字段不能证明应使用该汽车 Logo。",
+      "assetPath": null,
+      "searchQuery": "\"Isuzu\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "JASS",
+      "stationCount": 1,
+      "status": "LOCAL_ASSET",
+      "identity": "ja",
+      "assetPath": "/brands/ja.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:JA_logo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "JAあいちエネルギー",
+      "stationCount": 1,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://ja-aichi-energy.jp/company/"
+      ],
+      "reason": "确认 JA 相关能源公司身份，未找到该公司标识复用依据；不自动使用集团通用字标替代公司标识。",
+      "assetPath": null,
+      "searchQuery": "\"JAあいちエネルギー\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "JAあいづセルフスタンド",
+      "stationCount": 1,
+      "status": "DEALER_OR_BRANCH_REVIEW",
+      "sourceUrls": [
+        "https://aizuyotuba.jp/images/com/manmaja_vol31.pdf"
+      ],
+      "reason": "检索到农协资料，但该字段包含具体门店名称，不作为整个 JA 品牌的自动别名；需单独核对站点身份。",
+      "assetPath": null,
+      "searchQuery": "\"JAあいづセルフスタンド\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "JAさが諸富SS",
+      "stationCount": 1,
+      "status": "DEALER_OR_BRANCH_REVIEW",
+      "sourceUrls": [
+        "https://jasaga.or.jp/life/pointcard/pointcard04"
+      ],
+      "reason": "官方资料可找到门店记录，原始字段为具体门店；未将其作为集团通用字标的全局别名。",
+      "assetPath": null,
+      "searchQuery": "\"JAさが諸富SS\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "JA榎列SS",
+      "stationCount": 1,
+      "status": "DEALER_OR_BRANCH_REVIEW",
+      "sourceUrls": [
+        "https://www.jaccs.co.jp/service/card_lineup/teikei/ja-ss/hyogo.html"
+      ],
+      "reason": "金融合作方名单可找到站点记录，但不提供该站点 Logo 复用许可，具体门店不自动作为集团品牌别名。",
+      "assetPath": null,
+      "searchQuery": "\"JA榎列SS\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "JSS",
+      "stationCount": 1,
+      "status": "MALFORMED_OR_AMBIGUOUS",
+      "sourceUrls": [],
+      "reason": "JSS 存在多家同名非石油企业，不能推断为 JASS 或 JA。",
+      "assetPath": null,
+      "searchQuery": "\"JSS\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "Jomo",
+      "stationCount": 1,
+      "status": "ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "属于历史品牌记录，本轮未找到可确认使用依据的对应站点 Logo；不能自动升级成 ENEOS。",
+      "assetPath": null,
+      "researchGroup": "jomo",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "KAWASEKI",
+      "stationCount": 1,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "已按原始写法检索，本轮未找到能够同时确认品牌身份与复用依据的 Logo 文件；不使用同名、近似拼写或经销商品牌猜测。",
+      "assetPath": null,
+      "searchQuery": "\"KAWASEKI\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "KIRKLAND Signature",
+      "stationCount": 1,
+      "status": "LOCAL_ASSET",
+      "identity": "kirkland",
+      "assetPath": "/brands/kirkland.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Kirkland_Signature_logo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "searchQuery": "\"KIRKLAND Signature\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "LAWSON",
+      "stationCount": 1,
+      "status": "LOCAL_ASSET",
+      "identity": "lawson",
+      "assetPath": "/brands/lawson.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Lawson_logo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "MOL",
+      "stationCount": 1,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "MITSUI、三井、MOL 的原始字段不足以确认同一品牌；不使用匈牙利 MOL 石油公司的同名字标，保留各原始记录。",
+      "assetPath": null,
+      "researchGroup": "mitsui",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "Marubeni",
+      "stationCount": 1,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.marubeni-energy.co.jp/business/ss-chain.html"
+      ],
+      "reason": "官方区分丸紅エネルギー站点品牌和其他元売品牌，未找到可复用的加油站标识素材；丸红集团企业 Logo 不是本站应自动套用的站点 Logo。",
+      "assetPath": null,
+      "researchGroup": "marubeni-energy",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "Mitsubishi",
+      "stationCount": 1,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "这些记录包含母公司、石油企业与历史品牌名称，不能统一套用三菱汽车或其他三菱公司 Logo；本轮未建立站点品牌素材及使用依据。",
+      "assetPath": null,
+      "researchGroup": "mitsubishi-energy",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "Navy Exchange",
+      "stationCount": 1,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.mynavyexchange.com/fuelrewards"
+      ],
+      "reason": "官方页面确认有燃油业务，但没有找到本轮可复用的品牌标识依据；不把美国政府相关身份等同于任意商标可用。",
+      "assetPath": null,
+      "searchQuery": "\"Navy Exchange\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "PETRAS",
+      "stationCount": 1,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://megapetro.co.jp/about/"
+      ],
+      "reason": "确认 Megapetro 的 PETRAS 业务身份，但未找到面向第三方网站的可复用素材或明确许可。",
+      "assetPath": null,
+      "researchGroup": "petras",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "SHELL",
+      "stationCount": 1,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.shell.com/terms-of-use.html"
+      ],
+      "reason": "Shell 官方条款未提供面向本站的标识复用许可，文字可继续用于识别记录；本轮不下载贝壳图案用于展示。",
+      "assetPath": null,
+      "researchGroup": "shell",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "SMART",
+      "stationCount": 1,
+      "status": "MALFORMED_OR_AMBIGUOUS",
+      "sourceUrls": [],
+      "reason": "通用英文词且有其他行业同名品牌，不能据此推断加油站的企业标识。",
+      "assetPath": null,
+      "searchQuery": "\"SMART\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "SOLALT",
+      "stationCount": 1,
+      "status": "MALFORMED_OR_AMBIGUOUS",
+      "sourceUrls": [],
+      "reason": "疑似拼写错误，不能自动改为 SOLATO，后者的可复用素材依据本轮也未确认。",
+      "assetPath": null,
+      "searchQuery": "\"SOLALT\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "SOLE",
+      "stationCount": 1,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "已按原始写法检索，本轮未找到能够同时确认品牌身份与复用依据的 Logo 文件；不使用同名、近似拼写或经销商品牌猜测。",
+      "assetPath": null,
+      "searchQuery": "\"SOLE\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "Showa Shell",
+      "stationCount": 1,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.shell.com/terms-of-use.html"
+      ],
+      "reason": "Shell 官方条款未提供面向本站的标识复用许可，文字可继续用于识别记录；本轮不下载贝壳图案用于展示。",
+      "assetPath": null,
+      "researchGroup": "shell",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "Sogo Energy",
+      "stationCount": 1,
+      "status": "ASSET_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.euglena.jp/ir/library/pdf/presentation_2025_3.pdf"
+      ],
+      "reason": "存在企业资料中的名称和 Logo 线索，但未建立可复用文件的权利依据。",
+      "assetPath": null,
+      "searchQuery": "\"Sogo Energy\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "Solato",
+      "stationCount": 1,
+      "status": "LICENSE_CHAIN_UNCONFIRMED",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Solato_brandlogo.svg"
+      ],
+      "reason": "Commons 文件标为 CC BY 2.5，但未找到品牌权利人对上传者的授权链；研究副本不纳入应用。",
+      "assetPath": null,
+      "researchGroup": "solato",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "TOKYO GAS ENERGY",
+      "stationCount": 1,
+      "status": "DEALER_OR_BRANCH_REVIEW",
+      "sourceUrls": [
+        "https://www.tokyo-gas.co.jp/about/group/index.html"
+      ],
+      "reason": "属于东京燃气相关企业名称，不能在未确认具体标识时自动套用 Tokyo Gas 母公司 Logo。",
+      "assetPath": null,
+      "searchQuery": "\"TOKYO GAS ENERGY\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "TOYOTSU ENERGY",
+      "stationCount": 1,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.toyotsuene.co.jp/aboutus/corporateprofile/"
+      ],
+      "reason": "已检索到相关官方企业或门店资料，但本轮没有找到可用于本站的明确 Logo 复用依据，继续显示默认图标。",
+      "assetPath": null,
+      "searchQuery": "\"TOYOTSU ENERGY\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "UnyOil",
+      "stationCount": 1,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.unyoil.com/gas_station/"
+      ],
+      "reason": "已检索到相关官方企业或门店资料，但本轮没有找到可用于本站的明确 Logo 复用依据，继续显示默认图标。",
+      "assetPath": null,
+      "searchQuery": "\"UnyOil\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "apollo",
+      "stationCount": 1,
+      "status": "MALFORMED_OR_AMBIGUOUS",
+      "sourceUrls": [],
+      "reason": "可能对应多个经营主体或简称，未确认为 apollostation 的精确别名。",
+      "assetPath": null,
+      "searchQuery": "\"apollo\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "apolostation",
+      "stationCount": 1,
+      "status": "MALFORMED_OR_AMBIGUOUS",
+      "sourceUrls": [],
+      "reason": "疑似 apollostation 拼写错误，不能仅凭相似拼写自动修正品牌；而 apollostation 图案本身也尚无复用依据。",
+      "assetPath": null,
+      "searchQuery": "\"apolostation\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "brand= 出光興産",
+      "stationCount": 1,
+      "status": "MALFORMED_OR_AMBIGUOUS",
+      "sourceUrls": [],
+      "reason": "原始值混入字段名语法，需数据审核，不能通过删除前缀自动推断品牌。",
+      "assetPath": null,
+      "searchQuery": "\"brand= 出光興産\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "selfix",
+      "stationCount": 1,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.selfix.jp/"
+      ],
+      "reason": "已检索到相关官方企业或门店资料，但本轮没有找到可用于本站的明确 Logo 复用依据，继续显示默认图标。",
+      "assetPath": null,
+      "searchQuery": "\"selfix\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "えねおす",
+      "stationCount": 1,
+      "status": "LOCAL_ASSET",
+      "identity": "eneos",
+      "assetPath": "/brands/eneos-symbol.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:ENEOS_logo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "アサヒ",
+      "stationCount": 1,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [
+        "https://asahishoukai.jp/locations/"
+      ],
+      "reason": "存在多个アサヒ同名企业；尚未将原始站点与唯一权利人对应，不使用朝日饮料等无关品牌 Logo。",
+      "assetPath": null,
+      "searchQuery": "\"アサヒ\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "アストモスガス",
+      "stationCount": 1,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.ishiisekiyu.com/"
+      ],
+      "reason": "官方经销商资料中可找到品牌线索，但未找到品牌 Logo 的明确复用依据。",
+      "assetPath": null,
+      "searchQuery": "\"アストモスガス\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "アポロステーション浦SS",
+      "stationCount": 1,
+      "status": "DEALER_OR_BRANCH_REVIEW",
+      "sourceUrls": [
+        "https://www.idemitsu.com/jp/siteuse/index.html"
+      ],
+      "reason": "字段包含具体站名，且阿波罗图形未建立复用依据，保留默认标识。",
+      "assetPath": null,
+      "searchQuery": "\"アポロステーション浦SS\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "イデックス・エネオス",
+      "stationCount": 1,
+      "status": "MALFORMED_OR_AMBIGUOUS",
+      "sourceUrls": [
+        "https://idexssmap.idex.co.jp/idexss/?id=894"
+      ],
+      "reason": "经营商与元売双重名称，不自动丢弃经营商部分后套用 ENEOS 图案。",
+      "assetPath": null,
+      "searchQuery": "\"イデックス・エネオス\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "イワタニ水素ステーション",
+      "stationCount": 1,
+      "status": "LOCAL_ASSET",
+      "identity": "iwatani",
+      "assetPath": "/brands/iwatani.png",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Iwatani_Corporation_logo.png"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "エコステーション",
+      "stationCount": 1,
+      "status": "NON_BRAND_OR_GENERIC",
+      "sourceUrls": [
+        "https://www.japanlpg.or.jp/customer/ecostation.html"
+      ],
+      "reason": "属于加气设施通用称呼，不足以识别唯一企业标识。",
+      "assetPath": null,
+      "searchQuery": "\"エコステーション\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "エネオスエネジェット",
+      "stationCount": 1,
+      "status": "LOCAL_ASSET",
+      "identity": "eneos",
+      "assetPath": "/brands/eneos-symbol.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:ENEOS_logo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "エネクスフリート",
+      "stationCount": 1,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.enexfleet.com/company/"
+      ],
+      "reason": "已查到经营主体，其门店可能使用不同元売品牌；未找到企业 Logo 复用许可，不能用其他品牌替代。",
+      "assetPath": null,
+      "searchQuery": "\"エネクスフリート\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "エネフリ;apollostation",
+      "stationCount": 1,
+      "status": "MALFORMED_OR_AMBIGUOUS",
+      "sourceUrls": [
+        "https://map.enexfleet.com/detail/0000000100/"
+      ],
+      "reason": "原始字段包含经营方与站点品牌两个值；不删去其中一个或自动选图。",
+      "assetPath": null,
+      "searchQuery": "\"エネフリ;apollostation\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "オカモトセルフ",
+      "stationCount": 1,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://okamoto-self.com/company"
+      ],
+      "reason": "确认オカモトセルフ加油站经营主体，未找到其站点 Logo 的复用依据；不使用同名其他行业公司的标识。",
+      "assetPath": null,
+      "researchGroup": "okamoto",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "オートイン",
+      "stationCount": 1,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.auto-in.jp/"
+      ],
+      "reason": "已检索到相关官方企业或门店资料，但本轮没有找到可用于本站的明确 Logo 复用依据，继续显示默认图标。",
+      "assetPath": null,
+      "searchQuery": "\"オートイン\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "オートバックス",
+      "stationCount": 1,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.autobacs.co.jp/ja/company/company_guide/gyoutai.html"
+      ],
+      "reason": "官方资料有加油站业态，但未找到可确认复用依据的独立 Logo 文件。",
+      "assetPath": null,
+      "searchQuery": "\"オートバックス\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "ガソリンショップ宿毛",
+      "stationCount": 1,
+      "status": "DEALER_OR_BRANCH_REVIEW",
+      "sourceUrls": [
+        "https://map.idemitsu.com/b/a/info/0000029861/"
+      ],
+      "reason": "官方目录中可查到具体门店，但不因此获得品牌 Logo 复用许可，也不覆盖原始门店名称。",
+      "assetPath": null,
+      "searchQuery": "\"ガソリンショップ宿毛\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "クローバー",
+      "stationCount": 1,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "已按原始写法检索，本轮未找到能够同时确认品牌身份与复用依据的 Logo 文件；不使用同名、近似拼写或经销商品牌猜测。",
+      "assetPath": null,
+      "searchQuery": "\"クローバー\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "コストコホールセール",
+      "stationCount": 1,
+      "status": "LOCAL_ASSET",
+      "identity": "costco",
+      "assetPath": "/brands/costco.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Costco_Wholesale_logo_2010-10-26.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "コスモ石油 (Cosmo)",
+      "stationCount": 1,
+      "status": "LOCAL_ASSET",
+      "identity": "cosmo",
+      "assetPath": "/brands/cosmo-symbol.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Cosmo_Oil_company_logo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "サン石油",
+      "stationCount": 1,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "有多个同名或近似企业，未将原始记录确定为日本サン石油或其他唯一权利人。",
+      "assetPath": null,
+      "searchQuery": "\"サン石油\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "セルフ MARUDAI",
+      "stationCount": 1,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "已按原始写法检索，本轮未找到能够同时确认品牌身份与复用依据的 Logo 文件；不使用同名、近似拼写或经销商品牌猜测。",
+      "assetPath": null,
+      "searchQuery": "\"セルフ MARUDAI\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "ゼネラルエナジー",
+      "stationCount": 1,
+      "status": "ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "属于石油品牌历史写法，检索容易混入其他行业同名企业；未找到可确认使用依据的正确素材，不能自动升级成 ENEOS。",
+      "assetPath": null,
+      "researchGroup": "general",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "ゼネラル石油",
+      "stationCount": 1,
+      "status": "ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "属于石油品牌历史写法，检索容易混入其他行业同名企业；未找到可确认使用依据的正确素材，不能自动升级成 ENEOS。",
+      "assetPath": null,
+      "researchGroup": "general",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "タツミ",
+      "stationCount": 1,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [
+        "https://tatsumi-gas.co.jp/about/"
+      ],
+      "reason": "存在同名能源企业和其他行业企业，尚不能把原始站点字段与唯一 Logo 对应。",
+      "assetPath": null,
+      "searchQuery": "\"タツミ\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "フジジン",
+      "stationCount": 1,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "结果主要指向调味料或其他同名企业，不能给加油站配上无关商标。",
+      "assetPath": null,
+      "searchQuery": "\"フジジン\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "ベストプライス",
+      "stationCount": 1,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://blue-project.jp/list/"
+      ],
+      "reason": "存在经营方门店线索，但未确认原始记录与可复用标识对应。",
+      "assetPath": null,
+      "searchQuery": "\"ベストプライス\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "ミタニ",
+      "stationCount": 1,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.mitani-corp.co.jp/ir/document_s/2006_3renketu.pdf"
+      ],
+      "reason": "存在经营主体及门店记录线索，但不足以确认此处记录的具体标识和复用依据。",
+      "assetPath": null,
+      "searchQuery": "\"ミタニ\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "ミツウロコ",
+      "stationCount": 1,
+      "status": "LICENSE_CHAIN_UNCONFIRMED",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Mitsuuroko_logo.svg"
+      ],
+      "reason": "Commons 文件标为 CC BY 2.5，但未找到品牌权利人对上传者的授权链；研究副本不纳入应用。",
+      "assetPath": null,
+      "researchGroup": "mitsuuroko",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "モダ石油",
+      "stationCount": 1,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.moda.co.jp/"
+      ],
+      "reason": "已检索到相关官方企业或门店资料，但本轮没有找到可用于本站的明确 Logo 复用依据，继续显示默认图标。",
+      "assetPath": null,
+      "searchQuery": "\"モダ石油\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "モービル石油",
+      "stationCount": 1,
+      "status": "LOCAL_ASSET",
+      "identity": "mobil",
+      "assetPath": "/brands/mobil.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Mobil_logo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "ヤマサン石油",
+      "stationCount": 1,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.yamasan-grp.co.jp/business/service/kygnus/"
+      ],
+      "reason": "官方资料表明经营主体与 KYGNUS 业务关系；原始记录仍为经营商名称，且 KYGNUS 素材授权链未确认。",
+      "assetPath": null,
+      "searchQuery": "\"ヤマサン石油\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "ユニペト",
+      "stationCount": 1,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.unipetjapan.com/ja/stations.html"
+      ],
+      "reason": "已检索到相关官方企业或门店资料，但本轮没有找到可用于本站的明确 Logo 复用依据，继续显示默认图标。",
+      "assetPath": null,
+      "searchQuery": "\"ユニペト\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "リッキーSS",
+      "stationCount": 1,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "已按原始写法检索，本轮未找到能够同时确认品牌身份与复用依据的 Logo 文件；不使用同名、近似拼写或经销商品牌猜测。",
+      "assetPath": null,
+      "searchQuery": "\"リッキーSS\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "ローソン",
+      "stationCount": 1,
+      "status": "LOCAL_ASSET",
+      "identity": "lawson",
+      "assetPath": "/brands/lawson.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Lawson_logo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "三井",
+      "stationCount": 1,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "MITSUI、三井、MOL 的原始字段不足以确认同一品牌；不使用匈牙利 MOL 石油公司的同名字标，保留各原始记录。",
+      "assetPath": null,
+      "researchGroup": "mitsui",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "三井モーターガス",
+      "stationCount": 1,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "已按原始写法检索，本轮未找到能够同时确认品牌身份与复用依据的 Logo 文件；不使用同名、近似拼写或经销商品牌猜测。",
+      "assetPath": null,
+      "searchQuery": "\"三井モーターガス\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "三永商事",
+      "stationCount": 1,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "已按原始写法检索，本轮未找到能够同时确认品牌身份与复用依据的 Logo 文件；不使用同名、近似拼写或经销商品牌猜测。",
+      "assetPath": null,
+      "searchQuery": "\"三永商事\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "三菱石油",
+      "stationCount": 1,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "这些记录包含母公司、石油企业与历史品牌名称，不能统一套用三菱汽车或其他三菱公司 Logo；本轮未建立站点品牌素材及使用依据。",
+      "assetPath": null,
+      "researchGroup": "mitsubishi-energy",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "上野油業",
+      "stationCount": 1,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://ueno-oil.com/gs/"
+      ],
+      "reason": "已检索到相关官方企业或门店资料，但本轮没有找到可用于本站的明确 Logo 复用依据，继续显示默认图标。",
+      "assetPath": null,
+      "searchQuery": "\"上野油業\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "仙台市ガス局",
+      "stationCount": 1,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.gas.city.sendai.jp/"
+      ],
+      "reason": "已检索到相关官方企业或门店资料，但本轮没有找到可用于本站的明确 Logo 复用依据，继续显示默认图标。",
+      "assetPath": null,
+      "searchQuery": "\"仙台市ガス局\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "伊丹産業",
+      "stationCount": 1,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.itami-grp.co.jp/business/oil/"
+      ],
+      "reason": "已检索到相关官方企业或门店资料，但本轮没有找到可用于本站的明确 Logo 复用依据，继续显示默认图标。",
+      "assetPath": null,
+      "searchQuery": "\"伊丹産業\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "佐孝石油",
+      "stationCount": 1,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.sako.biz/index.html"
+      ],
+      "reason": "已检索到相关官方企业或门店资料，但本轮没有找到可用于本站的明确 Logo 复用依据，继续显示默认图标。",
+      "assetPath": null,
+      "searchQuery": "\"佐孝石油\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "全農エネルギー　JASS-PORT海老ケ瀬",
+      "stationCount": 1,
+      "status": "DEALER_OR_BRANCH_REVIEW",
+      "sourceUrls": [
+        "https://zennoh-energy.co.jp/consumer/ss/station/niigata/jassport-ebigase/"
+      ],
+      "reason": "官方页面确认具体 JASS-PORT 门店；原始字段包含经营商及门店名，保留记录，不把全农能源与 JA 的标识直接等同。",
+      "assetPath": null,
+      "searchQuery": "\"全農エネルギー　JASS-PORT海老ケ瀬\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "出光 (Idemitsu )",
+      "stationCount": 1,
+      "status": "LOCAL_ASSET",
+      "identity": "idemitsu",
+      "assetPath": "/brands/idemitsu.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Idemitsu_Kosan_wordmark.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "出光 (Idemitsu)",
+      "stationCount": 1,
+      "status": "LOCAL_ASSET",
+      "identity": "idemitsu",
+      "assetPath": "/brands/idemitsu.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Idemitsu_Kosan_wordmark.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "出光昭和シェル石油",
+      "stationCount": 1,
+      "status": "MALFORMED_OR_AMBIGUOUS",
+      "sourceUrls": [
+        "https://www.idemitsu.com/jp/news/2020/200619.html"
+      ],
+      "reason": "混合企业和历史品牌名称，不足以确定应展示哪个站点 Logo。",
+      "assetPath": null,
+      "searchQuery": "\"出光昭和シェル石油\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "大英石油",
+      "stationCount": 1,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.daieioil.com/company.html"
+      ],
+      "reason": "已检索到相关官方企业或门店资料，但本轮没有找到可用于本站的明确 Logo 复用依据，继续显示默认图标。",
+      "assetPath": null,
+      "searchQuery": "\"大英石油\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "岡山ローレル セルフルート30",
+      "stationCount": 1,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "已按原始写法检索，本轮未找到能够同时确认品牌身份与复用依据的 Logo 文件；不使用同名、近似拼写或经销商品牌猜测。",
+      "assetPath": null,
+      "searchQuery": "\"岡山ローレル セルフルート30\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "川崎商会新潟バイパス給油所",
+      "stationCount": 1,
+      "status": "DEALER_OR_BRANCH_REVIEW",
+      "sourceUrls": [
+        "https://www.kawasakishokai.co.jp/ss-locator/"
+      ],
+      "reason": "具体经营商和站名记录，未取得对应企业 Logo 的复用依据，不自动替换为元売标志。",
+      "assetPath": null,
+      "searchQuery": "\"川崎商会新潟バイパス給油所\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "新潟ハシモトエネルギーサンパルク中野山",
+      "stationCount": 1,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "已按原始写法检索，本轮未找到能够同时确认品牌身份与复用依据的 Logo 文件；不使用同名、近似拼写或经销商品牌猜测。",
+      "assetPath": null,
+      "searchQuery": "\"新潟ハシモトエネルギーサンパルク中野山\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "日石",
+      "stationCount": 1,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "可能是历史品牌或地区经营商简称，不能自动改为 ENEOS。",
+      "assetPath": null,
+      "searchQuery": "\"日石\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "日米石油",
+      "stationCount": 1,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://nichibeisekiyu.com/"
+      ],
+      "reason": "已检索到相关官方企业或门店资料，但本轮没有找到可用于本站的明确 Logo 复用依据，继续显示默认图标。",
+      "assetPath": null,
+      "searchQuery": "\"日米石油\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "昭和礦油",
+      "stationCount": 1,
+      "status": "PERMISSION_UNCONFIRMED",
+      "sourceUrls": [
+        "https://www.showakoyu.co.jp/company"
+      ],
+      "reason": "已检索到相关官方企业或门店资料，但本轮没有找到可用于本站的明确 Logo 复用依据，继续显示默认图标。",
+      "assetPath": null,
+      "searchQuery": "\"昭和礦油\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "有限会社佐久間商店",
+      "stationCount": 1,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "已按原始写法检索，本轮未找到能够同时确认品牌身份与复用依据的 Logo 文件；不使用同名、近似拼写或经销商品牌猜测。",
+      "assetPath": null,
+      "searchQuery": "\"有限会社佐久間商店\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "東九州石油株式会社",
+      "stationCount": 1,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "已按原始写法检索，本轮未找到能够同时确认品牌身份与复用依据的 Logo 文件；不使用同名、近似拼写或经销商品牌猜测。",
+      "assetPath": null,
+      "searchQuery": "\"東九州石油株式会社\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "東京ガス",
+      "stationCount": 1,
+      "status": "LOCAL_ASSET",
+      "identity": "tokyo-gas",
+      "assetPath": "/brands/tokyo-gas.svg",
+      "sourceUrls": [
+        "https://commons.wikimedia.org/wiki/File:Tokyo_gas_logo.svg"
+      ],
+      "reason": "精确匹配已核对的品牌别名；按文件来源页 PD-textlogo 标注接入本地素材，仅识别原始记录，商标权仍归权利人。",
+      "searchQuery": "\"東京ガス\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "株式会社イシゴウチコーポレーション 五日市船舶給油所",
+      "stationCount": 1,
+      "status": "DEALER_OR_BRANCH_REVIEW",
+      "sourceUrls": [
+        "https://ishigochi-group.com/"
+      ],
+      "reason": "经营主体与船舶给油所复合记录；官方元売关联不等于本站可使用经营商 Logo，不自动改成 ENEOS。",
+      "assetPath": null,
+      "searchQuery": "\"株式会社イシゴウチコーポレーション 五日市船舶給油所\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "楽ちんセルフ",
+      "stationCount": 1,
+      "status": "NON_BRAND_OR_GENERIC",
+      "sourceUrls": [],
+      "reason": "更接近服务描述，未确认唯一品牌与标识。",
+      "assetPath": null,
+      "searchQuery": "\"楽ちんセルフ\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "浜口石油",
+      "stationCount": 1,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "已按原始写法检索，本轮未找到能够同时确认品牌身份与复用依据的 Logo 文件；不使用同名、近似拼写或经销商品牌猜测。",
+      "assetPath": null,
+      "searchQuery": "\"浜口石油\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "海上給油所",
+      "stationCount": 1,
+      "status": "NON_BRAND_OR_GENERIC",
+      "sourceUrls": [],
+      "reason": "独立站、服务方式或设施类型等通用字段，无法分配唯一企业 Logo，保留默认加油站图标。",
+      "assetPath": null,
+      "researchGroup": "nobrand",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "白勢商事ホワイトスピリッツ　セルフ山木戸SS",
+      "stationCount": 1,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "已按原始写法检索，本轮未找到能够同时确认品牌身份与复用依据的 Logo 文件；不使用同名、近似拼写或经销商品牌猜测。",
+      "assetPath": null,
+      "searchQuery": "\"白勢商事ホワイトスピリッツ　セルフ山木戸SS\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    },
+    {
+      "originalBrand": "藤久商店スタンド",
+      "stationCount": 1,
+      "status": "IDENTITY_OR_ASSET_UNCONFIRMED",
+      "sourceUrls": [],
+      "reason": "已按原始写法检索，本轮未找到能够同时确认品牌身份与复用依据的 Logo 文件；不使用同名、近似拼写或经销商品牌猜测。",
+      "assetPath": null,
+      "searchQuery": "\"藤久商店スタンド\" ガソリンスタンド 公式 ロゴ -site:gogo.gs",
+      "checkedAt": "2026-10-01"
+    }
+  ]
+}

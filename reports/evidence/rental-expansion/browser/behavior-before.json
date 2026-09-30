@@ -1,0 +1,275 @@
+{
+  "config": {
+    "argv": [
+      "/Users/haoyuzuo/.nvm/versions/node/v24.18.0/bin/node",
+      "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/node_modules/.bin/playwright",
+      "test",
+      "tests/e2e/return-car.spec.ts",
+      "tests/e2e/rental-directory.spec.ts",
+      "--workers=2",
+      "--grep",
+      "changing region|candidate mini maps fit 390|detail return and browser back",
+      "--timeout=20000"
+    ],
+    "configFile": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/playwright.config.ts",
+    "rootDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 20000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 2,
+    "webServer": {
+      "command": "npm run preview -- --port 4173 --strictPort",
+      "url": "http://127.0.0.1:4173",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "rental-directory.spec.ts",
+      "file": "rental-directory.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "detail return and browser back restore region/company/name/page, exact card focus and scroll",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1453,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:13:34.445Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-383acbc8d25799fd617d",
+          "file": "rental-directory.spec.ts",
+          "line": 188,
+          "column": 1
+        },
+        {
+          "title": "changing region while a name is being edited cannot display results for invisible stale criteria",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 1149,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"\"\u001b[39m\nReceived: \u001b[31m\"no-rental-with-this-name-999999\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"\"\u001b[39m\nReceived: \u001b[31m\"no-rental-with-this-name-999999\"\u001b[39m\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:371:24",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                      "column": 24,
+                      "line": 371
+                    },
+                    "snippet": "  369 |   const visibleQuery = await page.locator(\"#rental-query\").inputValue();\n  370 |   const urlQuery = new URL(page.url()).searchParams.get(\"q\") ?? \"\";\n> 371 |   expect(visibleQuery).toBe(urlQuery);\n      |                        ^\n  372 |   if (visibleQuery) await expect(directory.locator(\".rental-card\")).toHaveCount(0);\n  373 | });\n  374 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                        "column": 24,
+                        "line": 371
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"\"\u001b[39m\nReceived: \u001b[31m\"no-rental-with-this-name-999999\"\u001b[39m\n\n  369 |   const visibleQuery = await page.locator(\"#rental-query\").inputValue();\n  370 |   const urlQuery = new URL(page.url()).searchParams.get(\"q\") ?? \"\";\n> 371 |   expect(visibleQuery).toBe(urlQuery);\n      |                        ^\n  372 |   if (visibleQuery) await expect(directory.locator(\".rental-card\")).toHaveCount(0);\n  373 | });\n  374 |\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:371:24"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:13:34.445Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/test-results/rental-directory-changing--ada42-or-invisible-stale-criteria/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/test-results/rental-directory-changing--ada42-or-invisible-stale-criteria/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts",
+                    "column": 24,
+                    "line": 371
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-408ec67d450bf9b0bb76",
+          "file": "rental-directory.spec.ts",
+          "line": 363,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "return-car.spec.ts",
+      "file": "return-car.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "candidate mini maps fit 390px",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 20000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 1085,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m160\u001b[39m\nReceived:    \u001b[31m110\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m160\u001b[39m\nReceived:    \u001b[31m110\u001b[39m\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts:278:58",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts",
+                      "column": 58,
+                      "line": 278
+                    },
+                    "snippet": "  276 |     return { map: box(\".station-mini-map-preview\"), details: box(\".return-candidate-details\"), attribution: box(\".station-mini-map-attribution\"), button: box(\"button\"), fits: node.scrollWidth <= node.clientWidth };\n  277 |   });\n> 278 |   expect(boxes.fits).toBe(true); expect(boxes.map.width).toBeGreaterThanOrEqual(160); expect(boxes.map.height).toBeGreaterThanOrEqual(140);\n      |                                                          ^\n  279 |   expect(boxes.button.width).toBeGreaterThanOrEqual(44); expect(boxes.button.height).toBeGreaterThanOrEqual(44); expect(boxes.attribution.height).toBeGreaterThanOrEqual(44);\n  280 |   if (width <= 600) expect(boxes.details.y).toBeGreaterThanOrEqual(boxes.attribution.bottom);\n  281 |   else expect(boxes.details.x).toBeGreaterThan(boxes.map.right);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts",
+                        "column": 58,
+                        "line": 278
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m160\u001b[39m\nReceived:    \u001b[31m110\u001b[39m\n\n  276 |     return { map: box(\".station-mini-map-preview\"), details: box(\".return-candidate-details\"), attribution: box(\".station-mini-map-attribution\"), button: box(\"button\"), fits: node.scrollWidth <= node.clientWidth };\n  277 |   });\n> 278 |   expect(boxes.fits).toBe(true); expect(boxes.map.width).toBeGreaterThanOrEqual(160); expect(boxes.map.height).toBeGreaterThanOrEqual(140);\n      |                                                          ^\n  279 |   expect(boxes.button.width).toBeGreaterThanOrEqual(44); expect(boxes.button.height).toBeGreaterThanOrEqual(44); expect(boxes.attribution.height).toBeGreaterThanOrEqual(44);\n  280 |   if (width <= 600) expect(boxes.details.y).toBeGreaterThanOrEqual(boxes.attribution.bottom);\n  281 |   else expect(boxes.details.x).toBeGreaterThan(boxes.map.right);\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts:278:58"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T21:13:36.096Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/test-results/return-car-candidate-mini-maps-fit-390px/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/test-results/return-car-candidate-mini-maps-fit-390px/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts",
+                    "column": 58,
+                    "line": 278
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-26102ebe67c0cf2de3a0",
+          "file": "return-car.spec.ts",
+          "line": 268,
+          "column": 44
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-30T21:13:33.758Z",
+    "duration": 3585.3419999999996,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,45 @@
+
+> fuel-me-japan@0.0.0 test
+> vitest run tests/unit/return-car.test.ts
+
+
+ RUN  v5.0.2 /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan
+
+ ❯ tests/unit/return-car.test.ts (35 tests | 1 failed) 19ms
+   ❯ return-car candidates (2)
+     × uses the return point for distance, excludes beyond 10km, sorts all candidates for pagination 3ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/return-car.test.ts > return-car candidates > uses the return point for distance, excludes beyond 10km, sorts all candidates for pagination
+AssertionError: expected [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ] to deeply equal [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, …(2) ]
+
+- Expected
++ Received
+
+@@ -7,8 +7,6 @@
+    6,
+    7,
+    8,
+    9,
+    10,
+-   11,
+-   12,
+  ]
+
+ ❯ tests/unit/return-car.test.ts:23:38
+     21|     const rows = Array.from({ length: 12 }, (_, i) => station(i + 1, p…
+     22|     const result = returnCandidates([...rows, station(99, 26.5)], poin…
+     23|     expect(result.map(s => s.osmId)).toEqual([1,2,3,4,5,6,7,8,9,10,11,…
+       |                                      ^
+     24|     expect(result[0].distanceKm).toBeCloseTo(0.1112, 4);
+     25|     expect(result[0]).not.toHaveProperty("priceJpy");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 34 passed (35)
+   Start at  00:27:05
+   Duration  156ms (transform 59%, import 20%, tests 19%, worker 2%)
+

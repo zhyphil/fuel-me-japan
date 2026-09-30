@@ -1,0 +1,21 @@
+import { defineConfig, devices } from "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/node_modules/@playwright/test/index.mjs";
+export default defineConfig({
+  testDir: "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+  testMatch: "return-car.spec.ts",
+  fullyParallel: true,
+  workers: 2,
+  retries: 0,
+  reporter: [["list"], ["json", { outputFile: "/tmp/fmj-return-minimaps-webkit-results.json" }]],
+  outputDir: "/tmp/fmj-return-minimaps-webkit-results",
+  use: { baseURL: "http://127.0.0.1:4175", screenshot: "only-on-failure" },
+  projects: [
+    { name: "iPhone WebKit", grepInvert: /preserve dialog wheel scrolling/, use: { ...devices["iPhone 13"], browserName: "webkit" } },
+    { name: "Desktop Safari wheel", grep: /preserve dialog wheel scrolling/, use: { ...devices["Desktop Safari"], browserName: "webkit" } },
+  ],
+  webServer: {
+    command: "npm run preview -- --port 4175 --strictPort",
+    cwd: "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan",
+    url: "http://127.0.0.1:4175",
+    reuseExistingServer: false,
+  },
+});

@@ -1,0 +1,59 @@
+
+> fuel-me-japan@0.0.0 check
+> npm run lint && npm run typecheck && npm test && npm run build && npm run test:e2e
+
+
+> fuel-me-japan@0.0.0 lint
+> eslint . --max-warnings 0
+
+
+> fuel-me-japan@0.0.0 typecheck
+> tsc --noEmit
+
+
+> fuel-me-japan@0.0.0 test
+> vitest run
+
+
+ RUN  v5.0.2 /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan
+
+ ❯ tests/unit/return-car.test.ts (35 tests | 2 failed) 22ms
+   ❯ limited rental-data provenance gate (28)
+     × accepts only the three reviewed branches with correct OSM mappings and five localized names 3ms
+     × warns at exactly 90 days with an injected clock, never rolls forward the checked date 2ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/return-car.test.ts > limited rental-data provenance gate > accepts only the three reviewed branches with correct OSM mappings and five localized names
+Error: Invalid rental schema/count/date
+ ❯ parseRentalData src/lib/return-car.ts:54:420
+
+ ❯ tests/unit/return-car.test.ts:33:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  tests/unit/return-car.test.ts > limited rental-data provenance gate > warns at exactly 90 days with an injected clock, never rolls forward the checked date
+AssertionError: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ tests/unit/return-car.test.ts:78:75
+     76|   it("warns at exactly 90 days with an injected clock, never rolls for…
+     77|     const checked = Date.parse("2026-09-30T00:00:00Z");
+     78|     expect(rentalNeedsRecheck("2026-09-30", checked + 90 * 86400000 - …
+       |                                                                           ^
+     79|     expect(rentalNeedsRecheck("2026-09-30", checked + 90 * 86400000)).…
+     80|     expect(rentalNeedsRecheck("bad", now)).toBe(true);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  1 failed | 20 passed (21)
+      Tests  2 failed | 312 passed (314)
+   Start at  00:33:06
+   Duration  708ms (transform 51%, tests 25%, import 23%, worker 1%)
+

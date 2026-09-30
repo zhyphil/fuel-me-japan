@@ -1,0 +1,14 @@
+import { defineConfig, devices } from "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/node_modules/@playwright/test/index.mjs";
+export default defineConfig({
+  testDir: "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+  testMatch: ["return-car.spec.ts", "rental-directory.spec.ts"],
+  fullyParallel: true, workers: 2, retries: 0,
+  reporter: [["list"], ["json", { outputFile: "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/reports/evidence/rental-expansion/browser/webkit-results.json" }]],
+  outputDir: "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/reports/evidence/rental-expansion/browser/webkit-artifacts",
+  use: { baseURL: "http://127.0.0.1:4175", screenshot: "only-on-failure" },
+  projects: [
+    { name: "iPhone-WebKit", grepInvert: /page wheel scrolling/, use: { ...devices["iPhone 13"], browserName: "webkit" } },
+    { name: "Desktop-WebKit", grep: /1280px|mouse hover|page wheel scrolling|cluster keyboard|detail return and browser back|same-page skip link/, use: { ...devices["Desktop Safari"], browserName: "webkit" } },
+  ],
+  webServer: { command: "npm run preview -- --port 4175 --strictPort", cwd: "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan", url: "http://127.0.0.1:4175", reuseExistingServer: false },
+});

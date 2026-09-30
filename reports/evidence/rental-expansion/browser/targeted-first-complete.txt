@@ -1,0 +1,321 @@
+
+> fuel-me-japan@0.0.0 test:e2e
+> playwright test tests/e2e/return-car.spec.ts tests/e2e/rental-directory.spec.ts --workers=2 --max-failures=12 --timeout=20000
+
+[WebServer] (node:66302) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 76 tests using 2 workers
+
+(node:66305) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:66306) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 tests/e2e/rental-directory.spec.ts:49:1 › homepage remains fuel-first and loads no national rental data until the real same-site link is followed (1.2s)
+  ✓   1 tests/e2e/rental-directory.spec.ts:71:69 › en: 320px directory combines region/company/name, resets, paginates and fits (1.6s)
+  ✓   3 tests/e2e/rental-directory.spec.ts:71:69 › en: 390px directory combines region/company/name, resets, paginates and fits (1.4s)
+  ✓   4 tests/e2e/rental-directory.spec.ts:71:69 › en: 1280px directory combines region/company/name, resets, paginates and fits (1.4s)
+  ✓   5 tests/e2e/rental-directory.spec.ts:71:69 › zh-Hant: 320px directory combines region/company/name, resets, paginates and fits (1.4s)
+  ✓   6 tests/e2e/rental-directory.spec.ts:71:69 › zh-Hant: 390px directory combines region/company/name, resets, paginates and fits (1.3s)
+  ✓   7 tests/e2e/rental-directory.spec.ts:71:69 › zh-Hant: 1280px directory combines region/company/name, resets, paginates and fits (1.5s)
+  ✓   8 tests/e2e/rental-directory.spec.ts:71:69 › ko: 320px directory combines region/company/name, resets, paginates and fits (1.3s)
+  ✓   9 tests/e2e/rental-directory.spec.ts:71:69 › ko: 390px directory combines region/company/name, resets, paginates and fits (1.3s)
+  ✓  10 tests/e2e/rental-directory.spec.ts:71:69 › ko: 1280px directory combines region/company/name, resets, paginates and fits (1.6s)
+  ✓  11 tests/e2e/rental-directory.spec.ts:71:69 › zh-Hans: 320px directory combines region/company/name, resets, paginates and fits (1.4s)
+  ✓  12 tests/e2e/rental-directory.spec.ts:71:69 › zh-Hans: 390px directory combines region/company/name, resets, paginates and fits (1.4s)
+  ✓  13 tests/e2e/rental-directory.spec.ts:71:69 › zh-Hans: 1280px directory combines region/company/name, resets, paginates and fits (1.5s)
+  ✓  14 tests/e2e/rental-directory.spec.ts:71:69 › th: 320px directory combines region/company/name, resets, paginates and fits (1.4s)
+  ✓  15 tests/e2e/rental-directory.spec.ts:71:69 › th: 390px directory combines region/company/name, resets, paginates and fits (1.4s)
+  ✓  16 tests/e2e/rental-directory.spec.ts:71:69 › th: 1280px directory combines region/company/name, resets, paginates and fits (1.5s)
+  ✓  17 tests/e2e/rental-directory.spec.ts:111:40 › NGO: official Times detail is directly addressable, refreshable and honest about the entrance (1.9s)
+  ✓  18 tests/e2e/rental-directory.spec.ts:111:40 › FUK: official Times detail is directly addressable, refreshable and honest about the entrance (1.8s)
+  ✓  19 tests/e2e/rental-directory.spec.ts:111:40 › HND: official Times detail is directly addressable, refreshable and honest about the entrance (1.8s)
+  ✓  20 tests/e2e/rental-directory.spec.ts:111:40 › KIX: official Times detail is directly addressable, refreshable and honest about the entrance (1.8s)
+  ✓  21 tests/e2e/rental-directory.spec.ts:111:40 › OKA: official Times detail is directly addressable, refreshable and honest about the entrance (1.8s)
+  ✓  22 tests/e2e/rental-directory.spec.ts:111:40 › NRT: official Times detail is directly addressable, refreshable and honest about the entrance (1.8s)
+  ✓  24 tests/e2e/rental-directory.spec.ts:146:31 › en: locale links retain detail ID/query and synchronize metadata on directory navigation (1.2s)
+  ✓  23 tests/e2e/rental-directory.spec.ts:111:40 › CTS: official Times detail is directly addressable, refreshable and honest about the entrance (1.8s)
+  ✓  25 tests/e2e/rental-directory.spec.ts:146:31 › zh-Hant: locale links retain detail ID/query and synchronize metadata on directory navigation (1.2s)
+  ✓  26 tests/e2e/rental-directory.spec.ts:146:31 › ko: locale links retain detail ID/query and synchronize metadata on directory navigation (1.2s)
+  ✓  27 tests/e2e/rental-directory.spec.ts:146:31 › zh-Hans: locale links retain detail ID/query and synchronize metadata on directory navigation (1.2s)
+  ✓  28 tests/e2e/rental-directory.spec.ts:146:31 › th: locale links retain detail ID/query and synchronize metadata on directory navigation (1.2s)
+  ✓  29 tests/e2e/rental-directory.spec.ts:169:64 › unknown or malformed detail does-not-exist has accessible not-found and a directory return (1.1s)
+  ✓  30 tests/e2e/rental-directory.spec.ts:169:64 › unknown or malformed detail %2F has accessible not-found and a directory return (1.0s)
+  ✓  32 tests/e2e/rental-directory.spec.ts:169:64 › unknown or malformed detail a/b has accessible not-found and a directory return (1.1s)
+  ✓  33 tests/e2e/rental-directory.spec.ts:180:1 › retired duplicate alias replaces the URL with its canonical ID and preserves the directory query (1.8s)
+  ✓  34 tests/e2e/rental-directory.spec.ts:188:1 › detail return and browser back restore region/company/name/page, exact card focus and scroll (1.3s)
+  ✘  31 tests/e2e/rental-directory.spec.ts:169:64 › unknown or malformed detail %E0%A4%A has accessible not-found and a directory return (5.1s)
+(node:66462) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  35 tests/e2e/rental-directory.spec.ts:210:1 › mouse hover, rapid preview changes and keyboard focus highlight the final branch without rebuilding the map (1.8s)
+  ✓  36 tests/e2e/rental-directory.spec.ts:248:1 › touch scrolling does not preview a branch; only visible thumbnail rows request tiles and old rows unload (1.3s)
+  ✓  37 tests/e2e/rental-directory.spec.ts:270:46 › directory tiles failure keeps names, links and attribution usable (1.0s)
+  ✓  38 tests/e2e/rental-directory.spec.ts:270:46 › directory provider failure keeps names, links and attribution usable (1.1s)
+  ✓  39 tests/e2e/rental-directory.spec.ts:287:1 › counter opt-in is explicit and counter detail cannot become a return destination (1.2s)
+  ✓  40 tests/e2e/rental-directory.spec.ts:299:147 › index network fails closed and retries the signed artifact (1.4s)
+  ✓  41 tests/e2e/rental-directory.spec.ts:299:147 › index same-size hash corruption fails closed and retries the signed artifact (1.6s)
+  ✓  42 tests/e2e/rental-directory.spec.ts:299:147 › index truncated bytes fails closed and retries the signed artifact (1.4s)
+  ✓  43 tests/e2e/rental-directory.spec.ts:299:147 › partition network fails closed and retries the signed artifact (1.1s)
+  ✓  44 tests/e2e/rental-directory.spec.ts:299:147 › partition same-size hash corruption fails closed and retries the signed artifact (1.1s)
+  ✓  45 tests/e2e/rental-directory.spec.ts:299:147 › partition truncated bytes fails closed and retries the signed artifact (1.1s)
+  ✓  46 tests/e2e/rental-directory.spec.ts:317:1 › leaving a pending rental detail aborts its partition and a late response cannot replace another branch (889ms)
+  ✓  47 tests/e2e/rental-directory.spec.ts:334:1 › source downloads expose all 59 manifest artifacts, every partition and original provenance (1.4s)
+  ✓  48 tests/e2e/rental-directory.spec.ts:363:1 › changing region while a name is being edited cannot display results for invisible stale criteria (945ms)
+  ✓  50 tests/e2e/return-car.spec.ts:9:1 › filters selected fuel independently, retains unknowns, and requires explicit completion before return navigation (1.8s)
+  ✘  49 tests/e2e/rental-directory.spec.ts:375:1 › cluster keyboard activation offers bounded members and clears them on filtering (8.6s)
+(node:66549) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  51 tests/e2e/return-car.spec.ts:52:31 › en: 320px detail, Japanese labels, source policy, navigation focus and mounted home map (20.1s)
+(node:66591) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  52 tests/e2e/return-car.spec.ts:52:31 › zh-Hant: 320px detail, Japanese labels, source policy, navigation focus and mounted home map (20.1s)
+(node:66611) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  53 tests/e2e/return-car.spec.ts:52:31 › ko: 320px detail, Japanese labels, source policy, navigation focus and mounted home map (20.1s)
+(node:66702) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  54 tests/e2e/return-car.spec.ts:52:31 › zh-Hans: 320px detail, Japanese labels, source policy, navigation focus and mounted home map (20.1s)
+(node:66732) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  55 tests/e2e/return-car.spec.ts:52:31 › th: 320px detail, Japanese labels, source policy, navigation focus and mounted home map (20.1s)
+(node:66766) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  57 tests/e2e/return-car.spec.ts:131:1 › late results from a previous branch cannot replace current results; leaving cancels and returning resets (1.5s)
+  ✓  58 tests/e2e/return-car.spec.ts:151:66 › rental data network is rejected and retry succeeds (1.2s)
+  ✓  59 tests/e2e/return-car.spec.ts:151:66 › rental data unapproved source is rejected and retry succeeds (1.2s)
+  ✓  60 tests/e2e/return-car.spec.ts:167:1 › station network failure supports retry with no return navigation (1.1s)
+  ✓  61 tests/e2e/return-car.spec.ts:175:1 › empty nearby records are explicit and offer a return to the fuel map (1.0s)
+  ✘  56 tests/e2e/return-car.spec.ts:101:1 › single preference seeds the flow; multiple map fuels require a choice and preserve map, filters and storage (20.1s)
+(node:66841) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  62 tests/e2e/return-car.spec.ts:183:1 › ninety-day-old sources retain their real check date and require rechecking (930ms)
+  ✓  64 tests/e2e/return-car.spec.ts:190:1 › leaving while a branch request is pending aborts it and cannot restore its address in the directory (1.1s)
+  ✓  65 tests/e2e/return-car.spec.ts:228:1 › candidate mini maps show each station, load only visible rows, and keep selection independent (1.6s)
+  ✓  66 tests/e2e/return-car.spec.ts:268:44 › candidate mini maps fit 320px (1.1s)
+  ✓  67 tests/e2e/return-car.spec.ts:268:44 › candidate mini maps fit 390px (1.1s)
+  ✓  68 tests/e2e/return-car.spec.ts:268:44 › candidate mini maps fit 768px (1.1s)
+  ✓  63 tests/e2e/return-car.spec.ts:207:1 › all seven shipped branches load real station candidates and keep every return destination distinct (6.5s)
+  ✓  69 tests/e2e/return-car.spec.ts:268:44 › candidate mini maps fit 1280px (1.2s)
+  ✓  70 tests/e2e/return-car.spec.ts:288:1 › candidate mini maps preserve page wheel scrolling (1.2s)
+  ✓  71 tests/e2e/return-car.spec.ts:301:46 › candidate mini maps tolerate tiles failure without blocking station selection (1.0s)
+  ✓  72 tests/e2e/return-car.spec.ts:301:46 › candidate mini maps tolerate provider failure without blocking station selection (1.0s)
+  ✓  73 tests/e2e/return-car.spec.ts:316:1 › pending fuel change and explicit cancellation abort stale requests without changing persisted preferences (1.1s)
+  ✓  74 tests/e2e/return-car.spec.ts:335:1 › 10km search caps at ten, excludes known NO and retains UNKNOWN (930ms)
+  ✓  75 tests/e2e/return-car.spec.ts:344:1 › ordinary non-Times candidates require reservation-address confirmation and never inherit Times rules (1.1s)
+  ✓  76 tests/e2e/return-car.spec.ts:365:1 › station integrity failure is fail-closed and retry keeps the real manifest hash check (1.0s)
+
+
+  1) tests/e2e/rental-directory.spec.ts:169:64 › unknown or malformed detail %E0%A4%A has accessible not-found and a directory return 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('status').filter({ has: getByRole('heading', { name: 'Rental location not found' }) })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('status').filter({ has: getByRole('heading', { name: 'Rental location not found' }) }) with timeout 5000ms
+      - waiting for getByRole('status').filter({ has: getByRole('heading', { name: 'Rental location not found' }) })
+
+
+      170 |   await rentalFixtures(page); const errors = watchPageErrors(page);
+      171 |   await page.goto(`/en/return-car/${id}/`);
+    > 172 |   await expect(page.getByRole("status").filter({ has: page.getByRole("heading", { name: messages.en.rdNotFound }) })).toBeVisible();
+          |                                                                                                                       ^
+      173 |   await expect(page.locator("#return-fuel, .return-navigation")).toHaveCount(0);
+      174 |   await expect(page.locator("#prefecture")).toHaveCount(0);
+      175 |   await metadata(page, "en", `/en/return-car/${id}/`);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:172:119
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/rental-directory-unknown-o-7425c-ound-and-a-directory-return/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/rental-directory-unknown-o-7425c-ound-and-a-directory-return/error-context.md
+
+  2) tests/e2e/rental-directory.spec.ts:375:1 › cluster keyboard activation offers bounded members and clears them on filtering 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  getByTestId('rental-directory').locator('.rental-card')
+    Expected: 1
+    Received: 20
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" getByTestId('rental-directory').locator('.rental-card') with timeout 5000ms
+      - waiting for getByTestId('rental-directory').locator('.rental-card')
+        14 × locator resolved to 20 elements
+           - unexpected value "20"
+
+
+      388 |   expect(await members.locator("li").count()).toBeGreaterThan(20); expect(await members.locator("li").count()).toBeLessThanOrEqual(40);
+      389 |   await search(page, "OKA"); await expect(members).toHaveCount(0);
+    > 390 |   await expect(directory.locator(".rental-card")).toHaveCount(1);
+          |                                                   ^
+      391 |   expect(await instance!.evaluate(node => node.isConnected)).toBe(true);
+      392 | });
+      393 |
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-directory.spec.ts:390:51
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/rental-directory-cluster-k-ceda9-nd-clears-them-on-filtering/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/rental-directory-cluster-k-ceda9-nd-clears-them-on-filtering/error-context.md
+
+  3) tests/e2e/return-car.spec.ts:52:31 › en: 320px detail, Japanese labels, source policy, navigation focus and mounted home map 
+
+    Test timeout of 20000ms exceeded.
+
+    Error: locator.click: Test timeout of 20000ms exceeded.
+    Call log:
+      - waiting for locator('[id="rental-card-times-naha-airport"]')
+
+
+      61 |   await expect(page.getByTestId("rental-directory")).toBeVisible();
+      62 |   await page.locator("#rental-query").fill("OKA"); await page.getByRole("button", { name: t.rdSearch, exact: true }).click();
+    > 63 |   await page.locator(`[id="rental-card-${naha.id}"]`).click();
+         |                                                       ^
+      64 |   const detail = page.getByTestId("rental-detail");
+      65 |   await expect(detail.locator(".return-candidates h4")).toHaveCount(3);
+      66 |   await expect(detail.locator(".station-mini-map-preview")).toHaveCount(3);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts:63:55
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/return-car-en-320px-detail-d7dbf--focus-and-mounted-home-map/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/return-car-en-320px-detail-d7dbf--focus-and-mounted-home-map/error-context.md
+
+  4) tests/e2e/return-car.spec.ts:52:31 › zh-Hant: 320px detail, Japanese labels, source policy, navigation focus and mounted home map 
+
+    Test timeout of 20000ms exceeded.
+
+    Error: locator.click: Test timeout of 20000ms exceeded.
+    Call log:
+      - waiting for locator('[id="rental-card-times-naha-airport"]')
+
+
+      61 |   await expect(page.getByTestId("rental-directory")).toBeVisible();
+      62 |   await page.locator("#rental-query").fill("OKA"); await page.getByRole("button", { name: t.rdSearch, exact: true }).click();
+    > 63 |   await page.locator(`[id="rental-card-${naha.id}"]`).click();
+         |                                                       ^
+      64 |   const detail = page.getByTestId("rental-detail");
+      65 |   await expect(detail.locator(".return-candidates h4")).toHaveCount(3);
+      66 |   await expect(detail.locator(".station-mini-map-preview")).toHaveCount(3);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts:63:55
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/return-car-zh-Hant-320px-d-2b495--focus-and-mounted-home-map/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/return-car-zh-Hant-320px-d-2b495--focus-and-mounted-home-map/error-context.md
+
+  5) tests/e2e/return-car.spec.ts:52:31 › ko: 320px detail, Japanese labels, source policy, navigation focus and mounted home map 
+
+    Test timeout of 20000ms exceeded.
+
+    Error: locator.click: Test timeout of 20000ms exceeded.
+    Call log:
+      - waiting for locator('[id="rental-card-times-naha-airport"]')
+
+
+      61 |   await expect(page.getByTestId("rental-directory")).toBeVisible();
+      62 |   await page.locator("#rental-query").fill("OKA"); await page.getByRole("button", { name: t.rdSearch, exact: true }).click();
+    > 63 |   await page.locator(`[id="rental-card-${naha.id}"]`).click();
+         |                                                       ^
+      64 |   const detail = page.getByTestId("rental-detail");
+      65 |   await expect(detail.locator(".return-candidates h4")).toHaveCount(3);
+      66 |   await expect(detail.locator(".station-mini-map-preview")).toHaveCount(3);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts:63:55
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/return-car-ko-320px-detail-a6f95--focus-and-mounted-home-map/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/return-car-ko-320px-detail-a6f95--focus-and-mounted-home-map/error-context.md
+
+  6) tests/e2e/return-car.spec.ts:52:31 › zh-Hans: 320px detail, Japanese labels, source policy, navigation focus and mounted home map 
+
+    Test timeout of 20000ms exceeded.
+
+    Error: locator.click: Test timeout of 20000ms exceeded.
+    Call log:
+      - waiting for locator('[id="rental-card-times-naha-airport"]')
+
+
+      61 |   await expect(page.getByTestId("rental-directory")).toBeVisible();
+      62 |   await page.locator("#rental-query").fill("OKA"); await page.getByRole("button", { name: t.rdSearch, exact: true }).click();
+    > 63 |   await page.locator(`[id="rental-card-${naha.id}"]`).click();
+         |                                                       ^
+      64 |   const detail = page.getByTestId("rental-detail");
+      65 |   await expect(detail.locator(".return-candidates h4")).toHaveCount(3);
+      66 |   await expect(detail.locator(".station-mini-map-preview")).toHaveCount(3);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts:63:55
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/return-car-zh-Hans-320px-d-57740--focus-and-mounted-home-map/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/return-car-zh-Hans-320px-d-57740--focus-and-mounted-home-map/error-context.md
+
+  7) tests/e2e/return-car.spec.ts:52:31 › th: 320px detail, Japanese labels, source policy, navigation focus and mounted home map 
+
+    Test timeout of 20000ms exceeded.
+
+    Error: locator.click: Test timeout of 20000ms exceeded.
+    Call log:
+      - waiting for locator('[id="rental-card-times-naha-airport"]')
+
+
+      61 |   await expect(page.getByTestId("rental-directory")).toBeVisible();
+      62 |   await page.locator("#rental-query").fill("OKA"); await page.getByRole("button", { name: t.rdSearch, exact: true }).click();
+    > 63 |   await page.locator(`[id="rental-card-${naha.id}"]`).click();
+         |                                                       ^
+      64 |   const detail = page.getByTestId("rental-detail");
+      65 |   await expect(detail.locator(".return-candidates h4")).toHaveCount(3);
+      66 |   await expect(detail.locator(".station-mini-map-preview")).toHaveCount(3);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts:63:55
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/return-car-th-320px-detail-87545--focus-and-mounted-home-map/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/return-car-th-320px-detail-87545--focus-and-mounted-home-map/error-context.md
+
+  8) tests/e2e/return-car.spec.ts:101:1 › single preference seeds the flow; multiple map fuels require a choice and preserve map, filters and storage 
+
+    Test timeout of 20000ms exceeded.
+
+    Error: locator.click: Test timeout of 20000ms exceeded.
+    Call log:
+      - waiting for locator('[id="rental-card-times-naha-airport"]')
+
+
+      105 |   await page.locator("#return-car-link").click();
+      106 |   await page.locator("#rental-query").fill("OKA"); await page.getByRole("button", { name: messages.en.rdSearch, exact: true }).click();
+    > 107 |   await page.locator(`[id="rental-card-${naha.id}"]`).click();
+          |                                                       ^
+      108 |   await expect(page.locator("#return-fuel")).toHaveValue("DIESEL");
+      109 |   await page.getByRole("link", { name: messages.en.rdBackFuel, exact: true }).click();
+      110 |   await page.locator("#prefecture").selectOption("JP-47");
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts:107:55
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/return-car-single-preferen-731cb-rve-map-filters-and-storage/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/return-car-single-preferen-731cb-rve-map-filters-and-storage/error-context.md
+
+  8 failed
+    tests/e2e/rental-directory.spec.ts:169:64 › unknown or malformed detail %E0%A4%A has accessible not-found and a directory return 
+    tests/e2e/rental-directory.spec.ts:375:1 › cluster keyboard activation offers bounded members and clears them on filtering 
+    tests/e2e/return-car.spec.ts:52:31 › en: 320px detail, Japanese labels, source policy, navigation focus and mounted home map 
+    tests/e2e/return-car.spec.ts:52:31 › zh-Hant: 320px detail, Japanese labels, source policy, navigation focus and mounted home map 
+    tests/e2e/return-car.spec.ts:52:31 › ko: 320px detail, Japanese labels, source policy, navigation focus and mounted home map 
+    tests/e2e/return-car.spec.ts:52:31 › zh-Hans: 320px detail, Japanese labels, source policy, navigation focus and mounted home map 
+    tests/e2e/return-car.spec.ts:52:31 › th: 320px detail, Japanese labels, source policy, navigation focus and mounted home map 
+    tests/e2e/return-car.spec.ts:101:1 › single preference seeds the flow; multiple map fuels require a choice and preserve map, filters and storage 
+  68 passed (2.0m)

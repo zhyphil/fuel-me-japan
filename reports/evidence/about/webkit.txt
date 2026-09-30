@@ -1,0 +1,25 @@
+
+Running 12 tests using 2 workers
+
+(node:5569) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:5568) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 [About-iPhone-WebKit] › tests/e2e/about.spec.ts:5:3 › en 320px: About renders accurate project information, contact email and localized navigation (703ms)
+  ✓   1 [About-iPhone-WebKit] › tests/e2e/about.spec.ts:5:3 › zh-Hant 320px: About renders accurate project information, contact email and localized navigation (706ms)
+  ✓   3 [About-iPhone-WebKit] › tests/e2e/about.spec.ts:5:3 › ko 320px: About renders accurate project information, contact email and localized navigation (405ms)
+  ✓   4 [About-iPhone-WebKit] › tests/e2e/about.spec.ts:5:3 › zh-Hans 320px: About renders accurate project information, contact email and localized navigation (492ms)
+  ✓   5 [About-iPhone-WebKit] › tests/e2e/about.spec.ts:5:3 › th 320px: About renders accurate project information, contact email and localized navigation (393ms)
+  ✓   6 [About-iPhone-WebKit] › tests/e2e/about.spec.ts:69:1 › About remains useful without JavaScript and links to the guide (449ms)
+(node:5600) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:5603) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   7 [About-Desktop-WebKit] › tests/e2e/about.spec.ts:5:3 › en 1280px: About renders accurate project information, contact email and localized navigation (516ms)
+  ✓   8 [About-Desktop-WebKit] › tests/e2e/about.spec.ts:5:3 › zh-Hant 1280px: About renders accurate project information, contact email and localized navigation (501ms)
+  ✓   9 [About-Desktop-WebKit] › tests/e2e/about.spec.ts:5:3 › ko 1280px: About renders accurate project information, contact email and localized navigation (438ms)
+  ✓  10 [About-Desktop-WebKit] › tests/e2e/about.spec.ts:5:3 › zh-Hans 1280px: About renders accurate project information, contact email and localized navigation (487ms)
+  ✓  11 [About-Desktop-WebKit] › tests/e2e/about.spec.ts:5:3 › th 1280px: About renders accurate project information, contact email and localized navigation (407ms)
+  ✓  12 [About-Desktop-WebKit] › tests/e2e/about.spec.ts:53:1 › About is reachable from the header and preserves the user's map settings on return (510ms)
+
+  12 passed (4.1s)

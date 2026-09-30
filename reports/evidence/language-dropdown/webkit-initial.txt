@@ -1,0 +1,132 @@
+
+Running 9 tests using 2 workers
+
+(node:7805) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:7806) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 [Language-iPhone-WebKit] › tests/e2e/foundation.spec.ts:9:3 › mobile switching and reload: en (890ms)
+  ✓  1 [Language-iPhone-WebKit] › tests/e2e/foundation.spec.ts:9:3 › mobile switching and reload: zh-Hant (911ms)
+  ✓  3 [Language-iPhone-WebKit] › tests/e2e/foundation.spec.ts:9:3 › mobile switching and reload: ko (607ms)
+  ✓  4 [Language-iPhone-WebKit] › tests/e2e/foundation.spec.ts:9:3 › mobile switching and reload: zh-Hans (598ms)
+  ✘  6 [Language-iPhone-WebKit] › tests/e2e/foundation.spec.ts:81:1 › localized static HTML is useful without JavaScript (146ms)
+(node:7842) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  5 [Language-iPhone-WebKit] › tests/e2e/foundation.spec.ts:9:3 › mobile switching and reload: th (645ms)
+(node:7853) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  8 [Language-Desktop-WebKit] › tests/e2e/foundation.spec.ts:81:1 › localized static HTML is useful without JavaScript (304ms)
+(node:7866) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  7 [Language-iPhone-WebKit] › tests/e2e/foundation.spec.ts:202:34 › language dropdown 320px: compact globe, keyboard and dismissal (5.4s)
+  ✘  9 [Language-Desktop-WebKit] › tests/e2e/foundation.spec.ts:202:34 › language dropdown 1280px: compact globe, keyboard and dismissal (5.4s)
+
+
+  1) [Language-iPhone-WebKit] › tests/e2e/foundation.spec.ts:81:1 › localized static HTML is useful without JavaScript 
+
+    Error: page.goto: Could not connect to the server.
+    Call log:
+      - navigating to "http://127.0.0.1:4173/ko/", waiting until "load"
+
+
+      85 |   await interceptExternal(context);
+      86 |   const page = await context.newPage();
+    > 87 |   await page.goto(
+         |              ^
+      88 |     `${process.env.SMOKE_BASE_URL ?? "http://127.0.0.1:4173"}/ko/`,
+      89 |   );
+      90 |   await expect(page.getByRole("heading", { level: 1 })).toContainText(
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/foundation.spec.ts:87:14
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-language-webkit-artifacts/foundation-localized-stati-5fdd9-s-useful-without-JavaScript-Language-iPhone-WebKit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-language-webkit-artifacts/foundation-localized-stati-5fdd9-s-useful-without-JavaScript-Language-iPhone-WebKit/error-context.md
+
+  2) [Language-iPhone-WebKit] › tests/e2e/foundation.spec.ts:202:34 › language dropdown 320px: compact globe, keyboard and dismissal 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator: locator('.locale-switcher details').getByRole('link', { name: 'English', exact: true })
+    Expected: focused
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeFocused" locator('.locale-switcher details').getByRole('link', { name: 'English', exact: true }) with timeout 5000ms
+      - waiting for locator('.locale-switcher details').getByRole('link', { name: 'English', exact: true })
+
+
+      217 |   await expect(menu.getByRole("link")).toHaveText(["English", "繁體中文", "한국어", "简体中文", "ไทย"]);
+      218 |   await page.keyboard.press("Tab");
+    > 219 |   await expect(menu.getByRole("link", { name: "English", exact: true })).toBeFocused();
+          |                                                                          ^
+      220 |   const dropdown = await menu.locator(".locale-menu").boundingBox();
+      221 |   expect(dropdown!.x).toBeGreaterThanOrEqual(0); expect(dropdown!.x + dropdown!.width).toBeLessThanOrEqual(width);
+      222 |   expect(await menu.locator('a[lang="en"]').evaluate(node => {
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/foundation.spec.ts:219:74
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-language-webkit-artifacts/foundation-language-dropdo-8d958-lobe-keyboard-and-dismissal-Language-iPhone-WebKit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-language-webkit-artifacts/foundation-language-dropdo-8d958-lobe-keyboard-and-dismissal-Language-iPhone-WebKit/error-context.md
+
+  3) [Language-Desktop-WebKit] › tests/e2e/foundation.spec.ts:81:1 › localized static HTML is useful without JavaScript 
+
+    Error: page.goto: Could not connect to the server.
+    Call log:
+      - navigating to "http://127.0.0.1:4173/ko/", waiting until "load"
+
+
+      85 |   await interceptExternal(context);
+      86 |   const page = await context.newPage();
+    > 87 |   await page.goto(
+         |              ^
+      88 |     `${process.env.SMOKE_BASE_URL ?? "http://127.0.0.1:4173"}/ko/`,
+      89 |   );
+      90 |   await expect(page.getByRole("heading", { level: 1 })).toContainText(
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/foundation.spec.ts:87:14
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-language-webkit-artifacts/foundation-localized-stati-5fdd9-s-useful-without-JavaScript-Language-Desktop-WebKit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-language-webkit-artifacts/foundation-localized-stati-5fdd9-s-useful-without-JavaScript-Language-Desktop-WebKit/error-context.md
+
+  4) [Language-Desktop-WebKit] › tests/e2e/foundation.spec.ts:202:34 › language dropdown 1280px: compact globe, keyboard and dismissal 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator: locator('.locale-switcher details').getByRole('link', { name: 'English', exact: true })
+    Expected: focused
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeFocused" locator('.locale-switcher details').getByRole('link', { name: 'English', exact: true }) with timeout 5000ms
+      - waiting for locator('.locale-switcher details').getByRole('link', { name: 'English', exact: true })
+
+
+      217 |   await expect(menu.getByRole("link")).toHaveText(["English", "繁體中文", "한국어", "简体中文", "ไทย"]);
+      218 |   await page.keyboard.press("Tab");
+    > 219 |   await expect(menu.getByRole("link", { name: "English", exact: true })).toBeFocused();
+          |                                                                          ^
+      220 |   const dropdown = await menu.locator(".locale-menu").boundingBox();
+      221 |   expect(dropdown!.x).toBeGreaterThanOrEqual(0); expect(dropdown!.x + dropdown!.width).toBeLessThanOrEqual(width);
+      222 |   expect(await menu.locator('a[lang="en"]').evaluate(node => {
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/foundation.spec.ts:219:74
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-language-webkit-artifacts/foundation-language-dropdo-40162-lobe-keyboard-and-dismissal-Language-Desktop-WebKit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-language-webkit-artifacts/foundation-language-dropdo-40162-lobe-keyboard-and-dismissal-Language-Desktop-WebKit/error-context.md
+
+  4 failed
+    [Language-iPhone-WebKit] › tests/e2e/foundation.spec.ts:81:1 › localized static HTML is useful without JavaScript 
+    [Language-iPhone-WebKit] › tests/e2e/foundation.spec.ts:202:34 › language dropdown 320px: compact globe, keyboard and dismissal 
+    [Language-Desktop-WebKit] › tests/e2e/foundation.spec.ts:81:1 › localized static HTML is useful without JavaScript 
+    [Language-Desktop-WebKit] › tests/e2e/foundation.spec.ts:202:34 › language dropdown 1280px: compact globe, keyboard and dismissal 
+  5 passed (9.0s)

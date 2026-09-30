@@ -1,0 +1,45 @@
+
+> fuel-me-japan@0.0.0 test:e2e
+> playwright test tests/e2e/return-candidate-browser.spec.ts --grep paginate all
+
+
+Running 1 test using 1 worker
+
+(node:90831) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/return-candidate-browser.spec.ts:6:1 › return candidates paginate all nearby stations with direct page entry and preserve explicit selection (6.2s)
+
+
+  1) tests/e2e/return-candidate-browser.spec.ts:6:1 › return candidates paginate all nearby stations with direct page entry and preserve explicit selection 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  getByTestId('rental-detail').locator('.return-candidates > li')
+    Expected: 25
+    Received: 10
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" getByTestId('rental-detail').locator('.return-candidates > li') with timeout 5000ms
+      - waiting for getByTestId('rental-detail').locator('.return-candidates > li')
+        14 × locator resolved to 10 elements
+           - unexpected value "10"
+
+
+       8 |   const errors = watchPageErrors(page); const detail = await openDetail(page);
+       9 |   const cards = detail.locator(".return-candidates > li"); const size = detail.locator("#return-page-size"); const number = detail.locator("#return-page-number");
+    > 10 |   await expect(cards).toHaveCount(25); await expect(size).toHaveValue("25");
+         |                       ^
+      11 |   await expect(size.locator("option")).toHaveText(["10", "25", "50", "100"]);
+      12 |   const storage = await storageSnapshot(page);
+      13 |   const initialHeight = await detail.locator(".return-candidate-browser").evaluate(node => node.getBoundingClientRect().height);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-candidate-browser.spec.ts:10:23
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/return-candidate-browser-r-fde8a-preserve-explicit-selection/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/return-candidate-browser-r-fde8a-preserve-explicit-selection/error-context.md
+
+  1 failed
+    tests/e2e/return-candidate-browser.spec.ts:6:1 › return candidates paginate all nearby stations with direct page entry and preserve explicit selection 

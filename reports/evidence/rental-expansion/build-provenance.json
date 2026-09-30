@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "milestone": "M0.1",
+  "builtAt": "2026-09-30T21:38:52.442Z",
+  "transformationVersion": "m01-data-v2",
+  "sourceRegistry": {
+    "bytes": 5783,
+    "path": "/data/registry/3ad895fc107a0ce9.json",
+    "sha256": "3ad895fc107a0ce94271817df97de8f6de23c43e8a222b1a594a37a5f6459a5b"
+  },
+  "dataManifest": {
+    "path": "/data/manifest.json",
+    "sha256": "334ce4620b9e85751876aa427b0d958eb8410d89af0bfb4fa488b2737869693d"
+  },
+  "ingestedSources": [
+    {
+      "fetchedAt": "2026-09-30T08:07:46.820150+00:00",
+      "inputSha256": "c083bcad49fa77462f8f3c5cb5f4fda5f346f6f69f45075c61b71b4ac199ecdd",
+      "sourceId": "geofabrik",
+      "sourceUpdatedAt": "2026-09-29T20:22:51Z",
+      "sourceUrl": "https://download.geofabrik.de/asia/japan-260929.osm.pbf",
+      "transformationVersion": "m01-data-v2"
+    },
+    {
+      "fetchedAt": "2026-09-30T08:17:27.371596+00:00",
+      "inputSha256": "909d32f785bc09ab418b35dd5288e2536bb3f615240c4a4e06204b78de76a175",
+      "sourceId": "meti-prices",
+      "sourceUpdatedAt": "2026-09-30",
+      "sourceUrl": "https://www.enecho.meti.go.jp/statistics/petroleum_and_lpgas/pl007/xlsx/260930.xlsx",
+      "transformationVersion": "m01-data-v2"
+    },
+    {
+      "fetchedAt": "2026-09-30T08:07:46.820150+00:00",
+      "inputSha256": "c083bcad49fa77462f8f3c5cb5f4fda5f346f6f69f45075c61b71b4ac199ecdd",
+      "sourceId": "osm",
+      "sourceUpdatedAt": "2026-09-29T20:22:51Z",
+      "sourceUrl": "https://download.geofabrik.de/asia/japan-260929.osm.pbf",
+      "transformationVersion": "m01-data-v2"
+    }
+  ],
+  "stationCount": 16454,
+  "priceRecordCount": 141,
+  "fieldGuides": {
+    "refuel": {
+      "path": "/field-guides/refuel-sources.json",
+      "sha256": "d79a9b938a423175fe3168bcf760994b205d0e08bf8ec892de5ee720af150c34",
+      "reviewDate": "2026-09-30",
+      "transformationVersion": "field-guide-m03-1"
+    }
+  },
+  "rentalLocations": {
+    "path": "/data/rental/nationwide/manifest.json",
+    "sha256": "12966bc46700289ca56817c9249f62cfbb81958044ad12a9e93f471dfd80a463",
+    "count": 7385,
+    "reviewDate": "2026-09-30",
+    "transformationVersion": "rental-v1",
+    "version": "rental-v1-1b43cbc1f43d95a5",
+    "sourceIds": [
+      "osm",
+      "overture",
+      "times-official"
+    ],
+    "counterCount": 32,
+    "officialFacilityCount": 7,
+    "reviewedAirports": [
+      "CTS",
+      "FUK",
+      "HND",
+      "KIX",
+      "NGO",
+      "NRT",
+      "OKA"
+    ],
+    "note": "全国候选库；7机场各核对1家Times设施，非完整覆盖或公司整库授权；全部车辆入口未现场核实。"
+  },
+  "surveyDate": "2026-09-28",
+  "publishedAt": "2026-09-30",
+  "note": "OSM 覆盖不完整；官方都道府县参考价与站点数据分开存储。没有站点即时报价。导入器不执行定时调度或部署。"
+}

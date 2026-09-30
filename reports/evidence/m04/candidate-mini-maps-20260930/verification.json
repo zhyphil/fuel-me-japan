@@ -1,0 +1,53 @@
+{
+  "date": "2026-09-30",
+  "status": "PASS",
+  "scope": "还车加油候选列表逐站小地图",
+  "baseRevision": "9c8151de6a2bb56372eb3698efecbdba986e8b85",
+  "workingTreeChanges": true,
+  "checks": {
+    "npm run check": {
+      "exitCode": 0,
+      "lint": "PASS",
+      "typecheck": "PASS",
+      "unitTests": 248,
+      "build": "PASS",
+      "chromiumBrowserTests": 204
+    },
+    "webkit": {
+      "exitCode": 0,
+      "iPhoneSimulationTests": 22,
+      "desktopWheelTests": 1,
+      "skipped": 0
+    },
+    "initialRegression": {
+      "exitCode": 1,
+      "reason": "修改前候选列表没有小地图，预期 3 个、实际 0 个。"
+    },
+    "initialWebkitAttempt": {
+      "exitCode": 1,
+      "reason": "手机 WebKit 模拟器不支持合成鼠标滚轮；随后将布局与滚轮拆开，手机验证布局、桌面验证滚轮，全部通过。"
+    },
+    "localPreview": {
+      "url": "http://127.0.0.1:4174/zh-Hans/",
+      "result": "已查看那霸门店的真实候选、小地图底图和水滴标记，并保留预览页面。"
+    }
+  },
+  "limitations": [
+    "自动化底图使用灰色离线测试图片；local-live-preview.png 单独记录本地浏览器实际底图。",
+    "WebKit 为浏览器模拟，未进行实体 iPhone 触摸滑动测试。",
+    "本次为本地工作区改动，未提交、推送或部署。"
+  ],
+  "sourceSha256": {
+    "src/App.tsx": "5ab32fa4c2bb7e4eb247f982377f5e51a9001eeac430a0f814885be817a4a103",
+    "src/components/FindFuel.tsx": "72ace9c0e26e1d08f6aed4991526c142486f8ebd753c1a07964f5d1de023a2de",
+    "src/components/ReturnCar.tsx": "b05500bae542e5999d09aa61a7a9ecd0014f8390fbdd9b1757f96d9230d51d28",
+    "src/components/StationMiniMap.tsx": "4b8d10435cfaa91db7e0dcf1f49b65c4e5a6c2ab5cb04610a5e3589d2f3b07f5",
+    "src/locales/en.json": "1cf63e60ef93aadecbf6ff4253a73c89f703cf3c5d5a0e211a965e78325f22d2",
+    "src/locales/ko.json": "acd451aa714dcf3987409a16909f8677306c12987e6ce134fef101109337670f",
+    "src/locales/th.json": "f79d735c9f2294f2b0b00bb3d02186627663b072b1e0016da512f7af39193e2d",
+    "src/locales/zh-Hans.json": "e53c336e1f40e062000b48a6b376bd39344f48284de6a62851563adbce3e8d2c",
+    "src/locales/zh-Hant.json": "d0131d7d51cb65a5c1994c87c1fb5f191ff16d3db668dccc56f5c74f5c2ef7b5",
+    "src/styles.css": "714fc836d322a2bf835e0fbe8f029ff5c23dd8c28e6b1b08672d3e5bbd67c25b",
+    "tests/e2e/return-car.spec.ts": "95708d58ab40af4ab2044178d6d07714aaa3f959e97670fbb9e54a9223d025d2"
+  }
+}

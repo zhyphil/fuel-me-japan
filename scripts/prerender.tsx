@@ -6,13 +6,27 @@ import { createHash } from "node:crypto";
 import { parseDataManifest, parseStationFile, parsePriceFile, type Artifact } from "../src/lib/stations";
 import { validateRegistry } from "../src/lib/source-registry";
 import { fieldGuideProvenance, validateFieldGuideSources, validateGuideMessages } from "../src/lib/field-guide";
-import { parseRentalData, rentalDataUrl } from "../src/lib/return-car";
+import { parseManifest as parseRentalManifest, parseIndex as parseRentalIndex, parsePartition as parseRentalPartition, rentalManifestUrl } from "../src/lib/rental";
+import { parseRoute } from "../src/lib/routes";
 
-const rentalBytes = await readFile(`dist${rentalDataUrl}`);
-const rentalData = parseRentalData(JSON.parse(rentalBytes.toString("utf8")));
-await readFile(`dist${rentalData.osm.noticeUrl}`, "utf8");
-for (const locale of locales) for (const row of rentalData.records) {
-  if (!messages[locale][row.nameKey]?.trim()) throw new Error(`还车门店缺少本地化名称：${locale}/${row.id}`);
+const rentalBytes = await readFile(`dist${rentalManifestUrl}`);
+const rentalManifest = parseRentalManifest(JSON.parse(rentalBytes.toString("utf8")));
+const rentalArtifacts = new Map<string, Buffer>();
+for (const artifact of rentalManifest.downloads) {
+  const bytes = await readFile(`dist${artifact.url}`);
+  if (bytes.length !== artifact.bytes || createHash("sha256").update(bytes).digest("hex") !== artifact.sha256) throw new Error(`租车数据文件校验失败：${artifact.url}`);
+  rentalArtifacts.set(artifact.url, bytes);
+}
+const rentalIndex = parseRentalIndex(JSON.parse(rentalArtifacts.get(rentalManifest.index.url)!.toString("utf8")), rentalManifest);
+const rentalIds = new Set<string>();
+for (const partition of rentalManifest.partitions) {
+  const data = parseRentalPartition(JSON.parse(rentalArtifacts.get(partition.url)!.toString("utf8")), rentalManifest, rentalIndex);
+  for (const row of data.records) { if (rentalIds.has(row.id)) throw new Error(`租车门店跨分区重复：${row.id}`); rentalIds.add(row.id); }
+}
+if (rentalIds.size !== rentalManifest.count) throw new Error("全国租车数据总数不符");
+const reviewedRentals = rentalIndex.records.filter(row => row.verification === "OFFICIAL_FACILITY_CHECKED");
+for (const locale of locales) for (const row of reviewedRentals) {
+  if (!messages[locale][`rental.airport.${row.airportCode!}`]?.trim()) throw new Error(`还车机场缺少本地化摘要：${locale}/${row.id}`);
 }
 
 const guideSourceBytes = await readFile("dist/field-guides/refuel-sources.json");
@@ -57,29 +71,39 @@ const escape = (value: string) =>
         char
       ]!,
   );
-function render(locale: Locale) {
+function render(locale: Locale, kind: "home" | "directory" | "guide" | "about" = "home") {
+  const suffix = { home: "", directory: "return-car/", guide: "refuel-guide/", about: "about/" }[kind];
+  const routePath = `/${locale}/${suffix}`;
+  const title = kind === "home" ? messages[locale].pageTitle : `${kind === "guide" ? messages[locale].rgTitle : kind === "about" ? messages[locale].aboutTitle : messages[locale].rdTitle} | Fuel Me Japan`;
+  const description = kind === "home" ? messages[locale].description : kind === "guide" ? messages[locale].rgIntro : kind === "about" ? messages[locale].aboutIntro : messages[locale].rdIntro;
   return shell
     .replace('<html lang="en">', `<html lang="${locale}">`)
     .replace(
       /<title>.*?<\/title>/,
-      `<title>${escape(messages[locale].pageTitle)}</title>`,
+      `<title>${escape(title)}</title>`,
     )
     .replace(
       /<meta\s+name="description"\s+content="[^"]*"\s*\/?>/,
-      `<meta name="description" content="${escape(messages[locale].description)}" />`,
+      `<meta name="description" content="${escape(description)}" />`,
     )
     .replace(
       "</head>",
-      `<link rel="canonical" href="${siteOrigin}/${locale}/" />\n${locales.map((language) => `<link rel="alternate" hreflang="${language}" href="${siteOrigin}/${language}/" />`).join("\n")}<link rel="alternate" hreflang="x-default" href="${siteOrigin}/en/" /></head>`,
+      `<link rel="canonical" href="${siteOrigin}${routePath}" />\n${locales.map((language) => `<link rel="alternate" hreflang="${language}" href="${siteOrigin}/${language}/${suffix}" />`).join("\n")}<link rel="alternate" hreflang="x-default" href="${siteOrigin}/en/${suffix}" /></head>`,
     )
     .replace(
       '<div id="root"></div>',
-      `<div id="root">${renderToString(<App locale={locale} />)}</div>`,
+      `<div id="root">${renderToString(<App locale={locale} initialRoute={parseRoute(routePath)} rentalShell={kind === "directory"} />)}</div>`,
     );
 }
 for (const locale of locales) {
   await mkdir(`dist/${locale}`, { recursive: true });
   await writeFile(`dist/${locale}/index.html`, render(locale));
+  await mkdir(`dist/${locale}/return-car`, { recursive: true });
+  await writeFile(`dist/${locale}/return-car/index.html`, render(locale, "directory"));
+  await mkdir(`dist/${locale}/refuel-guide`, { recursive: true });
+  await writeFile(`dist/${locale}/refuel-guide/index.html`, render(locale, "guide"));
+  await mkdir(`dist/${locale}/about`, { recursive: true });
+  await writeFile(`dist/${locale}/about/index.html`, render(locale, "about"));
 }
 await writeFile("dist/index.html", render("en"));
 await writeFile(
@@ -96,7 +120,7 @@ await writeFile(
       stationCount: manifest.stations.count,
       priceRecordCount: manifest.prices.count,
       fieldGuides: { refuel: { path: "/field-guides/refuel-sources.json", sha256: createHash("sha256").update(guideSourceBytes).digest("hex"), reviewDate: fieldGuideProvenance.reviewDate, transformationVersion: fieldGuideProvenance.transformationVersion } },
-      rentalLocations: { path: rentalDataUrl, sha256: createHash("sha256").update(rentalBytes).digest("hex"), count: rentalData.count, reviewDate: rentalData.reviewDate, transformationVersion: rentalData.transformationVersion, sourceIds: rentalData.sources.map(source => source.id), note: "仅三条Times门店事实核对；不表示公司整库授权。" },
+      rentalLocations: { path: rentalManifestUrl, sha256: createHash("sha256").update(rentalBytes).digest("hex"), count: rentalManifest.count, reviewDate: rentalManifest.reviewDate, transformationVersion: rentalManifest.transformationVersion, version: rentalManifest.version, sourceIds: rentalManifest.sources.map(source => source.id), counterCount: rentalIndex.records.filter(row => row.candidateStatus === "COUNTER_ONLY").length, officialFacilityCount: reviewedRentals.length, reviewedAirports: reviewedRentals.map(row => row.airportCode).sort(), note: "全国候选库；7机场各核对1家Times设施，非完整覆盖或公司整库授权；全部车辆入口未现场核实。" },
       surveyDate: manifest.prices.surveyDate,
       publishedAt: manifest.prices.publishedAt,
       note: "OSM 覆盖不完整；官方都道府县参考价与站点数据分开存储。没有站点即时报价。导入器不执行定时调度或部署。",
@@ -106,5 +130,5 @@ await writeFile(
   ),
 );
 console.log(
-  "Prerendered five locales + English root; source registry validated; provenance emitted.",
+  "已预渲染五语言首页、关于页面、独立加油指引、还车目录壳及英文根目录；全国租车分区及来源许可已校验。",
 );

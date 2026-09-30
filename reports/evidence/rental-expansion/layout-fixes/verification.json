@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-30",
+  "scope": "水滴图标居中与租车目录搜索、重置按钮并排显示",
+  "checks": {
+    "lint": "PASS",
+    "typecheck": "PASS",
+    "build": "PASS",
+    "targetedChromium": {
+      "passed": 23,
+      "failed": 0
+    }
+  },
+  "visual": "内置浏览器核对简体中文 320、1001、1280px；两个按钮同排且高度46px，页面无横向溢出；水滴图标top/left均为16px。手机自动化截图使用离线底图占位，桌面截图为实际本地预览。",
+  "sourceSha256": {
+    "src/styles.css": "6eb4723a802d5b2b5c27150205cf6a9db23ce058e928492e4e2814e4876d5548",
+    "src/components/RentalDirectory.tsx": "101449f8920e42380a0b703671548b621c5a68e81dea8eac64f2f8d767e795cb"
+  }
+}

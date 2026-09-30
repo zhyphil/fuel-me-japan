@@ -1,0 +1,47 @@
+
+> fuel-me-japan@0.0.0 test:e2e
+> playwright test tests/e2e/return-car.spec.ts -g candidate mini maps --workers=1
+
+[WebServer] (node:24196) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:24197) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/return-car.spec.ts:234:1 › candidate mini maps show each station, load only visible rows, and keep selection independent (5.5s)
+
+
+  1) tests/e2e/return-car.spec.ts:234:1 › candidate mini maps show each station, load only visible rows, and keep selection independent 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  getByRole('dialog', { name: 'Return car', exact: true }).locator('.return-candidates > li').locator('.station-mini-map-preview')
+    Expected: 3
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" getByRole('dialog', { name: 'Return car', exact: true }).locator('.return-candidates > li').locator('.station-mini-map-preview') with timeout 5000ms
+      - waiting for getByRole('dialog', { name: 'Return car', exact: true }).locator('.return-candidates > li').locator('.station-mini-map-preview')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      240 |   await dialog.locator("#return-location").selectOption(naha);
+      241 |   const rows = dialog.locator(".return-candidates > li");
+    > 242 |   await expect(rows.locator(".station-mini-map-preview")).toHaveCount(3);
+          |                                                           ^
+      243 |   const first = rows.nth(0).getByRole("img", { name: "Location of Unknown supply", exact: true });
+      244 |   const second = rows.nth(1).getByRole("img", { name: "Location of Regular recorded", exact: true });
+      245 |   const last = rows.nth(2).getByRole("img", { name: "Location of Complex hours", exact: true });
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/return-car.spec.ts:242:59
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/return-car-candidate-mini--7a9fb--keep-selection-independent/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/return-car-candidate-mini--7a9fb--keep-selection-independent/error-context.md
+
+  1 failed
+    tests/e2e/return-car.spec.ts:234:1 › candidate mini maps show each station, load only visible rows, and keep selection independent 

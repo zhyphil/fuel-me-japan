@@ -17,12 +17,12 @@ const panel = (page: Page) => page.getByRole("dialog");
 const selectOption = (page: Page, label: string) => panel(page).locator(".filter-option").filter({ has: page.locator(".filter-option-label", { hasText: new RegExp(`^${label}$`) }) });
 async function open(page: Page) { await trigger(page).click(); await expect(panel(page)).toBeVisible(); }
 async function apply(page: Page, count: number, locale = "en") { await panel(page).getByRole("button", { name: messages[locale].sfApply.replace("{count}", count.toLocaleString(locale)), exact: true }).click(); await expect(panel(page)).toHaveCount(0); }
-async function fixture(page: Page) {
+async function fixture(page: Page, brands?: string[]) {
   // Synthetic capabilities on a real partition; source files on disk stay unchanged.
   const file = structuredClone(real);
   file.stations.forEach((station, index) => {
     station.name = `Filter fixture ${String(index).padStart(4, "0")}`;
-    station.originalBrand = index < 30 ? index % 2 ? "エネオス" : "ENEOS" : "Fixture Other";
+    station.originalBrand = brands ? brands[index] ?? "Fixture Other" : index < 30 ? index % 2 ? "エネオス" : "ENEOS" : "Fixture Other";
     station.normalizedBrand = index < 30 ? "ENEOS" : "Fixture Other";
     station.paymentVisa = index < 2 ? "YES" : "UNKNOWN";
     station.paymentMastercard = index === 1 || index === 2 ? "YES" : "UNKNOWN";
@@ -213,3 +213,43 @@ for (const locale of locales) {
     });
   }
 }
+
+test("reviewed logos and alias search agree across filters, map markers and thumbnails", async ({ page }) => {
+  await fixture(page, ["ホクレン", "出光", "モービル", "Shell"]);
+  await load(page); await open(page);
+  for (const [label, asset] of [["ホクレン", "hokuren.svg"], ["Idemitsu", "idemitsu.svg"], ["Mobil", "mobil.svg"]]) {
+    const image = selectOption(page, label).locator("img");
+    await expect(image).toHaveAttribute("src", `/brands/${asset}`);
+    await expect.poll(() => image.evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0)).toBe(true);
+  }
+  await expect(selectOption(page, "Shell").locator("img")).toHaveCount(0);
+  await panel(page).getByLabel(en.sfBrandSearch, { exact: true }).fill("出光");
+  await expect(panel(page).getByRole("tabpanel", { name: en.sfBrands }).locator(".filter-option")).toHaveCount(1);
+  await expect(selectOption(page, "Idemitsu")).toBeVisible();
+  await panel(page).getByRole("button", { name: en.sfClose }).click();
+  await page.locator("#station-search").fill("Filter fixture 0001");
+  await expect(page.locator(".map-pin-station img")).toHaveAttribute("src", "/brands/idemitsu.svg");
+  await page.getByRole("button", { name: en.mapList, exact: true }).click();
+  await expect(page.locator(".station-list .station-mini-map-pin img")).toHaveAttribute("src", "/brands/idemitsu.svg");
+});
+
+test("all shipped brand files decode and a missing new logo retains the pump fallback", async ({ page }) => {
+  await page.goto("/en/about/");
+  await page.locator("#brand-credits > summary").click();
+  const registry = JSON.parse(readFileSync("public/brands/sources.json", "utf8")) as { assets: { assetPath: string; symbolAssetPath?: string }[] };
+  await expect(page.locator(".brand-credits-list li")).toHaveCount(registry.assets.length);
+  const paths = registry.assets.map(asset => asset.symbolAssetPath ?? asset.assetPath);
+  const decoded = await page.evaluate(async (urls) => Promise.all(urls.map(async (url) => {
+    const image = new Image(); image.src = url;
+    try { await image.decode(); return { url, width: image.naturalWidth, height: image.naturalHeight }; }
+    catch { return { url, width: 0, height: 0 }; }
+  })), paths);
+  for (const image of decoded) { expect(image.width, image.url).toBeGreaterThan(0); expect(image.height, image.url).toBeGreaterThan(0); }
+  await page.route("**/brands/hokuren.svg", route => route.abort());
+  await fixture(page, ["ホクレン"]); await load(page); await open(page);
+  const option = selectOption(page, "ホクレン");
+  await expect(option.locator("img")).toBeHidden();
+  await expect(option.locator(".filter-logo-fallback svg")).toBeVisible();
+  await option.click(); await apply(page, 1);
+  await expect(page.locator(".map-pin-station img")).toHaveAttribute("src", "/brands/fuel-pump.svg");
+});
