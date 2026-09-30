@@ -1,0 +1,101 @@
+[WebServer] (node:18729) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 57 tests using 2 workers
+
+(node:18730) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:18731) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 tests/e2e/list-minimap.spec.ts:23:3 › list and mini-map at 320px share usable space with independent list scrolling (648ms)
+  ✓   1 tests/e2e/list-minimap.spec.ts:23:3 › list and mini-map at 390px share usable space with independent list scrolling (671ms)
+  ✓   3 tests/e2e/list-minimap.spec.ts:23:3 › list and mini-map at 768px share usable space with independent list scrolling (465ms)
+  ✓   4 tests/e2e/list-minimap.spec.ts:23:3 › list and mini-map at 1280px share usable space with independent list scrolling (623ms)
+  ✓   5 tests/e2e/list-minimap.spec.ts:62:1 › a mini-map marker opens details then returns to the same list and marker focus (525ms)
+  ✓   6 tests/e2e/list-minimap.spec.ts:82:1 › favorites and query synchronize mini-map markers without loading another partition (465ms)
+  ✓   7 tests/e2e/list-minimap.spec.ts:103:1 › mini-map tile errors do not cover filter or location controls (311ms)
+  ✓   8 tests/e2e/list-modes.spec.ts:3:1 › list modes are reachable from the national overview without loading station partitions (288ms)
+  ✓   9 tests/e2e/list-modes.spec.ts:74:1 › cheapest has one honest explanation and mode/fuel/query/filter changes reset pagination without new data (545ms)
+  ✓  10 tests/e2e/list-modes.spec.ts:97:1 › nearest never requests location on selection, then uses numeric Haversine order after the locate icon (446ms)
+  ✓  11 tests/e2e/list-modes.spec.ts:126:1 › normal list sorting preserves the map marker DOM and viewport (451ms)
+  ✓  12 tests/e2e/list-modes.spec.ts:142:1 › list and detail stars persist across prefectures and reload with only saved partition requests (829ms)
+  ✓  13 tests/e2e/list-modes.spec.ts:179:1 › favorites use saved dataset filter counts, reset pagination on fuel and restore the normal query (497ms)
+  ✓  14 tests/e2e/list-modes.spec.ts:209:3 › blocked read storage keeps memory favorites usable and shows an honest notice (373ms)
+  ✓  15 tests/e2e/list-modes.spec.ts:209:3 › blocked write storage keeps memory favorites usable and shows an honest notice (376ms)
+  ✓  16 tests/e2e/list-modes.spec.ts:228:1 › corrupt storage does not load arbitrary paths and is replaced only by an explicit save (326ms)
+  ✓  17 tests/e2e/list-modes.spec.ts:243:1 › favorite cap allows removal and then another save (346ms)
+  ✓  18 tests/e2e/list-modes.spec.ts:259:1 › missing source record remains removable and UNKNOWN uses only its explicit partition (345ms)
+  ✓  19 tests/e2e/list-modes.spec.ts:275:3 › late favorites response is isolated after mode (326ms)
+  ✓  20 tests/e2e/list-modes.spec.ts:275:3 › late favorites response is isolated after region (288ms)
+  ✓  21 tests/e2e/list-modes.spec.ts:275:3 › late favorites response is isolated after overview (344ms)
+  ✓  22 tests/e2e/list-modes.spec.ts:275:3 › late favorites response is isolated after cancel (328ms)
+  ✓  23 tests/e2e/list-modes.spec.ts:275:3 › late favorites response is isolated after unstar (337ms)
+  ✓  24 tests/e2e/list-modes.spec.ts:275:3 › late favorites response is isolated after navigation (312ms)
+  ✓  25 tests/e2e/list-modes.spec.ts:307:1 › failed favorite validation keeps IDs and retries the same saved partition (303ms)
+  ✓  26 tests/e2e/list-modes.spec.ts:321:3 › localized modes and star labels remain keyboard accessible in en (289ms)
+  ✓  27 tests/e2e/list-modes.spec.ts:321:3 › localized modes and star labels remain keyboard accessible in zh-Hant (307ms)
+  ✓  28 tests/e2e/list-modes.spec.ts:321:3 › localized modes and star labels remain keyboard accessible in ko (327ms)
+  ✓  29 tests/e2e/list-modes.spec.ts:321:3 › localized modes and star labels remain keyboard accessible in zh-Hans (308ms)
+  ✓  30 tests/e2e/list-modes.spec.ts:321:3 › localized modes and star labels remain keyboard accessible in th (293ms)
+  ✓  31 tests/e2e/list-modes.spec.ts:347:3 › list modes fit 320px with 44px controls and visible saved results (442ms)
+  ✓  32 tests/e2e/list-modes.spec.ts:347:3 › list modes fit 390px with 44px controls and visible saved results (453ms)
+  ✓  34 tests/e2e/list-modes.spec.ts:364:1 › region loading resumes after visiting favorites without accepting the aborted response (394ms)
+  ✓  33 tests/e2e/list-modes.spec.ts:347:3 › list modes fit 1280px with 44px controls and visible saved results (588ms)
+  ✓  35 tests/e2e/list-modes.spec.ts:389:1 › late location callback cannot replace favorites or resumed manual results (357ms)
+  ✓  37 tests/e2e/map-home.spec.ts:79:1 › query synchronizes map and list, marker opens the real record, and Escape restores marker focus (510ms)
+  ✓  38 tests/e2e/map-home.spec.ts:105:1 › cluster counts exceed list pagination and all 30 identical-coordinate members remain accessible (4.4s)
+  ✓  39 tests/e2e/map-home.spec.ts:128:1 › failed tile images retain list access and explicit retry reloads valid offline PNGs (432ms)
+  ✓  40 tests/e2e/map-home.spec.ts:151:1 › production CSP injected into local HTML permits Leaflet styles, initialization and approved tiles (229ms)
+  ✓  41 tests/e2e/map-home.spec.ts:171:3 › map and detail at 320px keep attribution and sheet visible without horizontal overflow (440ms)
+  ✓  42 tests/e2e/map-home.spec.ts:171:3 › map and detail at 390px keep attribution and sheet visible without horizontal overflow (477ms)
+  ✓  43 tests/e2e/map-home.spec.ts:171:3 › map and detail at 1280px keep attribution and sheet visible without horizontal overflow (833ms)
+  ✓  44 tests/e2e/map-home.spec.ts:193:1 › map configuration failure allows list fallback and explicit initialization retry (335ms)
+  ✓  45 tests/e2e/map-home.spec.ts:213:3 › returning to overview via cancel rejects a late station response (262ms)
+  ✓  46 tests/e2e/map-home.spec.ts:213:3 › returning to overview via overview rejects a late station response (261ms)
+  ✓  47 tests/e2e/map-home.spec.ts:238:1 › coincident Fukuoka and Saga summary anchors offer both regions instead of endless zoom (1.1s)
+  ✓  48 tests/e2e/map-home.spec.ts:253:1 › overview tile retry uses integer XYZ coordinates (447ms)
+ZOOM_WHEEL_EVIDENCE {"initial":5.500000446440399,"singleDelta":0.24999884112390536,"pairDelta":0.4999995535596007,"note":"固定视口与东京818条真实记录；离线瓦片；第二次等量输入发生在第一次动画中。"}
+  ✓  49 tests/e2e/map-zoom.spec.ts:41:1 › a second wheel pulse during animation is retained instead of swallowed (2.2s)
+ZOOM_MARKER_EVIDENCE {"added":0,"removed":0,"before":3,"after":3,"comparable":3,"retained":3,"note":"相同地图标记身份在一次键盘平移后是否保留同一DOM元素。"}
+  ✓  50 tests/e2e/map-zoom.spec.ts:67:1 › small map pans retain existing marker elements instead of rebuilding the layer (1.0s)
+  ✓  51 tests/e2e/map-zoom.spec.ts:99:1 › rapid zoom buttons retain each click and queued reverse input (2.1s)
+  ✓  52 tests/e2e/map-zoom.spec.ts:117:1 › reversing the wheel during its animation cancels the previous equal input (1.4s)
+  ✓  53 tests/e2e/map-zoom.spec.ts:129:1 › returning to overview during zoom discards queued wheel input (1.6s)
+  ✓  54 tests/e2e/map-zoom.spec.ts:149:1 › cluster zoom respects reduced motion and updates that preference without reloading (1.3s)
+  ✓  55 tests/e2e/map-zoom.spec.ts:177:1 › native two-finger pinch still zooms the mobile map (1.2s)
+  ✓  56 tests/e2e/map-zoom.spec.ts:195:1 › queued controls clamp at both zoom limits and can reverse away from them (3.6s)
+  ✓  57 tests/e2e/map-zoom.spec.ts:220:1 › an old cluster cannot override returning to overview during animation (1.4s)
+  ✘  36 tests/e2e/map-home.spec.ts:46:1 › overview counts match every manifest region; selecting and panning load only its partition (30.1s)
+
+
+  1) tests/e2e/map-home.spec.ts:46:1 › overview counts match every manifest region; selecting and panning load only its partition 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('.map-pin-region-group[data-region-codes*="JP-01"]')
+        - locator resolved to <button type="button" class="map-pin map-pin-region-group" title="35 regions, 14,038 recorded stations. Zoom in to choose a region." aria-label="35 regions, 14,038 recorded stations. Zoom in to choose a region." data-region-codes="JP-01,JP-02,JP-03,JP-04,JP-05,JP-06,JP-07,JP-08,JP-09,JP-10,JP-11,JP-12,JP-13,JP-14,JP-15,JP-16,JP-17,JP-18,JP-19,JP-20,JP-21,JP-22,JP-23,JP-24,JP-25,JP-26,JP-27,JP-28,JP-29,JP-30,JP-31,JP-33,JP-36,JP-37,JP-39" data-map-key="regions:["JP-01","JP-02","JP-03","JP-04","JP-05","…>…</button>
+      - attempting click action
+        - waiting for element to be visible, enabled and stable
+      - element was detached from the DOM, retrying
+
+
+      61 |   expect(requests.sort()).toEqual(["/data/manifest.json", manifest.sourceRegistry.path].sort());
+      62 |   for (let step = 0; step < 8 && !await page.locator('button[data-map-key="JP-01"]').count(); step++) {
+    > 63 |     await page.locator('.map-pin-region-group[data-region-codes*="JP-01"]').click();
+         |                                                                             ^
+      64 |     await waitForMapAnimation(page);
+      65 |   }
+      66 |   await page.locator('button[data-map-key="JP-01"]').focus();
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/map-home.spec.ts:63:77
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/map-home-overview-counts-m-0e1b5-ing-load-only-its-partition/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/map-home-overview-counts-m-0e1b5-ing-load-only-its-partition/error-context.md
+
+  1 failed
+    tests/e2e/map-home.spec.ts:46:1 › overview counts match every manifest region; selecting and panning load only its partition 
+  56 passed (38.1s)

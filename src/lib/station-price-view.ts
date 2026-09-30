@@ -65,3 +65,15 @@ export function stationPriceViews(stations: readonly Station[], quotes: readonly
   }
   return views;
 }
+
+
+export type FuelPriceViews = Readonly<Record<FuelType, ReadonlyMap<string, StationPriceView>>>;
+
+/** Independent fuel cohorts: a diesel quote never changes a gasoline color. */
+export function allFuelPriceViews(stations: readonly Station[], quotes: readonly StationQuote[], now: number): FuelPriceViews {
+  return {
+    REGULAR: stationPriceViews(stations, quotes, "REGULAR", now),
+    HIGH_OCTANE: stationPriceViews(stations, quotes, "HIGH_OCTANE", now),
+    DIESEL: stationPriceViews(stations, quotes, "DIESEL", now),
+  };
+}

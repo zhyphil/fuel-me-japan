@@ -1,0 +1,32 @@
+
+> fuel-me-japan@0.0.0 test:e2e
+> playwright test tests/e2e/list-modes.spec.ts --list
+
+Listing tests:
+  list-modes.spec.ts:3:1 › list modes are reachable from the national overview without loading station partitions
+  list-modes.spec.ts:73:1 › cheapest has one honest explanation and mode/fuel/query/filter changes reset pagination without new data
+  list-modes.spec.ts:96:1 › nearest never requests location on selection, then uses numeric Haversine order after the locate icon
+  list-modes.spec.ts:125:1 › normal list sorting preserves the map marker DOM and viewport
+  list-modes.spec.ts:139:1 › list and detail stars persist across prefectures and reload with only saved partition requests
+  list-modes.spec.ts:176:1 › favorites use saved dataset filter counts, reset pagination on fuel and restore the normal query
+  list-modes.spec.ts:206:3 › blocked read storage keeps memory favorites usable and shows an honest notice
+  list-modes.spec.ts:206:3 › blocked write storage keeps memory favorites usable and shows an honest notice
+  list-modes.spec.ts:225:1 › corrupt storage does not load arbitrary paths and is replaced only by an explicit save
+  list-modes.spec.ts:240:1 › favorite cap allows removal and then another save
+  list-modes.spec.ts:256:1 › missing source record remains removable and UNKNOWN uses only its explicit partition
+  list-modes.spec.ts:272:3 › late favorites response is isolated after mode
+  list-modes.spec.ts:272:3 › late favorites response is isolated after region
+  list-modes.spec.ts:272:3 › late favorites response is isolated after overview
+  list-modes.spec.ts:272:3 › late favorites response is isolated after cancel
+  list-modes.spec.ts:272:3 › late favorites response is isolated after unstar
+  list-modes.spec.ts:272:3 › late favorites response is isolated after navigation
+  list-modes.spec.ts:304:1 › failed favorite validation keeps IDs and retries the same saved partition
+  list-modes.spec.ts:318:3 › localized modes and star labels remain keyboard accessible in en
+  list-modes.spec.ts:318:3 › localized modes and star labels remain keyboard accessible in zh-Hant
+  list-modes.spec.ts:318:3 › localized modes and star labels remain keyboard accessible in ko
+  list-modes.spec.ts:318:3 › localized modes and star labels remain keyboard accessible in zh-Hans
+  list-modes.spec.ts:318:3 › localized modes and star labels remain keyboard accessible in th
+  list-modes.spec.ts:343:3 › list modes fit 320px with 44px controls and visible saved results
+  list-modes.spec.ts:343:3 › list modes fit 390px with 44px controls and visible saved results
+  list-modes.spec.ts:343:3 › list modes fit 1280px with 44px controls and visible saved results
+Total: 26 tests in 1 file

@@ -1,0 +1,12 @@
+{
+  "说明": "对照上一轮源码快照与既有保护基线，仅本轮目标文件变化。",
+  "本轮继续修改": [
+    "AGENTS.md",
+    "src/components/FindFuel.tsx",
+    "src/components/FuelMap.tsx",
+    "src/styles.css",
+    "tests/e2e/station-mini-map.spec.ts"
+  ],
+  "保护文件数": 84,
+  "status": "PASS"
+}

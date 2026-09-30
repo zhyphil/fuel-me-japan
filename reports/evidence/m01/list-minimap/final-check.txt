@@ -1,0 +1,189 @@
+
+> fuel-me-japan@0.0.0 check
+> npm run lint && npm run typecheck && npm test && npm run build && npm run test:e2e
+
+
+> fuel-me-japan@0.0.0 lint
+> eslint . --max-warnings 0
+
+
+> fuel-me-japan@0.0.0 typecheck
+> tsc --noEmit
+
+
+> fuel-me-japan@0.0.0 test
+> vitest run
+
+
+ RUN  v5.0.2 /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan
+
+
+ Test Files  15 passed (15)
+      Tests  173 passed (173)
+   Start at  15:21:07
+   Duration  256ms (transform 66%, import 16%, tests 15%, worker 2%)
+
+
+> fuel-me-japan@0.0.0 build
+> vite build && tsx scripts/prerender.tsx
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 47 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                            0.78 kB │ gzip:   0.45 kB
+dist/assets/index-BIVBN-8s.css            36.53 kB │ gzip:  11.41 kB
+dist/assets/source-registry-ozFGEUdF.js    2.88 kB │ gzip:   1.25 kB
+dist/assets/leaflet-src-7kxo9sv3.js      148.73 kB │ gzip:  43.37 kB
+dist/assets/index-DQUXyF_Q.js            380.70 kB │ gzip: 118.70 kB
+
+✓ built in 115ms
+Prerendered five locales + English root; source registry validated; provenance emitted.
+
+> fuel-me-japan@0.0.0 test:e2e
+> playwright test
+
+[WebServer] (node:20424) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 118 tests using 8 workers
+
+(node:20430) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:20432) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:20436) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:20431) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:20433) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:20434) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:20437) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:20435) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓    7 tests/e2e/find-fuel.spec.ts:180:1 › missing geolocation API and out-of-Japan location do not fetch stations (568ms)
+  ✓    8 tests/e2e/find-fuel.spec.ts:169:3 › location denied permits manual fallback (634ms)
+  ✓    6 tests/e2e/find-fuel.spec.ts:169:3 › location unavailable permits manual fallback (635ms)
+  ✓    4 tests/e2e/find-fuel.spec.ts:169:3 › location timeout permits manual fallback (634ms)
+  ✓    1 tests/e2e/find-fuel.spec.ts:193:1 › watchdog timeout rejects a late position and allows a fresh request (738ms)
+  ✓    5 tests/e2e/find-fuel.spec.ts:206:1 › late location cannot replace manual choice; cancel, retry and close reject stale callbacks (923ms)
+  ✓    2 tests/e2e/find-fuel.spec.ts:64:1 › manual prefecture fetches one region; city/address search and detail never invent distance (960ms)
+  ✓    9 tests/e2e/find-fuel.spec.ts:231:1 › station load failure retries; an older retry response cannot replace a newer prefecture (385ms)
+  ✓    3 tests/e2e/find-fuel.spec.ts:119:1 › explicit mocked location sorts real stations; navigation sends destination only and origin stays private (980ms)
+  ✓   10 tests/e2e/find-fuel.spec.ts:256:1 › empty search stays on site and recovers without invented stations or coordinates (349ms)
+  ✓   11 tests/e2e/find-fuel.spec.ts:269:1 › price failure does not block navigation; retry shows dated stale reference (498ms)
+  ✓   17 tests/e2e/find-fuel.spec.ts:313:1 › empty nearby coverage offers manual search without external map links or claiming no stations exist (405ms)
+  ✓   18 tests/e2e/find-fuel.spec.ts:326:1 › station request retry succeeds with the original real partition (434ms)
+  ✓   13 tests/e2e/find-fuel.spec.ts:286:3 › zh-Hant list/detail fit 320 and 390 pixels, retain Japanese labels and capture screenshots (706ms)
+  ✓   12 tests/e2e/find-fuel.spec.ts:286:3 › en list/detail fit 320 and 390 pixels, retain Japanese labels and capture screenshots (934ms)
+  ✓   19 tests/e2e/find-fuel.spec.ts:341:1 › back from detail discards its pending price response before another prefecture opens (543ms)
+  ✓   15 tests/e2e/find-fuel.spec.ts:286:3 › zh-Hans list/detail fit 320 and 390 pixels, retain Japanese labels and capture screenshots (730ms)
+  ✓   16 tests/e2e/find-fuel.spec.ts:286:3 › th list/detail fit 320 and 390 pixels, retain Japanese labels and capture screenshots (730ms)
+  ✓   14 tests/e2e/find-fuel.spec.ts:286:3 › ko list/detail fit 320 and 390 pixels, retain Japanese labels and capture screenshots (811ms)
+  ✓   20 tests/e2e/find-fuel.spec.ts:393:3 › en shows translated recorded hours and an optional unchanged original (520ms)
+  ✓   22 tests/e2e/find-fuel.spec.ts:393:3 › ko shows translated recorded hours and an optional unchanged original (498ms)
+  ✓   21 tests/e2e/find-fuel.spec.ts:393:3 › zh-Hant shows translated recorded hours and an optional unchanged original (527ms)
+  ✓   23 tests/e2e/find-fuel.spec.ts:393:3 › zh-Hans shows translated recorded hours and an optional unchanged original (494ms)
+  ✓   26 tests/e2e/find-fuel.spec.ts:422:1 › absent hours stay unknown without offering an invented schedule (400ms)
+  ✓   25 tests/e2e/find-fuel.spec.ts:411:1 › unsupported hours retain all rules visibly with a localized explanation (419ms)
+  ✓   27 tests/e2e/foundation.spec.ts:9:3 › mobile switching and reload: en (422ms)
+  ✓   34 tests/e2e/foundation.spec.ts:145:1 › shipped registry and build provenance match the M0.1 ingestion manifest (46ms)
+  ✓   24 tests/e2e/find-fuel.spec.ts:393:3 › th shows translated recorded hours and an optional unchanged original (547ms)
+  ✓   28 tests/e2e/foundation.spec.ts:9:3 › mobile switching and reload: zh-Hant (443ms)
+  ✓   29 tests/e2e/foundation.spec.ts:9:3 › mobile switching and reload: ko (443ms)
+  ✓   32 tests/e2e/foundation.spec.ts:78:1 › localized static HTML is useful without JavaScript (261ms)
+  ✓   30 tests/e2e/foundation.spec.ts:9:3 › mobile switching and reload: zh-Hans (459ms)
+  ✓   33 tests/e2e/foundation.spec.ts:100:1 › map home requests only data indexes and map configuration without location, storage or analytics (406ms)
+  ✓   31 tests/e2e/foundation.spec.ts:9:3 › mobile switching and reload: th (539ms)
+  ✓   36 tests/e2e/fuel-markers.spec.ts:13:1 › explicit enum preference survives language and refresh; reset preserves unrelated storage (489ms)
+  ✓   40 tests/e2e/fuel-markers.spec.ts:110:1 › invalid and blocked storage keep selection usable without auto-location (316ms)
+  ✓   38 tests/e2e/fuel-markers.spec.ts:70:3 › local brand asset /brands/eneos-symbol.svg loads and failed image falls back to a pump icon at 320px (463ms)
+  ✓   35 tests/e2e/foundation.spec.ts:170:1 › desktop layout and keyboard navigation remain usable (643ms)
+  ✓   39 tests/e2e/fuel-markers.spec.ts:70:3 › local brand asset /brands/cosmo-symbol.svg loads and failed image falls back to a pump icon at 320px (475ms)
+  ✓   37 tests/e2e/fuel-markers.spec.ts:30:1 › real station hides missing price without an empty band; fuel change preserves viewport with no data or location requests (510ms)
+  ✓   41 tests/e2e/list-minimap.spec.ts:24:3 › list and mini-map at 320px share usable space with independent list scrolling (524ms)
+  ✓   42 tests/e2e/list-minimap.spec.ts:24:3 › list and mini-map at 390px share usable space with independent list scrolling (526ms)
+  ✓   46 tests/e2e/list-minimap.spec.ts:104:1 › mini-map tile errors do not cover filter or location controls (485ms)
+  ✓   43 tests/e2e/list-minimap.spec.ts:24:3 › list and mini-map at 768px share usable space with independent list scrolling (625ms)
+  ✓   49 tests/e2e/list-modes.spec.ts:3:1 › list modes are reachable from the national overview without loading station partitions (368ms)
+  ✓   47 tests/e2e/list-minimap.spec.ts:83:1 › favorites and query synchronize mini-map markers without loading another partition (589ms)
+  ✓   44 tests/e2e/list-minimap.spec.ts:24:3 › list and mini-map at 1280px share usable space with independent list scrolling (729ms)
+  ✓   45 tests/e2e/list-minimap.spec.ts:63:1 › a mini-map marker opens details then returns to the same list and marker focus (649ms)
+  ✓   50 tests/e2e/list-modes.spec.ts:74:1 › cheapest has one honest explanation and mode/fuel/query/filter changes reset pagination without new data (650ms)
+  ✓   52 tests/e2e/list-modes.spec.ts:126:1 › normal list sorting preserves the map marker DOM and viewport (492ms)
+  ✓   51 tests/e2e/list-modes.spec.ts:97:1 › nearest never requests location on selection, then uses numeric Haversine order after the locate icon (546ms)
+  ✓   56 tests/e2e/list-modes.spec.ts:209:3 › blocked write storage keeps memory favorites usable and shows an honest notice (407ms)
+  ✓   55 tests/e2e/list-modes.spec.ts:209:3 › blocked read storage keeps memory favorites usable and shows an honest notice (431ms)
+  ✓   54 tests/e2e/list-modes.spec.ts:179:1 › favorites use saved dataset filter counts, reset pagination on fuel and restore the normal query (631ms)
+  ✓   48 tests/e2e/list-minimap.spec.ts:120:1 › mini-map cluster details return through members to the list (1.3s)
+  ✓   57 tests/e2e/list-modes.spec.ts:228:1 › corrupt storage does not load arbitrary paths and is replaced only by an explicit save (412ms)
+  ✓   58 tests/e2e/list-modes.spec.ts:243:1 › favorite cap allows removal and then another save (413ms)
+  ✓   59 tests/e2e/list-modes.spec.ts:259:1 › missing source record remains removable and UNKNOWN uses only its explicit partition (407ms)
+  ✓   61 tests/e2e/list-modes.spec.ts:275:3 › late favorites response is isolated after region (408ms)
+  ✓   60 tests/e2e/list-modes.spec.ts:275:3 › late favorites response is isolated after mode (413ms)
+  ✓   53 tests/e2e/list-modes.spec.ts:142:1 › list and detail stars persist across prefectures and reload with only saved partition requests (1.0s)
+  ✓   62 tests/e2e/list-modes.spec.ts:275:3 › late favorites response is isolated after overview (381ms)
+  ✓   64 tests/e2e/list-modes.spec.ts:275:3 › late favorites response is isolated after unstar (405ms)
+  ✓   63 tests/e2e/list-modes.spec.ts:275:3 › late favorites response is isolated after cancel (464ms)
+  ✓   68 tests/e2e/list-modes.spec.ts:321:3 › localized modes and star labels remain keyboard accessible in zh-Hant (364ms)
+  ✓   67 tests/e2e/list-modes.spec.ts:321:3 › localized modes and star labels remain keyboard accessible in en (394ms)
+  ✓   66 tests/e2e/list-modes.spec.ts:307:1 › failed favorite validation keeps IDs and retries the same saved partition (433ms)
+  ✓   65 tests/e2e/list-modes.spec.ts:275:3 › late favorites response is isolated after navigation (498ms)
+  ✓   70 tests/e2e/list-modes.spec.ts:321:3 › localized modes and star labels remain keyboard accessible in zh-Hans (334ms)
+  ✓   69 tests/e2e/list-modes.spec.ts:321:3 › localized modes and star labels remain keyboard accessible in ko (374ms)
+  ✓   71 tests/e2e/list-modes.spec.ts:321:3 › localized modes and star labels remain keyboard accessible in th (427ms)
+  ✓   75 tests/e2e/list-modes.spec.ts:364:1 › region loading resumes after visiting favorites without accepting the aborted response (429ms)
+  ✓   73 tests/e2e/list-modes.spec.ts:347:3 › list modes fit 390px with 44px controls and visible saved results (510ms)
+  ✓   72 tests/e2e/list-modes.spec.ts:347:3 › list modes fit 320px with 44px controls and visible saved results (556ms)
+  ✓   76 tests/e2e/list-modes.spec.ts:389:1 › late location callback cannot replace favorites or resumed manual results (478ms)
+  ✓   78 tests/e2e/map-home.spec.ts:81:1 › query synchronizes map and list, marker opens the real record, and Escape restores marker focus (487ms)
+  ✓   77 tests/e2e/map-home.spec.ts:46:1 › overview counts match every manifest region; selecting and panning load only its partition (529ms)
+  ✓   74 tests/e2e/list-modes.spec.ts:347:3 › list modes fit 1280px with 44px controls and visible saved results (696ms)
+  ✓   81 tests/e2e/map-home.spec.ts:153:1 › production CSP injected into local HTML permits Leaflet styles, initialization and approved tiles (277ms)
+  ✓   80 tests/e2e/map-home.spec.ts:130:1 › failed tile images retain list access and explicit retry reloads valid offline PNGs (430ms)
+  ✓   85 tests/e2e/map-home.spec.ts:195:1 › map configuration failure allows list fallback and explicit initialization retry (352ms)
+  ✓   82 tests/e2e/map-home.spec.ts:173:3 › map and detail at 320px keep attribution and sheet visible without horizontal overflow (487ms)
+  ✓   86 tests/e2e/map-home.spec.ts:215:3 › returning to overview via cancel rejects a late station response (305ms)
+  ✓   87 tests/e2e/map-home.spec.ts:215:3 › returning to overview via overview rejects a late station response (306ms)
+  ✓   83 tests/e2e/map-home.spec.ts:173:3 › map and detail at 390px keep attribution and sheet visible without horizontal overflow (561ms)
+  ✓   89 tests/e2e/map-home.spec.ts:255:1 › overview tile retry uses integer XYZ coordinates (409ms)
+  ✓   84 tests/e2e/map-home.spec.ts:173:3 › map and detail at 1280px keep attribution and sheet visible without horizontal overflow (905ms)
+ZOOM_MARKER_EVIDENCE {"added":0,"removed":0,"before":3,"after":3,"comparable":3,"retained":3,"note":"相同地图标记身份在一次键盘平移后是否保留同一DOM元素。"}
+  ✓   88 tests/e2e/map-home.spec.ts:240:1 › coincident Fukuoka and Saga summary anchors offer both regions instead of endless zoom (1.2s)
+  ✓   91 tests/e2e/map-zoom.spec.ts:67:1 › small map pans retain existing marker elements instead of rebuilding the layer (1.1s)
+  ✓   93 tests/e2e/map-zoom.spec.ts:117:1 › reversing the wheel during its animation cancels the previous equal input (1.4s)
+  ✓   95 tests/e2e/map-zoom.spec.ts:149:1 › cluster zoom respects reduced motion and updates that preference without reloading (1.3s)
+  ✓   94 tests/e2e/map-zoom.spec.ts:129:1 › returning to overview during zoom discards queued wheel input (1.6s)
+ZOOM_WHEEL_EVIDENCE {"initial":5.500000446440399,"singleDelta":0.24999884112390536,"pairDelta":0.4999995535596007,"note":"固定视口与东京818条真实记录；离线瓦片；第二次等量输入发生在第一次动画中。"}
+  ✓   92 tests/e2e/map-zoom.spec.ts:99:1 › rapid zoom buttons retain each click and queued reverse input (2.2s)
+  ✓   96 tests/e2e/map-zoom.spec.ts:177:1 › native two-finger pinch still zooms the mobile map (1.2s)
+  ✓   90 tests/e2e/map-zoom.spec.ts:41:1 › a second wheel pulse during animation is retained instead of swallowed (2.3s)
+  ✓   99 tests/e2e/station-filters.spec.ts:57:1 › draft, cancel, reset and apply keep loaded counts and map/list totals consistent (752ms)
+  ✓  102 tests/e2e/station-filters.spec.ts:137:1 › query and brand search do not change complete-area option counts (367ms)
+  ✓   98 tests/e2e/map-zoom.spec.ts:220:1 › an old cluster cannot override returning to overview during animation (1.4s)
+  ✓  104 tests/e2e/station-filters.spec.ts:180:5 › en filters at 320px: keyboard tabs, native modal, missing data and focus return (312ms)
+  ✓  105 tests/e2e/station-filters.spec.ts:180:5 › en filters at 390px: keyboard tabs, native modal, missing data and focus return (333ms)
+  ✓  103 tests/e2e/station-filters.spec.ts:149:1 › changing area, returning to overview and new location clear filters without persistence or extra data fetches (739ms)
+  ✓  107 tests/e2e/station-filters.spec.ts:180:5 › zh-Hant filters at 320px: keyboard tabs, native modal, missing data and focus return (314ms)
+  ✓  108 tests/e2e/station-filters.spec.ts:180:5 › zh-Hant filters at 390px: keyboard tabs, native modal, missing data and focus return (321ms)
+  ✓  106 tests/e2e/station-filters.spec.ts:180:5 › en filters at 1280px: keyboard tabs, native modal, missing data and focus return (487ms)
+  ✓  109 tests/e2e/station-filters.spec.ts:180:5 › zh-Hant filters at 1280px: keyboard tabs, native modal, missing data and focus return (463ms)
+  ✓  110 tests/e2e/station-filters.spec.ts:180:5 › ko filters at 320px: keyboard tabs, native modal, missing data and focus return (334ms)
+  ✓   79 tests/e2e/map-home.spec.ts:107:1 › cluster counts exceed list pagination and all 30 identical-coordinate members remain accessible (4.3s)
+  ✓  101 tests/e2e/station-filters.spec.ts:122:1 › applying unchanged filters closes cluster members and station details (1.4s)
+  ✓  111 tests/e2e/station-filters.spec.ts:180:5 › ko filters at 390px: keyboard tabs, native modal, missing data and focus return (390ms)
+  ✓  113 tests/e2e/station-filters.spec.ts:180:5 › zh-Hans filters at 320px: keyboard tabs, native modal, missing data and focus return (428ms)
+  ✓  112 tests/e2e/station-filters.spec.ts:180:5 › ko filters at 1280px: keyboard tabs, native modal, missing data and focus return (551ms)
+  ✓  114 tests/e2e/station-filters.spec.ts:180:5 › zh-Hans filters at 390px: keyboard tabs, native modal, missing data and focus return (429ms)
+  ✓  100 tests/e2e/station-filters.spec.ts:87:1 › payment union, service AND, zero results, independent query and stale detail cleanup (2.0s)
+  ✓  116 tests/e2e/station-filters.spec.ts:180:5 › th filters at 320px: keyboard tabs, native modal, missing data and focus return (461ms)
+  ✓  117 tests/e2e/station-filters.spec.ts:180:5 › th filters at 390px: keyboard tabs, native modal, missing data and focus return (447ms)
+  ✓  115 tests/e2e/station-filters.spec.ts:180:5 › zh-Hans filters at 1280px: keyboard tabs, native modal, missing data and focus return (553ms)
+  ✓  118 tests/e2e/station-filters.spec.ts:180:5 › th filters at 1280px: keyboard tabs, native modal, missing data and focus return (512ms)
+  ✓   97 tests/e2e/map-zoom.spec.ts:195:1 › queued controls clamp at both zoom limits and can reverse away from them (3.6s)
+
+  118 passed (11.3s)

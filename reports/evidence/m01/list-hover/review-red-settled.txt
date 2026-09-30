@@ -1,0 +1,43 @@
+[WebServer] (node:33240) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:33241) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/list-hover.spec.ts:178:1 › closing cluster members does not revive an earlier hover preview (6.0s)
+
+
+  1) tests/e2e/list-hover.spec.ts:178:1 › closing cluster members does not revive an earlier hover preview 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('.map-pin-station.is-preview')
+    Expected: 0
+    Received: 1
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('.map-pin-station.is-preview') with timeout 5000ms
+      - waiting for locator('.map-pin-station.is-preview')
+        14 × locator resolved to 1 element
+           - unexpected value "1"
+
+
+      202 |   await expect(page.locator(".map-workspace.show-list")).toBeVisible();
+      203 |   await settleLayout(page);
+    > 204 |   await expect(page.locator(".map-pin-station.is-preview")).toHaveCount(0);
+          |                                                             ^
+      205 |   await expect(page.locator(".map-pin-cluster")).toHaveText("4");
+      206 | });
+      207 |
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/list-hover.spec.ts:204:61
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/list-hover-closing-cluster-d4615-ve-an-earlier-hover-preview/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/list-hover-closing-cluster-d4615-ve-an-earlier-hover-preview/error-context.md
+
+  1 failed
+    tests/e2e/list-hover.spec.ts:178:1 › closing cluster members does not revive an earlier hover preview 

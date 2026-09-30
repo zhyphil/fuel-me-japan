@@ -3,8 +3,8 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import type { DataManifest, StationFile } from "../../src/lib/stations";
-import { STATION_QUOTES, stationPriceViews, type StationQuote } from "../../src/lib/station-price-view";
-import { FuelPrice, priceDisplayText } from "../../src/components/FuelPrice";
+import { STATION_QUOTES, stationPriceViews, allFuelPriceViews, type StationQuote } from "../../src/lib/station-price-view";
+import { FuelPrice, FuelPrices, markerFuelPrices, priceDisplayText } from "../../src/components/FuelPrice";
 const manifest: DataManifest = JSON.parse(readFileSync("public/data/manifest.json", "utf8"));
 const file: StationFile = JSON.parse(readFileSync(`public${manifest.stations.partitions.find((p) => p.code === "JP-01")!.path}`, "utf8"));
 // Synthetic prices exist only in this pure display test.
@@ -58,4 +58,35 @@ describe("independent station quote presentation", () => {
     expect(priceDisplayText(views(quotes.slice(0, 1))[0], "en")).toContain("180");
     expect(priceDisplayText(views(quotes.slice(0, 1))[0], "en")).toContain("Not comparable");
   });
+});
+
+
+it("renders multiple named fuels with independent colors and hides only the missing fuel", () => {
+  const rows = stations.slice(0, 3).map((s) => ({ ...s, fuelDiesel: "UNKNOWN" as const, fuelHighOctane: "UNKNOWN" as const }));
+  const multi = [...quotes.slice(0, 3), ...quotes.slice(0, 3).map((q, i) => ({ ...q, fuelType: "DIESEL" as const, priceJpyPerL: [130, 150, 140][i] }))];
+  const views = allFuelPriceViews(rows, multi, now);
+  const fuels = ["REGULAR", "DIESEL", "HIGH_OCTANE"] as const;
+  expect(views.REGULAR.get(rows[0].id)?.tone).toBe("high");
+  expect(views.DIESEL.get(rows[0].id)?.tone).toBe("low");
+  for (const locale of ["en", "zh-Hant", "ko", "zh-Hans", "th"] as const) {
+    const html = renderToStaticMarkup(createElement(FuelPrices, { views, fuels, stationId: rows[0].id, locale }));
+    expect(html).toContain("レギュラー"); expect(html).toContain("軽油"); expect(html).not.toContain("ハイオク");
+    expect(html).toContain("180"); expect(html).toContain("130");
+    const bands = markerFuelPrices(views, fuels, rows[0].id, locale);
+    expect(bands.map(({ fuel, tone }) => ({ fuel, tone }))).toEqual([{ fuel: "REGULAR", tone: "high" }, { fuel: "DIESEL", tone: "low" }]);
+    expect(bands[0].label).toContain("レギュラー"); expect(bands[1].label).toContain("軽油");
+    expect(markerFuelPrices(views, ["HIGH_OCTANE"], rows[0].id, locale)).toEqual([]);
+  }
+  const full = allFuelPriceViews(rows, [...multi, ...quotes.slice(0, 3).map((q) => ({ ...q, fuelType: "HIGH_OCTANE" as const, priceJpyPerL: q.priceJpyPerL + 20 }))], now);
+  expect(markerFuelPrices(full, fuels, rows[0].id, "en")).toHaveLength(3);
+  expect(markerFuelPrices(full, ["DIESEL"], rows[0].id, "en")).toHaveLength(1);
+});
+
+
+it("revalidates every selected fuel when time passes a quote expiry", () => {
+  const rows = stations.slice(0, 3);
+  const before = allFuelPriceViews(rows, quotes, now);
+  const after = allFuelPriceViews(rows, quotes, Date.parse("2026-10-01T00:00:00Z"));
+  expect(markerFuelPrices(before, ["REGULAR", "DIESEL"], rows[0].id, "en")).toHaveLength(1);
+  expect(markerFuelPrices(after, ["REGULAR", "DIESEL"], rows[0].id, "en")).toHaveLength(0);
 });

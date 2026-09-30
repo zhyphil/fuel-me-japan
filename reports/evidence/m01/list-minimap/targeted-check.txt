@@ -1,0 +1,82 @@
+[WebServer] (node:18255) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 35 tests using 2 workers
+
+(node:18256) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:18257) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 tests/e2e/list-minimap.spec.ts:23:3 › list and mini-map at 320px share usable space with independent list scrolling (412ms)
+  ✓   1 tests/e2e/list-minimap.spec.ts:23:3 › list and mini-map at 390px share usable space with independent list scrolling (431ms)
+  ✓   3 tests/e2e/list-minimap.spec.ts:23:3 › list and mini-map at 768px share usable space with independent list scrolling (478ms)
+  ✓   4 tests/e2e/list-minimap.spec.ts:23:3 › list and mini-map at 1280px share usable space with independent list scrolling (578ms)
+  ✓   5 tests/e2e/list-minimap.spec.ts:55:1 › a mini-map marker opens details then returns to the same list and marker focus (489ms)
+  ✓   6 tests/e2e/list-minimap.spec.ts:75:1 › favorites and query synchronize mini-map markers without loading another partition (466ms)
+  ✓   7 tests/e2e/list-minimap.spec.ts:96:1 › mini-map tile errors do not cover filter or location controls (311ms)
+  ✓   8 tests/e2e/list-modes.spec.ts:3:1 › list modes are reachable from the national overview without loading station partitions (293ms)
+  ✓   9 tests/e2e/list-modes.spec.ts:74:1 › cheapest has one honest explanation and mode/fuel/query/filter changes reset pagination without new data (547ms)
+  ✓  10 tests/e2e/list-modes.spec.ts:97:1 › nearest never requests location on selection, then uses numeric Haversine order after the locate icon (477ms)
+  ✓  11 tests/e2e/list-modes.spec.ts:126:1 › normal list sorting preserves the map marker DOM and viewport (473ms)
+  ✓  13 tests/e2e/list-modes.spec.ts:179:1 › favorites use saved dataset filter counts, reset pagination on fuel and restore the normal query (498ms)
+  ✓  14 tests/e2e/list-modes.spec.ts:209:3 › blocked read storage keeps memory favorites usable and shows an honest notice (335ms)
+  ✓  15 tests/e2e/list-modes.spec.ts:209:3 › blocked write storage keeps memory favorites usable and shows an honest notice (371ms)
+  ✓  16 tests/e2e/list-modes.spec.ts:228:1 › corrupt storage does not load arbitrary paths and is replaced only by an explicit save (325ms)
+  ✓  17 tests/e2e/list-modes.spec.ts:243:1 › favorite cap allows removal and then another save (329ms)
+  ✓  18 tests/e2e/list-modes.spec.ts:259:1 › missing source record remains removable and UNKNOWN uses only its explicit partition (329ms)
+  ✓  19 tests/e2e/list-modes.spec.ts:275:3 › late favorites response is isolated after mode (326ms)
+  ✓  20 tests/e2e/list-modes.spec.ts:275:3 › late favorites response is isolated after region (286ms)
+  ✓  21 tests/e2e/list-modes.spec.ts:275:3 › late favorites response is isolated after overview (309ms)
+  ✓  22 tests/e2e/list-modes.spec.ts:275:3 › late favorites response is isolated after cancel (346ms)
+  ✓  23 tests/e2e/list-modes.spec.ts:275:3 › late favorites response is isolated after unstar (354ms)
+  ✓  24 tests/e2e/list-modes.spec.ts:275:3 › late favorites response is isolated after navigation (307ms)
+  ✓  25 tests/e2e/list-modes.spec.ts:307:1 › failed favorite validation keeps IDs and retries the same saved partition (317ms)
+  ✓  26 tests/e2e/list-modes.spec.ts:321:3 › localized modes and star labels remain keyboard accessible in en (259ms)
+  ✓  27 tests/e2e/list-modes.spec.ts:321:3 › localized modes and star labels remain keyboard accessible in zh-Hant (291ms)
+  ✘  12 tests/e2e/list-modes.spec.ts:142:1 › list and detail stars persist across prefectures and reload with only saved partition requests (5.7s)
+  ✓  28 tests/e2e/list-modes.spec.ts:321:3 › localized modes and star labels remain keyboard accessible in ko (292ms)
+(node:18300) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  29 tests/e2e/list-modes.spec.ts:321:3 › localized modes and star labels remain keyboard accessible in th (348ms)
+  ✓  30 tests/e2e/list-modes.spec.ts:321:3 › localized modes and star labels remain keyboard accessible in zh-Hans (360ms)
+  ✓  31 tests/e2e/list-modes.spec.ts:347:3 › list modes fit 320px with 44px controls and visible saved results (449ms)
+  ✓  32 tests/e2e/list-modes.spec.ts:347:3 › list modes fit 390px with 44px controls and visible saved results (466ms)
+  ✓  33 tests/e2e/list-modes.spec.ts:347:3 › list modes fit 1280px with 44px controls and visible saved results (593ms)
+  ✓  34 tests/e2e/list-modes.spec.ts:364:1 › region loading resumes after visiting favorites without accepting the aborted response (410ms)
+  ✓  35 tests/e2e/list-modes.spec.ts:389:1 › late location callback cannot replace favorites or resumed manual results (403ms)
+
+
+  1) tests/e2e/list-modes.spec.ts:142:1 › list and detail stars persist across prefectures and reload with only saved partition requests 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('.map-pin-station')
+    Expected: 2
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('.map-pin-station') with timeout 5000ms
+      - waiting for locator('.map-pin-station')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      165 |   await expect(page.locator(".distance")).toHaveCount(0);
+      166 |   await page.getByRole("button", { name: en.mapView, exact: true }).click();
+    > 167 |   await expect(page.locator(".map-pin-station")).toHaveCount(2);
+          |                                                  ^
+      168 |   await page.getByRole("button", { name: en.mapList, exact: true }).click();
+      169 |   await page.locator(`[id="list-${first.id}"]`).click();
+      170 |   await page.locator(".station-detail .favorite-button").click();
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/list-modes.spec.ts:167:50
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/list-modes-list-and-detail-01229-ly-saved-partition-requests/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/list-modes-list-and-detail-01229-ly-saved-partition-requests/error-context.md
+
+  1 failed
+    tests/e2e/list-modes.spec.ts:142:1 › list and detail stars persist across prefectures and reload with only saved partition requests 
+  34 passed (10.6s)

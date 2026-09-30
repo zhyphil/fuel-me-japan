@@ -4,26 +4,29 @@ import { messages, type Locale } from "../i18n";
 import { prefectureName } from "../lib/find-fuel";
 import { createMapClusterCache, filterMapClusters, mapMemberKey, occupiedCellsAnchor } from "../lib/map-view";
 import { createMapFrameScheduler, createMapZoomQueue } from "../lib/map-scheduling";
-import { createMapMarkers, type MapMarkerSpec } from "../lib/map-markers";
+import { createMapMarkers, stationMarkerHeight, type MapMarkerSpec } from "../lib/map-markers";
 import { stationBrand } from "../lib/station-brand";
-import { UNKNOWN_PRICE, type StationPriceView } from "../lib/station-price-view";
-import { fuelDisplayName, priceDisplayText } from "./FuelPrice";
+import { type FuelPriceViews } from "../lib/station-price-view";
+import { fuelDisplayName, markerFuelPrices } from "./FuelPrice";
 import type { DataManifest, FuelType, PrefectureCode, Station } from "../lib/stations";
 
 export interface FuelMapHandle { focusStation: (id: string) => void; focusMap: () => void }
 interface Props {
+  layout: "map" | "list" | "detail";
   locale: Locale;
   manifest: DataManifest | null;
   stations: Station[];
-  selectedFuel: FuelType;
-  priceViews: ReadonlyMap<string, StationPriceView>;
+  selectedFuels: readonly FuelType[];
+  priceViews: FuelPriceViews;
   overview: boolean;
   viewRevision: number;
   selectedId?: string;
+  previewId?: string;
   onPrefecture: (code: PrefectureCode) => void;
   onRegions: (codes: PrefectureCode[]) => void;
   onStation: (station: Station) => void;
   onMembers: (stations: Station[]) => void;
+  onTileProvider: (url: string | null | undefined) => void;
 }
 interface Runtime {
   L: typeof Leaflet;
@@ -46,6 +49,8 @@ export const FuelMap = forwardRef<FuelMapHandle, Props>(function FuelMap(props, 
   const [failed, setFailed] = useState(false);
   const [tileFailed, setTileFailed] = useState(false);
   const [attempt, setAttempt] = useState(0);
+  const previousView = useRef<{ runtime: Runtime; layout: Props["layout"]; stations: Station[]; overview: boolean; revision: number } | null>(null);
+  const returnView = useRef<{ runtime: Runtime; stations: Station[]; overview: boolean; revision: number; center: Leaflet.LatLng; zoom: number } | null>(null);
 
   useImperativeHandle(ref, () => ({
     focusStation: (id) => { if (runtime.current) runtime.current.focusStation(id); else surface.current?.focus({ preventScroll: true }); },
@@ -59,6 +64,7 @@ export const FuelMap = forwardRef<FuelMapHandle, Props>(function FuelMap(props, 
     let disposeRuntime: (() => void) | undefined;
     const controller = new AbortController();
     async function initialize() {
+      latest.current.onTileProvider(undefined);
       try {
         // Leaflet touches window at import time: keep it out of prerender/SSR.
         const [L, response] = await Promise.all([import("leaflet"), fetch("/runtime-map-provider.json", { signal: controller.signal })]);
@@ -155,30 +161,46 @@ export const FuelMap = forwardRef<FuelMapHandle, Props>(function FuelMap(props, 
               }
             }
           } else {
+            const previewStation = current.layout === "list" ? current.stations.find((station) => station.id === current.previewId) : undefined;
+            function addStation(station: Station, selected: boolean, preview = false) {
+              const brand = stationBrand(station);
+              const prices = markerFuelPrices(current.priceViews, current.selectedFuels, station.id, current.locale);
+              const fuelLabel = prices.length ? prices.map((price) => price.label).join(" · ") : current.selectedFuels.map((fuel) => fuelDisplayName(fuel, current.locale)).join(" · ");
+              const label = `${copy.mapStationMarker.replace("{name}", station.name || copy.ffUnnamed)}${brand.text ? ` · ${brand.text}` : ""} · ${fuelLabel}`;
+              specs.push({ key: `station:${station.id}`, dataKey: station.id, ids: [station.id], lat: station.lat, lon: station.lon, text: "", label,
+                className: `map-pin-station${prices.length ? "" : " no-price"}${selected ? " is-selected" : ""}${preview ? " is-preview" : ""}`, selected,
+                station: { logo: brand.logo ?? "/brands/fuel-pump.svg", prices },
+                onClick: () => latest.current.onStation(station) });
+            }
             const clusters = filterMapClusters(stationCache(current.stations, actualZoom, 116, (station) => map.project([station.lat, station.lon], actualZoom)), viewport, 116);
             for (const cluster of clusters) {
-              const point = map.unproject([cluster.x, cluster.y], actualZoom);
-              const ids = cluster.members.map((station) => station.id);
+              // Pull only the previewed station out, including coincident records.
+              // Preserve cached clusters and count each remaining station exactly once.
+              const members = previewStation ? cluster.members.filter((station) => station.id !== previewStation.id) : cluster.members;
+              if (!members.length) continue;
+              const ids = members.map((station) => station.id);
               const selected = ids.includes(current.selectedId ?? "");
-              if (cluster.members.length === 1) {
-                const station = cluster.members[0];
-                const brand = stationBrand(station);
-                const price = current.priceViews.get(station.id) ?? UNKNOWN_PRICE;
-                const priceText = priceDisplayText(price, current.locale);
-                const label = `${copy.mapStationMarker.replace("{name}", station.name || copy.ffUnnamed)}${brand.text ? ` · ${brand.text}` : ""} · ${fuelDisplayName(current.selectedFuel, current.locale)}${priceText ? `: ${priceText}` : ""}`;
-                specs.push({ key: `station:${station.id}`, dataKey: station.id, ids, lat: point.lat, lon: point.lng, text: "", label,
-                  className: `map-pin-station${priceText ? "" : " no-price"}${selected ? " is-selected" : ""}`, selected,
-                  station: { logo: brand.logo ?? "/brands/fuel-pump.svg", price: priceText, tone: price.tone },
-                  onClick: () => latest.current.onStation(station) });
-              } else {
-                const count = cluster.members.length.toLocaleString(current.locale);
+              if (members.length === 1) addStation(members[0], selected);
+              else {
+                let x = cluster.x, y = cluster.y;
+                if (members.length !== cluster.members.length) {
+                  const removed = map.project([previewStation!.lat, previewStation!.lon], actualZoom);
+                  x = (x * cluster.members.length - removed.x) / members.length;
+                  y = (y * cluster.members.length - removed.y) / members.length;
+                }
+                const point = map.unproject([x, y], actualZoom);
+                const count = members.length.toLocaleString(current.locale);
                 const maxZoom = actualZoom >= map.getMaxZoom();
                 const key = mapMemberKey("stations", ids);
                 specs.push({ key, dataKey: key, ids, lat: point.lat, lon: point.lng, text: count,
                   label: (maxZoom ? copy.mapClusterMembers : copy.mapClusterZoom).replace("{count}", count),
                   className: `map-pin-cluster${selected ? " is-selected" : ""}`, selected,
-                  onClick: () => { if (maxZoom) latest.current.onMembers(cluster.members); else zoomGroup(point, ids); } });
+                  onClick: () => { if (maxZoom) latest.current.onMembers(members); else zoomGroup(point, ids); } });
               }
+            }
+            if (previewStation) {
+              const point = map.project([previewStation.lat, previewStation.lon], actualZoom);
+              if (point.x >= viewport.min.x - 116 && point.x <= viewport.max.x + 116 && point.y >= viewport.min.y - 116 && point.y <= viewport.max.y + 116) addStation(previewStation, true, true);
             }
           }
           for (const spec of specs) {
@@ -235,8 +257,9 @@ export const FuelMap = forwardRef<FuelMapHandle, Props>(function FuelMap(props, 
         };
         scheduler.request();
         setReady(true);
+        latest.current.onTileProvider(config.tileUrl);
       } catch {
-        if (!cancelled) { setFailed(true); disposeRuntime?.(); observer?.disconnect(); ownedMap?.remove(); ownedMap = undefined; runtime.current = null; }
+        if (!cancelled) { latest.current.onTileProvider(null); setFailed(true); disposeRuntime?.(); observer?.disconnect(); ownedMap?.remove(); ownedMap = undefined; runtime.current = null; }
       }
     }
     void initialize();
@@ -250,28 +273,67 @@ export const FuelMap = forwardRef<FuelMapHandle, Props>(function FuelMap(props, 
     };
   }, [attempt]);
 
-  useEffect(() => { runtime.current?.draw(); }, [ready, props.stations, props.manifest, props.overview, props.selectedId, props.locale, props.selectedFuel, props.priceViews]);
+  useEffect(() => { runtime.current?.draw(); }, [ready, props.stations, props.manifest, props.overview, props.selectedId, props.previewId, props.layout, props.locale, props.selectedFuels, props.priceViews]);
   useEffect(() => {
     const state = runtime.current;
     if (!ready || !state) return;
+    // Fit the smaller surface once on entry. Preserve the full-map view only
+    // while the underlying results remain the same (sorting does not alter them).
+    const previous = previousView.current;
+    const enteredList = props.layout === "list" && previous?.layout !== "list";
+    const leftList = props.layout !== "list" && previous?.layout === "list";
+    const changedResults = previous?.runtime !== state || previous.stations !== props.stations || previous.overview !== props.overview || previous.revision !== props.viewRevision;
+    previousView.current = { runtime: state, layout: props.layout, stations: props.stations, overview: props.overview, revision: props.viewRevision };
+    if (enteredList && previous?.layout === "map" && !changedResults) returnView.current = {
+      runtime: state, stations: props.stations, overview: props.overview, revision: props.viewRevision,
+      center: state.map.getCenter(), zoom: state.map.getZoom(),
+    };
+    const saved = props.layout === "map" && leftList ? returnView.current : null;
+    const restore = saved?.runtime === state && saved.stations === props.stations && saved.overview === props.overview && saved.revision === props.viewRevision ? saved : null;
+    if (props.layout !== "list") returnView.current = null;
+    // Opening/closing a detail drawer alone must retain the current zoom.
+    if (!changedResults && !enteredList && !(leftList && props.layout === "map")) return;
     state.replaceView(() => {
-      if (props.overview) state.map.fitBounds(japanBounds, { padding: [24, 24], animate: false });
-      else if (props.stations.length) state.map.fitBounds(state.L.latLngBounds(props.stations.map((station) => [station.lat, station.lon])), { paddingTopLeft: [60, 102], paddingBottomRight: [60, 24], maxZoom: 15, animate: false });
+      if (restore) state.map.setView(restore.center, restore.zoom, { animate: false });
+      else if (props.overview) state.map.fitBounds(japanBounds, { padding: [24, 24], animate: false });
+      else if (props.stations.length) {
+        const current = latest.current;
+        const height = Math.max(...current.stations.map((station) => stationMarkerHeight(markerFuelPrices(current.priceViews, current.selectedFuels, station.id, current.locale).length)));
+        const bottom = Math.min(24, Math.max(0, state.map.getSize().y - height - 9));
+        state.map.fitBounds(state.L.latLngBounds(props.stations.map((station) => [station.lat, station.lon])), { paddingTopLeft: [60, height + 8], paddingBottomRight: [60, bottom], maxZoom: 15, animate: false });
+      }
     });
-  }, [ready, props.viewRevision, props.overview, props.stations]);
+  }, [ready, props.viewRevision, props.overview, props.stations, props.layout]);
   useEffect(() => {
     const state = runtime.current;
     const station = props.stations.find((item) => item.id === props.selectedId);
     if (ready && state && station) {
-      // A list-to-detail transition makes the previously hidden map visible.
+      // A list-to-detail transition resizes the shared map surface.
       // Center the droplet body while its bottom tip stays on the real coordinate.
       state.replaceView(() => {
         const zoom = Math.max(16, state.map.getZoom());
-        const center = state.map.project([station.lat, station.lon], zoom).subtract([0, 47]);
+        const current = latest.current;
+        const height = stationMarkerHeight(markerFuelPrices(current.priceViews, current.selectedFuels, station.id, current.locale).length);
+        const center = state.map.project([station.lat, station.lon], zoom).subtract([0, height / 2]);
         state.map.setView(state.map.unproject(center, zoom), zoom, { animate: false });
       });
     }
-  }, [ready, props.selectedId, props.stations]);
+  }, [ready, props.selectedId, props.stations, props.selectedFuels, props.priceViews]);
+
+  useEffect(() => {
+    const state = runtime.current;
+    const station = props.layout === "list" && !props.overview ? props.stations.find((item) => item.id === props.previewId) : undefined;
+    if (!ready || !state || !station) return;
+    state.replaceView(() => {
+      const current = latest.current;
+      // A queued preview must never override a detail, scope change, or newer row.
+      if (current.layout !== "list" || current.previewId !== station.id || current.stations !== props.stations || current.viewRevision !== props.viewRevision) return;
+      const zoom = Math.max(16, state.map.getZoom());
+      const height = stationMarkerHeight(markerFuelPrices(current.priceViews, current.selectedFuels, station.id, current.locale).length);
+      const center = state.map.project([station.lat, station.lon], zoom).subtract([0, height / 2]);
+      state.map.setView(state.map.unproject(center, zoom), zoom, { animate: false });
+    });
+  }, [ready, props.previewId, props.layout, props.stations, props.overview, props.viewRevision, props.selectedFuels, props.priceViews]);
 
   return <div className="fuel-map">
     <div ref={surface} className="map-surface" role="region" aria-label={t.mapCanvas} aria-describedby="map-keyboard-help" tabIndex={0} />

@@ -1,0 +1,43 @@
+[WebServer] (node:20117) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:20123) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/list-minimap.spec.ts:120:1 › mini-map cluster details return through members to the list (6.1s)
+
+
+  1) tests/e2e/list-minimap.spec.ts:120:1 › mini-map cluster details return through members to the list 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('.leaflet-control-zoom-in')
+    Expected: "true"
+    Received: "false"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('.leaflet-control-zoom-in') with timeout 5000ms
+      - waiting for locator('.leaflet-control-zoom-in')
+        14 × locator resolved to <a href="#" role="button" title="Zoom in" aria-label="Zoom in" aria-disabled="false" class="leaflet-control-zoom-in">…</a>
+           - unexpected value "false"
+
+
+      146 |   }
+      147 |   await expect(page.locator(".cluster-members .station-card")).toHaveCount(2);
+    > 148 |   await expect(page.locator(".leaflet-control-zoom-in")).toHaveAttribute("aria-disabled", "true");
+          |                                                          ^
+      149 |   const member = page.locator(`[id="members-${file.stations[0].id}"]`);
+      150 |   await member.click();
+      151 |   await expect(page.locator("#station-title")).toHaveText("Mini-map overlapping station");
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/list-minimap.spec.ts:148:58
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/list-minimap-mini-map-clus-1a986-through-members-to-the-list/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/list-minimap-mini-map-clus-1a986-through-members-to-the-list/error-context.md
+
+  1 failed
+    tests/e2e/list-minimap.spec.ts:120:1 › mini-map cluster details return through members to the list 

@@ -1,0 +1,5 @@
+help FAIL locator.click: Target crashed 
+Call log:
+[2m  - waiting for locator('#fuel-selection-help')[22m
+[2m    - locator reso
+panel-padding FAIL mouse.click: Target crashed 

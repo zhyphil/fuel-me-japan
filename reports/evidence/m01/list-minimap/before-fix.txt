@@ -1,0 +1,241 @@
+[WebServer] (node:18044) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 7 tests using 2 workers
+
+(node:18045) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:18046) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/e2e/list-minimap.spec.ts:23:3 › list and mini-map at 320px share usable space with independent list scrolling (5.5s)
+  ✘  1 tests/e2e/list-minimap.spec.ts:23:3 › list and mini-map at 390px share usable space with independent list scrolling (5.5s)
+(node:18067) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:18068) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 tests/e2e/list-minimap.spec.ts:23:3 › list and mini-map at 768px share usable space with independent list scrolling (5.4s)
+  ✘  3 tests/e2e/list-minimap.spec.ts:23:3 › list and mini-map at 1280px share usable space with independent list scrolling (5.4s)
+(node:18083) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:18084) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  6 tests/e2e/list-minimap.spec.ts:75:1 › favorites and query synchronize mini-map markers without loading another partition (478ms)
+(node:18094) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  7 tests/e2e/list-minimap.spec.ts:96:1 › mini-map tile errors do not cover filter or location controls (301ms)
+  ✘  5 tests/e2e/list-minimap.spec.ts:55:1 › a mini-map marker opens details then returns to the same list and marker focus (5.4s)
+
+
+  1) tests/e2e/list-minimap.spec.ts:23:3 › list and mini-map at 320px share usable space with independent list scrolling 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('.location-button:visible')
+    Expected: 1
+    Received: 2
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('.location-button:visible') with timeout 5000ms
+      - waiting for locator('.location-button:visible')
+        14 × locator resolved to 2 elements
+           - unexpected value "2"
+
+
+      37 |     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+      38 |     await expect(page.locator(".map-surface.leaflet-container")).toHaveCount(1);
+    > 39 |     await expect(page.locator(".location-button:visible")).toHaveCount(1);
+         |                                                            ^
+      40 |     await expect(page.locator(".station-filter-trigger:visible")).toHaveCount(1);
+      41 |     for (const selector of [".location-button", ".station-filter-trigger", ".leaflet-control-zoom-in", ".leaflet-control-zoom-out"]) {
+      42 |       const box = await page.locator(selector).boundingBox();
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/list-minimap.spec.ts:39:60
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/list-minimap-list-and-mini-092dc--independent-list-scrolling/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/list-minimap-list-and-mini-092dc--independent-list-scrolling/error-context.md
+
+  2) tests/e2e/list-minimap.spec.ts:23:3 › list and mini-map at 390px share usable space with independent list scrolling 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('.location-button:visible')
+    Expected: 1
+    Received: 2
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('.location-button:visible') with timeout 5000ms
+      - waiting for locator('.location-button:visible')
+        14 × locator resolved to 2 elements
+           - unexpected value "2"
+
+
+      37 |     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+      38 |     await expect(page.locator(".map-surface.leaflet-container")).toHaveCount(1);
+    > 39 |     await expect(page.locator(".location-button:visible")).toHaveCount(1);
+         |                                                            ^
+      40 |     await expect(page.locator(".station-filter-trigger:visible")).toHaveCount(1);
+      41 |     for (const selector of [".location-button", ".station-filter-trigger", ".leaflet-control-zoom-in", ".leaflet-control-zoom-out"]) {
+      42 |       const box = await page.locator(selector).boundingBox();
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/list-minimap.spec.ts:39:60
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/list-minimap-list-and-mini-feb36--independent-list-scrolling/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/list-minimap-list-and-mini-feb36--independent-list-scrolling/error-context.md
+
+  3) tests/e2e/list-minimap.spec.ts:23:3 › list and mini-map at 768px share usable space with independent list scrolling 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('.location-button:visible')
+    Expected: 1
+    Received: 2
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('.location-button:visible') with timeout 5000ms
+      - waiting for locator('.location-button:visible')
+        14 × locator resolved to 2 elements
+           - unexpected value "2"
+
+
+      37 |     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+      38 |     await expect(page.locator(".map-surface.leaflet-container")).toHaveCount(1);
+    > 39 |     await expect(page.locator(".location-button:visible")).toHaveCount(1);
+         |                                                            ^
+      40 |     await expect(page.locator(".station-filter-trigger:visible")).toHaveCount(1);
+      41 |     for (const selector of [".location-button", ".station-filter-trigger", ".leaflet-control-zoom-in", ".leaflet-control-zoom-out"]) {
+      42 |       const box = await page.locator(selector).boundingBox();
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/list-minimap.spec.ts:39:60
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/list-minimap-list-and-mini-ca7af--independent-list-scrolling/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/list-minimap-list-and-mini-ca7af--independent-list-scrolling/error-context.md
+
+  4) tests/e2e/list-minimap.spec.ts:23:3 › list and mini-map at 1280px share usable space with independent list scrolling 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('.location-button:visible')
+    Expected: 1
+    Received: 2
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('.location-button:visible') with timeout 5000ms
+      - waiting for locator('.location-button:visible')
+        14 × locator resolved to 2 elements
+           - unexpected value "2"
+
+
+      37 |     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+      38 |     await expect(page.locator(".map-surface.leaflet-container")).toHaveCount(1);
+    > 39 |     await expect(page.locator(".location-button:visible")).toHaveCount(1);
+         |                                                            ^
+      40 |     await expect(page.locator(".station-filter-trigger:visible")).toHaveCount(1);
+      41 |     for (const selector of [".location-button", ".station-filter-trigger", ".leaflet-control-zoom-in", ".leaflet-control-zoom-out"]) {
+      42 |       const box = await page.locator(selector).boundingBox();
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/list-minimap.spec.ts:39:60
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/list-minimap-list-and-mini-1c70d--independent-list-scrolling/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/list-minimap-list-and-mini-1c70d--independent-list-scrolling/error-context.md
+
+  5) tests/e2e/list-minimap.spec.ts:55:1 › a mini-map marker opens details then returns to the same list and marker focus 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('.map-workspace.show-list')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('.map-workspace.show-list') with timeout 5000ms
+      - waiting for locator('.map-workspace.show-list')
+
+
+      63 |   await expect(page.locator("#station-title")).toHaveText(unique.name || en.ffUnnamed);
+      64 |   await page.keyboard.press("Escape");
+    > 65 |   await expect(page.locator(".map-workspace.show-list")).toBeVisible();
+         |                                                          ^
+      66 |   await expect(marker).toBeFocused();
+      67 |   await expect(page.locator("#station-search")).toHaveValue(unique.address!);
+      68 |   const card = page.locator(`[id="list-${unique.id}"]`);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/list-minimap.spec.ts:65:58
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/list-minimap-a-mini-map-ma-51c77--same-list-and-marker-focus/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/list-minimap-a-mini-map-ma-51c77--same-list-and-marker-focus/error-context.md
+
+  6) tests/e2e/list-minimap.spec.ts:75:1 › favorites and query synchronize mini-map markers without loading another partition 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 3
+
+    - Array []
+    + Array [
+    +   "http://127.0.0.1:4173/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-01.json",
+    + ]
+
+      91 |   await page.locator(".map-list-panel .favorite-button").click();
+      92 |   await expect(page.locator(".station-card, .map-pin-station, .map-pin-cluster")).toHaveCount(0);
+    > 93 |   expect(requests).toEqual([]);
+         |                    ^
+      94 | });
+      95 |
+      96 | test("mini-map tile errors do not cover filter or location controls", async ({ page }) => {
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/list-minimap.spec.ts:93:20
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/list-minimap-favorites-and-cabdc-t-loading-another-partition/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/list-minimap-favorites-and-cabdc-t-loading-another-partition/error-context.md
+
+  7) tests/e2e/list-minimap.spec.ts:96:1 › mini-map tile errors do not cover filter or location controls 
+
+    Error: locator.boundingBox: Error: strict mode violation: locator('.station-filter-trigger') resolved to 2 elements:
+        1) <button type="button" aria-label="Filters" aria-haspopup="dialog" class="button station-filter-trigger">…</button> aka getByRole('button', { name: 'Filters' }).first()
+        2) <button type="button" aria-label="Filters" aria-haspopup="dialog" class="button station-filter-trigger">…</button> aka getByRole('button', { name: 'Filters' }).nth(1)
+
+    Call log:
+      - waiting for locator('.station-filter-trigger')
+
+
+      102 |   const error = await message.boundingBox();
+      103 |   for (const selector of [".station-filter-trigger", ".location-button"]) {
+    > 104 |     const control = await page.locator(selector).boundingBox();
+          |                                                  ^
+      105 |     expect(error!.x + error!.width <= control!.x || control!.x + control!.width <= error!.x || error!.y + error!.height <= control!.y || control!.y + control!.height <= error!.y).toBe(true);
+      106 |   }
+      107 |   await page.locator(".station-filter-trigger").click();
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/list-minimap.spec.ts:104:50
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/list-minimap-mini-map-tile-b442c-filter-or-location-controls/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/list-minimap-mini-map-tile-b442c-filter-or-location-controls/error-context.md
+
+  7 failed
+    tests/e2e/list-minimap.spec.ts:23:3 › list and mini-map at 320px share usable space with independent list scrolling 
+    tests/e2e/list-minimap.spec.ts:23:3 › list and mini-map at 390px share usable space with independent list scrolling 
+    tests/e2e/list-minimap.spec.ts:23:3 › list and mini-map at 768px share usable space with independent list scrolling 
+    tests/e2e/list-minimap.spec.ts:23:3 › list and mini-map at 1280px share usable space with independent list scrolling 
+    tests/e2e/list-minimap.spec.ts:55:1 › a mini-map marker opens details then returns to the same list and marker focus 
+    tests/e2e/list-minimap.spec.ts:75:1 › favorites and query synchronize mini-map markers without loading another partition 
+    tests/e2e/list-minimap.spec.ts:96:1 › mini-map tile errors do not cover filter or location controls 

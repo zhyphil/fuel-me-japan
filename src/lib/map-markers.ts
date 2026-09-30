@@ -10,7 +10,7 @@ export interface MapMarkerSpec {
   className: string;
   text: string;
   selected: boolean;
-  station?: { logo: string; price: string; tone: string };
+  station?: { logo: string; prices: { fuel: string; text: string; tone: string }[] };
   place?: string;
   regionCodes?: string;
   onClick: () => void;
@@ -21,9 +21,10 @@ interface Entry {
   button: HTMLButtonElement;
   symbol: HTMLSpanElement;
   image?: HTMLImageElement;
-  price?: HTMLSpanElement;
+  prices?: HTMLSpanElement;
   place?: HTMLSpanElement;
 }
+export function stationMarkerHeight(priceCount: number): number { return 94 + Math.max(0, priceCount - 1) * 26; }
 const fallbackLogo = "/brands/fuel-pump.svg";
 
 /** Diff by complete membership, retaining Leaflet and native DOM identities. */
@@ -83,11 +84,26 @@ export function createMapMarkers(L: typeof Leaflet, layer: Leaflet.LayerGroup, s
         if (previous && (previous.lat !== spec.lat || previous.lon !== spec.lon)) marker.setLatLng([spec.lat, spec.lon]);
         if (!spec.station && previous?.text !== spec.text) symbol.textContent = spec.text;
         if (entry.image && previous?.station?.logo !== spec.station?.logo) entry.image.src = spec.station!.logo;
-        if (spec.station?.price) {
-          if (!entry.price) { entry.price = document.createElement("span"); entry.price.setAttribute("aria-hidden", "true"); button.append(entry.price); }
-          if (previous?.station?.price !== spec.station.price) entry.price.textContent = spec.station.price;
-          if (previous?.station?.tone !== spec.station.tone || !previous?.station?.price) entry.price.className = `station-price price-${spec.station.tone}`;
-        } else if (entry.price) { entry.price.remove(); entry.price = undefined; }
+        if (spec.station && JSON.stringify(previous?.station?.prices) !== JSON.stringify(spec.station.prices)) {
+          const count = spec.station.prices.length;
+          const height = stationMarkerHeight(count);
+          button.style.height = `${height}px`;
+          const shape = button.querySelector("svg")!;
+          shape.setAttribute("viewBox", `0 0 76 ${height}`);
+          shape.style.height = `${height}px`;
+          shape.querySelector("path")!.setAttribute("d", `M38 ${height - 2}C32 ${height - 10} 3 61 3 38C3 18.7 18.7 3 38 3S73 18.7 73 38C73 61 44 ${height - 10} 38 ${height - 2}Z`);
+          // Resize the existing icon in place, preserving native focus and DOM identity.
+          marker.options.icon!.options.iconSize = [96, height];
+          marker.options.icon!.options.iconAnchor = [48, height];
+          const icon = marker.getElement()!;
+          icon.style.height = `${height}px`; icon.style.marginTop = `${-height}px`;
+          if (count) {
+            if (!entry.prices) { entry.prices = document.createElement("span"); entry.prices.className = "map-price-bands"; entry.prices.setAttribute("aria-hidden", "true"); button.append(entry.prices); }
+            entry.prices.replaceChildren(...spec.station.prices.map((price) => {
+              const band = document.createElement("span"); band.className = `station-price price-${price.tone}`; band.dataset.fuel = price.fuel; band.textContent = price.text; return band;
+            }));
+          } else if (entry.prices) { entry.prices.remove(); entry.prices = undefined; }
+        }
         if (spec.place) {
           if (!entry.place) { entry.place = document.createElement("span"); entry.place.className = "map-pin-place"; entry.place.lang = "ja"; entry.place.setAttribute("aria-hidden", "true"); button.append(entry.place); }
           if (previous?.place !== spec.place) entry.place.textContent = spec.place;

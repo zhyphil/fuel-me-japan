@@ -1,0 +1,47 @@
+{
+  "核验时间": "2026-09-30T15:29:02.555790+00:00",
+  "基线": "de82cfdda777e55b67357b75d3938610b528ac4e",
+  "说明": "本轮只读核验既有全套检查及当前文件一致性，没有重新运行 npm run check。随后仅整理 README 和本轮报告。",
+  "源码与测试快照": {
+    "status": "PASS",
+    "数量": 71,
+    "基准": "reports/evidence/m01/multi-fuel/source-final-sha256.json",
+    "差异": []
+  },
+  "冻结规格及数据保护快照": {
+    "status": "PASS",
+    "数量": 84,
+    "基准": "reports/evidence/m01/fuel-price-markers/protected-sha256.json",
+    "差异": []
+  },
+  "检查日志": {
+    "path": "reports/evidence/m01/multi-fuel/full-check.txt",
+    "sha256": "61270bea667330b80538bd443515cb3db764d90cfdeb672b943fe2ab579001b7"
+  },
+  "浏览器记录": {
+    "path": "reports/evidence/m01/multi-fuel/browser-results.json",
+    "sha256": "3254504b726abbf8cd851697066d9efdcdd01ab66519eb553c7c317789790269",
+    "stats": {
+      "startTime": "2026-09-30T15:11:22.186Z",
+      "duration": 14695.988,
+      "expected": 149,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "差异格式检查": "PASS",
+  "生产站点报价": "EMPTY",
+  "独立审查": {
+    "执行者": "list_minimap_layout",
+    "方式": "READ_ONLY",
+    "确认新增缺陷数": 0,
+    "范围": [
+      "跨分区收藏竞态和过期回调",
+      "地图视角与键盘焦点恢复",
+      "悬停与聚合成员处理",
+      "多油种独立比价及旧偏好迁移"
+    ],
+    "限制": "审查源码、测试和既有报告，没有重跑检查；合成报价夹具不代表真实报价或真机验收。"
+  }
+}

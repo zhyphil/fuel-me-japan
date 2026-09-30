@@ -1,3 +1,4 @@
+import { chooseFuels } from "./fuel-selection";
 import { readFileSync } from "node:fs";
 import { test, expect } from "./offline";
 const messages = Object.fromEntries(["en", "zh-Hant", "ko", "zh-Hans", "th"].map((locale) => [locale, JSON.parse(readFileSync(`src/locales/${locale}.json`, "utf8"))])) as Record<string, Record<string, string>>;
@@ -12,18 +13,18 @@ const unique = (logo: string) => stations.find((s) => stationBrand(s).logo === l
 
 test("explicit enum preference survives language and refresh; reset preserves unrelated storage", async ({ page }) => {
   await page.goto("/en/");
-  await expect(page.locator("#display-fuel")).toHaveValue("REGULAR");
+  await expect(page.locator('#display-fuel input[value="REGULAR"]')).toBeChecked();
   expect(await page.evaluate(() => localStorage.length)).toBe(0);
-  await page.locator("#display-fuel").selectOption("DIESEL");
-  expect(await page.evaluate(() => ({ ...localStorage }))).toEqual({ [FUEL_PREFERENCE_KEY]: "DIESEL" });
+  await chooseFuels(page, ["DIESEL"]);
+  expect(await page.evaluate(() => ({ ...localStorage }))).toEqual({ [FUEL_PREFERENCE_KEY]: JSON.stringify(["DIESEL"]) });
   await page.locator('.locale-switcher a[lang="zh-Hans"]').click();
-  await expect(page.locator("#display-fuel")).toHaveValue("DIESEL");
-  await expect(page.locator('#display-fuel option[value="DIESEL"]')).toHaveText(`${messages["zh-Hans"].ffDiesel} / 軽油`);
-  await page.reload(); await expect(page.locator("#display-fuel")).toHaveValue("DIESEL");
+  await expect(page.locator('#display-fuel input[value="DIESEL"]')).toBeChecked();
+  await expect(page.locator('#display-fuel input[value="DIESEL"]').locator("..")).toHaveText(`${messages["zh-Hans"].ffDiesel} / 軽油`);
+  await page.reload(); await expect(page.locator('#display-fuel input[value="DIESEL"]')).toBeChecked();
   await page.evaluate(() => localStorage.setItem("unrelated", "keep"));
   await page.locator(".map-notes > summary").click();
   await page.getByRole("button", { name: messages["zh-Hans"].fpReset, exact: true }).click();
-  await expect(page.locator("#display-fuel")).toHaveValue("REGULAR");
+  await expect(page.locator('#display-fuel input[value="REGULAR"]')).toBeChecked();
   expect(await page.evaluate(() => ({ ...localStorage }))).toEqual({ unrelated: "keep" });
 });
 
@@ -45,12 +46,12 @@ test("real station hides missing price without an empty band; fuel change preser
   const before = await pin.boundingBox();
   const requests: string[] = [];
   page.on("request", (request) => { if (request.url().includes("/data/")) requests.push(request.url()); });
-  await page.locator("#display-fuel").selectOption("DIESEL");
+  await chooseFuels(page, ["DIESEL"]);
   await expect(pin).toHaveAttribute("aria-label", /軽油/);
   expect(await pin.boundingBox()).toEqual(before);
   expect(requests).toEqual([]);
   expect(await page.evaluate(() => (window as unknown as { __locationRequests: number }).__locationRequests)).toBe(0);
-  await page.locator("#display-fuel").selectOption("REGULAR");
+  await chooseFuels(page, ["REGULAR"]);
   await pin.focus(); await page.keyboard.press("Enter");
   await expect(page.locator(".selected-fuel-price")).toHaveCount(0);
   await page.keyboard.press("Escape"); await expect(pin).toBeFocused();
@@ -109,11 +110,11 @@ for (const logo of ["/brands/eneos-symbol.svg", "/brands/cosmo-symbol.svg"]) {
 
 test("invalid and blocked storage keep selection usable without auto-location", async ({ page }) => {
   await page.addInitScript((key) => localStorage.setItem(key, "invalid"), FUEL_PREFERENCE_KEY);
-  await page.goto("/en/"); await expect(page.locator("#display-fuel")).toHaveValue("REGULAR");
+  await page.goto("/en/"); await expect(page.locator('#display-fuel input[value="REGULAR"]')).toBeChecked();
   await page.evaluate(() => Object.defineProperty(window, "localStorage", { configurable: true, get() { throw Error("blocked"); } }));
-  await page.locator("#display-fuel").selectOption("HIGH_OCTANE");
-  await expect(page.locator("#display-fuel")).toHaveValue("HIGH_OCTANE");
+  await chooseFuels(page, ["HIGH_OCTANE"]);
+  await expect(page.locator('#display-fuel input[value="HIGH_OCTANE"]')).toBeChecked();
   await page.locator(".map-notes > summary").click();
   await page.getByRole("button", { name: en.fpReset, exact: true }).click();
-  await expect(page.locator("#display-fuel")).toHaveValue("REGULAR");
+  await expect(page.locator('#display-fuel input[value="REGULAR"]')).toBeChecked();
 });

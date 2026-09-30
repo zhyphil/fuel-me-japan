@@ -1,0 +1,43 @@
+[WebServer] (node:29866) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:29868) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/station-mini-map.spec.ts:20:1 › each list station has its own lazy map and returns keyboard focus after opening details (5.6s)
+
+
+  1) tests/e2e/station-mini-map.spec.ts:20:1 › each list station has its own lazy map and returns keyboard focus after opening details 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('.station-list .station-mini-map-open')
+    Expected: 25
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('.station-list .station-mini-map-open') with timeout 5000ms
+      - waiting for locator('.station-list .station-mini-map-open')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      22 |   await openList(page);
+      23 |   const maps = page.locator(".station-list .station-mini-map-open");
+    > 24 |   await expect(maps).toHaveCount(25);
+         |                      ^
+      25 |   await expect(maps.first().locator(".station-mini-map-tiles img").first()).toBeVisible();
+      26 |   await expect(maps.last().locator(".station-mini-map-tiles img")).toHaveCount(0);
+      27 |   await expect(page.locator(".leaflet-container")).toHaveCount(1);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/station-mini-map.spec.ts:24:22
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/station-mini-map-each-list-96402-focus-after-opening-details/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/station-mini-map-each-list-96402-focus-after-opening-details/error-context.md
+
+  1 failed
+    tests/e2e/station-mini-map.spec.ts:20:1 › each list station has its own lazy map and returns keyboard focus after opening details 

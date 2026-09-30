@@ -1,0 +1,52 @@
+[WebServer] (node:46175) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 3 tests using 1 worker
+
+(node:46176) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/fuel-label.spec.ts:6:5 › mouse › fuel label text toggles exactly once and never closes its panel (522ms)
+(node:46187) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/e2e/fuel-label.spec.ts:6:5 › touch › fuel label text toggles exactly once and never closes its panel (544ms)
+(node:46197) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 tests/e2e/fuel-label.spec.ts:48:1 › fuel panel closes when keyboard focus actually leaves, and Escape restores summary focus (277ms)
+
+
+  1) tests/e2e/fuel-label.spec.ts:6:5 › mouse › fuel label text toggles exactly once and never closes its panel 
+
+    Error: mouse.down: Target crashed 
+
+      18 |         else {
+      19 |           await page.mouse.move(x, y);
+    > 20 |           await page.mouse.down();
+         |                            ^
+      21 |           // Exercise a held label press, before the native click/focus activation.
+      22 |           await expect(panel).toHaveAttribute("open", "");
+      23 |           await page.waitForTimeout(150);
+        at selectText (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-label.spec.ts:20:28)
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-label.spec.ts:29:7
+
+    Error Context: test-results/fuel-label-mouse-fuel-labe-0022c--and-never-closes-its-panel/error-context.md
+
+  2) tests/e2e/fuel-label.spec.ts:6:5 › touch › fuel label text toggles exactly once and never closes its panel 
+
+    Error: touchscreen.tap: Target crashed 
+
+      15 |         // Click the text area, not the input that getByLabel/check would target.
+      16 |         const x = box!.x + box!.width - 24, y = box!.y + box!.height / 2;
+    > 17 |         if (mode === "touch") await page.touchscreen.tap(x, y);
+         |                                                      ^
+      18 |         else {
+      19 |           await page.mouse.move(x, y);
+      20 |           await page.mouse.down();
+        at selectText (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-label.spec.ts:17:54)
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-label.spec.ts:29:7
+
+    Error Context: test-results/fuel-label-touch-fuel-labe-7e523--and-never-closes-its-panel/error-context.md
+
+  2 failed
+    tests/e2e/fuel-label.spec.ts:6:5 › mouse › fuel label text toggles exactly once and never closes its panel 
+    tests/e2e/fuel-label.spec.ts:6:5 › touch › fuel label text toggles exactly once and never closes its panel 
+  1 passed (2.8s)

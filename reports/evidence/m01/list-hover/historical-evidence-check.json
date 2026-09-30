@@ -1,0 +1,18 @@
+{
+  "说明": "本次全量检查生成的回归截图另存于本轮目录，原有截图恢复为本次全量检查前内容。",
+  "status": "PASS",
+  "文件数": 11,
+  "sha256": {
+    "reports/evidence/m01/list-modes/favorites-1280-offline.png": "f7f3242ee1ca8027187d807b7bf148730d49cce25c59de45a5816879a161acab",
+    "reports/evidence/m01/list-modes/favorites-320-offline.png": "2411ae185e16c773178608e6cd0ac0dbcea915f666971579dadc8c5e09b785f9",
+    "reports/evidence/m01/list-modes/favorites-390-offline.png": "d87a0b4138d483032d468e13f6c60e3c9fbcd74b50b04d2c590ae0ef641dda53",
+    "reports/evidence/m01/list-minimap/layout-1280-offline.png": "3ee2a4fedbd6b3dd9e7c6b4f545ab7e4a26d02897d101334f68913b0202fab6c",
+    "reports/evidence/m01/list-minimap/layout-320-offline.png": "a64291b542bb6f9e9a43c2752099c230ca3457ccf503e5da6a21cdf98f64e586",
+    "reports/evidence/m01/list-minimap/layout-768-offline.png": "193705174bf09cb8c4c141571ff7d6c14ac37033ec511d0ea76fce467d64a30a",
+    "reports/evidence/m01/list-minimap/layout-390-offline.png": "97de9981a9bec0dd718fb9566e9873cc1482e1350e9ae403e9a4702cf89ecd99",
+    "reports/evidence/m01/station-mini-maps/layout-1280-offline.png": "bb0ca75ec9e4a92b9490a2813ca066a3e1d38aeec9299145357037ad16121070",
+    "reports/evidence/m01/station-mini-maps/layout-320-offline.png": "956e7ecf59b859e8438a4ed49ec9a335e61fdd88d7ba6a8271927bb3bd5c7e93",
+    "reports/evidence/m01/station-mini-maps/layout-768-offline.png": "9e2a080086996a5776bd0921844c271b13c7e59532357cf765e61a1be5593fa3",
+    "reports/evidence/m01/station-mini-maps/layout-390-offline.png": "d88806814bc3e621814c5d2cfecdce381e51dac58b74a17f9b9aaab9ad9cf356"
+  }
+}

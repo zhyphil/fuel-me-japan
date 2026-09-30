@@ -1,0 +1,29 @@
+[WebServer] (node:30509) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 14 tests using 4 workers
+
+(node:30513) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:30510) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:30512) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:30511) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/station-mini-map.spec.ts:42:3 › station thumbnails fit each card at 768px (717ms)
+  ✓   2 tests/e2e/station-mini-map.spec.ts:42:3 › station thumbnails fit each card at 320px (728ms)
+  ✓   3 tests/e2e/station-mini-map.spec.ts:42:3 › station thumbnails fit each card at 390px (732ms)
+  ✓   4 tests/e2e/station-mini-map.spec.ts:20:1 › each list station has its own lazy map and returns keyboard focus after opening details (760ms)
+  ✓   8 tests/e2e/station-mini-map.spec.ts:107:1 › failed thumbnail tiles show a fallback and still open the correct station (450ms)
+  ✓   7 tests/e2e/station-mini-map.spec.ts:84:1 › thumbnails follow favorites, search and fuel selection without separate configuration requests (536ms)
+  ✓   5 tests/e2e/station-mini-map.spec.ts:42:3 › station thumbnails fit each card at 1280px (650ms)
+  ✓   6 tests/e2e/station-mini-map.spec.ts:70:1 › wheel over a thumbnail scrolls the list without zooming the overall map (676ms)
+  ✓  10 tests/e2e/station-mini-map.spec.ts:136:3 › thumbnail labels and brand fallback use en (296ms)
+  ✓   9 tests/e2e/station-mini-map.spec.ts:118:1 › rejected map configuration is shared with thumbnails and can be retried (464ms)
+  ✓  11 tests/e2e/station-mini-map.spec.ts:136:3 › thumbnail labels and brand fallback use zh-Hant (310ms)
+  ✓  12 tests/e2e/station-mini-map.spec.ts:136:3 › thumbnail labels and brand fallback use ko (307ms)
+  ✓  13 tests/e2e/station-mini-map.spec.ts:136:3 › thumbnail labels and brand fallback use zh-Hans (315ms)
+  ✓  14 tests/e2e/station-mini-map.spec.ts:136:3 › thumbnail labels and brand fallback use th (327ms)
+
+  14 passed (3.0s)

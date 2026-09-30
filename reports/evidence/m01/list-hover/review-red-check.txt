@@ -1,0 +1,58 @@
+[WebServer] (node:32852) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 9 tests using 4 workers
+
+(node:32856) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:32853) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:32854) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:32855) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 tests/e2e/list-hover.spec.ts:111:1 › keyboard focus previews a station and clicking still opens details then restores the card focus (934ms)
+  ✓  4 tests/e2e/list-hover.spec.ts:96:1 › hovered coincident stations have their own marker and are excluded from the remaining cluster count (1.1s)
+  ✓  3 tests/e2e/list-hover.spec.ts:66:1 › rapid row changes keep only the last preview, and leaving a pending row cancels it (1.2s)
+  ✓  1 tests/e2e/list-hover.spec.ts:52:1 › hovering a list station zooms its marker into the overall map without opening details or stealing focus (1.3s)
+  ✓  5 tests/e2e/list-hover.spec.ts:125:1 › hover does not overwrite the full-map view saved before entering the list (915ms)
+  ✓  7 tests/e2e/list-hover.spec.ts:156:1 › opening a different detail takes precedence over an uncommitted hover (704ms)
+  ✓  8 tests/e2e/list-hover.spec.ts:168:1 › touch movement does not trigger hover zoom (664ms)
+  ✓  6 tests/e2e/list-hover.spec.ts:134:1 › changing query or area cancels an obsolete preview without fetching location (975ms)
+  ✘  9 tests/e2e/list-hover.spec.ts:178:1 › closing cluster members does not revive an earlier hover preview (6.1s)
+
+
+  1) tests/e2e/list-hover.spec.ts:178:1 › closing cluster members does not revive an earlier hover preview 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('.cluster-members .station-card')
+    Expected: 3
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('.cluster-members .station-card') with timeout 5000ms
+      - waiting for locator('.cluster-members .station-card')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      196 |   }));
+      197 |   await group.press("Enter");
+    > 198 |   await expect(page.locator(".cluster-members .station-card")).toHaveCount(3);
+          |                                                                ^
+      199 |   await page.locator(".cluster-members > button").click();
+      200 |   await expect(page.locator(".map-workspace.show-list")).toBeVisible();
+      201 |   await expect(page.locator(".map-pin-station.is-preview")).toHaveCount(0);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/list-hover.spec.ts:198:64
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/list-hover-closing-cluster-d4615-ve-an-earlier-hover-preview/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/list-hover-closing-cluster-d4615-ve-an-earlier-hover-preview/error-context.md
+
+  1 failed
+    tests/e2e/list-hover.spec.ts:178:1 › closing cluster members does not revive an earlier hover preview 
+  8 passed (8.9s)

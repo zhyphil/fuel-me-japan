@@ -1,0 +1,179 @@
+--- src/components/FindFuel.tsx
++++ src/components/FindFuel.tsx
+@@ -51,6 +51,8 @@
+   const [regionOptions, setRegionOptions] = useState<PrefectureCode[] | null>(null);
+   const [view, setView] = useState<"map" | "list">("map");
+   const [viewRevision, setViewRevision] = useState(0);
++  const [preview, setPreview] = useState<{ id: string; stations: Station[]; revision: number; mode: ListMode } | null>(null);
++  const previewPending = useRef<{ id: string; timer: ReturnType<typeof setTimeout> } | null>(null);
+   const [mapTileUrl, setMapTileUrl] = useState<string | null | undefined>(undefined);
+   const epoch = useRef(0);
+   const controller = useRef<AbortController | null>(null);
+@@ -203,7 +205,12 @@
+   function favoriteButton(station: Station) {
+     return <FavoriteButton locale={locale} name={station.name || t.ffUnnamed} saved={favorites.ids.has(station.id)} onClick={() => toggleFavorite({ id: station.id, partition: station.prefectureCode })} />;
+   }
++  function cancelPreviewRequest() {
++    if (previewPending.current) clearTimeout(previewPending.current.timer);
++    previewPending.current = null;
++  }
+   function openStation(station: Station, kind: "map" | "list" | "members" | "thumbnail") {
++    cancelPreviewRequest();
+     origin.current = { kind, id: station.id, view };
+     setView("map");
+     if (kind !== "members") setMembers(null);
+@@ -232,6 +239,21 @@
+   const busy = status === "location" || status === "loading" || status === "overviewLoading";
+   const drawer = Boolean(selected || members);
+   const overview = !favoritesActive && scope === "overview";
++  const previewId = view === "list" && !drawer && !overview && preview?.stations === filtered && preview.revision === viewRevision && preview.mode === listMode ? preview.id : undefined;
++  useEffect(() => {
++    setPreview(null);
++    return cancelPreviewRequest;
++  }, [filtered, viewRevision, view, listMode]);
++  function previewStation(station: Station, immediate = false) {
++    if (!immediate && (previewId === station.id || previewPending.current?.id === station.id)) return;
++    cancelPreviewRequest();
++    const show = () => {
++      previewPending.current = null;
++      setPreview({ id: station.id, stations: filtered, revision: viewRevision, mode: listMode });
++    };
++    if (immediate) show();
++    else previewPending.current = { id: station.id, timer: setTimeout(show, 120) };
++  }
+   const range = favoritesActive ? t.lmSavedScope : overview ? t.mapOverviewScope : scope === "nearby" ? t.mapNearbyScope : prefectureName(prefecture as PrefectureCode) ?? t.ffUnknown;
+   const filterButton = <FilterTrigger locale={locale} count={appliedCount} disabled={status !== "ready" || overview} onOpen={setFilterTrigger} />;
+   const locationButton = <button type="button" className="button location-button" aria-label={t.ffUseLocation} title={status === "location" ? t.ffLocating : t.ffUseLocation} aria-busy={status === "location"} onClick={useLocation}><Icon name="locate" /></button>;
+@@ -259,14 +281,17 @@
+     {favoritesActive && favorites.entries.length > 0 && status !== "ready" && <details className="favorite-recovery"><summary>{t.lmManageSaved}</summary><ul>{favorites.entries.map((entry) => <li key={entry.id}><span>{entry.id} · {entry.partition}</span><FavoriteButton locale={locale} name={entry.id} saved onClick={() => toggleFavorite(entry)} /></li>)}</ul></details>}
+     {favoritesActive && favorites.missing.length > 0 && <div className="favorite-recovery"><p>{t.lmMissing}</p><ul>{favorites.missing.map((entry) => <li key={entry.id}><span>{entry.id} · {entry.partition}</span><FavoriteButton locale={locale} name={entry.id} saved onClick={() => toggleFavorite(entry)} /></li>)}</ul><button type="button" className="text-button" onClick={favorites.retry}>{t.ffRetry}</button></div>}
+     <div className={`map-workspace${drawer ? " has-drawer" : ""}${view === "list" && !drawer ? " show-list" : ""}`}>
+-      <div className="map-stage"><FuelMap ref={map} onTileProvider={setMapTileUrl} layout={drawer ? "detail" : view} locale={locale} manifest={activeManifest} stations={filtered} selectedFuel={selectedFuel} priceViews={priceViews} overview={overview} viewRevision={viewRevision} selectedId={selected?.id} onPrefecture={choosePrefecture} onRegions={(codes) => { setRegionOptions(codes); setView("list"); }} onStation={(station) => openStation(station, "map")} onMembers={(stations) => { setSelected(null); setMembers(stations); }} />{locationButton}{filterButton}</div>
+-      {view === "list" && !drawer && <div className="map-list-panel">
++      <div className="map-stage"><FuelMap ref={map} previewId={previewId} onTileProvider={setMapTileUrl} layout={drawer ? "detail" : view} locale={locale} manifest={activeManifest} stations={filtered} selectedFuel={selectedFuel} priceViews={priceViews} overview={overview} viewRevision={viewRevision} selectedId={selected?.id} onPrefecture={choosePrefecture} onRegions={(codes) => { setRegionOptions(codes); setView("list"); }} onStation={(station) => openStation(station, "map")} onMembers={(stations) => { setSelected(null); setMembers(stations); }} />{locationButton}{filterButton}</div>
++      {view === "list" && !drawer && <div className="map-list-panel" onScroll={cancelPreviewRequest}>
+         {listMode === "cheapest" && !overview && status === "ready" && <p className="list-mode-help" role="status">{t[cheapest.ranking === "ranked" ? "lmPriceRanked" : cheapest.ranking === "no-quotes" ? "lmNoPrices" : "lmNotComparable"]}</p>}
+         {listMode === "nearest" && (scope !== "nearby" || normalStatus !== "ready") && <p className="list-mode-help">{t.lmNearestHint}</p>}
+         {overview ? <><h2>{t.mapRegionList}</h2><p className="field-help">{t.mapOverviewHelp}</p><ul className="region-list">{manifest?.stations.partitions.filter((partition) => partition.code !== "UNKNOWN" && (!regionOptions || regionOptions.includes(partition.code))).map((partition) => <li key={partition.code}><button type="button" className="station-card" onClick={() => choosePrefecture(partition.code)}><strong lang="ja">{prefectureName(partition.code)}</strong><span>{t.mapRecordCount.replace("{count}", partition.count.toLocaleString(locale))}</span></button></li>)}</ul></> : <>
+           <h2>{favoritesActive ? t.lmFavorites : t.ffStationList}</h2>{!favoritesActive && <p className="field-help">{scope === "nearby" ? (listMode === "nearest" ? t.ffStraightLineHelp : t.lmStraightLineHelp) : t.ffNoDistance}</p>}
+           {status === "ready" && !filtered.length && <div className="map-empty map-empty-list" role="status">{favoritesActive ? favorites.entries.length === 0 ? t.lmEmpty : activeResults.length ? t.lmNoMatch : t.lmNoAvailable : t.ffNoResults}</div>}
+-          <ul className="station-list" aria-label={t.ffStationList}>{sorted.slice(0, limit).map((station) => <li className="station-row has-mini-map" key={station.id}><StationMiniMap station={station} locale={locale} tileUrl={mapTileUrl} onOpen={() => openStation(station, "thumbnail")} /><StationCard station={station} locale={locale} fuel={selectedFuel} priceView={priceViews.get(station.id) ?? UNKNOWN_PRICE} id={`list-${station.id}`} onClick={() => openStation(station, "list")} />{favoriteButton(station)}</li>)}</ul>
++          <ul className="station-list" aria-label={t.ffStationList}>{sorted.slice(0, limit).map((station) => <li className={`station-row has-mini-map${previewId === station.id ? " is-map-preview" : ""}`} key={station.id}
++            onPointerMove={(event) => { if (event.pointerType === "mouse" && event.buttons === 0) previewStation(station); }}
++            onPointerLeave={cancelPreviewRequest}
++            onFocusCapture={(event) => { if (event.target.matches(":focus-visible")) previewStation(station, true); }}><StationMiniMap station={station} locale={locale} tileUrl={mapTileUrl} onOpen={() => openStation(station, "thumbnail")} /><StationCard station={station} locale={locale} fuel={selectedFuel} priceView={priceViews.get(station.id) ?? UNKNOWN_PRICE} id={`list-${station.id}`} onClick={() => openStation(station, "list")} />{favoriteButton(station)}</li>)}</ul>
+           {filtered.length > limit && <button type="button" className="button" onClick={() => setLimit((count) => count + 25)}>{t.ffShowMore}</button>}
+         </>}
+       </div>}
+--- src/components/FuelMap.tsx
++++ src/components/FuelMap.tsx
+@@ -21,6 +21,7 @@
+   overview: boolean;
+   viewRevision: number;
+   selectedId?: string;
++  previewId?: string;
+   onPrefecture: (code: PrefectureCode) => void;
+   onRegions: (codes: PrefectureCode[]) => void;
+   onStation: (station: Station) => void;
+@@ -160,30 +161,46 @@
+               }
+             }
+           } else {
++            const previewStation = current.layout === "list" ? current.stations.find((station) => station.id === current.previewId) : undefined;
++            function addStation(station: Station, selected: boolean, preview = false) {
++              const brand = stationBrand(station);
++              const price = current.priceViews.get(station.id) ?? UNKNOWN_PRICE;
++              const priceText = priceDisplayText(price, current.locale);
++              const label = `${copy.mapStationMarker.replace("{name}", station.name || copy.ffUnnamed)}${brand.text ? ` · ${brand.text}` : ""} · ${fuelDisplayName(current.selectedFuel, current.locale)}${priceText ? `: ${priceText}` : ""}`;
++              specs.push({ key: `station:${station.id}`, dataKey: station.id, ids: [station.id], lat: station.lat, lon: station.lon, text: "", label,
++                className: `map-pin-station${priceText ? "" : " no-price"}${selected ? " is-selected" : ""}${preview ? " is-preview" : ""}`, selected,
++                station: { logo: brand.logo ?? "/brands/fuel-pump.svg", price: priceText, tone: price.tone },
++                onClick: () => latest.current.onStation(station) });
++            }
+             const clusters = filterMapClusters(stationCache(current.stations, actualZoom, 116, (station) => map.project([station.lat, station.lon], actualZoom)), viewport, 116);
+             for (const cluster of clusters) {
+-              const point = map.unproject([cluster.x, cluster.y], actualZoom);
+-              const ids = cluster.members.map((station) => station.id);
++              // Pull only the previewed station out, including coincident records.
++              // Preserve cached clusters and count each remaining station exactly once.
++              const members = previewStation ? cluster.members.filter((station) => station.id !== previewStation.id) : cluster.members;
++              if (!members.length) continue;
++              const ids = members.map((station) => station.id);
+               const selected = ids.includes(current.selectedId ?? "");
+-              if (cluster.members.length === 1) {
+-                const station = cluster.members[0];
+-                const brand = stationBrand(station);
+-                const price = current.priceViews.get(station.id) ?? UNKNOWN_PRICE;
+-                const priceText = priceDisplayText(price, current.locale);
+-                const label = `${copy.mapStationMarker.replace("{name}", station.name || copy.ffUnnamed)}${brand.text ? ` · ${brand.text}` : ""} · ${fuelDisplayName(current.selectedFuel, current.locale)}${priceText ? `: ${priceText}` : ""}`;
+-                specs.push({ key: `station:${station.id}`, dataKey: station.id, ids, lat: point.lat, lon: point.lng, text: "", label,
+-                  className: `map-pin-station${priceText ? "" : " no-price"}${selected ? " is-selected" : ""}`, selected,
+-                  station: { logo: brand.logo ?? "/brands/fuel-pump.svg", price: priceText, tone: price.tone },
+-                  onClick: () => latest.current.onStation(station) });
+-              } else {
+-                const count = cluster.members.length.toLocaleString(current.locale);
++              if (members.length === 1) addStation(members[0], selected);
++              else {
++                let x = cluster.x, y = cluster.y;
++                if (members.length !== cluster.members.length) {
++                  const removed = map.project([previewStation!.lat, previewStation!.lon], actualZoom);
++                  x = (x * cluster.members.length - removed.x) / members.length;
++                  y = (y * cluster.members.length - removed.y) / members.length;
++                }
++                const point = map.unproject([x, y], actualZoom);
++                const count = members.length.toLocaleString(current.locale);
+                 const maxZoom = actualZoom >= map.getMaxZoom();
+                 const key = mapMemberKey("stations", ids);
+                 specs.push({ key, dataKey: key, ids, lat: point.lat, lon: point.lng, text: count,
+                   label: (maxZoom ? copy.mapClusterMembers : copy.mapClusterZoom).replace("{count}", count),
+                   className: `map-pin-cluster${selected ? " is-selected" : ""}`, selected,
+-                  onClick: () => { if (maxZoom) latest.current.onMembers(cluster.members); else zoomGroup(point, ids); } });
++                  onClick: () => { if (maxZoom) latest.current.onMembers(members); else zoomGroup(point, ids); } });
+               }
++            }
++            if (previewStation) {
++              const point = map.project([previewStation.lat, previewStation.lon], actualZoom);
++              if (point.x >= viewport.min.x - 116 && point.x <= viewport.max.x + 116 && point.y >= viewport.min.y - 116 && point.y <= viewport.max.y + 116) addStation(previewStation, true, true);
+             }
+           }
+           for (const spec of specs) {
+@@ -256,7 +273,7 @@
+     };
+   }, [attempt]);
+ 
+-  useEffect(() => { runtime.current?.draw(); }, [ready, props.stations, props.manifest, props.overview, props.selectedId, props.locale, props.selectedFuel, props.priceViews]);
++  useEffect(() => { runtime.current?.draw(); }, [ready, props.stations, props.manifest, props.overview, props.selectedId, props.previewId, props.layout, props.locale, props.selectedFuel, props.priceViews]);
+   useEffect(() => {
+     const state = runtime.current;
+     if (!ready || !state) return;
+@@ -296,6 +313,20 @@
+     }
+   }, [ready, props.selectedId, props.stations]);
+ 
++  useEffect(() => {
++    const state = runtime.current;
++    const station = props.layout === "list" && !props.overview ? props.stations.find((item) => item.id === props.previewId) : undefined;
++    if (!ready || !state || !station) return;
++    state.replaceView(() => {
++      const current = latest.current;
++      // A queued preview must never override a detail, scope change, or newer row.
++      if (current.layout !== "list" || current.previewId !== station.id || current.stations !== props.stations || current.viewRevision !== props.viewRevision) return;
++      const zoom = Math.max(16, state.map.getZoom());
++      const center = state.map.project([station.lat, station.lon], zoom).subtract([0, 47]);
++      state.map.setView(state.map.unproject(center, zoom), zoom, { animate: false });
++    });
++  }, [ready, props.previewId, props.layout, props.stations, props.overview, props.viewRevision]);
++
+   return <div className="fuel-map">
+     <div ref={surface} className="map-surface" role="region" aria-label={t.mapCanvas} aria-describedby="map-keyboard-help" tabIndex={0} />
+     <span className="sr-only" id="map-keyboard-help">{t.mapKeyboardHelp}</span>
+--- src/styles.css
++++ src/styles.css
+@@ -127,6 +127,7 @@
+ .map-list-panel { container-type: inline-size; container-name: station-results; }
+ .map-list-panel .station-list { grid-template-columns: minmax(0, 1fr); }
+ .station-row.has-mini-map { display: grid; grid-template-columns: 156px minmax(0, 1fr) 44px; align-items: start; gap: 12px; padding: 12px; border: 1px solid var(--line); border-radius: 14px; background: white; }
++.station-row.has-mini-map.is-map-preview { border-color: var(--green); box-shadow: inset 0 0 0 1px var(--green); background: #f2f7f3; }
+ .station-row.has-mini-map > .station-card { min-width: 0; padding: 4px 0; border: 0; border-radius: 6px; background: transparent; }
+ .station-row.has-mini-map > .station-card:hover { color: var(--green); }
+ .station-row.has-mini-map > .favorite-button { position: static; grid-column: 3; grid-row: 1; align-self: start; }

@@ -1,0 +1,20 @@
+
+> fuel-me-japan@0.0.0 test:e2e
+> playwright test tests/e2e/map-zoom.spec.ts -g an old cluster cannot override --repeat-each=3 --workers=1
+
+[WebServer] (node:16853) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 3 tests using 1 worker
+
+(node:16855) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/e2e/map-zoom.spec.ts:220:1 › an old cluster cannot override returning to overview during animation (1.5s)
+(node:16862) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 tests/e2e/map-zoom.spec.ts:220:1 › an old cluster cannot override returning to overview during animation (1.4s)
+(node:16871) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 tests/e2e/map-zoom.spec.ts:220:1 › an old cluster cannot override returning to overview during animation (1.4s)
+
+  3 passed (5.6s)

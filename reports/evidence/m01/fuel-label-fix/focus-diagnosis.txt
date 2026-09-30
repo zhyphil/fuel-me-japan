@@ -1,0 +1,24 @@
+trace trace: {"type":"pointerdown","tag":"LABEL","open":true}
+trace trace: {"type":"mousedown","tag":"LABEL","open":true}
+trace trace: {"type":"blur","tag":"SUMMARY","related":"MAIN","relatedId":"main","open":true}
+trace trace: {"type":"focusout","tag":"SUMMARY","related":"MAIN","relatedId":"main","open":true}
+trace CRASH
+trace ERROR mouse.click: Target crashed 
+no-blur-handler trace: {"type":"pointerdown","tag":"LABEL","open":true}
+no-blur-handler trace: {"type":"mousedown","tag":"LABEL","open":true}
+no-blur-handler trace: {"type":"blur","tag":"SUMMARY","related":"MAIN","relatedId":"main","open":true}
+no-blur-handler trace: {"type":"focusout","tag":"SUMMARY","related":"MAIN","relatedId":"main","open":true}
+no-blur-handler trace: {"type":"click","tag":"LABEL","open":true}
+no-blur-handler trace: {"type":"focusin","tag":"INPUT","related":"MAIN","relatedId":"main","open":true}
+no-blur-handler trace: {"type":"click","tag":"INPUT","open":true}
+no-blur-handler trace: {"type":"change","tag":"INPUT","open":true}
+no-blur-handler RESULT true
+fieldset-to-div trace: {"type":"pointerdown","tag":"LABEL","open":true}
+fieldset-to-div trace: {"type":"mousedown","tag":"LABEL","open":true}
+fieldset-to-div trace: {"type":"blur","tag":"SUMMARY","related":"MAIN","relatedId":"main","open":true}
+fieldset-to-div trace: {"type":"focusout","tag":"SUMMARY","related":"MAIN","relatedId":"main","open":true}
+fieldset-to-div CRASH
+fieldset-to-div ERROR mouse.click: Target crashed 
+no-styles trace: {"type":"blur","tag":"SUMMARY","open":false}
+no-styles trace: {"type":"focusout","tag":"SUMMARY","open":false}
+no-styles RESULT false

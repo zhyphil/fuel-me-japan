@@ -1,0 +1,42 @@
+[WebServer] (node:31910) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:31911) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/list-hover.spec.ts:40:1 › hovering a list station zooms its marker into the overall map without opening details or stealing focus (5.6s)
+
+
+  1) tests/e2e/list-hover.spec.ts:40:1 › hovering a list station zooms its marker into the overall map without opening details or stealing focus 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('.map-pin-station.is-preview[data-map-key="osm:node:10012481680"]')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('.map-pin-station.is-preview[data-map-key="osm:node:10012481680"]') with timeout 5000ms
+      - waiting for locator('.map-pin-station.is-preview[data-map-key="osm:node:10012481680"]')
+
+
+      29 | }
+      30 | async function centeredPreview(page: Page, id: string) {
+    > 31 |   await expect(page.locator(`.map-pin-station.is-preview[data-map-key="${id}"]`)).toBeVisible();
+         |                                                                                   ^
+      32 |   await expect.poll(() => zoom(page)).toBeGreaterThanOrEqual(16);
+      33 |   await expect.poll(async () => {
+      34 |     const surface = (await page.locator(".map-surface").boundingBox())!;
+        at centeredPreview (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/list-hover.spec.ts:31:83)
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/list-hover.spec.ts:44:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/list-hover-hovering-a-list-bf258-g-details-or-stealing-focus/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/list-hover-hovering-a-list-bf258-g-details-or-stealing-focus/error-context.md
+
+  1 failed
+    tests/e2e/list-hover.spec.ts:40:1 › hovering a list station zooms its marker into the overall map without opening details or stealing focus 

@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "说明": "检查产生的新回归截图已单独归档；历史截图恢复并逐个校验。",
+  "files": {
+    "reports/evidence/m01/list-modes/favorites-1280-offline.png": "f7f3242ee1ca8027187d807b7bf148730d49cce25c59de45a5816879a161acab",
+    "reports/evidence/m01/list-modes/favorites-zh-Hans.png": "0b9f719f805d0406199e0ce3d684061e209142a697c719c691952c9f8d8d9abc",
+    "reports/evidence/m01/list-modes/preview-zh-Hans.png": "e20a0a1a0d2c87ea4caad4740b6b239ae3e3fc6b1c47c296c75bbc5bac84591b",
+    "reports/evidence/m01/list-modes/favorites-320-offline.png": "2411ae185e16c773178608e6cd0ac0dbcea915f666971579dadc8c5e09b785f9",
+    "reports/evidence/m01/list-modes/favorites-390-offline.png": "d87a0b4138d483032d468e13f6c60e3c9fbcd74b50b04d2c590ae0ef641dda53",
+    "reports/evidence/m01/list-minimap/layout-1280-offline.png": "3ee2a4fedbd6b3dd9e7c6b4f545ab7e4a26d02897d101334f68913b0202fab6c",
+    "reports/evidence/m01/list-minimap/preview-zh-Hans.png": "7b8cf2cc067b7da01b296b48a16e7de24ae67d13cff347af827dbd95236f8c3c",
+    "reports/evidence/m01/list-minimap/layout-320-offline.png": "a64291b542bb6f9e9a43c2752099c230ca3457ccf503e5da6a21cdf98f64e586",
+    "reports/evidence/m01/list-minimap/layout-768-offline.png": "193705174bf09cb8c4c141571ff7d6c14ac37033ec511d0ea76fce467d64a30a",
+    "reports/evidence/m01/list-minimap/layout-390-offline.png": "97de9981a9bec0dd718fb9566e9873cc1482e1350e9ae403e9a4702cf89ecd99",
+    "reports/evidence/m01/list-minimap/station-link-zh-Hans.png": "27d39148d1a8c62d472895cf8f6a547598cd9207081ef6f07cfb33c7fd21d5be",
+    "reports/evidence/m01/station-mini-maps/layout-1280-offline.png": "bb0ca75ec9e4a92b9490a2813ca066a3e1d38aeec9299145357037ad16121070",
+    "reports/evidence/m01/station-mini-maps/preview-zh-Hans.png": "49aff254f88f199e36f3e3d98220b806a66adddd772abe89babc0701abc696a8",
+    "reports/evidence/m01/station-mini-maps/layout-320-offline.png": "956e7ecf59b859e8438a4ed49ec9a335e61fdd88d7ba6a8271927bb3bd5c7e93",
+    "reports/evidence/m01/station-mini-maps/layout-768-offline.png": "9e2a080086996a5776bd0921844c271b13c7e59532357cf765e61a1be5593fa3",
+    "reports/evidence/m01/station-mini-maps/layout-390-offline.png": "d88806814bc3e621814c5d2cfecdce381e51dac58b74a17f9b9aaab9ad9cf356"
+  }
+}

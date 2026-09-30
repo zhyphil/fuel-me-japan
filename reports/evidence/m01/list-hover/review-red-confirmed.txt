@@ -1,0 +1,10 @@
+[WebServer] (node:33087) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:33088) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/e2e/list-hover.spec.ts:178:1 › closing cluster members does not revive an earlier hover preview (1.1s)
+
+  1 passed (2.0s)

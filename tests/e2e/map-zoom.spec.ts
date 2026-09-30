@@ -221,6 +221,9 @@ test("an old cluster cannot override returning to overview during animation", as
   await page.setViewportSize({ width: 1280, height: 900 });
   await page.goto("/en/");
   await expect(page.locator(".map-pin-region-group").first()).toBeVisible();
+  // Initial fitting can precede the manifest status row's final height. Take
+  // the baseline using the same explicit overview action exercised below.
+  await page.getByRole("button", { name: "Japan overview", exact: true }).press("Enter");
   await settle(page);
   const overviewZoom = (await tileZoom(page))!;
   await load(page);

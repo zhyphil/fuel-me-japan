@@ -1,3 +1,4 @@
+import { chooseFuels } from "./fuel-selection";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import type { Page } from "@playwright/test";
@@ -152,7 +153,7 @@ test("changing area, returning to overview and new location clear filters withou
     Object.defineProperty(navigator, "geolocation", { configurable: true, value: { getCurrentPosition: () => { (window as unknown as { __locationRequests: number }).__locationRequests++; } } });
   });
   await fixture(page); await load(page);
-  await page.locator("#display-fuel").selectOption("DIESEL");
+  await chooseFuels(page, ["DIESEL"]);
   const before = await page.evaluate(() => ({ local: { ...localStorage }, session: { ...sessionStorage } }));
   const requests: string[] = [];
   page.on("request", (request) => { if (request.url().includes("/data/")) requests.push(request.url()); });
@@ -172,7 +173,7 @@ test("changing area, returning to overview and new location clear filters withou
   await expect(trigger(page)).toBeDisabled(); await expect(trigger(page).locator(".filter-count")).toHaveCount(0);
   await page.getByRole("button", { name: en.ffCancel, exact: true }).click();
   await expect(trigger(page)).toBeDisabled(); await expect(panel(page)).toHaveCount(0);
-  await expect(page.locator("#display-fuel")).toHaveValue("DIESEL");
+  await expect(page.locator('#display-fuel input[value="DIESEL"]')).toBeChecked();
 });
 
 for (const locale of locales) {

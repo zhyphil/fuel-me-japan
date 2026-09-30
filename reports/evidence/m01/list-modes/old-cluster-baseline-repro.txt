@@ -1,0 +1,76 @@
+
+> fuel-me-japan@0.0.0 test:e2e
+> playwright test tests/e2e/map-zoom.spec.ts -g an old cluster cannot override --repeat-each=3 --workers=1
+
+[WebServer] (node:16008) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 3 tests using 1 worker
+
+(node:16010) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/map-zoom.spec.ts:220:1 › an old cluster cannot override returning to overview during animation (1.7s)
+(node:16021) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 tests/e2e/map-zoom.spec.ts:220:1 › an old cluster cannot override returning to overview during animation (1.4s)
+(node:16026) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 tests/e2e/map-zoom.spec.ts:220:1 › an old cluster cannot override returning to overview during animation (1.4s)
+
+
+  1) tests/e2e/map-zoom.spec.ts:220:1 › an old cluster cannot override returning to overview during animation 
+
+    Error: expect(received).toBeCloseTo(expected, precision)
+
+    Expected: 4.250003499950653
+    Received: 4.500000446440399
+
+    Expected precision:    3
+    Expected difference: < 0.0005
+    Received difference:   0.24999694648974646
+
+      232 |   await cluster.press("Enter");
+      233 |   await settle(page);
+    > 234 |   expect(await tileZoom(page)).toBeCloseTo(overviewZoom, 3);
+          |                                ^
+      235 |   await expect(page.locator(".map-pin-station, .map-pin-cluster")).toHaveCount(0);
+      236 |   await expect(page.locator(".map-pin-region, .map-pin-region-group").first()).toBeVisible();
+      237 | });
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/map-zoom.spec.ts:234:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/map-zoom-an-old-cluster-ca-25a89-o-overview-during-animation/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/map-zoom-an-old-cluster-ca-25a89-o-overview-during-animation/error-context.md
+
+  2) tests/e2e/map-zoom.spec.ts:220:1 › an old cluster cannot override returning to overview during animation 
+
+    Error: expect(received).toBeCloseTo(expected, precision)
+
+    Expected: 4.250003499950653
+    Received: 4.500000446440399
+
+    Expected precision:    3
+    Expected difference: < 0.0005
+    Received difference:   0.24999694648974646
+
+      232 |   await cluster.press("Enter");
+      233 |   await settle(page);
+    > 234 |   expect(await tileZoom(page)).toBeCloseTo(overviewZoom, 3);
+          |                                ^
+      235 |   await expect(page.locator(".map-pin-station, .map-pin-cluster")).toHaveCount(0);
+      236 |   await expect(page.locator(".map-pin-region, .map-pin-region-group").first()).toBeVisible();
+      237 | });
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/map-zoom.spec.ts:234:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/map-zoom-an-old-cluster-ca-25a89-o-overview-during-animation-repeat2/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/map-zoom-an-old-cluster-ca-25a89-o-overview-during-animation-repeat2/error-context.md
+
+  2 failed
+    tests/e2e/map-zoom.spec.ts:220:1 › an old cluster cannot override returning to overview during animation 
+    tests/e2e/map-zoom.spec.ts:220:1 › an old cluster cannot override returning to overview during animation 
+  1 passed (5.8s)

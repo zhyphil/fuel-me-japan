@@ -1,0 +1,38 @@
+
+> fuel-me-japan@0.0.0 test:e2e
+> playwright test tests/e2e/map-zoom.spec.ts -g native two-finger pinch --workers=1
+
+[WebServer] (node:13211) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:13213) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/map-zoom.spec.ts:177:1 › native two-finger pinch still zooms the mobile map (868ms)
+
+
+  1) tests/e2e/map-zoom.spec.ts:177:1 › native two-finger pinch still zooms the mobile map ─────────
+
+    Error: expect(received).toBeGreaterThan(expected)
+
+    Expected: > 0.5
+    Received:   0
+
+      188 |   await cdp.send("Input.dispatchTouchEvent", { type: "touchEnd", touchPoints: [] });
+      189 |   await settle(page);
+    > 190 |   expect((await tileZoom(page))! - initial).toBeGreaterThan(0.5);
+          |                                             ^
+      191 |   await expect(page.locator(".map-status p")).toHaveText("818 matching records");
+      192 |   await cdp.detach();
+      193 | });
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/map-zoom.spec.ts:190:45
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/map-zoom-native-two-finger-pinch-still-zooms-the-mobile-map/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/map-zoom-native-two-finger-pinch-still-zooms-the-mobile-map/error-context.md
+
+  1 failed
+    tests/e2e/map-zoom.spec.ts:177:1 › native two-finger pinch still zooms the mobile map ──────────

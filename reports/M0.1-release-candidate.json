@@ -1,0 +1,47 @@
+{
+  "日期": "2026-09-30",
+  "状态": "LOCAL_READY",
+  "发布状态": "AWAITING_PUBLICATION_APPROVAL",
+  "基线": "de82cfdda777e55b67357b75d3938610b528ac4e",
+  "范围": "M0.1 已有本地增强的发布候选验收；不扩展 M0.2",
+  "功能": [
+    "列表排序和收藏",
+    "列表总地图与逐站小地图",
+    "悬停和键盘焦点地图联动",
+    "多油种选择与独立比价"
+  ],
+  "检查": {
+    "证据类型": "REUSED_MATCHING_SOURCE",
+    "lint": "PASS",
+    "typecheck": "PASS",
+    "unit": 180,
+    "build": "PASS",
+    "browser": 149,
+    "源码快照匹配": 71,
+    "保护快照匹配": 84,
+    "新增确认缺陷": 0
+  },
+  "本轮重新执行全套检查": false,
+  "本轮提交": false,
+  "本轮推送": false,
+  "本轮部署": false,
+  "站点报价": "EMPTY",
+  "gogo咨询": "USER_REPORTED_SENT_AWAITING_REPLY",
+  "限制": [
+    "合成报价测试不代表生产站点即时油价",
+    "离线浏览器检查不代表真实手机和 Safari 验收",
+    "未重新核验生产网站",
+    "人工母语安全文案、自动价格下载及定时工作流验收尚未完成"
+  ],
+  "报告": "reports/M0.1-release-candidate.md",
+  "核验证据": "reports/evidence/m01/release-candidate-20260930/verification.json",
+  "初版记录说明": "原检查结果保留为初次候选汇总事实，最新状态以下方后续修复为准。",
+  "后续修复": {
+    "状态": "PASS",
+    "问题": "油种面板文字点击崩溃",
+    "完整检查重新执行": true,
+    "unit": 180,
+    "browser": 152,
+    "报告": "reports/M0.1-fuel-label-fix.md"
+  }
+}

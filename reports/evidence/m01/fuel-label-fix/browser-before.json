@@ -1,0 +1,271 @@
+{
+  "config": {
+    "argv": [
+      "/Users/haoyuzuo/.nvm/versions/node/v24.18.0/bin/node",
+      "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/node_modules/.bin/playwright",
+      "test",
+      "tests/e2e/fuel-label.spec.ts",
+      "--workers=1"
+    ],
+    "configFile": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/playwright.config.ts",
+    "rootDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --port 4173 --strictPort",
+      "url": "http://127.0.0.1:4173",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "fuel-label.spec.ts",
+      "file": "fuel-label.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "fuel panel closes when keyboard focus actually leaves, and Escape restores summary focus",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 277,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T15:31:23.294Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dc2bfe70203e59a7f77b-255d364b192803c1e130",
+          "file": "fuel-label.spec.ts",
+          "line": 48,
+          "column": 1
+        }
+      ],
+      "suites": [
+        {
+          "title": "mouse",
+          "file": "fuel-label.spec.ts",
+          "line": 4,
+          "column": 8,
+          "specs": [
+            {
+              "title": "fuel label text toggles exactly once and never closes its panel",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 522,
+                      "error": {
+                        "message": "Error: mouse.down: Target crashed ",
+                        "stack": "Error: mouse.down: Target crashed \n    at selectText (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-label.spec.ts:20:28)\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-label.spec.ts:29:7",
+                        "location": {
+                          "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-label.spec.ts",
+                          "column": 28,
+                          "line": 20
+                        },
+                        "snippet": "  18 |         else {\n  19 |           await page.mouse.move(x, y);\n> 20 |           await page.mouse.down();\n     |                            ^\n  21 |           // Exercise a held label press, before the native click/focus activation.\n  22 |           await expect(panel).toHaveAttribute(\"open\", \"\");\n  23 |           await page.waitForTimeout(150);"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-label.spec.ts",
+                            "column": 28,
+                            "line": 20
+                          },
+                          "message": "Error: mouse.down: Target crashed \n\n  18 |         else {\n  19 |           await page.mouse.move(x, y);\n> 20 |           await page.mouse.down();\n     |                            ^\n  21 |           // Exercise a held label press, before the native click/focus activation.\n  22 |           await expect(panel).toHaveAttribute(\"open\", \"\");\n  23 |           await page.waitForTimeout(150);\n    at selectText (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-label.spec.ts:20:28)\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-label.spec.ts:29:7"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-30T15:31:21.531Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/test-results/fuel-label-mouse-fuel-labe-0022c--and-never-closes-its-panel/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-label.spec.ts",
+                        "column": 28,
+                        "line": 20
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "dc2bfe70203e59a7f77b-1f48951aecf1c6cfad07",
+              "file": "fuel-label.spec.ts",
+              "line": 6,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "touch",
+          "file": "fuel-label.spec.ts",
+          "line": 4,
+          "column": 8,
+          "specs": [
+            {
+              "title": "fuel label text toggles exactly once and never closes its panel",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 544,
+                      "error": {
+                        "message": "Error: touchscreen.tap: Target crashed ",
+                        "stack": "Error: touchscreen.tap: Target crashed \n    at selectText (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-label.spec.ts:17:54)\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-label.spec.ts:29:7",
+                        "location": {
+                          "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-label.spec.ts",
+                          "column": 54,
+                          "line": 17
+                        },
+                        "snippet": "  15 |         // Click the text area, not the input that getByLabel/check would target.\n  16 |         const x = box!.x + box!.width - 24, y = box!.y + box!.height / 2;\n> 17 |         if (mode === \"touch\") await page.touchscreen.tap(x, y);\n     |                                                      ^\n  18 |         else {\n  19 |           await page.mouse.move(x, y);\n  20 |           await page.mouse.down();"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-label.spec.ts",
+                            "column": 54,
+                            "line": 17
+                          },
+                          "message": "Error: touchscreen.tap: Target crashed \n\n  15 |         // Click the text area, not the input that getByLabel/check would target.\n  16 |         const x = box!.x + box!.width - 24, y = box!.y + box!.height / 2;\n> 17 |         if (mode === \"touch\") await page.touchscreen.tap(x, y);\n     |                                                      ^\n  18 |         else {\n  19 |           await page.mouse.move(x, y);\n  20 |           await page.mouse.down();\n    at selectText (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-label.spec.ts:17:54)\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-label.spec.ts:29:7"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-30T15:31:22.460Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/test-results/fuel-label-touch-fuel-labe-7e523--and-never-closes-its-panel/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/fuel-label.spec.ts",
+                        "column": 54,
+                        "line": 17
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "dc2bfe70203e59a7f77b-68b8629fcc319a6d7bec",
+              "file": "fuel-label.spec.ts",
+              "line": 6,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-30T15:31:20.937Z",
+    "duration": 2753.5750000000003,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

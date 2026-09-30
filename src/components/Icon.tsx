@@ -1,5 +1,6 @@
-export type IconName = "pump" | "return" | "fuel" | "guide" | "locate" | "filter" | "brand" | "card" | "service" | "check" | "close" | "cash" | "contactless" | "account" | "charge" | "counter" | "terminal" | "air" | "toilet" | "shower" | "baby" | "laundry" | "truck" | "parking" | "bottle" | "wash";
+export type IconName = "star" | "pump" | "return" | "fuel" | "guide" | "locate" | "filter" | "brand" | "card" | "service" | "check" | "close" | "cash" | "contactless" | "account" | "charge" | "counter" | "terminal" | "air" | "toilet" | "shower" | "baby" | "laundry" | "truck" | "parking" | "bottle" | "wash";
 const paths: Record<IconName, string> = {
+  star: "m13 3 3.1 6.4 7.1 1-5.1 5 1.2 7.1-6.3-3.3-6.3 3.3 1.2-7.1-5.1-5 7.1-1L13 3Z",
   filter: "M3 5h20l-8 9v7l-4-2v-5L3 5Z",
   brand: "M4 4h9l10 10-9 9L4 13V4Zm4 4h.01",
   card: "M3 6h20v14H3V6Zm0 5h20M7 16h4",

@@ -58,6 +58,8 @@ test("overview counts match every manifest region; selecting and panning load on
     await expect(entry).toContainText(en.mapRecordCount.replace("{count}", region.count.toLocaleString("en")));
   }
   await page.getByRole("button", { name: en.mapView, exact: true }).click();
+  // The shared mini-map restores its saved full viewport on the next frame.
+  await waitForMapAnimation(page);
   expect(requests.sort()).toEqual(["/data/manifest.json", manifest.sourceRegistry.path].sort());
   for (let step = 0; step < 8 && !await page.locator('button[data-map-key="JP-01"]').count(); step++) {
     await page.locator('.map-pin-region-group[data-region-codes*="JP-01"]').click();

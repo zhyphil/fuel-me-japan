@@ -1,0 +1,29 @@
+{
+  "日期": "2026-09-30",
+  "状态": "PASS",
+  "范围": "油种面板文字、说明及空白按下导致的焦点崩溃修复",
+  "原因": "标签默认激活前焦点暂时移到 MAIN，失焦处理同步关闭 details，触发浏览器崩溃。",
+  "修复": "在面板 pointerdown 捕获阶段阻止非可用控件区域的临时聚焦，保留原生点击勾选和键盘行为。",
+  "修复前": {
+    "鼠标": "TARGET_CRASHED",
+    "触屏": "TARGET_CRASHED",
+    "键盘": "PASS"
+  },
+  "检查": {
+    "lint": "PASS",
+    "typecheck": "PASS",
+    "unit": 180,
+    "build": "PASS",
+    "browser": 152,
+    "targeted": 3,
+    "check_exit_code": 0
+  },
+  "本地浏览器": "PASS",
+  "限制": [
+    "触屏为 Chromium 模拟，不代表真实手机或 Safari 验收",
+    "未提交、推送或部署",
+    "生产站点即时报价仍为空"
+  ],
+  "报告": "reports/M0.1-fuel-label-fix.md",
+  "证据": "reports/evidence/m01/fuel-label-fix/"
+}

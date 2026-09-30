@@ -1,0 +1,14 @@
+{
+  "说明": "现有测试产生的新截图另存于本轮目录；历史截图恢复原始内容。",
+  "文件数": 7,
+  "status": "PASS",
+  "sha256": {
+    "reports/evidence/m01/list-modes/favorites-1280-offline.png": "f7f3242ee1ca8027187d807b7bf148730d49cce25c59de45a5816879a161acab",
+    "reports/evidence/m01/list-modes/favorites-320-offline.png": "2411ae185e16c773178608e6cd0ac0dbcea915f666971579dadc8c5e09b785f9",
+    "reports/evidence/m01/list-modes/favorites-390-offline.png": "d87a0b4138d483032d468e13f6c60e3c9fbcd74b50b04d2c590ae0ef641dda53",
+    "reports/evidence/m01/list-minimap/layout-1280-offline.png": "3ee2a4fedbd6b3dd9e7c6b4f545ab7e4a26d02897d101334f68913b0202fab6c",
+    "reports/evidence/m01/list-minimap/layout-320-offline.png": "a64291b542bb6f9e9a43c2752099c230ca3457ccf503e5da6a21cdf98f64e586",
+    "reports/evidence/m01/list-minimap/layout-768-offline.png": "193705174bf09cb8c4c141571ff7d6c14ac37033ec511d0ea76fce467d64a30a",
+    "reports/evidence/m01/list-minimap/layout-390-offline.png": "97de9981a9bec0dd718fb9566e9873cc1482e1350e9ae403e9a4702cf89ecd99"
+  }
+}

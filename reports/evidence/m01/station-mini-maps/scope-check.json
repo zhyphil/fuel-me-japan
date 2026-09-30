@@ -1,0 +1,18 @@
+{
+  "说明": "与上一轮源码快照和既有保护基线比较，冻结规格、生产数据及导入器未变。",
+  "保护文件数": 84,
+  "保护文件状态": "PASS",
+  "本轮继续修改的既有文件": [
+    "AGENTS.md",
+    "src/components/FindFuel.tsx",
+    "src/components/FuelMap.tsx",
+    "src/locales/en.json",
+    "src/locales/ko.json",
+    "src/locales/th.json",
+    "src/locales/zh-Hans.json",
+    "src/locales/zh-Hant.json",
+    "src/styles.css"
+  ],
+  "其余上一轮源码文件状态": "PASS",
+  "原有源码快照文件数": 21
+}

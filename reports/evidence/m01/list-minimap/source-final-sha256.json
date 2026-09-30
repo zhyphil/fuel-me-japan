@@ -1,0 +1,23 @@
+{
+  "AGENTS.md": "f613680381ecca0c20dc2fa6026dfa1d80d9ba79941764dfffe53489e76aac65",
+  "src/components/FavoriteButton.tsx": "9938b61cdd42dc1a57e3e7089b447c5f3eba245ba49979801157e896e9052a16",
+  "src/components/FindFuel.tsx": "168bccaf73a4254db6e8eb80d26fe3d0211e63a766d8cff7dd45d9bcac460104",
+  "src/components/FuelMap.tsx": "60cec0656a01567dc28831849fb131f31cbff3d3c5bdf2a5b382dc05c34798ec",
+  "src/components/Icon.tsx": "bc1e0bbf1c19b8fc601b56bc3c8595247f50516434a16368a20cffdadf13f6ec",
+  "src/components/useFavorites.ts": "bb943dac986f16b3b0810c108929be3fab41d78abb6db39bd10e6e15b336f84f",
+  "src/lib/favorites.ts": "a7a590b6932d91179966f30d32f99f4e3ff8c3a32f696e6a8d985900bf9f782b",
+  "src/lib/station-list.ts": "d6f987f7ff490165e7cbff8134374b6fd5d0c8254f17d221d6cfd626f1bd65ba",
+  "src/locales/en.json": "113e9ba09bd051b00ecb371543e9213e104d29b0eabc9d4200c0101ed2dfb362",
+  "src/locales/ko.json": "2bd6be0e58a2075278191628d68246c37df1e0f7006557a47775254519c75909",
+  "src/locales/th.json": "6f100aea1c1ba30b4ecab95763404a473fe55f54b4f7e65b8b2e9c2a0e50299d",
+  "src/locales/zh-Hans.json": "0930461a8a770881dafd097b27bc1402d5a1fc2d35b8956c52efc555ac3cbef9",
+  "src/locales/zh-Hant.json": "3b3a2850f9d431e396202f9af0a87d2b6963cd2fcbdde07d64caf71d72104cce",
+  "src/styles.css": "bc348abdf0f6628eb68f3276bcca478dee83f7e43fd351d9f4591b7ea27036d0",
+  "tests/e2e/list-minimap.spec.ts": "683f90fa783d780673be32a6c25b462c4b7d940c7774c15b10f66e4970ae16ac",
+  "tests/e2e/list-modes.spec.ts": "a91564f77b56bb1f804bb2a1f63d6478339067653cad1910191412153b6e700a",
+  "tests/e2e/map-home.spec.ts": "7c1c90cd8585659bfd779a8817ad3d612ac057ab9ced152285c826b88aec0336",
+  "tests/e2e/map-zoom.spec.ts": "ce24efbf6ed764475c1550502846c1461212ac8114bca4b10cac28d70feb2968",
+  "tests/unit/favorites.test.ts": "7a2baba3c89cb7e37e0ed54f3a7a78a203eaaffbd5b15976b65801d9cc7378fc",
+  "tests/unit/list-modes-ui.test.ts": "221c1082bb59ef3d4f9c1543df15de85e06f6145e17c408c5097e716c2e407ea",
+  "tests/unit/station-list.test.ts": "5d7e72a8e2995a81103c2a4d983bc516342d7caf5bc4a4b6d29814da926f00c3"
+}
