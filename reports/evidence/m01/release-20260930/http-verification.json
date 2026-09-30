@@ -1,0 +1,349 @@
+{
+  "checkedAt": "2026-09-30T12:39:08.988238+00:00",
+  "说明": "对正式域名、五语言页面、构建和地图资源逐字节比对；未请求外部地图瓦片。",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/",
+      "bytes": 10293,
+      "sha256": "9d626cd9f7b082c2b59cd17de23003cbb8f1352313d944a606eec5952ab79ad5",
+      "matchesLocal": true,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "x-frame-options": "DENY",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "permissions-policy": "geolocation=(self), camera=(), microphone=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "cf-cache-status": "DYNAMIC"
+      }
+    },
+    {
+      "path": "/en/",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/en/",
+      "bytes": 10293,
+      "sha256": "9d626cd9f7b082c2b59cd17de23003cbb8f1352313d944a606eec5952ab79ad5",
+      "matchesLocal": true,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "x-frame-options": "DENY",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "permissions-policy": "geolocation=(self), camera=(), microphone=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "cf-cache-status": "DYNAMIC"
+      }
+    },
+    {
+      "path": "/zh-Hant/",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/zh-Hant/",
+      "bytes": 10062,
+      "sha256": "1038f6349bf9db7cc011ef53d34e0bd51c321f16b9c78042bdadb92d54647e22",
+      "matchesLocal": true,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "x-frame-options": "DENY",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "permissions-policy": "geolocation=(self), camera=(), microphone=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "cf-cache-status": "DYNAMIC"
+      }
+    },
+    {
+      "path": "/ko/",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/ko/",
+      "bytes": 11031,
+      "sha256": "d95ae501bbc8bad3d42847df2401c1c422eec818315b922d552b22be63b65687",
+      "matchesLocal": true,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "x-frame-options": "DENY",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "permissions-policy": "geolocation=(self), camera=(), microphone=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "cf-cache-status": "DYNAMIC"
+      }
+    },
+    {
+      "path": "/zh-Hans/",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/zh-Hans/",
+      "bytes": 10055,
+      "sha256": "a6ee0fc4f71e1bef4e14c7abd8a03572f35342356a9a1e07951f0f62af0e4334",
+      "matchesLocal": true,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "x-frame-options": "DENY",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "permissions-policy": "geolocation=(self), camera=(), microphone=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "cf-cache-status": "DYNAMIC"
+      }
+    },
+    {
+      "path": "/th/",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/th/",
+      "bytes": 14556,
+      "sha256": "75facd785a68f7ff655844071df97ab035aa64c2c70548ef8d339a47469d60fb",
+      "matchesLocal": true,
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "x-frame-options": "DENY",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "permissions-policy": "geolocation=(self), camera=(), microphone=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "cf-cache-status": "DYNAMIC"
+      }
+    },
+    {
+      "path": "/assets/index-CsQKtcs_.js",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/assets/index-CsQKtcs_.js",
+      "bytes": 356671,
+      "sha256": "bbd0340e16cc5a97e671b4c4403e322d619e6a52f334788efb67a9ca4cc89f28",
+      "matchesLocal": true,
+      "headers": {
+        "Content-Type": "application/javascript",
+        "x-frame-options": "DENY",
+        "Cache-Control": "public, max-age=14400, must-revalidate",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "permissions-policy": "geolocation=(self), camera=(), microphone=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "cf-cache-status": "MISS"
+      }
+    },
+    {
+      "path": "/assets/index-DMb7MNuy.css",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/assets/index-DMb7MNuy.css",
+      "bytes": 34494,
+      "sha256": "9e18f57997255dc7b30e500906d2d90e7d8c486e4ef878e4f952d273e9e1b2bc",
+      "matchesLocal": true,
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "x-frame-options": "DENY",
+        "Cache-Control": "public, max-age=14400, must-revalidate",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "permissions-policy": "geolocation=(self), camera=(), microphone=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "cf-cache-status": "MISS"
+      }
+    },
+    {
+      "path": "/assets/source-registry-HHgBWD8y.js",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/assets/source-registry-HHgBWD8y.js",
+      "bytes": 2888,
+      "sha256": "952cf28c4694003dc399b859cc4c0127952234692650341ded9774363a2c8c3c",
+      "matchesLocal": true,
+      "headers": {
+        "Content-Type": "application/javascript",
+        "x-frame-options": "DENY",
+        "Cache-Control": "public, max-age=14400, must-revalidate",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "permissions-policy": "geolocation=(self), camera=(), microphone=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "cf-cache-status": "MISS"
+      }
+    },
+    {
+      "path": "/assets/leaflet-src-k6A-pbvI.js",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/assets/leaflet-src-k6A-pbvI.js",
+      "bytes": 148731,
+      "sha256": "9f7b7d92a768cafba0a493f1f98b97195214cadb27a53a790962b783a025b59b",
+      "matchesLocal": true,
+      "headers": {
+        "Content-Type": "application/javascript",
+        "x-frame-options": "DENY",
+        "Cache-Control": "public, max-age=14400, must-revalidate",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "permissions-policy": "geolocation=(self), camera=(), microphone=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "cf-cache-status": "MISS"
+      }
+    },
+    {
+      "path": "/runtime-map-provider.json",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/runtime-map-provider.json",
+      "bytes": 1297,
+      "sha256": "5f5b86a46a83a22dfa345fab478e98c359271bdb3e68aa90868c7a19461ae20e",
+      "matchesLocal": true,
+      "headers": {
+        "Content-Type": "application/json",
+        "x-frame-options": "DENY",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "permissions-policy": "geolocation=(self), camera=(), microphone=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "cf-cache-status": "DYNAMIC"
+      }
+    },
+    {
+      "path": "/build-provenance.json",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/build-provenance.json",
+      "bytes": 1861,
+      "sha256": "cc4084761164e0a41a0cd8dc1183918557957f3f8f22b3e11fc22ba9f1280cc6",
+      "matchesLocal": true,
+      "headers": {
+        "Content-Type": "application/json",
+        "x-frame-options": "DENY",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "permissions-policy": "geolocation=(self), camera=(), microphone=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "cf-cache-status": "DYNAMIC"
+      }
+    },
+    {
+      "path": "/data/manifest.json",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/data/manifest.json",
+      "bytes": 23863,
+      "sha256": "334ce4620b9e85751876aa427b0d958eb8410d89af0bfb4fa488b2737869693d",
+      "matchesLocal": true,
+      "headers": {
+        "Content-Type": "application/json",
+        "x-frame-options": "DENY",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "permissions-policy": "geolocation=(self), camera=(), microphone=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "cf-cache-status": "DYNAMIC"
+      }
+    },
+    {
+      "path": "/data/source-registry.json",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/data/source-registry.json",
+      "bytes": 5783,
+      "sha256": "3ad895fc107a0ce94271817df97de8f6de23c43e8a222b1a594a37a5f6459a5b",
+      "matchesLocal": true,
+      "headers": {
+        "Content-Type": "application/json",
+        "x-frame-options": "DENY",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "permissions-policy": "geolocation=(self), camera=(), microphone=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "cf-cache-status": "DYNAMIC"
+      }
+    },
+    {
+      "path": "/brands/eneos-symbol.svg",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/brands/eneos-symbol.svg",
+      "bytes": 48310,
+      "sha256": "cd6ed201e64afc02fbc4a953d747ce5a62c1215e946fe11d5a680506c926f2a2",
+      "matchesLocal": true,
+      "headers": {
+        "Content-Type": "image/svg+xml",
+        "x-frame-options": "DENY",
+        "Cache-Control": "public, max-age=14400, must-revalidate",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "permissions-policy": "geolocation=(self), camera=(), microphone=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "cf-cache-status": "MISS"
+      }
+    },
+    {
+      "path": "/brands/cosmo-symbol.svg",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/brands/cosmo-symbol.svg",
+      "bytes": 2497,
+      "sha256": "24c101c993663ed7abbc7e9b8892c4a03f6fc0458b5b761eddd698c84af5f065",
+      "matchesLocal": true,
+      "headers": {
+        "Content-Type": "image/svg+xml",
+        "x-frame-options": "DENY",
+        "Cache-Control": "public, max-age=14400, must-revalidate",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "permissions-policy": "geolocation=(self), camera=(), microphone=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "cf-cache-status": "MISS"
+      }
+    },
+    {
+      "path": "/brands/fuel-pump.svg",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/brands/fuel-pump.svg",
+      "bytes": 259,
+      "sha256": "feece4dc13aae4369168c3f190ef667e9f9b294cfad7e1df45b0fd212e90c2fd",
+      "matchesLocal": true,
+      "headers": {
+        "Content-Type": "image/svg+xml",
+        "x-frame-options": "DENY",
+        "Cache-Control": "public, max-age=14400, must-revalidate",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "permissions-policy": "geolocation=(self), camera=(), microphone=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "cf-cache-status": "MISS"
+      }
+    },
+    {
+      "path": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-13.json",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-13.json",
+      "bytes": 363375,
+      "sha256": "39c94b0723096fc817be99e1e18be5286dd224948f54b1212c679fcf064b6aa5",
+      "matchesLocal": true,
+      "headers": {
+        "Content-Type": "application/json",
+        "x-frame-options": "DENY",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+        "permissions-policy": "geolocation=(self), camera=(), microphone=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "cf-cache-status": "DYNAMIC"
+      }
+    },
+    {
+      "path": "https://www.fuel-me-japan.com/zh-Hans/",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/zh-Hans/",
+      "matchesLocal": true
+    },
+    {
+      "path": "https://fuel-me-japan.pages.dev/zh-Hans/",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/zh-Hans/",
+      "matchesLocal": true
+    },
+    {
+      "path": "https://add49cc0.fuel-me-japan.pages.dev/zh-Hans/",
+      "status": 200,
+      "url": "https://add49cc0.fuel-me-japan.pages.dev/zh-Hans/",
+      "matchesLocal": true
+    }
+  ],
+  "passed": true
+}

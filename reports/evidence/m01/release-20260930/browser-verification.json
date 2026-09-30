@@ -1,0 +1,29 @@
+{
+  "说明": "正式域名内置浏览器验收；全国概览16454，东京818，ENEOS391，ENEOS与自助18；真实页面及地图瓦片，未触发设备定位。",
+  "state": {
+    "horizontalOverflow": false,
+    "loadedTiles": 12,
+    "mapError": null,
+    "priceStrips": 0,
+    "records": "18 条匹配记录清除筛选",
+    "stationMarkerCount": 1,
+    "url": "https://fuel-me-japan.com/zh-Hans/"
+  },
+  "consoleErrors": [],
+  "detail": "ENEOS オブリステーション；每天24小时营业；地区参考价普通171.0、高辛烷179.7、柴油159.0日元每升；调查2026-09-28，发布2026-09-30。",
+  "zoomBefore": [
+    {
+      "src": "https://tile.openstreetmap.org/16/58123/25782.png",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)"
+    }
+  ],
+  "zoomAfter": [
+    {
+      "transform": "matrix(0.5, 0, 0, 0.5, 210, 76)"
+    },
+    {
+      "src": "https://tile.openstreetmap.org/15/29061/12890.png",
+      "transform": "matrix(1, 0, 0, 1, 210, 76)"
+    }
+  ]
+}

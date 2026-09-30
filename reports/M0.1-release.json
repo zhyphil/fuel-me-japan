@@ -1,0 +1,41 @@
+{
+  "date": "2026-09-30",
+  "status": "PASS",
+  "productionUrl": "https://fuel-me-japan.com/zh-Hans/",
+  "repository": "https://github.com/zhyphil/fuel-me-japan",
+  "sourceCommit": "5ee4b56a90527e99edc6f664859228e1dd77ee74",
+  "deploymentId": "add49cc0-3d89-4a8e-84c9-3632fca1e57e",
+  "deploymentUrl": "https://add49cc0.fuel-me-japan.pages.dev",
+  "environment": "Production",
+  "branch": "main",
+  "checks": {
+    "deployCommand": "npm run deploy",
+    "exitCode": 0,
+    "lint": "PASS",
+    "typecheck": "PASS",
+    "unitTests": 138,
+    "browserTests": 82,
+    "build": "PASS",
+    "httpAssetChecks": 21,
+    "httpAssetMatch": "PASS",
+    "liveBrowser": "PASS"
+  },
+  "liveBrowser": {
+    "说明": "实际内置浏览器访问正式域名；全国汇总、东京加载、品牌与服务组合筛选、站点详情、营业时间与参考价、缩小控件均已检查；未请求设备定位。",
+    "overviewRecords": 16454,
+    "tokyoRecords": 818,
+    "eneosRecords": 391,
+    "eneosSelfServiceRecords": 18,
+    "consoleErrors": 0,
+    "zoomBefore": 16,
+    "zoomAfter": 15
+  },
+  "scope": "发布用户已审核的当前完整M0.1地图版本；站点数据快照、原规格和现有noindex设置不变。",
+  "limitations": [
+    "未知单站价格继续隐藏，地区参考价不能代替单站报价。",
+    "官方价格无人值守获取仍有既有403限制；GitHub定时工作流已进入默认分支，实际执行未在本次验证。",
+    "未把桌面浏览器验收扩大为真机Safari、真实定位或母语安全文案审核通过。"
+  ],
+  "evidence": "reports/evidence/m01/release-20260930",
+  "previousDeployment": "https://f663477a.fuel-me-japan.pages.dev"
+}

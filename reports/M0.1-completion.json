@@ -1,4 +1,12 @@
 {
+  "latestRelease": {
+    "status": "PASS",
+    "date": "2026-09-30",
+    "sourceCommit": "5ee4b56a90527e99edc6f664859228e1dd77ee74",
+    "productionUrl": "https://fuel-me-japan.com/zh-Hans/",
+    "report": "reports/M0.1-release.md"
+  },
+  "historicalContext": "以下原有checks、limitations及reviewChanges保留各次本地阶段的记录；当前生产发布状态以latestRelease及发布报告为准。",
   "milestone": "M0.1 Find Fuel",
   "date": "2026-09-30",
   "branch": "codex/m0-1-find-fuel",

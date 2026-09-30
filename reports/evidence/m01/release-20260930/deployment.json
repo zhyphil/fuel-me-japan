@@ -1,0 +1,19 @@
+{
+  "说明": "Cloudflare Pages现有项目的生产部署；保留上一版本用于人工回退。部署来源提交与GitHub已推送提交一致。",
+  "current": {
+    "Id": "add49cc0-3d89-4a8e-84c9-3632fca1e57e",
+    "Environment": "Production",
+    "Branch": "main",
+    "Source": "5ee4b56",
+    "Deployment": "https://add49cc0.fuel-me-japan.pages.dev",
+    "Status": "51 seconds ago"
+  },
+  "previous": {
+    "Id": "f663477a-1601-4189-ad81-c6c8dfec2ca5",
+    "Environment": "Production",
+    "Branch": "main",
+    "Source": "442da17",
+    "Deployment": "https://f663477a.fuel-me-japan.pages.dev",
+    "Status": "4 hours ago"
+  }
+}
