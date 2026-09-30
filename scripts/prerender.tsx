@@ -6,6 +6,7 @@ import registry from "../public/data/source-registry.json";
 import { validateRegistry } from "../src/lib/source-registry";
 const errors = validateRegistry(registry);
 if (errors.length) throw new Error(errors.join("\n"));
+const siteOrigin = "https://fuel-me-japan.com";
 const shell = await readFile("dist/index.html", "utf8");
 const escape = (value: string) =>
   value.replace(
@@ -28,7 +29,7 @@ function render(locale: Locale) {
     )
     .replace(
       "</head>",
-      `${locales.map((language) => `<link rel="alternate" hreflang="${language}" href="/${language}/" />`).join("\n")}<link rel="alternate" hreflang="x-default" href="/en/" /></head>`,
+      `<link rel="canonical" href="${siteOrigin}/${locale}/" />\n${locales.map((language) => `<link rel="alternate" hreflang="${language}" href="${siteOrigin}/${language}/" />`).join("\n")}<link rel="alternate" hreflang="x-default" href="${siteOrigin}/en/" /></head>`,
     )
     .replace(
       '<div id="root"></div>',

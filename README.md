@@ -2,7 +2,9 @@
 
 Refuel in Japan without speaking Japanese.
 
-Production foundation preview: https://fuel-me-japan.pages.dev/
+Production foundation preview: https://fuel-me-japan.com/
+
+The www hostname and production pages.dev address redirect to the primary domain, preserving paths and query parameters. Immutable deployment previews remain accessible. Domain configuration and verification: `reports/M0.0-domain-configuration.md`.
 
 **M0.0 Foundation preview only.** The four future task cards are informational; station search, vehicle advice, guides and return-car flows are not implemented. Stop here for user review before M0.1.
 

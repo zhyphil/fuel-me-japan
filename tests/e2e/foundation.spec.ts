@@ -51,6 +51,22 @@ for (const language of languageCases) {
     await expect(page).toHaveURL(new RegExp(`/${language.locale}/$`));
     await expect(page.locator("html")).toHaveAttribute("lang", language.locale);
     await expect(page).toHaveTitle(language.title);
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
+      "href",
+      `https://fuel-me-japan.com/${language.locale}/`,
+    );
+    await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
+      "content",
+      /noindex,\s*nofollow/,
+    );
+    for (const alternate of languageCases) {
+      await expect(
+        page.locator(`link[rel="alternate"][hreflang="${alternate.locale}"]`),
+      ).toHaveAttribute("href", `https://fuel-me-japan.com/${alternate.locale}/`);
+    }
+    await expect(
+      page.locator('link[rel="alternate"][hreflang="x-default"]'),
+    ).toHaveAttribute("href", "https://fuel-me-japan.com/en/");
     await expect(page.getByRole("heading", { level: 1 })).toContainText(
       language.heading,
     );
