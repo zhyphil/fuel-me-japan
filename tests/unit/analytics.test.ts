@@ -50,3 +50,9 @@ describe("privacy-conscious analytics abstraction", () => {
     ).not.toThrow();
   });
 });
+
+it.each(["my_fuel_start", "my_fuel_success", "my_fuel_unknown"] as const)("%s only forwards locale, never vehicle or location", (name) => {
+  const adapter = vi.fn();
+  createAnalytics(adapter).track(name, { locale: "en", rentalCompany: "Fictional Rental", make: "Fictional", model: "Test", variant: "Test", modelYear: 2021, fuelType: "DIESEL", lat: 35.123, lon: 139.123, result: { vehicle: "Fictional" } } as { locale: "en" });
+  expect(adapter).toHaveBeenCalledExactlyOnceWith({ name, properties: { locale: "en" } });
+});

@@ -1,0 +1,31 @@
+{
+  "日期": "2026-09-30",
+  "状态": "BLOCKED_SOURCE_APPROVAL",
+  "候选": [
+    {
+      "owner": "Toyota Motor Corporation",
+      "sourceUrl": "https://toyota.jp/faq/show/11084.html",
+      "termsUrl": "https://toyota.jp/attribute/",
+      "purpose": "核查日本版 Yaris 车型用油信息的候选参考",
+      "status": "PENDING_REVIEW",
+      "productionEnabled": false,
+      "结论": "FAQ 只给出车型层面的答案，没有在同页界定具体年份和全部配置；不能将其自动扩展成跨年份、跨配置 VERIFIED 映射。官网使用说明未提供本项目所需的结构化商用数据库复用许可，不能凭公开可读判定接入已获准。",
+      "补充": "https://manual.toyota.jp/yaris/ 按生产年月和汽油／混动车型分列手册，也将 GR Yaris 分开。年款不能代替精确生产期与配置匹配。"
+    },
+    {
+      "owner": "Toyota Motor Corporation (Toyota Rent a Car)",
+      "sourceUrl": "https://rent.toyota.co.jp/service/car/class/charge.aspx",
+      "termsUrl": "https://rent.toyota.co.jp/static/footer/policy/website.html",
+      "purpose": "租车公司车型与配置来源候选",
+      "status": "PENDING_REVIEW",
+      "productionEnabled": false,
+      "结论": "车辆等级展示的是代表车型，网页说明可能提供同等级其他车型；租赁级别不能作为实际交付车辆的燃油判断。使用说明禁止图片转载，本轮未使用图片或批量复制车型列表；结构化数据商用复用和精确车型覆盖仍待核验。"
+    }
+  ],
+  "执行决定": "按 10-CLAUDE-CODEX-HANDOFF.md 停止上述候选的生产数据接入，继续独立界面、精确匹配校验、测试和版本化空数据结构。真实映射保持为空；正向测试只用明确虚构的测试夹具。",
+  "待解除条件": [
+    "精确来源对应 make/model/variant/modelYearRange，明确日本市场与生效范围",
+    "完成该具体来源的允许使用评估并记录依据；不得仅把状态改成 APPROVED",
+    "五语言安全文案经过审查后才允许生产提升"
+  ]
+}

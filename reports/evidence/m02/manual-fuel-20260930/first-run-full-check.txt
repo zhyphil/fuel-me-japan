@@ -1,0 +1,16 @@
+
+> fuel-me-japan@0.0.0 check
+> npm run lint && npm run typecheck && npm test && npm run build && npm run test:e2e
+
+
+> fuel-me-japan@0.0.0 lint
+> eslint . --max-warnings 0
+
+
+> fuel-me-japan@0.0.0 typecheck
+> tsc --noEmit
+
+tests/unit/list-modes-ui.test.ts(7,61): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '{ locale: "en"; }' is not assignable to parameter of type 'Attributes & { locale: "en" | "zh-Hant" | "ko" | "zh-Hans" | "th"; selectedFuels: FuelType[]; onChangeFuels: (fuels: FuelType[]) => void; onResetFuels: () => void; }'.
+      Type '{ locale: "en"; }' is missing the following properties from type '{ locale: "en" | "zh-Hant" | "ko" | "zh-Hans" | "th"; selectedFuels: FuelType[]; onChangeFuels: (fuels: FuelType[]) => void; onResetFuels: () => void; }': selectedFuels, onChangeFuels, onResetFuels

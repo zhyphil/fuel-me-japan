@@ -1,10 +1,34 @@
-import { readFile, writeFile, mkdir } from "node:fs/promises";
+import { readFile, writeFile, mkdir, readdir } from "node:fs/promises";
 import { renderToString } from "react-dom/server";
 import { App } from "../src/App";
 import { locales, messages, type Locale } from "../src/i18n";
 import { createHash } from "node:crypto";
 import { parseDataManifest, parseStationFile, parsePriceFile, type Artifact } from "../src/lib/stations";
 import { validateRegistry } from "../src/lib/source-registry";
+import { parseVehicleManifest, decodeVehicleArtifact } from "../src/lib/vehicle-data";
+import { validateVehicleData } from "../src/lib/vehicle-fuel";
+
+// Independent vehicle integrity gate; it does not change M0.1 source approval semantics.
+const vehicleManifestBytes = await readFile("dist/data/vehicles/manifest.json");
+const vehicleManifest = parseVehicleManifest(JSON.parse(vehicleManifestBytes.toString("utf8")));
+const vehicleFiles = await readdir("dist/data/vehicles");
+const expectedVehicleFiles = ["manifest.json", ...[vehicleManifest.registry, vehicleManifest.mappings].map((artifact) => artifact.path.split("/").at(-1)!)];
+if (vehicleFiles.length !== expectedVehicleFiles.length || vehicleFiles.some((file) => !expectedVehicleFiles.includes(file))) throw new Error("Unreferenced vehicle artifact cannot be published");
+const vehicleArtifacts = await Promise.all([vehicleManifest.registry, vehicleManifest.mappings].map(async (artifact) => decodeVehicleArtifact(await readFile(`dist${artifact.path}`), artifact)));
+const vehicleData = await validateVehicleData(vehicleArtifacts[0], vehicleArtifacts[1], vehicleManifest.version);
+await writeFile("dist/vehicle-provenance.json", JSON.stringify({
+  schemaVersion: 1,
+  milestone: "M0.2",
+  builtAt: new Date().toISOString(),
+  integrityValidation: "PASS",
+  sourceAcceptance: vehicleData.mappings.records.length ? "REVIEW_RECORDS_PRESENT" : "BLOCKED_NO_APPROVED_MAPPINGS",
+  safetyReviewStatus: vehicleData.registry.safetyReview.status,
+  manifest: { path: "/data/vehicles/manifest.json", sha256: createHash("sha256").update(vehicleManifestBytes).digest("hex") },
+  registry: vehicleManifest.registry,
+  mappings: vehicleManifest.mappings,
+  mappingCount: vehicleData.mappings.records.length,
+  note: "机器校验仅验证结构、哈希与审批记录一致性，不能代替人工来源权利及五语言安全文案审查。空映射不代表 M0.2 数据或生产验收完成。",
+}, null, 2));
 const manifestBytes = await readFile("dist/data/manifest.json");
 const manifest = parseDataManifest(JSON.parse(manifestBytes.toString("utf8")));
 async function checkedArtifact(artifact: Artifact) {

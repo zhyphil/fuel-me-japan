@@ -324,3 +324,38 @@ button:disabled { cursor: default; opacity: .6; }
   /* A three-price droplet needs 146px plus the separate 44px attribution row. */
   .map-workspace.has-drawer.has-price-stack { grid-template-rows: minmax(208px, 42%) minmax(0, 1fr); }
 }
+
+/* My Fuel is a modal layer; the existing map stays mounted underneath it. */
+.my-fuel-trigger { margin-left: auto; max-width: 200px; font-size: 13px; }
+.my-fuel-trigger svg, .my-fuel-header svg { width: 22px; height: 22px; flex-shrink: 0; }
+.my-fuel-dialog { width: min(620px, calc(100vw - 24px)); max-width: 100%; max-height: calc(100dvh - 24px); padding: 0; border: 1px solid var(--line); border-radius: 18px; color: var(--ink); background: white; box-shadow: 0 18px 80px #173f3740; overflow: hidden; }
+.my-fuel-dialog[open] { display: flex; flex-direction: column; }
+.my-fuel-dialog::backdrop { background: #142c2877; }
+.my-fuel-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; border-bottom: 1px solid var(--line); flex-shrink: 0; }
+.my-fuel-header h2 { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 20px; }
+.my-fuel-header button { flex-shrink: 0; padding: 10px; }
+.my-fuel-body { padding: 0 18px 18px; overflow-y: auto; overscroll-behavior: contain; overflow-wrap: anywhere; }
+.my-fuel-guidance { font-size: 15px; }
+.my-fuel-body h3 { font-size: 16px; margin: 0 0 8px; }
+.my-fuel-form { display: grid; gap: 12px; margin: 16px 0; }
+.my-fuel-preference { display: grid; gap: 8px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.my-fuel-preference .field-help { margin: 0; }
+.my-fuel-form label, .my-fuel-preference label { display: grid; gap: 4px; font-weight: 650; font-size: 14px; min-width: 0; }
+.my-fuel-form select, .my-fuel-preference select { min-height: 44px; width: 100%; min-width: 0; border: 1px solid #8da297; border-radius: 8px; padding: 8px; background: white; color: var(--ink); }
+.my-fuel-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.my-fuel-result { border: 2px solid var(--green); padding: 14px; border-radius: 12px; margin: 16px 0; }
+.my-fuel-result strong { font-size: 22px; }
+.my-fuel-result a { display: inline-block; padding-block: 10px; }
+.my-fuel-labels { margin-top: 22px; }
+.my-fuel-labels dl { margin: 0; border-top: 1px solid var(--line); }
+.my-fuel-labels dl > div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.my-fuel-labels dt { font-weight: 650; }
+.my-fuel-labels dd { margin: 0; }
+@media (max-width: 700px) {
+  .map-header { flex-wrap: wrap; gap: 0 8px; }
+  .map-header .locale-switcher { flex-basis: 100%; justify-content: center; }
+  .my-fuel-trigger { max-width: calc(100% - 172px); padding: 6px 8px; font-size: 12px; }
+  .my-fuel-header { padding: 10px 12px; }
+  .my-fuel-header h2 { font-size: 18px; }
+  .my-fuel-body { padding: 0 12px 12px; }
+}

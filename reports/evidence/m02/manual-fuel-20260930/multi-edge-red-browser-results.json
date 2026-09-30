@@ -1,0 +1,161 @@
+{
+  "config": {
+    "argv": [
+      "/Users/haoyuzuo/.nvm/versions/node/v24.18.0/bin/node",
+      "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/node_modules/.bin/playwright",
+      "test",
+      "tests/e2e/my-fuel-preference.spec.ts",
+      "--grep",
+      "multi-selection"
+    ],
+    "configFile": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/playwright.config.ts",
+    "rootDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 8,
+    "webServer": {
+      "command": "npm run preview -- --port 4173 --strictPort",
+      "url": "http://127.0.0.1:4173",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "my-fuel-preference.spec.ts",
+      "file": "my-fuel-preference.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "manual fuel replaces a multi-selection without resetting region, list mode or requesting location; reset stays in sync",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5515,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveValue\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('combobox', { name: 'Fuel type', exact: true })\nExpected: \u001b[32m\"\"\u001b[39m\nReceived: \u001b[31m\"DIESEL\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveValue\" getByRole('combobox', { name: 'Fuel type', exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('combobox', { name: 'Fuel type', exact: true })\u001b[22m\n\u001b[2m    14 × locator resolved to <select id=\"my-fuel-preference\" aria-describedby=\"my-fuel-preference-help\">…</select>\u001b[22m\n\u001b[2m       - unexpected value \"DIESEL\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveValue\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('combobox', { name: 'Fuel type', exact: true })\nExpected: \u001b[32m\"\"\u001b[39m\nReceived: \u001b[31m\"DIESEL\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveValue\" getByRole('combobox', { name: 'Fuel type', exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('combobox', { name: 'Fuel type', exact: true })\u001b[22m\n\u001b[2m    14 × locator resolved to <select id=\"my-fuel-preference\" aria-describedby=\"my-fuel-preference-help\">…</select>\u001b[22m\n\u001b[2m       - unexpected value \"DIESEL\"\u001b[22m\n\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/my-fuel-preference.spec.ts:58:78",
+                    "location": {
+                      "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/my-fuel-preference.spec.ts",
+                      "column": 78,
+                      "line": 58
+                    },
+                    "snippet": "  56 |   await page.locator(\"#list-mode-nearest\").click();\n  57 |   await trigger.click();\n> 58 |   await expect(page.getByRole(\"combobox\", { name: labels.en, exact: true })).toHaveValue(\"\");\n     |                                                                              ^\n  59 |   // Choosing the previous primary fuel must also collapse the multi-selection.\n  60 |   await page.getByRole(\"combobox\", { name: labels.en, exact: true }).selectOption(\"DIESEL\");\n  61 |   await expect(page.locator(\"#display-fuel input:checked\")).toHaveCount(1);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/my-fuel-preference.spec.ts",
+                        "column": 78,
+                        "line": 58
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveValue\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('combobox', { name: 'Fuel type', exact: true })\nExpected: \u001b[32m\"\"\u001b[39m\nReceived: \u001b[31m\"DIESEL\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveValue\" getByRole('combobox', { name: 'Fuel type', exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('combobox', { name: 'Fuel type', exact: true })\u001b[22m\n\u001b[2m    14 × locator resolved to <select id=\"my-fuel-preference\" aria-describedby=\"my-fuel-preference-help\">…</select>\u001b[22m\n\u001b[2m       - unexpected value \"DIESEL\"\u001b[22m\n\n\n  56 |   await page.locator(\"#list-mode-nearest\").click();\n  57 |   await trigger.click();\n> 58 |   await expect(page.getByRole(\"combobox\", { name: labels.en, exact: true })).toHaveValue(\"\");\n     |                                                                              ^\n  59 |   // Choosing the previous primary fuel must also collapse the multi-selection.\n  60 |   await page.getByRole(\"combobox\", { name: labels.en, exact: true }).selectOption(\"DIESEL\");\n  61 |   await expect(page.locator(\"#display-fuel input:checked\")).toHaveCount(1);\n    at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/my-fuel-preference.spec.ts:58:78"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T17:57:16.901Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/test-results/my-fuel-preference-manual--158f3-ocation-reset-stays-in-sync/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/test-results/my-fuel-preference-manual--158f3-ocation-reset-stays-in-sync/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/my-fuel-preference.spec.ts",
+                    "column": 78,
+                    "line": 58
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "cf002d4c63f786eec645-957a2456263f9e72c755",
+          "file": "my-fuel-preference.spec.ts",
+          "line": 39,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-30T17:57:16.316Z",
+    "duration": 6230.709,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

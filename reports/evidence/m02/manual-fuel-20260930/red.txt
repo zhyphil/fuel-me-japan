@@ -1,0 +1,41 @@
+[WebServer] (node:74739) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:74742) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/my-fuel-preference.spec.ts:8:3 › zh-Hans: manual fuel dropdown updates the map and survives reopening and reload (5.5s)
+
+
+  1) tests/e2e/my-fuel-preference.spec.ts:8:3 › zh-Hans: manual fuel dropdown updates the map and survives reopening and reload 
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator: getByRole('dialog').getByRole('combobox', { name: '用油品类', exact: true })
+    Expected: "REGULAR"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveValue" getByRole('dialog').getByRole('combobox', { name: '用油品类', exact: true }) with timeout 5000ms
+      - waiting for getByRole('dialog').getByRole('combobox', { name: '用油品类', exact: true })
+
+
+      15 |     await trigger.click();
+      16 |     const select = page.getByRole("dialog").getByRole("combobox", { name: label, exact: true });
+    > 17 |     await expect(select).toHaveValue("REGULAR");
+         |                          ^
+      18 |     expect(await select.locator("option").evaluateAll((options) => options.map((node) => (node as HTMLOptionElement).value))).toEqual(["REGULAR", "HIGH_OCTANE", "DIESEL"]);
+      19 |     for (const [fuel, japanese] of [["HIGH_OCTANE", "ハイオク"], ["REGULAR", "レギュラー"], ["DIESEL", "軽油"]]) {
+      20 |       await select.selectOption(fuel);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/my-fuel-preference.spec.ts:17:26
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/my-fuel-preference-zh-Hans-d8e88-rvives-reopening-and-reload/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/my-fuel-preference-zh-Hans-d8e88-rvives-reopening-and-reload/error-context.md
+
+  1 failed
+    tests/e2e/my-fuel-preference.spec.ts:8:3 › zh-Hans: manual fuel dropdown updates the map and survives reopening and reload 

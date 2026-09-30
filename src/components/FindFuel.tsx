@@ -6,7 +6,7 @@ import { fuelTypes, isPriceStale, navigationUrl, prefecturalPrices, prefectureNa
 import { isJapanCoordinates, loadDataManifest, loadNearbyStations, loadOfficialPrices, loadPrefectureStations, type Coordinates, type DataManifest, type FuelType, type PrefectureCode, type PriceFile, type Station, type TriState } from "../lib/stations";
 import { FuelMap, type FuelMapHandle } from "./FuelMap";
 import { StationMiniMap } from "./StationMiniMap";
-import { DEFAULT_FUEL, isFuelType, readFuelPreference, resetFuelPreference, saveFuelPreference } from "../lib/fuel-preference";
+import { isFuelType } from "../lib/fuel-preference";
 import { allFuelPriceViews, STATION_QUOTES, type FuelPriceViews } from "../lib/station-price-view";
 import { FuelPrice, FuelPrices, fuelDisplayName } from "./FuelPrice";
 import { FuelSelection } from "./FuelSelection";
@@ -26,12 +26,9 @@ const fuelKeys = { REGULAR: "ffRegular", HIGH_OCTANE: "ffHighOctane", DIESEL: "f
 const fuelJapanese = { REGULAR: japaneseLabels.regular, HIGH_OCTANE: japaneseLabels.highOctane, DIESEL: japaneseLabels.diesel };
 const fuelFields = { REGULAR: "fuelRegular", HIGH_OCTANE: "fuelHighOctane", DIESEL: "fuelDiesel" } as const;
 
-export function FindFuel({ locale }: { locale: Locale }) {
+export function FindFuel({ locale, selectedFuels, onChangeFuels: changeFuels, onResetFuels }: { locale: Locale; selectedFuels: FuelType[]; onChangeFuels: (fuels: FuelType[]) => void; onResetFuels: () => void }) {
   const t = messages[locale];
-  const [selectedFuels, setSelectedFuels] = useState<FuelType[]>([DEFAULT_FUEL]);
   const selectedFuel = selectedFuels[0];
-  useEffect(() => { setSelectedFuels(readFuelPreference()); }, []);
-  function changeFuels(fuels: FuelType[]) { setSelectedFuels(fuels); saveFuelPreference(fuels); setLimit(25); }
   const [normalStatus, setStatus] = useState<Status>("overviewLoading");
   const [prefecture, setPrefecture] = useState<PrefectureCode | "">("");
   const [scope, setScope] = useState<"overview" | "prefecture" | "nearby">("overview");
@@ -49,6 +46,7 @@ export function FindFuel({ locale }: { locale: Locale }) {
   const [filters, setFilters] = useState<StationFilterState>(emptyStationFilters);
   const [filterTrigger, setFilterTrigger] = useState<HTMLButtonElement | null>(null);
   const [limit, setLimit] = useState(25);
+  useEffect(() => { setLimit(25); }, [selectedFuels]);
   const [selected, setSelected] = useState<Result | null>(null);
   const [members, setMembers] = useState<Station[] | null>(null);
   const [regionOptions, setRegionOptions] = useState<PrefectureCode[] | null>(null);
@@ -308,7 +306,7 @@ export function FindFuel({ locale }: { locale: Locale }) {
     </div>
     {filterTrigger && <StationFilters locale={locale} stations={activeResults} query={query} applied={filters} trigger={filterTrigger} onClose={() => setFilterTrigger(null)} onApply={applyFilters} />}
     <details className="map-notes"><summary>{t.mapAbout}</summary>
-      <p>{t.lmStorageHelp}</p><p>{t.fpHelp}</p><p>{t.fpStorage}</p><button type="button" className="button button-quiet" onClick={() => { resetFuelPreference(); setSelectedFuels([DEFAULT_FUEL]); setLimit(25); }}>{t.fpReset}</button><p>{t.fpComparison.replace("{count}", String([...priceViews.values()].filter((view) => view.tone !== "unknown").length))}</p>
+      <p>{t.lmStorageHelp}</p><p>{t.fpHelp}</p><p>{t.fpStorage}</p><button type="button" className="button button-quiet" onClick={onResetFuels}>{t.fpReset}</button><p>{t.fpComparison.replace("{count}", String([...priceViews.values()].filter((view) => view.tone !== "unknown").length))}</p>
       <p>{t.mapOverviewHelp}</p><p>{t.ffFilterHelp}</p><p>{favoritesActive ? t.lmFavoritesHelp : scope === "nearby" ? t.lmStraightLineHelp : t.ffNoDistance}</p>
       <p>{t.ffLocationPrivacy}</p><p>{t.mapPrivacy}</p><p>{t.ffCoverage}</p><p>{t.sourcesBody}</p>
       <p><a href="/brands/sources.json">{t.fpBrands}</a> · <a href="/runtime-map-provider.json">{t.mapProvider}</a> · <a href="/data/source-registry.json">{t.registry}</a></p>

@@ -1,0 +1,17 @@
+[WebServer] (node:62091) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:62093) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+focus-after-first-shift-tab {
+  tag: 'BODY',
+  text: '\n' +
+    '    Skip to contentFuel Me JapanMy FuelEN繁中한국어简中ไทยJapan fuel station mapJapan ',
+  inDialog: false
+}
+focus-after-second-shift-tab { tag: 'A', text: 'Fictional Test Evidence Owner', inDialog: true }
+  ✓  1 tests/e2e/my-fuel.spec.ts:64:1 › three fictional fuels and UNKNOWN, selection invalidation, clear, focus trap and session reset (708ms)
+
+  1 passed (1.4s)

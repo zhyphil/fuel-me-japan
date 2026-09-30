@@ -1,0 +1,43 @@
+[WebServer] (node:76109) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:76111) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/my-fuel-preference.spec.ts:39:1 › manual fuel replaces a multi-selection without resetting region, list mode or requesting location; reset stays in sync (5.5s)
+
+
+  1) tests/e2e/my-fuel-preference.spec.ts:39:1 › manual fuel replaces a multi-selection without resetting region, list mode or requesting location; reset stays in sync 
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator:  getByRole('combobox', { name: 'Fuel type', exact: true })
+    Expected: ""
+    Received: "DIESEL"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveValue" getByRole('combobox', { name: 'Fuel type', exact: true }) with timeout 5000ms
+      - waiting for getByRole('combobox', { name: 'Fuel type', exact: true })
+        14 × locator resolved to <select id="my-fuel-preference" aria-describedby="my-fuel-preference-help">…</select>
+           - unexpected value "DIESEL"
+
+
+      56 |   await page.locator("#list-mode-nearest").click();
+      57 |   await trigger.click();
+    > 58 |   await expect(page.getByRole("combobox", { name: labels.en, exact: true })).toHaveValue("");
+         |                                                                              ^
+      59 |   // Choosing the previous primary fuel must also collapse the multi-selection.
+      60 |   await page.getByRole("combobox", { name: labels.en, exact: true }).selectOption("DIESEL");
+      61 |   await expect(page.locator("#display-fuel input:checked")).toHaveCount(1);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/my-fuel-preference.spec.ts:58:78
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/my-fuel-preference-manual--158f3-ocation-reset-stays-in-sync/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/my-fuel-preference-manual--158f3-ocation-reset-stays-in-sync/error-context.md
+
+  1 failed
+    tests/e2e/my-fuel-preference.spec.ts:39:1 › manual fuel replaces a multi-selection without resetting region, list mode or requesting location; reset stays in sync 
