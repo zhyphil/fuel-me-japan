@@ -1,0 +1,1049 @@
+{
+  "config": {
+    "argv": [
+      "/Users/haoyuzuo/.nvm/versions/node/v24.18.0/bin/node",
+      "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/node_modules/.bin/playwright",
+      "test"
+    ],
+    "configFile": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/playwright.config.ts",
+    "rootDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 8
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 8
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 8,
+    "webServer": {
+      "command": "npm run preview -- --port 4173 --strictPort",
+      "url": "http://127.0.0.1:4173",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "find-fuel.spec.ts",
+      "file": "find-fuel.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "manual prefecture fetches one region; city/address search and detail never invent distance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1055,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T08:48:37.865Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "28a7c93a4be69eab836c-bc9fc33b14a454686a6f",
+          "file": "find-fuel.spec.ts",
+          "line": 66,
+          "column": 1
+        },
+        {
+          "title": "explicit mocked location sorts real stations; navigation sends destination only and origin stays private",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1187,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T08:48:37.870Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "28a7c93a4be69eab836c-4c68ccfe3cbe33cc8d80",
+          "file": "find-fuel.spec.ts",
+          "line": 114,
+          "column": 1
+        },
+        {
+          "title": "location denied permits manual fallback",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 886,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T08:48:37.852Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "28a7c93a4be69eab836c-32cb144b02675a8ae6a4",
+          "file": "find-fuel.spec.ts",
+          "line": 157,
+          "column": 3
+        },
+        {
+          "title": "location unavailable permits manual fallback",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 835,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T08:48:37.841Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "28a7c93a4be69eab836c-56161710808f9338333a",
+          "file": "find-fuel.spec.ts",
+          "line": 157,
+          "column": 3
+        },
+        {
+          "title": "location timeout permits manual fallback",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 4,
+                  "status": "passed",
+                  "duration": 832,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T08:48:37.874Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "28a7c93a4be69eab836c-ce8a5ddc3e176efc50eb",
+          "file": "find-fuel.spec.ts",
+          "line": 157,
+          "column": 3
+        },
+        {
+          "title": "missing geolocation API and out-of-Japan location do not fetch stations",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 5,
+                  "status": "passed",
+                  "duration": 805,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T08:48:37.844Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "28a7c93a4be69eab836c-9922382d346ce6ce15bf",
+          "file": "find-fuel.spec.ts",
+          "line": 168,
+          "column": 1
+        },
+        {
+          "title": "watchdog timeout rejects a late position and allows a fresh request",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 6,
+                  "status": "passed",
+                  "duration": 888,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T08:48:37.856Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "28a7c93a4be69eab836c-6885a977a969728a559b",
+          "file": "find-fuel.spec.ts",
+          "line": 181,
+          "column": 1
+        },
+        {
+          "title": "late location cannot replace manual choice; cancel, retry and close reject stale callbacks",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 7,
+                  "status": "passed",
+                  "duration": 1102,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T08:48:37.858Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "28a7c93a4be69eab836c-0f5145c9dd8c2ffab943",
+          "file": "find-fuel.spec.ts",
+          "line": 194,
+          "column": 1
+        },
+        {
+          "title": "station load failure retries; an older retry response cannot replace a newer prefecture",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 5,
+                  "status": "passed",
+                  "duration": 385,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T08:48:39.106Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "28a7c93a4be69eab836c-5872e5f6d6e1720ce048",
+          "file": "find-fuel.spec.ts",
+          "line": 219,
+          "column": 1
+        },
+        {
+          "title": "empty search gives external map fallback without invented stations or coordinates",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 348,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T08:48:39.132Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "28a7c93a4be69eab836c-306e20f3cbcc83493d0a",
+          "file": "find-fuel.spec.ts",
+          "line": 244,
+          "column": 1
+        },
+        {
+          "title": "price failure does not block navigation; retry shows dated stale reference",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 4,
+                  "status": "passed",
+                  "duration": 435,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T08:48:39.132Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "28a7c93a4be69eab836c-46ae3f01125705afd5b3",
+          "file": "find-fuel.spec.ts",
+          "line": 257,
+          "column": 1
+        },
+        {
+          "title": "en list/detail fit 320 and 390 pixels, retain Japanese labels and capture screenshots",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 840,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T08:48:39.193Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "28a7c93a4be69eab836c-4186d0a4461587eb908e",
+          "file": "find-fuel.spec.ts",
+          "line": 274,
+          "column": 3
+        },
+        {
+          "title": "zh-Hant list/detail fit 320 and 390 pixels, retain Japanese labels and capture screenshots",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 6,
+                  "status": "passed",
+                  "duration": 688,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T08:48:39.194Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "28a7c93a4be69eab836c-5e21152fc110479f7d17",
+          "file": "find-fuel.spec.ts",
+          "line": 274,
+          "column": 3
+        },
+        {
+          "title": "ko list/detail fit 320 and 390 pixels, retain Japanese labels and capture screenshots",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 752,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T08:48:39.353Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "28a7c93a4be69eab836c-122c2d6449f4c1e59008",
+          "file": "find-fuel.spec.ts",
+          "line": 274,
+          "column": 3
+        },
+        {
+          "title": "zh-Hans list/detail fit 320 and 390 pixels, retain Japanese labels and capture screenshots",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 7,
+                  "status": "passed",
+                  "duration": 790,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T08:48:39.405Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "28a7c93a4be69eab836c-4bb7959d78fae3e2c36b",
+          "file": "find-fuel.spec.ts",
+          "line": 274,
+          "column": 3
+        },
+        {
+          "title": "th list/detail fit 320 and 390 pixels, retain Japanese labels and capture screenshots",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 757,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T08:48:39.486Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "28a7c93a4be69eab836c-0ce763aab0570f54aafd",
+          "file": "find-fuel.spec.ts",
+          "line": 274,
+          "column": 3
+        },
+        {
+          "title": "empty nearby coverage uses map fallback without claiming that no stations exist",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 271,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T08:48:39.487Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "28a7c93a4be69eab836c-3ba81b16801fd32a5c31",
+          "file": "find-fuel.spec.ts",
+          "line": 298,
+          "column": 1
+        },
+        {
+          "title": "station request retry succeeds with the original real partition",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 5,
+                  "status": "passed",
+                  "duration": 382,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T08:48:39.498Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "28a7c93a4be69eab836c-a9ddf401cf8aa4462113",
+          "file": "find-fuel.spec.ts",
+          "line": 309,
+          "column": 1
+        },
+        {
+          "title": "back from detail discards its pending price response before another prefecture opens",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 4,
+                  "status": "passed",
+                  "duration": 517,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T08:48:39.573Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "28a7c93a4be69eab836c-839d0bd33d4232d11a44",
+          "file": "find-fuel.spec.ts",
+          "line": 324,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "foundation.spec.ts",
+      "file": "foundation.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "mobile switching and reload: en",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 452,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T08:48:39.769Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6b60d0cacd30be8ae473-3059f35ad62515e6a0fa",
+          "file": "foundation.spec.ts",
+          "line": 41,
+          "column": 3
+        },
+        {
+          "title": "mobile switching and reload: zh-Hant",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 5,
+                  "status": "passed",
+                  "duration": 445,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T08:48:39.892Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6b60d0cacd30be8ae473-01e01f805c873baec9e2",
+          "file": "foundation.spec.ts",
+          "line": 41,
+          "column": 3
+        },
+        {
+          "title": "mobile switching and reload: ko",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 6,
+                  "status": "passed",
+                  "duration": 435,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T08:48:39.891Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6b60d0cacd30be8ae473-b3a1a1b741aa4af39e55",
+          "file": "foundation.spec.ts",
+          "line": 41,
+          "column": 3
+        },
+        {
+          "title": "mobile switching and reload: zh-Hans",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 340,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T08:48:40.052Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6b60d0cacd30be8ae473-0904b503dcb776f3ee21",
+          "file": "foundation.spec.ts",
+          "line": 41,
+          "column": 3
+        },
+        {
+          "title": "mobile switching and reload: th",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 4,
+                  "status": "passed",
+                  "duration": 337,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T08:48:40.107Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6b60d0cacd30be8ae473-42ee9e7980f5a41400cd",
+          "file": "foundation.spec.ts",
+          "line": 41,
+          "column": 3
+        },
+        {
+          "title": "localized static HTML is useful without JavaScript",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 250,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T08:48:40.122Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6b60d0cacd30be8ae473-e3b22f15a7535499948b",
+          "file": "foundation.spec.ts",
+          "line": 105,
+          "column": 1
+        },
+        {
+          "title": "home and opening M0.1 do not request location, persist it, fetch data or send analytics",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 7,
+                  "status": "passed",
+                  "duration": 277,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T08:48:40.208Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6b60d0cacd30be8ae473-35fe0db67cfef32a8d94",
+          "file": "foundation.spec.ts",
+          "line": 126,
+          "column": 1
+        },
+        {
+          "title": "shipped registry and build provenance match the M0.1 ingestion manifest",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 31,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T08:48:40.227Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6b60d0cacd30be8ae473-0c6c72e566bb807c1de2",
+          "file": "foundation.spec.ts",
+          "line": 173,
+          "column": 1
+        },
+        {
+          "title": "desktop layout and keyboard navigation remain usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 507,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-30T08:48:40.258Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6b60d0cacd30be8ae473-72c1d478ba9937d9c850",
+          "file": "foundation.spec.ts",
+          "line": 198,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-30T08:48:37.026Z",
+    "duration": 3772.438,
+    "expected": 28,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

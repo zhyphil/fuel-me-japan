@@ -1,0 +1,10 @@
+{
+  "verifiedAt": "2026-09-30T08:44:07.515640+00:00",
+  "manifestSha256": "334ce4620b9e85751876aa427b0d958eb8410d89af0bfb4fa488b2737869693d",
+  "stationCount": 16454,
+  "stationCountMatchesIndependentOSMScan": true,
+  "all47PrefectureCountsMatchIndependentGeometryAssignment": true,
+  "all141PriceValuesAndDatesMatchOriginalWorkbook": true,
+  "checkedArtifactHashesAndBytes": 51,
+  "unassigned": 0
+}

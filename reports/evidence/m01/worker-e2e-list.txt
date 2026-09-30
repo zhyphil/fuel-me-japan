@@ -1,0 +1,34 @@
+
+> fuel-me-japan@0.0.0 test:e2e
+> playwright test --list
+
+Listing tests:
+  find-fuel.spec.ts:66:1 › manual prefecture fetches one region; city/address search and detail never invent distance
+  find-fuel.spec.ts:113:1 › explicit mocked location sorts real stations; navigation sends destination only and origin stays private
+  find-fuel.spec.ts:156:3 › location denied permits manual fallback
+  find-fuel.spec.ts:156:3 › location unavailable permits manual fallback
+  find-fuel.spec.ts:156:3 › location timeout permits manual fallback
+  find-fuel.spec.ts:167:1 › missing geolocation API and out-of-Japan location do not fetch stations
+  find-fuel.spec.ts:180:1 › watchdog timeout rejects a late position and allows a fresh request
+  find-fuel.spec.ts:193:1 › late location cannot replace manual choice; cancel, retry and close reject stale callbacks
+  find-fuel.spec.ts:218:1 › station load failure retries; an older retry response cannot replace a newer prefecture
+  find-fuel.spec.ts:243:1 › empty search gives external map fallback without invented stations or coordinates
+  find-fuel.spec.ts:256:1 › price failure does not block navigation; retry shows dated stale reference
+  find-fuel.spec.ts:273:3 › en list/detail fit 320 and 390 pixels, retain Japanese labels and capture screenshots
+  find-fuel.spec.ts:273:3 › zh-Hant list/detail fit 320 and 390 pixels, retain Japanese labels and capture screenshots
+  find-fuel.spec.ts:273:3 › ko list/detail fit 320 and 390 pixels, retain Japanese labels and capture screenshots
+  find-fuel.spec.ts:273:3 › zh-Hans list/detail fit 320 and 390 pixels, retain Japanese labels and capture screenshots
+  find-fuel.spec.ts:273:3 › th list/detail fit 320 and 390 pixels, retain Japanese labels and capture screenshots
+  find-fuel.spec.ts:297:1 › empty nearby coverage uses map fallback without claiming that no stations exist
+  find-fuel.spec.ts:308:1 › station request retry succeeds with the original real partition
+  find-fuel.spec.ts:323:1 › back from detail discards its pending price response before another prefecture opens
+  foundation.spec.ts:41:3 › mobile switching and reload: en
+  foundation.spec.ts:41:3 › mobile switching and reload: zh-Hant
+  foundation.spec.ts:41:3 › mobile switching and reload: ko
+  foundation.spec.ts:41:3 › mobile switching and reload: zh-Hans
+  foundation.spec.ts:41:3 › mobile switching and reload: th
+  foundation.spec.ts:105:1 › localized static HTML is useful without JavaScript
+  foundation.spec.ts:126:1 › home and opening M0.1 do not request location, persist it, fetch data or send analytics
+  foundation.spec.ts:173:1 › shipped registry and build provenance match the M0.1 ingestion manifest
+  foundation.spec.ts:198:1 › desktop layout and keyboard navigation remain usable
+Total: 28 tests in 2 files

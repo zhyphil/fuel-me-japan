@@ -1,0 +1,3 @@
+OSM input unchanged: no-op
+Price input unchanged: no-op
+All input hashes unchanged; pointers and fetchedAt retained

@@ -1,0 +1,104 @@
+test_conditional_attributes_remain_unknown (test_importer.OsmTests.test_conditional_attributes_remain_unknown) ... 
+  test_conditional_attributes_remain_unknown (test_importer.OsmTests.test_conditional_attributes_remain_unknown) (tags={'payment:visa': 'yes', 'payment:visa:conditional': 'no @ (night)'}) ... FAIL
+  test_conditional_attributes_remain_unknown (test_importer.OsmTests.test_conditional_attributes_remain_unknown) (tags={'fuel:diesel': 'yes', 'fuel:diesel:conditional': 'no @ (night)'}) ... FAIL
+  test_conditional_attributes_remain_unknown (test_importer.OsmTests.test_conditional_attributes_remain_unknown) (tags={'payment:visa': 'yes', 'payment:credit_cards:conditional': 'no @ (night)'}) ... FAIL
+test_count_gate_bootstrap_all_partitions_and_manual_reason (test_importer.OsmTests.test_count_gate_bootstrap_all_partitions_and_manual_reason) ... ok
+test_service_never_collapses_mixed_or_conditional_evidence (test_importer.OsmTests.test_service_never_collapses_mixed_or_conditional_evidence) ... 
+  test_service_never_collapses_mixed_or_conditional_evidence (test_importer.OsmTests.test_service_never_collapses_mixed_or_conditional_evidence) (tags={'self_service': 'no', 'full_service': 'yes'}) ... FAIL
+  test_service_never_collapses_mixed_or_conditional_evidence (test_importer.OsmTests.test_service_never_collapses_mixed_or_conditional_evidence) (tags={'self_service': 'yes', 'self_service:conditional': 'no @ (06:00-18:00)'}) ... FAIL
+  test_service_never_collapses_mixed_or_conditional_evidence (test_importer.OsmTests.test_service_never_collapses_mixed_or_conditional_evidence) (tags={'self_service': 'yes', 'opening_hours:self_service': 'Mo-Fr'}) ... FAIL
+test_typed_dedup_surface_point_unknown_and_repairs (test_importer.OsmTests.test_typed_dedup_surface_point_unknown_and_repairs) ... ok
+test_unknown_mapping_and_conflicting_evidence (test_importer.OsmTests.test_unknown_mapping_and_conflicting_evidence) ... ok
+test_exact_47_by_3_units_dates_and_ignore_kerosene (test_importer.PriceTests.test_exact_47_by_3_units_dates_and_ignore_kerosene) ... ok
+test_failed_import_keeps_manifest_and_registry (test_importer.PriceTests.test_failed_import_keeps_manifest_and_registry) ... ok
+test_failed_pointer_promotion_restores_registry_and_previous_manifest (test_importer.PriceTests.test_failed_pointer_promotion_restores_registry_and_previous_manifest) ... FAIL
+test_http403_never_replaces_local_or_published_data (test_importer.PriceTests.test_http403_never_replaces_local_or_published_data) ... ok
+test_invalid_headers_missing_prefecture_nonnumeric_and_zero (test_importer.PriceTests.test_invalid_headers_missing_prefecture_nonnumeric_and_zero) ... ok
+test_schema_missing_duplicate_nan_and_downgrade (test_importer.PriceTests.test_schema_missing_duplicate_nan_and_downgrade) ... ok
+test_source_proof_hash_domain_and_dates (test_importer.PriceTests.test_source_proof_hash_domain_and_dates) ... ok
+
+======================================================================
+FAIL: test_conditional_attributes_remain_unknown (test_importer.OsmTests.test_conditional_attributes_remain_unknown) (tags={'payment:visa': 'yes', 'payment:visa:conditional': 'no @ (night)'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/data/test_importer.py", line 159, in test_conditional_attributes_remain_unknown
+    self.assertEqual(tri(tags, keys, parent), 'UNKNOWN')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'YES' != 'UNKNOWN'
+- YES
++ UNKNOWN
+
+
+======================================================================
+FAIL: test_conditional_attributes_remain_unknown (test_importer.OsmTests.test_conditional_attributes_remain_unknown) (tags={'fuel:diesel': 'yes', 'fuel:diesel:conditional': 'no @ (night)'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/data/test_importer.py", line 159, in test_conditional_attributes_remain_unknown
+    self.assertEqual(tri(tags, keys, parent), 'UNKNOWN')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'YES' != 'UNKNOWN'
+- YES
++ UNKNOWN
+
+
+======================================================================
+FAIL: test_conditional_attributes_remain_unknown (test_importer.OsmTests.test_conditional_attributes_remain_unknown) (tags={'payment:visa': 'yes', 'payment:credit_cards:conditional': 'no @ (night)'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/data/test_importer.py", line 159, in test_conditional_attributes_remain_unknown
+    self.assertEqual(tri(tags, keys, parent), 'UNKNOWN')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'YES' != 'UNKNOWN'
+- YES
++ UNKNOWN
+
+
+======================================================================
+FAIL: test_service_never_collapses_mixed_or_conditional_evidence (test_importer.OsmTests.test_service_never_collapses_mixed_or_conditional_evidence) (tags={'self_service': 'no', 'full_service': 'yes'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/data/test_importer.py", line 177, in test_service_never_collapses_mixed_or_conditional_evidence
+    self.assertEqual(result['serviceType'], expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'UNKNOWN' != 'FULL'
+- UNKNOWN
++ FULL
+
+
+======================================================================
+FAIL: test_service_never_collapses_mixed_or_conditional_evidence (test_importer.OsmTests.test_service_never_collapses_mixed_or_conditional_evidence) (tags={'self_service': 'yes', 'self_service:conditional': 'no @ (06:00-18:00)'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/data/test_importer.py", line 177, in test_service_never_collapses_mixed_or_conditional_evidence
+    self.assertEqual(result['serviceType'], expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'SELF' != 'UNKNOWN'
+- SELF
++ UNKNOWN
+
+
+======================================================================
+FAIL: test_service_never_collapses_mixed_or_conditional_evidence (test_importer.OsmTests.test_service_never_collapses_mixed_or_conditional_evidence) (tags={'self_service': 'yes', 'opening_hours:self_service': 'Mo-Fr'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/data/test_importer.py", line 177, in test_service_never_collapses_mixed_or_conditional_evidence
+    self.assertEqual(result['serviceType'], expected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'SELF' != 'UNKNOWN'
+- SELF
++ UNKNOWN
+
+
+======================================================================
+FAIL: test_failed_pointer_promotion_restores_registry_and_previous_manifest (test_importer.PriceTests.test_failed_pointer_promotion_restores_registry_and_previous_manifest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/data/test_importer.py", line 129, in test_failed_pointer_promotion_restores_registry_and_previous_manifest
+    self.assertEqual(registry, (output / 'source-registry.json').read_bytes())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: b'{"m[3454 chars]17:27.371596+00:00","id":"meti-prices","ingest[2361 chars]]}\n' != b'{"m[3454 chars]17:27Z","id":"meti-prices","ingestedSourceUrl"[2349 chars]]}\n'
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.251s
+
+FAILED (failures=7)

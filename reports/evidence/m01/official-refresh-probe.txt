@@ -1,0 +1,2 @@
+BLOCKED: HTTP Error 403: Forbidden. No source substitution and no deployment; retain the published snapshot.
+Verified: temporary candidate manifest stayed identical to the checked-in current manifest. No deployment attempted.

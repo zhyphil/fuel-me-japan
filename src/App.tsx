@@ -1,11 +1,14 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { messages, type Locale } from "./i18n";
 import { LocaleSwitcher } from "./components/LocaleSwitcher";
 import { TaskCard } from "./components/TaskCard";
 import { Icon } from "./components/Icon";
 import { analytics } from "./lib/analytics";
+import { FindFuel } from "./components/FindFuel";
 export function App({ locale }: { locale: Locale }) {
   const t = messages[locale];
+  const [findOpen, setFindOpen] = useState(false);
+  const findTrigger = useRef<HTMLButtonElement>(null);
   useEffect(() => {
     analytics.track("landing_view", { locale });
   }, [locale]);
@@ -48,7 +51,7 @@ export function App({ locale }: { locale: Locale }) {
             <div className="road" />
             <div className="scene-sign">
               <Icon name="pump" />
-              <span>FUEL</span>
+              <span>{t.ffSceneFuel}</span>
             </div>
             <div className="scene-caption">JAPAN / 日本</div>
           </div>
@@ -66,8 +69,14 @@ export function App({ locale }: { locale: Locale }) {
               icon="pump"
               title={t.findTitle}
               description={t.findBody}
-              status={t.soon}
+              status={t.ffOpen}
               primary
+              buttonRef={findTrigger}
+              expanded={findOpen}
+              onClick={() => {
+                analytics.track("find_fuel_click", { locale });
+                setFindOpen(true);
+              }}
             />
             <TaskCard
               icon="return"
@@ -89,6 +98,11 @@ export function App({ locale }: { locale: Locale }) {
             />
           </div>
         </section>
+        <noscript><p className="notice-box">{t.ffNoJavaScript}</p></noscript>
+        {findOpen && <FindFuel locale={locale} onClose={() => {
+          setFindOpen(false);
+          findTrigger.current?.focus();
+        }} />}
         <aside className="promise">
           <span className="promise-symbol" aria-hidden="true">
             ◎
@@ -102,6 +116,7 @@ export function App({ locale }: { locale: Locale }) {
           <summary>{t.sources}</summary>
           <p>{t.sourcesBody}</p>
           <a href="/data/source-registry.json">{t.registry}</a>
+          <p><a href="/data/manifest.json">{t.ffManifest}</a> · <a href="/data/OSM-NOTICE.txt">{t.ffDataLicense}</a></p>
         </details>
       </main>
       <footer>
@@ -109,6 +124,7 @@ export function App({ locale }: { locale: Locale }) {
           Fuel Me Japan <span>·</span> {t.footer}
         </p>
         <p>{t.privacy}</p>
+        <p><a href="https://www.openstreetmap.org/copyright">{t.ffAttribution}</a> · <a href="https://opendatacommons.org/licenses/odbl/1-0/">{t.ffOdbl}</a></p>
       </footer>
     </>
   );

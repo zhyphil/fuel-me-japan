@@ -9,3 +9,13 @@ dist/
 *.zip
 playwright-report/
 test-results/
+
+# Raw data and importer environments stay outside the published tree.
+*.osm.pbf
+*.geojsonseq
+*.xlsx
+.venv*/
+__pycache__/
+*.pyc
+.import.lock
+.staging-*

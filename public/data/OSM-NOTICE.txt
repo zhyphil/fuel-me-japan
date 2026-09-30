@@ -1,0 +1,21 @@
+Fuel Me Japan transformed station database — Open Database License (ODbL) 1.0
+© OpenStreetMap contributors. Extract distribution: Geofabrik GmbH.
+https://www.openstreetmap.org/copyright
+https://opendatacommons.org/licenses/odbl/1-0/
+
+The complete derived database is available without registration: follow
+/data/manifest.json -> stations.partitions[*].path to download all 47 prefectures
+and the UNKNOWN partition. These JSON records, spatial lookup metadata and OSM
+transform audit are offered under ODbL 1.0. Each partition has a SHA-256 and byte
+count. The manifest also identifies the original extract URL, hash, fetch time,
+OSM replication timestamp and transformation version. Importer source is in
+scripts/importer; transformation documentation is in docs/data-pipeline.md.
+
+OSM is a partial map: objects may be missing, stale or duplicated in reality.
+A stable typed OSM object ID does not prove a unique business. Coordinates can
+be representative points on station areas; they do not identify entrances.
+Missing or ambiguous attributes and prefecture membership remain UNKNOWN.
+
+Official prefectural survey price facts are a separate dataset and are not
+part of this OSM derivative database. Their source and license appear in the
+source registry and price archive. No station-level prices are distributed.

@@ -1,0 +1,76 @@
+name: Reviewable fuel data refresh
+
+on:
+  workflow_dispatch:
+    inputs:
+      dataset:
+        description: Dataset to check
+        required: true
+        default: prices
+        type: choice
+        options: [prices, osm]
+  schedule:
+    - cron: '0 0 * * 1'
+    - cron: '0 6,10,14 * * 3'
+    - cron: '0 6 * * 4'
+
+# The candidate is an artifact for review. This workflow cannot push or deploy.
+permissions:
+  contents: read
+
+concurrency:
+  group: fuel-data-refresh
+  cancel-in-progress: false
+
+jobs:
+  candidate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version: '24'
+          cache: npm
+      - name: Install locked data and app dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y osmium-tool
+          python -m pip install -r requirements-data.txt
+          npm ci
+          npx playwright install --with-deps chromium
+      - name: Acquire and validate a candidate snapshot
+        env:
+          REQUESTED_DATASET: ${{ inputs.dataset }}
+          TRIGGER_SCHEDULE: ${{ github.event.schedule }}
+        run: |
+          case "$REQUESTED_DATASET" in
+            osm|prices) dataset="$REQUESTED_DATASET" ;;
+            '')
+              if [ "$TRIGGER_SCHEDULE" = '0 0 * * 1' ]; then
+                dataset=osm
+              else
+                dataset=prices
+              fi
+              ;;
+            *) exit 1 ;;
+          esac
+          python scripts/importer/refresh_sources.py "$dataset" --download-dir "$RUNNER_TEMP/fmj-inputs"
+      - name: Validate importer, app and browser behavior
+        run: |
+          npm run test:data
+          npm run check
+      - name: Keep validated data and provenance for review
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        with:
+          name: fuel-data-candidate-${{ github.run_id }}
+          path: |
+            public/data/
+            dist/build-provenance.json
+          if-no-files-found: error
+          retention-days: 14

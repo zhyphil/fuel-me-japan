@@ -2,57 +2,62 @@
 
 Refuel in Japan without speaking Japanese.
 
-Production foundation preview: https://fuel-me-japan.com/
+**M0.1 Find Fuel local preview.** Find Fuel is the only active task. Rental return, vehicle fuel matching and refuelling guides remain informational, unavailable cards. Stop after the M0.1 report and user review; M0.2+ is not authorized.
 
-The www hostname and production pages.dev address redirect to the primary domain, preserving paths and query parameters. Immutable deployment previews remain accessible. Domain configuration and verification: `reports/M0.0-domain-configuration.md`.
-
-**M0.0 Foundation preview only.** The four future task cards are informational; station search, vehicle advice, guides and return-car flows are not implemented. Stop here for user review before M0.1.
+The existing production foundation URL is https://fuel-me-japan.com/. Its earlier domain/deployment evidence is in `reports/M0.0-domain-configuration.md`. This M0.1 work has not been pushed or deployed; that URL is not evidence of M0.1 acceptance.
 
 ## Local setup
 
-Node 24 (see `.nvmrc`) and npm. From this directory:
+Use Node 24 (`.nvmrc`) and existing npm dependencies. On a fresh development machine:
 
 ```sh
 npm ci
+npx playwright install chromium
 npm run dev
 ```
 
 ```sh
-npx playwright install chromium
 npm run check
 ```
 
-`check` runs all lint/typecheck/unit tests/build/mobile browser tests. Browser installation is needed once per machine. `npm run preview` serves the built output. No environment variables are needed for local development.
+`check` runs lint, TypeScript, unit tests, static build/prerender, then Chromium browser tests against a local preview server. No environment variables are required. Browser tests use mocked geolocation, shipped data and intercepted external navigation; they never request the developer's actual position. Find Fuel screenshots are written to `test-results/find-fuel-*.png` when browser execution succeeds.
 
-## Architecture
+The final standard check passed locally with Node 24.18.0: lint, TypeScript, 32 unit tests, build/prerender and 28 Chromium browser tests. The separate importer suite has 16 passing tests. See `reports/M0.1-completion.md` for evidence and limits. Python importer setup and refresh commands are in `docs/data-pipeline.md`.
 
-React + TypeScript + Vite; static HTML prerendered at `/en/`, `/zh-Hant/`, `/ko/`, `/zh-Hans/`, `/th/`, with an English `/` fallback. Shared mobile components, system fonts, CSS illustration, localized HTML metadata. No application server or database.
+## Architecture and privacy
 
-- `src/locales`: complete UI dictionaries and locale metadata.
-- `src/lib/analytics.ts`: typed event abstraction; default no-op. Runtime payload allowlist is only the locale enum. No analytics provider, cookies or identifiers.
-- `public/data/source-registry.json`: candidate sources with owner, URL, use, terms, attribution and refresh policy; every entry remains PENDING_REVIEW / productionEnabled=false. Null review/fetch dates are intentional, not missing successful reviews.
-- `scripts/prerender.tsx`: validates the registry and emits localized HTML plus a build provenance manifest with zero ingested sources.
-- `public/_headers`: static Pages headers. Geolocation is disabled in M0.0; future explicit permission flow needs an authorized change.
+React + TypeScript + Vite; static HTML at `/en/`, `/zh-Hant/`, `/ko/`, `/zh-Hans/`, `/th/`, with an English `/` fallback. No backend, database, accounts, internal navigation engine, payments or live-price scraping.
 
-Foundation pages are `noindex` until real functionality and safety-copy review are ready. Japanese recognition labels are retained in `src/i18n.ts`; foundation provides no safety instructions or vehicle fuel decisions. Locale preference lives in the URL, not device storage.
+- `src/components/FindFuel.tsx`: explicit location action or manual prefecture selection, recorded city/address filtering, station list/detail, official references and external map links.
+- `src/lib/find-fuel.ts`: search, reference-date and destination-only map helpers. Manual search shows no distance; location search shows straight-line distance within 50 km, never driving distance/time.
+- `src/lib/stations.ts`: static manifest/artifact validation and regional loading. Manual selection loads one prefecture; nearby selection loads intersecting partitions. There is no runtime Overpass request.
+- `src/locales`: exactly five UI dictionaries. Japanese pump labels remain visible. Vehicle fuel is not inferred from station availability.
+- `src/lib/analytics.ts`: no-op default; the runtime payload allowlist contains only the locale enum. Precise position remains in panel memory and is not persisted or attached to navigation links. Language preference lives in the URL.
+- `public/data/source-registry.json`: OSM, Geofabrik and official METI price data are approved in the current registry; gogo.gs and rental guidance remain pending and disabled.
+- `public/data/manifest.json`: versioned station partitions, a separate official price file, checksums, source timestamps and registry snapshot. Build provenance matches the ingested sources.
+- `public/data/OSM-NOTICE.txt`: station database attribution, ODbL licensing and source provenance. Data downloads and attribution are visible in the UI.
 
-## Cloudflare Pages
+OSM coverage and tags may be incomplete or old; absent facts remain UNKNOWN. Official prices are dated, cash/tax-included prefectural JPY/litre references, not a station price or live quote. Price load failure leaves station navigation available. References older than 14 days receive a warning. No gogo price is fetched or displayed.
 
-Uses prebuilt static assets via Direct Upload. No Cloudflare Functions, Workers runtime, bindings or database.
+Pages remain `noindex` pending review. Safety-copy review and real-browser acceptance must not be inferred from static checks.
+
+## Refresh and deployment boundaries
+
+The offline importer and `.github/workflows/data-refresh.yml` check weekly OSM and publication-day official prices. The workflow produces a validated candidate artifact with read-only repository permissions; it cannot push or deploy. It has not been activated or executed on GitHub during this local milestone. The official HTTP fetch still returns 403 here; browser-acquired original workbook import is supported. See `docs/data-pipeline.md`.
+
+Cloudflare uses prebuilt static Pages assets. Deployment requires separate authorization and successful checks:
 
 ```sh
 npx wrangler login
 npm run deploy
 ```
 
-The `fuel-me-japan` Pages project has already been created. Initial creation on Wrangler 4.144.0 required `wrangler pages project create fuel-me-japan --production-branch main --force` because its agent-specific automatic Workers delegation failed. The inspected CLI uses this flag to select Pages for a new project, not to overwrite one. Subsequent deployments target the existing Pages project without this flag.
-
-`deploy` runs all checks before uploading `dist` to the production branch. Cloudflare credentials must remain in local Wrangler authentication, never in Git. No automatic deploy hook or recurring job is installed.
-
-Cloudflare documents that a Direct Upload project cannot later be switched to Git integration in place: https://developers.cloudflare.com/pages/get-started/direct-upload/
+`deploy` uploads `dist` to the production branch after checks. Keep credentials out of Git. The data workflow never uses Cloudflare credentials or deploys to production.
 
 ## Scope and evidence
 
-Original frozen specs: `Fuel-Me-Japan-M0-Handoff-Package/` (00–10, unchanged).
-Completion and outstanding acceptance: `reports/M0.0-completion.md`.
-No data ingestion or new source rights are implied by this foundation. No M0.1 work is authorized.
+Frozen specifications: `Fuel-Me-Japan-M0-Handoff-Package/00–10` (unchanged).
+
+- Historical foundation evidence: `reports/M0.0-completion.md` and `reports/M0.0-domain-configuration.md`.
+- Current completion report, explicit acceptance limits and check output: `reports/M0.1-completion.md` and `reports/evidence/m01/`.
+- Data-source provenance and importer verification: `reports/M0.1-data.md`.

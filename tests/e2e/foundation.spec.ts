@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { readFileSync } from "node:fs";
 const languageCases = [
   {
     locale: "en",
@@ -73,7 +74,10 @@ for (const language of languageCases) {
     await expect(
       page.getByRole("heading", { name: language.task, exact: true }),
     ).toBeVisible();
-    await expect(page.locator("article")).toHaveCount(4);
+    await expect(page.locator(".task-grid article")).toHaveCount(4);
+    await expect(page.locator(".task-grid button")).toHaveCount(1);
+    await expect(page.locator(".task-grid article:not(:has(button))")).toHaveCount(3);
+    await expect(page.getByText(JSON.parse(readFileSync(`src/locales/${language.locale}.json`, "utf8")).preview, { exact: true })).toBeVisible();
     await expect(
       page.getByRole("navigation").locator('[aria-current="page"]'),
     ).toHaveText(language.label);
@@ -111,7 +115,7 @@ test("localized static HTML is useful without JavaScript", async ({
   );
   await expect(page.locator('meta[name="description"]')).toHaveAttribute(
     "content",
-    /일본어/,
+    /일본/,
   );
   await page.getByRole("link", { name: "ไทย", exact: true }).click();
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
@@ -119,7 +123,7 @@ test("localized static HTML is useful without JavaScript", async ({
   );
   await context.close();
 });
-test("foundation does not request location, persist it, fetch business data or send analytics", async ({
+test("home and opening M0.1 do not request location, persist it, fetch data or send analytics", async ({
   page,
   context,
 }) => {
@@ -147,9 +151,14 @@ test("foundation does not request location, persist it, fetch business data or s
   });
   await page.goto("/");
   await expect(
-    page.getByText("Foundation preview", { exact: true }),
+    page.getByText("Find Fuel preview", { exact: true }),
   ).toBeVisible();
-  await expect(page.locator("article a, article button")).toHaveCount(0);
+  await expect(page.locator(".task-grid article")).toHaveCount(4);
+  await expect(page.locator(".task-grid button")).toHaveCount(1);
+  await expect(page.locator(".task-grid article:not(:has(button))")).toHaveCount(3);
+  await expect(page.locator(".task-grid .task-status").filter({ hasText: "Coming later" })).toHaveCount(3);
+  await page.getByRole("button", { name: "Find fuel near me", exact: true }).click();
+  await expect(page.getByRole("heading", { name: "Find fuel near me", level: 2 })).toBeVisible();
   await page.getByRole("link", { name: "繁中", exact: true }).click();
   expect(requests).toEqual([]);
   expect(await context.cookies()).toEqual([]);
@@ -161,20 +170,30 @@ test("foundation does not request location, persist it, fetch business data or s
   ).toEqual({ local: 0, session: 0 });
   expect(errors).toEqual([]);
 });
-test("deployed source registry and provenance disclose no ingested data", async ({
-  request,
-}) => {
-  const response = await request.get("/data/source-registry.json");
-  expect(response.ok()).toBe(true);
-  const registry = await response.json();
+test("shipped registry and build provenance match the M0.1 ingestion manifest", async ({ request }) => {
+  const registryResponse = await request.get("/data/source-registry.json");
+  expect(registryResponse.ok()).toBe(true);
+  const registry = await registryResponse.json();
   expect(registry.sources).toHaveLength(5);
   for (const source of registry.sources) {
-    expect(source.productionEnabled).toBe(false);
-    expect(source.status).toBe("PENDING_REVIEW");
-    expect(source.fetchedAt).toBeNull();
+    const approved = ["osm", "geofabrik", "meti-prices"].includes(source.id);
+    expect(source.productionEnabled).toBe(approved);
+    expect(source.status).toBe(approved ? "APPROVED" : "PENDING_REVIEW");
+    if (approved) expect(source.fetchedAt).toBeTruthy();
+    else expect(source.fetchedAt).toBeNull();
   }
-  const provenance = await request.get("/build-provenance.json");
-  expect((await provenance.json()).ingestedSources).toEqual([]);
+  const manifestResponse = await request.get("/data/manifest.json");
+  expect(manifestResponse.ok()).toBe(true);
+  const manifest = await manifestResponse.json();
+  const provenanceResponse = await request.get("/build-provenance.json");
+  expect(provenanceResponse.ok()).toBe(true);
+  const provenance = await provenanceResponse.json();
+  expect(provenance.milestone).toBe("M0.1");
+  expect(provenance.ingestedSources).toEqual(manifest.sources);
+  expect(provenance.stationCount).toBe(manifest.stations.count);
+  expect(provenance.priceRecordCount).toBe(141);
+  expect(provenance.surveyDate).toBe(manifest.prices.surveyDate);
+  expect(provenance.sourceRegistry).toEqual(manifest.sourceRegistry);
 });
 test("desktop layout and keyboard navigation remain usable", async ({
   page,
@@ -185,6 +204,7 @@ test("desktop layout and keyboard navigation remain usable", async ({
   await expect(
     page.getByRole("link", { name: "Skip to content" }),
   ).toBeFocused();
+  await expect(page.getByRole("link", { name: "Skip to content" })).toBeInViewport();
   expect(
     await page.evaluate(
       () => document.documentElement.scrollWidth <= window.innerWidth,

@@ -30,13 +30,21 @@ summary {
 .skip-link {
   position: fixed;
   left: 1rem;
-  top: -100px;
+  top: 1rem;
   background: white;
-  padding: 12px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
   z-index: 10;
 }
 .skip-link:focus {
-  top: 1rem;
+  padding: 12px;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip-path: none;
 }
 .site-header {
   max-width: 1120px;
@@ -538,4 +546,87 @@ footer p {
   html[lang="th"] h1 {
     font-size: 43px;
   }
+}
+
+/* Find Fuel uses the same paper, forest and rust palette as the home page. */
+button, input, select { font: inherit; }
+button, select { cursor: pointer; }
+button:focus-visible, input:focus-visible, select:focus-visible, [tabindex="-1"]:focus-visible {
+  outline: 3px solid var(--rust);
+  outline-offset: 4px;
+}
+.task-action { color: inherit; font: inherit; border: 0; padding: 0; background: transparent; text-align: start; }
+.task-action::after { content: ""; position: absolute; inset: 0; border-radius: 12px; }
+.task-action:focus-visible::after { outline: 3px solid var(--rust); outline-offset: 4px; }
+.task-action:focus-visible { outline: none; }
+.task-card:has(.task-action):hover { box-shadow: 0 4px 16px #173f3726; }
+.find-panel { margin-top: 32px; padding: 30px; border: 1px solid var(--line); border-top: 4px solid var(--rust); border-radius: 14px; background: var(--white); scroll-margin-top: 24px; overflow-wrap: anywhere; }
+.find-heading { display: flex; gap: 16px; justify-content: space-between; align-items: flex-start; }
+.find-heading .eyebrow { margin-bottom: 8px; }
+.find-heading h2 { font-size: 27px; line-height: 1.3; margin: 0; }
+.find-intro { color: var(--muted); max-width: 680px; }
+.find-controls { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; margin: 24px 0 12px; }
+.find-controls > div { min-width: 0; }
+.find-panel label { display: block; font-size: 14px; font-weight: 650; margin-bottom: 8px; }
+.find-panel select, .find-panel input { display: block; width: 100%; min-width: 0; min-height: 48px; border: 1px solid #8b9589; border-radius: 8px; padding: 10px 12px; background: var(--white); color: var(--ink); }
+.button { display: inline-flex; justify-content: center; align-items: center; gap: 6px; min-height: 44px; padding: 10px 16px; border: 1px solid var(--green); border-radius: 8px; background: transparent; color: var(--green); font-weight: 650; font-size: 14px; text-decoration: none; text-align: center; line-height: 1.5; }
+.button:hover { background: #e5ece5; }
+.button-primary { background: var(--rust); border-color: var(--rust); color: white; }
+.button-primary:hover { background: #934432; border-color: #934432; }
+.button-quiet { border-color: var(--line); font-weight: 500; }
+.find-heading .button { flex-shrink: 0; }
+.field-help { color: var(--muted); font-size: 12px; line-height: 1.7; }
+.search-status { font-size: 14px; padding: 2px 0; }
+.search-status p { margin: 8px 0 20px; }
+.search-error { color: #873c2b; }
+.notice-box, .fuel-reminder { background: #fcf0df; border-left: 3px solid var(--rust); padding: 14px 16px; border-radius: 0 8px 8px 0; font-size: 14px; }
+.station-list { padding: 0; margin: 20px 0; list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.station-list li { min-width: 0; }
+.station-card { display: flex; flex-direction: column; align-items: flex-start; width: 100%; height: 100%; padding: 18px; text-align: start; color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-radius: 10px; gap: 7px; overflow-wrap: anywhere; }
+.station-card:hover { border-color: var(--rust); }
+.station-card-top { display: flex; justify-content: space-between; align-items: start; width: 100%; gap: 12px; font-size: 16px; }
+.station-meta { color: var(--muted); font-size: 12px; }
+.distance { color: var(--green); font-size: 13px; font-weight: 700; }
+.station-service { margin-top: auto; padding-top: 7px; font-size: 12px; }
+.station-detail { margin-top: 22px; max-width: 720px; }
+.station-detail > h3 { font-size: 25px; line-height: 1.4; margin-bottom: 4px; }
+.station-detail h4 { font-size: 17px; margin: 26px 0 12px; }
+.station-facts { margin: 10px 0; font-size: 14px; }
+.station-facts > div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; border-bottom: 1px solid var(--line); padding: 12px 0; align-items: baseline; }
+.station-facts dt { color: var(--muted); }
+.station-facts dd { margin: 0; }
+.station-facts .japanese-label { display: block; color: var(--ink); font-size: 13px; }
+.fuel-reminder { margin: 24px 0; }
+.fuel-reminder h4 { margin: 0 0 8px; }
+.fuel-reminder p { margin: 0; }
+.official-price { border: 1px solid var(--line); background: var(--paper); border-radius: 10px; padding: 22px; margin: 28px 0; font-size: 14px; }
+.official-price .eyebrow { margin-bottom: 8px; }
+.official-price h4 { margin: 0; }
+.official-price .station-facts dd { text-align: end; }
+.link-buttons { display: flex; gap: 10px; flex-wrap: wrap; }
+.map-fallback { margin-top: 28px; border-top: 1px solid var(--line); padding-top: 18px; }
+.map-fallback h3 { font-size: 16px; }
+.map-fallback p { font-size: 12px; color: var(--muted); max-width: 700px; }
+.find-attribution { border-top: 1px solid var(--line); margin-top: 26px; padding-top: 14px; font-size: 11px; color: var(--muted); }
+.find-attribution summary { cursor: pointer; min-height: 44px; padding-top: 12px; }
+.download-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; padding-left: 18px; }
+.download-list a { display: inline-block; padding: 8px 0; }
+@media (max-width: 650px) {
+  .find-panel { padding: 20px 16px; margin-left: -6px; margin-right: -6px; }
+  .find-heading { flex-wrap: wrap; }
+  .find-heading h2 { font-size: 23px; }
+  .find-heading .button { margin-left: auto; }
+  .find-controls, .station-list { grid-template-columns: 1fr; gap: 16px; }
+  .find-controls .button { width: 100%; }
+  .find-intro { font-size: 14px; }
+  .station-facts > div { gap: 12px; }
+  .official-price { padding: 16px 12px; }
+  .link-buttons { flex-direction: column; }
+  .link-buttons .button { width: 100%; }
+  .download-list { grid-template-columns: 1fr; }
+}
+@media (max-width: 360px) {
+  .locale-switcher { gap: 0; }
+  .locale-switcher a { min-width: 44px; padding-left: 7px; padding-right: 7px; }
+  .section-heading { flex-wrap: wrap; }
 }

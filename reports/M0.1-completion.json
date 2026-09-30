@@ -1,0 +1,39 @@
+{
+  "milestone": "M0.1 Find Fuel",
+  "date": "2026-09-30",
+  "branch": "codex/m0-1-find-fuel",
+  "baseCommit": "af114378494ae7da92d38a771cf2c4f8177b75f9",
+  "localFunctionalAcceptance": "PASS",
+  "checks": {
+    "lint": "PASS",
+    "typecheck": "PASS",
+    "unitTests": {
+      "passed": 32
+    },
+    "importerTests": {
+      "passed": 16
+    },
+    "build": "PASS",
+    "chromiumBrowserTests": {
+      "passed": 28
+    },
+    "independentReview": "COMPLETED; one P2 checksum omission fixed and regression-verified by parent",
+    "frozenSpecifications": "11 unchanged"
+  },
+  "data": {
+    "stations": 16454,
+    "prefectures": 47,
+    "unknownAssignments": 0,
+    "referencePriceRecords": 141,
+    "surveyDate": "2026-09-28",
+    "publishedAt": "2026-09-30",
+    "manifestSha256": "334ce4620b9e85751876aa427b0d958eb8410d89af0bfb4fa488b2737869693d"
+  },
+  "limitations": {
+    "unattendedOfficialPriceAcquisition": "BLOCKED: official HTTP403; verified original browser download used",
+    "githubSchedule": "configuration authored; remote execution not verified",
+    "m01ProductionRelease": "not pushed or deployed",
+    "realDeviceSafariAndNativeLanguageReview": "not verified"
+  },
+  "nextMilestone": "STOP; wait for user review before M0.2"
+}

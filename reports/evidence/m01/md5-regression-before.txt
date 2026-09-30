@@ -1,0 +1,32 @@
+test_osm_requires_the_available_publisher_checksum (test_importer.OsmTests.test_osm_requires_the_available_publisher_checksum) ... 
+  test_osm_requires_the_available_publisher_checksum (test_importer.OsmTests.test_osm_requires_the_available_publisher_checksum) (md5=None) ... FAIL
+test_osm_requires_the_available_publisher_checksum (test_importer.OsmTests.test_osm_requires_the_available_publisher_checksum) ... ERROR
+test_osm_uses_dated_publisher_link_not_latest_alias_or_future_file (test_refresh_sources.SourceDiscoveryTests.test_osm_uses_dated_publisher_link_not_latest_alias_or_future_file) ... ok
+
+======================================================================
+ERROR: test_osm_requires_the_available_publisher_checksum (test_importer.OsmTests.test_osm_requires_the_available_publisher_checksum)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/data/test_importer.py", line 175, in test_osm_requires_the_available_publisher_checksum
+    verified_input(path, proof | {'md5': proof['md5'].upper()}, 'download.geofabrik.de')
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/scripts/importer/common.py", line 44, in verified_input
+    require(digest(path, 'md5') == metadata['md5'], 'Source MD5 mismatch')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/scripts/importer/common.py", line 18, in require
+    raise ValueError(message)
+ValueError: Source MD5 mismatch
+
+======================================================================
+FAIL: test_osm_requires_the_available_publisher_checksum (test_importer.OsmTests.test_osm_requires_the_available_publisher_checksum) (md5=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/data/test_importer.py", line 173, in test_osm_requires_the_available_publisher_checksum
+    with self.subTest(md5=bad), self.assertRaises(ValueError):
+                                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.002s
+
+FAILED (failures=1, errors=1)

@@ -1,0 +1,122 @@
+
+> fuel-me-japan@0.0.0 check
+> npm run lint && npm run typecheck && npm test && npm run build && npm run test:e2e
+
+
+> fuel-me-japan@0.0.0 lint
+> eslint . --max-warnings 0
+
+
+> fuel-me-japan@0.0.0 typecheck
+> tsc --noEmit
+
+
+> fuel-me-japan@0.0.0 test
+> vitest run
+
+
+ RUN  v5.0.2 /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan
+
+
+ Test Files  4 passed (4)
+      Tests  27 passed (27)
+   Start at  10:42:44
+   Duration  285ms (tests 44%, transform 40%, import 13%, worker 2%)
+
+
+> fuel-me-japan@0.0.0 build
+> vite build && tsx scripts/prerender.tsx
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 31 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                            0.72 kB │ gzip:  0.40 kB
+dist/assets/index-BBr3NfUw.css            12.04 kB │ gzip:  3.30 kB
+dist/assets/source-registry-D_2xV1JF.js    2.88 kB │ gzip:  1.24 kB
+dist/assets/index-DI0l8-b-.js            293.83 kB │ gzip: 93.19 kB
+
+✓ built in 139ms
+node:net:1926
+      const error = new UVExceptionWithHostPort(rval, 'listen', address, port);
+                    ^
+
+Error: listen EPERM: operation not permitted /var/folders/x3/4w18d5zd22b9fgwfx232whhr0000gn/T/tsx-501/51262.pipe
+    at Server.setupListenHandle [as _listen2] (node:net:1926:21)
+    at listenInCluster (node:net:2005:12)
+    at Server.listen (node:net:2127:5)
+    at file:///Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel%20Me%20Japan/node_modules/tsx/dist/cli.mjs:53:32174
+    at new Promise (<anonymous>)
+    at createIpcServer (file:///Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel%20Me%20Japan/node_modules/tsx/dist/cli.mjs:53:32152)
+    at async file:///Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel%20Me%20Japan/node_modules/tsx/dist/cli.mjs:55:542 {
+  code: 'EPERM',
+  errno: -1,
+  syscall: 'listen',
+  address: '/var/folders/x3/4w18d5zd22b9fgwfx232whhr0000gn/T/tsx-501/51262.pipe',
+  port: -1
+}
+
+Node.js v24.14.0
+
+--- Final worker check after helper tests and E2E discovery fixes ---
+
+> fuel-me-japan@0.0.0 check
+> npm run lint && npm run typecheck && npm test && npm run build && npm run test:e2e
+
+
+> fuel-me-japan@0.0.0 lint
+> eslint . --max-warnings 0
+
+
+> fuel-me-japan@0.0.0 typecheck
+> tsc --noEmit
+
+
+> fuel-me-japan@0.0.0 test
+> vitest run
+
+
+ RUN  v5.0.2 /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan
+
+
+ Test Files  5 passed (5)
+      Tests  32 passed (32)
+   Start at  10:44:48
+   Duration  284ms (transform 47%, tests 37%, import 13%, worker 3%)
+
+
+> fuel-me-japan@0.0.0 build
+> vite build && tsx scripts/prerender.tsx
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 31 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                            0.72 kB │ gzip:  0.40 kB
+dist/assets/index-BBr3NfUw.css            12.04 kB │ gzip:  3.30 kB
+dist/assets/source-registry-D_2xV1JF.js    2.88 kB │ gzip:  1.24 kB
+dist/assets/index-DI0l8-b-.js            293.83 kB │ gzip: 93.19 kB
+
+✓ built in 105ms
+node:net:1926
+      const error = new UVExceptionWithHostPort(rval, 'listen', address, port);
+                    ^
+
+Error: listen EPERM: operation not permitted /var/folders/x3/4w18d5zd22b9fgwfx232whhr0000gn/T/tsx-501/51877.pipe
+    at Server.setupListenHandle [as _listen2] (node:net:1926:21)
+    at listenInCluster (node:net:2005:12)
+    at Server.listen (node:net:2127:5)
+    at file:///Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel%20Me%20Japan/node_modules/tsx/dist/cli.mjs:53:32174
+    at new Promise (<anonymous>)
+    at createIpcServer (file:///Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel%20Me%20Japan/node_modules/tsx/dist/cli.mjs:53:32152)
+    at async file:///Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel%20Me%20Japan/node_modules/tsx/dist/cli.mjs:55:542 {
+  code: 'EPERM',
+  errno: -1,
+  syscall: 'listen',
+  address: '/var/folders/x3/4w18d5zd22b9fgwfx232whhr0000gn/T/tsx-501/51877.pipe',
+  port: -1
+}
+
+Node.js v24.14.0
