@@ -1,0 +1,205 @@
+{
+  "checkedAt": "2026-09-30T19:48:50.906873+00:00",
+  "status": "PASS",
+  "说明": "生产域名响应与本地已验收构建逐字节比对，包含五语言、脚本样式、来源、门店数据及三地站点分区。界面交互另行核验。",
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/",
+      "remoteSha256": "86bc6dacaa5822567b0cf683876a56de394c085332d0ebb3c9fc8773cadee0c9",
+      "localSha256": "86bc6dacaa5822567b0cf683876a56de394c085332d0ebb3c9fc8773cadee0c9",
+      "bytes": 12530,
+      "match": true,
+      "noindex": true,
+      "contentSecurityPolicy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+      "canonical": "https://fuel-me-japan.com/en/"
+    },
+    {
+      "path": "/en/",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/en/",
+      "remoteSha256": "86bc6dacaa5822567b0cf683876a56de394c085332d0ebb3c9fc8773cadee0c9",
+      "localSha256": "86bc6dacaa5822567b0cf683876a56de394c085332d0ebb3c9fc8773cadee0c9",
+      "bytes": 12530,
+      "match": true,
+      "noindex": true,
+      "contentSecurityPolicy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+      "canonical": "https://fuel-me-japan.com/en/"
+    },
+    {
+      "path": "/zh-Hant/",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/zh-Hant/",
+      "remoteSha256": "3dfd3c63d9170ce757d984429fa9ef420437d0cbbca1b0cd947d3084aa3b2ea1",
+      "localSha256": "3dfd3c63d9170ce757d984429fa9ef420437d0cbbca1b0cd947d3084aa3b2ea1",
+      "bytes": 12246,
+      "match": true,
+      "noindex": true,
+      "contentSecurityPolicy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+      "canonical": "https://fuel-me-japan.com/zh-Hant/"
+    },
+    {
+      "path": "/ko/",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/ko/",
+      "remoteSha256": "05bdb16b14dd001aeebcb2df205f879b69cb2ebabfaf7626417ec3a2965ee223",
+      "localSha256": "05bdb16b14dd001aeebcb2df205f879b69cb2ebabfaf7626417ec3a2965ee223",
+      "bytes": 13404,
+      "match": true,
+      "noindex": true,
+      "contentSecurityPolicy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+      "canonical": "https://fuel-me-japan.com/ko/"
+    },
+    {
+      "path": "/zh-Hans/",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/zh-Hans/",
+      "remoteSha256": "bd09c9dc21e002c0e4e0058660243685fefb7a8ba622e2934d9459a7abf32f6c",
+      "localSha256": "bd09c9dc21e002c0e4e0058660243685fefb7a8ba622e2934d9459a7abf32f6c",
+      "bytes": 12239,
+      "match": true,
+      "noindex": true,
+      "contentSecurityPolicy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+      "canonical": "https://fuel-me-japan.com/zh-Hans/"
+    },
+    {
+      "path": "/th/",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/th/",
+      "remoteSha256": "61ba4be67dbc33c3eefc6f45941df63a34a0d84af73537334bf0a893ac8d6931",
+      "localSha256": "61ba4be67dbc33c3eefc6f45941df63a34a0d84af73537334bf0a893ac8d6931",
+      "bytes": 17536,
+      "match": true,
+      "noindex": true,
+      "contentSecurityPolicy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+      "canonical": "https://fuel-me-japan.com/th/"
+    },
+    {
+      "path": "/build-provenance.json",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/build-provenance.json",
+      "remoteSha256": "6a3625ee56fe39e0cc057e8a02a381a3ebc3b0205aedd4696c3c219808ae479b",
+      "localSha256": "6a3625ee56fe39e0cc057e8a02a381a3ebc3b0205aedd4696c3c219808ae479b",
+      "bytes": 2545,
+      "match": true
+    },
+    {
+      "path": "/data/manifest.json",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/data/manifest.json",
+      "remoteSha256": "334ce4620b9e85751876aa427b0d958eb8410d89af0bfb4fa488b2737869693d",
+      "localSha256": "334ce4620b9e85751876aa427b0d958eb8410d89af0bfb4fa488b2737869693d",
+      "bytes": 23863,
+      "match": true
+    },
+    {
+      "path": "/data/source-registry.json",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/data/source-registry.json",
+      "remoteSha256": "3ad895fc107a0ce94271817df97de8f6de23c43e8a222b1a594a37a5f6459a5b",
+      "localSha256": "3ad895fc107a0ce94271817df97de8f6de23c43e8a222b1a594a37a5f6459a5b",
+      "bytes": 5783,
+      "match": true
+    },
+    {
+      "path": "/runtime-map-provider.json",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/runtime-map-provider.json",
+      "remoteSha256": "5f5b86a46a83a22dfa345fab478e98c359271bdb3e68aa90868c7a19461ae20e",
+      "localSha256": "5f5b86a46a83a22dfa345fab478e98c359271bdb3e68aa90868c7a19461ae20e",
+      "bytes": 1297,
+      "match": true
+    },
+    {
+      "path": "/field-guides/refuel-sources.json",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/field-guides/refuel-sources.json",
+      "remoteSha256": "d79a9b938a423175fe3168bcf760994b205d0e08bf8ec892de5ee720af150c34",
+      "localSha256": "d79a9b938a423175fe3168bcf760994b205d0e08bf8ec892de5ee720af150c34",
+      "bytes": 4750,
+      "match": true
+    },
+    {
+      "path": "/data/rental/locations.json",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/data/rental/locations.json",
+      "remoteSha256": "7939d345ce3c6c211e9ab895077626de1a7412b12d2ecbfb569664e0bbaddbf4",
+      "localSha256": "7939d345ce3c6c211e9ab895077626de1a7412b12d2ecbfb569664e0bbaddbf4",
+      "bytes": 4518,
+      "match": true
+    },
+    {
+      "path": "/data/rental/NOTICE.txt",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/data/rental/NOTICE.txt",
+      "remoteSha256": "2f11ed0065df2d2b4f1604565fff02172d6f2cc0ec0dd4c10e9324a0b0402c17",
+      "localSha256": "2f11ed0065df2d2b4f1604565fff02172d6f2cc0ec0dd4c10e9324a0b0402c17",
+      "bytes": 1578,
+      "match": true
+    },
+    {
+      "path": "/assets/index-BbvMsTid.js",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/assets/index-BbvMsTid.js",
+      "remoteSha256": "f813e5275d500092402913d644e8ebea07d05374a3e469ea946cdb37aa7e6d7c",
+      "localSha256": "f813e5275d500092402913d644e8ebea07d05374a3e469ea946cdb37aa7e6d7c",
+      "bytes": 449934,
+      "match": true
+    },
+    {
+      "path": "/assets/index-Du2Z7xgS.css",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/assets/index-Du2Z7xgS.css",
+      "remoteSha256": "ad1346cf1f9e0f9c7f2db2625c1fc118c84940a9703ed3b87a6a524b2732bed9",
+      "localSha256": "ad1346cf1f9e0f9c7f2db2625c1fc118c84940a9703ed3b87a6a524b2732bed9",
+      "bytes": 46100,
+      "match": true
+    },
+    {
+      "path": "/data/registry/3ad895fc107a0ce9.json",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/data/registry/3ad895fc107a0ce9.json",
+      "remoteSha256": "3ad895fc107a0ce94271817df97de8f6de23c43e8a222b1a594a37a5f6459a5b",
+      "localSha256": "3ad895fc107a0ce94271817df97de8f6de23c43e8a222b1a594a37a5f6459a5b",
+      "bytes": 5783,
+      "match": true
+    },
+    {
+      "path": "/data/prices/archive/2026-09-30-febb0ebdd7d0.json",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/data/prices/archive/2026-09-30-febb0ebdd7d0.json",
+      "remoteSha256": "febb0ebdd7d0a15903c5726747dce6dd1427a0ecc2e53002d0d30cb654a7111b",
+      "localSha256": "febb0ebdd7d0a15903c5726747dce6dd1427a0ecc2e53002d0d30cb654a7111b",
+      "bytes": 37502,
+      "match": true
+    },
+    {
+      "path": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-01.json",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-01.json",
+      "remoteSha256": "69201e1a2f3a41766d14ada3d34f704cd023d80b6509ebff607d8768b79a8add",
+      "localSha256": "69201e1a2f3a41766d14ada3d34f704cd023d80b6509ebff607d8768b79a8add",
+      "bytes": 518304,
+      "match": true
+    },
+    {
+      "path": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-40.json",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-40.json",
+      "remoteSha256": "0d38f886b45ce72ce53f475b9259583690d48ff6f6c9e4e583d92d1c88b9ddd6",
+      "localSha256": "0d38f886b45ce72ce53f475b9259583690d48ff6f6c9e4e583d92d1c88b9ddd6",
+      "bytes": 121268,
+      "match": true
+    },
+    {
+      "path": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-47.json",
+      "status": 200,
+      "url": "https://fuel-me-japan.com/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-47.json",
+      "remoteSha256": "f563d52de0c4931c12851a27d4011226cb9642dce43539bf54f36ac35b87f0ab",
+      "localSha256": "f563d52de0c4931c12851a27d4011226cb9642dce43539bf54f36ac35b87f0ab",
+      "bytes": 128081,
+      "match": true
+    }
+  ]
+}

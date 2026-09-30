@@ -16,7 +16,9 @@ HTTP403回归先确认旧程序缺少诊断参数导致失败，再实现并通�
 
 ## 最终远端核验
 
-PENDING：本轮工作流提交后，将复核远端失败诊断是否实际上传；OSM 已完成真实成功运行；新增诊断上传仍需推送后核验。官方来源恢复之前不能把参考价自动更新标为 PASS。
+新版工作流的[真实运行 36768162258](https://github.com/zhyphil/fuel-me-japan/actions/runs/36768162258) 已完成：17项导入器回归通过；官方索引返回HTTP 403，任务总体为 failure；候选上传和应用检查正确跳过，失败诊断上传步骤成功。已下载并核对[远端诊断](evidence/maintenance-20260930/remote-prices-diagnostics.json)，状态BLOCKED，阶段DISCOVERY，前后manifest与registry哈希一致，retainedPreviousPointers=true。
+
+验收结论：失败保留及诊断上传 PASS；官方参考价自动获取仍为 BLOCKED_HTTP_403。两者不能合并称为“更新成功”。本次没有替换生产数据或刷新调查／采集日期。
 
 ## 维护边界
 

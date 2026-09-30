@@ -1,0 +1,26 @@
+candidate	Acquire and validate a candidate snapshot	﻿2026-09-30T19:48:53.3435183Z ##[group]Run case "$REQUESTED_DATASET" in
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:48:53.3435580Z [36;1mcase "$REQUESTED_DATASET" in[0m
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:48:53.3435925Z [36;1m  osm|prices) dataset="$REQUESTED_DATASET" ;;[0m
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:48:53.3436242Z [36;1m  '')[0m
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:48:53.3436498Z [36;1m    if [ "$TRIGGER_SCHEDULE" = '0 0 * * 1' ]; then[0m
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:48:53.3436817Z [36;1m      dataset=osm[0m
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:48:53.3437043Z [36;1m    else[0m
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:48:53.3437253Z [36;1m      dataset=prices[0m
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:48:53.3437486Z [36;1m    fi[0m
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:48:53.3437679Z [36;1m    ;;[0m
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:48:53.3437881Z [36;1m  *) exit 1 ;;[0m
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:48:53.3438098Z [36;1mesac[0m
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:48:53.3438699Z [36;1mpython scripts/importer/refresh_sources.py "$dataset" --download-dir "$RUNNER_TEMP/fmj-inputs" --report "$RUNNER_TEMP/fmj-refresh-report.json"[0m
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:48:53.3503851Z shell: /usr/bin/bash -e {0}
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:48:53.3504138Z env:
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:48:53.3504412Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.15/x64
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:48:53.3504954Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib/pkgconfig
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:48:53.3505426Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:48:53.3505838Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:48:53.3506243Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.15/x64
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:48:53.3506650Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.15/x64/lib
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:48:53.3507005Z   REQUESTED_DATASET: prices
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:48:53.3507256Z   TRIGGER_SCHEDULE: 
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:48:53.3507476Z ##[endgroup]
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:48:53.7788349Z BLOCKED: HTTP Error 403: Forbidden. No source substitution and no deployment; retain the published snapshot.
+candidate	Acquire and validate a candidate snapshot	2026-09-30T19:48:53.8174465Z ##[error]Process completed with exit code 1.

@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "appCommit": "1ba391fcb1bce69c089f48953d3857cb2e70c31b",
+  "deploymentId": "b79cc5d7-e19a-408c-867e-d85903f1824b",
+  "productionUrl": "https://fuel-me-japan.com/zh-Hans/",
+  "sourceHashesVerified": 165,
+  "httpResourcesMatched": 20,
+  "noindexRetained": true,
+  "说明": "应用提交已推送main和工作分支。部署上传的是已验收dist；移除了dist中0字节导入锁，未修改来源数据。最后仅补充报告的提交不需要重新部署。",
+  "dataRefresh": {
+    "osm": "PASS_UNCHANGED",
+    "officialPrices": "BLOCKED_HTTP_403",
+    "failureDiagnostics": "PASS",
+    "runId": 36768162258
+  },
+  "humanValidation": "NOT_RUN"
+}
