@@ -1,0 +1,12 @@
+
+ ⛅️ wrangler 4.144.0
+────────────────────
+Uploading... (0/12)
+Uploading... (4/12)
+Uploading... (8/12)
+Uploading... (12/12)
+✨ Success! Uploaded 12 files (1.78 sec)
+
+✨ Uploading _headers
+🌎 Deploying...
+✨ Deployment complete! Take a peek over at https://a16354ec.fuel-me-japan.pages.dev

@@ -1,0 +1,9 @@
+HTTP/2 200
+date: Wed, 30 Sep 2026 07:46:44 GMT
+content-type: text/html; charset=utf-8
+content-security-policy: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'
+permissions-policy: geolocation=(), camera=(), microphone=()
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-frame-options: DENY
+server: cloudflare

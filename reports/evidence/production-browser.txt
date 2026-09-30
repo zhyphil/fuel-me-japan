@@ -1,0 +1,34 @@
+
+> fuel-me-japan@0.0.0 test:e2e
+> playwright test
+
+
+Running 9 tests using 8 workers
+
+(node:35617) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:35618) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:35623) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:35616) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:35620) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:35619) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:35621) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:35622) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  8 tests/e2e/foundation.spec.ts:148:1 › deployed source registry and provenance disclose no ingested data (197ms)
+  ✓  4 tests/e2e/foundation.spec.ts:106:1 › foundation does not request location, persist it, fetch business data or send analytics (798ms)
+  ✓  5 tests/e2e/foundation.spec.ts:85:1 › localized static HTML is useful without JavaScript (813ms)
+  ✓  2 tests/e2e/foundation.spec.ts:40:3 › mobile switching and reload: en (921ms)
+  ✓  7 tests/e2e/foundation.spec.ts:40:3 › mobile switching and reload: zh-Hant (925ms)
+  ✓  6 tests/e2e/foundation.spec.ts:40:3 › mobile switching and reload: ko (933ms)
+  ✓  1 tests/e2e/foundation.spec.ts:40:3 › mobile switching and reload: zh-Hans (949ms)
+  ✓  3 tests/e2e/foundation.spec.ts:40:3 › mobile switching and reload: th (970ms)
+  ✓  9 tests/e2e/foundation.spec.ts:163:1 › desktop layout and keyboard navigation remain usable (845ms)
+
+  9 passed (1.6s)

@@ -2,6 +2,8 @@
 
 Refuel in Japan without speaking Japanese.
 
+Production foundation preview: https://fuel-me-japan.pages.dev/
+
 **M0.0 Foundation preview only.** The four future task cards are informational; station search, vehicle advice, guides and return-car flows are not implemented. Stop here for user review before M0.1.
 
 ## Local setup
@@ -38,9 +40,10 @@ Uses prebuilt static assets via Direct Upload. No Cloudflare Functions, Workers 
 
 ```sh
 npx wrangler login
-npx wrangler pages project create fuel-me-japan --production-branch main
 npm run deploy
 ```
+
+The `fuel-me-japan` Pages project has already been created. Initial creation on Wrangler 4.144.0 required `wrangler pages project create fuel-me-japan --production-branch main --force` because its agent-specific automatic Workers delegation failed. The inspected CLI uses this flag to select Pages for a new project, not to overwrite one. Subsequent deployments target the existing Pages project without this flag.
 
 `deploy` runs all checks before uploading `dist` to the production branch. Cloudflare credentials must remain in local Wrangler authentication, never in Git. No automatic deploy hook or recurring job is installed.
 

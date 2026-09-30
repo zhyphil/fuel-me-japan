@@ -1,0 +1,58 @@
+{
+  "milestone": "M0.0 Foundation",
+  "date": "2026-09-30",
+  "status": "PASS_AWAITING_USER_REVIEW",
+  "nextMilestoneStarted": false,
+  "productionUrl": "https://fuel-me-japan.pages.dev/",
+  "githubUrl": "https://github.com/zhyphil/fuel-me-japan",
+  "deployedCommit": "91c4c66e353a2bc423fb846e2deb65a95880721e",
+  "deploymentId": "a16354ec-51e3-43b9-914c-e59cbdbc5bd3",
+  "checks": {
+    "lint": {
+      "exitCode": 0
+    },
+    "typecheck": {
+      "exitCode": 0
+    },
+    "unitTests": {
+      "exitCode": 0,
+      "passed": 20
+    },
+    "build": {
+      "exitCode": 0
+    },
+    "localBrowserTests": {
+      "exitCode": 0,
+      "passed": 9
+    },
+    "productionBrowserTests": {
+      "exitCode": 0,
+      "passed": 9
+    }
+  },
+  "acceptance": {
+    "repository": "PASS",
+    "productionUrl": "PASS",
+    "fiveLocaleSwitching": "PASS",
+    "noBackendOrDatabase": "PASS",
+    "sourceRegistry": "PASS",
+    "analyticsAbstraction": "PASS",
+    "mobileComponents": "PASS",
+    "allChecks": "PASS",
+    "scopeStop": "PASS"
+  },
+  "provenance": {
+    "approvedSources": 0,
+    "ingestedSources": 0,
+    "candidateSources": 5,
+    "originalSpecsUnchanged": 11
+  },
+  "humanReview": "PENDING",
+  "limitations": [
+    "Chromium mobile emulation, not real-device acceptance",
+    "Source usage rights remain pending",
+    "No analytics collection enabled",
+    "No M0.1 business functionality",
+    "No GitHub Actions workflow configured"
+  ]
+}

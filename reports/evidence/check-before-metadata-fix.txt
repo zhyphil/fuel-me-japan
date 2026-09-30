@@ -1,0 +1,110 @@
+
+> fuel-me-japan@0.0.0 check
+> npm run lint && npm run typecheck && npm test && npm run build && npm run test:e2e
+
+
+> fuel-me-japan@0.0.0 lint
+> eslint . --max-warnings 0
+
+
+> fuel-me-japan@0.0.0 typecheck
+> tsc --noEmit
+
+
+> fuel-me-japan@0.0.0 test
+> vitest run
+
+
+ RUN  v5.0.2 <project>
+
+
+ Test Files  3 passed (3)
+      Tests  20 passed (20)
+   Start at  09:43:23
+   Duration  103ms (transform 68%, import 20%, tests 8%, worker 5%)
+
+
+> fuel-me-japan@0.0.0 build
+> vite build && tsx scripts/prerender.tsx
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 26 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.72 kB │ gzip:  0.40 kB
+dist/assets/index-DHuOECRb.css    7.04 kB │ gzip:  2.23 kB
+dist/assets/index-1l-WPlEp.js   234.84 kB │ gzip: 74.91 kB
+
+✓ built in 76ms
+Prerendered five locales + English root; source registry validated; provenance emitted.
+
+> fuel-me-japan@0.0.0 test:e2e
+> playwright test
+
+[WebServer] (node:34700) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 9 tests using 8 workers
+
+(node:34706) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:34703) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:34707) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:34701) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:34702) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:34708) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:34709) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:34705) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  5 tests/e2e/foundation.spec.ts:148:1 › deployed source registry and provenance disclose no ingested data (24ms)
+  ✓  1 tests/e2e/foundation.spec.ts:106:1 › foundation does not request location, persist it, fetch business data or send analytics (493ms)
+  ✓  2 tests/e2e/foundation.spec.ts:40:3 › mobile switching and reload: zh-Hant (605ms)
+  ✓  4 tests/e2e/foundation.spec.ts:40:3 › mobile switching and reload: ko (616ms)
+  ✓  6 tests/e2e/foundation.spec.ts:40:3 › mobile switching and reload: zh-Hans (614ms)
+  ✓  7 tests/e2e/foundation.spec.ts:40:3 › mobile switching and reload: en (629ms)
+  ✓  8 tests/e2e/foundation.spec.ts:40:3 › mobile switching and reload: th (637ms)
+  ✓  9 tests/e2e/foundation.spec.ts:163:1 › desktop layout and keyboard navigation remain usable (758ms)
+  ✘  3 tests/e2e/foundation.spec.ts:85:1 › localized static HTML is useful without JavaScript (5.4s)
+
+
+  1) tests/e2e/foundation.spec.ts:85:1 › localized static HTML is useful without JavaScript ────────
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator: locator('meta[name="description"]')
+    Expected pattern: /일본어/
+    Received string:  "Fuel Me Japan foundation preview. Refuel in Japan without speaking Japanese."
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('meta[name="description"]') with timeout 5000ms
+      - waiting for locator('meta[name="description"]')
+        14 × locator resolved to <meta name="description" content="Fuel Me Japan foundation preview. Refuel in Japan without speaking Japanese."/>
+           - unexpected value "Fuel Me Japan foundation preview. Refuel in Japan without speaking Japanese."
+
+
+      94 |     "다음 목적지, 일본.",
+      95 |   );
+    > 96 |   await expect(page.locator('meta[name="description"]')).toHaveAttribute(
+         |                                                          ^
+      97 |     "content",
+      98 |     /일본어/,
+      99 |   );
+        at <project>/tests/e2e/foundation.spec.ts:96:58
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/foundation-localized-stati-5fdd9-s-useful-without-JavaScript/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/foundation-localized-stati-5fdd9-s-useful-without-JavaScript/error-context.md
+
+  1 failed
+    tests/e2e/foundation.spec.ts:85:1 › localized static HTML is useful without JavaScript ─────────
+  8 passed (6.5s)
