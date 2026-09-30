@@ -1,0 +1,34 @@
+
+> fuel-me-japan@0.0.0 test:e2e
+> playwright test
+
+
+Running 9 tests using 8 workers
+
+(node:39188) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:39185) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:39182) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:39187) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:39184) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:39183) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:39186) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:39189) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  5 tests/e2e/foundation.spec.ts:164:1 › deployed source registry and provenance disclose no ingested data (378ms)
+  ✓  1 tests/e2e/foundation.spec.ts:40:3 › mobile switching and reload: en (854ms)
+  ✓  7 tests/e2e/foundation.spec.ts:40:3 › mobile switching and reload: zh-Hans (860ms)
+  ✓  4 tests/e2e/foundation.spec.ts:40:3 › mobile switching and reload: ko (889ms)
+  ✓  9 tests/e2e/foundation.spec.ts:179:1 › desktop layout and keyboard navigation remain usable (682ms)
+  ✓  8 tests/e2e/foundation.spec.ts:122:1 › foundation does not request location, persist it, fetch business data or send analytics (936ms)
+  ✓  6 tests/e2e/foundation.spec.ts:101:1 › localized static HTML is useful without JavaScript (993ms)
+  ✓  3 tests/e2e/foundation.spec.ts:40:3 › mobile switching and reload: zh-Hant (1.1s)
+  ✓  2 tests/e2e/foundation.spec.ts:40:3 › mobile switching and reload: th (1.1s)
+
+  9 passed (1.7s)

@@ -1,0 +1,133 @@
+{
+  "capturedAt": "2026-09-30T08:02:09.425477+00:00",
+  "before": {
+    "customDomains": [],
+    "dnsRecords": [],
+    "bulkRedirectLists": [],
+    "accountRedirectRuleset": null
+  },
+  "websiteDnsRecords": [
+    {
+      "name": "fuel-me-japan.com",
+      "type": "CNAME",
+      "content": "fuel-me-japan.pages.dev",
+      "proxied": true,
+      "ttl": 1
+    },
+    {
+      "name": "www.fuel-me-japan.com",
+      "type": "CNAME",
+      "content": "fuel-me-japan.pages.dev",
+      "proxied": true,
+      "ttl": 1
+    }
+  ],
+  "otherDnsRecordsObserved": {
+    "count": 5,
+    "note": "Mail-related records appeared during setup; this task did not create, edit or remove them. Mail delivery was not tested."
+  },
+  "customDomains": [
+    {
+      "name": "fuel-me-japan.com",
+      "status": "active",
+      "verification_data": {
+        "status": "active"
+      },
+      "validation_data": {
+        "status": "active",
+        "method": "http"
+      },
+      "certificate_authority": "google"
+    },
+    {
+      "name": "www.fuel-me-japan.com",
+      "status": "active",
+      "verification_data": {
+        "status": "active"
+      },
+      "validation_data": {
+        "status": "active",
+        "method": "http"
+      },
+      "certificate_authority": "google"
+    }
+  ],
+  "redirectItems": [
+    {
+      "source_url": "fuel-me-japan.pages.dev/",
+      "include_subdomains": false,
+      "target_url": "https://fuel-me-japan.com/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": true,
+      "preserve_path_suffix": true
+    },
+    {
+      "source_url": "www.fuel-me-japan.com/",
+      "include_subdomains": false,
+      "target_url": "https://fuel-me-japan.com/",
+      "status_code": 301,
+      "preserve_query_string": true,
+      "subpath_matching": true,
+      "preserve_path_suffix": true
+    }
+  ],
+  "redirectRuleset": {
+    "description": "",
+    "id": "d30a3a037e7445448865fbb1da433837",
+    "kind": "root",
+    "last_updated": "2026-09-30T08:01:07.287409Z",
+    "name": "Fuel Me Japan domain redirects",
+    "phase": "http_request_redirect",
+    "rules": [
+      {
+        "action": "redirect",
+        "action_parameters": {
+          "from_list": {
+            "key": "http.request.full_uri",
+            "name": "fuel_me_japan_domains"
+          }
+        },
+        "description": "Redirect only production www and pages.dev hostnames",
+        "enabled": true,
+        "expression": "http.request.full_uri in $fuel_me_japan_domains",
+        "id": "174ddbd034e940e5a80bbf72bde9d4b5",
+        "last_updated": "2026-09-30T08:01:07.287409Z",
+        "ref": "fuel_me_japan_primary_domain",
+        "version": "1"
+      }
+    ],
+    "version": "1"
+  },
+  "alwaysUseHttps": {
+    "id": "always_use_https",
+    "value": "on",
+    "modified_on": "2026-09-30T07:58:42.222721Z",
+    "editable": true
+  },
+  "deployment": {
+    "id": "f663477a-1601-4189-ad81-c6c8dfec2ca5",
+    "environment": "production",
+    "url": "https://f663477a.fuel-me-japan.pages.dev",
+    "created_on": "2026-09-30T08:00:15.681958Z",
+    "latest_stage": {
+      "name": "deploy",
+      "started_on": null,
+      "ended_on": "2026-09-30T08:00:17.586397Z",
+      "status": "success"
+    },
+    "deployment_trigger": {
+      "type": "ad_hoc",
+      "metadata": {
+        "branch": "main",
+        "commit_hash": "442da171021fc10b7ca744febf1466393c2ebac1",
+        "commit_message": "fix(web): use custom domain for locale metadata",
+        "commit_dirty": false
+      }
+    },
+    "aliases": [
+      "https://fuel-me-japan.com",
+      "https://www.fuel-me-japan.com"
+    ]
+  }
+}

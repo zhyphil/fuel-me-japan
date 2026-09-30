@@ -1,0 +1,258 @@
+{
+  "verifiedAt": "2026-09-30T08:01:48.513969+00:00",
+  "results": [
+    {
+      "url": "https://www.fuel-me-japan.com/",
+      "follow": false,
+      "exitCode": 0,
+      "http_code": 301,
+      "redirect_url": "https://fuel-me-japan.com/",
+      "url_effective": "https://www.fuel-me-japan.com/",
+      "num_redirects": 0,
+      "ssl_verify_result": 0,
+      "passed": true
+    },
+    {
+      "url": "https://www.fuel-me-japan.com/zh-Hans/?q=%E6%97%A5%E6%9C%AC%20fuel&ref=domain-check",
+      "follow": false,
+      "exitCode": 0,
+      "http_code": 301,
+      "redirect_url": "https://fuel-me-japan.com/zh-Hans/?q=%E6%97%A5%E6%9C%AC%20fuel&ref=domain-check",
+      "url_effective": "https://www.fuel-me-japan.com/zh-Hans/?q=%E6%97%A5%E6%9C%AC%20fuel&ref=domain-check",
+      "num_redirects": 0,
+      "ssl_verify_result": 0,
+      "passed": true
+    },
+    {
+      "url": "http://www.fuel-me-japan.com/",
+      "follow": false,
+      "exitCode": 0,
+      "http_code": 301,
+      "redirect_url": "https://fuel-me-japan.com/",
+      "url_effective": "http://www.fuel-me-japan.com/",
+      "num_redirects": 0,
+      "ssl_verify_result": 0,
+      "passed": true
+    },
+    {
+      "url": "http://www.fuel-me-japan.com/zh-Hans/?q=%E6%97%A5%E6%9C%AC%20fuel&ref=domain-check",
+      "follow": false,
+      "exitCode": 0,
+      "http_code": 301,
+      "redirect_url": "https://fuel-me-japan.com/zh-Hans/?q=%E6%97%A5%E6%9C%AC%20fuel&ref=domain-check",
+      "url_effective": "http://www.fuel-me-japan.com/zh-Hans/?q=%E6%97%A5%E6%9C%AC%20fuel&ref=domain-check",
+      "num_redirects": 0,
+      "ssl_verify_result": 0,
+      "passed": true
+    },
+    {
+      "url": "https://fuel-me-japan.pages.dev/",
+      "follow": false,
+      "exitCode": 0,
+      "http_code": 301,
+      "redirect_url": "https://fuel-me-japan.com/",
+      "url_effective": "https://fuel-me-japan.pages.dev/",
+      "num_redirects": 0,
+      "ssl_verify_result": 0,
+      "passed": true
+    },
+    {
+      "url": "https://fuel-me-japan.pages.dev/zh-Hans/?q=%E6%97%A5%E6%9C%AC%20fuel&ref=domain-check",
+      "follow": false,
+      "exitCode": 0,
+      "http_code": 301,
+      "redirect_url": "https://fuel-me-japan.com/zh-Hans/?q=%E6%97%A5%E6%9C%AC%20fuel&ref=domain-check",
+      "url_effective": "https://fuel-me-japan.pages.dev/zh-Hans/?q=%E6%97%A5%E6%9C%AC%20fuel&ref=domain-check",
+      "num_redirects": 0,
+      "ssl_verify_result": 0,
+      "passed": true
+    },
+    {
+      "url": "http://fuel-me-japan.pages.dev/",
+      "follow": false,
+      "exitCode": 0,
+      "http_code": 301,
+      "redirect_url": "https://fuel-me-japan.com/",
+      "url_effective": "http://fuel-me-japan.pages.dev/",
+      "num_redirects": 0,
+      "ssl_verify_result": 0,
+      "passed": true
+    },
+    {
+      "url": "http://fuel-me-japan.pages.dev/zh-Hans/?q=%E6%97%A5%E6%9C%AC%20fuel&ref=domain-check",
+      "follow": false,
+      "exitCode": 0,
+      "http_code": 301,
+      "redirect_url": "https://fuel-me-japan.com/zh-Hans/?q=%E6%97%A5%E6%9C%AC%20fuel&ref=domain-check",
+      "url_effective": "http://fuel-me-japan.pages.dev/zh-Hans/?q=%E6%97%A5%E6%9C%AC%20fuel&ref=domain-check",
+      "num_redirects": 0,
+      "ssl_verify_result": 0,
+      "passed": true
+    },
+    {
+      "url": "http://fuel-me-japan.com/",
+      "follow": false,
+      "exitCode": 0,
+      "http_code": 301,
+      "redirect_url": "https://fuel-me-japan.com/",
+      "url_effective": "http://fuel-me-japan.com/",
+      "num_redirects": 0,
+      "ssl_verify_result": 0,
+      "passed": true
+    },
+    {
+      "url": "http://fuel-me-japan.com/zh-Hans/?q=%E6%97%A5%E6%9C%AC%20fuel&ref=domain-check",
+      "follow": false,
+      "exitCode": 0,
+      "http_code": 301,
+      "redirect_url": "https://fuel-me-japan.com/zh-Hans/?q=%E6%97%A5%E6%9C%AC%20fuel&ref=domain-check",
+      "url_effective": "http://fuel-me-japan.com/zh-Hans/?q=%E6%97%A5%E6%9C%AC%20fuel&ref=domain-check",
+      "num_redirects": 0,
+      "ssl_verify_result": 0,
+      "passed": true
+    },
+    {
+      "url": "https://www.fuel-me-japan.com/guides/%E6%97%A5%E6%9C%AC%20fuel/?x=1%26two",
+      "follow": false,
+      "exitCode": 0,
+      "http_code": 301,
+      "redirect_url": "https://fuel-me-japan.com/guides/%E6%97%A5%E6%9C%AC%20fuel/?x=1%26two",
+      "url_effective": "https://www.fuel-me-japan.com/guides/%E6%97%A5%E6%9C%AC%20fuel/?x=1%26two",
+      "num_redirects": 0,
+      "ssl_verify_result": 0,
+      "passed": true
+    },
+    {
+      "url": "https://www.fuel-me-japan.com/zh-Hans/?ref=domain-check",
+      "follow": true,
+      "exitCode": 0,
+      "http_code": 200,
+      "redirect_url": null,
+      "url_effective": "https://fuel-me-japan.com/zh-Hans/?ref=domain-check",
+      "num_redirects": 1,
+      "ssl_verify_result": 0,
+      "passed": true
+    },
+    {
+      "url": "https://fuel-me-japan.pages.dev/guides/%E6%97%A5%E6%9C%AC%20fuel/?x=1%26two",
+      "follow": false,
+      "exitCode": 0,
+      "http_code": 301,
+      "redirect_url": "https://fuel-me-japan.com/guides/%E6%97%A5%E6%9C%AC%20fuel/?x=1%26two",
+      "url_effective": "https://fuel-me-japan.pages.dev/guides/%E6%97%A5%E6%9C%AC%20fuel/?x=1%26two",
+      "num_redirects": 0,
+      "ssl_verify_result": 0,
+      "passed": true
+    },
+    {
+      "url": "https://fuel-me-japan.pages.dev/zh-Hans/?ref=domain-check",
+      "follow": true,
+      "exitCode": 0,
+      "http_code": 200,
+      "redirect_url": null,
+      "url_effective": "https://fuel-me-japan.com/zh-Hans/?ref=domain-check",
+      "num_redirects": 1,
+      "ssl_verify_result": 0,
+      "passed": true
+    },
+    {
+      "url": "https://fuel-me-japan.com/",
+      "follow": false,
+      "exitCode": 0,
+      "http_code": 200,
+      "redirect_url": null,
+      "url_effective": "https://fuel-me-japan.com/",
+      "num_redirects": 0,
+      "ssl_verify_result": 0,
+      "passed": true
+    },
+    {
+      "url": "https://fuel-me-japan.com/en/",
+      "follow": false,
+      "exitCode": 0,
+      "http_code": 200,
+      "redirect_url": null,
+      "url_effective": "https://fuel-me-japan.com/en/",
+      "num_redirects": 0,
+      "ssl_verify_result": 0,
+      "passed": true
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hant/",
+      "follow": false,
+      "exitCode": 0,
+      "http_code": 200,
+      "redirect_url": null,
+      "url_effective": "https://fuel-me-japan.com/zh-Hant/",
+      "num_redirects": 0,
+      "ssl_verify_result": 0,
+      "passed": true
+    },
+    {
+      "url": "https://fuel-me-japan.com/ko/",
+      "follow": false,
+      "exitCode": 0,
+      "http_code": 200,
+      "redirect_url": null,
+      "url_effective": "https://fuel-me-japan.com/ko/",
+      "num_redirects": 0,
+      "ssl_verify_result": 0,
+      "passed": true
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hans/",
+      "follow": false,
+      "exitCode": 0,
+      "http_code": 200,
+      "redirect_url": null,
+      "url_effective": "https://fuel-me-japan.com/zh-Hans/",
+      "num_redirects": 0,
+      "ssl_verify_result": 0,
+      "passed": true
+    },
+    {
+      "url": "https://fuel-me-japan.com/th/",
+      "follow": false,
+      "exitCode": 0,
+      "http_code": 200,
+      "redirect_url": null,
+      "url_effective": "https://fuel-me-japan.com/th/",
+      "num_redirects": 0,
+      "ssl_verify_result": 0,
+      "passed": true
+    },
+    {
+      "url": "https://fuel-me-japan.com/robots.txt",
+      "follow": false,
+      "exitCode": 0,
+      "http_code": 200,
+      "redirect_url": null,
+      "url_effective": "https://fuel-me-japan.com/robots.txt",
+      "num_redirects": 0,
+      "ssl_verify_result": 0,
+      "passed": true
+    },
+    {
+      "url": "https://a16354ec.fuel-me-japan.pages.dev/en/",
+      "follow": false,
+      "exitCode": 0,
+      "http_code": 200,
+      "redirect_url": null,
+      "url_effective": "https://a16354ec.fuel-me-japan.pages.dev/en/",
+      "num_redirects": 0,
+      "ssl_verify_result": 0,
+      "passed": true
+    },
+    {
+      "url": "https://f663477a.fuel-me-japan.pages.dev/en/",
+      "follow": false,
+      "exitCode": 0,
+      "http_code": 200,
+      "redirect_url": null,
+      "url_effective": "https://f663477a.fuel-me-japan.pages.dev/en/",
+      "num_redirects": 0,
+      "ssl_verify_result": 0,
+      "passed": true
+    }
+  ]
+}
