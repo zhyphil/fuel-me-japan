@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "commit": "5697d9602802266b9187a092f3b114c70379991a",
+  "deploymentId": "2732a9cd-eef4-42da-8f22-86a8891f4183",
+  "environment": "Production",
+  "branch": "main",
+  "deploymentUrl": "https://2732a9cd.fuel-me-japan.pages.dev",
+  "productionUrl": "https://fuel-me-japan.com/sitemap.xml",
+  "note": "通过Wrangler发布到既有Cloudflare Pages生产项目；正式域名24项HTTP验证通过。"
+}

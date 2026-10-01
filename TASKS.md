@@ -167,3 +167,5 @@ Toyota那霸Seaside依据两个当前官方营业资料补核，合计19家；�
 ### 2026-10-01 GSC Sitemap
 
 已生成20个五语言主页面的正式sitemap，补充robots发现入口与两项浏览器检查；363单元、340浏览器及lint／typecheck／构建通过。沿用持续约定发布并提交GSC。页面noindex与禁止抓取暂时保留，开放收录等待用户明确选择；不将提交清单当作已收录。见[中文报告](reports/gsc-sitemap-20261001.md)。
+
+2026-10-01 本轮sitemap已发布：应用`5697d96`、生产`2732a9cd`，24项正式域名检查通过。GSC已受理提交，但读取仍未通过：真实Google检查报告robots拦截，发现0页；当前公开文件已允许sitemap，Google缓存版本暂不可查，其robots报告未开放刷新入口。详见`reports/gsc-sitemap-20261001.md`。网页开放收录继续等待用户明确授权，不移除noindex、不把提交受理当作读取／收录成功。

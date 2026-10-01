@@ -1,0 +1,19 @@
+{
+  "recordedAt": "2026-10-01T12:24:18.434508+00:00",
+  "property": "sc-domain:fuel-me-japan.com",
+  "sitemap": "https://fuel-me-japan.com/sitemap.xml",
+  "submission": "ACCEPTED",
+  "reading": "FAILED",
+  "uiReadingStatus": "Impossible de récupérer le sitemap",
+  "uiError": "Erreur HTTP générique",
+  "discoveredPages": 0,
+  "liveInspection": {
+    "checkedAtLocal": "2026-10-01 14:21:47 Europe/Paris",
+    "crawlAllowed": false,
+    "fetchStatus": "Bloquée par le fichier robots.txt"
+  },
+  "robotsReport": "NOT_AVAILABLE",
+  "robotsRecrawlRequested": false,
+  "pageIndexing": "PENDING_USER_DECISION",
+  "note": "GSC已受理提交，但真实Google实时检查仍显示robots拦截。当前正式robots明确Allow: /sitemap.xml，HTTP和XML验证通过；旧规则缓存是可能原因，未能从Google报告取得其实际缓存版本，不能确认。该属性今日新建，robots报告尚无数据且入口禁用，无法主动请求刷新。不将提交受理记为读取成功或页面已收录。"
+}

@@ -1,0 +1,202 @@
+{
+  "status": "PASS",
+  "verifiedAt": "2026-10-01T12:19:22.576333+00:00",
+  "urlCount": 20,
+  "requestCount": 24,
+  "pageIndexing": "PENDING_USER_DECISION",
+  "note": "正式域名XML、20个网页、robots、Googlebot请求及ads.txt均核对通过；网页禁止收录及禁止抓取仍保留。本程序不能证明真实Googlebot已经抓取或页面已收录。",
+  "checks": [
+    {
+      "url": "https://fuel-me-japan.com/sitemap.xml",
+      "status": 200,
+      "contentType": "application/xml",
+      "sha256": "1f47159e71a4ccebf3a0d0b8340fde283adcf5bc112d1390235f24d91dfecdf0",
+      "userAgent": "FuelMeJapan-ReleaseVerification/1.0",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/en/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "b4607a7bc188164c2b0309c789c989314451c5528cd2cf93630af0d28796ac4e",
+      "userAgent": "FuelMeJapan-ReleaseVerification/1.0",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/en/about/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "245777722dbc5a366b10ed9a541211dfb492d643ef1de7ba6b0f8d3cdf9d1359",
+      "userAgent": "FuelMeJapan-ReleaseVerification/1.0",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/en/refuel-guide/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "e28aa7b5be8bd6cc34dcbed0331fee3b4c41c5572a2bd223975334d3a03f7288",
+      "userAgent": "FuelMeJapan-ReleaseVerification/1.0",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/en/return-car/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "0713cc11134436203bb9f8101f23e1e1b6b89283c8ff7646b10786a038568a35",
+      "userAgent": "FuelMeJapan-ReleaseVerification/1.0",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/ko/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "ee8a09c3810d956392278266a8da5bfd5344bd49f3390d9b255586f485dda8ca",
+      "userAgent": "FuelMeJapan-ReleaseVerification/1.0",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/ko/about/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "ce07b6a70f5bd8948c647370b0f390d0ea48e7c49c3c87696dd8651e1c919b79",
+      "userAgent": "FuelMeJapan-ReleaseVerification/1.0",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/ko/refuel-guide/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "9d7917624ef07743043d6b6b5257c6eab00c7a0404443fa0d1c57e79c45817d9",
+      "userAgent": "FuelMeJapan-ReleaseVerification/1.0",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/ko/return-car/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "4e93c282c1025bb9fdeb15fe962ba03a7e57bbc5c3df1703592207065fa2abb4",
+      "userAgent": "FuelMeJapan-ReleaseVerification/1.0",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/th/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "0136fed5c6e6cdf54f0e4ba2e7707db9606af77612a93106d6231e6c1985c3ea",
+      "userAgent": "FuelMeJapan-ReleaseVerification/1.0",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/th/about/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "27d6b2cf9e99ae448c10605b30631307958f11bb0b42fcb6d5669eceba663247",
+      "userAgent": "FuelMeJapan-ReleaseVerification/1.0",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/th/refuel-guide/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "2e1b589bad4caff4b4abb6a85bbe615893e7dcbcc8b5fd3ea78cb318bc36e651",
+      "userAgent": "FuelMeJapan-ReleaseVerification/1.0",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/th/return-car/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "32e5341a53e8d6765e2eff0a383bbefaa4b7549135a118390f0f8f8029997862",
+      "userAgent": "FuelMeJapan-ReleaseVerification/1.0",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hans/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "bcd00f437af9aa2111dc1af4b20fcd66a2de3116b5e40abce32c2674cbb01534",
+      "userAgent": "FuelMeJapan-ReleaseVerification/1.0",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hans/about/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "5142fabb9349aa3807f3f5b9e20735cb3c10cac8fab4aacf67206e39f83bc50b",
+      "userAgent": "FuelMeJapan-ReleaseVerification/1.0",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hans/refuel-guide/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "abfdf3c501c92c62c62aa9bcda116873bc7e89c17a9b6fa3354a97107b91c0b6",
+      "userAgent": "FuelMeJapan-ReleaseVerification/1.0",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hans/return-car/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "4d71251ad3eeb398897ea85c4895ac006f8e7bedd90d9ea61bee7fb5504876d0",
+      "userAgent": "FuelMeJapan-ReleaseVerification/1.0",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hant/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "9ac1404304458c09f0469f81c3fa05ae404f274356e1a6ff3fcc13cc701ec488",
+      "userAgent": "FuelMeJapan-ReleaseVerification/1.0",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hant/about/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "cbf4dc7177a0299ce954cdd7616c870b598be078fd740964888c02da57944942",
+      "userAgent": "FuelMeJapan-ReleaseVerification/1.0",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hant/refuel-guide/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "f819ff2b74f668ac1ea8320e6724438b41a1114e633126ed80ec29b17beacf97",
+      "userAgent": "FuelMeJapan-ReleaseVerification/1.0",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hant/return-car/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "e8724543347121637a1b5fcc10f5a2aa5075062c77375b6c3a02785df6109b9f",
+      "userAgent": "FuelMeJapan-ReleaseVerification/1.0",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/robots.txt",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "sha256": "df7f3e875b20c29a1fe901b90ffdea352ee170dedb328b9db5d54a746af6053c",
+      "userAgent": "FuelMeJapan-ReleaseVerification/1.0",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/sitemap.xml",
+      "status": 200,
+      "contentType": "application/xml",
+      "sha256": "1f47159e71a4ccebf3a0d0b8340fde283adcf5bc112d1390235f24d91dfecdf0",
+      "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/ads.txt",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "sha256": "167521f9f95b76e7071d6e244f4db5e56f41539a20ae6a38dc16e1e7041f5e9b",
+      "userAgent": "FuelMeJapan-ReleaseVerification/1.0",
+      "result": "PASS"
+    }
+  ]
+}

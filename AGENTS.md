@@ -162,3 +162,5 @@ Current authorization: **The user has now requested completion of all remaining 
 ## 当前任务：GSC Sitemap
 
 2026-10-01 用户要求处理GSC的sitemap。本轮生成20个五语言主页面的XML并允许读取该文件、声明robots发现地址，按持续约定检查／发布／提交GSC。移除noindex和广泛开放抓取的操作被自动审批拒绝，已请求用户明确选择；未收到回复前保留现有页面禁止收录与抓取限制，不绕过该拒绝。详情、参数、重复根路径及数据文件不列入本次sitemap。最终发布和GSC结果见 `reports/gsc-sitemap-20261001.md`。
+
+2026-10-01 本轮sitemap已发布：应用`5697d96`、生产`2732a9cd`，24项正式域名检查通过。GSC已受理提交，但读取仍未通过：真实Google检查报告robots拦截，发现0页；当前公开文件已允许sitemap，Google缓存版本暂不可查，其robots报告未开放刷新入口。详见`reports/gsc-sitemap-20261001.md`。网页开放收录继续等待用户明确授权，不移除noindex、不把提交受理当作读取／收录成功。
