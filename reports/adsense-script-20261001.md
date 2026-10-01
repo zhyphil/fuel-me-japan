@@ -32,6 +32,16 @@
 
 ## 发布及Google后台
 
-待本轮提交、推送、部署和正式域名核验后补录。
+已完成 Conventional Commit `82adcfd`（`feat(adsense): add publisher script for site verification`），原子快进推送GitHub的main与当前分支。
+
+- Cloudflare生产：`5e28e685-d333-4a3d-bc16-b7b7ba58d969`，main，来源提交`82adcfd`。
+- 正式网站：[Fuel Me Japan](https://fuel-me-japan.com/zh-Hans/)。
+- 33项正式域名页面、初始化脚本、应用资源、ads.txt、robots和sitemap的HTTP／SHA-256核对通过，匹配已验收构建。21份HTML均含正确发布者代码、初始化顺序及CSP。
+- 正式浏览器实际取得Google启动与后续执行脚本（HTTP200）；页面隐私说明正确。Google尝试额外加载的`fundingchoicesmessages.google.com`组件仍被CSP限制，证据已单独记录。本轮是暂停广告的站点验证，尚未完成CMP／正式投放配置，未为额外组件扩大权限，也不声称完整广告运行已通过。
+- 点击后台代码验证后显示 **Votre site est validé（网站已验证）**。
+- 随后提交审核，刷新后台后仍显示 **En préparation／Examen demandé（准备中／已请求审核）**，两个步骤显示绿色勾选；本次请求于2026-10-01 16:16 CEST记录。
+- **Google内容审核尚未通过，广告请求仍暂停**。后台ads.txt状态仍为`Introuvable`（未找到），虽然线上文件HTTP200且内容匹配；不将网站代码验证成功写成ads.txt后台识别成功，不推测其原因。
+
+后台成功截图与结构化结果已保存。报告补充提交后同步推送，不为纯文档更新重复部署。
 
 本轮发布前实际刷新AdSense后台，显示“需要审核”（Examen requis）及代码验证入口。此前缓存页及历史报告中的审核中状态不能作为当前状态，本报告以后续实际验证结果为准。安装脚本不等于网站审核通过；Google的[站点验证流程](https://support.google.com/adsense/answer/7584263?hl=en)及[用户同意平台要求](https://support.google.com/adsense/answer/13554116?hl=en)仍分别适用。

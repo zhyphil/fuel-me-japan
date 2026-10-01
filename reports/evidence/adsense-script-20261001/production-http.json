@@ -1,0 +1,194 @@
+{
+  "status": "PASS",
+  "description": "正式域名全部21份页面含正确AdSense标签与暂停初始化顺序；脚本、配置及资源内容匹配已验收构建，CSP允许指定Google来源。",
+  "checkedAt": "2026-10-01T14:15:06.697143+00:00",
+  "count": 33,
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "sha256": "a82b18e91926775ce162890ebbecdd4d44d937a9d0939508b8916fd6b728fc38",
+      "csp": "default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+    },
+    {
+      "path": "/en/",
+      "status": 200,
+      "sha256": "a82b18e91926775ce162890ebbecdd4d44d937a9d0939508b8916fd6b728fc38",
+      "csp": "default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+    },
+    {
+      "path": "/en/about/",
+      "status": 200,
+      "sha256": "4a85fc0bc3a2145c940b20315dc3f953f82114b094c2421b278f5ae603d8b8b9",
+      "csp": "default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+    },
+    {
+      "path": "/en/refuel-guide/",
+      "status": 200,
+      "sha256": "d8e6f9b4b37d681af2a59fc902c815a3504418ec3239531f3a019b2ac5f6fcff",
+      "csp": "default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+    },
+    {
+      "path": "/en/return-car/",
+      "status": 200,
+      "sha256": "413b72ecab4559d7e4d5d6ac0eb2891389fd9f93b8d56249c6dee7dea819429f",
+      "csp": "default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+    },
+    {
+      "path": "/zh-Hant/",
+      "status": 200,
+      "sha256": "cc9e75c8f52b5d67fe9beb9f05b1a827a2fe8666c2cd5022478cd320db912b40",
+      "csp": "default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+    },
+    {
+      "path": "/zh-Hant/about/",
+      "status": 200,
+      "sha256": "90ce6fcff7ef1729a8ef3c9ae9e385d9ac7c35a79ba02423cf1acfab946b0d1e",
+      "csp": "default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+    },
+    {
+      "path": "/zh-Hant/refuel-guide/",
+      "status": 200,
+      "sha256": "34de45369b9e9e1aee3f4b48ed14bb0982bcf06ac2ae43107b56ac810770e2f2",
+      "csp": "default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+    },
+    {
+      "path": "/zh-Hant/return-car/",
+      "status": 200,
+      "sha256": "1f2648ad54da49a7e235739ed3c069bf2d56cee9ca5a0fa5073e31fba7794e3a",
+      "csp": "default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+    },
+    {
+      "path": "/ko/",
+      "status": 200,
+      "sha256": "ae8938d47bdd1f35c753fa1c0ecfb928738321057daa011526460fabb47beba2",
+      "csp": "default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+    },
+    {
+      "path": "/ko/about/",
+      "status": 200,
+      "sha256": "815bd78f799575b00b6af048f960a5f2de0d952a70c211e13950d590302e0e82",
+      "csp": "default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+    },
+    {
+      "path": "/ko/refuel-guide/",
+      "status": 200,
+      "sha256": "e2bc873f61e320b9cad48fafae0e95d52491e12c2d37db7f239e51aa08dace4a",
+      "csp": "default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+    },
+    {
+      "path": "/ko/return-car/",
+      "status": 200,
+      "sha256": "a9dc968edc0d3160307db99df089e7a0dd3fb19404b24933acf8e9763cb9c0a9",
+      "csp": "default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+    },
+    {
+      "path": "/zh-Hans/",
+      "status": 200,
+      "sha256": "8eff94f4be39fe35b6f5aa8b28994de12a60a97c91198ffd7c7220b2e90148b2",
+      "csp": "default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+    },
+    {
+      "path": "/zh-Hans/about/",
+      "status": 200,
+      "sha256": "ba664e05508abda1d4361ab279ad87b5cc5ba9f7570de889a986c4ca200568cd",
+      "csp": "default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+    },
+    {
+      "path": "/zh-Hans/refuel-guide/",
+      "status": 200,
+      "sha256": "258ada344483cc656f674c7d425ea0c1ca288625c8a75c09453bf61adb3597d7",
+      "csp": "default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+    },
+    {
+      "path": "/zh-Hans/return-car/",
+      "status": 200,
+      "sha256": "d6999d099a83d8c7e07129558bafa8b97769a549d28eedba8bf311ae41f8746e",
+      "csp": "default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+    },
+    {
+      "path": "/th/",
+      "status": 200,
+      "sha256": "ce110b56f5d1b5cfa7b14184854e9caea93422d5b97f88e9c6d540e8126c9794",
+      "csp": "default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+    },
+    {
+      "path": "/th/about/",
+      "status": 200,
+      "sha256": "c24ae313a97096bce4b108f74d3ffb7d95659227b02525cfd5270ad932fed726",
+      "csp": "default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+    },
+    {
+      "path": "/th/refuel-guide/",
+      "status": 200,
+      "sha256": "4f96e1063fea15d6cb42952fcf69078078360bc9ce312da8d9f68262602d3423",
+      "csp": "default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+    },
+    {
+      "path": "/th/return-car/",
+      "status": 200,
+      "sha256": "89b222d3f7c22d819e8f84e848246c29beb9a88f079dd81cecca5fd2bf16f750",
+      "csp": "default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+    },
+    {
+      "path": "/adsense-verification.js",
+      "status": 200,
+      "sha256": "b769bcd6c3dd319aacf34b243a76335935eac15ad0571cd69f10657bf80a8419"
+    },
+    {
+      "path": "/ads.txt",
+      "status": 200,
+      "sha256": "167521f9f95b76e7071d6e244f4db5e56f41539a20ae6a38dc16e1e7041f5e9b"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "sha256": "1f47159e71a4ccebf3a0d0b8340fde283adcf5bc112d1390235f24d91dfecdf0"
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "sha256": "871f25cf76f7eda2cb9505dc58be9c21e54b90f69d1ba0a0af160afcedd0de50"
+    },
+    {
+      "path": "/assets/FindFuel-DjXpmLkg.js",
+      "status": 200,
+      "sha256": "eaad857cd02902350747bbf69c29f28a7e754d870cae90c486b130c56eb83f47"
+    },
+    {
+      "path": "/assets/RentalBusiness-XRYAsgoL.js",
+      "status": 200,
+      "sha256": "98e859f268bccd5f83dbfcfad30a0d841b5bbc77d4d3680f8d7014cc7e585321"
+    },
+    {
+      "path": "/assets/StationMiniMap-DwbMsq1e.js",
+      "status": 200,
+      "sha256": "5c2de375ad1d771ca605e22412b0685673f0267b79d2737d0bdd8a7bf7231c9e"
+    },
+    {
+      "path": "/assets/index-r7ugC2wH.js",
+      "status": 200,
+      "sha256": "20f7975d198b5d1c001659ecdd90b55ec33d401a2742176fa4ca4b1d4930473e"
+    },
+    {
+      "path": "/assets/index-ubLmRuYY.css",
+      "status": 200,
+      "sha256": "a7dcad219e02eab51ded2360d38569a2a5316862828fbdf6f61bb7b69839831e"
+    },
+    {
+      "path": "/assets/leaflet-src-BF0sg77Q.js",
+      "status": 200,
+      "sha256": "be5f2e53cedfed275f96af7dceb4fdb7fb0a1f9a4ae967a9e9ae6efa4ec5f38b"
+    },
+    {
+      "path": "/assets/rolldown-runtime-CbXtAM7H.js",
+      "status": 200,
+      "sha256": "bbf7c5086ae414dc3f33777e3eebf16ea8631325b8bb4690d25091c03567f31a"
+    },
+    {
+      "path": "/assets/source-registry-C0l0XvPS.js",
+      "status": 200,
+      "sha256": "f752c7f92c119851eab4e122acb0b01ba7cc0ed0b47c3897941b59368ae088de"
+    }
+  ]
+}

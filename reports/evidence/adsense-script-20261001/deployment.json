@@ -1,0 +1,10 @@
+{
+  "description": "本次已上线的Cloudflare生产部署",
+  "Id": "5e28e685-d333-4a3d-bc16-b7b7ba58d969",
+  "Environment": "Production",
+  "Branch": "main",
+  "Source": "82adcfd",
+  "Deployment": "https://5e28e685.fuel-me-japan.pages.dev",
+  "Status": "30 seconds ago",
+  "Build": "https://dash.cloudflare.com/4d84d2f73decf12ea381b1896ceeb93a/pages/view/fuel-me-japan/5e28e685-d333-4a3d-bc16-b7b7ba58d969"
+}

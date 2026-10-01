@@ -1,0 +1,9 @@
+{
+  "description": "暂停广告验证阶段保留的额外Google组件限制；未为正式投放放宽CSP。",
+  "blocked": [
+    {
+      "url": "https://fundingchoicesmessages.google.com/i/ca-pub-8063428584007009?href=https%3A%2F%2Ffuel-me-japan.com%2Fzh-Hans%2Fabout&ers=2",
+      "blockedReason": "csp"
+    }
+  ]
+}

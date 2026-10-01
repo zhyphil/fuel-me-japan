@@ -1,0 +1,41 @@
+{
+  "description": "正式域名真实浏览器网络响应；后续可选Google组件的阻止项单独保留，不等同于基础代码验证失败。",
+  "checkedAt": "2026-10-01T14:17:05.007Z",
+  "responses": [
+    {
+      "method": "Network.responseReceived",
+      "url": "https://fuel-me-japan.com/adsense-verification.js",
+      "status": 200
+    },
+    {
+      "method": "Network.responseReceived",
+      "url": "https://fuel-me-japan.com/assets/rolldown-runtime-CbXtAM7H.js",
+      "status": 200
+    },
+    {
+      "method": "Network.responseReceived",
+      "url": "https://fuel-me-japan.com/assets/index-ubLmRuYY.css",
+      "status": 200
+    },
+    {
+      "method": "Network.responseReceived",
+      "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8063428584007009",
+      "status": 200
+    },
+    {
+      "method": "Network.responseReceived",
+      "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202609250101/show_ads_impl_fy2021.js",
+      "status": 200
+    },
+    {
+      "method": "Network.loadingFailed",
+      "error": "",
+      "blockedReason": "csp"
+    },
+    {
+      "method": "Network.responseReceived",
+      "url": "https://fuel-me-japan.com/assets/index-r7ugC2wH.js",
+      "status": 200
+    }
+  ]
+}

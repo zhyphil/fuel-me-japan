@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-10-01T14:18:18.576627+00:00",
+  "description": "用户指定脚本上线后，AdSense代码验证成功；审核请求提交后刷新仍保持审核中。",
+  "site": "fuel-me-japan.com",
+  "publisher": "ca-pub-8063428584007009",
+  "codeVerification": "PASS",
+  "codeVerificationText": "Votre site est validé",
+  "reviewRequest": "SUBMITTED",
+  "reviewStatus": "PENDING",
+  "reviewStatusText": "Votre site est en cours d’examen en vue de diffuser des annonces",
+  "persistedAfterReload": true,
+  "adsTxtDashboard": "Introuvable",
+  "adsTxtDescription": "后台仍显示未找到；正式域名文件HTTP200且内容一致，不推测Google缓存原因。",
+  "adServing": "PAUSED",
+  "consentSetup": "PENDING"
+}
