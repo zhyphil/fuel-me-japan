@@ -1,0 +1,154 @@
+{
+  "说明": "正式域名资源与静态输出检查；不代替真实Google消息或广告审核。",
+  "checks": [
+    {
+      "path": "/en/about/",
+      "status": 200,
+      "privacyAnchor": true,
+      "privacyControl": true,
+      "cmpAllowed": true,
+      "singleAdScript": true
+    },
+    {
+      "path": "/en/",
+      "status": 200,
+      "noAdSlot": true
+    },
+    {
+      "path": "/en/return-car/",
+      "status": 200,
+      "noAdSlot": true
+    },
+    {
+      "path": "/en/refuel-guide/",
+      "status": 200,
+      "noAdSlot": true
+    },
+    {
+      "path": "/zh-Hant/about/",
+      "status": 200,
+      "privacyAnchor": true,
+      "privacyControl": true,
+      "cmpAllowed": true,
+      "singleAdScript": true
+    },
+    {
+      "path": "/zh-Hant/",
+      "status": 200,
+      "noAdSlot": true
+    },
+    {
+      "path": "/zh-Hant/return-car/",
+      "status": 200,
+      "noAdSlot": true
+    },
+    {
+      "path": "/zh-Hant/refuel-guide/",
+      "status": 200,
+      "noAdSlot": true
+    },
+    {
+      "path": "/ko/about/",
+      "status": 200,
+      "privacyAnchor": true,
+      "privacyControl": true,
+      "cmpAllowed": true,
+      "singleAdScript": true
+    },
+    {
+      "path": "/ko/",
+      "status": 200,
+      "noAdSlot": true
+    },
+    {
+      "path": "/ko/return-car/",
+      "status": 200,
+      "noAdSlot": true
+    },
+    {
+      "path": "/ko/refuel-guide/",
+      "status": 200,
+      "noAdSlot": true
+    },
+    {
+      "path": "/zh-Hans/about/",
+      "status": 200,
+      "privacyAnchor": true,
+      "privacyControl": true,
+      "cmpAllowed": true,
+      "singleAdScript": true
+    },
+    {
+      "path": "/zh-Hans/",
+      "status": 200,
+      "noAdSlot": true
+    },
+    {
+      "path": "/zh-Hans/return-car/",
+      "status": 200,
+      "noAdSlot": true
+    },
+    {
+      "path": "/zh-Hans/refuel-guide/",
+      "status": 200,
+      "noAdSlot": true
+    },
+    {
+      "path": "/th/about/",
+      "status": 200,
+      "privacyAnchor": true,
+      "privacyControl": true,
+      "cmpAllowed": true,
+      "singleAdScript": true
+    },
+    {
+      "path": "/th/",
+      "status": 200,
+      "noAdSlot": true
+    },
+    {
+      "path": "/th/return-car/",
+      "status": 200,
+      "noAdSlot": true
+    },
+    {
+      "path": "/th/refuel-guide/",
+      "status": 200,
+      "noAdSlot": true
+    },
+    {
+      "path": "/adsense-verification.js",
+      "status": 200,
+      "paused": true
+    },
+    {
+      "path": "/ads.txt",
+      "status": 200,
+      "correctPublisher": true
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "exact20": true
+    },
+    {
+      "path": "/assets/index-BxUqgISr.js",
+      "status": 200,
+      "htmlReferencesCurrentBuild": true,
+      "hashMatchesBuild": true
+    },
+    {
+      "path": "/assets/rolldown-runtime-CbXtAM7H.js",
+      "status": 200,
+      "htmlReferencesCurrentBuild": true,
+      "hashMatchesBuild": true
+    },
+    {
+      "path": "/assets/index-CqL2ETZG.css",
+      "status": 200,
+      "htmlReferencesCurrentBuild": true,
+      "hashMatchesBuild": true
+    }
+  ],
+  "passed": true
+}

@@ -68,4 +68,6 @@
 - 据此新增“Google API 已就绪但窗口不出现”的回归用例：先确认旧实现失败，再改为等待 TCF 的 `cmpuishown` 事件，超时显示可重试提示。最终再次完成全量检查及 WebKit 专项，结果为上表。
 - 事件判断依据：[IAB 官方 CMP API 的 eventStatus 定义](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/TCFv2/IAB%20Tech%20Lab%20-%20CMP%20API%20v2.md)。
 
-最终修复的生产部署与复核信息在后续补录；真实广告与实体设备验收仍未计入通过。
+最终修复提交 `77c7e19` 已推送，生产部署 `7669b265` 已完成，正式网址为 https://fuel-me-japan.com/ 。最终 26 项正式域名检查通过，包括页面所引用 JS／CSS 与本地验收构建的 SHA-256 一致。真实浏览器验证中文“隐私选择”在 Google 窗口仍不显示时会给出可重试提示，按钮恢复可用，页面可继续浏览。
+
+真实广告投放、Google 同意窗口的完整同意／拒绝／撤回过程、实体设备复验仍未计入通过。当前保留广告暂停，不进行无依据的重复发布、重复 GSC 提交或账户级设置调整。
