@@ -73,7 +73,7 @@ for (const locale of locales) {
     await expect(page.locator(".my-fuel-trigger, .leaflet-container, .rental-business")).toHaveCount(0);
     await expect(page).toHaveTitle(`${t.rgTitle} | Fuel Me Japan`);
     await expect(page.locator('meta[name="description"]')).toHaveAttribute("content", t.rgIntro);
-    await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex,\s*nofollow/);
+    await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", "index, follow");
     await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", `https://fuel-me-japan.com/${locale}/refuel-guide/`);
     for (const option of locales) {
       await expect(page.locator(`.locale-switcher a[lang="${option}"]`)).toHaveAttribute("href", `/${option}/refuel-guide/`);

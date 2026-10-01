@@ -32,7 +32,7 @@ for (const locale of locales) for (const width of [320, 1280]) {
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
     await expect(page).toHaveTitle(`${t.aboutTitle} | Fuel Me Japan`);
     await expect(page.locator('meta[name="description"]')).toHaveAttribute("content", t.aboutIntro);
-    await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex,\s*nofollow/);
+    await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", "index, follow");
     await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", `https://fuel-me-japan.com/${locale}/about/`);
     for (const language of locales) {
       await expect(page.locator(`.locale-switcher a[lang="${language}"]`)).toHaveAttribute("href", `/${language}/about/`);

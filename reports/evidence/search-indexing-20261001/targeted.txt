@@ -1,0 +1,19 @@
+[WebServer] (node:54649) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 4 workers
+
+(node:54654) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:54653) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:54656) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:54655) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 tests/e2e/sitemap.spec.ts:51:1 › robots advertises the production sitemap and allows only approved page paths plus rendering resources (36ms)
+  ✓  4 tests/e2e/sitemap.spec.ts:7:1 › sitemap contains canonical public pages with reciprocal languages and indexing enabled (316ms)
+  ✓  1 tests/e2e/sitemap.spec.ts:68:1 › root and slash aliases keep the same canonical URL after JavaScript runs (487ms)
+  ✓  2 tests/e2e/sitemap.spec.ts:77:1 › queries, detail pages and missing routes stay noindex and navigation restores the public page policy (729ms)
+
+  4 passed (1.7s)

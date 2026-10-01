@@ -4,7 +4,7 @@ const origin = "https://fuel-me-japan.com";
 const languages = ["en", "zh-Hant", "ko", "zh-Hans", "th"];
 const sections = ["", "return-car/", "refuel-guide/", "about/"];
 
-test("sitemap contains canonical public pages with reciprocal languages while the current noindex restriction remains", async ({ page, request }) => {
+test("sitemap contains canonical public pages with reciprocal languages and indexing enabled", async ({ page, request }) => {
   const response = await request.get("/sitemap.xml");
   expect(response.status()).toBe(200);
   expect(response.headers()["content-type"]).toMatch(/(?:application|text)\/xml/);
@@ -40,20 +40,50 @@ test("sitemap contains canonical public pages with reciprocal languages while th
       };
     }, await htmlResponse.text());
     expect(head.canonical, url).toBe(url);
-    expect(head.robots, url).toBe("noindex, nofollow");
+    expect(head.robots, url).toBe("index, follow");
     expect(head.title?.trim(), url).toBeTruthy();
     expect(head.heading?.trim(), url).toBeTruthy();
     const suffix = new URL(url).pathname.split("/").slice(2).join("/");
     expect(head.alternates).toEqual([...languages.map(language => ({ language, href: `${origin}/${language}/${suffix}` })), { language: "x-default", href: `${origin}/en/${suffix}` }]);
+    await page.goto(new URL(url).pathname);
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", url);
+    await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", "index, follow");
   }
 });
 
-test("robots advertises the production sitemap without removing the existing page crawl restriction", async ({ request }) => {
+test("robots advertises the production sitemap and allows only approved page paths plus rendering resources", async ({ request }) => {
   const response = await request.get("/robots.txt");
   expect(response.status()).toBe(200);
   const robots = await response.text();
   expect(robots).toContain(`Sitemap: ${origin}/sitemap.xml`);
   expect(robots).toMatch(/^Disallow:\s*\/\s*$/m);
   expect(robots).toContain("Allow: /sitemap.xml");
+  for (const locale of languages) for (const section of sections) {
+    expect(robots).toContain(`Allow: /${locale}/${section}$`);
+  }
+  for (const path of ["/assets/", "/brands/", "/icons/", "/data/", "/runtime-map-provider.json"]) {
+    expect(robots).toContain(`Allow: ${path}`);
+  }
+  expect(robots.split("User-agent: *")[1]).not.toMatch(/^Allow:\s*\/\s*$/m);
 });
 
+
+test("root and slash aliases keep the same canonical URL after JavaScript runs", async ({ page }) => {
+  for (const [path, canonical] of [["/", "/en/"], ["/en", "/en/"], ["/zh-Hans/about", "/zh-Hans/about/"], ["/th/refuel-guide", "/th/refuel-guide/"]]) {
+    await page.goto(path);
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", origin + canonical);
+    await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", "index, follow");
+    await expect(page.locator('link[hreflang="en"]')).toHaveAttribute("href", origin + canonical.replace(/^\/[^/]+\//, "/en/"));
+  }
+});
+
+test("queries, detail pages and missing routes stay noindex and navigation restores the public page policy", async ({ page }) => {
+  for (const path of ["/zh-Hans/return-car/?q=OKA", "/zh-Hans/return-car/times-naha-airport/", "/zh-Hans/return-car/not-a-record/", "/zh-Hans/not-a-page/"]) {
+    await page.goto(path);
+    await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", "noindex, nofollow");
+    await page.locator("#about-link").click();
+    await expect(page).toHaveURL("/zh-Hans/about/");
+    await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", "index, follow");
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", origin + "/zh-Hans/about/");
+  }
+});

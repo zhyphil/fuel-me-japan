@@ -5,3 +5,17 @@
   X-Frame-Options: DENY
   Permissions-Policy: geolocation=(self), camera=(), microphone=()
   Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'
+
+# Candidate details and their data are outside the approved indexed pages.
+/:locale/return-car/:id
+  X-Robots-Tag: noindex, nofollow
+/:locale/return-car/:id/
+  X-Robots-Tag: noindex, nofollow
+/data/*
+  X-Robots-Tag: noindex
+
+# Keep deployment aliases out of search results.
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex

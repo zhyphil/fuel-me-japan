@@ -1,11 +1,60 @@
-# AdSense site verification and content review only.
+# AdSense site verification and content review.
 User-agent: Mediapartners-Google
 User-agent: Google-Display-Ads-Bot
 Allow: /
 
-# Keep the existing search-preview restriction.
+# Approved public pages and their rendering resources only.
 User-agent: *
+Allow: /$
+Allow: /en/$
+Allow: /en$
+Allow: /en/return-car/$
+Allow: /en/return-car$
+Allow: /en/refuel-guide/$
+Allow: /en/refuel-guide$
+Allow: /en/about/$
+Allow: /en/about$
+Allow: /zh-Hant/$
+Allow: /zh-Hant$
+Allow: /zh-Hant/return-car/$
+Allow: /zh-Hant/return-car$
+Allow: /zh-Hant/refuel-guide/$
+Allow: /zh-Hant/refuel-guide$
+Allow: /zh-Hant/about/$
+Allow: /zh-Hant/about$
+Allow: /ko/$
+Allow: /ko$
+Allow: /ko/return-car/$
+Allow: /ko/return-car$
+Allow: /ko/refuel-guide/$
+Allow: /ko/refuel-guide$
+Allow: /ko/about/$
+Allow: /ko/about$
+Allow: /zh-Hans/$
+Allow: /zh-Hans$
+Allow: /zh-Hans/return-car/$
+Allow: /zh-Hans/return-car$
+Allow: /zh-Hans/refuel-guide/$
+Allow: /zh-Hans/refuel-guide$
+Allow: /zh-Hans/about/$
+Allow: /zh-Hans/about$
+Allow: /th/$
+Allow: /th$
+Allow: /th/return-car/$
+Allow: /th/return-car$
+Allow: /th/refuel-guide/$
+Allow: /th/refuel-guide$
+Allow: /th/about/$
+Allow: /th/about$
+Allow: /assets/
+Allow: /brands/
+Allow: /icons/
+Allow: /data/
+Allow: /field-guides/
+Allow: /favicon.svg
+Allow: /runtime-map-provider.json
 Allow: /ads.txt
+Allow: /robots.txt
 Allow: /sitemap.xml
 Disallow: /
 

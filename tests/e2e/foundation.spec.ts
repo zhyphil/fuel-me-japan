@@ -29,7 +29,7 @@ for (const language of languageCases) {
     );
     await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
       "content",
-      /noindex,\s*nofollow/,
+      "index, follow",
     );
     for (const alternate of languageCases) {
       await expect(

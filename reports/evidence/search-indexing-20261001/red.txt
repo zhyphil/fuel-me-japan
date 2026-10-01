@@ -1,0 +1,138 @@
+[WebServer] (node:54278) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 4 workers
+
+(node:54281) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:54279) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:54280) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:54282) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/e2e/sitemap.spec.ts:51:1 › robots advertises the production sitemap and allows only approved page paths plus rendering resources (39ms)
+  ✘  3 tests/e2e/sitemap.spec.ts:7:1 › sitemap contains canonical public pages with reciprocal languages and indexing enabled (294ms)
+  ✘  4 tests/e2e/sitemap.spec.ts:68:1 › root and slash aliases keep the same canonical URL after JavaScript runs (5.4s)
+  ✘  1 tests/e2e/sitemap.spec.ts:77:1 › queries, detail pages and missing routes stay noindex and navigation restores the public page policy (5.4s)
+
+
+  1) tests/e2e/sitemap.spec.ts:7:1 › sitemap contains canonical public pages with reciprocal languages and indexing enabled 
+
+    Error: https://fuel-me-japan.com/en/
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "index, follow"
+    Received: "noindex, nofollow"
+
+      41 |     }, await htmlResponse.text());
+      42 |     expect(head.canonical, url).toBe(url);
+    > 43 |     expect(head.robots, url).toBe("index, follow");
+         |                              ^
+      44 |     expect(head.title?.trim(), url).toBeTruthy();
+      45 |     expect(head.heading?.trim(), url).toBeTruthy();
+      46 |     const suffix = new URL(url).pathname.split("/").slice(2).join("/");
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/sitemap.spec.ts:43:30
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/sitemap-sitemap-contains-c-361ac-guages-and-indexing-enabled/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/sitemap-sitemap-contains-c-361ac-guages-and-indexing-enabled/error-context.md
+
+  2) tests/e2e/sitemap.spec.ts:51:1 › robots advertises the production sitemap and allows only approved page paths plus rendering resources 
+
+    Error: expect(received).toContain(expected) // indexOf
+
+    Expected substring: "Allow: /en/$"
+    Received string:    "# AdSense site verification and content review only.
+    User-agent: Mediapartners-Google
+    User-agent: Google-Display-Ads-Bot
+    Allow: /·
+    # Keep the existing search-preview restriction.
+    User-agent: *
+    Allow: /ads.txt
+    Allow: /sitemap.xml
+    Disallow: /·
+    Sitemap: https://fuel-me-japan.com/sitemap.xml
+    "
+
+      57 |   expect(robots).toContain("Allow: /sitemap.xml");
+      58 |   for (const locale of languages) for (const section of sections) {
+    > 59 |     expect(robots).toContain(`Allow: /${locale}/${section}$`);
+         |                    ^
+      60 |   }
+      61 |   for (const path of ["/assets/", "/brands/", "/icons/", "/data/", "/runtime-map-provider.json"]) {
+      62 |     expect(robots).toContain(`Allow: ${path}`);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/sitemap.spec.ts:59:20
+
+    Error Context: test-results/sitemap-robots-advertises--346cf-hs-plus-rendering-resources/error-context.md
+
+  3) tests/e2e/sitemap.spec.ts:68:1 › root and slash aliases keep the same canonical URL after JavaScript runs 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('link[rel="canonical"]')
+    Expected: "https://fuel-me-japan.com/en/"
+    Received: "https://fuel-me-japan.com/"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('link[rel="canonical"]') with timeout 5000ms
+      - waiting for locator('link[rel="canonical"]')
+        14 × locator resolved to <link rel="canonical" href="https://fuel-me-japan.com/"/>
+           - unexpected value "https://fuel-me-japan.com/"
+
+
+      69 |   for (const [path, canonical] of [["/", "/en/"], ["/en", "/en/"], ["/zh-Hans/about", "/zh-Hans/about/"], ["/th/refuel-guide", "/th/refuel-guide/"]]) {
+      70 |     await page.goto(path);
+    > 71 |     await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", origin + canonical);
+         |                                                         ^
+      72 |     await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", "index, follow");
+      73 |     await expect(page.locator('link[hreflang="en"]')).toHaveAttribute("href", origin + canonical.replace(/^\/[^/]+\//, "/en/"));
+      74 |   }
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/sitemap.spec.ts:71:57
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/sitemap-root-and-slash-ali-19a2e-l-URL-after-JavaScript-runs/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/sitemap-root-and-slash-ali-19a2e-l-URL-after-JavaScript-runs/error-context.md
+
+  4) tests/e2e/sitemap.spec.ts:77:1 › queries, detail pages and missing routes stay noindex and navigation restores the public page policy 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('meta[name="robots"]')
+    Expected: "index, follow"
+    Received: "noindex, nofollow"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('meta[name="robots"]') with timeout 5000ms
+      - waiting for locator('meta[name="robots"]')
+        14 × locator resolved to <meta name="robots" content="noindex, nofollow"/>
+           - unexpected value "noindex, nofollow"
+
+
+      81 |     await page.locator("#about-link").click();
+      82 |     await expect(page).toHaveURL("/zh-Hans/about/");
+    > 83 |     await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", "index, follow");
+         |                                                       ^
+      84 |     await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", origin + "/zh-Hans/about/");
+      85 |   }
+      86 | });
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/sitemap.spec.ts:83:55
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/sitemap-queries-detail-pag-dc9c4-ores-the-public-page-policy/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/sitemap-queries-detail-pag-dc9c4-ores-the-public-page-policy/error-context.md
+
+  4 failed
+    tests/e2e/sitemap.spec.ts:7:1 › sitemap contains canonical public pages with reciprocal languages and indexing enabled 
+    tests/e2e/sitemap.spec.ts:51:1 › robots advertises the production sitemap and allows only approved page paths plus rendering resources 
+    tests/e2e/sitemap.spec.ts:68:1 › root and slash aliases keep the same canonical URL after JavaScript runs 
+    tests/e2e/sitemap.spec.ts:77:1 › queries, detail pages and missing routes stay noindex and navigation restores the public page policy 

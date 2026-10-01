@@ -38,10 +38,21 @@ export function updateRouteMetadata(route: AppRoute, detailName?: string) {
   document.documentElement.lang = route.locale;
   document.title = route.kind === "home" ? t.pageTitle : `${route.kind === "guide" ? t.rgTitle : route.kind === "about" ? t.aboutTitle : detailName || (route.kind === "not-found" ? t.rdNotFound : t.rdTitle)} | Fuel Me Japan`;
   document.querySelector('meta[name="description"]')?.setAttribute("content", route.kind === "home" ? t.description : route.kind === "guide" ? t.rgIntro : route.kind === "about" ? t.aboutIntro : `${detailName ? `${detailName}. ` : ""}${route.kind === "not-found" ? t.rdNotFoundHelp : t.rdIntro}`);
+  // Only the four approved public page types are indexable. Queries and
+  // client-only detail/error pages retain the preview restriction.
+  const publicPage = ["home", "guide", "about", "directory"].includes(route.kind);
+  document.querySelector('meta[name="robots"]')?.setAttribute("content", publicPage && !route.search ? "index, follow" : "noindex, nofollow");
+  const pathname = route.kind === "home" ? `/${route.locale}/`
+    : route.kind === "guide" ? guideHref(route.locale)
+    : route.kind === "about" ? aboutHref(route.locale)
+    : route.kind === "directory" ? rentalHref(route.locale)
+    : route.kind === "detail" ? rentalHref(route.locale, route.id)
+    : route.pathname;
+  const canonicalRoute = { ...route, pathname, search: "" };
   const origin = "https://fuel-me-japan.com";
   document.querySelectorAll('link[rel="canonical"], link[rel="alternate"][hreflang]').forEach(node => node.remove());
   const add = (rel: string, href: string, language?: string) => { const link = document.createElement("link"); link.rel = rel; link.href = href; if (language) link.hreflang = language; document.head.append(link); };
-  add("canonical", origin + route.pathname);
-  for (const locale of locales) add("alternate", origin + localizedHref({ ...route, search: "" }, locale), locale);
-  add("alternate", origin + localizedHref({ ...route, search: "" }, "en"), "x-default");
+  add("canonical", origin + pathname);
+  for (const locale of locales) add("alternate", origin + localizedHref(canonicalRoute, locale), locale);
+  add("alternate", origin + localizedHref(canonicalRoute, "en"), "x-default");
 }

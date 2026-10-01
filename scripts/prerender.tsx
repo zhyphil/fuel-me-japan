@@ -91,7 +91,7 @@ function routeModules(key: string): string[] {
 }
 const homePreloads = routeModules(homeChunkKey);
 const rentalPreloads = routeModules("src/components/RentalBusiness.tsx");
-if (!/<meta\s+name="robots"\s+content="noindex(?:,\s*nofollow)?"\s*\/?>/.test(shell)) throw new Error("M0.1 preview must remain noindex until user acceptance");
+if (!/<meta\s+name="robots"\s+content="noindex(?:,\s*nofollow)?"\s*\/?>/.test(shell)) throw new Error("The fallback shell must remain noindex; only approved prerendered pages may be indexed");
 const escape = (value: string) =>
   value.replace(
     /[&<>"']/g,
@@ -109,6 +109,7 @@ function render(locale: Locale, kind: "home" | "directory" | "guide" | "about" =
   const description = kind === "home" ? messages[locale].description : kind === "guide" ? messages[locale].rgIntro : kind === "about" ? messages[locale].aboutIntro : messages[locale].rdIntro;
   return shell
     .replace('<html lang="en">', `<html lang="${locale}">`)
+    .replace('<meta name="robots" content="noindex, nofollow" />', '<meta name="robots" content="index, follow" />')
     .replace(
       /<title>.*?<\/title>/,
       `<title>${escape(title)}</title>`,
