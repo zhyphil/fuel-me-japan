@@ -32,4 +32,18 @@
 
 ## 发布
 
-本地验证已完成，按持续发布授权执行 Conventional Commit、推送与既有 Cloudflare Pages 生产部署。正式域名资源及分页交互验证后在此补充版本和结果。
+已完成 Conventional Commit `79ee66d7c250da9a33bb95ff5f56231a8b6cbe0d`（`fix(rental): align pagination controls on small screens`），快进推送 `main` 与当前开发分支。
+
+- Cloudflare Production／main：`2014cf7a-c90b-4f4d-888a-47a73545b9dd`，来源提交 `79ee66d`。
+- 正式入口：[查找还车门店](https://fuel-me-japan.com/zh-Hans/return-car/)。
+- [本次部署地址](https://2014cf7a.fuel-me-japan.pages.dev)。
+- 19项正式域名页面、JS／CSS及公开配置的HTTP／SHA-256核对通过，与已验收构建完全一致。
+- 正式站430px与320px视口下，分页高度约142px；每页条数和页码跳转同排，翻页按钮等宽同排。跳到第295页、跳到第42页、前后翻页和改为100条均通过，首页和末页高度不变。
+- Times那霸机场门店的真实加油候选分页同步通过，无横向溢出或页面脚本异常。
+- 最终新增的报告复验脚本另经lint与typecheck通过。实体iPhone Chrome仍待用户刷新后复测，不将桌面浏览器手机模拟记为真机验收。
+
+生产验收时间：2026-10-01T13:35:43.308Z。中文JSON、部署日志和正式站截图已归档到同一证据目录。发布报告补充提交后推送，不重复部署相同运行资源。
+
+## 手机复测
+
+刷新正式站后下滑至分页：上面一行调整每页条数或输入页码，下面一行上一页／下一页。输入295并点跳转可直接到末页，布局应保持一致。

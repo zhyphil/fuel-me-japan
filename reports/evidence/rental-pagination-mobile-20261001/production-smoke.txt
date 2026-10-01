@@ -1,0 +1,1 @@
+{"status":"PASS","httpCount":19,"productionUI":"PASS","layouts":[{"page":"directory","width":430,"height":141.828125},{"page":"directory","width":320,"height":141.828125},{"page":"return-candidates","width":430,"height":141.828125}]}

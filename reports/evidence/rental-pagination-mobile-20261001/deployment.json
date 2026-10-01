@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "description": "Cloudflare 部署列表确认本次为 Production/main，来源提交与已验证版本一致。",
+  "id": "2014cf7a-c90b-4f4d-888a-47a73545b9dd",
+  "environment": "Production",
+  "branch": "main",
+  "commit": "79ee66d7c250da9a33bb95ff5f56231a8b6cbe0d",
+  "url": "https://2014cf7a.fuel-me-japan.pages.dev",
+  "production": "https://fuel-me-japan.com",
+  "checkedAt": "2026-10-01T13:35:43.308Z"
+}
