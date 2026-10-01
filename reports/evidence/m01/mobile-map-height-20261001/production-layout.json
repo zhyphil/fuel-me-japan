@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "description": "正式站Chrome手机视口全国概览、视口缩小和东京分区加载后均填满剩余高度；不是实体手机测试。",
+  "checks": [
+    {
+      "height": 932,
+      "layoutGap": 0,
+      "mapHeight": 470.8046875,
+      "overflow": false,
+      "page": "全国概览",
+      "unusedHeight": 0,
+      "width": 430
+    },
+    {
+      "height": 760,
+      "layoutGap": 0,
+      "mapHeight": 298.8046875,
+      "overflow": false,
+      "page": "全国概览",
+      "unusedHeight": 0,
+      "width": 430
+    },
+    {
+      "height": 932,
+      "layoutGap": 0,
+      "mapHeight": 376.9609375,
+      "overflow": false,
+      "page": "东京分区",
+      "unusedHeight": 0,
+      "width": 430
+    }
+  ]
+}
