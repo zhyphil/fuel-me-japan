@@ -37,7 +37,7 @@ The optional exact-URL official workbook download is also available as `npm run 
 
 `.github/workflows/data-refresh.yml` checks OSM weekly (Monday 00:00 UTC), and official prices Wednesday 06:00/10:00/14:00 and Thursday 06:00 UTC. It can also be run manually for either dataset. It installs pinned importer dependencies, executes parser tests and the full app check, and uploads only a validated data candidate and build provenance. Its repository permission is read-only: it cannot push or deploy. Review the candidate, incorporate its complete `public/data` snapshot, run checks and release through the normal approved release process. No candidate is a production update by itself.
 
-The workflow becomes scheduled only after it is on the default GitHub branch and Actions is enabled. It has not been executed on GitHub during this local implementation. Direct official price HTTP requests returned 403 on 2026-09-30; automatic acquisition remains unverified/blocked until a real run succeeds. The initial workbook was obtained through the official browser link. Do not report a functioning unattended price feed from this initial import.
+2026-10-01当前状态：工作流已经在默认分支运行。OSM真实运行36762528314于2026-09-30成功，候选与当时公开快照一致；最新官方参考价运行36864186412于2026-10-01在DISCOVERY阶段返回HTTP403，诊断确认旧manifest与registry保持。不能报告正常的无人值守参考价更新；初始工作簿经官方浏览器链接取得也不能证明自动获取已成功。具体流程和当前来源日期见 [维护手册](data-maintenance.md)。
 
 ## Normalization and publication gates
 
@@ -48,7 +48,7 @@ The workflow becomes scheduled only after it is on the default GitHub branch and
 - Original brand is retained; only reviewed exact aliases are normalized. Missing, conflicting or time-conditional payment/fuel information stays UNKNOWN. Broad `fuel:gasoline` or octane tags are not guessed into Japanese retail categories.
 - SELF requires an explicit self-service tag without conflicting attended-service evidence; FULL requires explicit `self_service=no` and `full_service=yes`. Mixed, missing or conditional service stays UNKNOWN. These are OSM observations, not current operating guarantees.
 - The official workbook's prefectural sheet must have the expected cash/tax/unit headers and coherent survey/publication dates. Current columns D/F/H yield exactly 47 × 3 values; previous-week columns, kerosene and regional aggregates are excluded. 北海道局 and 沖縄局 are their corresponding prefectures. Each value must be finite and 50–400 JPY/L. Older replacement is rejected.
-- Station and price data remain separate. No station record has a price. gogo and rental-guidance entries remain pending and disabled.
+- Station and price data remain separate. No station record has a price. The core registry retains disabled source candidates for gogo and generic rental guidance; they do not authorize ingestion. gogo paid integration is deferred. The independent rental module uses its separately reviewed source manifest and limited official facts, documented in [rental-data.md](rental-data.md).
 
 ## Versioning, integrity and failure handling
 
@@ -70,4 +70,4 @@ GitHub 真实参考价定时运行 `36761672931` 在官方索引返回 HTTP 403 
 
 更新程序支持 `--report /tmp/fmj-refresh-report.json`，报告失败阶段、准确来源URL、开始结束时间以及前后数据指针SHA-256；报告必须在发布数据目录外。工作流先运行导入器回归，再获取来源；即使来源失败也上传诊断文件，仍只有完整验证成功时才上传候选数据，不自动发布。
 
-最新中文报告和远端运行证据将在 `reports/data-maintenance-completion.md` 汇总。上方旧的“尚未运行”叙述对应初始实现时点，不能视为当前状态。
+历史中文报告见 `reports/data-maintenance-completion.md`；2026-10-01最新诊断与字段基线见 [维护手册](data-maintenance.md)和[本轮报告](../reports/validation-foundation-20261001.md)。重跑统计不会刷新来源日期。

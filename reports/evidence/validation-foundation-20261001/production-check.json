@@ -1,0 +1,85 @@
+{
+  "说明": "本轮工具和文档不改变运行资源；正式网站资源与本轮已通过完整检查的构建逐字一致。检查没有请求设备定位或Google广告。",
+  "checkedAt": "2026-10-01T19:00:05.059910+00:00",
+  "applicationCommit": "77c7e1989c373dd223fe8986d9deb8d9cb9178c7",
+  "productionDeployment": "7669b265",
+  "checks": [
+    {
+      "path": "ads.txt",
+      "status": 200,
+      "bytes": 59,
+      "sha256": "167521f9f95b76e7071d6e244f4db5e56f41539a20ae6a38dc16e1e7041f5e9b",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "robots.txt",
+      "status": 200,
+      "bytes": 1374,
+      "sha256": "871f25cf76f7eda2cb9505dc58be9c21e54b90f69d1ba0a0af160afcedd0de50",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "sitemap.xml",
+      "status": 200,
+      "bytes": 1380,
+      "sha256": "1f47159e71a4ccebf3a0d0b8340fde283adcf5bc112d1390235f24d91dfecdf0",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "en/",
+      "status": 200,
+      "bytes": 14333,
+      "sha256": "87ae79294caa50f400f804e709ab9010510da55de2b89b7b089a09e3649ab074",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "zh-Hans/",
+      "status": 200,
+      "bytes": 14062,
+      "sha256": "37812b628c3a5cb6a39df801c398d1a875a40c7b30165651d59e12fea1e8144d",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "zh-Hans/return-car/",
+      "status": 200,
+      "bytes": 9273,
+      "sha256": "f03eaf068cfb6e755f03099357eb7ab436f881bf8f50f7d6e0cf75fb9c6cacfd",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "data/manifest.json",
+      "status": 200,
+      "bytes": 23863,
+      "sha256": "334ce4620b9e85751876aa427b0d958eb8410d89af0bfb4fa488b2737869693d",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "data/rental/nationwide/manifest.json",
+      "status": 200,
+      "bytes": 24497,
+      "sha256": "4f59128d71efd671be61f1eb3d5d36eed3b1c6507bd3d2249c5cc6fba4ea09de",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "assets/index-BxUqgISr.js",
+      "status": 200,
+      "bytes": 497402,
+      "sha256": "d555d5c71c455f70232d7f59a22f15176f0a113213b95b2822d62a5c2494b483",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "assets/index-CqL2ETZG.css",
+      "status": 200,
+      "bytes": 65372,
+      "sha256": "76f91c8322bc761a4ad9c4ce1d81458bd0e039764c3081deee9008a39205296e",
+      "matchesLocalBuild": true
+    },
+    {
+      "path": "assets/RentalBusiness-UK_YwRkz.js",
+      "status": 200,
+      "bytes": 64610,
+      "sha256": "1c8ed5d19ef94d1d4105cf96bd5154a969341f6912b2d579db2a1bc95fd8c5a3",
+      "matchesLocalBuild": true
+    }
+  ]
+}

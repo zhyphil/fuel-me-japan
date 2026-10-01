@@ -1,0 +1,52 @@
+{
+  "checkedAt": "2026-10-01T18:41:58.030514+00:00",
+  "checks": [
+    {
+      "url": "https://fuel-me-japan.com/ads.txt",
+      "userAgent": "Mozilla/5.0",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 59,
+      "sha256": "167521f9f95b76e7071d6e244f4db5e56f41539a20ae6a38dc16e1e7041f5e9b",
+      "matchesRepository": true,
+      "body": "google.com, pub-8063428584007009, DIRECT, f08c47fec0942fa0\n",
+      "xRobotsTag": null
+    },
+    {
+      "url": "https://fuel-me-japan.com/ads.txt",
+      "userAgent": "Googlebot",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 59,
+      "sha256": "167521f9f95b76e7071d6e244f4db5e56f41539a20ae6a38dc16e1e7041f5e9b",
+      "matchesRepository": true,
+      "body": "google.com, pub-8063428584007009, DIRECT, f08c47fec0942fa0\n",
+      "xRobotsTag": null
+    },
+    {
+      "url": "https://fuel-me-japan.com/ads.txt",
+      "userAgent": "Mediapartners-Google",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 59,
+      "sha256": "167521f9f95b76e7071d6e244f4db5e56f41539a20ae6a38dc16e1e7041f5e9b",
+      "matchesRepository": true,
+      "body": "google.com, pub-8063428584007009, DIRECT, f08c47fec0942fa0\n",
+      "xRobotsTag": null
+    },
+    {
+      "requestedUrl": "http://fuel-me-japan.com/ads.txt",
+      "finalUrl": "https://fuel-me-japan.com/ads.txt",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "body": "google.com, pub-8063428584007009, DIRECT, f08c47fec0942fa0\n"
+    },
+    {
+      "requestedUrl": "https://fuel-me-japan.com/robots.txt",
+      "finalUrl": "https://fuel-me-japan.com/robots.txt",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "body": "# AdSense site verification and content review.\nUser-agent: Mediapartners-Google\nUser-agent: Google-Display-Ads-Bot\nAllow: /\n\n# Approved public pages and their rendering resources only.\nUser-agent: *\nAllow: /$\nAllow: /en/$\nAllow: /en$\nAllow: /en/return-car/$\nAllow: /en/return-car$\nAllow: /en/refuel-guide/$\nAllow: /en/refuel-guide$\nAllow: /en/about/$\nAllow: /en/about$\nAllow: /zh-Hant/$\nAllow: /zh-Hant$\nAllow: /zh-Hant/return-car/$\nAllow: /zh-Hant/return-car$\nAllow: /zh-Hant/refuel-guide/$\nAllow: /zh-Hant/refuel-guide$\nAllow: /zh-Hant/about/$\nAllow: /zh-Hant/about$\nAllow: /ko/$\nAllow: /ko$\nAllow: /ko/return-car/$\nAllow: /ko/return-car$\nAllow: /ko/refuel-guide/$\nAllow: /ko/refuel-guide$\nAllow: /ko/about/$\nAllow: /ko/about$\nAllow: /zh-Hans/$\nAllow: /zh-Hans$\nAllow: /zh-Hans/return-car/$\nAllow: /zh-Hans/return-car$\nAllow: /zh-Hans/refuel-guide/$\nAllow: /zh-Hans/refuel-guide$\nAllow: /zh-Hans/about/$\nAllow: /zh-Hans/about$\nAllow: /th/$\nAllow: /th$\nAllow: /th/return-car/$\nAllow: /th/return-car$\nAllow: /th/refuel-guide/$\nAllow: /th/refuel-guide$\nAllow: /th/about/$\nAllow: /th/about$\nAllow: /assets/\nAllow: /brands/\nAllow: /icons/\nAllow: /data/\nAllow: /field-guides/\nAllow: /favicon.svg\nAllow: /runtime-map-provider.json\nAllow: /ads.txt\nAllow: /adsense-verification.js\nAllow: /robots.txt\nAllow: /sitemap.xml\nDisallow: /\n\nSitemap: https://fuel-me-japan.com/sitemap.xml\n"
+    }
+  ]
+}

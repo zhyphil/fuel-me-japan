@@ -1,0 +1,9 @@
+{
+  "说明": "链接、空白模板和离线统计复现核对；没有真实参与者结果。",
+  "relativeFileLinksChecked": 50,
+  "csvDataRows": 0,
+  "csvFields": 15,
+  "reportReproducible": true,
+  "reportSha256": "9dae6f36f26ccb77031dec4485278176d4219c8c256cc98a1baa96018e2f6867",
+  "inputArtifactsChecked": 110
+}

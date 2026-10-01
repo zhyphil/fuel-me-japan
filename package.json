@@ -19,7 +19,8 @@
     "deploy": "npm run check && wrangler pages deploy dist --project-name=fuel-me-japan --branch=main",
     "data:refresh": "python3 scripts/importer/pipeline.py refresh",
     "data:fetch-price": "python3 scripts/importer/pipeline.py fetch-price",
-    "test:data": "python3 -m unittest discover -s tests/data -v"
+    "test:data": "python3 -m unittest discover -s tests/data -v",
+    "data:quality": "tsx scripts/data-quality.ts"
   },
   "dependencies": {
     "leaflet": "1.9.4",

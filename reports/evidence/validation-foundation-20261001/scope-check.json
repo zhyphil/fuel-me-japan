@@ -1,0 +1,13 @@
+{
+  "说明": "完整检查写入的历史截图已从本轮干净起点逐项恢复；本轮不重写旧验收证据。",
+  "restoredHistoricalScreenshots": 60,
+  "sourceRef": "53141f19feb3c42977edcad9ceab1069f08d2a9e",
+  "runtimeSourceChanges": 0,
+  "productionDataChanges": 0,
+  "frozenSpecificationChanges": 0,
+  "historicalEvidenceChanges": 0,
+  "newDependencies": 0,
+  "unitTestsPassed": 369,
+  "chromiumPassed": 397,
+  "staticProductionMatches": 11
+}

@@ -1,0 +1,39 @@
+{
+  "说明": "无效日期、早于来源日期、重复参数及写入生产目录均被拒绝；没有生成生产文件。",
+  "checks": [
+    {
+      "args": [
+        "--as-of",
+        "not-a-date"
+      ],
+      "exitCode": 1,
+      "message": "统计日期无效"
+    },
+    {
+      "args": [
+        "--as-of",
+        "2026-09-01"
+      ],
+      "exitCode": 1,
+      "message": "统计日期早于所读取资料的日期"
+    },
+    {
+      "args": [
+        "--as-of",
+        "2026-10-01",
+        "--as-of",
+        "2026-10-01"
+      ],
+      "exitCode": 1,
+      "message": "重复的参数"
+    },
+    {
+      "args": [
+        "--output",
+        "public/quality-should-not-exist.json"
+      ],
+      "exitCode": 1,
+      "message": "质量报告不能写入生产数据目录"
+    }
+  ]
+}

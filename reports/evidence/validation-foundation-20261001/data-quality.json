@@ -1,0 +1,906 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-01",
+  "interpretation": "只统计当前快照已记录字段；不是全国实际门店覆盖率、实时营业状态、实际油种供应率或外国信用卡接受率。UNKNOWN不计为YES或NO。",
+  "inputs": {
+    "stationManifestSha256": "334ce4620b9e85751876aa427b0d958eb8410d89af0bfb4fa488b2737869693d",
+    "stationVersion": "2026-09-29-c083bcad49fa-m01-data-v2",
+    "stationSnapshotAt": "2026-09-29T20:22:51Z",
+    "rentalManifestSha256": "4f59128d71efd671be61f1eb3d5d36eed3b1c6507bd3d2249c5cc6fba4ea09de",
+    "rentalVersion": "rental-v1-e1fc384a2c662459",
+    "rentalReviewDate": "2026-10-01",
+    "checkedArtifacts": 110
+  },
+  "prices": {
+    "referenceRecords": 141,
+    "surveyDate": "2026-09-28",
+    "publishedAt": "2026-09-30",
+    "stationQuoteRecords": 0,
+    "note": "都道府县参考价不能作为单站报价；统计日期不是资料刷新日期。"
+  },
+  "national": {
+    "stations": {
+      "count": 16454,
+      "text": {
+        "name": {
+          "recorded": 13526,
+          "missing": 2928
+        },
+        "address": {
+          "recorded": 1792,
+          "missing": 14662
+        },
+        "openingHours": {
+          "recorded": 1578,
+          "missing": 14876
+        },
+        "originalBrand": {
+          "recorded": 10652,
+          "missing": 5802
+        }
+      },
+      "triState": {
+        "fuelRegular": {
+          "YES": 5,
+          "NO": 0,
+          "UNKNOWN": 16449
+        },
+        "fuelHighOctane": {
+          "YES": 6,
+          "NO": 0,
+          "UNKNOWN": 16448
+        },
+        "fuelDiesel": {
+          "YES": 757,
+          "NO": 33,
+          "UNKNOWN": 15664
+        },
+        "paymentVisa": {
+          "YES": 4,
+          "NO": 0,
+          "UNKNOWN": 16450
+        },
+        "paymentMastercard": {
+          "YES": 7,
+          "NO": 0,
+          "UNKNOWN": 16447
+        }
+      },
+      "serviceType": {
+        "SELF": 875,
+        "FULL": 65,
+        "UNKNOWN": 15514
+      }
+    },
+    "rentals": {
+      "count": 7383,
+      "counters": 32,
+      "nonCounters": 7351,
+      "officialFacilities": 19,
+      "missingAddress": 2020,
+      "missingPhone": 3591,
+      "missingWebsite": 3015,
+      "entrancesNotVerified": 7383
+    }
+  },
+  "regions": [
+    {
+      "id": "hokkaido",
+      "label": "北海道",
+      "codes": [
+        "JP-01"
+      ],
+      "stations": {
+        "count": 1148,
+        "text": {
+          "name": {
+            "recorded": 1035,
+            "missing": 113
+          },
+          "address": {
+            "recorded": 373,
+            "missing": 775
+          },
+          "openingHours": {
+            "recorded": 313,
+            "missing": 835
+          },
+          "originalBrand": {
+            "recorded": 919,
+            "missing": 229
+          }
+        },
+        "triState": {
+          "fuelRegular": {
+            "YES": 0,
+            "NO": 0,
+            "UNKNOWN": 1148
+          },
+          "fuelHighOctane": {
+            "YES": 0,
+            "NO": 0,
+            "UNKNOWN": 1148
+          },
+          "fuelDiesel": {
+            "YES": 190,
+            "NO": 8,
+            "UNKNOWN": 950
+          },
+          "paymentVisa": {
+            "YES": 0,
+            "NO": 0,
+            "UNKNOWN": 1148
+          },
+          "paymentMastercard": {
+            "YES": 0,
+            "NO": 0,
+            "UNKNOWN": 1148
+          }
+        },
+        "serviceType": {
+          "SELF": 112,
+          "FULL": 64,
+          "UNKNOWN": 972
+        }
+      },
+      "rentals": {
+        "count": 546,
+        "counters": 6,
+        "nonCounters": 540,
+        "officialFacilities": 3,
+        "missingAddress": 80,
+        "missingPhone": 222,
+        "missingWebsite": 166,
+        "entrancesNotVerified": 546
+      }
+    },
+    {
+      "id": "okinawa",
+      "label": "冲绳",
+      "codes": [
+        "JP-47"
+      ],
+      "stations": {
+        "count": 295,
+        "text": {
+          "name": {
+            "recorded": 278,
+            "missing": 17
+          },
+          "address": {
+            "recorded": 123,
+            "missing": 172
+          },
+          "openingHours": {
+            "recorded": 15,
+            "missing": 280
+          },
+          "originalBrand": {
+            "recorded": 175,
+            "missing": 120
+          }
+        },
+        "triState": {
+          "fuelRegular": {
+            "YES": 0,
+            "NO": 0,
+            "UNKNOWN": 295
+          },
+          "fuelHighOctane": {
+            "YES": 0,
+            "NO": 0,
+            "UNKNOWN": 295
+          },
+          "fuelDiesel": {
+            "YES": 2,
+            "NO": 0,
+            "UNKNOWN": 293
+          },
+          "paymentVisa": {
+            "YES": 0,
+            "NO": 0,
+            "UNKNOWN": 295
+          },
+          "paymentMastercard": {
+            "YES": 0,
+            "NO": 0,
+            "UNKNOWN": 295
+          }
+        },
+        "serviceType": {
+          "SELF": 11,
+          "FULL": 0,
+          "UNKNOWN": 284
+        }
+      },
+      "rentals": {
+        "count": 438,
+        "counters": 6,
+        "nonCounters": 432,
+        "officialFacilities": 3,
+        "missingAddress": 117,
+        "missingPhone": 192,
+        "missingWebsite": 202,
+        "entrancesNotVerified": 438
+      }
+    },
+    {
+      "id": "kyushu",
+      "label": "九州七县（不含另列的冲绳）",
+      "codes": [
+        "JP-40",
+        "JP-41",
+        "JP-42",
+        "JP-43",
+        "JP-44",
+        "JP-45",
+        "JP-46"
+      ],
+      "stations": {
+        "count": 1387,
+        "text": {
+          "name": {
+            "recorded": 1030,
+            "missing": 357
+          },
+          "address": {
+            "recorded": 95,
+            "missing": 1292
+          },
+          "openingHours": {
+            "recorded": 45,
+            "missing": 1342
+          },
+          "originalBrand": {
+            "recorded": 803,
+            "missing": 584
+          }
+        },
+        "triState": {
+          "fuelRegular": {
+            "YES": 0,
+            "NO": 0,
+            "UNKNOWN": 1387
+          },
+          "fuelHighOctane": {
+            "YES": 0,
+            "NO": 0,
+            "UNKNOWN": 1387
+          },
+          "fuelDiesel": {
+            "YES": 29,
+            "NO": 3,
+            "UNKNOWN": 1355
+          },
+          "paymentVisa": {
+            "YES": 1,
+            "NO": 0,
+            "UNKNOWN": 1386
+          },
+          "paymentMastercard": {
+            "YES": 1,
+            "NO": 0,
+            "UNKNOWN": 1386
+          }
+        },
+        "serviceType": {
+          "SELF": 116,
+          "FULL": 0,
+          "UNKNOWN": 1271
+        }
+      },
+      "rentals": {
+        "count": 807,
+        "counters": 3,
+        "nonCounters": 804,
+        "officialFacilities": 2,
+        "missingAddress": 155,
+        "missingPhone": 358,
+        "missingWebsite": 311,
+        "entrancesNotVerified": 807
+      }
+    }
+  ],
+  "airportReviewQueue": [
+    {
+      "rentalId": "nippon-naha-airport-toyosaki",
+      "airportCode": "OKA",
+      "companyId": "nippon",
+      "name": "ニッポンレンタカー 那覇空港豊崎",
+      "officialUrl": "https://store.nipponrentacar.co.jp/b/nrs/info/020660/",
+      "checkedAt": "2026-10-01",
+      "vehicleEntranceStatus": "NOT_VERIFIED",
+      "eligibleCandidatesWithin10Km": {
+        "REGULAR": 72,
+        "HIGH_OCTANE": 72,
+        "DIESEL": 72
+      },
+      "nearestRegularCandidates": [
+        {
+          "stationId": "osm:node:1993185911",
+          "prefectureCode": "JP-47",
+          "name": "ENEOS",
+          "brand": "ENEOS",
+          "address": "沖縄県 豊見城市 豊崎 40",
+          "lat": 26.1585022,
+          "lon": 127.6547206,
+          "straightLineDistanceKm": 0.2,
+          "objectLastModifiedAt": "2023-08-20T14:23:04Z",
+          "osmUrl": "https://www.openstreetmap.org/node/1993185911",
+          "fieldsToCheck": [
+            "openingHours",
+            "serviceType",
+            "fuelRegular",
+            "paymentVisa",
+            "paymentMastercard"
+          ]
+        },
+        {
+          "stationId": "osm:node:12229674199",
+          "prefectureCode": "JP-47",
+          "name": null,
+          "brand": null,
+          "address": null,
+          "lat": 26.1478967,
+          "lon": 127.6595988,
+          "straightLineDistanceKm": 1.124,
+          "objectLastModifiedAt": "2024-10-06T13:28:58Z",
+          "osmUrl": "https://www.openstreetmap.org/node/12229674199",
+          "fieldsToCheck": [
+            "name",
+            "address",
+            "openingHours",
+            "serviceType",
+            "fuelRegular",
+            "paymentVisa",
+            "paymentMastercard"
+          ]
+        },
+        {
+          "stationId": "osm:node:5885023027",
+          "prefectureCode": "JP-47",
+          "name": "ファミリー給油所",
+          "brand": null,
+          "address": "沖縄県豊見城市与根３２１−８",
+          "lat": 26.1647356,
+          "lon": 127.6638369,
+          "straightLineDistanceKm": 1.308,
+          "objectLastModifiedAt": "2018-09-05T15:32:23Z",
+          "osmUrl": "https://www.openstreetmap.org/node/5885023027",
+          "fieldsToCheck": [
+            "openingHours",
+            "serviceType",
+            "fuelRegular",
+            "paymentVisa",
+            "paymentMastercard"
+          ]
+        }
+      ]
+    },
+    {
+      "rentalId": "nippon-new-chitose-airport",
+      "airportCode": "CTS",
+      "companyId": "nippon",
+      "name": "ニッポンレンタカー 新千歳空港",
+      "officialUrl": "https://store.nipponrentacar.co.jp/b/nrs/info/810034/",
+      "checkedAt": "2026-10-01",
+      "vehicleEntranceStatus": "NOT_VERIFIED",
+      "eligibleCandidatesWithin10Km": {
+        "REGULAR": 23,
+        "HIGH_OCTANE": 23,
+        "DIESEL": 23
+      },
+      "nearestRegularCandidates": [
+        {
+          "stationId": "osm:node:5694016271",
+          "prefectureCode": "JP-01",
+          "name": "ENEOS",
+          "brand": "ENEOS",
+          "address": "北海道 千歳市 美々",
+          "lat": 42.796958,
+          "lon": 141.6772079,
+          "straightLineDistanceKm": 1.842,
+          "objectLastModifiedAt": "2018-06-16T01:13:05Z",
+          "osmUrl": "https://www.openstreetmap.org/node/5694016271",
+          "fieldsToCheck": [
+            "serviceType",
+            "fuelRegular",
+            "paymentVisa",
+            "paymentMastercard"
+          ]
+        },
+        {
+          "stationId": "osm:node:5699750321",
+          "prefectureCode": "JP-01",
+          "name": "出光",
+          "brand": "IDEMITSU",
+          "address": "北海道 千歳市 旭ヶ丘",
+          "lat": 42.828708,
+          "lon": 141.6792895,
+          "straightLineDistanceKm": 3.614,
+          "objectLastModifiedAt": "2018-06-18T14:39:15Z",
+          "osmUrl": "https://www.openstreetmap.org/node/5699750321",
+          "fieldsToCheck": [
+            "serviceType",
+            "fuelRegular",
+            "paymentVisa",
+            "paymentMastercard"
+          ]
+        },
+        {
+          "stationId": "osm:node:1728983361",
+          "prefectureCode": "JP-01",
+          "name": "昭和シェル",
+          "brand": "昭和シェル",
+          "address": null,
+          "lat": 42.7674028,
+          "lon": 141.7096535,
+          "straightLineDistanceKm": 3.694,
+          "objectLastModifiedAt": "2021-02-10T18:26:00Z",
+          "osmUrl": "https://www.openstreetmap.org/node/1728983361",
+          "fieldsToCheck": [
+            "address",
+            "openingHours",
+            "serviceType",
+            "fuelRegular",
+            "paymentVisa",
+            "paymentMastercard"
+          ]
+        }
+      ]
+    },
+    {
+      "rentalId": "times-fukuoka-airport-international",
+      "airportCode": "FUK",
+      "companyId": "times",
+      "name": "タイムズカー 福岡空港国際線店",
+      "officialUrl": "https://www.timescar-rental.com/en/fukuoka/shop/4034/",
+      "checkedAt": "2026-09-30",
+      "vehicleEntranceStatus": "NOT_VERIFIED",
+      "eligibleCandidatesWithin10Km": {
+        "REGULAR": 122,
+        "HIGH_OCTANE": 122,
+        "DIESEL": 122
+      },
+      "nearestRegularCandidates": [
+        {
+          "stationId": "osm:way:552140624",
+          "prefectureCode": "JP-40",
+          "name": null,
+          "brand": "ESSO",
+          "address": null,
+          "lat": 33.5814841,
+          "lon": 130.4423321,
+          "straightLineDistanceKm": 0.164,
+          "objectLastModifiedAt": "2019-10-28T13:34:31Z",
+          "osmUrl": "https://www.openstreetmap.org/way/552140624",
+          "fieldsToCheck": [
+            "name",
+            "address",
+            "openingHours",
+            "serviceType",
+            "fuelRegular",
+            "paymentVisa",
+            "paymentMastercard"
+          ]
+        },
+        {
+          "stationId": "osm:way:552140600",
+          "prefectureCode": "JP-40",
+          "name": null,
+          "brand": null,
+          "address": null,
+          "lat": 33.5832486,
+          "lon": 130.4405383,
+          "straightLineDistanceKm": 0.391,
+          "objectLastModifiedAt": "2025-05-21T02:45:54Z",
+          "osmUrl": "https://www.openstreetmap.org/way/552140600",
+          "fieldsToCheck": [
+            "name",
+            "address",
+            "openingHours",
+            "serviceType",
+            "fuelRegular",
+            "paymentVisa",
+            "paymentMastercard"
+          ]
+        },
+        {
+          "stationId": "osm:way:1506862453",
+          "prefectureCode": "JP-40",
+          "name": "ENEOS",
+          "brand": "ENEOS",
+          "address": null,
+          "lat": 33.5831528,
+          "lon": 130.4372953,
+          "straightLineDistanceKm": 0.573,
+          "objectLastModifiedAt": "2026-04-30T12:44:16Z",
+          "osmUrl": "https://www.openstreetmap.org/way/1506862453",
+          "fieldsToCheck": [
+            "address",
+            "openingHours",
+            "serviceType",
+            "fuelRegular",
+            "paymentVisa",
+            "paymentMastercard"
+          ]
+        }
+      ]
+    },
+    {
+      "rentalId": "times-naha-airport",
+      "airportCode": "OKA",
+      "companyId": "times",
+      "name": "タイムズカー 那覇空港店",
+      "officialUrl": "https://www.timescar-rental.com/en/okinawa/shop/4701/",
+      "checkedAt": "2026-09-30",
+      "vehicleEntranceStatus": "NOT_VERIFIED",
+      "eligibleCandidatesWithin10Km": {
+        "REGULAR": 92,
+        "HIGH_OCTANE": 92,
+        "DIESEL": 92
+      },
+      "nearestRegularCandidates": [
+        {
+          "stationId": "osm:node:5885054990",
+          "prefectureCode": "JP-47",
+          "name": "沖縄港油沖縄港油給油所",
+          "brand": null,
+          "address": null,
+          "lat": 26.2125209,
+          "lon": 127.6691703,
+          "straightLineDistanceKm": 1.103,
+          "objectLastModifiedAt": "2018-09-05T15:31:39Z",
+          "osmUrl": "https://www.openstreetmap.org/node/5885054990",
+          "fieldsToCheck": [
+            "address",
+            "openingHours",
+            "serviceType",
+            "fuelRegular",
+            "paymentVisa",
+            "paymentMastercard"
+          ]
+        },
+        {
+          "stationId": "osm:way:105018159",
+          "prefectureCode": "JP-47",
+          "name": "アポロステーション",
+          "brand": "apollostation",
+          "address": "沖縄県 那覇市 金城 17",
+          "lat": 26.2018907,
+          "lon": 127.6622922,
+          "straightLineDistanceKm": 1.126,
+          "objectLastModifiedAt": "2022-12-24T13:40:56Z",
+          "osmUrl": "https://www.openstreetmap.org/way/105018159",
+          "fieldsToCheck": [
+            "openingHours",
+            "serviceType",
+            "fuelRegular",
+            "paymentVisa",
+            "paymentMastercard"
+          ]
+        },
+        {
+          "stationId": "osm:way:542121944",
+          "prefectureCode": "JP-47",
+          "name": "エネオス",
+          "brand": "エネオス",
+          "address": null,
+          "lat": 26.2185249,
+          "lon": 127.6687051,
+          "straightLineDistanceKm": 1.319,
+          "objectLastModifiedAt": "2019-10-12T06:09:28Z",
+          "osmUrl": "https://www.openstreetmap.org/way/542121944",
+          "fieldsToCheck": [
+            "address",
+            "openingHours",
+            "serviceType",
+            "fuelRegular",
+            "paymentVisa",
+            "paymentMastercard"
+          ]
+        }
+      ]
+    },
+    {
+      "rentalId": "times-new-chitose-airport",
+      "airportCode": "CTS",
+      "companyId": "times",
+      "name": "タイムズカー 新千歳空港店",
+      "officialUrl": "https://www.timescar-rental.com/en/hokkaido/shop/0105/",
+      "checkedAt": "2026-09-30",
+      "vehicleEntranceStatus": "NOT_VERIFIED",
+      "eligibleCandidatesWithin10Km": {
+        "REGULAR": 24,
+        "HIGH_OCTANE": 24,
+        "DIESEL": 24
+      },
+      "nearestRegularCandidates": [
+        {
+          "stationId": "osm:way:1491375956",
+          "prefectureCode": "JP-01",
+          "name": "ENEOS",
+          "brand": "ENEOS",
+          "address": "北海道 千歳市 16",
+          "lat": 42.8270554,
+          "lon": 141.6724601,
+          "straightLineDistanceKm": 1.26,
+          "objectLastModifiedAt": "2026-03-22T02:32:07Z",
+          "osmUrl": "https://www.openstreetmap.org/way/1491375956",
+          "fieldsToCheck": [
+            "fuelRegular",
+            "paymentVisa",
+            "paymentMastercard"
+          ]
+        },
+        {
+          "stationId": "osm:node:5699750321",
+          "prefectureCode": "JP-01",
+          "name": "出光",
+          "brand": "IDEMITSU",
+          "address": "北海道 千歳市 旭ヶ丘",
+          "lat": 42.828708,
+          "lon": 141.6792895,
+          "straightLineDistanceKm": 1.304,
+          "objectLastModifiedAt": "2018-06-18T14:39:15Z",
+          "osmUrl": "https://www.openstreetmap.org/node/5699750321",
+          "fieldsToCheck": [
+            "serviceType",
+            "fuelRegular",
+            "paymentVisa",
+            "paymentMastercard"
+          ]
+        },
+        {
+          "stationId": "osm:node:3080117815",
+          "prefectureCode": "JP-01",
+          "name": "コスモ石油",
+          "brand": "コスモ",
+          "address": "北海道 千歳市 朝日町 63",
+          "lat": 42.8208752,
+          "lon": 141.6582345,
+          "straightLineDistanceKm": 1.79,
+          "objectLastModifiedAt": "2026-01-08T00:14:08Z",
+          "osmUrl": "https://www.openstreetmap.org/node/3080117815",
+          "fieldsToCheck": [
+            "serviceType",
+            "fuelRegular",
+            "paymentVisa",
+            "paymentMastercard"
+          ]
+        }
+      ]
+    },
+    {
+      "rentalId": "toyota-fukuoka-airport-international",
+      "airportCode": "FUK",
+      "companyId": "toyota",
+      "name": "トヨタレンタカー 福岡INTERNATIONAL店",
+      "officialUrl": "https://rent.toyota.co.jp/shop/detail.aspx?rCode=68101&eCode=068",
+      "checkedAt": "2026-10-01",
+      "vehicleEntranceStatus": "NOT_VERIFIED",
+      "eligibleCandidatesWithin10Km": {
+        "REGULAR": 122,
+        "HIGH_OCTANE": 122,
+        "DIESEL": 122
+      },
+      "nearestRegularCandidates": [
+        {
+          "stationId": "osm:way:552140624",
+          "prefectureCode": "JP-40",
+          "name": null,
+          "brand": "ESSO",
+          "address": null,
+          "lat": 33.5814841,
+          "lon": 130.4423321,
+          "straightLineDistanceKm": 0.12,
+          "objectLastModifiedAt": "2019-10-28T13:34:31Z",
+          "osmUrl": "https://www.openstreetmap.org/way/552140624",
+          "fieldsToCheck": [
+            "name",
+            "address",
+            "openingHours",
+            "serviceType",
+            "fuelRegular",
+            "paymentVisa",
+            "paymentMastercard"
+          ]
+        },
+        {
+          "stationId": "osm:way:552140600",
+          "prefectureCode": "JP-40",
+          "name": null,
+          "brand": null,
+          "address": null,
+          "lat": 33.5832486,
+          "lon": 130.4405383,
+          "straightLineDistanceKm": 0.344,
+          "objectLastModifiedAt": "2025-05-21T02:45:54Z",
+          "osmUrl": "https://www.openstreetmap.org/way/552140600",
+          "fieldsToCheck": [
+            "name",
+            "address",
+            "openingHours",
+            "serviceType",
+            "fuelRegular",
+            "paymentVisa",
+            "paymentMastercard"
+          ]
+        },
+        {
+          "stationId": "osm:way:1506862453",
+          "prefectureCode": "JP-40",
+          "name": "ENEOS",
+          "brand": "ENEOS",
+          "address": null,
+          "lat": 33.5831528,
+          "lon": 130.4372953,
+          "straightLineDistanceKm": 0.614,
+          "objectLastModifiedAt": "2026-04-30T12:44:16Z",
+          "osmUrl": "https://www.openstreetmap.org/way/1506862453",
+          "fieldsToCheck": [
+            "address",
+            "openingHours",
+            "serviceType",
+            "fuelRegular",
+            "paymentVisa",
+            "paymentMastercard"
+          ]
+        }
+      ]
+    },
+    {
+      "rentalId": "toyota-naha-airport-seaside",
+      "airportCode": "OKA",
+      "companyId": "toyota",
+      "name": "トヨタレンタカー 那覇空港シーサイド店",
+      "officialUrl": "https://rent.toyota.co.jp/shop/detail.aspx?rCode=69101&eCode=017",
+      "checkedAt": "2026-10-01",
+      "vehicleEntranceStatus": "NOT_VERIFIED",
+      "eligibleCandidatesWithin10Km": {
+        "REGULAR": 79,
+        "HIGH_OCTANE": 79,
+        "DIESEL": 79
+      },
+      "nearestRegularCandidates": [
+        {
+          "stationId": "osm:node:9769756829",
+          "prefectureCode": "JP-47",
+          "name": null,
+          "brand": null,
+          "address": null,
+          "lat": 26.1731222,
+          "lon": 127.6520464,
+          "straightLineDistanceKm": 0.07,
+          "objectLastModifiedAt": "2022-05-25T12:58:38Z",
+          "osmUrl": "https://www.openstreetmap.org/node/9769756829",
+          "fieldsToCheck": [
+            "name",
+            "address",
+            "openingHours",
+            "serviceType",
+            "fuelRegular",
+            "paymentVisa",
+            "paymentMastercard"
+          ]
+        },
+        {
+          "stationId": "osm:way:1016540329",
+          "prefectureCode": "JP-47",
+          "name": "ENEOS",
+          "brand": "ENEOS",
+          "address": "沖縄県 那覇市 具志 国道331号 1",
+          "lat": 26.1781151,
+          "lon": 127.6529817,
+          "straightLineDistanceKm": 0.632,
+          "objectLastModifiedAt": "2024-10-06T13:28:58Z",
+          "osmUrl": "https://www.openstreetmap.org/way/1016540329",
+          "fieldsToCheck": [
+            "openingHours",
+            "serviceType",
+            "fuelRegular",
+            "paymentVisa",
+            "paymentMastercard"
+          ]
+        },
+        {
+          "stationId": "osm:node:1993185924",
+          "prefectureCode": "JP-47",
+          "name": "エネオス",
+          "brand": "ENEOS",
+          "address": null,
+          "lat": 26.18355,
+          "lon": 127.6558187,
+          "straightLineDistanceKm": 1.289,
+          "objectLastModifiedAt": "2024-12-22T14:29:28Z",
+          "osmUrl": "https://www.openstreetmap.org/node/1993185924",
+          "fieldsToCheck": [
+            "address",
+            "openingHours",
+            "serviceType",
+            "fuelRegular",
+            "paymentVisa",
+            "paymentMastercard"
+          ]
+        }
+      ]
+    },
+    {
+      "rentalId": "toyota-new-chitose-airport-poplar",
+      "airportCode": "CTS",
+      "companyId": "toyota",
+      "name": "トヨタレンタカー 新千歳空港ポプラ店",
+      "officialUrl": "https://rent.toyota.co.jp/shop/detail.aspx?rCode=61201&eCode=002",
+      "checkedAt": "2026-10-01",
+      "vehicleEntranceStatus": "NOT_VERIFIED",
+      "eligibleCandidatesWithin10Km": {
+        "REGULAR": 22,
+        "HIGH_OCTANE": 22,
+        "DIESEL": 22
+      },
+      "nearestRegularCandidates": [
+        {
+          "stationId": "osm:node:5694016271",
+          "prefectureCode": "JP-01",
+          "name": "ENEOS",
+          "brand": "ENEOS",
+          "address": "北海道 千歳市 美々",
+          "lat": 42.796958,
+          "lon": 141.6772079,
+          "straightLineDistanceKm": 1.65,
+          "objectLastModifiedAt": "2018-06-16T01:13:05Z",
+          "osmUrl": "https://www.openstreetmap.org/node/5694016271",
+          "fieldsToCheck": [
+            "serviceType",
+            "fuelRegular",
+            "paymentVisa",
+            "paymentMastercard"
+          ]
+        },
+        {
+          "stationId": "osm:node:5699750321",
+          "prefectureCode": "JP-01",
+          "name": "出光",
+          "brand": "IDEMITSU",
+          "address": "北海道 千歳市 旭ヶ丘",
+          "lat": 42.828708,
+          "lon": 141.6792895,
+          "straightLineDistanceKm": 3.562,
+          "objectLastModifiedAt": "2018-06-18T14:39:15Z",
+          "osmUrl": "https://www.openstreetmap.org/node/5699750321",
+          "fieldsToCheck": [
+            "serviceType",
+            "fuelRegular",
+            "paymentVisa",
+            "paymentMastercard"
+          ]
+        },
+        {
+          "stationId": "osm:way:1491375956",
+          "prefectureCode": "JP-01",
+          "name": "ENEOS",
+          "brand": "ENEOS",
+          "address": "北海道 千歳市 16",
+          "lat": 42.8270554,
+          "lon": 141.6724601,
+          "straightLineDistanceKm": 3.668,
+          "objectLastModifiedAt": "2026-03-22T02:32:07Z",
+          "osmUrl": "https://www.openstreetmap.org/way/1491375956",
+          "fieldsToCheck": [
+            "fuelRegular",
+            "paymentVisa",
+            "paymentMastercard"
+          ]
+        }
+      ]
+    }
+  ],
+  "queueNote": "候选复用现有10公里直线距离与油种NO排除逻辑；前三条只是核对抽样，不是路线或加油推荐。OSM更新时间不是现场核验时间；车辆入口仍未核实。",
+  "attribution": {
+    "text": "© OpenStreetMap 贡献者；租车资料来源与原始许可见全国manifest。",
+    "copyrightUrl": "https://www.openstreetmap.org/copyright",
+    "license": "ODbL-1.0",
+    "stationDownloads": "/data/manifest.json",
+    "rentalDownloads": "/data/rental/nationwide/manifest.json"
+  }
+}
