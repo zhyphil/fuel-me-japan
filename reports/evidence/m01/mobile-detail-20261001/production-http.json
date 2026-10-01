@@ -1,0 +1,103 @@
+{
+  "status": "PASS",
+  "description": "正式域名页面与 JS/CSS 内容均与本地已验收构建一致。",
+  "checkedAt": "2026-10-01T13:21:18.966Z",
+  "count": 19,
+  "checks": [
+    {
+      "path": "/en/",
+      "status": 200,
+      "sha256": "cd288cced7d1d8cbf639628a8eaeaf12e7c6078ecf834f2c1dedaacf39068981"
+    },
+    {
+      "path": "/zh-Hant/",
+      "status": 200,
+      "sha256": "a05b5512b8de55f4baee05d940878648a31ad60314222a1a0a995505b7a14338"
+    },
+    {
+      "path": "/ko/",
+      "status": 200,
+      "sha256": "4d0164780db7b94b1c7bfe6b05c0baaf784998c79874521e4068a82aec4d490c"
+    },
+    {
+      "path": "/zh-Hans/",
+      "status": 200,
+      "sha256": "f881bf3e51ad86000ae44890fc0d9d7d5bc0e30e30a5ed96e0ae21b89f538d27"
+    },
+    {
+      "path": "/th/",
+      "status": 200,
+      "sha256": "211a94b0b24080fd00126b30c8e7829a6d81adc4d029ba21fb7463399b2351bd"
+    },
+    {
+      "path": "/zh-Hans/return-car/",
+      "status": 200,
+      "sha256": "8716a08622c6cfbc96ac8b693908d17d4e4957ee98cb427bcea380531b1155c6"
+    },
+    {
+      "path": "/zh-Hans/refuel-guide/",
+      "status": 200,
+      "sha256": "adb0daaa1aa414abab7247bcd6c1b6e4d4e73a06d5c8451834e5bc7bec1c7cb9"
+    },
+    {
+      "path": "/zh-Hans/about/",
+      "status": 200,
+      "sha256": "0303b4ff8f6f87af57fd6f00051d00ae3d694d5179cc07ab939e71a9ed62aa23"
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "sha256": "b740fa261f38463d2338be1f0dfb75b8736d12909af9b62a89fe7c11a37977fa"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "sha256": "1f47159e71a4ccebf3a0d0b8340fde283adcf5bc112d1390235f24d91dfecdf0"
+    },
+    {
+      "path": "/ads.txt",
+      "status": 200,
+      "sha256": "167521f9f95b76e7071d6e244f4db5e56f41539a20ae6a38dc16e1e7041f5e9b"
+    },
+    {
+      "path": "/assets/FindFuel-DWnWi5SY.js",
+      "status": 200,
+      "sha256": "98e31290b1e2ebaa97bd19c7aac3af69f7b73ccfe589f53507e99ddc798215d3"
+    },
+    {
+      "path": "/assets/RentalBusiness-DYrEAJZj.js",
+      "status": 200,
+      "sha256": "0c0736fde82c94643bccfdb48da7504eba89db7424d70febfe24f32c2a9ba1d2"
+    },
+    {
+      "path": "/assets/StationMiniMap-CZxNUZFU.js",
+      "status": 200,
+      "sha256": "26f255795801727ef6ac2082e6d10bd62e0d741ad977820a3dfdc2e60e767668"
+    },
+    {
+      "path": "/assets/index-BW3Iq5cG.css",
+      "status": 200,
+      "sha256": "0db7554473bc992b3a22b2cf3207396a71ec797e9a5d1d0305aa1701a629799d"
+    },
+    {
+      "path": "/assets/index-bv65Uzqd.js",
+      "status": 200,
+      "sha256": "b6df7731639dcfc8222dbb8c36f8088c07e6ba9fca9c3e56640a27b0c2f4b4cd"
+    },
+    {
+      "path": "/assets/leaflet-src-BF0sg77Q.js",
+      "status": 200,
+      "sha256": "be5f2e53cedfed275f96af7dceb4fdb7fb0a1f9a4ae967a9e9ae6efa4ec5f38b"
+    },
+    {
+      "path": "/assets/rolldown-runtime-CbXtAM7H.js",
+      "status": 200,
+      "sha256": "bbf7c5086ae414dc3f33777e3eebf16ea8631325b8bb4690d25091c03567f31a"
+    },
+    {
+      "path": "/assets/source-registry-CEZtUAkZ.js",
+      "status": 200,
+      "sha256": "64436e76bc50f894609b99d75c19766236e51ecea62d4b850b9b9beba7f0e223"
+    }
+  ]
+}

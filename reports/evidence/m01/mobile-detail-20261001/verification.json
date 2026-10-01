@@ -15,5 +15,12 @@
   },
   "touchInput": "Chromium 原生触摸事件注入：正文左侧、中间、右侧均可滚动；背景位置不变。",
   "webkitLimit": "WebKit 验证布局、键盘滚动、关闭恢复、浏览器返回和高度变化；不代表实体 iPhone 触摸验收。Apple Maps 原生应用接管不要求弹出浏览器新标签，保留目的地与隐私参数断言。",
-  "deployment": "PENDING"
+  "deployment": {
+    "status": "PASS",
+    "commit": "9436b4f2d7ce1f677702a2f5f7b459114ccf5409",
+    "id": "1839249c-a477-4064-81ac-4f9691245706",
+    "url": "https://fuel-me-japan.com/zh-Hans/",
+    "httpChecks": 19,
+    "description": "正式域名资源哈希和手机视口交互核验通过。"
+  }
 }

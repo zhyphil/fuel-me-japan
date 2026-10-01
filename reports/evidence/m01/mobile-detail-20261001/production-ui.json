@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "description": "正式网站真实资源与东京站点数据，Chromium 手机视口模拟；不是实体 iPhone 验收。",
+  "checkedAt": "2026-10-01T13:21:21.956Z",
+  "viewport": {
+    "width": 430,
+    "height": 740
+  },
+  "panelBox": {
+    "x": 0,
+    "y": 0,
+    "width": 430,
+    "height": 740
+  },
+  "scrollPositions": [
+    185,
+    185,
+    185
+  ],
+  "checks": [
+    "全屏详情",
+    "三个正文区域触摸滚动",
+    "背景位置固定",
+    "资料底部可达",
+    "关闭按钮固定",
+    "关闭恢复地图位置与焦点"
+  ],
+  "pageErrors": []
+}
