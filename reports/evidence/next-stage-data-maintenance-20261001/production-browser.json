@@ -1,0 +1,308 @@
+{
+  "checkedAt": "2026-10-01T20:00:06.427Z",
+  "status": "PASS",
+  "note": "真实生产域名资料，无夹具、无网络拦截或替代数据；检查8家门店五语言公布时段、9个站点补充及原始出处、地图鼠标和键盘联动、430px布局；没有定位、导航到外部、预订或发送消息。",
+  "branches": [
+    {
+      "locale": "en",
+      "id": "times-new-chitose-airport",
+      "status": "PASS"
+    },
+    {
+      "locale": "en",
+      "id": "times-fukuoka-airport-international",
+      "status": "PASS"
+    },
+    {
+      "locale": "en",
+      "id": "times-naha-airport",
+      "status": "PASS"
+    },
+    {
+      "locale": "en",
+      "id": "nippon-new-chitose-airport",
+      "status": "PASS"
+    },
+    {
+      "locale": "en",
+      "id": "nippon-naha-airport-toyosaki",
+      "status": "PASS"
+    },
+    {
+      "locale": "en",
+      "id": "toyota-new-chitose-airport-poplar",
+      "status": "PASS"
+    },
+    {
+      "locale": "en",
+      "id": "toyota-fukuoka-airport-international",
+      "status": "PASS"
+    },
+    {
+      "locale": "en",
+      "id": "toyota-naha-airport-seaside",
+      "status": "PASS"
+    },
+    {
+      "locale": "zh-Hant",
+      "id": "times-new-chitose-airport",
+      "status": "PASS"
+    },
+    {
+      "locale": "zh-Hant",
+      "id": "times-fukuoka-airport-international",
+      "status": "PASS"
+    },
+    {
+      "locale": "zh-Hant",
+      "id": "times-naha-airport",
+      "status": "PASS"
+    },
+    {
+      "locale": "zh-Hant",
+      "id": "nippon-new-chitose-airport",
+      "status": "PASS"
+    },
+    {
+      "locale": "zh-Hant",
+      "id": "nippon-naha-airport-toyosaki",
+      "status": "PASS"
+    },
+    {
+      "locale": "zh-Hant",
+      "id": "toyota-new-chitose-airport-poplar",
+      "status": "PASS"
+    },
+    {
+      "locale": "zh-Hant",
+      "id": "toyota-fukuoka-airport-international",
+      "status": "PASS"
+    },
+    {
+      "locale": "zh-Hant",
+      "id": "toyota-naha-airport-seaside",
+      "status": "PASS"
+    },
+    {
+      "locale": "ko",
+      "id": "times-new-chitose-airport",
+      "status": "PASS"
+    },
+    {
+      "locale": "ko",
+      "id": "times-fukuoka-airport-international",
+      "status": "PASS"
+    },
+    {
+      "locale": "ko",
+      "id": "times-naha-airport",
+      "status": "PASS"
+    },
+    {
+      "locale": "ko",
+      "id": "nippon-new-chitose-airport",
+      "status": "PASS"
+    },
+    {
+      "locale": "ko",
+      "id": "nippon-naha-airport-toyosaki",
+      "status": "PASS"
+    },
+    {
+      "locale": "ko",
+      "id": "toyota-new-chitose-airport-poplar",
+      "status": "PASS"
+    },
+    {
+      "locale": "ko",
+      "id": "toyota-fukuoka-airport-international",
+      "status": "PASS"
+    },
+    {
+      "locale": "ko",
+      "id": "toyota-naha-airport-seaside",
+      "status": "PASS"
+    },
+    {
+      "locale": "zh-Hans",
+      "id": "times-new-chitose-airport",
+      "status": "PASS"
+    },
+    {
+      "locale": "zh-Hans",
+      "id": "times-fukuoka-airport-international",
+      "status": "PASS"
+    },
+    {
+      "locale": "zh-Hans",
+      "id": "times-naha-airport",
+      "status": "PASS"
+    },
+    {
+      "locale": "zh-Hans",
+      "id": "nippon-new-chitose-airport",
+      "status": "PASS"
+    },
+    {
+      "locale": "zh-Hans",
+      "id": "nippon-naha-airport-toyosaki",
+      "status": "PASS"
+    },
+    {
+      "locale": "zh-Hans",
+      "id": "toyota-new-chitose-airport-poplar",
+      "status": "PASS"
+    },
+    {
+      "locale": "zh-Hans",
+      "id": "toyota-fukuoka-airport-international",
+      "status": "PASS"
+    },
+    {
+      "locale": "zh-Hans",
+      "id": "toyota-naha-airport-seaside",
+      "status": "PASS"
+    },
+    {
+      "locale": "th",
+      "id": "times-new-chitose-airport",
+      "status": "PASS"
+    },
+    {
+      "locale": "th",
+      "id": "times-fukuoka-airport-international",
+      "status": "PASS"
+    },
+    {
+      "locale": "th",
+      "id": "times-naha-airport",
+      "status": "PASS"
+    },
+    {
+      "locale": "th",
+      "id": "nippon-new-chitose-airport",
+      "status": "PASS"
+    },
+    {
+      "locale": "th",
+      "id": "nippon-naha-airport-toyosaki",
+      "status": "PASS"
+    },
+    {
+      "locale": "th",
+      "id": "toyota-new-chitose-airport-poplar",
+      "status": "PASS"
+    },
+    {
+      "locale": "th",
+      "id": "toyota-fukuoka-airport-international",
+      "status": "PASS"
+    },
+    {
+      "locale": "th",
+      "id": "toyota-naha-airport-seaside",
+      "status": "PASS"
+    }
+  ],
+  "stations": [
+    {
+      "id": "osm:node:5699750321",
+      "branchId": "times-new-chitose-airport",
+      "source": "https://map.idemitsu.com/b/a/info/0000000475/",
+      "status": "PASS"
+    },
+    {
+      "id": "osm:way:1491375956",
+      "branchId": "times-new-chitose-airport",
+      "source": "https://eneos-ss.com/search/ss/pc/detail.php?SCODE=109202",
+      "status": "PASS"
+    },
+    {
+      "id": "osm:node:5694016271",
+      "branchId": "times-new-chitose-airport",
+      "source": "https://eneos-ss.com/search/ss/pc/print.php?SCODE=100568",
+      "status": "PASS"
+    },
+    {
+      "id": "osm:node:3080117815",
+      "branchId": "times-new-chitose-airport",
+      "source": "https://www.kitanihon-oil.co.jp/reserve/consumer/7730",
+      "status": "PASS"
+    },
+    {
+      "id": "osm:way:1506862453",
+      "branchId": "times-fukuoka-airport-international",
+      "source": "https://eneos-ss.com/search/ss/pc/detail.php?SCODE=101639",
+      "status": "PASS"
+    },
+    {
+      "id": "osm:way:105018159",
+      "branchId": "times-naha-airport",
+      "source": "https://map.idemitsu.com/b/a/info/0000019739/",
+      "status": "PASS"
+    },
+    {
+      "id": "osm:node:5885054990",
+      "branchId": "times-naha-airport",
+      "source": "https://eneos-ss.com/search/ss/pc/detail.php?SCODE=980203",
+      "status": "PASS"
+    },
+    {
+      "id": "osm:node:1993185924",
+      "branchId": "times-naha-airport",
+      "source": "https://eneos-ss.com/search/ss/pc/detail.php?SCODE=980166",
+      "status": "PASS"
+    },
+    {
+      "id": "osm:node:1993185911",
+      "branchId": "times-naha-airport",
+      "source": "https://eneos-ss.com/search/ss/pc/detail.php?SCODE=980219",
+      "status": "PASS"
+    }
+  ],
+  "mobile": [
+    {
+      "id": "times-new-chitose-airport",
+      "width": 430,
+      "status": "PASS"
+    },
+    {
+      "id": "times-fukuoka-airport-international",
+      "width": 430,
+      "status": "PASS"
+    },
+    {
+      "id": "times-naha-airport",
+      "width": 430,
+      "status": "PASS"
+    },
+    {
+      "id": "nippon-new-chitose-airport",
+      "width": 430,
+      "status": "PASS"
+    },
+    {
+      "id": "nippon-naha-airport-toyosaki",
+      "width": 430,
+      "status": "PASS"
+    },
+    {
+      "id": "toyota-new-chitose-airport-poplar",
+      "width": 430,
+      "status": "PASS"
+    },
+    {
+      "id": "toyota-fukuoka-airport-international",
+      "width": 430,
+      "status": "PASS"
+    },
+    {
+      "id": "toyota-naha-airport-seaside",
+      "width": 430,
+      "status": "PASS"
+    }
+  ],
+  "hoverKeyboard": "PASS",
+  "geolocationCalls": 0,
+  "errors": []
+}

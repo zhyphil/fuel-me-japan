@@ -20,11 +20,11 @@ Nippon新千岁的2026–2027日期时段完整列出；Toyota新千岁的2026-1
 
 质量报告区分原始OSM覆盖与显示补充覆盖，兼容此前原始字段的schema-1基线。全国显示新增3个有记录地址、4个营业安排、3个自助／人工服务；原始站点数16,454及全部油种／卡片计数不变。两次相同统计逐字一致，110份引用资料通过字节数、SHA-256和严格契约核对。
 
-实际工作流结果将在推送后单独复核；官方参考价此前仍为DISCOVERY HTTP403，141条旧参考价及调查／公布日期保持原样。`UNCHANGED`不是下载成功，也不能把参考价当作单站报价。参见[当前维护手册](../docs/data-maintenance.md)与[数据缺口](../docs/data-quality.md)。
+本轮已真实触发[36916914722](https://github.com/zhyphil/fuel-me-japan/actions/runs/36916914722)，2026-10-01 19:47:49 UTC；来源获取仍在DISCOVERY阶段返回HTTP403，任务总体失败。基线、保旧后的质量比较与4份诊断附件成功，前后质量完全一致、差异为UNCHANGED、候选上传跳过；141条旧参考价及调查／公布日期保持原样。`UNCHANGED`不是下载成功，也不能把参考价当作单站报价。参见[当前维护手册](../docs/data-maintenance.md)与[数据缺口](../docs/data-quality.md)。
 
 ## 检查与修复
 
-最终lint、typecheck、386单元、407 Chromium、12 WebKit、63数据检查和静态构建通过，无跳过、自动重试或flaky通过。8家营业安排和9站补充有契约检查；五语言浏览器检查完整时段例外、真实原始字段、来源链接、显式选站及导航，定位调用为0。WebKit为本机自动化，未冒充实体手机或母语真人审核。
+首轮lint、typecheck、386单元、407 Chromium、12 WebKit、63数据检查和静态构建通过，无跳过、自动重试或flaky通过。8家营业安排和9站补充有契约检查；五语言浏览器检查完整时段例外、真实原始字段、来源链接、显式选站及导航，定位调用为0。WebKit为本机自动化，未冒充实体手机或母语真人审核。
 
 完整验收发现键盘聚焦使列表滚动时，原悬停卡片的鼠标离开事件会取消新的地图预览。该问题已单独重现并修复：鼠标离开优先保留仍聚焦的候选；新增回归通过。90天提示测试改用门店实际核对日期，不把更新后的日期硬写回历史日期。首次测试加载问题和使用了缺少依赖的Python均属于验证环境／测试问题，改用既有正确运行环境，没有安装新依赖。
 
@@ -42,8 +42,18 @@ GSC实际sitemap为成功、发现20页；页面索引报告仍处理数据。�
 
 ## 发布与剩余边界
 
-最终代码已验收，按用户持续授权进行Conventional Commit、推送及现有Cloudflare Pages生产部署。实际部署ID、Git哈希及正式域名资源／页面验收结果将在发布完成后补充，不能将“准备发布”写为“已经上线”。
+应用`a0b6035`先以`feat(data): enrich airport and nearby station details`推送main及开发分支，部署至生产`4f749832`；该版本433项正式资源匹配。实际页面复核随后发现“门店与规则核对日期”标签会把两项资料合并暗示为新日期；新增回归先证实失败，再将五语言门店资料与公司加油规则分别标注，公司规则仍为真实2026-09-30。没有更新未复核事实的日期。
+
+修正版完整lint、typecheck、386单元、408 Chromium和静态构建通过，13项WebKit补测通过，无跳过／自动重试／flaky。`fix(data): separate branch and rule verification dates`对应最终应用`83a7829`，已快进推送main及`codex/m0-2-my-fuel`，部署至既有Cloudflare Pages Production `3cb93a6c`（[部署地址](https://3cb93a6c.fuel-me-japan.pages.dev)）。503份源码和395份构建指纹在最终验收至部署期间不变，数据导入脚本及锁定输入也未变。
+
+[正式网站](https://fuel-me-japan.com/zh-Hans/return-car/)433项HTTP／SHA-256核对全部通过，含8门店×5语言深层地址；真实浏览器另验40个营业／提前量／出处页面、9个站点官方及原OSM出处、8个430px布局、鼠标及键盘地图预览。无夹具、无外部拦截、无自动定位和页面错误。首次生产脚本误写福冈门店ID，未计为通过；改用库内真实ID后重新运行全部正式检查，最终通过。
+
+后续仅补充中文发布文档和证据，按Conventional Commit推送；运行资源不变，不重复部署同一应用。
 
 剩余外部事项：8站身份待核、全部车辆入口现场核验、Google最终审核／ads.txt识别／真实同意窗口／索引统计、官方价来源403。游客试用计划、模板、500人实验及分析采集不在本轮执行范围；没有新增账号、后端、车型推荐、付费来源或对外消息。
 
-证据：[最终检查摘要](evidence/next-stage-data-maintenance-20261001/verification.json)、[质量差异](evidence/next-stage-data-maintenance-20261001/quality-changes.json)、[逐站证据](evidence/next-stage-data-maintenance-20261001/station-review.json)、[Google状态](evidence/next-stage-data-maintenance-20261001/google-status.json)。
+生产截图：
+
+![正式页面中门店与规则日期分别标注](evidence/next-stage-data-maintenance-20261001/production-details.png)
+
+证据：[生产结果](evidence/next-stage-data-maintenance-20261001/release.json)、[真实工作流保旧](evidence/next-stage-data-maintenance-20261001/refresh-verified.json)、[最终检查摘要](evidence/next-stage-data-maintenance-20261001/verification.json)、[质量差异](evidence/next-stage-data-maintenance-20261001/quality-changes.json)、[逐站证据](evidence/next-stage-data-maintenance-20261001/station-review.json)、[Google状态](evidence/next-stage-data-maintenance-20261001/google-status.json)。

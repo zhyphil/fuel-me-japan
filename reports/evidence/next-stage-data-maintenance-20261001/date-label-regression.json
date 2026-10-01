@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-10-01",
+  "applicationBefore": "a0b6035994e2e17e72886e0206a20aacccd9669d",
+  "before": "FAIL",
+  "beforeExpected": "Branch details checked: 2026-10-01",
+  "beforeActual": "Branch and rules checked: 2026-10-01",
+  "branchCheckDate": "2026-10-01",
+  "companyRulesCheckDate": "2026-09-30",
+  "after": "PASS",
+  "note": "实际生产复核发现同一标签暗示两项资料同时重新核对；浏览器回归先证实失败，再分开五语言标签并显示原有规则日期。来源日期未改变。",
+  "afterCheck": "386单元、408 Chromium、lint/typecheck/静态构建全部通过",
+  "afterWebKit": 13
+}

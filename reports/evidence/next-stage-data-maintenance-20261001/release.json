@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-10-01T20:01:37.495895+00:00",
+  "applicationCommit": "83a7829b05486f72962c429fa9f623e6849f20d8",
+  "productionDeploymentId": "3cb93a6c-eb47-41e1-8773-d64cd0db13a3",
+  "productionUrl": "https://fuel-me-japan.com",
+  "pagesUrl": "https://3cb93a6c.fuel-me-japan.pages.dev",
+  "productionEnvironment": "Production",
+  "branch": "main",
+  "httpChecks": 433,
+  "fiveLocaleBranchChecks": 40,
+  "officialStationSupplements": 9,
+  "mobileLayouts": 8,
+  "hoverKeyboard": "PASS",
+  "geolocationCalls": 0,
+  "status": "PASS",
+  "note": "源码及构建指纹与已验收版本一致；后续仅中文发布记录提交，不重新部署相同应用。实际403和Google等待单独保留，不计为通过。"
+}

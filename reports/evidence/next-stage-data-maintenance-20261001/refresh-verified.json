@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-01T19:52:34.346096+00:00",
+  "runId": 36916914722,
+  "url": "https://github.com/zhyphil/fuel-me-japan/actions/runs/36916914722",
+  "applicationCommit": "a0b6035994e2e17e72886e0206a20aacccd9669d",
+  "workflowConclusion": "failure",
+  "sourceStatus": "BLOCKED",
+  "reason": "DISCOVERY HTTP403",
+  "retainedPreviousPointers": true,
+  "qualityDecision": "UNCHANGED",
+  "qualityReportsEqual": true,
+  "diagnosticsFiles": [
+    "fmj-quality-after.json",
+    "fmj-quality-before.json",
+    "fmj-quality-changes.json",
+    "fmj-refresh-report.json"
+  ],
+  "candidateUpload": "SKIPPED",
+  "maintenanceChecks": "PASS",
+  "note": "真实下载仍失败；基线、保旧后的质量差异与4份诊断附件均成功，候选上传跳过，没有替换生产数据。"
+}

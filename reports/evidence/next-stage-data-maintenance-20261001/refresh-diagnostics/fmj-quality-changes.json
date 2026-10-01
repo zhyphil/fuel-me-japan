@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "comparedAt": "2026-10-01",
+  "changedManifests": [],
+  "changes": [],
+  "alerts": [],
+  "decision": "UNCHANGED",
+  "note": "只比较经过校验的离线候选。UNCHANGED不是来源更新成功；发布与真实HTTP失败仍以工作流结果和诊断为准。不得自动提交或部署。"
+}

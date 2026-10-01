@@ -2,8 +2,8 @@
   "checkedAt": "2026-10-01",
   "status": "PASS",
   "unit": 386,
-  "chromium": 407,
-  "webkit": 12,
+  "chromium": 408,
+  "webkit": 13,
   "dataTests": 63,
   "historicalPngsRestored": 60,
   "pilotFilesUnchanged": true,
@@ -26,5 +26,25 @@
       "note": "CLI子进程启动exit1，0节点完成；错误摘要被截断，原因未确认。没有放宽沙箱或配置，不能记为独立审查通过。"
     }
   },
-  "note": "最终检查没有跳过、重试或flaky通过。独立AO审查未执行，不包含在PASS范围；游客／现场／母语真人审核没有新增。"
+  "note": "最终检查没有跳过、重试或flaky通过；首轮407 Chromium／12 WebKit证据仍保留。独立AO审查未执行；未新增游客、车辆入口现场或母语真人审核。最终日期标注改变后完整重新验收；数据导入脚本及锁定输入不变，先前63数据测试和273文件重复生成结果有效。",
+  "production": {
+    "checkedAt": "2026-10-01T20:01:37.495895+00:00",
+    "applicationCommit": "83a7829b05486f72962c429fa9f623e6849f20d8",
+    "productionDeploymentId": "3cb93a6c-eb47-41e1-8773-d64cd0db13a3",
+    "productionUrl": "https://fuel-me-japan.com",
+    "pagesUrl": "https://3cb93a6c.fuel-me-japan.pages.dev",
+    "productionEnvironment": "Production",
+    "branch": "main",
+    "httpChecks": 433,
+    "fiveLocaleBranchChecks": 40,
+    "officialStationSupplements": 9,
+    "mobileLayouts": 8,
+    "hoverKeyboard": "PASS",
+    "geolocationCalls": 0,
+    "status": "PASS",
+    "note": "源码及构建指纹与已验收版本一致；后续仅中文发布记录提交，不重新部署相同应用。实际403和Google等待单独保留，不计为通过。"
+  },
+  "dateLabelRegression": "PASS",
+  "chromiumEvidence": "chromium-results-final.json",
+  "webkitEvidence": "webkit-results-final.json"
 }
