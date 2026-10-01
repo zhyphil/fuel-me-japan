@@ -1,0 +1,122 @@
+{
+  "checkedAt": "2026-10-01T17:38:25.780300+00:00",
+  "result": "PASS",
+  "checks": 10,
+  "说明": "当前线上文件、格式、抓取规则与HTTP跳转核对通过；模拟User-Agent不代表Google实际已抓取。",
+  "rows": [
+    {
+      "url": "https://fuel-me-japan.com/ads.txt",
+      "agent": "FMJ-Release-Check/1.0",
+      "status": 200,
+      "finalUrl": "https://fuel-me-japan.com/ads.txt",
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 59,
+      "sha256": "167521f9f95b76e7071d6e244f4db5e56f41539a20ae6a38dc16e1e7041f5e9b",
+      "matchesSource": true,
+      "validEntry": true,
+      "noBom": true
+    },
+    {
+      "url": "https://fuel-me-japan.com/robots.txt",
+      "agent": "FMJ-Release-Check/1.0",
+      "status": 200,
+      "finalUrl": "https://fuel-me-japan.com/robots.txt",
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 1374,
+      "sha256": "871f25cf76f7eda2cb9505dc58be9c21e54b90f69d1ba0a0af160afcedd0de50",
+      "adsTxtAllowed": true,
+      "sitemapAllowed": true
+    },
+    {
+      "url": "https://fuel-me-japan.com/sitemap.xml",
+      "agent": "FMJ-Release-Check/1.0",
+      "status": 200,
+      "finalUrl": "https://fuel-me-japan.com/sitemap.xml",
+      "contentType": "application/xml",
+      "bytes": 1380,
+      "sha256": "1f47159e71a4ccebf3a0d0b8340fde283adcf5bc112d1390235f24d91dfecdf0",
+      "pages": 20,
+      "uniquePages": 20
+    },
+    {
+      "url": "https://fuel-me-japan.com/ads.txt",
+      "agent": "Googlebot",
+      "status": 200,
+      "finalUrl": "https://fuel-me-japan.com/ads.txt",
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 59,
+      "sha256": "167521f9f95b76e7071d6e244f4db5e56f41539a20ae6a38dc16e1e7041f5e9b",
+      "matchesSource": true,
+      "validEntry": true,
+      "noBom": true
+    },
+    {
+      "url": "https://fuel-me-japan.com/robots.txt",
+      "agent": "Googlebot",
+      "status": 200,
+      "finalUrl": "https://fuel-me-japan.com/robots.txt",
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 1374,
+      "sha256": "871f25cf76f7eda2cb9505dc58be9c21e54b90f69d1ba0a0af160afcedd0de50",
+      "adsTxtAllowed": true,
+      "sitemapAllowed": true
+    },
+    {
+      "url": "https://fuel-me-japan.com/sitemap.xml",
+      "agent": "Googlebot",
+      "status": 200,
+      "finalUrl": "https://fuel-me-japan.com/sitemap.xml",
+      "contentType": "application/xml",
+      "bytes": 1380,
+      "sha256": "1f47159e71a4ccebf3a0d0b8340fde283adcf5bc112d1390235f24d91dfecdf0",
+      "pages": 20,
+      "uniquePages": 20
+    },
+    {
+      "url": "https://fuel-me-japan.com/ads.txt",
+      "agent": "Mediapartners-Google",
+      "status": 200,
+      "finalUrl": "https://fuel-me-japan.com/ads.txt",
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 59,
+      "sha256": "167521f9f95b76e7071d6e244f4db5e56f41539a20ae6a38dc16e1e7041f5e9b",
+      "matchesSource": true,
+      "validEntry": true,
+      "noBom": true
+    },
+    {
+      "url": "https://fuel-me-japan.com/robots.txt",
+      "agent": "Mediapartners-Google",
+      "status": 200,
+      "finalUrl": "https://fuel-me-japan.com/robots.txt",
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 1374,
+      "sha256": "871f25cf76f7eda2cb9505dc58be9c21e54b90f69d1ba0a0af160afcedd0de50",
+      "adsTxtAllowed": true,
+      "sitemapAllowed": true
+    },
+    {
+      "url": "https://fuel-me-japan.com/sitemap.xml",
+      "agent": "Mediapartners-Google",
+      "status": 200,
+      "finalUrl": "https://fuel-me-japan.com/sitemap.xml",
+      "contentType": "application/xml",
+      "bytes": 1380,
+      "sha256": "1f47159e71a4ccebf3a0d0b8340fde283adcf5bc112d1390235f24d91dfecdf0",
+      "pages": 20,
+      "uniquePages": 20
+    },
+    {
+      "url": "http://fuel-me-japan.com/ads.txt",
+      "agent": "FMJ-Release-Check/1.0",
+      "status": 200,
+      "finalUrl": "https://fuel-me-japan.com/ads.txt",
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 59,
+      "sha256": "167521f9f95b76e7071d6e244f4db5e56f41539a20ae6a38dc16e1e7041f5e9b",
+      "matchesSource": true,
+      "validEntry": true,
+      "noBom": true
+    }
+  ]
+}
