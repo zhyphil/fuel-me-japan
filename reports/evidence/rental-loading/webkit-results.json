@@ -1,0 +1,918 @@
+{
+  "config": {
+    "argv": [
+      "/Users/haoyuzuo/.nvm/versions/node/v24.18.0/bin/node",
+      "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/node_modules/.bin/playwright",
+      "test",
+      "--config=/tmp/fmj-rental-loading-webkit.config.mjs"
+    ],
+    "configFile": "/tmp/fmj-rental-loading-webkit.config.mjs",
+    "rootDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/fmj-rental-loading-webkit-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "iPhone-WebKit",
+        "name": "iPhone-WebKit",
+        "testDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "rental-loading.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/tmp/fmj-rental-loading-webkit-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "Desktop-WebKit",
+        "name": "Desktop-WebKit",
+        "testDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "rental-loading.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/tmp/fmj-rental-loading-webkit-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "rental-loading.spec.ts",
+      "file": "rental-loading.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "en: 390px rental header and search stay stable through static, code and data loading",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1207,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T00:21:43.221Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1458918489b8138fd00e-7078f4592bda10f27513",
+          "file": "rental-loading.spec.ts",
+          "line": 22,
+          "column": 106
+        },
+        {
+          "title": "en: 1280px rental header and search stay stable through static, code and data loading",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1242,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T00:21:43.231Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1458918489b8138fd00e-fd410e2bb80cd6a958ae",
+          "file": "rental-loading.spec.ts",
+          "line": 22,
+          "column": 106
+        },
+        {
+          "title": "zh-Hant: 390px rental header and search stay stable through static, code and data loading",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 885,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T00:21:44.654Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1458918489b8138fd00e-8e370cab7d08dd8da318",
+          "file": "rental-loading.spec.ts",
+          "line": 22,
+          "column": 106
+        },
+        {
+          "title": "zh-Hant: 1280px rental header and search stay stable through static, code and data loading",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 922,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T00:21:44.694Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1458918489b8138fd00e-2b244d3f0aba10c13132",
+          "file": "rental-loading.spec.ts",
+          "line": 22,
+          "column": 106
+        },
+        {
+          "title": "ko: 390px rental header and search stay stable through static, code and data loading",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 851,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T00:21:45.544Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1458918489b8138fd00e-f609e3026e3bc7e064e2",
+          "file": "rental-loading.spec.ts",
+          "line": 22,
+          "column": 106
+        },
+        {
+          "title": "ko: 1280px rental header and search stay stable through static, code and data loading",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 892,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T00:21:45.620Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1458918489b8138fd00e-f76769431cb9e537932c",
+          "file": "rental-loading.spec.ts",
+          "line": 22,
+          "column": 106
+        },
+        {
+          "title": "zh-Hans: 390px rental header and search stay stable through static, code and data loading",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 854,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T00:21:46.399Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1458918489b8138fd00e-a13e5fe9457f81c326c6",
+          "file": "rental-loading.spec.ts",
+          "line": 22,
+          "column": 106
+        },
+        {
+          "title": "zh-Hans: 1280px rental header and search stay stable through static, code and data loading",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 898,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T00:21:46.515Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1458918489b8138fd00e-409351ba0fce5cd17224",
+          "file": "rental-loading.spec.ts",
+          "line": 22,
+          "column": 106
+        },
+        {
+          "title": "th: 390px rental header and search stay stable through static, code and data loading",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 892,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T00:21:47.257Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1458918489b8138fd00e-5551b1752a887e9f2d15",
+          "file": "rental-loading.spec.ts",
+          "line": 22,
+          "column": 106
+        },
+        {
+          "title": "th: 1280px rental header and search stay stable through static, code and data loading",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 927,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T00:21:47.418Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1458918489b8138fd00e-f4f07fa41f06b8cba04e",
+          "file": "rental-loading.spec.ts",
+          "line": 22,
+          "column": 106
+        },
+        {
+          "title": "directory load failure and retry keep the search frame and never claim zero matches",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1270,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T00:21:48.153Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1458918489b8138fd00e-ff2b1787af211a8822c7",
+          "file": "rental-loading.spec.ts",
+          "line": 67,
+          "column": 1
+        },
+        {
+          "title": "reduced motion keeps the loading symbol visible without animation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "iPhone-WebKit",
+              "projectName": "iPhone-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 232,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T00:21:48.349Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1458918489b8138fd00e-d9895b8060864b0af9ca",
+          "file": "rental-loading.spec.ts",
+          "line": 91,
+          "column": 1
+        },
+        {
+          "title": "en: 390px rental header and search stay stable through static, code and data loading",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop-WebKit",
+              "projectName": "Desktop-WebKit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 949,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T00:21:48.819Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1458918489b8138fd00e-c398f58b994817e09dc5",
+          "file": "rental-loading.spec.ts",
+          "line": 22,
+          "column": 106
+        },
+        {
+          "title": "en: 1280px rental header and search stay stable through static, code and data loading",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop-WebKit",
+              "projectName": "Desktop-WebKit",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 994,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T00:21:49.665Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1458918489b8138fd00e-ee80d2433257abd12c03",
+          "file": "rental-loading.spec.ts",
+          "line": 22,
+          "column": 106
+        },
+        {
+          "title": "zh-Hant: 390px rental header and search stay stable through static, code and data loading",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop-WebKit",
+              "projectName": "Desktop-WebKit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 869,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T00:21:49.928Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1458918489b8138fd00e-1ae2417de2cf02c73cc3",
+          "file": "rental-loading.spec.ts",
+          "line": 22,
+          "column": 106
+        },
+        {
+          "title": "zh-Hant: 1280px rental header and search stay stable through static, code and data loading",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop-WebKit",
+              "projectName": "Desktop-WebKit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 871,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T00:21:50.801Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1458918489b8138fd00e-042a2632b5c1faeef4d2",
+          "file": "rental-loading.spec.ts",
+          "line": 22,
+          "column": 106
+        },
+        {
+          "title": "ko: 390px rental header and search stay stable through static, code and data loading",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop-WebKit",
+              "projectName": "Desktop-WebKit",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 853,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T00:21:50.813Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1458918489b8138fd00e-3ff78b44845db63ba390",
+          "file": "rental-loading.spec.ts",
+          "line": 22,
+          "column": 106
+        },
+        {
+          "title": "ko: 1280px rental header and search stay stable through static, code and data loading",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop-WebKit",
+              "projectName": "Desktop-WebKit",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 860,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T00:21:51.671Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1458918489b8138fd00e-9f2f01536b1668cc233f",
+          "file": "rental-loading.spec.ts",
+          "line": 22,
+          "column": 106
+        },
+        {
+          "title": "zh-Hans: 390px rental header and search stay stable through static, code and data loading",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop-WebKit",
+              "projectName": "Desktop-WebKit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 832,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T00:21:51.676Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1458918489b8138fd00e-93d912cdd2cc58449a0c",
+          "file": "rental-loading.spec.ts",
+          "line": 22,
+          "column": 106
+        },
+        {
+          "title": "zh-Hans: 1280px rental header and search stay stable through static, code and data loading",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop-WebKit",
+              "projectName": "Desktop-WebKit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 884,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T00:21:52.511Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1458918489b8138fd00e-399ddb2d1eb6e8086ba9",
+          "file": "rental-loading.spec.ts",
+          "line": 22,
+          "column": 106
+        },
+        {
+          "title": "th: 390px rental header and search stay stable through static, code and data loading",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop-WebKit",
+              "projectName": "Desktop-WebKit",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 903,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T00:21:52.535Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1458918489b8138fd00e-d8cb3bbab2e472744d0a",
+          "file": "rental-loading.spec.ts",
+          "line": 22,
+          "column": 106
+        },
+        {
+          "title": "th: 1280px rental header and search stay stable through static, code and data loading",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop-WebKit",
+              "projectName": "Desktop-WebKit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 912,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T00:21:53.400Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1458918489b8138fd00e-d9a570fcbc4e16ca5724",
+          "file": "rental-loading.spec.ts",
+          "line": 22,
+          "column": 106
+        },
+        {
+          "title": "directory load failure and retry keep the search frame and never claim zero matches",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop-WebKit",
+              "projectName": "Desktop-WebKit",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1237,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T00:21:53.441Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1458918489b8138fd00e-a0dfeca9a24a8229b8f1",
+          "file": "rental-loading.spec.ts",
+          "line": 67,
+          "column": 1
+        },
+        {
+          "title": "reduced motion keeps the loading symbol visible without animation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop-WebKit",
+              "projectName": "Desktop-WebKit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 254,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T00:21:54.316Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1458918489b8138fd00e-a8c86075cb81d47066f3",
+          "file": "rental-loading.spec.ts",
+          "line": 91,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-01T00:21:42.905Z",
+    "duration": 11803.728,
+    "expected": 24,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

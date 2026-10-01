@@ -343,6 +343,8 @@
   "rdResults": "{count} 条匹配记录",
   "rdResultsLabel": "租车地点结果",
   "rdEmpty": "没有匹配记录，请调整地区、公司或名称。",
+  "rdLoadingPlaceholder": "暂未显示门店，加载完成后将在这里显示匹配结果。",
+  "rdLoadingOption": "正在加载…",
   "rdUnnamed": "未记录名称",
   "rdCandidate": "候选 · 未核实",
   "rdCounter": "仅柜台",

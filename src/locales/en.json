@@ -343,6 +343,8 @@
   "rdResults": "{count} matching records",
   "rdResultsLabel": "Rental location results",
   "rdEmpty": "No matching records. Try another area, company or name.",
+  "rdLoadingPlaceholder": "No branches to display yet. Matching results will appear here once loading finishes.",
+  "rdLoadingOption": "Loading…",
   "rdUnnamed": "Name not recorded",
   "rdCandidate": "Candidate · not verified",
   "rdCounter": "Counter only",

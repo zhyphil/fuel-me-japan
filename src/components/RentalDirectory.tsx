@@ -1,6 +1,6 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { messages, type Locale } from "../i18n";
-import { prefectures, prefectureName } from "../lib/find-fuel";
+import { prefectureName } from "../lib/find-fuel";
 import { searchRentals, type RentalIndex } from "../lib/rental";
 import { readRentalQuery, rentalQueryString, rentalName, rentalStatus, type RentalQuery } from "../lib/rental-view";
 import { navigate, rentalHref } from "../lib/routes";
@@ -8,6 +8,7 @@ import type { PartitionCode } from "../lib/stations";
 import { MapThumbnail } from "./MapThumbnail";
 import { RentalMap } from "./RentalMap";
 import { RentalPagination } from "./RentalPagination";
+import { RentalDirectoryFilters, RentalDirectoryStatus } from "./RentalDirectoryFrame";
 
 export function RentalDirectory({ index, locale, search, tileUrl, active }: { index: RentalIndex; locale: Locale; search: string; tileUrl: string | null | undefined; active: boolean }) {
   const t = messages[locale];
@@ -48,27 +49,13 @@ export function RentalDirectory({ index, locale, search, tileUrl, active }: { in
   }
   const filterKey = `${query.prefecture}:${query.company}:${query.query}:${query.counters}`;
   return <div className="rental-directory" hidden={!active} data-testid="rental-directory">
-    <form className="rental-filters" onSubmit={event => { event.preventDefault(); const form = new FormData(event.currentTarget); update({ query: String(form.get("q") || "").slice(0, 160) }); }}>
-      <div><label htmlFor="rental-region">{t.ffPrefectureLabel}</label><select id="rental-region" value={query.prefecture} onChange={e => update({ prefecture: e.target.value })}><option value="">{t.rdAllJapan}</option>{prefectures.map(p => <option key={p.code} value={p.code} lang="ja">{p.name}</option>)}<option value="UNKNOWN">{t.ffUnknown}</option></select></div>
-      <div><label htmlFor="rental-company">{t.rdCompany}</label><select id="rental-company" value={query.company} onChange={e => update({ company: e.target.value as RentalQuery["company"] })}><option value="">{t.rdAllCompanies}</option>{companies.map(([id, name]) => <option key={id} value={id}>{name || t.ffUnknown}</option>)}</select></div>
-      <div className="rental-query">
-        <label htmlFor="rental-query">{t.rdSearchLabel}</label>
-        <div className="rental-query-controls">
-          <input id="rental-query" name="q" type="search" maxLength={160} value={draft} onChange={e => setDraft(e.target.value)} />
-          <div className="rental-query-actions">
-            <button type="submit" className="button button-primary">{t.rdSearch}</button>
-            <a className="button button-quiet" href={rentalHref(locale)} onClick={() => setDraft("")}>{t.rdReset}</a>
-          </div>
-        </div>
-      </div>
-      <label className="rental-counters"><input type="checkbox" checked={query.counters} onChange={e => update({ counters: e.target.checked })} />{t.rdIncludeCounters}</label>
-    </form>
+    <RentalDirectoryFilters locale={locale} query={{ ...query, query: draft }} companies={companies} onFilterChange={update} onDraftChange={setDraft} onSearch={value => update({ query: value })} onReset={() => setDraft("")} />
     <p className="rental-results-count" role="status">{t.rdResults.replace("{count}", matches.length.toLocaleString(locale))}</p>
     <div className="rental-directory-layout">
       <RentalMap rows={matches} locale={locale} tileUrl={tileUrl} search={search} fitKey={filterKey} overview={!query.prefecture && !query.company && !query.query} previewId={preview} />
       <section className="rental-results">
         <div ref={list} id="rental-results-scroll" className="rental-results-scroll" role="region" aria-label={t.rdResultsLabel} tabIndex={0}>
-        {!rows.length && <p className="notice-box">{t.rdEmpty}</p>}
+        {!rows.length && <RentalDirectoryStatus locale={locale} state="empty" />}
         <ol className="rental-cards" start={(page - 1) * query.pageSize + 1}>{rows.map(row => { const name = rentalName(row, locale); const href = rentalHref(locale, row.id, rentalQueryString({ ...query, page })); return <li className={`rental-card${preview === row.id ? " is-preview" : ""}`} key={row.id} data-rental-id={row.id} onClick={event => {
           if (!(event.target instanceof Element) || event.target.closest("a, button, input") || window.getSelection()?.type === "Range") return;
           navigate(href, false, undefined, `rental-card-${row.id}`);

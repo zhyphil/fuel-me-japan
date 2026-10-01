@@ -438,7 +438,7 @@ button:disabled { cursor: default; opacity: .6; }
 
 /* Independent return-car business. The home map remains mounted when hidden. */
 [hidden] { display: none !important; }
-.rental-main { max-width: 1440px; margin: 0 auto; padding: 28px clamp(16px, 3vw, 40px) 64px; }
+.rental-main { width: 100%; max-width: 1440px; margin: 0 auto; padding: 28px clamp(16px, 3vw, 40px) 64px; }
 .rental-intro { max-width: 850px; margin-bottom: 24px; }
 .rental-intro h1, .rental-detail-heading h1 { font-size: clamp(1.7rem, 3vw, 2.5rem); line-height: 1.2; margin: 8px 0 14px; overflow-wrap: anywhere; }
 .rental-intro p { line-height: 1.65; }
@@ -452,6 +452,16 @@ button:disabled { cursor: default; opacity: .6; }
 .rental-filters .rental-counters { min-height: 44px; display: flex; align-items: center; gap: 9px; grid-column: 1 / -1; font-size: .88rem; margin: 0; }
 .rental-counters input, .rental-confirm input { width: 20px; height: 20px; flex: 0 0 20px; }
 .rental-results-count { font-weight: 700; margin: 20px 0 14px; }
+.rental-filters :disabled, .rental-filters [aria-disabled=true] { opacity: .6; cursor: default; }
+.rental-directory-pending { height: clamp(360px, 70svh, 700px); border: 1px solid #d3ddd9; border-radius: 16px; background: #fff; }
+.rental-directory-state { display: grid; place-content: center; justify-items: center; gap: 14px; min-height: 100%; padding: 28px; text-align: center; color: #50665d; }
+.rental-directory-pending .rental-directory-state { min-height: 0; padding-block: 32px; }
+.rental-directory-state p { margin: 0; max-width: 38rem; line-height: 1.65; }
+.rental-directory-state .rental-loading-label { color: var(--green); font-weight: 650; }
+.rental-loading-spinner { width: 36px; height: 36px; border: 3px solid #dce6df; border-top-color: var(--green); border-radius: 50%; animation: rental-loading-spin .8s linear infinite; }
+@keyframes rental-loading-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .rental-loading-spinner { animation: none; } }
+
 .rental-directory-layout { --rental-panel-height: clamp(360px, 70svh, 700px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(350px, 1fr); align-items: start; gap: 24px; }
 .rental-map-wrap { position: sticky; top: 18px; min-width: 0; border: 1px solid #cad9d1; border-radius: 16px; overflow: hidden; background: #eef3ef; }
 .rental-directory-layout > .rental-map-wrap { display: flex; flex-direction: column; height: var(--rental-panel-height); }

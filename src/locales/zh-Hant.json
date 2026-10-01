@@ -343,6 +343,8 @@
   "rdResults": "{count} 筆符合資料",
   "rdResultsLabel": "租車地點結果",
   "rdEmpty": "沒有符合資料，請調整地區、公司或名稱。",
+  "rdLoadingPlaceholder": "暫未顯示門市，載入完成後將在此顯示符合的結果。",
+  "rdLoadingOption": "載入中…",
   "rdUnnamed": "未記錄名稱",
   "rdCandidate": "候選 · 未核實",
   "rdCounter": "僅櫃台",

@@ -4,6 +4,7 @@ import { loadRentalIndex, loadRentalManifest, type RentalIndex, type RentalManif
 import type { AppRoute } from "../lib/routes";
 import type { FuelType } from "../lib/stations";
 import { RentalDirectory } from "./RentalDirectory";
+import { RentalDirectoryIntro, RentalDirectoryPending } from "./RentalDirectoryFrame";
 import { RentalDetail, RentalNotFound } from "./RentalDetail";
 import { RentalSources } from "./RentalSources";
 
@@ -29,11 +30,11 @@ export default function RentalBusiness({ route, fuel }: { route: AppRoute; fuel:
     }).catch(() => { if (!controller.signal.aborted) setTileUrl(null); });
     return () => controller.abort();
   }, []);
+  const retry = () => { setError(false); setAttempt(value => value + 1); };
   return <div className="rental-business">
-    {route.kind === "directory" && <header className="rental-intro"><p className="eyebrow">{t.rdEyebrow}</p><h1>{t.rdTitle}</h1><p>{t.rdIntro}</p><p className="field-help">{t.rdCandidateHelp}</p></header>}
+    {route.kind === "directory" && <RentalDirectoryIntro locale={route.locale} />}
     {route.kind === "not-found" ? <RentalNotFound locale={route.locale} /> : <>
-      {!data && !error && <p role="status">{t.rcLoading}</p>}
-      {error && <div role="alert"><p>{t.rcError}</p><button className="button" type="button" onClick={() => { setError(false); setAttempt(value => value + 1); }}>{t.ffRetry}</button></div>}
+      {!data && (route.kind === "directory" ? <RentalDirectoryPending locale={route.locale} search={route.search} error={error} onRetry={retry} /> : error ? <div role="alert"><p>{t.rcError}</p><button className="button" type="button" onClick={retry}>{t.ffRetry}</button></div> : <p role="status">{t.rcLoading}</p>)}
       {data && <>{(visitedDirectory || route.kind === "directory") && <RentalDirectory index={data.index} locale={route.locale} search={route.search} tileUrl={tileUrl} active={route.kind === "directory"} />}{route.kind === "detail" && <RentalDetail key={`${route.id}:${route.locale}`} manifest={data.manifest} index={data.index} route={route} tileUrl={tileUrl} fuel={fuel} />}<RentalSources manifest={data.manifest} locale={route.locale} /></>}
     </>}
   </div>;

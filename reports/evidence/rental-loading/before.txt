@@ -1,0 +1,49 @@
+[WebServer] (node:24482) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 6 tests using 2 workers
+
+(node:24483) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:24484) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 tests/e2e/rental-loading.spec.ts:20:83 › en: 390px rental header and search stay stable through static, code and data loading (5.3s)
+Testing stopped early after 1 maximum allowed failures.
+  ✘  1 tests/e2e/rental-loading.spec.ts:20:83 › en: 1280px rental header and search stay stable through static, code and data loading (5.3s)
+
+
+  1) tests/e2e/rental-loading.spec.ts:20:83 › en: 390px rental header and search stay stable through static, code and data loading 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('.rental-filters')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('.rental-filters') with timeout 5000ms
+      - waiting for locator('.rental-filters')
+
+
+      27 |   try {
+      28 |     await page.goto(`/${locale}/return-car/`, { waitUntil: "commit" });
+    > 29 |     await expect(page.locator(".rental-filters")).toBeVisible();
+         |                                                   ^
+      30 |     await expect(page.locator(".rental-intro")).toContainText(t.rdEyebrow);
+      31 |     await expect(page.locator(".rental-intro")).toContainText(t.rdCandidateHelp);
+      32 |     await expect(page.locator(".rental-loading-spinner")).toBeVisible();
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/rental-loading.spec.ts:29:51
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/rental-loading-en-390px-re-d7724-tatic-code-and-data-loading/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/rental-loading-en-390px-re-d7724-tatic-code-and-data-loading/error-context.md
+
+  1 failed
+    tests/e2e/rental-loading.spec.ts:20:83 › en: 390px rental header and search stay stable through static, code and data loading 
+  1 interrupted
+    tests/e2e/rental-loading.spec.ts:20:83 › en: 1280px rental header and search stay stable through static, code and data loading 
+  4 did not run
+  1 error was not a part of any test, see above for details

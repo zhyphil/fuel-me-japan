@@ -1,0 +1,17 @@
+[WebServer] (node:25742) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 6 tests using 2 workers
+
+(node:25745) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:25746) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/e2e/rental-loading.spec.ts:23:83 › en: 390px rental header and search stay stable through static, code and data loading (1.4s)
+  ✓  2 tests/e2e/rental-loading.spec.ts:23:83 › en: 1280px rental header and search stay stable through static, code and data loading (1.6s)
+  ✓  3 tests/e2e/rental-loading.spec.ts:23:83 › zh-Hans: 390px rental header and search stay stable through static, code and data loading (913ms)
+  ✓  4 tests/e2e/rental-loading.spec.ts:23:83 › zh-Hans: 1280px rental header and search stay stable through static, code and data loading (1.1s)
+  ✓  6 tests/e2e/rental-loading.spec.ts:92:1 › reduced motion keeps the loading symbol visible without animation (146ms)
+  ✓  5 tests/e2e/rental-loading.spec.ts:68:1 › directory load failure and retry keep the search frame and never claim zero matches (1.2s)
+
+  6 passed (4.8s)

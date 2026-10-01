@@ -343,6 +343,8 @@
   "rdResults": "검색 결과 {count}건",
   "rdResultsLabel": "렌터카 지점 검색 결과",
   "rdEmpty": "일치하는 기록이 없습니다. 지역, 회사 또는 이름을 변경하세요.",
+  "rdLoadingPlaceholder": "아직 표시할 지점이 없습니다. 로딩이 완료되면 여기에 검색 결과가 표시됩니다.",
+  "rdLoadingOption": "불러오는 중…",
   "rdUnnamed": "이름 정보 없음",
   "rdCandidate": "후보 · 미확인",
   "rdCounter": "카운터 전용",

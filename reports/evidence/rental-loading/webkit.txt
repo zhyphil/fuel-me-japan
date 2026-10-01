@@ -1,0 +1,37 @@
+
+Running 24 tests using 2 workers
+
+(node:27869) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:27870) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [iPhone-WebKit] › tests/e2e/rental-loading.spec.ts:22:106 › en: 390px rental header and search stay stable through static, code and data loading (1.2s)
+  ✓   2 [iPhone-WebKit] › tests/e2e/rental-loading.spec.ts:22:106 › en: 1280px rental header and search stay stable through static, code and data loading (1.2s)
+  ✓   3 [iPhone-WebKit] › tests/e2e/rental-loading.spec.ts:22:106 › zh-Hant: 390px rental header and search stay stable through static, code and data loading (885ms)
+  ✓   4 [iPhone-WebKit] › tests/e2e/rental-loading.spec.ts:22:106 › zh-Hant: 1280px rental header and search stay stable through static, code and data loading (922ms)
+  ✓   5 [iPhone-WebKit] › tests/e2e/rental-loading.spec.ts:22:106 › ko: 390px rental header and search stay stable through static, code and data loading (851ms)
+  ✓   6 [iPhone-WebKit] › tests/e2e/rental-loading.spec.ts:22:106 › ko: 1280px rental header and search stay stable through static, code and data loading (892ms)
+  ✓   7 [iPhone-WebKit] › tests/e2e/rental-loading.spec.ts:22:106 › zh-Hans: 390px rental header and search stay stable through static, code and data loading (854ms)
+  ✓   8 [iPhone-WebKit] › tests/e2e/rental-loading.spec.ts:22:106 › zh-Hans: 1280px rental header and search stay stable through static, code and data loading (898ms)
+  ✓   9 [iPhone-WebKit] › tests/e2e/rental-loading.spec.ts:22:106 › th: 390px rental header and search stay stable through static, code and data loading (892ms)
+  ✓  10 [iPhone-WebKit] › tests/e2e/rental-loading.spec.ts:22:106 › th: 1280px rental header and search stay stable through static, code and data loading (927ms)
+  ✓  12 [iPhone-WebKit] › tests/e2e/rental-loading.spec.ts:91:1 › reduced motion keeps the loading symbol visible without animation (232ms)
+(node:27949) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  11 [iPhone-WebKit] › tests/e2e/rental-loading.spec.ts:67:1 › directory load failure and retry keep the search frame and never claim zero matches (1.3s)
+(node:27961) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  13 [Desktop-WebKit] › tests/e2e/rental-loading.spec.ts:22:106 › en: 390px rental header and search stay stable through static, code and data loading (949ms)
+  ✓  15 [Desktop-WebKit] › tests/e2e/rental-loading.spec.ts:22:106 › zh-Hant: 390px rental header and search stay stable through static, code and data loading (869ms)
+  ✓  14 [Desktop-WebKit] › tests/e2e/rental-loading.spec.ts:22:106 › en: 1280px rental header and search stay stable through static, code and data loading (994ms)
+  ✓  17 [Desktop-WebKit] › tests/e2e/rental-loading.spec.ts:22:106 › ko: 390px rental header and search stay stable through static, code and data loading (853ms)
+  ✓  16 [Desktop-WebKit] › tests/e2e/rental-loading.spec.ts:22:106 › zh-Hant: 1280px rental header and search stay stable through static, code and data loading (871ms)
+  ✓  19 [Desktop-WebKit] › tests/e2e/rental-loading.spec.ts:22:106 › zh-Hans: 390px rental header and search stay stable through static, code and data loading (832ms)
+  ✓  18 [Desktop-WebKit] › tests/e2e/rental-loading.spec.ts:22:106 › ko: 1280px rental header and search stay stable through static, code and data loading (860ms)
+  ✓  20 [Desktop-WebKit] › tests/e2e/rental-loading.spec.ts:22:106 › zh-Hans: 1280px rental header and search stay stable through static, code and data loading (884ms)
+  ✓  21 [Desktop-WebKit] › tests/e2e/rental-loading.spec.ts:22:106 › th: 390px rental header and search stay stable through static, code and data loading (903ms)
+  ✓  22 [Desktop-WebKit] › tests/e2e/rental-loading.spec.ts:22:106 › th: 1280px rental header and search stay stable through static, code and data loading (912ms)
+  ✓  24 [Desktop-WebKit] › tests/e2e/rental-loading.spec.ts:91:1 › reduced motion keeps the loading symbol visible without animation (254ms)
+  ✓  23 [Desktop-WebKit] › tests/e2e/rental-loading.spec.ts:67:1 › directory load failure and retry keep the search frame and never claim zero matches (1.2s)
+
+  24 passed (11.8s)

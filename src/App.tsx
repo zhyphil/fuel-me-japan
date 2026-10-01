@@ -7,6 +7,7 @@ import { FindFuel } from "./components/FindFuel";
 import { MyFuel } from "./components/MyFuel";
 import { About } from "./components/About";
 import { RefuelGuide } from "./components/RefuelGuide";
+import { RentalDirectoryIntro, RentalDirectoryPending } from "./components/RentalDirectoryFrame";
 import { DEFAULT_FUEL, readFuelPreference, resetFuelPreference, saveFuelPreference } from "./lib/fuel-preference";
 import type { FuelType } from "./lib/stations";
 
@@ -81,12 +82,15 @@ export function App({ locale: initialLocale, initialRoute, rentalShell = false }
       </div>}
       {route.kind === "guide" && <RefuelGuide locale={locale} />}
       {route.kind === "about" && <About locale={locale} />}
-      {!home && !informationPage && <Suspense fallback={<RentalShell locale={locale} />}>
-        {rentalShell ? <RentalShell locale={locale} /> : <RentalBusiness route={route} fuel={selectedFuels.length === 1 ? selectedFuels[0] : null} />}
+      {!home && !informationPage && <Suspense fallback={<RentalShell route={route} />}>
+        {rentalShell ? <RentalShell route={route} /> : <RentalBusiness route={route} fuel={selectedFuels.length === 1 ? selectedFuels[0] : null} />}
       </Suspense>}
     </main>
     {home && myFuelTrigger && <MyFuel locale={locale} fuel={selectedFuels.length === 1 ? selectedFuels[0] : null} onFuelChange={(fuel) => changeFuels([fuel])} trigger={myFuelTrigger} onClose={() => setMyFuelTrigger(null)} />}
   </>;
 }
 
-function RentalShell({ locale }: { locale: Locale }) { const t = messages[locale]; return <div className="rental-business"><header className="rental-intro"><h1>{t.rdTitle}</h1><p>{t.rdIntro}</p></header><p role="status">{t.rcLoading}</p></div>; }
+function RentalShell({ route }: { route: AppRoute }) {
+  const t = messages[route.locale];
+  return <div className="rental-business">{route.kind === "directory" ? <><RentalDirectoryIntro locale={route.locale} /><RentalDirectoryPending locale={route.locale} search={route.search} /></> : <><header className="rental-intro"><h1>{t.rdTitle}</h1><p>{t.rdIntro}</p></header><p role="status">{t.rcLoading}</p></>}</div>;
+}
