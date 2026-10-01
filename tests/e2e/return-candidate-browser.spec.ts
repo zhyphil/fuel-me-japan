@@ -52,6 +52,8 @@ test("candidate hover and keyboard focus preview the right map without changing 
   });
   await expect.poll(centered).toBe(true);
   await cards.nth(2).focus(); await expect(map.locator('[data-map-key="osm:node:4"]')).toHaveAttribute("aria-pressed", "true");
+  await cards.nth(1).dispatchEvent("pointerout", { pointerType: "mouse", relatedTarget: null });
+  await expect(map.locator('[data-map-key="osm:node:4"]')).toHaveAttribute("aria-pressed", "true");
   await cards.first().dispatchEvent("pointerover", { pointerType: "touch" });
   await expect(map.locator('[data-map-key="osm:node:4"]')).toHaveAttribute("aria-pressed", "true");
   await cards.first().dispatchEvent("pointerover", { pointerType: "mouse" });

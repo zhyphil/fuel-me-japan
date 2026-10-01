@@ -24,8 +24,13 @@ export interface RentalMember {
 }
 export type RentalOfficialSourceId = "times-official" | "nippon-official" | "toyota-official";
 export type RentalSummaryKey = Extract<MessageKey, `rental.${string}`>;
+export interface RentalOperations {
+  hoursKey: Extract<MessageKey, `rental.hours.${string}`>;
+  returnLeadMinutes: number | null;
+  accessKey: Extract<MessageKey, `rental.access.${string}`> | null;
+}
 export interface RentalOfficialCheck {
-  sourceId: RentalOfficialSourceId; checkedAt: string; url: string; supplementaryUrls: string[]; summaryKey: RentalSummaryKey;
+  sourceId: RentalOfficialSourceId; checkedAt: string; url: string; supplementaryUrls: string[]; summaryKey: RentalSummaryKey; operations?: RentalOperations;
 }
 export interface RentalReturnRule {
   companyId: "times"; sourceId: "times-official"; url: string; checkedAt: string;
@@ -112,7 +117,7 @@ export function parseManifest(value: unknown): RentalManifest {
   const approvedSources = {
     osm: ["2026-09-29", "https://download.geofabrik.de/asia/japan-260929.osm.pbf"],
     overture: ["2026-09-23", "https://docs.overturemaps.org/attribution/"],
-    "times-official": ["2026-09-30", "https://www.timescar-rental.com/en/"],
+    "times-official": ["2026-10-01", "https://www.timescar-rental.com/en/"],
     "nippon-official": ["2026-10-01", "https://www.nipponrentacar.co.jp/"],
     "toyota-official": ["2026-10-01", "https://rent.toyota.co.jp/"],
   };
@@ -208,14 +213,15 @@ function parseDetail(v: unknown): asserts v is RentalLocation {
   check(same([...sources].sort(), [...v.sourceIds].sort()));
   if (v.verification === "OFFICIAL_FACILITY_CHECKED") {
     const fact = reviewedFacts[v.id]; const attrs = fact.attributes;
-    check(object(r.official)); keys(r.official, ["sourceId", "checkedAt", "url", "supplementaryUrls", "summaryKey"]);
+    check(object(r.official)); keys(r.official, ["sourceId", "checkedAt", "url", "supplementaryUrls", "summaryKey"], ["operations"]);
+    check(same(r.official.operations, attrs.operations), "Unreviewed operating facts");
     check(r.official.sourceId === fact.sourceId && r.official.checkedAt === attrs.checkedAt && r.official.url === attrs.officialCheckUrl && r.official.summaryKey === fact.summaryKey && same(r.official.supplementaryUrls, attrs.supplementarySourceUrls), "Official detail mismatch");
     const officialSources = (r.sources as RentalMember[]).filter(s => isOfficialSource(s.sourceId));
     check(officialSources.length === 1 && officialSources[0].key === `official-${v.id}` && same(officialSources[0].attributes, attrs), "Official fact mismatch");
     if (fact.sourceId !== "times-official") {
       check(same([...sourceKeys].filter(key => !key.startsWith("official-")).sort(), [...fact.reviewedSourceKeys].sort()), "Unreviewed source mapping");
-      if (attrs.officialPhone) check(same(r.phones, [attrs.officialPhone]), "Official phone mismatch");
     }
+    if (attrs.officialPhone) check(same(r.phones, [attrs.officialPhone]), "Official phone mismatch");
   } else check(r.official === null);
   if (v.companyId === "times") {
     check(object(r.returnRule)); keys(r.returnRule, ["companyId", "sourceId", "url", "checkedAt", "fullTank", "receipt"]);

@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-10-01T19:36:54.946Z",
+  "adsense": {
+    "domain": "fuel-me-japan.com",
+    "approval": "IN_REVIEW",
+    "adsTxtRecognition": "NOT_RECOGNIZED",
+    "observedRow": "fuel-me-japan.com\nEn préparation\n—\nIntrouvable\n1 oct. 2026\n16:16 | CEST\ndelete"
+  },
+  "cmp": {
+    "result": "WINDOW_NOT_SHOWN",
+    "status": "Google privacy settings are temporarily unavailable. Please try again later. You can still use the site; this does not grant advertising consent.",
+    "iframeNames": [
+      "googlefcPresent",
+      "__tcfapiLocator",
+      "googlefcInactive",
+      "googlefcLoaded"
+    ],
+    "note": "Google脚本已加载，但真实同意／拒绝／管理／撤回窗口未出现。未确定原因，广告继续暂停。"
+  },
+  "gsc": {
+    "sitemap": "https://fuel-me-japan.com/sitemap.xml",
+    "sitemapStatus": "SUCCESS",
+    "discoveredPages": 20,
+    "indexReport": "Traitement des données en cours, veuillez réessayer dans un jour environ",
+    "note": "20页发现不等于实际收录。未重复提交或修改开放范围。"
+  }
+}

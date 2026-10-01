@@ -39,7 +39,7 @@ ROOT = Path(__file__).resolve().parents[2]
 REVIEWED = json.loads((ROOT / 'src/lib/rental-reviewed.json').read_text())
 INPUT_LOCK = json.loads((ROOT / 'data/curation/rental-input-lock.json').read_text())
 OFFICIAL_SOURCES = {
-    'times-official': ('times', '2026-09-30', 'https://www.timescar-rental.com/en/'),
+    'times-official': ('times', '2026-10-01', 'https://www.timescar-rental.com/en/'),
     'nippon-official': ('nippon', '2026-10-01', 'https://www.nipponrentacar.co.jp/'),
     'toyota-official': ('toyota', '2026-10-01', 'https://rent.toyota.co.jp/'),
 }
@@ -548,7 +548,7 @@ def build_record(ident, group, identity, boundaries, audit):
             'verification': 'OFFICIAL_FACILITY_CHECKED' if official else 'NOT_VERIFIED', 'vehicleEntranceStatus': 'NOT_VERIFIED',
             'airportCode': official['officialFact']['airportCode'] if official else None,
             'sourceIds': sorted({s['sourceId'] for s in sources}), 'sources': sources,
-            'official': ({'sourceId': approved['sourceId'], 'checkedAt': fact['checkedAt'], 'url': fact['officialCheckUrl'], 'supplementaryUrls': fact['supplementarySourceUrls'], 'summaryKey': approved['summaryKey']} if official else None),
+            'official': ({'sourceId': approved['sourceId'], 'checkedAt': fact['checkedAt'], 'url': fact['officialCheckUrl'], 'supplementaryUrls': fact['supplementarySourceUrls'], 'summaryKey': approved['summaryKey'], **({'operations': fact['operations']} if 'operations' in fact else {})} if official else None),
             'returnRule': ({'companyId': 'times', 'sourceId': 'times-official', 'url': 'https://www.timescar-rental.com/en/agreement/gas.html', 'checkedAt': '2026-09-30', 'fullTank': 'STANDARD_SUBJECT_TO_CONTRACT', 'receipt': 'MAY_BE_REQUESTED'} if cid == 'times' else None)}
 
 

@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "version": "rental-v1-57173526c8f9b9af",
+  "count": 7383,
+  "artifacts": 59,
+  "identicalFiles": 273,
+  "note": "只向临时副本重放已锁定输入；manifest、identity、分区及新旧快照逐字相同，项目数据未改。"
+}

@@ -46,6 +46,9 @@ jobs:
           npx playwright install --with-deps chromium
       - name: Verify importer failure retention before acquisition
         run: npm run test:data
+      - name: Capture checked quality baseline before acquisition
+        id: quality_baseline
+        run: npm run data:quality -- --output "$RUNNER_TEMP/fmj-quality-before.json"
       - name: Acquire and validate a candidate snapshot
         env:
           REQUESTED_DATASET: ${{ inputs.dataset }}
@@ -63,6 +66,9 @@ jobs:
             *) exit 1 ;;
           esac
           python scripts/importer/refresh_sources.py "$dataset" --download-dir "$RUNNER_TEMP/fmj-inputs" --report "$RUNNER_TEMP/fmj-refresh-report.json"
+      - name: Compare checked candidate coverage, also after a retained-source failure
+        if: always() && steps.quality_baseline.outcome == 'success'
+        run: npm run data:quality -- --output "$RUNNER_TEMP/fmj-quality-after.json" --compare "$RUNNER_TEMP/fmj-quality-before.json" --changes-output "$RUNNER_TEMP/fmj-quality-changes.json"
       - name: Validate app and browser behavior
         run: npm run check
       - name: Keep validated data and provenance for review
@@ -79,6 +85,10 @@ jobs:
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
         with:
           name: fuel-data-diagnostics-${{ github.run_id }}
-          path: ${{ runner.temp }}/fmj-refresh-report.json
+          path: |
+            ${{ runner.temp }}/fmj-refresh-report.json
+            ${{ runner.temp }}/fmj-quality-before.json
+            ${{ runner.temp }}/fmj-quality-after.json
+            ${{ runner.temp }}/fmj-quality-changes.json
           if-no-files-found: warn
           retention-days: 14

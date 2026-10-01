@@ -7,6 +7,7 @@ import { parseDataManifest, parseStationFile, parsePriceFile, type Station, type
 import { parseManifest, parseIndex, parsePartition, type RentalArtifact, type RentalLocation } from "../src/lib/rental";
 import { validateRegistry } from "../src/lib/source-registry";
 import { returnCandidates } from "../src/lib/return-car";
+import { applyReviewedStationFacts, stationReviews, stationReviewMatches } from "../src/lib/station-review";
 import { STATION_QUOTES } from "../src/lib/station-price-view";
 
 export const targetRegions = [
@@ -135,11 +136,18 @@ export async function buildQualityReport(publicRoot: string, asOf: string) {
       rentalVersion: rentalManifest.version, rentalReviewDate: rentalManifest.reviewDate,
       checkedArtifacts,
     },
+    stationSupplements: {
+      reviewed: stationReviews.length,
+      applied: stationReviews.filter(review => stations.some(station => station.id === review.osm.id && stationReviewMatches(station, review))).length,
+      inactiveIds: stationReviews.filter(review => !stations.some(station => station.id === review.osm.id && stationReviewMatches(station, review))).map(review => review.osm.id),
+      note: "人工有限事实单独列出；OSM原始字段覆盖统计不改写。上游记录变动后停止套用补充，重新核对后才恢复。",
+    },
     prices: { referenceRecords: prices.records.length, surveyDate: prices.surveyDate, publishedAt: prices.publishedAt,
       stationQuoteRecords: STATION_QUOTES.length, note: "都道府县参考价不能作为单站报价；统计日期不是资料刷新日期。" },
-    national: { stations: stationCoverage(stations), rentals: rentalCoverage(rentals) },
+    national: { stations: stationCoverage(stations), displayedStations: stationCoverage(stations.map(applyReviewedStationFacts)), rentals: rentalCoverage(rentals) },
     regions: targetRegions.map(region => ({ ...region,
       stations: stationCoverage(stations.filter(row => (region.codes as readonly string[]).includes(row.prefectureCode))),
+      displayedStations: stationCoverage(stations.filter(row => (region.codes as readonly string[]).includes(row.prefectureCode)).map(applyReviewedStationFacts)),
       rentals: rentalCoverage(rentals.filter(row => (region.codes as readonly string[]).includes(row.prefectureCode))),
     })),
     airportReviewQueue: airportReviewQueue(stations, rentals),
@@ -150,19 +158,60 @@ export async function buildQualityReport(publicRoot: string, asOf: string) {
   };
 }
 
+export type QualityReport = Awaited<ReturnType<typeof buildQualityReport>>;
+export function compareQualityReports(before: QualityReport, after: QualityReport) {
+  const changes: { field: string; before: number; after: number; delta: number }[] = [];
+  function compare(a: unknown, b: unknown, path: string) {
+    if (typeof a === "number" && typeof b === "number" && a !== b) changes.push({ field: path, before: a, after: b, delta: b - a });
+    else if (a && b && typeof a === "object" && typeof b === "object") {
+      for (const key of Object.keys(a)) if (Object.hasOwn(b, key)) compare((a as Record<string, unknown>)[key], (b as Record<string, unknown>)[key], `${path}.${key}`);
+    }
+  }
+  // Earlier schema-1 baselines had only raw coverage. Treat that as their
+  // displayed coverage so an added supplement cannot silently disappear.
+  compare({ ...before.national, displayedStations: before.national.displayedStations ?? before.national.stations }, after.national, "national");
+  for (const region of before.regions) {
+    const next = after.regions.find(item => item.id === region.id);
+    if (next) compare({ ...region, displayedStations: region.displayedStations ?? region.stations }, next, `regions.${region.id}`);
+  }
+  const changedManifests = [
+    ...(before.inputs.stationManifestSha256 !== after.inputs.stationManifestSha256 ? ["stations"] : []),
+    ...(before.inputs.rentalManifestSha256 !== after.inputs.rentalManifestSha256 ? ["rentals"] : []),
+  ];
+  const alerts = [
+    ...(after.inputs.stationSnapshotAt < before.inputs.stationSnapshotAt ? ["加油站来源日期倒退"] : []),
+    ...(after.inputs.rentalReviewDate < before.inputs.rentalReviewDate ? ["租车审核日期倒退"] : []),
+    ...(after.prices.surveyDate < before.prices.surveyDate || after.prices.publishedAt < before.prices.publishedAt ? ["参考价来源日期倒退"] : []),
+    ...(after.stationSupplements.inactiveIds.length ? ["上游记录发生变化，部分官方事实补充已停用，须重新核对身份"] : []),
+  ];
+  return { schemaVersion: 1, comparedAt: after.asOf, changedManifests, changes, alerts,
+    decision: changedManifests.length || changes.length || alerts.length || JSON.stringify(before.prices) !== JSON.stringify(after.prices) ? "REVIEW_REQUIRED" : "UNCHANGED",
+    note: "只比较经过校验的离线候选。UNCHANGED不是来源更新成功；发布与真实HTTP失败仍以工作流结果和诊断为准。不得自动提交或部署。",
+  };
+}
+
 async function main() {
   const args = process.argv.slice(2);
   const options: Record<string, string> = {};
   for (let i = 0; i < args.length; i += 2) {
-    if (!["--as-of", "--output"].includes(args[i]) || !args[i + 1] || args[i + 1].startsWith("--"))
-      throw new Error("用法：npm run data:quality -- [--as-of YYYY-MM-DD] [--output /tmp/quality.json]");
+    if (!["--as-of", "--output", "--compare", "--changes-output"].includes(args[i]) || !args[i + 1] || args[i + 1].startsWith("--"))
+      throw new Error("用法：npm run data:quality -- [--as-of YYYY-MM-DD] [--output /tmp/quality.json] [--compare /tmp/before.json --changes-output /tmp/changes.json]");
     if (args[i] in options) throw new Error("重复的参数");
     options[args[i]] = args[i + 1];
   }
   const publicRoot = resolve("public");
   const output = options["--output"] ? resolve(options["--output"]) : undefined;
   if (output && (output === publicRoot || output.startsWith(publicRoot + sep))) throw new Error("质量报告不能写入生产数据目录");
+  if (Boolean(options["--compare"]) !== Boolean(options["--changes-output"])) throw new Error("差异比较须同时提供比较输入与输出");
+  const changesOutput = options["--changes-output"] ? resolve(options["--changes-output"]) : undefined;
+  if (changesOutput && (changesOutput === publicRoot || changesOutput.startsWith(publicRoot + sep))) throw new Error("差异报告不能写入生产数据目录");
   const report = await buildQualityReport(publicRoot, options["--as-of"] ?? new Date().toISOString().slice(0, 10));
+  if (changesOutput) {
+    const before = JSON.parse(await readFile(resolve(options["--compare"]), "utf8")) as QualityReport;
+    if (before.schemaVersion !== 1 || !before.inputs?.stationManifestSha256 || !before.inputs?.rentalManifestSha256 || !before.prices?.surveyDate || !before.national || !Array.isArray(before.regions)) throw new Error("比较输入不是质量报告");
+    await mkdir(dirname(changesOutput), { recursive: true });
+    await writeFile(changesOutput, JSON.stringify(compareQualityReports(before, report), null, 2) + "\n");
+  }
   const text = JSON.stringify(report, null, 2) + "\n";
   if (output) { await mkdir(dirname(output), { recursive: true }); await writeFile(output, text); console.log(`质量报告已生成：${output}`); }
   else process.stdout.write(text);

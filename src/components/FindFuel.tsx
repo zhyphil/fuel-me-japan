@@ -2,7 +2,8 @@ import { PrivacyChoices } from "./PrivacyChoices";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { japaneseLabels, messages, type Locale } from "../i18n";
 import { analytics } from "../lib/analytics";
-import { formatOpeningHours } from "../lib/opening-hours";
+import { StationHours } from "./StationHours";
+import { StationSources } from "./StationSources";
 import { fuelTypes, isPriceStale, navigationUrl, prefecturalPrices, prefectureName, prefectures } from "../lib/find-fuel";
 import { isJapanCoordinates, loadDataManifest, loadNearbyStations, loadOfficialPrices, loadPrefectureStations, type Coordinates, type DataManifest, type FuelType, type PrefectureCode, type PriceFile, type Station, type TriState } from "../lib/stations";
 import { FuelMap, type FuelMapHandle } from "./FuelMap";
@@ -361,10 +362,10 @@ function StationDetail({ favorite, station, manifest, locale, fuels, priceViews,
     <dl className="station-facts">
       <div><dt>{t.ffAddress}</dt><dd lang={station.address ? "ja" : undefined}>{station.address || t.ffUnknown}</dd></div>
       <div><dt>{t.ffPrefectureLabel}</dt><dd lang={station.prefectureCode !== "UNKNOWN" ? "ja" : undefined}>{prefectureName(station.prefectureCode) || t.ffUnknown}</dd></div>
-      <div className="hours-fact"><dt>{t.ffHours}</dt><dd><OpeningHours value={station.openingHours} locale={locale} /></dd></div>
+      <div className="hours-fact"><dt>{t.ffHours}</dt><dd><StationHours value={station.openingHours} locale={locale} review={station.reviewedFacts} /></dd></div>
       <div><dt>{t.ffService}</dt><dd>{t[station.serviceType === "SELF" ? "ffSelf" : station.serviceType === "FULL" ? "ffFull" : "ffUnknown"]}</dd></div>
     </dl>
-    <p className="field-help">{t.ffHoursHelp}</p>
+    <p className="field-help">{t.ffHoursHelp}</p><StationSources station={station} locale={locale} />
     <div className="fuel-reminder"><h4>{t.ffFuelReminderTitle}</h4><p>{t.ffFuelReminder}</p></div>
     <h4>{t.ffFuelAvailability}</h4>
     <dl className="station-facts">{fuelTypes.map((fuel) => <div key={fuel}><dt><FuelLabel fuel={fuel} locale={locale} /></dt><dd>{tri(station[fuelFields[fuel]])}</dd></div>)}</dl>
@@ -377,14 +378,6 @@ function StationDetail({ favorite, station, manifest, locale, fuels, priceViews,
     <p className="field-help">{t.ffStationUpdated} <time dateTime={station.sourceUpdatedAt}>{station.sourceUpdatedAt}</time></p>
     </div>
   </article>;
-}
-
-function OpeningHours({ value, locale }: { value: string | undefined; locale: Locale }) {
-  const t = messages[locale];
-  const hours = formatOpeningHours(value, locale);
-  if (hours.kind === "unknown") return <>{t.ffUnknown}</>;
-  if (hours.kind === "raw") return <><p className="field-help">{t.ffHoursUntranslated}</p><code className="hours-raw">{value}</code></>;
-  return <><ul className="hours-lines">{hours.lines.map((line, index) => <li key={index}>{line}</li>)}</ul><details className="hours-original"><summary>{t.ffHoursOriginal}</summary><code className="hours-raw">{value}</code></details></>;
 }
 
 function OfficialPrice({ code, manifest, locale }: { code: Station["prefectureCode"]; manifest: DataManifest; locale: Locale }) {

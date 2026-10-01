@@ -1,0 +1,807 @@
+{
+  "checkedAt": "2026-10-01",
+  "sampled": 17,
+  "applied": 9,
+  "pending": 8,
+  "note": "仅核对既有8家三地区机场设施的前三个普通汽油抽样去重后的17个OSM对象；不是全国完整复查。有限事实来自公司或经营者的官方公开页面，不复制图片、整页文字或第三方地图素材，不表示获得整库复用许可。",
+  "records": [
+    {
+      "stationId": "osm:node:1993185911",
+      "sample": {
+        "stationId": "osm:node:1993185911",
+        "prefectureCode": "JP-47",
+        "name": "ENEOS",
+        "brand": "ENEOS",
+        "address": "沖縄県 豊見城市 豊崎 40",
+        "lat": 26.1585022,
+        "lon": 127.6547206,
+        "straightLineDistanceKm": 0.2,
+        "objectLastModifiedAt": "2023-08-20T14:23:04Z",
+        "osmUrl": "https://www.openstreetmap.org/node/1993185911",
+        "fieldsToCheck": [
+          "openingHours",
+          "serviceType",
+          "fuelRegular",
+          "paymentVisa",
+          "paymentMastercard"
+        ]
+      },
+      "branches": [
+        "nippon-naha-airport-toyosaki"
+      ],
+      "status": "APPLIED",
+      "review": {
+        "osm": {
+          "address": "沖縄県 豊見城市 豊崎 40",
+          "city": "豊見城市",
+          "fuelDiesel": "UNKNOWN",
+          "fuelHighOctane": "UNKNOWN",
+          "fuelRegular": "UNKNOWN",
+          "id": "osm:node:1993185911",
+          "lat": 26.1585022,
+          "lon": 127.6547206,
+          "name": "ENEOS",
+          "normalizedBrand": "ENEOS",
+          "originalBrand": "ENEOS",
+          "osmId": 1993185911,
+          "osmType": "node",
+          "paymentMastercard": "UNKNOWN",
+          "paymentVisa": "UNKNOWN",
+          "positionMethod": "OSM_NODE",
+          "prefectureCode": "JP-47",
+          "serviceType": "UNKNOWN",
+          "source": "osm",
+          "sourceUpdatedAt": "2023-08-20T14:23:04Z"
+        },
+        "url": "https://eneos-ss.com/search/ss/pc/detail.php?SCODE=980219",
+        "checkedAt": "2026-10-01",
+        "referencePoint": {
+          "lat": 26.158397387909,
+          "lon": 127.654508040503
+        },
+        "facts": {
+          "name": "豊崎店",
+          "address": "沖縄県豊見城市字豊崎3-40",
+          "openingHours": "08:00-19:00"
+        },
+        "hoursKey": "station.hours.toyosaki"
+      },
+      "referenceDistanceMetres": 24.2
+    },
+    {
+      "stationId": "osm:node:12229674199",
+      "sample": {
+        "stationId": "osm:node:12229674199",
+        "prefectureCode": "JP-47",
+        "name": null,
+        "brand": null,
+        "address": null,
+        "lat": 26.1478967,
+        "lon": 127.6595988,
+        "straightLineDistanceKm": 1.124,
+        "objectLastModifiedAt": "2024-10-06T13:28:58Z",
+        "osmUrl": "https://www.openstreetmap.org/node/12229674199",
+        "fieldsToCheck": [
+          "name",
+          "address",
+          "openingHours",
+          "serviceType",
+          "fuelRegular",
+          "paymentVisa",
+          "paymentMastercard"
+        ]
+      },
+      "branches": [
+        "nippon-naha-airport-toyosaki"
+      ],
+      "status": "PENDING_IDENTITY",
+      "reason": "名称与地址未记录；本轮有限核对未建立可审计的官方身份对应。",
+      "examinedUrl": null
+    },
+    {
+      "stationId": "osm:node:5885023027",
+      "sample": {
+        "stationId": "osm:node:5885023027",
+        "prefectureCode": "JP-47",
+        "name": "ファミリー給油所",
+        "brand": null,
+        "address": "沖縄県豊見城市与根３２１−８",
+        "lat": 26.1647356,
+        "lon": 127.6638369,
+        "straightLineDistanceKm": 1.308,
+        "objectLastModifiedAt": "2018-09-05T15:32:23Z",
+        "osmUrl": "https://www.openstreetmap.org/node/5885023027",
+        "fieldsToCheck": [
+          "openingHours",
+          "serviceType",
+          "fuelRegular",
+          "paymentVisa",
+          "paymentMastercard"
+        ]
+      },
+      "branches": [
+        "nippon-naha-airport-toyosaki"
+      ],
+      "status": "PENDING_IDENTITY",
+      "reason": "旧供应商名单与洗车页分别涉及与根321-8、321-7；未取得同一经营者和坐标的明确依据。",
+      "examinedUrl": "https://www.itcenex.com/ja/news/2019/u8jeun000000048f-att/2018shoplist.pdf"
+    },
+    {
+      "stationId": "osm:node:5694016271",
+      "sample": {
+        "stationId": "osm:node:5694016271",
+        "prefectureCode": "JP-01",
+        "name": "ENEOS",
+        "brand": "ENEOS",
+        "address": "北海道 千歳市 美々",
+        "lat": 42.796958,
+        "lon": 141.6772079,
+        "straightLineDistanceKm": 1.842,
+        "objectLastModifiedAt": "2018-06-16T01:13:05Z",
+        "osmUrl": "https://www.openstreetmap.org/node/5694016271",
+        "fieldsToCheck": [
+          "serviceType",
+          "fuelRegular",
+          "paymentVisa",
+          "paymentMastercard"
+        ]
+      },
+      "branches": [
+        "nippon-new-chitose-airport",
+        "toyota-new-chitose-airport-poplar"
+      ],
+      "status": "APPLIED",
+      "review": {
+        "osm": {
+          "address": "北海道 千歳市 美々",
+          "city": "千歳市",
+          "fuelDiesel": "UNKNOWN",
+          "fuelHighOctane": "UNKNOWN",
+          "fuelRegular": "UNKNOWN",
+          "id": "osm:node:5694016271",
+          "lat": 42.796958,
+          "lon": 141.6772079,
+          "name": "ENEOS",
+          "normalizedBrand": "ENEOS",
+          "openingHours": "08:00-19:00",
+          "originalBrand": "ENEOS",
+          "osmId": 5694016271,
+          "osmType": "node",
+          "paymentMastercard": "UNKNOWN",
+          "paymentVisa": "UNKNOWN",
+          "positionMethod": "OSM_NODE",
+          "prefectureCode": "JP-01",
+          "serviceType": "UNKNOWN",
+          "source": "osm",
+          "sourceUpdatedAt": "2018-06-16T01:13:05Z"
+        },
+        "url": "https://eneos-ss.com/search/ss/pc/print.php?SCODE=100568",
+        "checkedAt": "2026-10-01",
+        "referencePoint": {
+          "lat": 42.796930065528,
+          "lon": 141.677240894396
+        },
+        "facts": {
+          "name": "エアカーゴSS",
+          "address": "北海道千歳市美々",
+          "openingHours": "Mo-Su 08:00-17:30; Su[2,4] off"
+        },
+        "hoursKey": "station.hours.air-cargo"
+      },
+      "referenceDistanceMetres": 4.1
+    },
+    {
+      "stationId": "osm:node:5699750321",
+      "sample": {
+        "stationId": "osm:node:5699750321",
+        "prefectureCode": "JP-01",
+        "name": "出光",
+        "brand": "IDEMITSU",
+        "address": "北海道 千歳市 旭ヶ丘",
+        "lat": 42.828708,
+        "lon": 141.6792895,
+        "straightLineDistanceKm": 3.614,
+        "objectLastModifiedAt": "2018-06-18T14:39:15Z",
+        "osmUrl": "https://www.openstreetmap.org/node/5699750321",
+        "fieldsToCheck": [
+          "serviceType",
+          "fuelRegular",
+          "paymentVisa",
+          "paymentMastercard"
+        ]
+      },
+      "branches": [
+        "nippon-new-chitose-airport",
+        "times-new-chitose-airport",
+        "toyota-new-chitose-airport-poplar"
+      ],
+      "status": "APPLIED",
+      "review": {
+        "osm": {
+          "address": "北海道 千歳市 旭ヶ丘",
+          "city": "千歳市",
+          "fuelDiesel": "UNKNOWN",
+          "fuelHighOctane": "UNKNOWN",
+          "fuelRegular": "UNKNOWN",
+          "id": "osm:node:5699750321",
+          "lat": 42.828708,
+          "lon": 141.6792895,
+          "name": "出光",
+          "normalizedBrand": "Idemitsu",
+          "openingHours": "Mo-Sa 07:30-19:30; Su 08:00-19:00; PH 08:00-19:00",
+          "originalBrand": "IDEMITSU",
+          "osmId": 5699750321,
+          "osmType": "node",
+          "paymentMastercard": "UNKNOWN",
+          "paymentVisa": "UNKNOWN",
+          "positionMethod": "OSM_NODE",
+          "prefectureCode": "JP-01",
+          "serviceType": "UNKNOWN",
+          "source": "osm",
+          "sourceUpdatedAt": "2018-06-18T14:39:15Z"
+        },
+        "url": "https://map.idemitsu.com/b/a/info/0000000475/",
+        "checkedAt": "2026-10-01",
+        "referencePoint": {
+          "lat": 42.82876668512885,
+          "lon": 141.6791663888889
+        },
+        "facts": {
+          "name": "千歳旭ヶ丘SS",
+          "address": "北海道千歳市旭ヶ丘1-4",
+          "openingHours": "Mo-Sa 07:30-19:30; Su off; PH 08:00-19:00",
+          "serviceType": "FULL"
+        }
+      },
+      "referenceDistanceMetres": 12.0
+    },
+    {
+      "stationId": "osm:node:1728983361",
+      "sample": {
+        "stationId": "osm:node:1728983361",
+        "prefectureCode": "JP-01",
+        "name": "昭和シェル",
+        "brand": "昭和シェル",
+        "address": null,
+        "lat": 42.7674028,
+        "lon": 141.7096535,
+        "straightLineDistanceKm": 3.694,
+        "objectLastModifiedAt": "2021-02-10T18:26:00Z",
+        "osmUrl": "https://www.openstreetmap.org/node/1728983361",
+        "fieldsToCheck": [
+          "address",
+          "openingHours",
+          "serviceType",
+          "fuelRegular",
+          "paymentVisa",
+          "paymentMastercard"
+        ]
+      },
+      "branches": [
+        "nippon-new-chitose-airport"
+      ],
+      "status": "PENDING_IDENTITY",
+      "reason": "品牌与旧记录不足以确定当前设施；官方36号千歳页面的位置不同，未将昭和シェル推断为新品牌。",
+      "examinedUrl": "https://map.idemitsu.com/b/a/info/0000000064/"
+    },
+    {
+      "stationId": "osm:way:552140624",
+      "sample": {
+        "stationId": "osm:way:552140624",
+        "prefectureCode": "JP-40",
+        "name": null,
+        "brand": "ESSO",
+        "address": null,
+        "lat": 33.5814841,
+        "lon": 130.4423321,
+        "straightLineDistanceKm": 0.164,
+        "objectLastModifiedAt": "2019-10-28T13:34:31Z",
+        "osmUrl": "https://www.openstreetmap.org/way/552140624",
+        "fieldsToCheck": [
+          "name",
+          "address",
+          "openingHours",
+          "serviceType",
+          "fuelRegular",
+          "paymentVisa",
+          "paymentMastercard"
+        ]
+      },
+      "branches": [
+        "times-fukuoka-airport-international",
+        "toyota-fukuoka-airport-international"
+      ],
+      "status": "PENDING_IDENTITY",
+      "reason": "旧ESSO品牌记录无完整地址，未找到能确切对应当前坐标的官方资料，未推断重命名。",
+      "examinedUrl": null
+    },
+    {
+      "stationId": "osm:way:552140600",
+      "sample": {
+        "stationId": "osm:way:552140600",
+        "prefectureCode": "JP-40",
+        "name": null,
+        "brand": null,
+        "address": null,
+        "lat": 33.5832486,
+        "lon": 130.4405383,
+        "straightLineDistanceKm": 0.391,
+        "objectLastModifiedAt": "2025-05-21T02:45:54Z",
+        "osmUrl": "https://www.openstreetmap.org/way/552140600",
+        "fieldsToCheck": [
+          "name",
+          "address",
+          "openingHours",
+          "serviceType",
+          "fuelRegular",
+          "paymentVisa",
+          "paymentMastercard"
+        ]
+      },
+      "branches": [
+        "times-fukuoka-airport-international",
+        "toyota-fukuoka-airport-international"
+      ],
+      "status": "PENDING_IDENTITY",
+      "reason": "无名称与地址，未找到能确切对应当前OSM坐标的公司官方设施资料。",
+      "examinedUrl": null
+    },
+    {
+      "stationId": "osm:way:1506862453",
+      "sample": {
+        "stationId": "osm:way:1506862453",
+        "prefectureCode": "JP-40",
+        "name": "ENEOS",
+        "brand": "ENEOS",
+        "address": null,
+        "lat": 33.5831528,
+        "lon": 130.4372953,
+        "straightLineDistanceKm": 0.573,
+        "objectLastModifiedAt": "2026-04-30T12:44:16Z",
+        "osmUrl": "https://www.openstreetmap.org/way/1506862453",
+        "fieldsToCheck": [
+          "address",
+          "openingHours",
+          "serviceType",
+          "fuelRegular",
+          "paymentVisa",
+          "paymentMastercard"
+        ]
+      },
+      "branches": [
+        "times-fukuoka-airport-international",
+        "toyota-fukuoka-airport-international"
+      ],
+      "status": "APPLIED",
+      "review": {
+        "osm": {
+          "fuelDiesel": "UNKNOWN",
+          "fuelHighOctane": "UNKNOWN",
+          "fuelRegular": "UNKNOWN",
+          "id": "osm:way:1506862453",
+          "lat": 33.5831528,
+          "lon": 130.4372953,
+          "name": "ENEOS",
+          "normalizedBrand": "ENEOS",
+          "originalBrand": "ENEOS",
+          "osmId": 1506862453,
+          "osmType": "way",
+          "paymentMastercard": "UNKNOWN",
+          "paymentVisa": "UNKNOWN",
+          "positionMethod": "SURFACE_POINT",
+          "prefectureCode": "JP-40",
+          "serviceType": "UNKNOWN",
+          "source": "osm",
+          "sourceUpdatedAt": "2026-04-30T12:44:16Z"
+        },
+        "url": "https://eneos-ss.com/search/ss/pc/detail.php?SCODE=101639",
+        "checkedAt": "2026-10-01",
+        "referencePoint": {
+          "lat": 33.58315272946,
+          "lon": 130.437196317297
+        },
+        "facts": {
+          "name": "Dr.Drive半道橋店",
+          "address": "福岡県福岡市博多区半道橋1-3-10",
+          "openingHours": "Mo-Sa 07:00-21:00; Su,PH 08:00-20:00"
+        },
+        "hoursKey": "station.hours.handobashi"
+      },
+      "referenceDistanceMetres": 9.2
+    },
+    {
+      "stationId": "osm:node:5885054990",
+      "sample": {
+        "stationId": "osm:node:5885054990",
+        "prefectureCode": "JP-47",
+        "name": "沖縄港油沖縄港油給油所",
+        "brand": null,
+        "address": null,
+        "lat": 26.2125209,
+        "lon": 127.6691703,
+        "straightLineDistanceKm": 1.103,
+        "objectLastModifiedAt": "2018-09-05T15:31:39Z",
+        "osmUrl": "https://www.openstreetmap.org/node/5885054990",
+        "fieldsToCheck": [
+          "address",
+          "openingHours",
+          "serviceType",
+          "fuelRegular",
+          "paymentVisa",
+          "paymentMastercard"
+        ]
+      },
+      "branches": [
+        "times-naha-airport"
+      ],
+      "status": "APPLIED",
+      "review": {
+        "osm": {
+          "fuelDiesel": "UNKNOWN",
+          "fuelHighOctane": "UNKNOWN",
+          "fuelRegular": "UNKNOWN",
+          "id": "osm:node:5885054990",
+          "lat": 26.2125209,
+          "lon": 127.6691703,
+          "name": "沖縄港油沖縄港油給油所",
+          "osmId": 5885054990,
+          "osmType": "node",
+          "paymentMastercard": "UNKNOWN",
+          "paymentVisa": "UNKNOWN",
+          "positionMethod": "OSM_NODE",
+          "prefectureCode": "JP-47",
+          "serviceType": "UNKNOWN",
+          "source": "osm",
+          "sourceUpdatedAt": "2018-09-05T15:31:39Z"
+        },
+        "url": "https://eneos-ss.com/search/ss/pc/detail.php?SCODE=980203",
+        "checkedAt": "2026-10-01",
+        "referencePoint": {
+          "lat": 26.212531380454,
+          "lon": 127.66917067558
+        },
+        "facts": {
+          "name": "沖縄港油給油所",
+          "address": "沖縄県那覇市西2-11-1"
+        }
+      },
+      "referenceDistanceMetres": 1.2
+    },
+    {
+      "stationId": "osm:way:105018159",
+      "sample": {
+        "stationId": "osm:way:105018159",
+        "prefectureCode": "JP-47",
+        "name": "アポロステーション",
+        "brand": "apollostation",
+        "address": "沖縄県 那覇市 金城 17",
+        "lat": 26.2018907,
+        "lon": 127.6622922,
+        "straightLineDistanceKm": 1.126,
+        "objectLastModifiedAt": "2022-12-24T13:40:56Z",
+        "osmUrl": "https://www.openstreetmap.org/way/105018159",
+        "fieldsToCheck": [
+          "openingHours",
+          "serviceType",
+          "fuelRegular",
+          "paymentVisa",
+          "paymentMastercard"
+        ]
+      },
+      "branches": [
+        "times-naha-airport"
+      ],
+      "status": "APPLIED",
+      "review": {
+        "osm": {
+          "address": "沖縄県 那覇市 金城 17",
+          "city": "那覇市",
+          "fuelDiesel": "UNKNOWN",
+          "fuelHighOctane": "UNKNOWN",
+          "fuelRegular": "UNKNOWN",
+          "id": "osm:way:105018159",
+          "lat": 26.2018907,
+          "lon": 127.6622922,
+          "name": "アポロステーション",
+          "normalizedBrand": "apollostation",
+          "originalBrand": "apollostation",
+          "osmId": 105018159,
+          "osmType": "way",
+          "paymentMastercard": "UNKNOWN",
+          "paymentVisa": "UNKNOWN",
+          "positionMethod": "SURFACE_POINT",
+          "prefectureCode": "JP-47",
+          "serviceType": "UNKNOWN",
+          "source": "osm",
+          "sourceUpdatedAt": "2022-12-24T13:40:56Z"
+        },
+        "url": "https://map.idemitsu.com/b/a/info/0000019739/",
+        "checkedAt": "2026-10-01",
+        "referencePoint": {
+          "lat": 26.201988521605674,
+          "lon": 127.66224944444444
+        },
+        "facts": {
+          "name": "小禄金城SS",
+          "address": "沖縄県那覇市金城3-8-17",
+          "openingHours": "Mo-Su 07:00-21:00",
+          "serviceType": "FULL"
+        },
+        "hoursKey": "station.hours.oroku-kinjo"
+      },
+      "referenceDistanceMetres": 11.7
+    },
+    {
+      "stationId": "osm:way:542121944",
+      "sample": {
+        "stationId": "osm:way:542121944",
+        "prefectureCode": "JP-47",
+        "name": "エネオス",
+        "brand": "エネオス",
+        "address": null,
+        "lat": 26.2185249,
+        "lon": 127.6687051,
+        "straightLineDistanceKm": 1.319,
+        "objectLastModifiedAt": "2019-10-12T06:09:28Z",
+        "osmUrl": "https://www.openstreetmap.org/way/542121944",
+        "fieldsToCheck": [
+          "address",
+          "openingHours",
+          "serviceType",
+          "fuelRegular",
+          "paymentVisa",
+          "paymentMastercard"
+        ]
+      },
+      "branches": [
+        "times-naha-airport"
+      ],
+      "status": "PENDING_IDENTITY",
+      "reason": "有多个周边ENEOS候选，未用波之上海岸或前岛等附近设施代替这一OSM对象。",
+      "examinedUrl": "https://shiraishi-okinawa.jp/dept/ss/"
+    },
+    {
+      "stationId": "osm:way:1491375956",
+      "sample": {
+        "stationId": "osm:way:1491375956",
+        "prefectureCode": "JP-01",
+        "name": "ENEOS",
+        "brand": "ENEOS",
+        "address": "北海道 千歳市 16",
+        "lat": 42.8270554,
+        "lon": 141.6724601,
+        "straightLineDistanceKm": 1.26,
+        "objectLastModifiedAt": "2026-03-22T02:32:07Z",
+        "osmUrl": "https://www.openstreetmap.org/way/1491375956",
+        "fieldsToCheck": [
+          "fuelRegular",
+          "paymentVisa",
+          "paymentMastercard"
+        ]
+      },
+      "branches": [
+        "times-new-chitose-airport",
+        "toyota-new-chitose-airport-poplar"
+      ],
+      "status": "APPLIED",
+      "review": {
+        "osm": {
+          "address": "北海道 千歳市 16",
+          "city": "千歳市",
+          "fuelDiesel": "YES",
+          "fuelHighOctane": "UNKNOWN",
+          "fuelRegular": "UNKNOWN",
+          "id": "osm:way:1491375956",
+          "lat": 42.8270554,
+          "lon": 141.6724601,
+          "name": "ENEOS",
+          "normalizedBrand": "ENEOS",
+          "openingHours": "Mo-Su,PH 08:00-19:00; Jan 1 off",
+          "originalBrand": "ENEOS",
+          "osmId": 1491375956,
+          "osmType": "way",
+          "paymentMastercard": "UNKNOWN",
+          "paymentVisa": "UNKNOWN",
+          "positionMethod": "SURFACE_POINT",
+          "prefectureCode": "JP-01",
+          "serviceType": "FULL",
+          "source": "osm",
+          "sourceUpdatedAt": "2026-03-22T02:32:07Z"
+        },
+        "url": "https://eneos-ss.com/search/ss/pc/detail.php?SCODE=109202",
+        "checkedAt": "2026-10-01",
+        "referencePoint": {
+          "lat": 42.82703782011,
+          "lon": 141.672267359723
+        },
+        "facts": {
+          "name": "日の出SS",
+          "address": "北海道千歳市日の出3-15-16",
+          "openingHours": "Mo-Su,PH 08:00-19:00; Jan 01 off"
+        }
+      },
+      "referenceDistanceMetres": 15.8
+    },
+    {
+      "stationId": "osm:node:3080117815",
+      "sample": {
+        "stationId": "osm:node:3080117815",
+        "prefectureCode": "JP-01",
+        "name": "コスモ石油",
+        "brand": "コスモ",
+        "address": "北海道 千歳市 朝日町 63",
+        "lat": 42.8208752,
+        "lon": 141.6582345,
+        "straightLineDistanceKm": 1.79,
+        "objectLastModifiedAt": "2026-01-08T00:14:08Z",
+        "osmUrl": "https://www.openstreetmap.org/node/3080117815",
+        "fieldsToCheck": [
+          "serviceType",
+          "fuelRegular",
+          "paymentVisa",
+          "paymentMastercard"
+        ]
+      },
+      "branches": [
+        "times-new-chitose-airport"
+      ],
+      "status": "APPLIED",
+      "review": {
+        "osm": {
+          "address": "北海道 千歳市 朝日町 63",
+          "city": "千歳市",
+          "fuelDiesel": "UNKNOWN",
+          "fuelHighOctane": "UNKNOWN",
+          "fuelRegular": "UNKNOWN",
+          "id": "osm:node:3080117815",
+          "lat": 42.8208752,
+          "lon": 141.6582345,
+          "name": "コスモ石油",
+          "openingHours": "24/7",
+          "originalBrand": "コスモ",
+          "osmId": 3080117815,
+          "osmType": "node",
+          "paymentMastercard": "UNKNOWN",
+          "paymentVisa": "UNKNOWN",
+          "positionMethod": "OSM_NODE",
+          "prefectureCode": "JP-01",
+          "serviceType": "UNKNOWN",
+          "source": "osm",
+          "sourceUpdatedAt": "2026-01-08T00:14:08Z"
+        },
+        "url": "https://www.kitanihon-oil.co.jp/reserve/consumer/7730",
+        "checkedAt": "2026-10-01",
+        "referencePoint": {
+          "lat": 42.82094245288167,
+          "lon": 141.65823387232993
+        },
+        "facts": {
+          "name": "千歳空港SS",
+          "address": "北海道千歳市朝日町8丁目1206番地63",
+          "openingHours": "24/7",
+          "serviceType": "SELF"
+        }
+      },
+      "referenceDistanceMetres": 7.5
+    },
+    {
+      "stationId": "osm:node:9769756829",
+      "sample": {
+        "stationId": "osm:node:9769756829",
+        "prefectureCode": "JP-47",
+        "name": null,
+        "brand": null,
+        "address": null,
+        "lat": 26.1731222,
+        "lon": 127.6520464,
+        "straightLineDistanceKm": 0.07,
+        "objectLastModifiedAt": "2022-05-25T12:58:38Z",
+        "osmUrl": "https://www.openstreetmap.org/node/9769756829",
+        "fieldsToCheck": [
+          "name",
+          "address",
+          "openingHours",
+          "serviceType",
+          "fuelRegular",
+          "paymentVisa",
+          "paymentMastercard"
+        ]
+      },
+      "branches": [
+        "toyota-naha-airport-seaside"
+      ],
+      "status": "PENDING_IDENTITY",
+      "reason": "邻近Toyota租车设施的无名加油设备；是否面向公众、能否作为独立加油站未确认，不能按附近关系补全。",
+      "examinedUrl": null
+    },
+    {
+      "stationId": "osm:way:1016540329",
+      "sample": {
+        "stationId": "osm:way:1016540329",
+        "prefectureCode": "JP-47",
+        "name": "ENEOS",
+        "brand": "ENEOS",
+        "address": "沖縄県 那覇市 具志 国道331号 1",
+        "lat": 26.1781151,
+        "lon": 127.6529817,
+        "straightLineDistanceKm": 0.632,
+        "objectLastModifiedAt": "2024-10-06T13:28:58Z",
+        "osmUrl": "https://www.openstreetmap.org/way/1016540329",
+        "fieldsToCheck": [
+          "openingHours",
+          "serviceType",
+          "fuelRegular",
+          "paymentVisa",
+          "paymentMastercard"
+        ]
+      },
+      "branches": [
+        "toyota-naha-airport-seaside"
+      ],
+      "status": "PENDING_IDENTITY",
+      "reason": "可能涉及セルフ小禄バイパス；官方参考点距OSM约61米，地址也未确切匹配，暂不合并。",
+      "examinedUrl": "https://eneos-ss.com/search/ss/pc/detail.php?SCODE=701869"
+    },
+    {
+      "stationId": "osm:node:1993185924",
+      "sample": {
+        "stationId": "osm:node:1993185924",
+        "prefectureCode": "JP-47",
+        "name": "エネオス",
+        "brand": "ENEOS",
+        "address": null,
+        "lat": 26.18355,
+        "lon": 127.6558187,
+        "straightLineDistanceKm": 1.289,
+        "objectLastModifiedAt": "2024-12-22T14:29:28Z",
+        "osmUrl": "https://www.openstreetmap.org/node/1993185924",
+        "fieldsToCheck": [
+          "address",
+          "openingHours",
+          "serviceType",
+          "fuelRegular",
+          "paymentVisa",
+          "paymentMastercard"
+        ]
+      },
+      "branches": [
+        "toyota-naha-airport-seaside"
+      ],
+      "status": "APPLIED",
+      "review": {
+        "osm": {
+          "fuelDiesel": "UNKNOWN",
+          "fuelHighOctane": "UNKNOWN",
+          "fuelRegular": "UNKNOWN",
+          "id": "osm:node:1993185924",
+          "lat": 26.18355,
+          "lon": 127.6558187,
+          "name": "エネオス",
+          "normalizedBrand": "ENEOS",
+          "originalBrand": "ENEOS",
+          "osmId": 1993185924,
+          "osmType": "node",
+          "paymentMastercard": "UNKNOWN",
+          "paymentVisa": "UNKNOWN",
+          "positionMethod": "OSM_NODE",
+          "prefectureCode": "JP-47",
+          "serviceType": "UNKNOWN",
+          "source": "osm",
+          "sourceUpdatedAt": "2024-12-22T14:29:28Z"
+        },
+        "url": "https://eneos-ss.com/search/ss/pc/detail.php?SCODE=980166",
+        "checkedAt": "2026-10-01",
+        "referencePoint": {
+          "lat": 26.183311747711,
+          "lon": 127.655867876228
+        },
+        "facts": {
+          "name": "EneJet Dr.Drive小禄店",
+          "address": "沖縄県那覇市具志1-15-1",
+          "openingHours": "24/7"
+        }
+      },
+      "referenceDistanceMetres": 26.9
+    }
+  ]
+}

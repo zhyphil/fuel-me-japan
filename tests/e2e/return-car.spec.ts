@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import { test, expect } from "./offline";
 import { chooseFuels } from "./fuel-selection";
 import { FUEL_PREFERENCE_KEY } from "../../src/lib/fuel-preference";
-import { fixtures, rentalFixtures, stationFixtures, stationRow, nahaRows, naha, chitose, officialBranches, rentalIndex, rentalManifest, rentalManifestUrl, messages, locales, openDetail, switchBranch, detailPath, destination, observations, storageSnapshot, watchPageErrors, evidencePath } from "./rental-fixtures";
+import { fixtures, rentalFixtures, stationFixtures, stationRow, nahaRows, naha, chitose, officialBranches, rentalIndex, rentalManifest, rentalManifestUrl, rentalLocation, messages, locales, openDetail, switchBranch, detailPath, destination, observations, storageSnapshot, watchPageErrors, evidencePath } from "./rental-fixtures";
 
 const point = (row: { lat: number; lon: number }) => `${row.lat},${row.lon}`;
 
@@ -181,10 +181,13 @@ test("empty nearby records are explicit and offer a return to the fuel map", asy
 });
 
 test("ninety-day-old sources retain their real check date and require rechecking", async ({ page }) => {
-  await fixtures(page); await page.clock.setFixedTime(new Date("2026-12-29T00:00:00Z")); const detail = await openDetail(page);
+  await fixtures(page);
+  const checkedAt = rentalLocation(naha).official!.checkedAt;
+  await page.clock.setFixedTime(new Date(Date.parse(`${checkedAt}T00:00:00Z`) + 90 * 86400000));
+  const detail = await openDetail(page);
   await expect(detail.locator(".rental-official-notes").getByRole("alert")).toHaveText(messages.en.rdStale);
   await expect(detail.locator(".return-car-rules").getByRole("alert")).toHaveText(messages.en.rdStale);
-  await expect(detail.getByText(messages.en.rcChecked.replace("{date}", "2026-09-30"), { exact: true })).toBeVisible();
+  await expect(detail.getByText(messages.en.rcChecked.replace("{date}", checkedAt), { exact: true })).toBeVisible();
 });
 
 test("leaving while a branch request is pending aborts it and cannot restore its address in the directory", async ({ page }) => {

@@ -1,0 +1,323 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-10-01",
+  "scope": "有限的人工公开事实核对；不复制官网图片或地图，不表示整库许可、品牌更新、车辆入口或实时营业核验。",
+  "records": [
+    {
+      "osm": {
+        "address": "北海道 千歳市 旭ヶ丘",
+        "city": "千歳市",
+        "fuelDiesel": "UNKNOWN",
+        "fuelHighOctane": "UNKNOWN",
+        "fuelRegular": "UNKNOWN",
+        "id": "osm:node:5699750321",
+        "lat": 42.828708,
+        "lon": 141.6792895,
+        "name": "出光",
+        "normalizedBrand": "Idemitsu",
+        "openingHours": "Mo-Sa 07:30-19:30; Su 08:00-19:00; PH 08:00-19:00",
+        "originalBrand": "IDEMITSU",
+        "osmId": 5699750321,
+        "osmType": "node",
+        "paymentMastercard": "UNKNOWN",
+        "paymentVisa": "UNKNOWN",
+        "positionMethod": "OSM_NODE",
+        "prefectureCode": "JP-01",
+        "serviceType": "UNKNOWN",
+        "source": "osm",
+        "sourceUpdatedAt": "2018-06-18T14:39:15Z"
+      },
+      "url": "https://map.idemitsu.com/b/a/info/0000000475/",
+      "checkedAt": "2026-10-01",
+      "referencePoint": {
+        "lat": 42.82876668512885,
+        "lon": 141.6791663888889
+      },
+      "facts": {
+        "name": "千歳旭ヶ丘SS",
+        "address": "北海道千歳市旭ヶ丘1-4",
+        "openingHours": "Mo-Sa 07:30-19:30; Su off; PH 08:00-19:00",
+        "serviceType": "FULL"
+      }
+    },
+    {
+      "osm": {
+        "address": "沖縄県 那覇市 金城 17",
+        "city": "那覇市",
+        "fuelDiesel": "UNKNOWN",
+        "fuelHighOctane": "UNKNOWN",
+        "fuelRegular": "UNKNOWN",
+        "id": "osm:way:105018159",
+        "lat": 26.2018907,
+        "lon": 127.6622922,
+        "name": "アポロステーション",
+        "normalizedBrand": "apollostation",
+        "originalBrand": "apollostation",
+        "osmId": 105018159,
+        "osmType": "way",
+        "paymentMastercard": "UNKNOWN",
+        "paymentVisa": "UNKNOWN",
+        "positionMethod": "SURFACE_POINT",
+        "prefectureCode": "JP-47",
+        "serviceType": "UNKNOWN",
+        "source": "osm",
+        "sourceUpdatedAt": "2022-12-24T13:40:56Z"
+      },
+      "url": "https://map.idemitsu.com/b/a/info/0000019739/",
+      "checkedAt": "2026-10-01",
+      "referencePoint": {
+        "lat": 26.201988521605674,
+        "lon": 127.66224944444444
+      },
+      "facts": {
+        "name": "小禄金城SS",
+        "address": "沖縄県那覇市金城3-8-17",
+        "openingHours": "Mo-Su 07:00-21:00",
+        "serviceType": "FULL"
+      },
+      "hoursKey": "station.hours.oroku-kinjo"
+    },
+    {
+      "osm": {
+        "address": "北海道 千歳市 16",
+        "city": "千歳市",
+        "fuelDiesel": "YES",
+        "fuelHighOctane": "UNKNOWN",
+        "fuelRegular": "UNKNOWN",
+        "id": "osm:way:1491375956",
+        "lat": 42.8270554,
+        "lon": 141.6724601,
+        "name": "ENEOS",
+        "normalizedBrand": "ENEOS",
+        "openingHours": "Mo-Su,PH 08:00-19:00; Jan 1 off",
+        "originalBrand": "ENEOS",
+        "osmId": 1491375956,
+        "osmType": "way",
+        "paymentMastercard": "UNKNOWN",
+        "paymentVisa": "UNKNOWN",
+        "positionMethod": "SURFACE_POINT",
+        "prefectureCode": "JP-01",
+        "serviceType": "FULL",
+        "source": "osm",
+        "sourceUpdatedAt": "2026-03-22T02:32:07Z"
+      },
+      "url": "https://eneos-ss.com/search/ss/pc/detail.php?SCODE=109202",
+      "checkedAt": "2026-10-01",
+      "referencePoint": {
+        "lat": 42.82703782011,
+        "lon": 141.672267359723
+      },
+      "facts": {
+        "name": "日の出SS",
+        "address": "北海道千歳市日の出3-15-16",
+        "openingHours": "Mo-Su,PH 08:00-19:00; Jan 01 off"
+      }
+    },
+    {
+      "osm": {
+        "address": "北海道 千歳市 美々",
+        "city": "千歳市",
+        "fuelDiesel": "UNKNOWN",
+        "fuelHighOctane": "UNKNOWN",
+        "fuelRegular": "UNKNOWN",
+        "id": "osm:node:5694016271",
+        "lat": 42.796958,
+        "lon": 141.6772079,
+        "name": "ENEOS",
+        "normalizedBrand": "ENEOS",
+        "openingHours": "08:00-19:00",
+        "originalBrand": "ENEOS",
+        "osmId": 5694016271,
+        "osmType": "node",
+        "paymentMastercard": "UNKNOWN",
+        "paymentVisa": "UNKNOWN",
+        "positionMethod": "OSM_NODE",
+        "prefectureCode": "JP-01",
+        "serviceType": "UNKNOWN",
+        "source": "osm",
+        "sourceUpdatedAt": "2018-06-16T01:13:05Z"
+      },
+      "url": "https://eneos-ss.com/search/ss/pc/print.php?SCODE=100568",
+      "checkedAt": "2026-10-01",
+      "referencePoint": {
+        "lat": 42.796930065528,
+        "lon": 141.677240894396
+      },
+      "facts": {
+        "name": "エアカーゴSS",
+        "address": "北海道千歳市美々",
+        "openingHours": "Mo-Su 08:00-17:30; Su[2,4] off"
+      },
+      "hoursKey": "station.hours.air-cargo"
+    },
+    {
+      "osm": {
+        "fuelDiesel": "UNKNOWN",
+        "fuelHighOctane": "UNKNOWN",
+        "fuelRegular": "UNKNOWN",
+        "id": "osm:node:5885054990",
+        "lat": 26.2125209,
+        "lon": 127.6691703,
+        "name": "沖縄港油沖縄港油給油所",
+        "osmId": 5885054990,
+        "osmType": "node",
+        "paymentMastercard": "UNKNOWN",
+        "paymentVisa": "UNKNOWN",
+        "positionMethod": "OSM_NODE",
+        "prefectureCode": "JP-47",
+        "serviceType": "UNKNOWN",
+        "source": "osm",
+        "sourceUpdatedAt": "2018-09-05T15:31:39Z"
+      },
+      "url": "https://eneos-ss.com/search/ss/pc/detail.php?SCODE=980203",
+      "checkedAt": "2026-10-01",
+      "referencePoint": {
+        "lat": 26.212531380454,
+        "lon": 127.66917067558
+      },
+      "facts": {
+        "name": "沖縄港油給油所",
+        "address": "沖縄県那覇市西2-11-1"
+      }
+    },
+    {
+      "osm": {
+        "fuelDiesel": "UNKNOWN",
+        "fuelHighOctane": "UNKNOWN",
+        "fuelRegular": "UNKNOWN",
+        "id": "osm:node:1993185924",
+        "lat": 26.18355,
+        "lon": 127.6558187,
+        "name": "エネオス",
+        "normalizedBrand": "ENEOS",
+        "originalBrand": "ENEOS",
+        "osmId": 1993185924,
+        "osmType": "node",
+        "paymentMastercard": "UNKNOWN",
+        "paymentVisa": "UNKNOWN",
+        "positionMethod": "OSM_NODE",
+        "prefectureCode": "JP-47",
+        "serviceType": "UNKNOWN",
+        "source": "osm",
+        "sourceUpdatedAt": "2024-12-22T14:29:28Z"
+      },
+      "url": "https://eneos-ss.com/search/ss/pc/detail.php?SCODE=980166",
+      "checkedAt": "2026-10-01",
+      "referencePoint": {
+        "lat": 26.183311747711,
+        "lon": 127.655867876228
+      },
+      "facts": {
+        "name": "EneJet Dr.Drive小禄店",
+        "address": "沖縄県那覇市具志1-15-1",
+        "openingHours": "24/7"
+      }
+    },
+    {
+      "osm": {
+        "address": "沖縄県 豊見城市 豊崎 40",
+        "city": "豊見城市",
+        "fuelDiesel": "UNKNOWN",
+        "fuelHighOctane": "UNKNOWN",
+        "fuelRegular": "UNKNOWN",
+        "id": "osm:node:1993185911",
+        "lat": 26.1585022,
+        "lon": 127.6547206,
+        "name": "ENEOS",
+        "normalizedBrand": "ENEOS",
+        "originalBrand": "ENEOS",
+        "osmId": 1993185911,
+        "osmType": "node",
+        "paymentMastercard": "UNKNOWN",
+        "paymentVisa": "UNKNOWN",
+        "positionMethod": "OSM_NODE",
+        "prefectureCode": "JP-47",
+        "serviceType": "UNKNOWN",
+        "source": "osm",
+        "sourceUpdatedAt": "2023-08-20T14:23:04Z"
+      },
+      "url": "https://eneos-ss.com/search/ss/pc/detail.php?SCODE=980219",
+      "checkedAt": "2026-10-01",
+      "referencePoint": {
+        "lat": 26.158397387909,
+        "lon": 127.654508040503
+      },
+      "facts": {
+        "name": "豊崎店",
+        "address": "沖縄県豊見城市字豊崎3-40",
+        "openingHours": "08:00-19:00"
+      },
+      "hoursKey": "station.hours.toyosaki"
+    },
+    {
+      "osm": {
+        "fuelDiesel": "UNKNOWN",
+        "fuelHighOctane": "UNKNOWN",
+        "fuelRegular": "UNKNOWN",
+        "id": "osm:way:1506862453",
+        "lat": 33.5831528,
+        "lon": 130.4372953,
+        "name": "ENEOS",
+        "normalizedBrand": "ENEOS",
+        "originalBrand": "ENEOS",
+        "osmId": 1506862453,
+        "osmType": "way",
+        "paymentMastercard": "UNKNOWN",
+        "paymentVisa": "UNKNOWN",
+        "positionMethod": "SURFACE_POINT",
+        "prefectureCode": "JP-40",
+        "serviceType": "UNKNOWN",
+        "source": "osm",
+        "sourceUpdatedAt": "2026-04-30T12:44:16Z"
+      },
+      "url": "https://eneos-ss.com/search/ss/pc/detail.php?SCODE=101639",
+      "checkedAt": "2026-10-01",
+      "referencePoint": {
+        "lat": 33.58315272946,
+        "lon": 130.437196317297
+      },
+      "facts": {
+        "name": "Dr.Drive半道橋店",
+        "address": "福岡県福岡市博多区半道橋1-3-10",
+        "openingHours": "Mo-Sa 07:00-21:00; Su,PH 08:00-20:00"
+      },
+      "hoursKey": "station.hours.handobashi"
+    },
+    {
+      "osm": {
+        "address": "北海道 千歳市 朝日町 63",
+        "city": "千歳市",
+        "fuelDiesel": "UNKNOWN",
+        "fuelHighOctane": "UNKNOWN",
+        "fuelRegular": "UNKNOWN",
+        "id": "osm:node:3080117815",
+        "lat": 42.8208752,
+        "lon": 141.6582345,
+        "name": "コスモ石油",
+        "openingHours": "24/7",
+        "originalBrand": "コスモ",
+        "osmId": 3080117815,
+        "osmType": "node",
+        "paymentMastercard": "UNKNOWN",
+        "paymentVisa": "UNKNOWN",
+        "positionMethod": "OSM_NODE",
+        "prefectureCode": "JP-01",
+        "serviceType": "UNKNOWN",
+        "source": "osm",
+        "sourceUpdatedAt": "2026-01-08T00:14:08Z"
+      },
+      "url": "https://www.kitanihon-oil.co.jp/reserve/consumer/7730",
+      "checkedAt": "2026-10-01",
+      "referencePoint": {
+        "lat": 42.82094245288167,
+        "lon": 141.65823387232993
+      },
+      "facts": {
+        "name": "千歳空港SS",
+        "address": "北海道千歳市朝日町8丁目1206番地63",
+        "openingHours": "24/7",
+        "serviceType": "SELF"
+      }
+    }
+  ]
+}

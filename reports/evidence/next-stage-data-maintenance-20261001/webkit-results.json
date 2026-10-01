@@ -1,0 +1,535 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node@24/24.14.0_1/bin/node",
+      "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/node_modules/.bin/playwright",
+      "test",
+      "--config=/tmp/fmj-next-stage-webkit.config.mjs"
+    ],
+    "configFile": "/tmp/fmj-next-stage-webkit.config.mjs",
+    "rootDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/fmj-next-stage-webkit-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "Mobile-WebKit",
+        "name": "Mobile-WebKit",
+        "testDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "reviewed-operations.spec.ts",
+          "return-car.spec.ts",
+          "return-candidate-browser.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/tmp/fmj-next-stage-webkit-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "Desktop-WebKit",
+        "name": "Desktop-WebKit",
+        "testDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "reviewed-operations.spec.ts",
+          "return-car.spec.ts",
+          "return-candidate-browser.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/tmp/fmj-next-stage-evidence-20261001/webkit-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 2,
+    "webServer": {
+      "command": "npm run preview -- --port 4186 --strictPort",
+      "cwd": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan",
+      "url": "http://127.0.0.1:4186",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "return-car.spec.ts",
+      "file": "return-car.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "ninety-day-old sources retain their real check date and require rechecking",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Mobile-WebKit",
+              "projectName": "Mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1658,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T19:38:54.666Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-623214c9338d62f10d63",
+          "file": "return-car.spec.ts",
+          "line": 183,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "reviewed-operations.spec.ts",
+      "file": "reviewed-operations.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "reviewed airport hours and correct return lead times en",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Mobile-WebKit",
+              "projectName": "Mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 7235,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T19:39:32.849Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4205ba9398c0a2edf4c0-4209052fdb97c33c975f",
+          "file": "reviewed-operations.spec.ts",
+          "line": 5,
+          "column": 31
+        },
+        {
+          "title": "reviewed airport hours and correct return lead times zh-Hant",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Mobile-WebKit",
+              "projectName": "Mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7175,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T19:39:34.165Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4205ba9398c0a2edf4c0-2cfb02540613b0c2eec5",
+          "file": "reviewed-operations.spec.ts",
+          "line": 5,
+          "column": 31
+        },
+        {
+          "title": "reviewed airport hours and correct return lead times ko",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Mobile-WebKit",
+              "projectName": "Mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 7059,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T19:39:40.413Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4205ba9398c0a2edf4c0-a445f6e2b071a48c524e",
+          "file": "reviewed-operations.spec.ts",
+          "line": 5,
+          "column": 31
+        },
+        {
+          "title": "reviewed airport hours and correct return lead times zh-Hans",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Mobile-WebKit",
+              "projectName": "Mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7017,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T19:39:41.346Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4205ba9398c0a2edf4c0-fdb29e72672ea785f05c",
+          "file": "reviewed-operations.spec.ts",
+          "line": 5,
+          "column": 31
+        },
+        {
+          "title": "reviewed airport hours and correct return lead times th",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Mobile-WebKit",
+              "projectName": "Mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 7221,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T19:39:47.476Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4205ba9398c0a2edf4c0-5cd694bba01965675637",
+          "file": "reviewed-operations.spec.ts",
+          "line": 5,
+          "column": 31
+        },
+        {
+          "title": "station exceptions, original evidence and navigation remain intact en",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Mobile-WebKit",
+              "projectName": "Mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1151,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T19:39:48.370Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4205ba9398c0a2edf4c0-a5d672288b575b925d9a",
+          "file": "reviewed-operations.spec.ts",
+          "line": 16,
+          "column": 31
+        },
+        {
+          "title": "station exceptions, original evidence and navigation remain intact zh-Hant",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Mobile-WebKit",
+              "projectName": "Mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1252,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T19:39:49.528Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4205ba9398c0a2edf4c0-ca7efa5187ed8b9a155b",
+          "file": "reviewed-operations.spec.ts",
+          "line": 16,
+          "column": 31
+        },
+        {
+          "title": "station exceptions, original evidence and navigation remain intact ko",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Mobile-WebKit",
+              "projectName": "Mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1189,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T19:39:50.788Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4205ba9398c0a2edf4c0-b2f6b9032b774c1a1ded",
+          "file": "reviewed-operations.spec.ts",
+          "line": 16,
+          "column": 31
+        },
+        {
+          "title": "station exceptions, original evidence and navigation remain intact zh-Hans",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Mobile-WebKit",
+              "projectName": "Mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1257,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T19:39:51.989Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4205ba9398c0a2edf4c0-dafc6e077846dde10d3e",
+          "file": "reviewed-operations.spec.ts",
+          "line": 16,
+          "column": 31
+        },
+        {
+          "title": "station exceptions, original evidence and navigation remain intact th",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Mobile-WebKit",
+              "projectName": "Mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1208,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T19:39:53.256Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4205ba9398c0a2edf4c0-954db2889cf79ad0b6ab",
+          "file": "reviewed-operations.spec.ts",
+          "line": 16,
+          "column": 31
+        }
+      ]
+    },
+    {
+      "title": "return-candidate-browser.spec.ts",
+      "file": "return-candidate-browser.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "candidate hover and keyboard focus preview the right map without changing the upper map or selecting a station",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Desktop-WebKit",
+              "projectName": "Desktop-WebKit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2546,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T19:39:54.788Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ec322eb6ce4fe001714-57064bab711f60d4e930",
+          "file": "return-candidate-browser.spec.ts",
+          "line": 41,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-01T19:38:15.135Z",
+    "duration": 102410.972,
+    "expected": 12,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

@@ -209,11 +209,11 @@ class ReviewedAirportTests(unittest.TestCase):
         self.path = ROOT / 'data/curation/rental-airports.json'
         self.data = json.loads(self.path.read_text())
 
-    def test_reviewed_nineteen_rows_with_original_times_dates(self):
+    def test_reviewed_nineteen_rows_with_selective_times_recheck_dates(self):
         data = rental.official_rows(self.path)
         self.assertEqual(len(data['records']), 19)
         self.assertEqual(Counter(r['companyId'] for r in data['records']), {'times': 7, 'nippon': 6, 'toyota': 6})
-        self.assertTrue(all(r['checkedAt'] == '2026-09-30' for r in data['records'] if r['companyId'] == 'times'))
+        self.assertTrue(all(r['checkedAt'] == ('2026-10-01' if r.get('operations') else '2026-09-30') for r in data['records'] if r['companyId'] == 'times'))
 
     def test_nippon_branch_urls_match_legacy_mapion_not_homepage(self):
         self.assertEqual(rental.url_keys(['https://store.nipponrentacar.co.jp/b/nrs/info/810034/']), {'nippon-shop:810034'})
@@ -422,7 +422,7 @@ class PublishedRentalTests(unittest.TestCase):
         self.assertEqual(len(official), 19)
         self.assertTrue({'times-naha-airport', 'times-new-chitose-airport', 'times-fukuoka-airport-international'} <= {r['id'] for r in official})
         for r in official:
-            self.assertEqual(r['official']['checkedAt'], '2026-09-30' if r['companyId'] == 'times' else '2026-10-01')
+            self.assertEqual(r['official']['checkedAt'], '2026-09-30' if r['companyId'] == 'times' and not r['official'].get('operations') else '2026-10-01')
             self.assertEqual(r['vehicleEntranceStatus'], 'NOT_VERIFIED')
         kix = next(r for r in official if r['id'] == 'times-kansai-airport')
         self.assertIn('2F', kix['address'])
@@ -445,7 +445,14 @@ class PublishedRentalTests(unittest.TestCase):
                     for key in [r['id'], *r['aliases']]:
                         self.assertIn(aliases.get(key, key), current)
                     if r['official']:
-                        self.assertEqual(current[r['id']], r)
+                        now = json.loads(json.dumps(current[r['id']]))
+                        # Only eight explicit fact reviews may change; raw members/IDs remain exact.
+                        if now['official'].get('operations'):
+                            now['official'] = r['official']
+                            now['phones'] = r['phones']
+                            old_official = next(s for s in r['sources'] if s['sourceId'].endswith('-official'))
+                            now['sources'] = [old_official if s['sourceId'].endswith('-official') else s for s in now['sources']]
+                        self.assertEqual(now, r)
                 old_members = {s['key']: s for r in old for s in r['sources'] if s['sourceId'] in {'osm', 'overture'}}
                 self.assertEqual(old_members, new_members)
 
@@ -455,7 +462,7 @@ class PublishedRentalTests(unittest.TestCase):
         self.assertEqual(sources['osmUpstreamGeometryAudit']['osmSnapshot'], rental.INPUT_LOCK['osmSnapshot'])
         self.assertEqual(sources['overtureRelease'], '2026-09-23.1')
         self.assertEqual(self.manifest['reviewDate'], '2026-10-01')
-        self.assertEqual({s['id']: s['sourceDate'] for s in self.manifest['sources']}, {'osm': '2026-09-29', 'overture': '2026-09-23', 'times-official': '2026-09-30', 'nippon-official': '2026-10-01', 'toyota-official': '2026-10-01'})
+        self.assertEqual({s['id']: s['sourceDate'] for s in self.manifest['sources']}, {'osm': '2026-09-29', 'overture': '2026-09-23', 'times-official': '2026-10-01', 'nippon-official': '2026-10-01', 'toyota-official': '2026-10-01'})
 
     def test_new_facilities_use_exact_reviewed_sources_and_phones(self):
         facts = json.loads((ROOT / 'data/curation/rental-airports.json').read_text())['records'][7:]

@@ -38,7 +38,7 @@ describe("nationwide rental artifacts", () => {
     expect(official.filter(r => r.companyId === "times")).toHaveLength(7);
     expect(official.filter(r => r.companyId === "nippon")).toHaveLength(6);
     expect(official.filter(r => r.companyId === "toyota")).toHaveLength(6);
-    for (const r of official) expect(r.official?.checkedAt).toBe(r.companyId === "times" ? "2026-09-30" : "2026-10-01");
+    for (const r of official) expect(r.official?.checkedAt).toBe(r.companyId === "times" && !r.official?.operations ? "2026-09-30" : "2026-10-01");
   });
   it("uses each branch summary, official link and reviewed phone without Times rules leaking", () => {
     for (const row of records.filter(r => r.official && r.companyId !== "times")) {
@@ -70,6 +70,27 @@ describe("nationwide rental artifacts", () => {
     expect(row.official?.supplementaryUrls).toContain("https://www.oki-toyota-rent.jp/company.php");
     expect(row.sources.find(s => s.sourceId === "toyota-official")?.recordId).toBe("69101:017");
     for (const locale of locales) expect(messages[locale][row.official!.summaryKey]).toContain("33003370*73");
+  });
+  it("keeps reviewed operating hours and return lead times isolated by branch, preserving exceptions", () => {
+    const operating = records.filter(row => row.official?.operations);
+    expect(operating).toHaveLength(8);
+    const expected: Record<string, number | null> = {"times-new-chitose-airport": 120, "times-fukuoka-airport-international": 180, "times-naha-airport": 90, "nippon-naha-airport-toyosaki": 120, "nippon-new-chitose-airport": null, "toyota-new-chitose-airport-poplar": null, "toyota-fukuoka-airport-international": null, "toyota-naha-airport-seaside": null};
+    for (const row of operating) {
+      expect(row.official!.operations!.returnLeadMinutes).toBe(expected[row.id]);
+      expect(row.official!.operations!.hoursKey).toBe(`rental.hours.${row.id}`);
+      for (const locale of locales) expect(messages[locale][row.official!.operations!.hoursKey].length).toBeGreaterThan(8);
+    }
+    for (const locale of locales) {
+      expect(messages[locale]["rental.hours.toyota-new-chitose-airport-poplar"]).toContain("2026-11-10");
+      expect(messages[locale]["rental.hours.nippon-new-chitose-airport"]).toContain("2027-03-31");
+    }
+    const source = clone(partitions.find(p => p.prefectureCode === "JP-47")!);
+    const row = source.records.find(r => r.id === "times-naha-airport")!;
+    row.official!.operations!.returnLeadMinutes = 5;
+    expect(() => parsePartition(source)).toThrow("operating facts");
+    row.official!.operations!.returnLeadMinutes = 90;
+    row.official!.operations!.hoursKey = "rental.hours.toyota-naha-airport-seaside";
+    expect(() => parsePartition(source)).toThrow("operating facts");
   });
   it("keeps counters unverified and unavailable as return destinations", () => {
     const counters = records.filter(r => r.candidateStatus === "COUNTER_ONLY");

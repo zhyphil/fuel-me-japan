@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "comparedAt": "2026-10-01",
+  "changedManifests": [
+    "rentals"
+  ],
+  "changes": [
+    {
+      "field": "national.rentals.missingPhone",
+      "before": 3591,
+      "after": 3590,
+      "delta": -1
+    },
+    {
+      "field": "national.displayedStations.text.address.recorded",
+      "before": 1792,
+      "after": 1795,
+      "delta": 3
+    },
+    {
+      "field": "national.displayedStations.text.address.missing",
+      "before": 14662,
+      "after": 14659,
+      "delta": -3
+    },
+    {
+      "field": "national.displayedStations.text.openingHours.recorded",
+      "before": 1578,
+      "after": 1582,
+      "delta": 4
+    },
+    {
+      "field": "national.displayedStations.text.openingHours.missing",
+      "before": 14876,
+      "after": 14872,
+      "delta": -4
+    },
+    {
+      "field": "national.displayedStations.serviceType.SELF",
+      "before": 875,
+      "after": 876,
+      "delta": 1
+    },
+    {
+      "field": "national.displayedStations.serviceType.FULL",
+      "before": 65,
+      "after": 67,
+      "delta": 2
+    },
+    {
+      "field": "national.displayedStations.serviceType.UNKNOWN",
+      "before": 15514,
+      "after": 15511,
+      "delta": -3
+    },
+    {
+      "field": "regions.hokkaido.displayedStations.serviceType.SELF",
+      "before": 112,
+      "after": 113,
+      "delta": 1
+    },
+    {
+      "field": "regions.hokkaido.displayedStations.serviceType.FULL",
+      "before": 64,
+      "after": 65,
+      "delta": 1
+    },
+    {
+      "field": "regions.hokkaido.displayedStations.serviceType.UNKNOWN",
+      "before": 972,
+      "after": 970,
+      "delta": -2
+    },
+    {
+      "field": "regions.okinawa.displayedStations.text.address.recorded",
+      "before": 123,
+      "after": 125,
+      "delta": 2
+    },
+    {
+      "field": "regions.okinawa.displayedStations.text.address.missing",
+      "before": 172,
+      "after": 170,
+      "delta": -2
+    },
+    {
+      "field": "regions.okinawa.displayedStations.text.openingHours.recorded",
+      "before": 15,
+      "after": 18,
+      "delta": 3
+    },
+    {
+      "field": "regions.okinawa.displayedStations.text.openingHours.missing",
+      "before": 280,
+      "after": 277,
+      "delta": -3
+    },
+    {
+      "field": "regions.okinawa.displayedStations.serviceType.FULL",
+      "before": 0,
+      "after": 1,
+      "delta": 1
+    },
+    {
+      "field": "regions.okinawa.displayedStations.serviceType.UNKNOWN",
+      "before": 284,
+      "after": 283,
+      "delta": -1
+    },
+    {
+      "field": "regions.kyushu.rentals.missingPhone",
+      "before": 358,
+      "after": 357,
+      "delta": -1
+    },
+    {
+      "field": "regions.kyushu.displayedStations.text.address.recorded",
+      "before": 95,
+      "after": 96,
+      "delta": 1
+    },
+    {
+      "field": "regions.kyushu.displayedStations.text.address.missing",
+      "before": 1292,
+      "after": 1291,
+      "delta": -1
+    },
+    {
+      "field": "regions.kyushu.displayedStations.text.openingHours.recorded",
+      "before": 45,
+      "after": 46,
+      "delta": 1
+    },
+    {
+      "field": "regions.kyushu.displayedStations.text.openingHours.missing",
+      "before": 1342,
+      "after": 1341,
+      "delta": -1
+    }
+  ],
+  "alerts": [],
+  "decision": "REVIEW_REQUIRED",
+  "note": "只比较经过校验的离线候选。UNCHANGED不是来源更新成功；发布与真实HTTP失败仍以工作流结果和诊断为准。不得自动提交或部署。"
+}

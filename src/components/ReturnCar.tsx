@@ -3,7 +3,8 @@ import { messages, type Locale } from "../i18n";
 import { analytics } from "../lib/analytics";
 import { fuelTypes, navigationUrl } from "../lib/find-fuel";
 import { isFuelType } from "../lib/fuel-preference";
-import { formatOpeningHours } from "../lib/opening-hours";
+import { StationHours } from "./StationHours";
+import { StationSources } from "./StationSources";
 import { loadReturnCandidates, returnFuelSupply, type ReturnCandidate } from "../lib/return-car";
 import { canSelectRentalDestination, type RentalLocation } from "../lib/rental";
 import { rentalName, type RentalPageSize } from "../lib/rental-view";
@@ -58,6 +59,12 @@ function ReturnSearch({ location, fuel, locale, tileUrl }: { location: RentalLoc
     if (timer.current) clearTimeout(timer.current);
     timer.current = setTimeout(() => { setPreview(id); timer.current = null; }, 180);
   }
+  function leavePointerPreview() {
+    // Focusing a card can scroll the list beneath the stationary pointer.
+    // That pointer-leave must not cancel the new keyboard target.
+    const focused = list.current?.querySelector("li:focus-within")?.getAttribute("data-return-station-id");
+    if (focused) previewRow(focused); else clearPreview();
+  }
   function paginate(patch: { page: number; pageSize?: RentalPageSize }, focusId: string) {
     clearPreview(); savedScroll.current = 0; pendingFocus.current = focusId;
     if (patch.pageSize) setPageSize(patch.pageSize);
@@ -102,7 +109,7 @@ function ReturnSearch({ location, fuel, locale, tileUrl }: { location: RentalLoc
         <section className="return-candidate-results" aria-label={t.rcCandidates}>
           <div ref={list} id="return-results-scroll" className="rental-results-scroll" role="region" aria-label={t.rcCandidates} tabIndex={0}>
             <ol className="return-candidates" start={(page - 1) * pageSize + 1}>{rows.map(station => <li key={station.id} id={`return-station-${station.id}`} data-return-station-id={station.id} className={preview === station.id ? "is-preview" : undefined} tabIndex={0}
-              onPointerEnter={event => { if (event.pointerType === "mouse") previewRow(station.id); }} onPointerLeave={clearPreview}
+              onPointerEnter={event => { if (event.pointerType === "mouse") previewRow(station.id); }} onPointerLeave={leavePointerPreview}
               onFocus={() => previewRow(station.id)} onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget)) clearPreview(); }}>
               <StationMiniMap station={station} locale={locale} tileUrl={tileUrl} />
               <div className="return-candidate-details"><StationSummary station={station} fuel={fuel} locale={locale} action={
@@ -131,7 +138,6 @@ function NavigationLinks({ destination, locale, returning }: { destination: Coor
 }
 function StationSummary({ station, fuel, locale, action }: { station: ReturnCandidate; fuel: FuelType; locale: Locale; action?: ReactNode }) {
   const t = messages[locale];
-  const hours = formatOpeningHours(station.openingHours, locale);
   return <div className="return-station-summary">
     <div className="return-station-heading">
       <div><h4>{station.name ?? t.ffUnnamed}</h4><p>{t.ffStraightLine}: {station.distanceKm.toLocaleString(locale, { maximumFractionDigits: 1 })} {t.ffKm}</p></div>
@@ -140,6 +146,6 @@ function StationSummary({ station, fuel, locale, action }: { station: ReturnCand
     <p>{fuelDisplayName(fuel, locale)} · {returnFuelSupply(station, fuel) === "YES" ? t.ffYes : t.rcUnknownSupply}</p>
     <dl><div><dt>{t.ffAddress}</dt><dd>{station.address ?? t.ffAddressUnknown}</dd></div>
       <div><dt>{t.ffService}</dt><dd>{station.serviceType === "SELF" ? t.ffSelf : station.serviceType === "FULL" ? t.ffFull : t.ffServiceUnknown}</dd></div>
-      <div><dt>{t.ffHours}</dt><dd>{hours.kind === "raw" ? <><p className="field-help">{t.ffHoursUntranslated}</p><code className="hours-raw">{station.openingHours}</code></> : hours.lines.map((line, index) => <p key={index}>{line}</p>)}{hours.kind === "translated" && <details className="hours-original"><summary>{t.ffHoursOriginal}</summary><code className="hours-raw">{station.openingHours}</code></details>}</dd></div></dl>
+      <div><dt>{t.ffHours}</dt><dd><StationHours value={station.openingHours} locale={locale} review={station.reviewedFacts} /></dd></div></dl><StationSources station={station} locale={locale} />
   </div>;
 }

@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-10-01",
+  "status": "PASS",
+  "unit": 386,
+  "chromium": 407,
+  "webkit": 12,
+  "dataTests": 63,
+  "historicalPngsRestored": 60,
+  "pilotFilesUnchanged": true,
+  "frozenSpecsUnchanged": true,
+  "rawStationFilesUnchanged": true,
+  "qualityRepeatIdentical": true,
+  "qualityCheckedArtifacts": 110,
+  "rentalDeterministicFiles": 273,
+  "ao": {
+    "plan": {
+      "execution": "FAILED_TO_START",
+      "completedSteps": 0,
+      "readOnlyUnchanged": true,
+      "note": "CLI子进程启动exit1，0节点完成；错误摘要被截断，原因未确认。没有放宽沙箱或配置，不能记为独立审查通过。"
+    },
+    "review": {
+      "execution": "FAILED_TO_START",
+      "completedSteps": 0,
+      "readOnlyUnchanged": true,
+      "note": "CLI子进程启动exit1，0节点完成；错误摘要被截断，原因未确认。没有放宽沙箱或配置，不能记为独立审查通过。"
+    }
+  },
+  "note": "最终检查没有跳过、重试或flaky通过。独立AO审查未执行，不包含在PASS范围；游客／现场／母语真人审核没有新增。"
+}

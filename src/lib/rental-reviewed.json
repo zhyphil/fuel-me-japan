@@ -106,11 +106,17 @@
         "lat": 42.81697865285046,
         "lon": 141.6795225524517,
         "officialCheckUrl": "https://www.timescar-rental.com/en/hokkaido/shop/0105/",
-        "checkedAt": "2026-09-30",
+        "checkedAt": "2026-10-01",
         "positionKind": "SHOP_REFERENCE",
         "returnLocationStatus": "OFFICIAL_FACILITY_CHECKED",
         "vehicleEntranceStatus": "NOT_VERIFIED",
-        "supplementarySourceUrls": []
+        "supplementarySourceUrls": [],
+        "operations": {
+          "hoursKey": "rental.hours.times-new-chitose-airport",
+          "returnLeadMinutes": 120,
+          "accessKey": "rental.access.times-new-chitose-airport"
+        },
+        "officialPhone": "0123-45-8756"
       },
       "sourceId": "times-official",
       "recordId": "0105",
@@ -131,11 +137,17 @@
         "lat": 33.580013935265356,
         "lon": 130.44219502340152,
         "officialCheckUrl": "https://www.timescar-rental.com/en/fukuoka/shop/4034/",
-        "checkedAt": "2026-09-30",
+        "checkedAt": "2026-10-01",
         "positionKind": "SHOP_REFERENCE",
         "returnLocationStatus": "OFFICIAL_FACILITY_CHECKED",
         "vehicleEntranceStatus": "NOT_VERIFIED",
-        "supplementarySourceUrls": []
+        "supplementarySourceUrls": [],
+        "operations": {
+          "hoursKey": "rental.hours.times-fukuoka-airport-international",
+          "returnLeadMinutes": 180,
+          "accessKey": null
+        },
+        "officialPhone": "092-432-7070"
       },
       "sourceId": "times-official",
       "recordId": "4034",
@@ -156,11 +168,17 @@
         "lat": 26.21132452388112,
         "lon": 127.65819880292382,
         "officialCheckUrl": "https://www.timescar-rental.com/en/okinawa/shop/4701/",
-        "checkedAt": "2026-09-30",
+        "checkedAt": "2026-10-01",
         "positionKind": "SHOP_REFERENCE",
         "returnLocationStatus": "OFFICIAL_FACILITY_CHECKED",
         "vehicleEntranceStatus": "NOT_VERIFIED",
-        "supplementarySourceUrls": []
+        "supplementarySourceUrls": [],
+        "operations": {
+          "hoursKey": "rental.hours.times-naha-airport",
+          "returnLeadMinutes": 90,
+          "accessKey": "rental.access.times-naha-airport"
+        },
+        "officialPhone": "0570-00-1536"
       },
       "sourceId": "times-official",
       "recordId": "4701",
@@ -307,7 +325,12 @@
         "sourceId": "nippon-official",
         "recordId": "810034",
         "summaryKey": "rental.shop.nippon-new-chitose-airport",
-        "officialPhone": "050-1712-2970"
+        "officialPhone": "050-1712-2970",
+        "operations": {
+          "hoursKey": "rental.hours.nippon-new-chitose-airport",
+          "returnLeadMinutes": null,
+          "accessKey": null
+        }
       },
       "sourceId": "nippon-official",
       "recordId": "810034",
@@ -336,7 +359,12 @@
         "sourceId": "nippon-official",
         "recordId": "020660",
         "summaryKey": "rental.shop.nippon-naha-airport-toyosaki",
-        "officialPhone": "050-1712-2419"
+        "officialPhone": "050-1712-2419",
+        "operations": {
+          "hoursKey": "rental.hours.nippon-naha-airport-toyosaki",
+          "returnLeadMinutes": 120,
+          "accessKey": "rental.access.nippon-naha-airport-toyosaki"
+        }
       },
       "sourceId": "nippon-official",
       "recordId": "020660",
@@ -394,7 +422,12 @@
         "sourceId": "toyota-official",
         "recordId": "61201:002",
         "summaryKey": "rental.shop.toyota-new-chitose-airport-poplar",
-        "officialPhone": "0123-23-0100"
+        "officialPhone": "0123-23-0100",
+        "operations": {
+          "hoursKey": "rental.hours.toyota-new-chitose-airport-poplar",
+          "returnLeadMinutes": null,
+          "accessKey": null
+        }
       },
       "sourceId": "toyota-official",
       "recordId": "61201:002",
@@ -489,7 +522,12 @@
         "sourceId": "toyota-official",
         "recordId": "68101:068",
         "summaryKey": "rental.shop.toyota-fukuoka-airport-international",
-        "officialPhone": "092-778-0100"
+        "officialPhone": "092-778-0100",
+        "operations": {
+          "hoursKey": "rental.hours.toyota-fukuoka-airport-international",
+          "returnLeadMinutes": null,
+          "accessKey": null
+        }
       },
       "sourceId": "toyota-official",
       "recordId": "68101:068",
@@ -521,7 +559,12 @@
         "sourceId": "toyota-official",
         "recordId": "69101:017",
         "summaryKey": "rental.shop.toyota-naha-airport-seaside",
-        "officialPhone": "098-850-0080"
+        "officialPhone": "098-850-0080",
+        "operations": {
+          "hoursKey": "rental.hours.toyota-naha-airport-seaside",
+          "returnLeadMinutes": null,
+          "accessKey": "rental.access.toyota-naha-airport-seaside"
+        }
       },
       "sourceId": "toyota-official",
       "recordId": "69101:017",

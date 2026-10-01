@@ -1,4 +1,5 @@
 /** Static data contracts. No location permission, persistence or analytics here. */
+import { applyReviewedStationFacts, type StationReview } from "./station-review";
 export type TriState = "YES" | "NO" | "UNKNOWN";
 export type ServiceType = "SELF" | "FULL" | "UNKNOWN";
 export type FuelType = "REGULAR" | "HIGH_OCTANE" | "DIESEL";
@@ -7,6 +8,7 @@ export type PartitionCode = PrefectureCode | "UNKNOWN";
 export type BBox = [number, number, number, number]; // west, south, east, north
 export interface Coordinates { lat: number; lon: number }
 export interface Station extends Coordinates {
+  reviewedFacts?: StationReview; // Runtime-only approved supplement; never accepted in downloaded files.
   id: string;
   osmType: "node" | "way" | "relation";
   osmId: number;
@@ -250,7 +252,7 @@ export async function loadStationPartitions(manifest: DataManifest, codes: Parti
   });
   const files = await Promise.all(entries.map(async (entry) => parseStationFile(await fetchArtifact(entry, signal), entry, manifest.stations.version)));
   signal?.throwIfAborted();
-  return [...new Map(files.flatMap((f) => f.stations).map((s) => [s.id, s])).values()];
+  return [...new Map(files.flatMap((f) => f.stations).map((s) => [s.id, s])).values()].map(applyReviewedStationFacts);
 }
 export async function loadNearbyStations(manifest: DataManifest, position: Coordinates, signal?: AbortSignal, radiusKm = 50) {
   const entries = selectNearbyPartitions(manifest, position, radiusKm);

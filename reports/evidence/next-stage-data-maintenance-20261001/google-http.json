@@ -1,0 +1,118 @@
+{
+  "checkedAt": "2026-10-01T19:35:38.241477+00:00",
+  "status": "PASS",
+  "checked": 10,
+  "note": "读取正式域名的ads.txt／robots／sitemap，与代码逐字核对；模拟Google UA不能证明真实Google已读取。",
+  "results": [
+    {
+      "url": "https://fuel-me-japan.com/ads.txt",
+      "userAgent": "Mozilla/5.0",
+      "httpStatus": 200,
+      "effectiveUrl": "https://fuel-me-japan.com/ads.txt",
+      "redirects": 0,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 59,
+      "sha256": "167521f9f95b76e7071d6e244f4db5e56f41539a20ae6a38dc16e1e7041f5e9b",
+      "status": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/ads.txt",
+      "userAgent": "Googlebot",
+      "httpStatus": 200,
+      "effectiveUrl": "https://fuel-me-japan.com/ads.txt",
+      "redirects": 0,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 59,
+      "sha256": "167521f9f95b76e7071d6e244f4db5e56f41539a20ae6a38dc16e1e7041f5e9b",
+      "status": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/ads.txt",
+      "userAgent": "Mediapartners-Google",
+      "httpStatus": 200,
+      "effectiveUrl": "https://fuel-me-japan.com/ads.txt",
+      "redirects": 0,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 59,
+      "sha256": "167521f9f95b76e7071d6e244f4db5e56f41539a20ae6a38dc16e1e7041f5e9b",
+      "status": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/robots.txt",
+      "userAgent": "Mozilla/5.0",
+      "httpStatus": 200,
+      "effectiveUrl": "https://fuel-me-japan.com/robots.txt",
+      "redirects": 0,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 1374,
+      "sha256": "871f25cf76f7eda2cb9505dc58be9c21e54b90f69d1ba0a0af160afcedd0de50",
+      "status": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/robots.txt",
+      "userAgent": "Googlebot",
+      "httpStatus": 200,
+      "effectiveUrl": "https://fuel-me-japan.com/robots.txt",
+      "redirects": 0,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 1374,
+      "sha256": "871f25cf76f7eda2cb9505dc58be9c21e54b90f69d1ba0a0af160afcedd0de50",
+      "status": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/robots.txt",
+      "userAgent": "Mediapartners-Google",
+      "httpStatus": 200,
+      "effectiveUrl": "https://fuel-me-japan.com/robots.txt",
+      "redirects": 0,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 1374,
+      "sha256": "871f25cf76f7eda2cb9505dc58be9c21e54b90f69d1ba0a0af160afcedd0de50",
+      "status": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/sitemap.xml",
+      "userAgent": "Mozilla/5.0",
+      "httpStatus": 200,
+      "effectiveUrl": "https://fuel-me-japan.com/sitemap.xml",
+      "redirects": 0,
+      "contentType": "application/xml",
+      "bytes": 1380,
+      "sha256": "1f47159e71a4ccebf3a0d0b8340fde283adcf5bc112d1390235f24d91dfecdf0",
+      "status": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/sitemap.xml",
+      "userAgent": "Googlebot",
+      "httpStatus": 200,
+      "effectiveUrl": "https://fuel-me-japan.com/sitemap.xml",
+      "redirects": 0,
+      "contentType": "application/xml",
+      "bytes": 1380,
+      "sha256": "1f47159e71a4ccebf3a0d0b8340fde283adcf5bc112d1390235f24d91dfecdf0",
+      "status": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/sitemap.xml",
+      "userAgent": "Mediapartners-Google",
+      "httpStatus": 200,
+      "effectiveUrl": "https://fuel-me-japan.com/sitemap.xml",
+      "redirects": 0,
+      "contentType": "application/xml",
+      "bytes": 1380,
+      "sha256": "1f47159e71a4ccebf3a0d0b8340fde283adcf5bc112d1390235f24d91dfecdf0",
+      "status": "PASS"
+    },
+    {
+      "url": "http://fuel-me-japan.com/ads.txt",
+      "userAgent": "Mediapartners-Google",
+      "httpStatus": 200,
+      "effectiveUrl": "https://fuel-me-japan.com/ads.txt",
+      "redirects": 1,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 59,
+      "sha256": "167521f9f95b76e7071d6e244f4db5e56f41539a20ae6a38dc16e1e7041f5e9b",
+      "status": "PASS"
+    }
+  ]
+}
