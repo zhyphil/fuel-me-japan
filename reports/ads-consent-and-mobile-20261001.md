@@ -37,8 +37,8 @@
 | 新功能反向验证 | 基线缺少隐私入口、CMP 来源被 CSP 阻止，2 项预期失败 |
 | lint、typecheck、静态构建 | PASS |
 | 单元测试 | 363 PASS |
-| 完整 Chromium 回归 | 396 PASS |
-| WebKit 隐私／详情／分页／导航／动态高度专项 | 45 PASS、2 项 Chromium 专用输入模拟按设计跳过 |
+| 最终完整 Chromium 回归 | 397 PASS |
+| 最终 WebKit 隐私／详情／分页／导航／动态高度专项 | 46 PASS、2 项 Chromium 专用输入模拟按设计跳过 |
 | 320／430／1280px 本机广告布局预览 | 无横向溢出，操作按钮与预览保留 40px 间距 |
 | iPhone／Android 实体设备复验 | 未执行，不计入通过 |
 
@@ -59,6 +59,13 @@
 - [AdSense 对 CSP 的支持范围](https://support.google.com/adsense/answer/16283098?hl=en)
 - [AdSense 站点审核](https://support.google.com/adsense/answer/7584263?hl=en)
 
-## 发布核验
+## 发布与真实组件核验
 
-本节在提交、推送、部署及正式域名验证后补录；当前不以本地检查代替生产结果。
+- 初次应用提交 `1770357` 已原子推送 GitHub main 和当前分支，部署 `efbbed37` 完成。正式域名 23 项 HTTP／HTML 检查全部通过：五语言隐私入口、同意组件来源许可、广告暂停初始化、无广告占位、ads.txt 和 20 页 sitemap。
+- 真实浏览器取得 AdSense 两个脚本 HTTP 200、Funding Choices 启动／后续组件 HTTP 200 及记录端点 HTTP 204。当前未观察到 Google 组件被 CSP 阻止；浏览器扩展自己的样式报错不作为网站缺陷处理。
+- Google TCF 实际返回 `cmpLoaded=true`、`cmpStatus=loaded`、`gdprApplies=true`、`displayStatus=hidden`。点击隐私入口也未真正显示窗口。**完整真实同意／拒绝／撤回操作仍是 PENDING**，不能以后台已发布、脚本可读取或离线用例通过替代。
+- 尚未证明未显示的外部原因。发布传播、审核状态等只是可能因素，不当作根因。未为此关闭保护、恢复广告请求或改动其他网站。
+- 据此新增“Google API 已就绪但窗口不出现”的回归用例：先确认旧实现失败，再改为等待 TCF 的 `cmpuishown` 事件，超时显示可重试提示。最终再次完成全量检查及 WebKit 专项，结果为上表。
+- 事件判断依据：[IAB 官方 CMP API 的 eventStatus 定义](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/TCFv2/IAB%20Tech%20Lab%20-%20CMP%20API%20v2.md)。
+
+最终修复的生产部署与复核信息在后续补录；真实广告与实体设备验收仍未计入通过。

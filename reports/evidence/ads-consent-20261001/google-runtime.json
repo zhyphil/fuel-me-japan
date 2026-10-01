@@ -1,0 +1,73 @@
+{
+  "observedAt": "2026-10-01T15:45:02.312Z",
+  "说明": "正式域名真实Google加载观察；不保存Cookie、同意字符串或请求追踪标识。",
+  "scriptStatus": [
+    {
+      "origin": "https://pagead2.googlesyndication.com",
+      "resource": "pagead",
+      "status": 200
+    },
+    {
+      "origin": "https://pagead2.googlesyndication.com",
+      "resource": "pagead",
+      "status": 200
+    },
+    {
+      "origin": "https://fundingchoicesmessages.google.com",
+      "resource": "i",
+      "status": 200
+    },
+    {
+      "origin": "https://fundingchoicesmessages.google.com",
+      "resource": "f",
+      "status": 200
+    },
+    {
+      "origin": "https://fundingchoicesmessages.google.com",
+      "resource": "el",
+      "status": 204
+    },
+    {
+      "origin": "https://fundingchoicesmessages.google.com",
+      "resource": "el",
+      "status": 204
+    },
+    {
+      "origin": "https://fundingchoicesmessages.google.com",
+      "resource": "el",
+      "status": 204
+    },
+    {
+      "origin": "https://fundingchoicesmessages.google.com",
+      "resource": "el",
+      "status": 204
+    },
+    {
+      "origin": "https://fundingchoicesmessages.google.com",
+      "resource": "el",
+      "status": 204
+    },
+    {
+      "origin": "https://fundingchoicesmessages.google.com",
+      "resource": "el",
+      "status": 204
+    },
+    {
+      "origin": "https://fundingchoicesmessages.google.com",
+      "resource": "el",
+      "status": 204
+    },
+    {
+      "origin": "https://fundingchoicesmessages.google.com",
+      "resource": "f",
+      "status": 200
+    }
+  ],
+  "cmp": {
+    "loaded": true,
+    "status": "loaded",
+    "display": "hidden",
+    "gdprApplies": true
+  },
+  "结论": "Google组件已加载，但本次未展示同意窗口；完整同意及撤回交互仍待真实窗口可用后验收。广告未启用。"
+}

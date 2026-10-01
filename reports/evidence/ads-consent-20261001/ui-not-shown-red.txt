@@ -1,0 +1,45 @@
+
+> fuel-me-japan@0.0.0 test:e2e
+> playwright test tests/e2e/ad-privacy.spec.ts --grep a ready Google API --workers=1
+
+[WebServer] (node:5729) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:5731) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/ad-privacy.spec.ts:102:1 › a ready Google API that does not show its window reports a retryable failure (8.4s)
+
+
+  1) tests/e2e/ad-privacy.spec.ts:102:1 › a ready Google API that does not show its window reports a retryable failure 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('status')
+    Expected substring: "temporarily unavailable"
+    Timeout: 8000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" getByRole('status') with timeout 8000ms
+      - waiting for getByRole('status')
+
+
+      109 |   await page.goto("/en/about/");
+      110 |   await page.getByRole("button", { name: "Privacy choices", exact: true }).click();
+    > 111 |   await expect(page.getByRole("status")).toContainText("temporarily unavailable", { timeout: 8000 });
+          |                                          ^
+      112 |   await expect(page.getByRole("button", { name: "Privacy choices", exact: true })).toBeEnabled();
+      113 | });
+      114 |
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/ad-privacy.spec.ts:111:42
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/ad-privacy-a-ready-Google--bb0de-reports-a-retryable-failure/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/ad-privacy-a-ready-Google--bb0de-reports-a-retryable-failure/error-context.md
+
+  1 failed
+    tests/e2e/ad-privacy.spec.ts:102:1 › a ready Google API that does not show its window reports a retryable failure 

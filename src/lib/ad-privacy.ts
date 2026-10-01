@@ -1,5 +1,5 @@
 export type PrivacyResult = "opened" | "unavailable" | "not-applicable";
-type TcData = { gdprApplies?: boolean; listenerId?: number };
+type TcData = { gdprApplies?: boolean; listenerId?: number; eventStatus?: string };
 type ConsentWindow = Window & {
   googlefc?: {
     callbackQueue?: { push(item: { CONSENT_API_READY(): void }): unknown };
@@ -13,6 +13,7 @@ type ConsentWindow = Window & {
 export function openPrivacyChoices(onResult: (result: PrivacyResult) => void): () => void {
   const target = window as ConsentWindow;
   let active = true;
+  let requested = false;
   let listenerId: number | undefined;
   const removeListener = () => {
     if (listenerId === undefined) return;
@@ -37,11 +38,14 @@ export function openPrivacyChoices(onResult: (result: PrivacyResult) => void): (
           if (!success) { finish("unavailable"); return; }
           if (data?.gdprApplies === false) { finish("not-applicable"); return; }
           if (data?.gdprApplies !== true) return;
-          // Revocation can synchronously emit another TCF event. Finish and
-          // unsubscribe before invoking it to prevent recursive reopening.
-          finish("opened");
+          // API readiness is not proof that Google actually displayed its UI.
+          if (data.eventStatus === "cmpuishown") { finish("opened"); return; }
+          // Revocation can synchronously emit TCF events; request only once and
+          // keep listening until the UI appears or the existing timeout expires.
+          if (requested) return;
+          requested = true;
           try { target.googlefc!.showRevocationMessage!(); }
-          catch { onResult("unavailable"); }
+          catch { finish("unavailable"); }
         });
       } catch { finish("unavailable"); }
     } });

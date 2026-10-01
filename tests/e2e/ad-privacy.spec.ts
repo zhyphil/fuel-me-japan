@@ -7,16 +7,20 @@ const adScript = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
 
 for (const locale of locales) test(`${locale}: visitor can reopen Google's consent message without starting ads`, async ({ page }) => {
   await page.route(adScript, route => route.fulfill({ contentType: "application/javascript", body: `
+    let notify;
     window.googlefc = { callbackQueue: { push: item => item.CONSENT_API_READY?.() }, showRevocationMessage: () => {
       document.body.dataset.consentReopened = 'yes';
+      notify?.({gdprApplies: true, listenerId: 7, eventStatus: 'cmpuishown'}, true);
     } };
     window.__tcfapi = (command, version, callback) => {
-      if (command === 'addEventListener') callback({gdprApplies: true, listenerId: 7}, true);
+      if (command === 'addEventListener') { notify=callback; callback({gdprApplies: true, listenerId: 7, eventStatus: 'tcloaded'}, true); }
     };
   ` }));
   await page.goto(`/${locale}/about/`);
   await page.getByRole("button", { name: labels[locale], exact: true }).click();
   await expect(page.locator("body")).toHaveAttribute("data-consent-reopened", "yes");
+  await expect(page.getByRole("button", { name: labels[locale], exact: true })).toBeEnabled();
+  await expect(page.getByRole("status")).toHaveCount(0);
   expect(await page.evaluate(() => (window as unknown as { adsbygoogle: { pauseAdRequests: number } }).adsbygoogle.pauseAdRequests)).toBe(1);
   await expect(page.locator(".ad-placement")).toHaveCount(0);
 });
@@ -79,7 +83,8 @@ test("revocation events cannot recursively reopen the consent message", async ({
     let notify;
     window.googlefc = { callbackQueue: { push: item => item.CONSENT_API_READY?.() }, showRevocationMessage: () => {
       document.body.dataset.consentCount = String(Number(document.body.dataset.consentCount || 0) + 1);
-      notify?.({gdprApplies:true, listenerId:9}, true);
+      notify?.({gdprApplies:true, listenerId:9, eventStatus:'tcloaded'}, true);
+      notify?.({gdprApplies:true, listenerId:9, eventStatus:'cmpuishown'}, true);
     } };
     window.__tcfapi = (command, version, callback) => {
       if (command === 'addEventListener') { notify=callback; callback({gdprApplies: true, listenerId: 9}, true); }
@@ -97,4 +102,17 @@ test("production guide has no ad preview, empty slot or ad request even with pre
   await expect(page.locator(".refuel-guide-page")).toBeVisible();
   await expect(page.locator(".ad-placement, ins.adsbygoogle")).toHaveCount(0);
   expect(await page.evaluate(() => (window as unknown as { adsbygoogle: { pauseAdRequests: number } }).adsbygoogle.pauseAdRequests)).toBe(1);
+});
+
+test("a ready Google API that does not show its window reports a retryable failure", async ({ page }) => {
+  await page.route(adScript, route => route.fulfill({ contentType: "application/javascript", body: `
+    window.googlefc = { callbackQueue: { push: item => item.CONSENT_API_READY?.() }, showRevocationMessage: () => {} };
+    window.__tcfapi = (command, version, callback) => {
+      if (command === 'addEventListener') callback({gdprApplies: true, listenerId: 12, eventStatus: 'tcloaded'}, true);
+    };
+  ` }));
+  await page.goto("/en/about/");
+  await page.getByRole("button", { name: "Privacy choices", exact: true }).click();
+  await expect(page.getByRole("status")).toContainText("temporarily unavailable", { timeout: 8000 });
+  await expect(page.getByRole("button", { name: "Privacy choices", exact: true })).toBeEnabled();
 });
