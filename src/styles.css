@@ -507,18 +507,21 @@ button:disabled { cursor: default; opacity: .6; }
 .status-official_return_facility { background: #e3f2e6; color: #275733; }
 .status-counter_only { background: #fff0d2; color: #795312; }
 .rental-view-link { display: flex; align-items: center; min-height: 44px; padding: 8px 0; color: #1c6945; font-size: .88rem; font-weight: 700; }
-.rental-pagination { flex: 0 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 12px; padding: 10px 12px; border: 1px solid #d3ddd9; border-radius: 12px; background: white; }
-.rental-page-size { display: flex; align-items: center; gap: 8px; font-size: .8rem; white-space: nowrap; }
-.rental-page-size select { min-width: 72px; height: 44px; padding: 6px 10px; border: 1px solid #81998e; border-radius: 8px; color: var(--green); background: white; }
-.rental-page-controls { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 8px; min-width: 0; margin-inline-start: auto; }
-.rental-page-controls .button { font-size: 12px; white-space: nowrap; padding: 8px 10px; }
-.rental-page-jump { grid-column: 2; grid-row: 1; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 6px; min-width: 0; }
-.rental-page-jump label { display: flex; align-items: center; gap: 4px; font-size: .8rem; white-space: nowrap; }
-.rental-page-jump input { width: 56px; min-width: 44px; height: 44px; padding: 6px; border: 1px solid #81998e; border-radius: 8px; color: var(--green); background: white; font: inherit; text-align: center; }
-.rental-page-jump button { min-width: 44px; }
-.rental-page-jump input:disabled, .rental-page-jump button:disabled { opacity: .6; cursor: default; }
-.rental-page-previous { grid-column: 1; grid-row: 1; }
-.rental-page-next { grid-column: 3; grid-row: 1; }
+.rental-results, .return-candidate-results { container: rental-results / inline-size; }
+.rental-pagination { flex: 0 0 auto; display: grid; grid-template-columns: minmax(72px, 1fr) auto; align-items: end; gap: 8px 12px; padding: 10px 12px; border: 1px solid #d3ddd9; border-radius: 12px; background: white; }
+.rental-page-size, .rental-page-jump { display: grid; gap: 4px; min-width: 0; margin: 0; font-size: .8rem; }
+.rental-page-size select { width: 76px; height: 44px; padding: 6px 8px; border: 1px solid #81998e; border-radius: 8px; color: var(--green); background: white; font-size: 16px; }
+.rental-page-jump { justify-self: end; }
+.rental-page-entry { display: flex; align-items: center; gap: 6px; }
+.rental-page-jump input { flex: 0 0 48px; width: 48px; min-width: 44px; height: 44px; padding: 6px 3px; border: 1px solid #81998e; border-radius: 8px; color: var(--green); background: white; font: inherit; font-size: 16px; text-align: center; }
+.rental-page-total { white-space: nowrap; }
+.rental-pagination .button { min-width: 44px; font-size: 12px; white-space: nowrap; padding: 8px 10px; }
+.rental-page-jump input:disabled { opacity: .6; cursor: default; }
+.rental-page-controls { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+@container rental-results (min-width: 560px) {
+  .rental-pagination { grid-template-columns: minmax(76px, 1fr) auto auto; }
+  .rental-page-controls { grid-column: 3; }
+}
 .rental-sources { border-top: 1px solid #c6d5cb; margin-top: 36px; padding-top: 20px; font-size: .88rem; line-height: 1.6; overflow-wrap: anywhere; }
 .rental-sources summary, .rental-record-sources summary { cursor: pointer; font-weight: 700; padding: 8px 0; }
 .rental-license-links { display: flex; flex-wrap: wrap; gap: 8px 24px; padding-left: 18px; }
@@ -560,10 +563,6 @@ button:disabled { cursor: default; opacity: .6; }
   .rental-detail .rental-map { height: 300px; }
   .rental-directory-layout > .rental-map-wrap { height: auto; }
   .rental-directory-layout .rental-map { flex: none; height: 280px; }
-  .rental-page-controls { width: 100%; }
-  .rental-page-jump { grid-column: 1 / -1; }
-  .rental-page-previous { grid-row: 2; }
-  .rental-page-next { grid-row: 2; }
   .rental-map-caption { font-size: .7rem; }
   .return-candidate-browser { grid-template-columns: minmax(0, 1fr); }
   .return-candidate-map { grid-row: 1; height: auto; }

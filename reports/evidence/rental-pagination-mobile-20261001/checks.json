@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "description": "手机分页错位回归先失败后修复；最终完整检查与 WebKit 定向检查全部通过。",
+  "unitTests": 363,
+  "chromiumTests": 361,
+  "webkitTests": 13,
+  "newRegressionTests": 13,
+  "lint": "PASS",
+  "typecheck": "PASS",
+  "build": "PASS",
+  "historicalEvidenceRestored": 60,
+  "realDevice": "PENDING",
+  "limitation": "浏览器手机视口模拟不等于实体 iPhone Chrome 验收；离线瓦片不证明在线底图状态。"
+}

@@ -1,0 +1,24 @@
+[WebServer] (node:66727) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 13 tests using 2 workers
+
+(node:66728) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:66729) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [Rental-pagination-WebKit] › tests/e2e/rental-pagination-layout.spec.ts:30:3 › en 320px: compact pagination stays aligned on first, middle and last pages (1.2s)
+  ✓   2 [Rental-pagination-WebKit] › tests/e2e/rental-pagination-layout.spec.ts:30:3 › en 430px: compact pagination stays aligned on first, middle and last pages (1.3s)
+  ✓   3 [Rental-pagination-WebKit] › tests/e2e/rental-pagination-layout.spec.ts:30:3 › zh-Hant 320px: compact pagination stays aligned on first, middle and last pages (1.4s)
+  ✓   4 [Rental-pagination-WebKit] › tests/e2e/rental-pagination-layout.spec.ts:30:3 › zh-Hant 430px: compact pagination stays aligned on first, middle and last pages (1.4s)
+  ✓   5 [Rental-pagination-WebKit] › tests/e2e/rental-pagination-layout.spec.ts:30:3 › ko 320px: compact pagination stays aligned on first, middle and last pages (1.4s)
+  ✓   6 [Rental-pagination-WebKit] › tests/e2e/rental-pagination-layout.spec.ts:30:3 › ko 430px: compact pagination stays aligned on first, middle and last pages (1.4s)
+  ✓   7 [Rental-pagination-WebKit] › tests/e2e/rental-pagination-layout.spec.ts:30:3 › zh-Hans 320px: compact pagination stays aligned on first, middle and last pages (1.3s)
+  ✓   8 [Rental-pagination-WebKit] › tests/e2e/rental-pagination-layout.spec.ts:30:3 › zh-Hans 430px: compact pagination stays aligned on first, middle and last pages (1.3s)
+  ✓  10 [Rental-pagination-WebKit] › tests/e2e/rental-pagination-layout.spec.ts:30:3 › th 430px: compact pagination stays aligned on first, middle and last pages (1.5s)
+  ✓   9 [Rental-pagination-WebKit] › tests/e2e/rental-pagination-layout.spec.ts:30:3 › th 320px: compact pagination stays aligned on first, middle and last pages (1.5s)
+  ✓  11 [Rental-pagination-WebKit] › tests/e2e/rental-pagination-layout.spec.ts:60:33 › shared return-candidate pagination fits 320px without hiding controls (1.2s)
+  ✓  12 [Rental-pagination-WebKit] › tests/e2e/rental-pagination-layout.spec.ts:60:33 › shared return-candidate pagination fits 430px without hiding controls (1.2s)
+  ✓  13 [Rental-pagination-WebKit] › tests/e2e/rental-pagination-layout.spec.ts:72:1 › pagination follows the result column width on desktop (2.3s)
+
+  13 passed (11.6s)

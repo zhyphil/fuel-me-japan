@@ -26,23 +26,33 @@ export function RentalPagination({ idPrefix, locale, page, pageCount, pageSize, 
     else input.focus({ preventScroll: true });
   }
   const pageText = t.rdPage.replace("{page}", String(page)).replace("{total}", String(pageCount));
-  const [pagePrefix, pageSuffix] = t.rdPage.replace("{total}", String(pageCount)).split("{page}");
+  const [, pageSuffix] = t.rdPage.replace("{total}", String(pageCount)).split("{page}");
   function pageControl(target: number, previous: boolean) {
+    const disabled = target < 1 || target > pageCount;
     const className = `button rental-page-${previous ? "previous" : "next"}`;
     const label = previous ? t.rdPrevious : t.rdNext;
-    return pageHref ? <a className={className} href={pageHref(target)} onClick={event => changePage(event, target)}>{label}</a>
-      : <button type="button" className={className} onClick={() => onChange({ page: target }, id("pagination"))}>{label}</button>;
+    return pageHref && !disabled ? <a className={className} href={pageHref(target)} onClick={event => changePage(event, target)}>{label}</a>
+      : <button type="button" className={className} disabled={disabled} onClick={() => onChange({ page: target }, id("pagination"))}>{label}</button>;
   }
   return <nav id={id("pagination")} className="rental-pagination" aria-label={t.rdPagination} tabIndex={-1}>
-    <label className="rental-page-size" htmlFor={id("page-size")}>{t.rdPerPage}<select id={id("page-size")} value={pageSize} onChange={event => onChange({ pageSize: Number(event.target.value) as RentalPageSize, page: 1 }, id("page-size"))}>{rentalPageSizes.map(size => <option key={size} value={size}>{size}</option>)}</select></label>
-    <div className="rental-page-controls">
-      {page > 1 && pageControl(page - 1, true)}
-      <form className="rental-page-jump" onSubmit={jumpPage}>
-        <label htmlFor={id("page-number")}>{pagePrefix}<input key={`${resetKey}:${page}`} id={id("page-number")} name="page" type="text" inputMode="numeric" enterKeyHint="go" autoComplete="off" maxLength={10} defaultValue={page} aria-label={t.rdPageNumber} disabled={pageCount === 1} />{pageSuffix}</label>
+    <label className="rental-page-size" htmlFor={id("page-size")}>
+      <span>{t.rdPerPage}</span>
+      <select id={id("page-size")} value={pageSize} onChange={event => onChange({ pageSize: Number(event.target.value) as RentalPageSize, page: 1 }, id("page-size"))}>
+        {rentalPageSizes.map(size => <option key={size} value={size}>{size}</option>)}
+      </select>
+    </label>
+    <form className="rental-page-jump" onSubmit={jumpPage}>
+      <label htmlFor={id("page-number")}>{t.rdPageNumber}</label>
+      <div className="rental-page-entry">
+        <input key={`${resetKey}:${page}`} id={id("page-number")} name="page" type="text" inputMode="numeric" enterKeyHint="go" autoComplete="off" maxLength={10} defaultValue={page} disabled={pageCount === 1} aria-describedby={id("page-total")} />
+        <span id={id("page-total")} className="rental-page-total">{pageSuffix}</span>
         <button type="submit" className="button" disabled={pageCount === 1}>{t.rdPageJump}</button>
-        <span className="sr-only" aria-live="polite">{pageText}</span>
-      </form>
-      {page < pageCount && pageControl(page + 1, false)}
+      </div>
+      <span className="sr-only" aria-live="polite">{pageText}</span>
+    </form>
+    <div className="rental-page-controls">
+      {pageControl(page - 1, true)}
+      {pageControl(page + 1, false)}
     </div>
   </nav>;
 }
