@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "sitemap": "https://fuel-me-japan.com/sitemap.xml",
+  "liveTestDisplayedTime": "1 oct. 2026, 16:40:19",
+  "liveCrawlAllowed": "Oui",
+  "livePageFetch": "Réussie",
+  "sitemapStatus": "Opération effectuée",
+  "discoveredPages": 20,
+  "description": "Google实时抓取成功后重新提交一次，GSC已显示操作成功并发现20个页面；不等于20页已收录。"
+}
