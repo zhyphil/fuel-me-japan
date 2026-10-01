@@ -1,0 +1,9 @@
+{
+  "Id": "a5c2b6ab-e075-4e20-851e-f23e81c3afa8",
+  "Environment": "Production",
+  "Branch": "main",
+  "Source": "5ccb5f0",
+  "Deployment": "https://a5c2b6ab.fuel-me-japan.pages.dev",
+  "Status": "18 seconds ago",
+  "Build": "https://dash.cloudflare.com/4d84d2f73decf12ea381b1896ceeb93a/pages/view/fuel-me-japan/a5c2b6ab-e075-4e20-851e-f23e81c3afa8"
+}

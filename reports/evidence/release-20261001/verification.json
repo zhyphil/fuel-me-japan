@@ -1,0 +1,49 @@
+{
+  "checkedAt": "2026-10-01T00:07:31.980528+00:00",
+  "status": "PASS",
+  "productionUrl": "https://fuel-me-japan.com/zh-Hans/",
+  "applicationCommit": "5ccb5f09a1adc12bffc7a1a8edc3803596857826",
+  "featureCommit": "2be2e014bf0c11f8dd9f377f1df6a053da771855",
+  "deploymentId": "a5c2b6ab-e075-4e20-851e-f23e81c3afa8",
+  "checks": [
+    {
+      "name": "正式资源完整性",
+      "status": "PASS",
+      "note": "174个静态资源及5个门店详情深层地址，全部HTTP 200且SHA-256与最终构建一致。"
+    },
+    {
+      "name": "About及语言切换",
+      "status": "PASS",
+      "note": "直接刷新中文About后邮箱链接正确；展开五语言菜单，切换英文后保留/about/页面。"
+    },
+    {
+      "name": "独立加油指引",
+      "status": "PASS",
+      "note": "从页头进入/en/refuel-guide/，五步骤与日文油种标签正确显示。"
+    },
+    {
+      "name": "全国门店与直接页码",
+      "status": "PASS",
+      "note": "默认排除柜台显示7353条、25条每页、295页；实际输入295并跳转成功，显示最后3家门店。"
+    },
+    {
+      "name": "门店详情刷新",
+      "status": "PASS",
+      "note": "从列表进入那霸Times详情，再直接刷新，门店地图、资料及附近加油候选正常加载；该次浏览器错误日志为空。"
+    },
+    {
+      "name": "品牌标识",
+      "status": "PASS",
+      "note": "正式站点北海道筛选面板的7个有素材品牌图片均完整加载；所有14份品牌图片另经HTTP哈希校验。"
+    },
+    {
+      "name": "域名与HTTPS",
+      "status": "PASS",
+      "note": "apex HTTPS正常；www及pages.dev原别名均301跳转到正式域名。"
+    }
+  ],
+  "limits": [
+    "浏览器验收使用Codex内置浏览器；本轮未进行实体iPhone/Android设备或母语真人验收。",
+    "没有启用即时油价、开放搜索索引或开启分析；全国候选记录不等于全部门店已核实。"
+  ]
+}

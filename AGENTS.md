@@ -98,3 +98,5 @@ Current authorization: **The user has now requested completion of all remaining 
 ## 当前发布授权：上线此前全部本地更改
 
 2026-10-01 用户明确要求“先push代码，把前面的更改都部署上线”。本轮允许将当前 fuel-find 工作区中已完成的全国租车目录、详情与加油候选分页联动、导航与独立加油指引、About、语言菜单和品牌 Logo 一并提交并推送到既有 GitHub 仓库，部署到既有 Cloudflare Pages 正式项目和 fuel-me-japan.com，然后完成线上验收与中文发布报告。此授权覆盖上述功能此前仅本地审核的边界。保留数据来源、未知状态、品牌素材使用边界、noindex 与分析 no-op；不新增其他功能或外部数据源。
+
+2026-10-01 发布已完成：功能提交`2be2e01`，最终应用/托管配置`5ccb5f0`，Cloudflare正式部署`a5c2b6ab`。此前本地功能已全部发布到fuel-me-japan.com，线上179项完整性检查及实际页面操作通过。中文证据见`reports/release-20261001.md`；后续证据提交不改变部署应用版本。继续遵守现有数据与隐私边界，不自动新增功能。

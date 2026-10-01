@@ -1,0 +1,32 @@
+[
+  {
+    "locale": "en",
+    "route": "/en/return-car/times-naha-airport/",
+    "status": "PASS",
+    "sha256": "26a39fceeddc059ef8d566f452bf031e216f5e4f02ce976864c167368e1b4a1e"
+  },
+  {
+    "locale": "zh-Hant",
+    "route": "/zh-Hant/return-car/times-naha-airport/",
+    "status": "PASS",
+    "sha256": "0840e9c5c733ccc250f67f62bd8a48592e3d7481cc6faec4b3a9029e038a6c9d"
+  },
+  {
+    "locale": "ko",
+    "route": "/ko/return-car/times-naha-airport/",
+    "status": "PASS",
+    "sha256": "0ee27b7c32e72b69e0653edcfa3a53f373897a756e33406a44d90053a3215920"
+  },
+  {
+    "locale": "zh-Hans",
+    "route": "/zh-Hans/return-car/times-naha-airport/",
+    "status": "PASS",
+    "sha256": "4d6b686d8df889e33407ad99bb5f7e08fe8385daa7227f3e119c153d65cf9c18"
+  },
+  {
+    "locale": "th",
+    "route": "/th/return-car/times-naha-airport/",
+    "status": "PASS",
+    "sha256": "ffc8ae8dbe3bea09a351235b94226893322af55e9b081d2d9e5b68b7e7b3ce0a"
+  }
+]

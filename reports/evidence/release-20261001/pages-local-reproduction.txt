@@ -1,0 +1,50 @@
+
+ ⛅️ wrangler 4.144.0 (update available 4.145.0)
+───────────────────────────────────────────────
+No Functions. Shimming...
+✨ Parsed 0 valid redirect rules.
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mFound 5 invalid redirect rules:[0m
+
+  ▶︎ Infinite loop detected in this rule and has been ignored. This will cause a redirect to strip `.html` or `/index` and end up triggering this rule again. Please fix or remove this rule to silence this warning.
+      at dist/_redirects:1 | /en/return-car/* /en/return-car/index.html 200
+  
+  ▶︎ Infinite loop detected in this rule and has been ignored. This will cause a redirect to strip `.html` or `/index` and end up triggering this rule again. Please fix or remove this rule to silence this warning.
+      at dist/_redirects:2 | /zh-Hant/return-car/* /zh-Hant/return-car/index.html 200
+  
+  ▶︎ Infinite loop detected in this rule and has been ignored. This will cause a redirect to strip `.html` or `/index` and end up triggering this rule again. Please fix or remove this rule to silence this warning.
+      at dist/_redirects:3 | /ko/return-car/* /ko/return-car/index.html 200
+  
+  ▶︎ Infinite loop detected in this rule and has been ignored. This will cause a redirect to strip `.html` or `/index` and end up triggering this rule again. Please fix or remove this rule to silence this warning.
+      at dist/_redirects:4 | /zh-Hans/return-car/* /zh-Hans/return-car/index.html 200
+  
+  ▶︎ Infinite loop detected in this rule and has been ignored. This will cause a redirect to strip `.html` or `/index` and end up triggering this rule again. Please fix or remove this rule to silence this warning.
+      at dist/_redirects:5 | /th/return-car/* /th/return-car/index.html 200
+  
+  
+
+
+✨ Parsed 1 valid header rule.
+Your Worker has access to the following bindings:
+Binding                                                                   Resource                  Mode
+env.CF_PAGES ("1")                                                        Environment Variable      local
+env.CF_PAGES_BRANCH ("codex/m0-2-my-fuel")                                Environment Variable      local
+env.CF_PAGES_COMMIT_SHA ("2be2e014bf0c11f8dd9f377f1df6a053da771...")      Environment Variable      local
+env.CF_PAGES_URL ("https://2be2e01.fuel-me-japan.pages.dev")              Environment Variable      local
+
+⎔ Starting local server...
+[wrangler:info] Ready on http://localhost:4175
+[wrangler:info] GET /zh-Hans/return-car/times-naha-airport/ 200 OK (11ms)
+_redirects modified. Re-evaluating...
+✨ Parsed 5 valid redirect rules.
+✨ Parsed 1 valid header rule.
+_headers modified. Re-evaluating...
+✨ Parsed 5 valid redirect rules.
+✨ Parsed 1 valid header rule.
+[wrangler:info] GET /en/return-car/times-naha-airport/ 200 OK (5ms)
+[wrangler:info] GET /zh-Hant/return-car/times-naha-airport/ 200 OK (2ms)
+[wrangler:info] GET /ko/return-car/times-naha-airport/ 200 OK (2ms)
+[wrangler:info] GET /zh-Hans/return-car/times-naha-airport/ 200 OK (3ms)
+[wrangler:info] GET /th/return-car/times-naha-airport/ 200 OK (3ms)
+_headers modified. Re-evaluating...
+✨ Parsed 5 valid redirect rules.
+✨ Parsed 1 valid header rule.

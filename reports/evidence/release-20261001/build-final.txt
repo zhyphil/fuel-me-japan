@@ -1,0 +1,24 @@
+
+> fuel-me-japan@0.0.0 build
+> vite build && tsx scripts/prerender.tsx
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 69 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                             0.87 kB │ gzip:   0.48 kB
+dist/assets/index-BRdKnc4U.css             62.40 kB │ gzip:  16.20 kB
+dist/assets/rolldown-runtime-CbXtAM7H.js    0.58 kB │ gzip:   0.36 kB
+dist/assets/source-registry-DAcoeKMs.js     2.89 kB │ gzip:   1.25 kB
+dist/assets/RentalBusiness-Dz0E0dNw.js     49.49 kB │ gzip:  15.05 kB
+dist/assets/leaflet-src-BF0sg77Q.js       148.74 kB │ gzip:  43.39 kB
+dist/assets/index-CMEd2gbE.js             519.38 kB │ gzip: 159.15 kB
+
+✓ built in 224ms
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+已预渲染五语言首页、关于页面、独立加油指引、还车目录壳及英文根目录；全国租车分区及来源许可已校验。

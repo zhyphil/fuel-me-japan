@@ -1,0 +1,33 @@
+[
+  {
+    "url": "https://fuel-me-japan.com/zh-Hans/about/",
+    "exitCode": 0,
+    "headers": [
+      "HTTP/2 200 ",
+      "cache-control: public, max-age=0, must-revalidate, no-transform",
+      "content-security-policy: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+    ]
+  },
+  {
+    "url": "https://www.fuel-me-japan.com/zh-Hans/",
+    "exitCode": 0,
+    "headers": [
+      "HTTP/2 301 ",
+      "location: https://fuel-me-japan.com/zh-Hans/",
+      "HTTP/2 200 ",
+      "cache-control: public, max-age=0, must-revalidate, no-transform",
+      "content-security-policy: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+    ]
+  },
+  {
+    "url": "https://fuel-me-japan.pages.dev/zh-Hans/",
+    "exitCode": 0,
+    "headers": [
+      "HTTP/2 301 ",
+      "location: https://fuel-me-japan.com/zh-Hans/",
+      "HTTP/2 200 ",
+      "cache-control: public, max-age=0, must-revalidate, no-transform",
+      "content-security-policy: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+    ]
+  }
+]

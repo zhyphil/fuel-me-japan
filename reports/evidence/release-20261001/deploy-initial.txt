@@ -1,0 +1,13 @@
+
+ ⛅️ wrangler 4.144.0 (update available 4.145.0)
+───────────────────────────────────────────────
+Uploading... (71/174)
+Uploading... (105/174)
+Uploading... (139/174)
+Uploading... (174/174)
+✨ Success! Uploaded 103 files (71 already uploaded) (4.52 sec)
+
+✨ Uploading _headers
+✨ Uploading _redirects
+🌎 Deploying...
+✨ Deployment complete! Take a peek over at https://059ce41f.fuel-me-japan.pages.dev
