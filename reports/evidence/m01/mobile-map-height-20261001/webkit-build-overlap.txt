@@ -1,0 +1,85 @@
+[WebServer] (node:81040) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 7 tests using 2 workers
+
+(node:81044) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:81045) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [Mobile-map-height-WebKit] › tests/e2e/mobile-map-height.spec.ts:29:31 › en: phone map fills spare height after resizing and loading a prefecture (5.5s)
+  ✘  2 [Mobile-map-height-WebKit] › tests/e2e/mobile-map-height.spec.ts:29:31 › zh-Hant: phone map fills spare height after resizing and loading a prefecture (5.5s)
+(node:81247) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:81248) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 [Mobile-map-height-WebKit] › tests/e2e/mobile-map-height.spec.ts:29:31 › zh-Hans: phone map fills spare height after resizing and loading a prefecture (1.0s)
+  ✓  4 [Mobile-map-height-WebKit] › tests/e2e/mobile-map-height.spec.ts:29:31 › ko: phone map fills spare height after resizing and loading a prefecture (1.0s)
+  -  6 [Mobile-map-height-WebKit] › tests/e2e/mobile-map-height.spec.ts:43:1 › collapsed mobile browser chrome does not leave the small-viewport gap
+  ✓  5 [Mobile-map-height-WebKit] › tests/e2e/mobile-map-height.spec.ts:29:31 › th: phone map fills spare height after resizing and loading a prefecture (617ms)
+  ✓  7 [Mobile-map-height-WebKit] › tests/e2e/mobile-map-height.spec.ts:59:1 › short screens and rotation preserve usable map, controls and expandable data notes (683ms)
+
+
+  1) [Mobile-map-height-WebKit] › tests/e2e/mobile-map-height.spec.ts:29:31 › en: phone map fills spare height after resizing and loading a prefecture
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('.map-pin-region, .map-pin-region-group').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('.map-pin-region, .map-pin-region-group').first() with timeout 5000ms
+      - waiting for locator('.map-pin-region, .map-pin-region-group').first()
+
+
+      30 |   await page.setViewportSize({ width: 430, height: 760 });
+      31 |   await page.goto(`/${locale}/`);
+    > 32 |   await expect(page.locator(".map-pin-region, .map-pin-region-group").first()).toBeVisible();
+         |                                                                                ^
+      33 |   for (const size of [{ width: 430, height: 760 }, { width: 430, height: 932 }, { width: 390, height: 1050 }]) {
+      34 |     await page.setViewportSize(size);
+      35 |     await expectFilledViewport(page);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/mobile-map-height.spec.ts:32:80
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-mobile-map-height-20261001/webkit-artifacts/mobile-map-height-en-phone-2fd9a-ng-and-loading-a-prefecture-Mobile-map-height-WebKit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-mobile-map-height-20261001/webkit-artifacts/mobile-map-height-en-phone-2fd9a-ng-and-loading-a-prefecture-Mobile-map-height-WebKit/error-context.md
+
+  2) [Mobile-map-height-WebKit] › tests/e2e/mobile-map-height.spec.ts:29:31 › zh-Hant: phone map fills spare height after resizing and loading a prefecture
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('.map-pin-region, .map-pin-region-group').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" locator('.map-pin-region, .map-pin-region-group').first() with timeout 5000ms
+      - waiting for locator('.map-pin-region, .map-pin-region-group').first()
+
+
+      30 |   await page.setViewportSize({ width: 430, height: 760 });
+      31 |   await page.goto(`/${locale}/`);
+    > 32 |   await expect(page.locator(".map-pin-region, .map-pin-region-group").first()).toBeVisible();
+         |                                                                                ^
+      33 |   for (const size of [{ width: 430, height: 760 }, { width: 430, height: 932 }, { width: 390, height: 1050 }]) {
+      34 |     await page.setViewportSize(size);
+      35 |     await expectFilledViewport(page);
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/mobile-map-height.spec.ts:32:80
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../../../../../tmp/fmj-mobile-map-height-20261001/webkit-artifacts/mobile-map-height-zh-Hant--b669c-ng-and-loading-a-prefecture-Mobile-map-height-WebKit/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../../../../../tmp/fmj-mobile-map-height-20261001/webkit-artifacts/mobile-map-height-zh-Hant--b669c-ng-and-loading-a-prefecture-Mobile-map-height-WebKit/error-context.md
+
+  2 failed
+    [Mobile-map-height-WebKit] › tests/e2e/mobile-map-height.spec.ts:29:31 › en: phone map fills spare height after resizing and loading a prefecture
+    [Mobile-map-height-WebKit] › tests/e2e/mobile-map-height.spec.ts:29:31 › zh-Hant: phone map fills spare height after resizing and loading a prefecture
+  1 skipped
+  4 passed (9.4s)

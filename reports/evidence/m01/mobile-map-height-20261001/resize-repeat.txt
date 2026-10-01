@@ -1,0 +1,66 @@
+[WebServer] (node:80657) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 21 tests using 8 workers
+
+(node:80661) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:80663) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:80660) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:80662) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:80665) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:80664) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:80667) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:80666) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   5 tests/e2e/mobile-map-height.spec.ts:43:1 › collapsed mobile browser chrome does not leave the small-viewport gap (637ms)
+  ✓   6 tests/e2e/mobile-map-height.spec.ts:29:31 › en: phone map fills spare height after resizing and loading a prefecture (714ms)
+  ✓   4 tests/e2e/mobile-map-height.spec.ts:29:31 › en: phone map fills spare height after resizing and loading a prefecture (715ms)
+  ✓   2 tests/e2e/mobile-map-height.spec.ts:29:31 › th: phone map fills spare height after resizing and loading a prefecture (725ms)
+  ✓   1 tests/e2e/mobile-map-height.spec.ts:29:31 › zh-Hant: phone map fills spare height after resizing and loading a prefecture (730ms)
+  ✓   7 tests/e2e/mobile-map-height.spec.ts:29:31 › ko: phone map fills spare height after resizing and loading a prefecture (736ms)
+  ✓   3 tests/e2e/mobile-map-height.spec.ts:29:31 › zh-Hans: phone map fills spare height after resizing and loading a prefecture (779ms)
+  ✓   8 tests/e2e/mobile-map-height.spec.ts:59:1 › short screens and rotation preserve usable map, controls and expandable data notes (798ms)
+(node:80700) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:80702) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:80704) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:80705) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:80703) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:80706) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:80707) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   9 tests/e2e/mobile-map-height.spec.ts:29:31 › ko: phone map fills spare height after resizing and loading a prefecture (395ms)
+(node:80718) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  10 tests/e2e/mobile-map-height.spec.ts:29:31 › zh-Hant: phone map fills spare height after resizing and loading a prefecture (521ms)
+  ✓  14 tests/e2e/mobile-map-height.spec.ts:43:1 › collapsed mobile browser chrome does not leave the small-viewport gap (448ms)
+  ✓  11 tests/e2e/mobile-map-height.spec.ts:29:31 › zh-Hans: phone map fills spare height after resizing and loading a prefecture (522ms)
+  ✓  15 tests/e2e/mobile-map-height.spec.ts:29:31 › en: phone map fills spare height after resizing and loading a prefecture (499ms)
+  ✓  13 tests/e2e/mobile-map-height.spec.ts:59:1 › short screens and rotation preserve usable map, controls and expandable data notes (556ms)
+  ✓  12 tests/e2e/mobile-map-height.spec.ts:29:31 › th: phone map fills spare height after resizing and loading a prefecture (569ms)
+  ✓  16 tests/e2e/mobile-map-height.spec.ts:29:31 › zh-Hant: phone map fills spare height after resizing and loading a prefecture (485ms)
+(node:80739) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:80740) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:80745) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  17 tests/e2e/mobile-map-height.spec.ts:29:31 › ko: phone map fills spare height after resizing and loading a prefecture (432ms)
+  ✓  18 tests/e2e/mobile-map-height.spec.ts:59:1 › short screens and rotation preserve usable map, controls and expandable data notes (469ms)
+  ✓  21 tests/e2e/mobile-map-height.spec.ts:43:1 › collapsed mobile browser chrome does not leave the small-viewport gap (341ms)
+  ✓  20 tests/e2e/mobile-map-height.spec.ts:29:31 › zh-Hans: phone map fills spare height after resizing and loading a prefecture (393ms)
+  ✓  19 tests/e2e/mobile-map-height.spec.ts:29:31 › th: phone map fills spare height after resizing and loading a prefecture (446ms)
+
+  21 passed (3.8s)

@@ -1,0 +1,19 @@
+[WebServer] (node:81892) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 7 tests using 2 workers
+
+(node:81894) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:81893) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 [Mobile-map-height-WebKit] › tests/e2e/mobile-map-height.spec.ts:29:31 › en: phone map fills spare height after resizing and loading a prefecture (685ms)
+  ✓  1 [Mobile-map-height-WebKit] › tests/e2e/mobile-map-height.spec.ts:29:31 › zh-Hant: phone map fills spare height after resizing and loading a prefecture (725ms)
+  ✓  3 [Mobile-map-height-WebKit] › tests/e2e/mobile-map-height.spec.ts:29:31 › ko: phone map fills spare height after resizing and loading a prefecture (434ms)
+  ✓  4 [Mobile-map-height-WebKit] › tests/e2e/mobile-map-height.spec.ts:29:31 › zh-Hans: phone map fills spare height after resizing and loading a prefecture (421ms)
+  -  6 [Mobile-map-height-WebKit] › tests/e2e/mobile-map-height.spec.ts:43:1 › collapsed mobile browser chrome does not leave the small-viewport gap
+  ✓  5 [Mobile-map-height-WebKit] › tests/e2e/mobile-map-height.spec.ts:29:31 › th: phone map fills spare height after resizing and loading a prefecture (439ms)
+  ✓  7 [Mobile-map-height-WebKit] › tests/e2e/mobile-map-height.spec.ts:59:1 › short screens and rotation preserve usable map, controls and expandable data notes (488ms)
+
+  1 skipped
+  6 passed (2.7s)
