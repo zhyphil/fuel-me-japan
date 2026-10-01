@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-10-01T11:38:52.988443+00:00",
+  "status": "PASS",
+  "note": "上线前后446份运行源码与339份构建文件指纹一致；347项正式域名资源和深层URL核对通过，五语言浏览器检查通过。实体手机仍待用户实测。",
+  "sourceFileCount": 446,
+  "buildFileCount": 339,
+  "httpChecks": 347,
+  "browserLocales": 5,
+  "errors": []
+}

@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-10-01T11:38:52.750824+00:00",
+  "note": "已核对Cloudflare生产环境、main分支、应用提交及正式域名；部署URL不是唯一验收依据。",
+  "applicationCommit": "cbd5153bd3c6fea2f48d1bff4c6020c24c025d98",
+  "productionUrl": "https://fuel-me-japan.com",
+  "Id": "6db508ca-179a-45b0-898c-6574f5ddcf53",
+  "Environment": "Production",
+  "Branch": "main",
+  "Source": "cbd5153",
+  "Deployment": "https://6db508ca.fuel-me-japan.pages.dev",
+  "Status": "29 seconds ago",
+  "Build": "https://dash.cloudflare.com/4d84d2f73decf12ea381b1896ceeb93a/pages/view/fuel-me-japan/6db508ca-179a-45b0-898c-6574f5ddcf53"
+}

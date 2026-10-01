@@ -1,0 +1,59 @@
+{
+  "checkedAt": "2026-10-01T11:37:32.005Z",
+  "applicationCommit": "cbd5153bd3c6fea2f48d1bff4c6020c24c025d98",
+  "status": "PASS",
+  "note": "真实正式域名浏览器核验；没有外部请求拦截、定位授权或外部导航。验证五语言Seaside详情、旧ID、搜索与按页加载。桌面及模拟手机不等于实体手机验收。",
+  "verified": [
+    {
+      "locale": "en",
+      "status": "PASS",
+      "detailAndAlias": true,
+      "companyAirportSearchCount": 1,
+      "nearbyStationCount": 25,
+      "nonHomeDefersFindFuel": true,
+      "homeLoadsOnce": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "locale": "zh-Hant",
+      "status": "PASS",
+      "detailAndAlias": true,
+      "companyAirportSearchCount": 1,
+      "nearbyStationCount": 25,
+      "nonHomeDefersFindFuel": true,
+      "homeLoadsOnce": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "locale": "ko",
+      "status": "PASS",
+      "detailAndAlias": true,
+      "companyAirportSearchCount": 1,
+      "nearbyStationCount": 25,
+      "nonHomeDefersFindFuel": true,
+      "homeLoadsOnce": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "locale": "zh-Hans",
+      "status": "PASS",
+      "detailAndAlias": true,
+      "companyAirportSearchCount": 1,
+      "nearbyStationCount": 25,
+      "nonHomeDefersFindFuel": true,
+      "homeLoadsOnce": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "locale": "th",
+      "status": "PASS",
+      "detailAndAlias": true,
+      "companyAirportSearchCount": 1,
+      "nearbyStationCount": 25,
+      "nonHomeDefersFindFuel": true,
+      "homeLoadsOnce": true,
+      "noHorizontalOverflow": true
+    }
+  ],
+  "errors": []
+}
