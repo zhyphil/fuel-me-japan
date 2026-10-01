@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "commit": "cdb71777d6e51ba2ac735bf8a05af001c4c1b38a",
+  "id": "2cad1d21-69f0-4c5b-96a4-3d6c8fbdff00",
+  "environment": "Production",
+  "branch": "main",
+  "deploymentUrl": "https://2cad1d21.fuel-me-japan.pages.dev",
+  "productionUrl": "https://fuel-me-japan.com",
+  "note": "现有Pages生产项目已发布；36项正式HTTP检查通过。"
+}

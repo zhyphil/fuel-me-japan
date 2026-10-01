@@ -1,0 +1,298 @@
+{
+  "status": "PASS",
+  "verifiedAt": "2026-10-01T12:51:43.764418+00:00",
+  "origin": "https://fuel-me-japan.com",
+  "sitemapUrlCount": 20,
+  "requestCount": 36,
+  "note": "20个主页面及根目录规范别名可收录；XML与页面规范网址一致，详情和数据响应头保留noindex；抓取规则只放行主页面和必要资源。此验证不等于Google已实际抓取或收录。",
+  "checks": [
+    {
+      "url": "https://fuel-me-japan.com/en/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "sha256": "4976aee75b1c0962cffaa70682d6efe08ee5d88dfacb98e8696d77741222337e",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/en/return-car/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "sha256": "7cc784b7595383a390a703e3eb68b3196ff92cee7d49d09b67557205dc4b40d3",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/en/refuel-guide/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "sha256": "72ad41ac2ba5cc6c4deac0fefd59e47339573c46a053a270a8e1c69bb931487d",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/en/about/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "sha256": "9a856d4bbe06c8c7e5f488ecc62a5e5c739c53aa663f93c61e100fcc539dcd64",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hant/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "sha256": "1e0d68378f7d671e39ac15f9cdaefc6acadd9dcda451d290c4cabec68ff2d8fc",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hant/return-car/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "sha256": "a6d6a9cfd0faf636d67d68246072037c897f9bc75ee17f6eff27b43d9bd33106",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hant/refuel-guide/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "sha256": "9bd84549264c7d7e48cced9b403e002cd87b4b944d1ba6d34b24fc94fafbe31d",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hant/about/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "sha256": "0e314c4ffe3e19924bcbd38c6a63419965b7003f57e9534b9dbba6507d5eea3a",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/ko/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "sha256": "8040747d108e77184e60426051ccddd2032eb3b1a6c4e9b71b98391595528844",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/ko/return-car/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "sha256": "b55d79469d5b5a4757767cd76fe9f7bd1bcb806fa9808876be344608b0653fea",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/ko/refuel-guide/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "sha256": "880147041a70f1aaf65767a16812a0549b51a0ec5ae8d5cdaf6630aace0d7d22",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/ko/about/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "sha256": "1df3a4701fe0b5f5b38e22d8b71f9c266eb2c28774e94b3ee48b10651be16b84",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hans/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "sha256": "9a9f09896fa8d70296ccd821e236e3c2207d56ee3ac2789cb35fb9ee50ea062d",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hans/return-car/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "sha256": "5b743bdcea77a8ad11e3bbdb72553269b64febbfc2e473a479650d9d7609c7da",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hans/refuel-guide/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "sha256": "0e9b47903a660c27d7543c83c60742982e4381cc3afe1fae9d0abeb2b56b2ffc",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hans/about/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "sha256": "527e536cd82329d369b8762b6e0bfc4fabafb1c394c384dafbe480a7329b9c4e",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/th/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "sha256": "19a216ce49e40ab09a987ffe25f966b1c2f37fbe0023afc84ac07e10e1c43873",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/th/return-car/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "sha256": "de3eb88a2045f5222495a423784e2ac43cc776977a1c01df3ee60ef92ed63a9e",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/th/refuel-guide/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "sha256": "9babb97095dca3afc25d55ee52d4315ab9758007502641e697fe7c966dee453f",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/th/about/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "sha256": "278bc8778ebde34bf11e920269fe0d57fd1edcbae64e3318a5edd5e8ed00756f",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": null,
+      "sha256": "4976aee75b1c0962cffaa70682d6efe08ee5d88dfacb98e8696d77741222337e",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/sitemap.xml",
+      "status": 200,
+      "contentType": "application/xml",
+      "xRobotsTag": null,
+      "sha256": "1f47159e71a4ccebf3a0d0b8340fde283adcf5bc112d1390235f24d91dfecdf0",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/robots.txt",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "xRobotsTag": null,
+      "sha256": "b740fa261f38463d2338be1f0dfb75b8736d12909af9b62a89fe7c11a37977fa",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/en/return-car/times-naha-airport/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": "noindex, nofollow",
+      "sha256": "7cc784b7595383a390a703e3eb68b3196ff92cee7d49d09b67557205dc4b40d3",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/en/return-car/times-naha-airport",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": "noindex, nofollow",
+      "sha256": "7cc784b7595383a390a703e3eb68b3196ff92cee7d49d09b67557205dc4b40d3",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hant/return-car/times-naha-airport/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": "noindex, nofollow",
+      "sha256": "a6d6a9cfd0faf636d67d68246072037c897f9bc75ee17f6eff27b43d9bd33106",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hant/return-car/times-naha-airport",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": "noindex, nofollow",
+      "sha256": "a6d6a9cfd0faf636d67d68246072037c897f9bc75ee17f6eff27b43d9bd33106",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/ko/return-car/times-naha-airport/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": "noindex, nofollow",
+      "sha256": "b55d79469d5b5a4757767cd76fe9f7bd1bcb806fa9808876be344608b0653fea",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/ko/return-car/times-naha-airport",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": "noindex, nofollow",
+      "sha256": "b55d79469d5b5a4757767cd76fe9f7bd1bcb806fa9808876be344608b0653fea",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hans/return-car/times-naha-airport/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": "noindex, nofollow",
+      "sha256": "5b743bdcea77a8ad11e3bbdb72553269b64febbfc2e473a479650d9d7609c7da",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hans/return-car/times-naha-airport",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": "noindex, nofollow",
+      "sha256": "5b743bdcea77a8ad11e3bbdb72553269b64febbfc2e473a479650d9d7609c7da",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/th/return-car/times-naha-airport/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": "noindex, nofollow",
+      "sha256": "de3eb88a2045f5222495a423784e2ac43cc776977a1c01df3ee60ef92ed63a9e",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/th/return-car/times-naha-airport",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": "noindex, nofollow",
+      "sha256": "de3eb88a2045f5222495a423784e2ac43cc776977a1c01df3ee60ef92ed63a9e",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/data/manifest.json",
+      "status": 200,
+      "contentType": "application/json",
+      "xRobotsTag": "noindex",
+      "sha256": "334ce4620b9e85751876aa427b0d958eb8410d89af0bfb4fa488b2737869693d",
+      "result": "PASS"
+    },
+    {
+      "url": "https://fuel-me-japan.com/ads.txt",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "xRobotsTag": null,
+      "sha256": "167521f9f95b76e7071d6e244f4db5e56f41539a20ae6a38dc16e1e7041f5e9b",
+      "result": "PASS"
+    },
+    {
+      "url": "https://2cad1d21.fuel-me-japan.pages.dev/en/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "xRobotsTag": "noindex",
+      "sha256": "4976aee75b1c0962cffaa70682d6efe08ee5d88dfacb98e8696d77741222337e",
+      "result": "PASS"
+    }
+  ]
+}

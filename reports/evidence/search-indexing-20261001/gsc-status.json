@@ -1,0 +1,23 @@
+{
+  "status": "PARTIAL",
+  "siteConfiguration": "PASS",
+  "sitemapSubmission": "ACCEPTED",
+  "sitemapRead": "FAILED",
+  "discoveredPages": 0,
+  "sitemapReadMessage": "Impossible de récupérer le sitemap",
+  "sitemapLiveTest": {
+    "url": "https://fuel-me-japan.com/sitemap.xml",
+    "testedAt": "2026-10-01T14:56:25+02:00",
+    "status": "FAILED",
+    "message": "Bloquée par le fichier robots.txt"
+  },
+  "googleRobotsReport": "UNAVAILABLE",
+  "indexing": "NOT_VERIFIED",
+  "note": "生产文件与已测试构建一致；GSC已受理本轮重新提交，但读取和实时测试仍报告robots阻止。Google当前缓存的规则版本无法查看，不能将缓存推测写成已证实原因。",
+  "homepageLiveTest": {
+    "url": "https://fuel-me-japan.com/zh-Hans/",
+    "testedAt": "2026-10-01T14:57:27+02:00",
+    "status": "FAILED",
+    "message": "Bloquée par le fichier robots.txt"
+  }
+}

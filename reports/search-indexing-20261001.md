@@ -21,8 +21,9 @@
 | 本地Cloudflare Pages配置 | PASS，35项HTTP检查；20个主页面与根别名、XML、robots、10种详情路径、数据和ads.txt |
 | 本地pages.dev响应头 | PASS，主项目与版本域名都返回noindex |
 | 历史报告截图 | 已恢复原始版本，未将本轮画面覆盖历史证据 |
-| 正式部署与线上核对 | PENDING |
-| GSC读取／实际收录 | PENDING／NOT_VERIFIED |
+| 正式部署与线上核对 | PASS，36项；含实际生产与部署版本域名 |
+| GSC重新提交 | ACCEPTED；Google已受理提交 |
+| GSC读取／实际收录 | FAILED／NOT_VERIFIED；读取失败、发现0页 |
 
 证据目录：`reports/evidence/search-indexing-20261001/`。代码验收通过并不等于Google已经抓取或收录；发布后使用Google实际报告核对，不以模拟User-Agent替代Google证据。
 
@@ -33,3 +34,19 @@
 没有修改原00–10冻结规格，也不把所有全国候选门店批量提交搜索。Google是否收录及处理时间由其决定。
 
 依据：[Google noindex规则](https://developers.google.com/search/docs/crawling-indexing/block-indexing)、[规范网址说明](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls)、[Cloudflare响应头及部署别名限制](https://developers.cloudflare.com/pages/configuration/headers/)。
+
+## 发布证据
+
+应用提交`cdb71777d6e51ba2ac735bf8a05af001c4c1b38a`已推送main及当前开发分支。Cloudflare生产部署`2cad1d21-69f0-4c5b-96a4-3d6c8fbdff00`已完成；[正式网站](https://fuel-me-japan.com/zh-Hans/)、[sitemap](https://fuel-me-japan.com/sitemap.xml)。12:51 UTC线上核对36项通过，20个网页和XML与已测试构建的哈希一致；生产网页没有禁止收录响应头，实际版本域名仍有noindex。
+
+## Google实际检查与剩余事项
+
+部署后已在原GSC资源重新提交一次sitemap，出现“Sitemap envoyé”受理提示。提交列表仍显示“Impossible de récupérer le sitemap”、发现0页；14:56:25（巴黎时间，12:56:25 UTC）的Google智能手机实时网址检查仍报告“Bloquée par le fichier robots.txt”。14:57:27对中文首页的独立实时测试得到相同的robots阻止结果。没有请求将XML文件本身加入搜索索引。
+
+当前生产robots与构建文件哈希一致，已经允许sitemap和20个主页面；Google的robots报告目前显示没有文件记录，也没有可用的重新抓取入口。Google可能尚未更新缓存规则，但本次无法取得其使用的具体文件，**缓存仅为可能原因，未证实**。不会为消除后台红色状态扩大到全站抓取，也不把普通HTTP访问或模拟User-Agent算作Google抓取成功。
+
+网站配置、代码检查和发布已完成；GSC读取未通过、实际收录未验证。下一次应在Google更新抓取状态后检查读取结果与发现页数；若仍失败，再结合其robots报告中的抓取时间和内容继续定位。此轮不重复提交、不启动定时任务。
+
+依据：[Google Sitemap报告说明](https://support.google.com/webmasters/answer/7451001?hl=en)、[robots缓存规则](https://developers.google.com/crawling/docs/robots-txt/robots-txt-spec)。
+
+截图证据：[Sitemap提交状态](evidence/search-indexing-20261001/gsc-sitemap-status.png)、[Sitemap实时测试](evidence/search-indexing-20261001/gsc-sitemap-live.png)、[中文首页实时测试](evidence/search-indexing-20261001/gsc-homepage-live.png)。
