@@ -67,7 +67,7 @@ for (const locale of locales) test(`${locale}: 320px detail, Japanese labels, so
   await expect(detail.locator(".station-mini-map-preview").first()).toHaveAccessibleName(t.smPreview.replace("{name}", "Unknown supply"));
   await expect(detail.locator("dt[lang=ja]")).toHaveText(["満タン", "領収書 / レシート"]);
   await expect(detail.locator(".rental-detail-info")).toContainText(naha.address!);
-  await expect(detail.getByRole("link", { name: t.rcOfficial })).toHaveAttribute("href", "https://www.timescar-rental.com/en/");
+  await expect(detail.getByRole("link", { name: t.rdOfficialWebsite })).toHaveAttribute("href", "https://www.timescar-rental.com/en/");
   await expect(detail.getByRole("link", { name: t.rdRuleSource })).toHaveAttribute("href", "https://www.timescar-rental.com/en/agreement/gas.html");
   await expect(detail.getByText(t.rcRules, { exact: true })).toBeVisible();
   await expect(detail.locator("#return-fuel")).toHaveValue("REGULAR");
@@ -182,8 +182,8 @@ test("empty nearby records are explicit and offer a return to the fuel map", asy
 
 test("ninety-day-old sources retain their real check date and require rechecking", async ({ page }) => {
   await fixtures(page); await page.clock.setFixedTime(new Date("2026-12-29T00:00:00Z")); const detail = await openDetail(page);
-  await expect(detail.locator(".rental-official-notes").getByRole("alert")).toHaveText(messages.en.rcStale);
-  await expect(detail.locator(".return-car-rules").getByRole("alert")).toHaveText(messages.en.rcStale);
+  await expect(detail.locator(".rental-official-notes").getByRole("alert")).toHaveText(messages.en.rdStale);
+  await expect(detail.locator(".return-car-rules").getByRole("alert")).toHaveText(messages.en.rdStale);
   await expect(detail.getByText(messages.en.rcChecked.replace("{date}", "2026-09-30"), { exact: true })).toBeVisible();
 });
 
@@ -204,7 +204,8 @@ test("leaving while a branch request is pending aborts it and cannot restore its
   } finally { release(); }
 });
 
-test("all seven shipped branches load real station candidates and keep every return destination distinct", async ({ page }, testInfo) => {
+test("all reviewed shipped branches load real station candidates and keep every return destination distinct", async ({ page }, testInfo) => {
+  test.setTimeout(60_000); // 15 distinct facilities and complete return flows.
   await rentalFixtures(page); await page.setViewportSize({ width: 1280, height: 900 });
   for (const branch of officialBranches) {
     const detail = await openDetail(page, branch, "zh-Hans");

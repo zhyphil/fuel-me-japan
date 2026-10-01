@@ -1,6 +1,5 @@
 import copy
 from datetime import datetime, timedelta, timezone
-import io
 import json
 from pathlib import Path
 import shutil
@@ -18,6 +17,7 @@ from common import CODES, PREFECTURES, count_gate, digest, encode, verified_inpu
 from osm import parse_osm, tri, station
 from prices import parse_prices, validate_prices, SHEET
 from pipeline import update, fetch_price
+from test_refresh_sources import offline_http
 
 
 def workbook(path):
@@ -146,13 +146,75 @@ class PriceTests(unittest.TestCase):
     def test_http403_never_replaces_local_or_published_data(self):
         target = Path(self.temp.name) / 'download.xlsx'
         args = SimpleNamespace(url=self.meta['sourceUrl'], destination=str(target))
-        error = HTTPError(args.url, 403, 'Forbidden', {}, io.BytesIO())
-        self.addCleanup(error.close)
-        with patch('urllib.request.urlopen', side_effect=error):
-            with self.assertRaises(HTTPError):
+        with offline_http({args.url: (403, {}, b'Forbidden')}):
+            with self.assertRaises(HTTPError) as failure:
                 fetch_price(args)
+        self.assertEqual(failure.exception.code, 403)
+        failure.exception.close()
         self.assertFalse(target.exists())
         self.assertFalse(Path(str(target) + '.json').exists())
+
+    def test_successful_download_and_same_input_retain_pointers_and_fetched_at(self):
+        output = Path(self.temp.name) / 'published'
+        shutil.copytree(ROOT / 'public/data', output)
+        current = json.loads((output / 'manifest.json').read_text())['prices']
+        sheet = self.book[SHEET]
+        sheet['E2'] = datetime.fromisoformat(current['publishedAt'])
+        survey = datetime.fromisoformat(current['surveyDate'])
+        for cell in ['D6', 'F6', 'H6']:
+            sheet[cell] = survey
+        for cell in ['C6', 'E6', 'G6']:
+            sheet[cell] = survey - timedelta(days=7)
+        self.book.save(self.path)
+        source = metadata(self.path)['sourceUrl']
+        payload = self.path.read_bytes()
+        target = Path(self.temp.name) / 'download.xlsx'
+        with offline_http({source: (200, {}, payload)}) as requested:
+            fetch_price(SimpleNamespace(url=source, destination=str(target)))
+        self.assertEqual(requested, [source])
+        self.assertEqual(target.read_bytes(), payload)
+        proof = Path(str(target) + '.json')
+        downloaded = json.loads(proof.read_text())
+        self.assertEqual(downloaded['sha256'], digest(target))
+        self.assertEqual(downloaded['bytes'], len(payload))
+        self.assertEqual(downloaded['sourceUrl'], source)
+        self.assertEqual(downloaded['publishedAt'], current['publishedAt'])
+        args = SimpleNamespace(output=str(output), kind='prices', workbook=str(target), price_metadata=str(proof))
+        update(args)
+        before = {name: ((output / name).read_bytes(), (output / name).stat().st_mtime_ns) for name in ['manifest.json', 'source-registry.json']}
+        # A later acquisition of identical bytes must not refresh published dates.
+        downloaded['fetchedAt'] = datetime.now(timezone.utc).isoformat()
+        proof.write_bytes(encode(downloaded))
+        with patch('pipeline.atomic_write', side_effect=AssertionError('Unchanged input must not promote pointers')):
+            update(args)
+        for name, (payload, mtime) in before.items():
+            self.assertEqual((output / name).read_bytes(), payload)
+            self.assertEqual((output / name).stat().st_mtime_ns, mtime)
+
+    def test_invalid_workbook_download_keeps_destination_absent(self):
+        self.book[SHEET]['F8'] = 0
+        self.book.save(self.path)
+        invalid_value = self.path.read_bytes()
+        self.book[SHEET]['F8'] = 170.2
+        self.book[SHEET]['E2'] = datetime(2999, 1, 1)
+        self.book.save(self.path)
+        invalid_date = self.path.read_bytes()
+        for label, payload in [('format', b'not a workbook'), ('size', b'PK' + b'x' * (5 * 1024 * 1024)), ('value', invalid_value), ('date', invalid_date)]:
+            with self.subTest(label=label):
+                target = Path(self.temp.name) / (label + '.xlsx')
+                with offline_http({self.meta['sourceUrl']: (200, {}, payload)}):
+                    with self.assertRaises(ValueError):
+                        fetch_price(SimpleNamespace(url=self.meta['sourceUrl'], destination=str(target)))
+                self.assertFalse(target.exists())
+                self.assertFalse(Path(str(target) + '.json').exists())
+
+    def test_unapproved_workbook_paths_are_rejected_before_transport(self):
+        for suffix in ['other.xlsx', '../other/260930.xlsx', '260930.xlsx?extra=1', '260930.xlsx#fragment']:
+            url = self.meta['sourceUrl'].rsplit('/', 1)[0] + '/' + suffix
+            with self.subTest(url=url), offline_http({url: (200, {}, self.path.read_bytes())}) as requested:
+                with self.assertRaises(ValueError):
+                    fetch_price(SimpleNamespace(url=url, destination=str(Path(self.temp.name) / 'download.xlsx')))
+                self.assertEqual(requested, [])
 
 
 class OsmTests(unittest.TestCase):

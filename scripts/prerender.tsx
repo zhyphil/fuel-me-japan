@@ -6,7 +6,7 @@ import { createHash } from "node:crypto";
 import { parseDataManifest, parseStationFile, parsePriceFile, type Artifact } from "../src/lib/stations";
 import { validateRegistry } from "../src/lib/source-registry";
 import { fieldGuideProvenance, validateFieldGuideSources, validateGuideMessages } from "../src/lib/field-guide";
-import { parseManifest as parseRentalManifest, parseIndex as parseRentalIndex, parsePartition as parseRentalPartition, rentalManifestUrl } from "../src/lib/rental";
+import { parseManifest as parseRentalManifest, parseIndex as parseRentalIndex, parsePartition as parseRentalPartition, rentalManifestUrl, type RentalLocation } from "../src/lib/rental";
 import { parseRoute } from "../src/lib/routes";
 
 const rentalBytes = await readFile(`dist${rentalManifestUrl}`);
@@ -19,14 +19,15 @@ for (const artifact of rentalManifest.downloads) {
 }
 const rentalIndex = parseRentalIndex(JSON.parse(rentalArtifacts.get(rentalManifest.index.url)!.toString("utf8")), rentalManifest);
 const rentalIds = new Set<string>();
+const reviewedRentalDetails: RentalLocation[] = [];
 for (const partition of rentalManifest.partitions) {
   const data = parseRentalPartition(JSON.parse(rentalArtifacts.get(partition.url)!.toString("utf8")), rentalManifest, rentalIndex);
-  for (const row of data.records) { if (rentalIds.has(row.id)) throw new Error(`租车门店跨分区重复：${row.id}`); rentalIds.add(row.id); }
+  for (const row of data.records) { if (rentalIds.has(row.id)) throw new Error(`租车门店跨分区重复：${row.id}`); rentalIds.add(row.id); if (row.official) reviewedRentalDetails.push(row); }
 }
 if (rentalIds.size !== rentalManifest.count) throw new Error("全国租车数据总数不符");
 const reviewedRentals = rentalIndex.records.filter(row => row.verification === "OFFICIAL_FACILITY_CHECKED");
-for (const locale of locales) for (const row of reviewedRentals) {
-  if (!messages[locale][`rental.airport.${row.airportCode!}`]?.trim()) throw new Error(`还车机场缺少本地化摘要：${locale}/${row.id}`);
+for (const locale of locales) for (const row of reviewedRentalDetails) {
+  if (!messages[locale][row.official!.summaryKey]?.trim()) throw new Error(`还车机场缺少本地化摘要：${locale}/${row.id}`);
 }
 
 const guideSourceBytes = await readFile("dist/field-guides/refuel-sources.json");
@@ -120,7 +121,7 @@ await writeFile(
       stationCount: manifest.stations.count,
       priceRecordCount: manifest.prices.count,
       fieldGuides: { refuel: { path: "/field-guides/refuel-sources.json", sha256: createHash("sha256").update(guideSourceBytes).digest("hex"), reviewDate: fieldGuideProvenance.reviewDate, transformationVersion: fieldGuideProvenance.transformationVersion } },
-      rentalLocations: { path: rentalManifestUrl, sha256: createHash("sha256").update(rentalBytes).digest("hex"), count: rentalManifest.count, reviewDate: rentalManifest.reviewDate, transformationVersion: rentalManifest.transformationVersion, version: rentalManifest.version, sourceIds: rentalManifest.sources.map(source => source.id), counterCount: rentalIndex.records.filter(row => row.candidateStatus === "COUNTER_ONLY").length, officialFacilityCount: reviewedRentals.length, reviewedAirports: reviewedRentals.map(row => row.airportCode).sort(), note: "全国候选库；7机场各核对1家Times设施，非完整覆盖或公司整库授权；全部车辆入口未现场核实。" },
+      rentalLocations: { path: rentalManifestUrl, sha256: createHash("sha256").update(rentalBytes).digest("hex"), count: rentalManifest.count, reviewDate: rentalManifest.reviewDate, transformationVersion: rentalManifest.transformationVersion, version: rentalManifest.version, sourceIds: rentalManifest.sources.map(source => source.id), counterCount: rentalIndex.records.filter(row => row.candidateStatus === "COUNTER_ONLY").length, officialFacilityCount: reviewedRentals.length, reviewedAirports: [...new Set(reviewedRentals.map(row => row.airportCode))].sort(), note: "全国候选库；七机场共15条有限官方事实（7家Times、6家Nippon、2家Toyota），核对地址及归还安排；新增坐标沿用来源参考点，全部车辆入口未核实。非完整覆盖或公司整库授权。" },
       surveyDate: manifest.prices.surveyDate,
       publishedAt: manifest.prices.publishedAt,
       note: "OSM 覆盖不完整；官方都道府县参考价与站点数据分开存储。没有站点即时报价。导入器不执行定时调度或部署。",

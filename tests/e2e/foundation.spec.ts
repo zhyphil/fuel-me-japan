@@ -20,6 +20,8 @@ for (const language of languageCases) {
       .click();
     await expect(page).toHaveURL(new RegExp(`/${language.locale}/$`));
     await expect(page.locator("html")).toHaveAttribute("lang", language.locale);
+    await expect(page.locator(".locale-current")).toBeVisible();
+    await expect(page.locator(".locale-current")).toHaveText(language.label);
     await expect(page).toHaveTitle(language.copy.pageTitle);
     await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
       "href",
@@ -48,6 +50,8 @@ for (const language of languageCases) {
     ).toHaveText(language.label);
     await page.reload();
     await expect(page.locator("html")).toHaveAttribute("lang", language.locale);
+    await expect(page.locator(".locale-current")).toBeVisible();
+    await expect(page.locator(".locale-current")).toHaveText(language.label);
     for (const width of [320, 390]) {
       await page.setViewportSize({ width, height: 844 });
       expect(
@@ -199,13 +203,13 @@ test("desktop layout and keyboard navigation remain usable", async ({
   });
 });
 
-for (const width of [320, 1280]) test(`language dropdown ${width}px: compact globe, keyboard and dismissal`, async ({ page, browserName }) => {
+for (const width of [320, 1280]) test(`language dropdown ${width}px: current language, keyboard and dismissal`, async ({ page, browserName }) => {
   await page.setViewportSize({ width, height: 844 });
   await page.goto("/zh-Hans/");
   const menu = page.locator(".locale-switcher details");
   const trigger = menu.locator("summary");
   await expect(trigger).toHaveAccessibleName("语言: 简体中文");
-  await expect(trigger).toHaveText("");
+  await expect(trigger).toHaveText("简体中文");
   await expect(trigger.locator('svg[aria-hidden="true"]')).toHaveCount(1);
   await expect(menu.locator(".locale-menu")).not.toBeVisible();
   const bounds = await trigger.boundingBox();
@@ -235,4 +239,5 @@ for (const width of [320, 1280]) test(`language dropdown ${width}px: compact glo
   await menu.getByRole("link", { name: "English", exact: true }).click();
   await expect(page).toHaveURL("/en/"); await expect(menu).not.toHaveAttribute("open");
   await expect(trigger).toHaveAccessibleName("Language: English");
+  await expect(trigger).toHaveText("English");
 });

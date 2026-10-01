@@ -7,9 +7,9 @@ import json
 from pathlib import Path
 import subprocess
 import tempfile
-import urllib.request
 from datetime import datetime, timezone
 from common import CODES, VERSION, atomic_write, count_gate, digest, encode, immutable_write, read_json, require, sha, timestamp, verified_input
+from download import open_source
 from osm import parse_osm
 from prices import parse_prices, validate_prices
 from registry import validate_registry
@@ -162,8 +162,7 @@ def fetch_price(args):
     require(url.scheme == 'https' and url.netloc == 'www.enecho.meti.go.jp' and url.path.startswith('/statistics/petroleum_and_lpgas/pl007/xlsx/') and url.path.endswith('.xlsx'), 'Only exact official XLSX URLs accepted')
     target = Path(args.destination)
     require(not target.exists() and not Path(str(target) + '.json').exists(), 'Download destination must be new')
-    with urllib.request.urlopen(args.url, timeout=60) as response:
-        require(urlparse(response.geturl()).netloc == url.netloc, 'Unexpected redirect')
+    with open_source(args.url, timeout=60) as response:
         payload = response.read(5 * 1024 * 1024 + 1)
         require(len(payload) <= 5 * 1024 * 1024 and payload.startswith(b'PK'), 'Invalid workbook download')
     with tempfile.TemporaryDirectory(prefix='fmj-price-') as temp:

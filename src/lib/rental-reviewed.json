@@ -1,0 +1,409 @@
+{
+  "reviewDate": "2026-10-01",
+  "records": {
+    "times-narita-airport": {
+      "attributes": {
+        "id": "times-narita-airport",
+        "airportCode": "NRT",
+        "companyId": "times",
+        "prefectureCode": "JP-12",
+        "nameJa": "タイムズカー 成田空港店",
+        "addressJa": "千葉県成田市小菅916-5",
+        "lat": 35.78439811173318,
+        "lon": 140.35985593302084,
+        "officialCheckUrl": "https://www.timescar-rental.com/en/chiba/shop/1209/",
+        "checkedAt": "2026-09-30",
+        "positionKind": "SHOP_REFERENCE",
+        "returnLocationStatus": "OFFICIAL_FACILITY_CHECKED",
+        "vehicleEntranceStatus": "NOT_VERIFIED",
+        "supplementarySourceUrls": []
+      },
+      "sourceId": "times-official",
+      "recordId": "1209",
+      "summaryKey": "rental.airport.NRT",
+      "websiteUrl": "https://www.timescar-rental.com/en/",
+      "reviewedSourceKeys": []
+    },
+    "times-haneda-airport": {
+      "attributes": {
+        "id": "times-haneda-airport",
+        "airportCode": "HND",
+        "companyId": "times",
+        "prefectureCode": "JP-13",
+        "nameJa": "タイムズカー 羽田店",
+        "addressJa": "東京都大田区萩中3-3-3",
+        "lat": 35.55234802576465,
+        "lon": 139.73604072545456,
+        "officialCheckUrl": "https://www.timescar-rental.com/en/tokyo/shop/1325/",
+        "checkedAt": "2026-09-30",
+        "positionKind": "SHOP_REFERENCE",
+        "returnLocationStatus": "OFFICIAL_FACILITY_CHECKED",
+        "vehicleEntranceStatus": "NOT_VERIFIED",
+        "supplementarySourceUrls": []
+      },
+      "sourceId": "times-official",
+      "recordId": "1325",
+      "summaryKey": "rental.airport.HND",
+      "websiteUrl": "https://www.timescar-rental.com/en/",
+      "reviewedSourceKeys": []
+    },
+    "times-kansai-airport": {
+      "attributes": {
+        "id": "times-kansai-airport",
+        "airportCode": "KIX",
+        "companyId": "times",
+        "prefectureCode": "JP-27",
+        "nameJa": "タイムズカー 関西空港店",
+        "addressJa": "大阪府泉南郡田尻町泉州空港中1 エアロプラザ2F",
+        "lat": 34.43629511481571,
+        "lon": 135.24229891720444,
+        "officialCheckUrl": "https://www.timescar-rental.com/en/osaka/shop/2760/",
+        "checkedAt": "2026-09-30",
+        "positionKind": "FACILITY_REFERENCE",
+        "returnLocationStatus": "OFFICIAL_FACILITY_CHECKED",
+        "vehicleEntranceStatus": "NOT_VERIFIED",
+        "supplementarySourceUrls": []
+      },
+      "sourceId": "times-official",
+      "recordId": "2760",
+      "summaryKey": "rental.airport.KIX",
+      "websiteUrl": "https://www.timescar-rental.com/en/",
+      "reviewedSourceKeys": []
+    },
+    "times-chubu-centrair-airport": {
+      "attributes": {
+        "id": "times-chubu-centrair-airport",
+        "airportCode": "NGO",
+        "companyId": "times",
+        "prefectureCode": "JP-23",
+        "nameJa": "タイムズカー 中部国際空港店",
+        "addressJa": "愛知県常滑市セントレア1-1",
+        "lat": 34.85870629443033,
+        "lon": 136.81575159273922,
+        "officialCheckUrl": "https://www.timescar-rental.com/en/aichi/shop/2340/",
+        "checkedAt": "2026-09-30",
+        "positionKind": "FACILITY_REFERENCE",
+        "returnLocationStatus": "OFFICIAL_FACILITY_CHECKED",
+        "vehicleEntranceStatus": "NOT_VERIFIED",
+        "supplementarySourceUrls": [
+          "https://www.centrair.jp/en/access/rental-car/return-route.html"
+        ]
+      },
+      "sourceId": "times-official",
+      "recordId": "2340",
+      "summaryKey": "rental.airport.NGO",
+      "websiteUrl": "https://www.timescar-rental.com/en/",
+      "reviewedSourceKeys": []
+    },
+    "times-new-chitose-airport": {
+      "attributes": {
+        "id": "times-new-chitose-airport",
+        "airportCode": "CTS",
+        "companyId": "times",
+        "prefectureCode": "JP-01",
+        "nameJa": "タイムズカー 新千歳空港店",
+        "addressJa": "北海道千歳市柏台南2-1-4",
+        "lat": 42.81697865285046,
+        "lon": 141.6795225524517,
+        "officialCheckUrl": "https://www.timescar-rental.com/en/hokkaido/shop/0105/",
+        "checkedAt": "2026-09-30",
+        "positionKind": "SHOP_REFERENCE",
+        "returnLocationStatus": "OFFICIAL_FACILITY_CHECKED",
+        "vehicleEntranceStatus": "NOT_VERIFIED",
+        "supplementarySourceUrls": []
+      },
+      "sourceId": "times-official",
+      "recordId": "0105",
+      "summaryKey": "rental.airport.CTS",
+      "websiteUrl": "https://www.timescar-rental.com/en/",
+      "reviewedSourceKeys": [
+        "overture-4ece94e0-e04d-4be5-b164-acd4c4ac29d7"
+      ]
+    },
+    "times-fukuoka-airport-international": {
+      "attributes": {
+        "id": "times-fukuoka-airport-international",
+        "airportCode": "FUK",
+        "companyId": "times",
+        "prefectureCode": "JP-40",
+        "nameJa": "タイムズカー 福岡空港国際線店",
+        "addressJa": "福岡県福岡市博多区東那珂2-1-48",
+        "lat": 33.580013935265356,
+        "lon": 130.44219502340152,
+        "officialCheckUrl": "https://www.timescar-rental.com/en/fukuoka/shop/4034/",
+        "checkedAt": "2026-09-30",
+        "positionKind": "SHOP_REFERENCE",
+        "returnLocationStatus": "OFFICIAL_FACILITY_CHECKED",
+        "vehicleEntranceStatus": "NOT_VERIFIED",
+        "supplementarySourceUrls": []
+      },
+      "sourceId": "times-official",
+      "recordId": "4034",
+      "summaryKey": "rental.airport.FUK",
+      "websiteUrl": "https://www.timescar-rental.com/en/",
+      "reviewedSourceKeys": [
+        "overture-122635b9-c9e8-446d-8850-9eae87c7a150"
+      ]
+    },
+    "times-naha-airport": {
+      "attributes": {
+        "id": "times-naha-airport",
+        "airportCode": "OKA",
+        "companyId": "times",
+        "prefectureCode": "JP-47",
+        "nameJa": "タイムズカー 那覇空港店",
+        "addressJa": "沖縄県那覇市鏡水457-1",
+        "lat": 26.21132452388112,
+        "lon": 127.65819880292382,
+        "officialCheckUrl": "https://www.timescar-rental.com/en/okinawa/shop/4701/",
+        "checkedAt": "2026-09-30",
+        "positionKind": "SHOP_REFERENCE",
+        "returnLocationStatus": "OFFICIAL_FACILITY_CHECKED",
+        "vehicleEntranceStatus": "NOT_VERIFIED",
+        "supplementarySourceUrls": []
+      },
+      "sourceId": "times-official",
+      "recordId": "4701",
+      "summaryKey": "rental.airport.OKA",
+      "websiteUrl": "https://www.timescar-rental.com/en/",
+      "reviewedSourceKeys": [
+        "overture-d91a603c-af44-44c4-b5cf-7d825d1385b3"
+      ]
+    },
+    "nippon-narita-airport": {
+      "attributes": {
+        "id": "nippon-narita-airport",
+        "airportCode": "NRT",
+        "companyId": "nippon",
+        "prefectureCode": "JP-12",
+        "nameJa": "ニッポンレンタカー 成田空港",
+        "addressJa": "千葉県成田市取香495-2",
+        "lat": 35.782561,
+        "lon": 140.37814,
+        "officialCheckUrl": "https://store.nipponrentacar.co.jp/b/nrs/info/560379/",
+        "checkedAt": "2026-10-01",
+        "positionKind": "SHOP_REFERENCE",
+        "returnLocationStatus": "OFFICIAL_FACILITY_CHECKED",
+        "vehicleEntranceStatus": "NOT_VERIFIED",
+        "supplementarySourceUrls": [],
+        "sourceId": "nippon-official",
+        "recordId": "560379",
+        "summaryKey": "rental.shop.nippon-narita-airport",
+        "officialPhone": "050-1712-2770"
+      },
+      "sourceId": "nippon-official",
+      "recordId": "560379",
+      "summaryKey": "rental.shop.nippon-narita-airport",
+      "websiteUrl": "https://store.nipponrentacar.co.jp/b/nrs/info/560379/",
+      "reviewedSourceKeys": [
+        "overture-853b6f36-46dd-47df-a4c2-7ed2b88ef8ed"
+      ]
+    },
+    "nippon-haneda-airport": {
+      "attributes": {
+        "id": "nippon-haneda-airport",
+        "airportCode": "HND",
+        "companyId": "nippon",
+        "prefectureCode": "JP-13",
+        "nameJa": "ニッポンレンタカー 羽田空港",
+        "addressJa": "東京都大田区羽田5-2-1",
+        "lat": 35.5508715,
+        "lon": 139.7500978,
+        "officialCheckUrl": "https://store.nipponrentacar.co.jp/b/nrs/info/512479/",
+        "checkedAt": "2026-10-01",
+        "positionKind": "SHOP_REFERENCE",
+        "returnLocationStatus": "OFFICIAL_FACILITY_CHECKED",
+        "vehicleEntranceStatus": "NOT_VERIFIED",
+        "supplementarySourceUrls": [],
+        "sourceId": "nippon-official",
+        "recordId": "512479",
+        "summaryKey": "rental.shop.nippon-haneda-airport",
+        "officialPhone": "050-1712-2661"
+      },
+      "sourceId": "nippon-official",
+      "recordId": "512479",
+      "summaryKey": "rental.shop.nippon-haneda-airport",
+      "websiteUrl": "https://store.nipponrentacar.co.jp/b/nrs/info/512479/",
+      "reviewedSourceKeys": [
+        "osm-n6308084671"
+      ]
+    },
+    "nippon-kansai-airport": {
+      "attributes": {
+        "id": "nippon-kansai-airport",
+        "airportCode": "KIX",
+        "companyId": "nippon",
+        "prefectureCode": "JP-27",
+        "nameJa": "ニッポンレンタカー 関西空港",
+        "addressJa": "大阪府泉南郡田尻町泉州空港中1 エアロプラザ2F",
+        "lat": 34.4363785,
+        "lon": 135.2427673,
+        "officialCheckUrl": "https://store.nipponrentacar.co.jp/b/nrs/info/340902/",
+        "checkedAt": "2026-10-01",
+        "positionKind": "FACILITY_REFERENCE",
+        "returnLocationStatus": "OFFICIAL_FACILITY_CHECKED",
+        "vehicleEntranceStatus": "NOT_VERIFIED",
+        "supplementarySourceUrls": [],
+        "sourceId": "nippon-official",
+        "recordId": "340902",
+        "summaryKey": "rental.shop.nippon-kansai-airport",
+        "officialPhone": "050-1712-2513"
+      },
+      "sourceId": "nippon-official",
+      "recordId": "340902",
+      "summaryKey": "rental.shop.nippon-kansai-airport",
+      "websiteUrl": "https://store.nipponrentacar.co.jp/b/nrs/info/340902/",
+      "reviewedSourceKeys": [
+        "overture-c90983f4-9322-4e1a-8376-eda91de61ffb"
+      ]
+    },
+    "nippon-chubu-centrair-airport": {
+      "attributes": {
+        "id": "nippon-chubu-centrair-airport",
+        "airportCode": "NGO",
+        "companyId": "nippon",
+        "prefectureCode": "JP-23",
+        "nameJa": "ニッポンレンタカー 中部国際空港",
+        "addressJa": "愛知県常滑市セントレア1丁目1番地",
+        "lat": 34.860672,
+        "lon": 136.814928,
+        "officialCheckUrl": "https://store.nipponrentacar.co.jp/b/nrs/info/470186/",
+        "checkedAt": "2026-10-01",
+        "positionKind": "FACILITY_REFERENCE",
+        "returnLocationStatus": "OFFICIAL_FACILITY_CHECKED",
+        "vehicleEntranceStatus": "NOT_VERIFIED",
+        "supplementarySourceUrls": [
+          "https://www.centrair.jp/en/access/rental-car/return-route.html"
+        ],
+        "sourceId": "nippon-official",
+        "recordId": "470186",
+        "summaryKey": "rental.shop.nippon-chubu-centrair-airport",
+        "officialPhone": "050-1712-2577"
+      },
+      "sourceId": "nippon-official",
+      "recordId": "470186",
+      "summaryKey": "rental.shop.nippon-chubu-centrair-airport",
+      "websiteUrl": "https://store.nipponrentacar.co.jp/b/nrs/info/470186/",
+      "reviewedSourceKeys": [
+        "overture-94412cf8-5a53-4905-ae61-46aa561cf90a"
+      ]
+    },
+    "nippon-new-chitose-airport": {
+      "attributes": {
+        "id": "nippon-new-chitose-airport",
+        "airportCode": "CTS",
+        "companyId": "nippon",
+        "prefectureCode": "JP-01",
+        "nameJa": "ニッポンレンタカー 新千歳空港",
+        "addressJa": "北海道千歳市美々758-136",
+        "lat": 42.799769,
+        "lon": 141.6994629,
+        "officialCheckUrl": "https://store.nipponrentacar.co.jp/b/nrs/info/810034/",
+        "checkedAt": "2026-10-01",
+        "positionKind": "SHOP_REFERENCE",
+        "returnLocationStatus": "OFFICIAL_FACILITY_CHECKED",
+        "vehicleEntranceStatus": "NOT_VERIFIED",
+        "supplementarySourceUrls": [],
+        "sourceId": "nippon-official",
+        "recordId": "810034",
+        "summaryKey": "rental.shop.nippon-new-chitose-airport",
+        "officialPhone": "050-1712-2970"
+      },
+      "sourceId": "nippon-official",
+      "recordId": "810034",
+      "summaryKey": "rental.shop.nippon-new-chitose-airport",
+      "websiteUrl": "https://store.nipponrentacar.co.jp/b/nrs/info/810034/",
+      "reviewedSourceKeys": [
+        "osm-n5694011763"
+      ]
+    },
+    "nippon-naha-airport-toyosaki": {
+      "attributes": {
+        "id": "nippon-naha-airport-toyosaki",
+        "airportCode": "OKA",
+        "companyId": "nippon",
+        "prefectureCode": "JP-47",
+        "nameJa": "ニッポンレンタカー 那覇空港豊崎",
+        "addressJa": "沖縄県豊見城市豊崎3-95",
+        "lat": 26.156763,
+        "lon": 127.654197,
+        "officialCheckUrl": "https://store.nipponrentacar.co.jp/b/nrs/info/020660/",
+        "checkedAt": "2026-10-01",
+        "positionKind": "SHOP_REFERENCE",
+        "returnLocationStatus": "OFFICIAL_FACILITY_CHECKED",
+        "vehicleEntranceStatus": "NOT_VERIFIED",
+        "supplementarySourceUrls": [],
+        "sourceId": "nippon-official",
+        "recordId": "020660",
+        "summaryKey": "rental.shop.nippon-naha-airport-toyosaki",
+        "officialPhone": "050-1712-2419"
+      },
+      "sourceId": "nippon-official",
+      "recordId": "020660",
+      "summaryKey": "rental.shop.nippon-naha-airport-toyosaki",
+      "websiteUrl": "https://store.nipponrentacar.co.jp/b/nrs/info/020660/",
+      "reviewedSourceKeys": [
+        "overture-1a69ea3d-471a-41ff-8209-f47bd9bb9e87"
+      ]
+    },
+    "toyota-haneda-airport-international": {
+      "attributes": {
+        "id": "toyota-haneda-airport-international",
+        "airportCode": "HND",
+        "companyId": "toyota",
+        "prefectureCode": "JP-13",
+        "nameJa": "トヨタレンタカー 羽田空港（国際線）店",
+        "addressJa": "東京都大田区羽田1-15-11",
+        "lat": 35.5501482,
+        "lon": 139.7411336,
+        "officialCheckUrl": "https://rent.toyota.co.jp/shop/detail.aspx?rCode=63601&eCode=06V",
+        "checkedAt": "2026-10-01",
+        "positionKind": "SHOP_REFERENCE",
+        "returnLocationStatus": "OFFICIAL_FACILITY_CHECKED",
+        "vehicleEntranceStatus": "NOT_VERIFIED",
+        "supplementarySourceUrls": [],
+        "sourceId": "toyota-official",
+        "recordId": "63601:06V",
+        "summaryKey": "rental.shop.toyota-haneda-airport-international",
+        "officialPhone": "03-5737-8100"
+      },
+      "sourceId": "toyota-official",
+      "recordId": "63601:06V",
+      "summaryKey": "rental.shop.toyota-haneda-airport-international",
+      "websiteUrl": "https://rent.toyota.co.jp/",
+      "reviewedSourceKeys": [
+        "osm-n12846512155"
+      ]
+    },
+    "toyota-new-chitose-airport-poplar": {
+      "attributes": {
+        "id": "toyota-new-chitose-airport-poplar",
+        "airportCode": "CTS",
+        "companyId": "toyota",
+        "prefectureCode": "JP-01",
+        "nameJa": "トヨタレンタカー 新千歳空港ポプラ店",
+        "addressJa": "北海道千歳市美々758-137",
+        "lat": 42.7994758,
+        "lon": 141.6971376,
+        "officialCheckUrl": "https://rent.toyota.co.jp/shop/detail.aspx?rCode=61201&eCode=002",
+        "checkedAt": "2026-10-01",
+        "positionKind": "SHOP_REFERENCE",
+        "returnLocationStatus": "OFFICIAL_FACILITY_CHECKED",
+        "vehicleEntranceStatus": "NOT_VERIFIED",
+        "supplementarySourceUrls": [],
+        "sourceId": "toyota-official",
+        "recordId": "61201:002",
+        "summaryKey": "rental.shop.toyota-new-chitose-airport-poplar",
+        "officialPhone": "0123-23-0100"
+      },
+      "sourceId": "toyota-official",
+      "recordId": "61201:002",
+      "summaryKey": "rental.shop.toyota-new-chitose-airport-poplar",
+      "websiteUrl": "https://rent.toyota.co.jp/",
+      "reviewedSourceKeys": [
+        "osm-n5694008999",
+        "overture-4d9dcc03-5ea5-48d8-881e-e8fa8078150b"
+      ]
+    }
+  }
+}

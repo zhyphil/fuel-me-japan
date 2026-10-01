@@ -1,0 +1,21 @@
+
+> fuel-me-japan@0.0.0 test:e2e
+> playwright test --config /tmp/fmj-language-label-20261001/webkit.config.mts
+
+
+Running 8 tests using 2 workers
+
+(node:1342) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1341) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/e2e/foundation.spec.ts:9:3 › mobile switching and reload: en (1.1s)
+  ✓  2 tests/e2e/foundation.spec.ts:9:3 › mobile switching and reload: zh-Hant (1.2s)
+  ✓  4 tests/e2e/foundation.spec.ts:9:3 › mobile switching and reload: zh-Hans (677ms)
+  ✓  3 tests/e2e/foundation.spec.ts:9:3 › mobile switching and reload: ko (707ms)
+  ✓  5 tests/e2e/foundation.spec.ts:85:1 › localized static HTML is useful without JavaScript (348ms)
+  ✓  6 tests/e2e/foundation.spec.ts:9:3 › mobile switching and reload: th (792ms)
+  ✓  7 tests/e2e/foundation.spec.ts:206:34 › language dropdown 320px: current language, keyboard and dismissal (724ms)
+  ✓  8 tests/e2e/foundation.spec.ts:206:34 › language dropdown 1280px: current language, keyboard and dismissal (826ms)
+
+  8 passed (4.0s)

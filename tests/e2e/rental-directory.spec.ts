@@ -108,27 +108,34 @@ for (const locale of locales) for (const width of [320, 390, 1280]) test(`${loca
   expect(await storageSnapshot(page)).toEqual(before); expect((await observations(page)).geolocationCalls).toBe(0); expect(errors).toEqual([]);
 });
 
-for (const branch of officialBranches) test(`${branch.airportCode}: official Times detail is directly addressable, refreshable and honest about the entrance`, async ({ page }) => {
+for (const branch of officialBranches) test(`${branch.id}: official detail is directly addressable, refreshable and honest about the entrance`, async ({ page }) => {
   await rentalFixtures(page); await stationFixtures(page, { empty: true }); const errors = watchPageErrors(page);
   const partitionRequests: string[] = [];
   page.on("request", request => { if (/\/partitions\//.test(request.url()) && request.url().includes("/rental/")) partitionRequests.push(new URL(request.url()).pathname); });
   await page.goto(detailPath(branch));
   const detail = page.getByTestId("rental-detail");
+  const location = rentalLocation(branch);
   await expect(detail.locator("h1")).toHaveText(branch.names.primary!);
   await expect(detail.locator(".rental-detail-heading")).toContainText(messages.en.rdVerified);
-  await expect(detail.locator(".rental-official-notes")).toContainText(messages.en[`rental.airport.${branch.airportCode!}`]);
+  await expect(detail.locator(".rental-official-notes")).toContainText(messages.en[location.official!.summaryKey]);
   await expect(detail.locator(".rental-detail-heading")).toContainText(messages.en.rdReferencePoint);
   await expect(detail.locator(".rental-official-notes")).toContainText(messages.en.rdScope);
-  await expect(detail.locator(".rental-official-notes")).toContainText("2026-09-30");
+  await expect(detail.locator(".rental-official-notes")).toContainText(location.official!.checkedAt);
   await expect(detail.locator(".rental-official-notes [role=alert]")).toHaveCount(0);
-  expect(branch.vehicleEntranceStatus).toBe("NOT_VERIFIED"); expect(branch.companyId).toBe("times");
+  expect(branch.vehicleEntranceStatus).toBe("NOT_VERIFIED");
   if (branch.airportCode === "KIX") {
     await expect(detail.locator(".rental-official-notes")).toContainText("2F");
     await expect(detail.locator(".rental-official-notes")).toContainText("vehicle entrance");
     expect(branch.positionKind).toBe("FACILITY_REFERENCE");
   }
   if (branch.airportCode === "NGO") await expect(detail.getByRole("link", { name: messages.en.rdAirportDirections })).toHaveAttribute("href", "https://www.centrair.jp/en/access/rental-car/return-route.html");
-  const location = rentalLocation(branch);
+  const website = branch.companyId === "toyota" ? "https://rent.toyota.co.jp/" : branch.companyId === "times" ? "https://www.timescar-rental.com/en/" : location.official!.url;
+  await expect(detail.getByRole("link", { name: messages.en.rdOfficialWebsite, exact: true })).toHaveAttribute("href", website);
+  if (branch.companyId !== "times") {
+    await expect(detail.locator(".return-car-rules")).toHaveText(messages.en.rdContractRules);
+    await expect(detail.locator(".rental-websites")).not.toContainText("Times");
+    await expect(detail.locator(".rental-detail-info > dl")).toContainText(location.phones[0]);
+  }
   await detail.locator(".rental-record-sources > summary").click();
   for (const source of location.sources) {
     await expect(detail.locator(`.rental-record-sources a[href="${source.url}"]`)).toBeVisible();
@@ -404,7 +411,8 @@ test("cluster keyboard activation offers bounded members and clears them on filt
   await members.getByRole("button", { name: messages.en.rdMore, exact: true }).click();
   expect(await members.locator("li").count()).toBeGreaterThan(20); expect(await members.locator("li").count()).toBeLessThanOrEqual(40);
   await search(page, "OKA"); await expect(members).toHaveCount(0);
-  await expect(directory.locator(".rental-card")).toHaveCount(1);
+  await expect(directory.locator(".rental-card")).toHaveCount(2);
+  expect(await directory.locator(".rental-card").evaluateAll(nodes => nodes.map(node => node.getAttribute("data-rental-id")).sort())).toEqual(["nippon-naha-airport-toyosaki", "times-naha-airport"]);
   expect(await instance!.evaluate(node => node.isConnected)).toBe(true);
 });
 

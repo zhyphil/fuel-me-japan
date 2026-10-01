@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-10-01",
+  "unitTests": 362,
+  "chromium": {
+    "startTime": "2026-10-01T09:09:28.530Z",
+    "duration": 47567.741,
+    "expected": 315,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "webkit": {
+    "startTime": "2026-10-01T09:09:49.529Z",
+    "duration": 3953.1959999999995,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "status": "PASS",
+  "noteZhHans": "本地检查通过，浏览器使用离线瓦片；不代表实体手机或本次生产部署验收。"
+}

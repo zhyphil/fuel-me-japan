@@ -18,11 +18,12 @@ button:disabled { cursor: default; opacity: .6; }
 .brand-mark svg { width: 100%; height: 100%; }
 .locale-switcher { position: relative; z-index: 1200; justify-self: end; }
 .locale-switcher details { position: relative; }
-.locale-trigger { display: flex; align-items: center; justify-content: center; gap: 7px; width: 56px; height: 44px; padding: 8px; border: 1px solid #d3ddd9; border-radius: 10px; background: white; color: var(--green); list-style: none; }
+.locale-trigger { display: flex; align-items: center; justify-content: center; gap: 7px; min-width: 44px; height: 44px; padding: 8px 10px; font-size: 14px; border: 1px solid #d3ddd9; border-radius: 10px; background: white; color: var(--green); list-style: none; }
 .locale-trigger::-webkit-details-marker { display: none; }
 .locale-trigger::marker { content: ""; }
-.locale-trigger > svg { width: 23px; height: 23px; }
-.locale-chevron { width: 6px; height: 6px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); }
+.locale-trigger > svg { width: 23px; height: 23px; flex-shrink: 0; }
+.locale-current { white-space: nowrap; }
+.locale-chevron { flex-shrink: 0; width: 6px; height: 6px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); }
 .locale-switcher details[open] .locale-chevron { transform: translateY(2px) rotate(225deg); }
 .locale-trigger:hover, .locale-switcher details[open] .locale-trigger { background: #edf3eb; border-color: #88988e; }
 .locale-menu { position: absolute; top: calc(100% + 8px); right: 0; display: grid; gap: 2px; width: 180px; max-width: calc(100vw - 24px); padding: 6px; border: 1px solid #d3ddd9; border-radius: 12px; background: white; box-shadow: 0 8px 24px #173f3726; }
@@ -569,6 +570,8 @@ button:disabled { cursor: default; opacity: .6; }
   .rental-query-actions .button { flex: 1; }
 }
 @media (max-width: 380px) {
+  .site-header .brand { gap: 6px; font-size: 16px; }
+  .site-header .brand-mark { width: 30px; height: 30px; }
   .rental-card { grid-template-columns: 80px minmax(0, 1fr); gap: 8px; }
   .rental-card .station-mini-map { width: 80px; }
   .return-candidates > li { grid-template-columns: 80px minmax(0, 1fr); gap: 8px; padding: 8px; }

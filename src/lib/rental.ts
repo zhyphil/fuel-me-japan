@@ -1,8 +1,10 @@
-/** Independent, lazy rental data contract. No JSON imports and no requests at module load. */
+/** Lazy rental data contract. Only the small reviewed whitelist is bundled; no requests at module load. */
+import reviewedContract from "./rental-reviewed.json" with { type: "json" };
+import type { MessageKey } from "../i18n";
 export const rentalManifestUrl = "/data/rental/nationwide/manifest.json";
 export const rentalTransformationVersion = "rental-v1";
 export const rentalPrefectureCodes = [...Array.from({ length: 47 }, (_, i) => `JP-${String(i + 1).padStart(2, "0")}`), "UNKNOWN"] as const;
-export const rentalSourceIds = ["osm", "overture", "times-official"] as const;
+export const rentalSourceIds = ["osm", "overture", "times-official", "nippon-official", "toyota-official"] as const;
 export type RentalSourceId = typeof rentalSourceIds[number];
 export type RentalCompanyId = "toyota" | "nippon" | "orix" | "times" | "nissan" | "budget" | "niconico" | "honda" | "ekiren" | "ots" | "UNKNOWN";
 export type RentalCandidateStatus = "CANDIDATE" | "COUNTER_ONLY" | "OFFICIAL_RETURN_FACILITY";
@@ -20,8 +22,10 @@ export interface RentalMember {
   sourceId: RentalSourceId; key: string; recordId: string; sourceDate: string; url: string;
   licenses: string[]; attributes: Record<string, unknown>;
 }
+export type RentalOfficialSourceId = "times-official" | "nippon-official" | "toyota-official";
+export type RentalSummaryKey = Extract<MessageKey, `rental.${string}`>;
 export interface RentalOfficialCheck {
-  sourceId: "times-official"; checkedAt: string; url: string; supplementaryUrls: string[]; summaryKey: string;
+  sourceId: RentalOfficialSourceId; checkedAt: string; url: string; supplementaryUrls: string[]; summaryKey: RentalSummaryKey;
 }
 export interface RentalReturnRule {
   companyId: "times"; sourceId: "times-official"; url: string; checkedAt: string;
@@ -47,17 +51,12 @@ export interface RentalManifest {
 const root = "/data/rental/nationwide/";
 const companies = ["toyota", "nippon", "orix", "times", "nissan", "budget", "niconico", "honda", "ekiren", "ots", "UNKNOWN"];
 const licenseNames = ["ODbL-1.0.txt", "Apache-2.0.txt", "CDLA-Permissive-2.0.txt", "CC0-1.0.txt", "Foursquare-NOTICE.txt"];
-const sourceLicenses = { osm: ["ODbL-1.0"], overture: ["Apache-2.0", "CC0-1.0", "CDLA-Permissive-2.0"], "times-official": ["LIMITED_FACTS"] };
+const sourceLicenses = { osm: ["ODbL-1.0"], overture: ["Apache-2.0", "CC0-1.0", "CDLA-Permissive-2.0"], "times-official": ["LIMITED_FACTS"], "nippon-official": ["LIMITED_FACTS"], "toyota-official": ["LIMITED_FACTS"] };
 const upstreamLicenses: Record<string, string> = { Foursquare: "Apache-2.0", Overture: "CDLA-Permissive-2.0", meta: "CDLA-Permissive-2.0", AllThePlaces: "CC0-1.0" };
-const airportFacts = {
-  NRT: ["times-narita-airport", "chiba", "1209", "JP-12", "SHOP_REFERENCE"],
-  HND: ["times-haneda-airport", "tokyo", "1325", "JP-13", "SHOP_REFERENCE"],
-  KIX: ["times-kansai-airport", "osaka", "2760", "JP-27", "FACILITY_REFERENCE"],
-  NGO: ["times-chubu-centrair-airport", "aichi", "2340", "JP-23", "FACILITY_REFERENCE"],
-  CTS: ["times-new-chitose-airport", "hokkaido", "0105", "JP-01", "SHOP_REFERENCE"],
-  FUK: ["times-fukuoka-airport-international", "fukuoka", "4034", "JP-40", "SHOP_REFERENCE"],
-  OKA: ["times-naha-airport", "okinawa", "4701", "JP-47", "SHOP_REFERENCE"],
-} as const;
+interface ReviewedFact { attributes: Record<string, unknown>; sourceId: RentalOfficialSourceId; recordId: string; summaryKey: RentalSummaryKey; websiteUrl: string; reviewedSourceKeys: string[] }
+const reviewedFacts = reviewedContract.records as Record<string, ReviewedFact>;
+const airportCodes = new Set(Object.values(reviewedFacts).map(fact => fact.attributes.airportCode));
+const isOfficialSource = (sourceId: string) => ["times-official", "nippon-official", "toyota-official"].includes(sourceId);
 const indexKeys = ["id", "aliases", "names", "companyId", "companyName", "prefectureCode", "lat", "lon", "address", "positionKind", "candidateStatus", "verification", "vehicleEntranceStatus", "airportCode", "sourceIds"];
 function check(test: unknown, message = "Invalid rental data"): asserts test { if (!test) throw new Error(message); }
 function object(v: unknown): v is Record<string, unknown> { return !!v && typeof v === "object" && !Array.isArray(v) && [Object.prototype, null].includes(Object.getPrototypeOf(v)); }
@@ -109,13 +108,15 @@ export function parseManifest(value: unknown): RentalManifest {
   safe(value); check(object(value));
   keys(value, ["schemaVersion", "transformationVersion", "version", "count", "reviewDate", "license", "sources", "index", "partitions", "audit", "officialOverrides", "sourceRegistry", "identity", "notice", "licenses", "downloads"]);
   check(value.schemaVersion === 1 && value.transformationVersion === rentalTransformationVersion && version(value.version) && integer(value.count) && value.count > 0 && day(value.reviewDate) && value.license === "ODbL-1.0");
-  check(Array.isArray(value.sources) && value.sources.length === 3);
+  check(Array.isArray(value.sources) && value.sources.length === rentalSourceIds.length);
   const approvedSources = {
     osm: ["2026-09-29", "https://download.geofabrik.de/asia/japan-260929.osm.pbf"],
     overture: ["2026-09-23", "https://docs.overturemaps.org/attribution/"],
     "times-official": ["2026-09-30", "https://www.timescar-rental.com/en/"],
+    "nippon-official": ["2026-10-01", "https://www.nipponrentacar.co.jp/"],
+    "toyota-official": ["2026-10-01", "https://rent.toyota.co.jp/"],
   };
-  check(value.reviewDate === "2026-09-30", "Unreviewed rental date");
+  check(value.reviewDate === reviewedContract.reviewDate, "Unreviewed rental date");
   const sourceSet = new Set<string>();
   for (const s of value.sources) {
     check(object(s)); keys(s, ["id", "name", "sourceDate", "url", "licenses", "attribution"]);
@@ -156,10 +157,10 @@ function parseEntry(v: unknown, full = false): asserts v is RentalIndexEntry {
   check(["SOURCE_POINT", "AREA_REFERENCE", "LINE_REFERENCE", "SHOP_REFERENCE", "FACILITY_REFERENCE"].includes(String(v.positionKind)) && ["CANDIDATE", "COUNTER_ONLY", "OFFICIAL_RETURN_FACILITY"].includes(String(v.candidateStatus)) && ["NOT_VERIFIED", "OFFICIAL_FACILITY_CHECKED"].includes(String(v.verification)) && v.vehicleEntranceStatus === "NOT_VERIFIED");
   list(v.sourceIds, x => rentalSourceIds.includes(x as RentalSourceId), true);
   if (v.candidateStatus === "OFFICIAL_RETURN_FACILITY") {
-    check(typeof v.airportCode === "string" && Object.hasOwn(airportFacts, v.airportCode));
-    const fact = airportFacts[v.airportCode as RentalAirportCode];
-    check(v.id === fact[0] && v.companyId === "times" && v.prefectureCode === fact[3] && v.positionKind === fact[4] && v.verification === "OFFICIAL_FACILITY_CHECKED" && v.sourceIds.includes("times-official"), "Unreviewed official identity");
-  } else check(v.verification === "NOT_VERIFIED" && v.airportCode === null && !v.sourceIds.includes("times-official") && !["SHOP_REFERENCE", "FACILITY_REFERENCE"].includes(String(v.positionKind)), "Candidate cannot claim official verification");
+    check(Object.hasOwn(reviewedFacts, v.id), "Unreviewed official identity");
+    const fact = reviewedFacts[v.id]; const attrs = fact.attributes;
+    check(["companyId", "prefectureCode", "positionKind", "airportCode", "lat", "lon"].every(key => v[key] === attrs[key]) && v.names.primary === attrs.nameJa && v.address === attrs.addressJa && v.verification === "OFFICIAL_FACILITY_CHECKED" && v.sourceIds.includes(fact.sourceId) && v.sourceIds.filter(source => isOfficialSource(String(source))).length === 1, "Unreviewed official identity");
+  } else check(v.verification === "NOT_VERIFIED" && v.airportCode === null && !v.sourceIds.some(source => isOfficialSource(String(source))) && !["SHOP_REFERENCE", "FACILITY_REFERENCE"].includes(String(v.positionKind)), "Candidate cannot claim official verification");
 }
 function uniqueRecords(rows: RentalIndexEntry[]) {
   const ids = new Set<string>();
@@ -173,7 +174,7 @@ export function parseIndex(value: unknown, manifest?: RentalManifest): RentalInd
     check(value.version === manifest.version && value.count === manifest.count, "Index manifest mismatch");
     for (const p of manifest.partitions) check(rows.filter(r => r.prefectureCode === p.code).length === p.count, "Index partition count mismatch");
   }
-  check(rows.filter(r => r.verification === "OFFICIAL_FACILITY_CHECKED").length === 7, "Official coverage mismatch");
+  check(rows.filter(r => r.verification === "OFFICIAL_FACILITY_CHECKED").length === Object.keys(reviewedFacts).length, "Official coverage mismatch");
   return value as unknown as RentalIndex;
 }
 function parseMember(v: unknown): asserts v is RentalMember {
@@ -192,7 +193,12 @@ function parseMember(v: unknown): asserts v is RentalMember {
       check(object(s) && typeof s.dataset === "string" && Object.hasOwn(upstreamLicenses, s.dataset) && s.license === upstreamLicenses[s.dataset] && (s.record_id === null || text(s.record_id)), "Unapproved upstream provenance"); found.add(String(s.license));
     }
     check(same([...found].sort(), [...v.licenses].sort()), "Lost upstream license");
-  } else check(/^\d{4}$/.test(v.recordId) && v.key.startsWith("official-times-") && v.sourceDate === "2026-09-30" && same(v.licenses, ["LIMITED_FACTS"]));
+  } else {
+    const ident = v.key.replace(/^official-/, "");
+    check(Object.hasOwn(reviewedFacts, ident), "Unreviewed official source identity");
+    const fact = reviewedFacts[ident];
+    check(v.key === `official-${ident}` && v.sourceId === fact.sourceId && v.recordId === fact.recordId && v.sourceDate === fact.attributes.checkedAt && v.url === fact.attributes.officialCheckUrl && same(v.licenses, ["LIMITED_FACTS"]) && same(v.attributes, fact.attributes), "Unreviewed official source fact");
+  }
 }
 function parseDetail(v: unknown): asserts v is RentalLocation {
   parseEntry(v, true); const r = v as unknown as Record<string, unknown>;
@@ -201,15 +207,15 @@ function parseDetail(v: unknown): asserts v is RentalLocation {
   for (const s of r.sources) { parseMember(s); check(!sourceKeys.has(s.key)); sourceKeys.add(s.key); sources.add(s.sourceId); }
   check(same([...sources].sort(), [...v.sourceIds].sort()));
   if (v.verification === "OFFICIAL_FACILITY_CHECKED") {
-    const fact = airportFacts[v.airportCode!]; const url = `https://www.timescar-rental.com/en/${fact[1]}/shop/${fact[2]}/`;
+    const fact = reviewedFacts[v.id]; const attrs = fact.attributes;
     check(object(r.official)); keys(r.official, ["sourceId", "checkedAt", "url", "supplementaryUrls", "summaryKey"]);
-    check(r.official.sourceId === "times-official" && r.official.checkedAt === "2026-09-30" && r.official.url === url && r.official.summaryKey === `rental.airport.${v.airportCode}`);
-    check(same(r.official.supplementaryUrls, v.airportCode === "NGO" ? ["https://www.centrair.jp/en/access/rental-car/return-route.html"] : []));
-    const officialSources = r.sources.filter(s => (s as RentalMember).sourceId === "times-official") as RentalMember[];
-    check(officialSources.length === 1); const m = officialSources[0];
-    keys(m.attributes, ["id", "airportCode", "companyId", "prefectureCode", "nameJa", "addressJa", "lat", "lon", "officialCheckUrl", "checkedAt", "positionKind", "returnLocationStatus", "vehicleEntranceStatus", "supplementarySourceUrls"]);
-    check(m.attributes.nameJa === v.names.primary && m.attributes.addressJa === v.address && m.attributes.prefectureCode === v.prefectureCode && m.attributes.officialCheckUrl === url && same(m.attributes.supplementarySourceUrls, r.official.supplementaryUrls), "Official detail mismatch");
-    check(m.key === `official-${v.id}` && m.url === url && m.recordId === fact[2] && m.attributes.id === v.id && m.attributes.companyId === "times" && m.attributes.airportCode === v.airportCode && m.attributes.lat === v.lat && m.attributes.lon === v.lon && m.attributes.positionKind === v.positionKind && m.attributes.vehicleEntranceStatus === "NOT_VERIFIED" && m.attributes.checkedAt === r.official.checkedAt && m.attributes.returnLocationStatus === v.verification, "Official fact mismatch");
+    check(r.official.sourceId === fact.sourceId && r.official.checkedAt === attrs.checkedAt && r.official.url === attrs.officialCheckUrl && r.official.summaryKey === fact.summaryKey && same(r.official.supplementaryUrls, attrs.supplementarySourceUrls), "Official detail mismatch");
+    const officialSources = (r.sources as RentalMember[]).filter(s => isOfficialSource(s.sourceId));
+    check(officialSources.length === 1 && officialSources[0].key === `official-${v.id}` && same(officialSources[0].attributes, attrs), "Official fact mismatch");
+    if (fact.sourceId !== "times-official") {
+      check(same([...sourceKeys].filter(key => !key.startsWith("official-")).sort(), [...fact.reviewedSourceKeys].sort()), "Unreviewed source mapping");
+      if (attrs.officialPhone) check(same(r.phones, [attrs.officialPhone]), "Official phone mismatch");
+    }
   } else check(r.official === null);
   if (v.companyId === "times") {
     check(object(r.returnRule)); keys(r.returnRule, ["companyId", "sourceId", "url", "checkedAt", "fullTank", "receipt"]);
@@ -268,15 +274,19 @@ export function rentalNeedsRecheck(checkedAt: string, now = Date.now()): boolean
   const time = Date.parse(`${checkedAt}T00:00:00Z`);
   return !day(checkedAt) || !Number.isFinite(now) || now < time || now - time >= 90 * 86400000;
 }
+export function rentalOfficialWebsite(row: RentalLocation): string | null {
+  const fact = Object.hasOwn(reviewedFacts, row.id) ? reviewedFacts[row.id] : null;
+  return row.official && fact && row.companyId === fact.attributes.companyId ? fact.websiteUrl : null;
+}
 export function rentalRuleFor(row: RentalLocation): RentalReturnRule | null { return row.companyId === "times" ? row.returnRule : null; }
 function normalizeQuery(v: string) { return v.normalize("NFKC").toLocaleLowerCase("en").replace(/[\s\p{P}\p{S}]+/gu, ""); }
 export interface RentalSearchOptions { query?: string; companyId?: RentalCompanyId; prefectureCode?: string; airportCode?: RentalAirportCode; includeCounters?: boolean; limit?: number }
 export function searchRentals(index: RentalIndex, options: RentalSearchOptions = {}): RentalIndexEntry[] {
   const query = normalizeQuery(options.query ?? ""); const limit = options.limit ?? 100;
-  const airportQuery = Object.hasOwn(airportFacts, query.toUpperCase()) ? query.toUpperCase() : null;
+  const airportQuery = airportCodes.has(query.toUpperCase()) ? query.toUpperCase() : null;
   check(integer(limit) && limit <= 10000, "Invalid rental result limit");
   check(!options.companyId || companies.includes(options.companyId));
   check(!options.prefectureCode || rentalPrefectureCodes.includes(options.prefectureCode));
-  check(!options.airportCode || Object.hasOwn(airportFacts, options.airportCode));
+  check(!options.airportCode || airportCodes.has(options.airportCode));
   return index.records.filter(r => (options.includeCounters || canSelectRentalDestination(r)) && (!options.companyId || r.companyId === options.companyId) && (!options.prefectureCode || r.prefectureCode === options.prefectureCode) && (!options.airportCode || r.airportCode === options.airportCode) && (!query || (airportQuery ? r.airportCode === airportQuery : [r.names.primary, ...Object.values(r.names.languages), r.companyName, r.address, r.airportCode, r.id, ...r.aliases].some(v => v && normalizeQuery(v).includes(query))))).slice(0, limit);
 }

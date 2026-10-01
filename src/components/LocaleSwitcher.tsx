@@ -38,7 +38,9 @@ export function LocaleSwitcher({
         if (event.relatedTarget instanceof Node && !event.currentTarget.contains(event.relatedTarget)) event.currentTarget.open = false;
       }}>
         <summary className="locale-trigger" aria-label={`${label}: ${localeNames[locale]}`} title={label}>
-          <Icon name="globe" /><span className="locale-chevron" aria-hidden="true" />
+          <Icon name="globe" />
+          <span className="locale-current" lang={locale}>{localeNames[locale]}</span>
+          <span className="locale-chevron" aria-hidden="true" />
         </summary>
         <div className="locale-menu">
           {locales.map((option) => (

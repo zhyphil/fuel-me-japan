@@ -12,8 +12,8 @@ export const messages = Object.fromEntries(locales.map(locale => [locale, JSON.p
 export const rentalManifest = parseManifest(JSON.parse(readFileSync(`public${rentalManifestUrl}`, "utf8")));
 export const rentalIndex = parseIndex(JSON.parse(readFileSync(`public${rentalManifest.index.url}`, "utf8")), rentalManifest);
 export const officialBranches = rentalIndex.records.filter(row => row.verification === "OFFICIAL_FACILITY_CHECKED");
-export const naha = officialBranches.find(row => row.airportCode === "OKA")!;
-export const chitose = officialBranches.find(row => row.airportCode === "CTS")!;
+export const naha = officialBranches.find(row => row.id === "times-naha-airport")!;
+export const chitose = officialBranches.find(row => row.id === "times-new-chitose-airport")!;
 export const counter = rentalIndex.records.find(row => row.candidateStatus === "COUNTER_ONLY")!;
 export function rentalLocation(row: RentalIndexEntry) {
   const artifact = rentalManifest.partitions.find(p => p.code === row.prefectureCode)!;

@@ -1,10 +1,11 @@
+import { messages, locales } from "../../src/i18n";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import {
   canSelectRentalDestination, findRentalById, loadRentalIndex, loadRentalLocation, loadRentalManifest,
   loadRentalPartition, parseIndex, parseManifest, parsePartition, rentalManifestUrl,
-  rentalNeedsRecheck, rentalRuleFor, searchRentals, type RentalArtifact,
+  rentalNeedsRecheck, rentalRuleFor, rentalOfficialWebsite, searchRentals, type RentalArtifact,
 } from "../../src/lib/rental";
 
 function json(url: string): unknown { return JSON.parse(readFileSync(`public${url}`, "utf8")); }
@@ -28,12 +29,33 @@ describe("nationwide rental artifacts", () => {
       expect(createHash("sha256").update(bytes).digest("hex")).toBe(a.sha256);
     }
   });
-  it("retains only seven official Times facilities and no verified vehicle entrance", () => {
+  it("retains fifteen reviewed facilities across three companies and no verified vehicle entrance", () => {
     const official = records.filter(r => r.verification === "OFFICIAL_FACILITY_CHECKED");
-    expect(official.map(r => r.airportCode).sort()).toEqual(["CTS", "FUK", "HND", "KIX", "NGO", "NRT", "OKA"]);
+    expect([...new Set(official.map(r => r.airportCode))].sort()).toEqual(["CTS", "FUK", "HND", "KIX", "NGO", "NRT", "OKA"]);
     expect(records.every(r => r.vehicleEntranceStatus === "NOT_VERIFIED")).toBe(true);
-    expect(official.find(r => r.airportCode === "KIX")?.positionKind).toBe("FACILITY_REFERENCE");
-    for (const r of official) expect(r.official?.checkedAt).toBe("2026-09-30");
+    expect(official.find(r => r.id === "times-kansai-airport")?.positionKind).toBe("FACILITY_REFERENCE");
+    expect(official).toHaveLength(15);
+    expect(official.filter(r => r.companyId === "times")).toHaveLength(7);
+    expect(official.filter(r => r.companyId === "nippon")).toHaveLength(6);
+    expect(official.filter(r => r.companyId === "toyota")).toHaveLength(2);
+    for (const r of official) expect(r.official?.checkedAt).toBe(r.companyId === "times" ? "2026-09-30" : "2026-10-01");
+  });
+  it("uses each branch summary, official link and reviewed phone without Times rules leaking", () => {
+    for (const row of records.filter(r => r.official && r.companyId !== "times")) {
+      expect(row.official!.summaryKey).toBe(`rental.shop.${row.id}`);
+      expect(row.returnRule).toBeNull();
+      expect(row.phones).toHaveLength(1);
+      expect(rentalOfficialWebsite(row)).toBe(row.companyId === "toyota" ? "https://rent.toyota.co.jp/" : row.official!.url);
+      for (const locale of locales) {
+        expect(messages[locale][row.official!.summaryKey].trim().length).toBeGreaterThan(20);
+        expect(messages[locale][row.official!.summaryKey]).not.toContain("Times");
+      }
+    }
+    const narita = records.find(r => r.id === "nippon-narita-airport")!;
+    expect(narita.phones).toEqual(["050-1712-2770"]);
+    expect(narita.sources.find(s => s.sourceId === "overture")!.attributes.phones).not.toEqual(narita.phones);
+    const toyota = records.find(r => r.id === "toyota-haneda-airport-international")!;
+    expect(toyota.sources.find(s => s.sourceId === "toyota-official")!.recordId).toBe("63601:06V");
   });
   it("keeps counters unverified and unavailable as return destinations", () => {
     const counters = records.filter(r => r.candidateStatus === "COUNTER_ONLY");
@@ -52,7 +74,7 @@ describe("nationwide rental artifacts", () => {
     expect(() => parsePartition(invalid)).toThrow();
   });
   it("preserves original brand evidence without replacing Narita's name", () => {
-    const r = records.find(r => r.airportCode === "NRT")!;
+    const r = records.find(r => r.id === "times-narita-airport")!;
     expect(r.names.primary).toContain("成田");
     expect(r.names.primary).not.toContain("宮崎");
     expect(r.sources.find(s => s.sourceId === "overture")?.attributes.brand).toBeTruthy();
@@ -72,6 +94,8 @@ describe("strict parsers reject corruption", () => {
     ["hash", (m: typeof manifest) => { m.index.sha256 = "bad"; }],
     ["bytes", (m: typeof manifest) => { m.index.bytes = -1; }],
     ["source license", (m: typeof manifest) => { m.sources[0].licenses = ["CC0-1.0"]; }],
+    ["source URL", (m: typeof manifest) => { m.sources[3].url = "https://www.timescar-rental.com/en/"; }],
+    ["future review date", (m: typeof manifest) => { m.reviewDate = "2099-01-01"; }],
     ["duplicate source", (m: typeof manifest) => { m.sources[1] = m.sources[0]; }],
   ] as const)("rejects manifest %s", (_name, mutate) => {
     const m = clone(manifest); mutate(m); expect(() => parseManifest(m)).toThrow();
@@ -84,8 +108,8 @@ describe("strict parsers reject corruption", () => {
     ["unsafe ID", (data: typeof index) => { data.records[0].id = "__proto__"; }],
     ["count", (data: typeof index) => { data.count--; }],
     ["wrong prefecture", (data: typeof index) => { data.records[0].prefectureCode = "JP-99"; }],
-    ["fabricated official status", (data: typeof index) => { data.records[0].verification = "OFFICIAL_FACILITY_CHECKED"; }],
-    ["wrong company", (data: typeof index) => { data.records.find(r => r.airportCode === "KIX")!.companyId = "orix"; }],
+    ["fabricated official status", (data: typeof index) => { data.records.find(r => r.verification === "NOT_VERIFIED")!.verification = "OFFICIAL_FACILITY_CHECKED"; }],
+    ["wrong company", (data: typeof index) => { data.records.find(r => r.id === "times-kansai-airport")!.companyId = "orix"; }],
   ] as const)("rejects index %s", (_name, mutate) => {
     const data = clone(index); mutate(data); expect(() => parseIndex(data, manifest)).toThrow();
   });
@@ -117,8 +141,16 @@ describe("strict parsers reject corruption", () => {
     const dropped = clone(tokyo); dropped.records.flatMap(r => r.sources).find(s => s.sourceId === "overture")!.licenses = ["CC0-1.0"];
     expect(() => parsePartition(dropped)).toThrow();
   });
+  it.each(["summaryKey", "url", "checkedAt", "sourceId", "recordId", "phones", "sourceMapping"])("rejects unreviewed multi-company %s", field => {
+    const data = clone(tokyo); const row = data.records.find(r => r.id === "toyota-haneda-airport-international")!;
+    if (field === "phones") row.phones = ["00-0000-0000"];
+    else if (field === "recordId") row.sources.find(s => s.sourceId === "toyota-official")!.recordId = "detail.aspx?rCode=63601&eCode=06V";
+    else if (field === "sourceMapping") row.sources = row.sources.filter(s => s.sourceId !== "osm");
+    else Object.assign(row.official!, { [field]: { summaryKey: "rental.airport.HND", url: "https://rent.toyota.co.jp/", checkedAt: "2099-01-01", sourceId: "times-official" }[field] });
+    expect(() => parsePartition(data)).toThrow();
+  });
   it("rejects official entrance, changed date, and counter upgrades", () => {
-    const data = clone(tokyo); const official = data.records.find(r => r.airportCode === "HND")!;
+    const data = clone(tokyo); const official = data.records.find(r => r.id === "times-haneda-airport")!;
     official.official!.checkedAt = "2026-10-01";
     expect(() => parsePartition(data)).toThrow();
     const entrance = clone(tokyo); Object.assign(entrance.records[0], { vehicleEntranceStatus: "VERIFIED" });
@@ -130,14 +162,14 @@ describe("strict parsers reject corruption", () => {
 
 describe("search, aliases, freshness and lazy requests", () => {
   it("treats a complete supported airport code as an exact airport lookup", () => {
-    expect(searchRentals(index, { query: "ＯＫＡ", limit: 10000 }).map(row => row.id)).toEqual(["times-naha-airport"]);
+    expect(searchRentals(index, { query: "ＯＫＡ", limit: 10000 }).map(row => row.id)).toEqual(["nippon-naha-airport-toyosaki", "times-naha-airport"]);
     expect(searchRentals(index, { query: "fuk", limit: 10000 }).map(row => row.id)).toEqual(["times-fukuoka-airport-international"]);
     expect(searchRentals(index, { query: "Fukuoka", limit: 10000 }).length).toBeGreaterThan(1);
   });
   it("searches original/language names, company, airport and address with NFKC normalization", () => {
     expect(searchRentals(index, { query: "ＮＲＴ" }).map(r => r.id)).toContain("times-narita-airport");
     expect(searchRentals(index, { query: "小菅", companyId: "times" }).map(r => r.id)).toContain("times-narita-airport");
-    expect(searchRentals(index, { airportCode: "CTS" }).map(r => r.id)).toEqual(["times-new-chitose-airport"]);
+    expect(searchRentals(index, { airportCode: "CTS" }).map(r => r.id)).toEqual(["nippon-new-chitose-airport", "times-new-chitose-airport", "toyota-new-chitose-airport-poplar"]);
     expect(searchRentals(index, { companyId: "toyota", prefectureCode: "JP-13", limit: 3 })).toHaveLength(3);
     expect(searchRentals(index, { query: "unmatchable text 999999" })).toEqual([]);
     expect(() => searchRentals(index, { limit: -1 })).toThrow();
@@ -153,7 +185,7 @@ describe("search, aliases, freshness and lazy requests", () => {
     expect(rentalNeedsRecheck("2026-09-30", day + 90 * 86400000)).toBe(true);
     expect(rentalNeedsRecheck("2026-02-30", day)).toBe(true);
     expect(rentalNeedsRecheck("2026-10-01", day)).toBe(true);
-    expect(manifest.reviewDate).toBe("2026-09-30");
+    expect(manifest.reviewDate).toBe("2026-10-01");
   });
   it("fetches manifest, then index, then exactly the requested partition with AbortSignal", async () => {
     const fetcher = vi.fn(async (url: string) => new Response(readFileSync(`public${url}`)));

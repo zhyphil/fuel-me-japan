@@ -10,9 +10,9 @@ import subprocess
 import sys
 import tempfile
 from urllib.parse import urljoin, urlparse
-from urllib.request import Request, urlopen
 
 from common import atomic_write, digest, encode, require
+from download import open_source
 from pipeline import fetch_price
 from types import SimpleNamespace
 
@@ -56,9 +56,7 @@ def latest_url(html, index, kind, today=None):
 
 
 def fetch_bytes(url, limit):
-    request = Request(url, headers={'User-Agent': 'FuelMeJapan/0.1 (public data refresh)'})
-    with urlopen(request, timeout=45) as response:
-        require(urlparse(response.geturl()).scheme == 'https' and urlparse(response.geturl()).netloc == urlparse(url).netloc, 'Unexpected source redirect')
+    with open_source(url, timeout=45, headers={'User-Agent': 'FuelMeJapan/0.1 (public data refresh)'}) as response:
         payload = response.read(limit + 1)
     require(len(payload) <= limit, 'Source response exceeds limit')
     return payload
@@ -68,9 +66,7 @@ def acquire_osm(url, directory):
     checksum = fetch_bytes(url + '.md5', 1024).decode('ascii').split()[0]
     require(re.fullmatch('[a-fA-F0-9]{32}', checksum), 'Invalid Geofabrik MD5')
     target = directory / Path(urlparse(url).path).name
-    request = Request(url, headers={'User-Agent': 'FuelMeJapan/0.1 (public data refresh)'})
-    with urlopen(request, timeout=45) as response, target.open('xb') as output:
-        require(urlparse(response.geturl()).scheme == 'https' and urlparse(response.geturl()).netloc == 'download.geofabrik.de', 'Unexpected extract redirect')
+    with open_source(url, timeout=45, headers={'User-Agent': 'FuelMeJapan/0.1 (public data refresh)'}) as response, target.open('xb') as output:
         total = 0
         for chunk in iter(lambda: response.read(8 * 1024 * 1024), b''):
             total += len(chunk)

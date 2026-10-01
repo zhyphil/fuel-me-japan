@@ -7,9 +7,11 @@ import sys
 import tempfile
 import unittest
 from collections import Counter
+from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'scripts/importer'))
 import rental
+from common import atomic_write
 
 ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / 'public/data/rental/nationwide'
@@ -202,6 +204,174 @@ class RentalDedupTests(unittest.TestCase):
             self.assertEqual(rental.Boundaries(p).locate(20.5, 122.2)[0], 'UNKNOWN')
 
 
+class ReviewedAirportTests(unittest.TestCase):
+    def setUp(self):
+        self.path = ROOT / 'data/curation/rental-airports.json'
+        self.data = json.loads(self.path.read_text())
+
+    def test_reviewed_fifteen_rows_with_original_times_dates(self):
+        data = rental.official_rows(self.path)
+        self.assertEqual(len(data['records']), 15)
+        self.assertEqual(Counter(r['companyId'] for r in data['records']), {'times': 7, 'nippon': 6, 'toyota': 2})
+        self.assertTrue(all(r['checkedAt'] == '2026-09-30' for r in data['records'] if r['companyId'] == 'times'))
+
+    def test_nippon_branch_urls_match_legacy_mapion_not_homepage(self):
+        self.assertEqual(rental.url_keys(['https://store.nipponrentacar.co.jp/b/nrs/info/810034/']), {'nippon-shop:810034'})
+        self.assertEqual(rental.url_keys(['http://sasp.mapion.co.jp/b/nrs/info/810034/']), {'nippon-shop:810034'})
+        self.assertFalse(rental.url_keys(['https://store.nipponrentacar.co.jp/', 'https://sasp.mapion.co.jp/']))
+
+    def test_unreviewed_contract_changes_are_rejected(self):
+        for field, value in [('companyId', 'orix'), ('sourceId', 'unreviewed-official'), ('id', 'nippon-made-up'), ('recordId', '000000'), ('checkedAt', '2099-01-01'), ('officialCheckUrl', 'https://store.nipponrentacar.co.jp/'), ('summaryKey', 'rental.airport.NRT'), ('vehicleEntranceStatus', 'VERIFIED')]:
+            with self.subTest(field=field), tempfile.TemporaryDirectory() as tmp:
+                data = copy.deepcopy(self.data); data['records'][7][field] = value
+                path = Path(tmp) / 'facts.json'; path.write_text(json.dumps(data))
+                with self.assertRaises(ValueError): rental.official_rows(path)
+
+    def candidate(self, fact, match):
+        return row(match['key'], name=fact['nameJa'], url=fact['officialCheckUrl'], lat=fact['lat'], lon=fact['lon'], address=fact['addressJa'])
+
+    def test_new_reviewed_keys_are_required_and_guarded(self):
+        fact = self.data['records'][7]
+        source = self.candidate(fact, fact['reviewedSourceMatches'][0])
+        for change in [None, {'companyId': 'times'}, {'candidateStatus': 'COUNTER_ONLY'}, {'lat': fact['lat'] + .01}, {'officialFact': {'id': 'already-owned'}}, {'websites': ['https://store.nipponrentacar.co.jp/b/nrs/info/999999/']}]:
+            with self.subTest(change=change):
+                candidate = copy.deepcopy(source)
+                if change: candidate.update(change)
+                with self.assertRaises(ValueError): rental.apply_official([[candidate]] if change else [], {'records': [fact]}, audit())
+
+    def test_only_explicit_keys_merge_and_duplicate_ownership_is_rejected(self):
+        fact = self.data['records'][7]
+        source = self.candidate(fact, fact['reviewedSourceMatches'][0])
+        neighbour = copy.deepcopy(source); neighbour['key'] = 'osm-n99999999'
+        groups = rental.apply_official([[source, neighbour]], {'records': [fact]}, audit())
+        reviewed = next(g for g in groups if any('officialFact' in q for q in g))
+        self.assertEqual({q['key'] for q in reviewed}, {source['key'], 'official-' + fact['id']})
+        with self.assertRaises(ValueError): rental.apply_official([[source]], {'records': [fact, fact]}, audit())
+
+    def test_new_group_distance_still_limited_to_200m(self):
+        fact = self.data['records'][-1]
+        a, b = [self.candidate(fact, match) for match in fact['reviewedSourceMatches']]
+        b['lat'] += .0019
+        self.assertLess(rental.distance(b, fact), 250)
+        self.assertGreater(rental.distance(a, b), 200)
+        with self.assertRaisesRegex(ValueError, '组内距离超过200米'): rental.apply_official([[a], [b]], {'records': [fact]}, audit())
+
+
+    def test_snapshot_hash_lock_rejects_changed_bytes_and_changed_osm_date(self):
+        names = list(rental.INPUT_LOCK['inputs'])
+        with tempfile.TemporaryDirectory() as tmp:
+            paths = {}
+            for name in names:
+                path = Path(tmp) / name
+                path.write_bytes(b'{}')
+                paths[name] = path
+            # 所有文件名齐全仍不能把其他快照标为固定旧日期。
+            with self.assertRaisesRegex(ValueError, '快照不同'): rental.validate_inputs(paths)
+            metadata = {name: {'bytes': 2, 'sha256': hashlib.sha256(b'{}').hexdigest()} for name in names}
+            paths['osm-audit.json'].write_text(json.dumps({'osmSnapshot': '2026-10-02T00:00:00Z'}))
+            payload = paths['osm-audit.json'].read_bytes()
+            metadata['osm-audit.json'] = {'bytes': len(payload), 'sha256': hashlib.sha256(payload).hexdigest()}
+            with patch.dict(rental.INPUT_LOCK, {'inputs': metadata}):
+                with self.assertRaisesRegex(ValueError, 'OSM快照日期'): rental.validate_inputs(paths)
+
+
+class RentalPublicationTests(unittest.TestCase):
+    def setUp(self):
+        temporary = tempfile.TemporaryDirectory()
+        self.addCleanup(temporary.cleanup)
+        self.base = Path(temporary.name)
+        self.output = self.base / 'published'
+        self.osm = self.base / 'osm.geojsonseq'
+        self.write_osm(1)
+        (self.base / 'osm-audit.json').write_text(json.dumps({'taggedWithoutExportedGeometry': [], 'independentPbfObjectCount': 1, 'inputPbfSha256': 'a' * 64, 'osmSnapshot': rental.OSM_DATE}))
+        self.overture = self.base / 'overture.json'
+        self.overture.write_text(json.dumps({'release': rental.RELEASE, 'records': []}))
+        (self.base / 'overture-inventory.json').write_text(json.dumps({'release': rental.RELEASE, 'files': [{'name': f'offline-fixture-{i}'} for i in range(16)]}))
+        self.bounds = self.base / 'boundaries.geojsonseq'
+        features = []
+        for i, code in enumerate(rental.CODES):
+            x = 122 + i / 2
+            coordinates = [[x, 20], [x + .4, 20], [x + .4, 21], [x, 21], [x, 20]]
+            features.append({'properties': {'ISO3166-2': code, 'admin_level': '4'}, 'geometry': {'type': 'Polygon', 'coordinates': [coordinates]}})
+        self.bounds.write_text('\n'.join(json.dumps(f) for f in features))
+        published = json.loads((DATA / 'manifest.json').read_text())
+        self.official = ROOT / ('public' + published['officialOverrides']['url'])
+
+    def write_osm(self, identifier):
+        self.osm.write_text(json.dumps({'properties': {'@type': 'node', '@id': identifier, '@timestamp': 1700000000, 'amenity': 'car_rental', 'name': 'Offline fixture'}, 'geometry': {'type': 'Point', 'coordinates': [139, 35]}}))
+
+    def generate(self, identity_path=None):
+        # 此组只隔离测试发布原子性，合成源不冒充受审生产快照。严格输入另有独立回归。
+        facts = json.loads((ROOT / 'data/curation/rental-airports.json').read_text())
+        facts['records'] = [r for r in facts['records'] if r['companyId'] == 'times']
+        with patch('rental.validate_inputs'), patch('rental.official_rows', return_value=facts):
+            return rental.generate(self.osm, self.overture, self.bounds, self.official, DATA / 'licenses', self.output, identity_path)
+
+    def fail_manifest(self, path, payload):
+        if Path(path) == self.output / 'manifest.json':
+            self.promoted_identity = (self.output / 'identity.json').read_bytes()
+            raise OSError('Simulated final manifest write failure')
+        atomic_write(path, payload)
+
+    def test_final_publication_failure_restores_identity_bytes_and_old_snapshots(self):
+        first, _ = self.generate()
+        manifest = (self.output / 'manifest.json').read_bytes()
+        identity_path = self.output / 'identity.json'
+        # Preserve exact bytes, including noncanonical whitespace in the alias.
+        identity_path.write_text(json.dumps(json.loads(identity_path.read_text()), indent=2))
+        identity = identity_path.read_bytes()
+        snapshots = {p: p.read_bytes() for p in (self.output / 'snapshots').rglob('*.json')}
+        self.write_osm(2)
+        with patch('rental.atomic_write', side_effect=self.fail_manifest):
+            with self.assertRaisesRegex(OSError, 'final manifest'):
+                self.generate()
+        self.assertNotEqual(self.promoted_identity, identity)
+        self.assertEqual(identity_path.read_bytes(), identity)
+        self.assertEqual((self.output / 'manifest.json').read_bytes(), manifest)
+        for path, payload in snapshots.items():
+            self.assertEqual(path.read_bytes(), payload)
+        self.assertGreater(len(list((self.output / 'snapshots').rglob('*.json'))), len(snapshots))
+        retried, _ = self.generate()
+        self.assertNotEqual(retried['version'], first['version'])
+
+    def test_final_publication_failure_restores_missing_identity_with_external_history(self):
+        self.generate()
+        manifest = (self.output / 'manifest.json').read_bytes()
+        identity = self.output / 'identity.json'
+        history = self.base / 'external-identity.json'
+        history.write_bytes(identity.read_bytes())
+        historical_bytes = history.read_bytes()
+        identity.unlink()
+        self.write_osm(2)
+        with patch('rental.atomic_write', side_effect=self.fail_manifest):
+            with self.assertRaisesRegex(OSError, 'final manifest'):
+                self.generate(history)
+        self.assertTrue(self.promoted_identity)
+        self.assertFalse(identity.exists())
+        self.assertEqual(history.read_bytes(), historical_bytes)
+        self.assertEqual((self.output / 'manifest.json').read_bytes(), manifest)
+
+    def test_first_publication_failure_leaves_both_pointers_absent(self):
+        with patch('rental.atomic_write', side_effect=self.fail_manifest):
+            with self.assertRaisesRegex(OSError, 'final manifest'):
+                self.generate()
+        self.assertFalse((self.output / 'identity.json').exists())
+        self.assertFalse((self.output / 'manifest.json').exists())
+        self.assertTrue(list((self.output / 'snapshots').rglob('identity.json')))
+
+    def test_success_and_same_input_keep_version_and_snapshot_bytes(self):
+        first, _ = self.generate()
+        before = {p: p.read_bytes() for p in self.output.rglob('*') if p.is_file()}
+        mtimes = {p: p.stat().st_mtime_ns for p in (self.output / 'snapshots').rglob('*.json')}
+        second, _ = self.generate()
+        self.assertEqual(first, second)
+        self.assertEqual(before, {p: p.read_bytes() for p in self.output.rglob('*') if p.is_file()})
+        self.assertEqual(mtimes, {p: p.stat().st_mtime_ns for p in mtimes})
+        manifest = json.loads((self.output / 'manifest.json').read_text())
+        immutable_identity = self.output / manifest['identity']['url'].removeprefix(rental.BASE)
+        self.assertEqual(immutable_identity.read_bytes(), (self.output / 'identity.json').read_bytes())
+
+
 class PublishedRentalTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -214,6 +384,7 @@ class PublishedRentalTests(unittest.TestCase):
 
     def test_all_downloads_hashes_counts_and_licenses(self):
         self.assertEqual(len(self.manifest['partitions']), 48)
+        self.assertEqual(len(self.manifest['downloads']), 59)
         self.assertEqual({p['prefectureCode'] for p in self.partitions}, set(rental.CODES + ['UNKNOWN']))
         for a in self.manifest['downloads']:
             content = (ROOT / ('public' + a['url'])).read_bytes()
@@ -231,8 +402,8 @@ class PublishedRentalTests(unittest.TestCase):
     def test_every_source_accounted_for_and_original_licenses_retained(self):
         members = [s for r in self.records for s in r['sources']]
         self.assertEqual(len({s['key'] for s in members}), len(members))
-        self.assertEqual(sum(s['sourceId'] != 'times-official' for s in members) + self.audit['excludedCount'], self.audit['inputObjectsTotalKnown'])
-        self.assertEqual(self.audit['count'] + self.audit['sourceObjectsMerged'], self.audit['retainedSourceObjects'] + 7)
+        self.assertEqual(sum(s['sourceId'] in {'osm', 'overture'} for s in members) + self.audit['excludedCount'], self.audit['inputObjectsTotalKnown'])
+        self.assertEqual(self.audit['count'] + self.audit['sourceObjectsMerged'], self.audit['retainedSourceObjects'] + 15)
         identity = self.load(self.manifest['identity'])
         for r in self.records:
             for s in r['sources']:
@@ -248,19 +419,52 @@ class PublishedRentalTests(unittest.TestCase):
     def test_seven_airports_official_evidence_no_entrance_claim(self):
         official = [r for r in self.records if r['verification'] == 'OFFICIAL_FACILITY_CHECKED']
         self.assertEqual({r['airportCode'] for r in official}, {'NRT', 'HND', 'KIX', 'NGO', 'CTS', 'FUK', 'OKA'})
-        self.assertEqual(len(official), 7)
+        self.assertEqual(len(official), 15)
         self.assertTrue({'times-naha-airport', 'times-new-chitose-airport', 'times-fukuoka-airport-international'} <= {r['id'] for r in official})
         for r in official:
-            self.assertEqual(r['official']['checkedAt'], '2026-09-30')
-            self.assertEqual(r['companyId'], 'times')
+            self.assertEqual(r['official']['checkedAt'], '2026-09-30' if r['companyId'] == 'times' else '2026-10-01')
             self.assertEqual(r['vehicleEntranceStatus'], 'NOT_VERIFIED')
-        kix = next(r for r in official if r['airportCode'] == 'KIX')
+        kix = next(r for r in official if r['id'] == 'times-kansai-airport')
         self.assertIn('2F', kix['address'])
         self.assertEqual(kix['positionKind'], 'FACILITY_REFERENCE')
-        nrt = next(r for r in official if r['airportCode'] == 'NRT')
+        nrt = next(r for r in official if r['id'] == 'times-narita-airport')
         self.assertEqual(set(nrt['sourceIds']), {'osm', 'overture', 'times-official'})
         self.assertIn('成田', nrt['names']['primary'])
         self.assertNotIn('宮崎', nrt['names']['primary'])
+
+    def test_old_times_details_and_all_prior_links_remain_unchanged_or_resolvable(self):
+        previous = DATA / 'snapshots/rental-v1-1b43cbc1f43d95a5'
+        old = [r for path in (previous / 'partitions').glob('*.json') for r in json.loads(path.read_text())['records']]
+        current = {r['id']: r for r in self.records}
+        aliases = {a: r['id'] for r in self.records for a in r['aliases']}
+        for r in old:
+            for key in [r['id'], *r['aliases']]:
+                self.assertIn(aliases.get(key, key), current)
+            if r['official']:
+                self.assertEqual(current[r['id']], r)
+        old_members = {s['key']: s for r in old for s in r['sources'] if s['sourceId'] in {'osm', 'overture'}}
+        new_members = {s['key']: s for r in self.records for s in r['sources'] if s['sourceId'] in {'osm', 'overture'}}
+        self.assertEqual(old_members, new_members)
+
+    def test_published_source_inputs_equal_pinned_reviewed_hashes_and_dates(self):
+        sources = self.load(self.manifest['sourceRegistry'])
+        self.assertEqual({i['name']: {'sha256': i['sha256'], 'bytes': i['bytes']} for i in sources['inputs']}, rental.INPUT_LOCK['inputs'])
+        self.assertEqual(sources['osmUpstreamGeometryAudit']['osmSnapshot'], rental.INPUT_LOCK['osmSnapshot'])
+        self.assertEqual(sources['overtureRelease'], '2026-09-23.1')
+        self.assertEqual(self.manifest['reviewDate'], '2026-10-01')
+        self.assertEqual({s['id']: s['sourceDate'] for s in self.manifest['sources']}, {'osm': '2026-09-29', 'overture': '2026-09-23', 'times-official': '2026-09-30', 'nippon-official': '2026-10-01', 'toyota-official': '2026-10-01'})
+
+    def test_new_facilities_use_exact_reviewed_sources_and_phones(self):
+        facts = json.loads((ROOT / 'data/curation/rental-airports.json').read_text())['records'][7:]
+        for fact in facts:
+            record = next(r for r in self.records if r['id'] == fact['id'])
+            self.assertEqual(record['phones'], [fact['officialPhone']])
+            self.assertEqual(record['official']['summaryKey'], fact['summaryKey'])
+            self.assertIsNone(record['returnRule'])
+            self.assertEqual({s['key'] for s in record['sources'] if s['sourceId'] in {'osm', 'overture'}}, {m['key'] for m in fact['reviewedSourceMatches']})
+            official = next(s for s in record['sources'] if s['sourceId'] == fact['sourceId'])
+            self.assertEqual(official['recordId'], fact['recordId'])
+            self.assertEqual((record['lat'], record['lon']), (fact['lat'], fact['lon']))
 
     def test_company_rule_isolation_and_counter_status(self):
         for r in self.records:

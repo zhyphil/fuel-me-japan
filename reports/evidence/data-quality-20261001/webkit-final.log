@@ -1,0 +1,43 @@
+
+> fuel-me-japan@0.0.0 test:e2e
+> playwright test --config /tmp/fmj-quality-20261001-research/webkit.config.mts --grep official detail|directory combines
+
+
+Running 30 tests using 2 workers
+
+(node:98593) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:98592) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/rental-directory.spec.ts:71:69 › en: 320px directory combines region/company/name, resets, paginates and fits (2.5s)
+  ✓   2 tests/e2e/rental-directory.spec.ts:71:69 › en: 390px directory combines region/company/name, resets, paginates and fits (2.5s)
+  ✓   4 tests/e2e/rental-directory.spec.ts:71:69 › zh-Hant: 320px directory combines region/company/name, resets, paginates and fits (1.5s)
+  ✓   3 tests/e2e/rental-directory.spec.ts:71:69 › en: 1280px directory combines region/company/name, resets, paginates and fits (1.6s)
+  ✓   5 tests/e2e/rental-directory.spec.ts:71:69 › zh-Hant: 390px directory combines region/company/name, resets, paginates and fits (1.4s)
+  ✓   6 tests/e2e/rental-directory.spec.ts:71:69 › zh-Hant: 1280px directory combines region/company/name, resets, paginates and fits (1.5s)
+  ✓   7 tests/e2e/rental-directory.spec.ts:71:69 › ko: 320px directory combines region/company/name, resets, paginates and fits (1.4s)
+  ✓   8 tests/e2e/rental-directory.spec.ts:71:69 › ko: 390px directory combines region/company/name, resets, paginates and fits (1.5s)
+  ✓   9 tests/e2e/rental-directory.spec.ts:71:69 › ko: 1280px directory combines region/company/name, resets, paginates and fits (1.5s)
+  ✓  10 tests/e2e/rental-directory.spec.ts:71:69 › zh-Hans: 320px directory combines region/company/name, resets, paginates and fits (1.5s)
+  ✓  11 tests/e2e/rental-directory.spec.ts:71:69 › zh-Hans: 390px directory combines region/company/name, resets, paginates and fits (1.5s)
+  ✓  12 tests/e2e/rental-directory.spec.ts:71:69 › zh-Hans: 1280px directory combines region/company/name, resets, paginates and fits (1.5s)
+  ✓  13 tests/e2e/rental-directory.spec.ts:71:69 › th: 320px directory combines region/company/name, resets, paginates and fits (1.6s)
+  ✓  14 tests/e2e/rental-directory.spec.ts:71:69 › th: 390px directory combines region/company/name, resets, paginates and fits (1.5s)
+  ✓  16 tests/e2e/rental-directory.spec.ts:111:40 › nippon-chubu-centrair-airport: official detail is directly addressable, refreshable and honest about the entrance (1.3s)
+  ✓  15 tests/e2e/rental-directory.spec.ts:71:69 › th: 1280px directory combines region/company/name, resets, paginates and fits (1.6s)
+  ✓  17 tests/e2e/rental-directory.spec.ts:111:40 › nippon-haneda-airport: official detail is directly addressable, refreshable and honest about the entrance (1.3s)
+  ✓  18 tests/e2e/rental-directory.spec.ts:111:40 › nippon-kansai-airport: official detail is directly addressable, refreshable and honest about the entrance (1.4s)
+  ✓  19 tests/e2e/rental-directory.spec.ts:111:40 › nippon-naha-airport-toyosaki: official detail is directly addressable, refreshable and honest about the entrance (1.3s)
+  ✓  20 tests/e2e/rental-directory.spec.ts:111:40 › nippon-narita-airport: official detail is directly addressable, refreshable and honest about the entrance (1.3s)
+  ✓  21 tests/e2e/rental-directory.spec.ts:111:40 › nippon-new-chitose-airport: official detail is directly addressable, refreshable and honest about the entrance (1.3s)
+  ✓  22 tests/e2e/rental-directory.spec.ts:111:40 › times-chubu-centrair-airport: official detail is directly addressable, refreshable and honest about the entrance (1.3s)
+  ✓  23 tests/e2e/rental-directory.spec.ts:111:40 › times-fukuoka-airport-international: official detail is directly addressable, refreshable and honest about the entrance (1.3s)
+  ✓  24 tests/e2e/rental-directory.spec.ts:111:40 › times-haneda-airport: official detail is directly addressable, refreshable and honest about the entrance (1.4s)
+  ✓  25 tests/e2e/rental-directory.spec.ts:111:40 › times-kansai-airport: official detail is directly addressable, refreshable and honest about the entrance (1.3s)
+  ✓  26 tests/e2e/rental-directory.spec.ts:111:40 › times-naha-airport: official detail is directly addressable, refreshable and honest about the entrance (1.3s)
+  ✓  27 tests/e2e/rental-directory.spec.ts:111:40 › times-narita-airport: official detail is directly addressable, refreshable and honest about the entrance (1.3s)
+  ✓  28 tests/e2e/rental-directory.spec.ts:111:40 › times-new-chitose-airport: official detail is directly addressable, refreshable and honest about the entrance (1.3s)
+  ✓  29 tests/e2e/rental-directory.spec.ts:111:40 › toyota-haneda-airport-international: official detail is directly addressable, refreshable and honest about the entrance (1.4s)
+  ✓  30 tests/e2e/rental-directory.spec.ts:111:40 › toyota-new-chitose-airport-poplar: official detail is directly addressable, refreshable and honest about the entrance (1.3s)
+
+  30 passed (24.5s)

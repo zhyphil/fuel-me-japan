@@ -35,6 +35,14 @@ COMPANIES = {
 }
 RANK = {'Point': 1, 'LineString': 2, 'MultiLineString': 2, 'Polygon': 3, 'MultiPolygon': 4}
 FORBIDDEN = {'__proto__', 'prototype', 'constructor'}
+ROOT = Path(__file__).resolve().parents[2]
+REVIEWED = json.loads((ROOT / 'src/lib/rental-reviewed.json').read_text())
+INPUT_LOCK = json.loads((ROOT / 'data/curation/rental-input-lock.json').read_text())
+OFFICIAL_SOURCES = {
+    'times-official': ('times', '2026-09-30', 'https://www.timescar-rental.com/en/'),
+    'nippon-official': ('nippon', '2026-10-01', 'https://www.nipponrentacar.co.jp/'),
+    'toyota-official': ('toyota', '2026-10-01', 'https://rent.toyota.co.jp/'),
+}
 
 
 def safe_tree(value):
@@ -95,6 +103,11 @@ def url_keys(urls):
             m = re.search(r'/shop/(\d+)(?:\.html)?$', path)
             if m:
                 result.add('times-shop:' + m[1])
+            continue
+        if host in {'store.nipponrentacar.co.jp', 'sasp.mapion.co.jp'}:
+            m = re.fullmatch(r'/b/nrs/info/(\d{6})', path)
+            if m:
+                result.add('nippon-shop:' + m[1])
             continue
         # 只接受带分店身份的路径/查询参数，主页、目录和联系页不作证据。
         qs = parse_qs(u.query)
@@ -366,31 +379,74 @@ def deduplicate(rows, audit):
     return groups
 
 
+def official_attributes(fact):
+    return {k: v for k, v in fact.items() if k not in {'notesZhHans', 'coordinateEvidence', 'possibleOsmMatch', 'reviewedSourceMatches'}}
+
+
 def official_rows(path):
     data = read(path)
-    require(data['reviewDate'] == '2026-09-30' and len(data['records']) == 7, '仅接受已审核7机场事实')
-    expected = {'NRT', 'HND', 'KIX', 'NGO', 'CTS', 'FUK', 'OKA'}
-    require({r['airportCode'] for r in data['records']} == expected, '机场核验范围不符')
+    expected = REVIEWED['records']
+    require(data['reviewDate'] == REVIEWED['reviewDate'] and len(data['records']) == len(expected), '仅接受本批已审核15条事实')
+    require({r['id'] for r in data['records']} == set(expected), '官方门店白名单不符')
+    owners = set()
     for r in data['records']:
-        require(r['companyId'] == 'times' and r['checkedAt'] == data['reviewDate'] and r['vehicleEntranceStatus'] == 'NOT_VERIFIED', '官方核验不允许升级入口')
-        require(r['returnLocationStatus'] == 'OFFICIAL_FACILITY_CHECKED' and r['positionKind'] in {'SHOP_REFERENCE', 'FACILITY_REFERENCE'}, '官方状态不符')
+        approved = expected[r['id']]
+        require(official_attributes(r) == approved['attributes'], '官方事实、公司、URL、日期或摘要不在审核契约内')
         point_of({'type': 'Point', 'coordinates': [r['lon'], r['lat']]})
         reviewed = r.get('reviewedSourceMatches', [])
         require(isinstance(reviewed, list) and all(isinstance(x, dict) and set(x) == {'key', 'reasonZhHans'} and isinstance(x['key'], str) and re.fullmatch(r'(osm-[nwr][0-9]+|overture-[a-f0-9-]{36})', x['key']) and isinstance(x['reasonZhHans'], str) and x['reasonZhHans'].strip() for x in reviewed), '人工来源映射必须附核对理由')
-        require(len({x['key'] for x in reviewed}) == len(reviewed), '人工来源映射不可重复')
+        source_keys = [x['key'] for x in reviewed]
+        require(source_keys == approved['reviewedSourceKeys'] and not owners.intersection(source_keys), '人工来源映射不在审核契约内或重复归属')
+        owners.update(source_keys)
     return data
 
 
+def validate_inputs(paths):
+    require(set(paths) == set(INPUT_LOCK['inputs']), '缺少已审核输入')
+    for name, path in paths.items():
+        payload = Path(path).read_bytes()
+        require({'bytes': len(payload), 'sha256': sha(payload)} == INPUT_LOCK['inputs'][name], '输入与已审核快照不同：' + name)
+    upstream = read(paths['osm-audit.json'])
+    require(upstream['osmSnapshot'] == INPUT_LOCK['osmSnapshot'] and upstream['osmSnapshot'][:10] == OSM_DATE, 'OSM快照日期不符')
+    require(read(paths['overture-inventory.json'])['release'] == INPUT_LOCK['overtureRelease'] == RELEASE, 'Overture快照不符')
+
+
 def apply_official(groups, data, audit):
+    claimed = set()
     for fact in data['records']:
+        require(fact['id'] in REVIEWED['records'], '未审核的官方门店')
+        approved = REVIEWED['records'][fact['id']]
         key = 'official-' + fact['id']
-        # 运行时只提供枚举和 airportCode；简短自写中文事实仅存在审计。
-        limited = {k: v for k, v in fact.items() if k not in {'notesZhHans', 'coordinateEvidence', 'possibleOsmMatch', 'reviewedSourceMatches'}}
-        m = member('times-official', key, fact['officialCheckUrl'].rstrip('/').split('/')[-1], fact['checkedAt'], fact['officialCheckUrl'], ['LIMITED_FACTS'], limited)
+        # 运行时使用受审 summaryKey；简短自写中文事实和匹配理由仅存在审计。
+        limited = official_attributes(fact)
+        m = member(approved['sourceId'], key, approved['recordId'], fact['checkedAt'], fact['officialCheckUrl'], ['LIMITED_FACTS'], limited)
         r = base_row(key, {'primary': fact['nameJa'], 'languages': {'ja': fact['nameJa']}}, [], [fact['officialCheckUrl']], fact['addressJa'], fact['lat'], fact['lon'], fact['positionKind'], {}, m)
+        if fact['companyId'] != 'times':
+            # 新批次只提升明确审核的源对象，不自动吸收同名近邻或同组其他对象。
+            wanted = {x['key'] for x in fact.get('reviewedSourceMatches', [])}
+            require(wanted and wanted == set(approved['reviewedSourceKeys']) and not wanted.intersection(claimed), '新增官方映射缺失或重复归属')
+            chosen = [q for g in groups for q in g if q['key'] in wanted]
+            require(len(chosen) == len(wanted) and {q['key'] for q in chosen} == wanted, '新增官方映射源key缺失或重复')
+            for group in groups:
+                if any(q['key'] in wanted for q in group):
+                    require(not any('officialFact' in q for q in group), '源对象已有其他官方归属')
+            for q in chosen:
+                require(q['companyId'] == fact['companyId'] and q['candidateStatus'] == 'CANDIDATE' and not q.get('excluded') and distance(q, r) <= 250, '新增官方来源公司、柜台状态或距离冲突')
+                branch_keys = url_keys(q['websites'])
+                require(not branch_keys or branch_keys <= url_keys(r['websites']), '新增官方分店身份冲突')
+            require(all(distance(a, b) <= 200 for i, a in enumerate(chosen) for b in chosen[i+1:]), '新增官方组内距离超过200米')
+            require(any(q['lat'] == fact['lat'] and q['lon'] == fact['lon'] for q in chosen), '新增坐标必须沿用已审核源参考点')
+            groups = [[q for q in g if q['key'] not in wanted] for g in groups]
+            groups = [g for g in groups if g]
+            r['officialFact'] = fact
+            groups.append(chosen + [r])
+            claimed.update(wanted)
+            audit['merges'].append({'keys': [q['key'] for q in chosen] + [key], 'reasons': ['REVIEWED_SOURCE_ID_AND_OFFICIAL_ADDRESS']})
+            audit['officialOverrides'].append({'canonicalId': fact['id'], 'matchedKeys': [q['key'] for q in chosen], 'reason': 'OFFICIAL_DIRECT_IDENTITY_EVIDENCE', **fact})
+            continue
         matches = []
         for i, group in enumerate(groups):
-            if any(q['candidateStatus'] == 'COUNTER_ONLY' or q['companyId'] != 'times' or distance(q, r) > 250 for q in group):
+            if any('officialFact' in q or q['candidateStatus'] == 'COUNTER_ONLY' or q['companyId'] != fact['companyId'] or distance(q, r) > 250 for q in group):
                 continue
             reasons = []
             for q in group:
@@ -482,20 +538,25 @@ def build_record(ident, group, identity, boundaries, audit):
     if cid == 'UNKNOWN':
         known = {r['companyId'] for r in group} - {'UNKNOWN'}
         cid = next(iter(known)) if len(known) == 1 else 'UNKNOWN'
+    fact = official['officialFact'] if official else None
+    approved = REVIEWED['records'][fact['id']] if fact else None
     return {'id': ident, 'aliases': sorted(k for k, v in identity['aliases'].items() if v == ident),
             'names': names, 'companyId': cid, 'companyName': COMPANIES[cid][0] if cid in COMPANIES else None,
             'prefectureCode': code, 'lat': selected['lat'], 'lon': selected['lon'], 'address': selected['address'],
-            'phones': sorted({p for r in group for p in r['phones']}), 'websites': sorted({u for r in group for u in r['websites']}),
+            'phones': [fact['officialPhone']] if fact and fact.get('officialPhone') else sorted({p for r in group for p in r['phones']}), 'websites': sorted({u for r in group for u in r['websites']}),
             'positionKind': selected['positionKind'], 'candidateStatus': 'OFFICIAL_RETURN_FACILITY' if official else selected['candidateStatus'],
             'verification': 'OFFICIAL_FACILITY_CHECKED' if official else 'NOT_VERIFIED', 'vehicleEntranceStatus': 'NOT_VERIFIED',
             'airportCode': official['officialFact']['airportCode'] if official else None,
             'sourceIds': sorted({s['sourceId'] for s in sources}), 'sources': sources,
-            'official': ({'sourceId': 'times-official', 'checkedAt': official['officialFact']['checkedAt'], 'url': official['officialFact']['officialCheckUrl'], 'supplementaryUrls': official['officialFact']['supplementarySourceUrls'], 'summaryKey': 'rental.airport.' + official['officialFact']['airportCode']} if official else None),
+            'official': ({'sourceId': approved['sourceId'], 'checkedAt': fact['checkedAt'], 'url': fact['officialCheckUrl'], 'supplementaryUrls': fact['supplementarySourceUrls'], 'summaryKey': approved['summaryKey']} if official else None),
             'returnRule': ({'companyId': 'times', 'sourceId': 'times-official', 'url': 'https://www.timescar-rental.com/en/agreement/gas.html', 'checkedAt': '2026-09-30', 'fullTank': 'STANDARD_SUBJECT_TO_CONTRACT', 'receipt': 'MAY_BE_REQUESTED'} if cid == 'times' else None)}
 
 
 def generate(osm_path, overture_path, boundaries_path, official_path, licenses_path, output, identity_path=None):
     output = Path(output)
+    paths = {'osm-rental-full.geojsonseq': osm_path, 'overture-car-rental-full.json': overture_path, 'prefecture-boundaries.geojsonseq': boundaries_path, 'reviewed-airports.json': official_path, 'osm-audit.json': Path(osm_path).parent / 'osm-audit.json', 'overture-inventory.json': Path(overture_path).parent / 'overture-inventory.json'}
+    validate_inputs(paths)
+    official_data = official_rows(official_path)
     audit = {'osmInputFeatures': 0, 'excluded': [], 'conflicts': [], 'merges': [], 'officialOverrides': [], 'unknownAssignments': []}
     boundaries = Boundaries(boundaries_path)
     rows = read_osm(osm_path, audit) + read_overture(overture_path, audit)
@@ -518,22 +579,25 @@ def generate(osm_path, overture_path, boundaries_path, official_path, licenses_p
     audit['inputObjectsAfterGeometrySelection'] = audit['osmUniqueObjects'] + audit['overtureInputRecords']
     audit['inputObjectsTotalKnown'] = audit['inputObjectsAfterGeometrySelection'] + len(missing)
     audit['retainedSourceObjects'] = len(kept)
-    groups = apply_official(deduplicate(kept, audit), official_rows(official_path), audit)
+    # 为本批新增对象保留独立审核边界，先去重其他候选，避免自动扩张审核组。
+    explicit = {x['key'] for f in official_data['records'] if f['companyId'] != 'times' for x in f['reviewedSourceMatches']}
+    groups = deduplicate([r for r in kept if r['key'] not in explicit], audit) + [[r] for r in kept if r['key'] in explicit]
+    groups = apply_official(groups, official_data, audit)
     identity_file = Path(identity_path) if identity_path else output / 'identity.json'
     historical = read(identity_file) if identity_file.exists() else {'schemaVersion': 1, 'sourceToCanonical': {}, 'aliases': {}}
     assigned, identity = assign_identity(groups, historical)
     records = sorted([build_record(i, g, identity, boundaries, audit) for i, g in assigned], key=lambda r: r['id'])
-    audit.update({'count': len(records), 'sourceObjectsMerged': len(kept) + 7 - len(records), 'excludedCount': len(audit['excluded']), 'unknownCount': sum(r['prefectureCode'] == 'UNKNOWN' for r in records), 'statusCounts': dict(sorted(Counter(r['candidateStatus'] for r in records).items())), 'companyCounts': dict(sorted(Counter(r['companyId'] for r in records).items()))})
+    audit.update({'count': len(records), 'sourceObjectsMerged': len(kept) + len(official_data['records']) - len(records), 'excludedCount': len(audit['excluded']), 'unknownCount': sum(r['prefectureCode'] == 'UNKNOWN' for r in records), 'statusCounts': dict(sorted(Counter(r['candidateStatus'] for r in records).items())), 'companyCounts': dict(sorted(Counter(r['companyId'] for r in records).items()))})
     inputs = [{'name': name, 'sha256': sha(Path(path).read_bytes()), 'bytes': Path(path).stat().st_size} for name, path in [('osm-rental-full.geojsonseq', osm_path), ('overture-car-rental-full.json', overture_path), ('prefecture-boundaries.geojsonseq', boundaries_path), ('reviewed-airports.json', official_path), ('osm-audit.json', upstream_path)]]
     sources = [
         {'id': 'osm', 'name': 'OpenStreetMap contributors', 'sourceDate': OSM_DATE, 'url': 'https://download.geofabrik.de/asia/japan-260929.osm.pbf', 'licenses': ['ODbL-1.0'], 'attribution': '© OpenStreetMap contributors; distributed by Geofabrik'},
         {'id': 'overture', 'name': 'Overture Maps Foundation', 'sourceDate': RELEASE[:10], 'url': 'https://docs.overturemaps.org/attribution/', 'licenses': sorted(set(LICENSES.values())), 'attribution': 'Overture Maps; Meta; © 2026 Foursquare Labs, Inc.; AllThePlaces'},
-        {'id': 'times-official', 'name': 'Times CAR RENTAL', 'sourceDate': '2026-09-30', 'url': 'https://www.timescar-rental.com/en/', 'licenses': ['LIMITED_FACTS'], 'attribution': 'Times CAR RENTAL；仅人工核对有限事实，摘要自行编写'}]
+        *[{'id': sid, 'name': COMPANIES[cid][0], 'sourceDate': date, 'url': url, 'licenses': ['LIMITED_FACTS'], 'attribution': COMPANIES[cid][0] + '；仅人工核对有限事实，摘要自行编写'} for sid, (cid, date, url) in OFFICIAL_SOURCES.items()]]
     inventory_path = Path(overture_path).parent / 'overture-inventory.json'
     inventory = read(inventory_path)
     require(inventory.get('release') == RELEASE and len(inventory.get('files', [])) == 16, '缺少已固定 Overture 下载清单')
     inputs.append({'name': inventory_path.name, 'sha256': sha(inventory_path.read_bytes()), 'bytes': inventory_path.stat().st_size})
-    sources_doc = {'osmUpstreamGeometryAudit': {'inputPbfSha256': upstream['inputPbfSha256'], 'osmSnapshot': upstream['osmSnapshot'], 'independentPbfObjectCount': upstream['independentPbfObjectCount'], 'taggedWithoutExportedGeometry': missing, 'note': '沿用已交接的PBF与几何导出核对；本节点未重新读取PBF。完整导出文件哈希单列于inputs，不能和早期导出哈希混用。'}, 'overtureInventory': inventory, 'schemaVersion': 1, 'sources': sources, 'inputs': inputs, 'overtureRelease': RELEASE, 'upstreamLicenses': LICENSES, 'license': 'ODbL-1.0', 'modifications': '日本分类筛选、排除明确共享汽车及停业点、几何选取、严格行政区归属、保守分店去重、稳定ID、有限官方事实叠加。置信度不作为核验。', 'refreshPolicy': '手动获取和复核；默认日期不刷新。官方事实90天起提示重新核对。', 'scope': '每机场1家Times；全国候选不是完整营业门店清单，入口均未核验。'}
+    sources_doc = {'osmUpstreamGeometryAudit': {'inputPbfSha256': upstream['inputPbfSha256'], 'osmSnapshot': upstream['osmSnapshot'], 'independentPbfObjectCount': upstream['independentPbfObjectCount'], 'taggedWithoutExportedGeometry': missing, 'note': '沿用已交接的PBF与几何导出核对；本节点未重新读取PBF。完整导出文件哈希单列于inputs，不能和早期导出哈希混用。'}, 'overtureInventory': inventory, 'schemaVersion': 1, 'sources': sources, 'inputs': inputs, 'overtureRelease': RELEASE, 'upstreamLicenses': LICENSES, 'license': 'ODbL-1.0', 'modifications': '日本分类筛选、排除明确共享汽车及停业点、几何选取、严格行政区归属、保守分店去重、稳定ID、有限官方事实叠加。置信度不作为核验。', 'refreshPolicy': '手动获取和复核；默认日期不刷新。官方事实90天起提示重新核对。', 'scope': '七机场共15条有限官方事实：旧7家Times、新6家Nippon和2家Toyota。核对地址与归还安排；新增坐标沿用OSM/Overture参考点，不是已核验入口。全国候选不是完整营业门店清单。'}
     version = TRANSFORM + '-' + sha(encode({'records': records, 'audit': audit, 'sources': sources_doc, 'identity': identity}))[:16]
     prefix = 'snapshots/' + version + '/'
     def artifact(name, data, count=None):
@@ -549,7 +613,7 @@ def generate(osm_path, overture_path, boundaries_path, official_path, licenses_p
         partitions.append({'code': code, **artifact('partitions/' + code + '.json', {'schemaVersion': 1, 'version': version, 'prefectureCode': code, 'count': len(rr), 'records': rr}, len(rr))})
     index = artifact('index.json', {'schemaVersion': 1, 'version': version, 'count': len(records), 'records': [{k: r[k] for k in INDEX_KEYS} for r in records]}, len(records))
     audit_artifact = artifact('audit.json', audit)
-    official_artifact = artifact('official-overrides.json', {'schemaVersion': 1, 'reviewDate': '2026-09-30', 'records': audit['officialOverrides']})
+    official_artifact = artifact('official-overrides.json', {'schemaVersion': 1, 'reviewDate': official_data['reviewDate'], 'records': audit['officialOverrides']})
     sources_artifact = artifact('sources.json', sources_doc)
     identity_artifact = artifact('identity.json', identity)
     license_links = []
@@ -566,10 +630,21 @@ def generate(osm_path, overture_path, boundaries_path, official_path, licenses_p
     atomic_write(output / 'NOTICE.txt', notice)
     notice_link = {'url': BASE + 'NOTICE.txt', 'sha256': sha(notice), 'bytes': len(notice)}
     downloads = [index, *[{k: v for k, v in p.items() if k != 'code'} for p in partitions], audit_artifact, official_artifact, sources_artifact, identity_artifact, notice_link, *license_links]
-    manifest = {'schemaVersion': 1, 'transformationVersion': TRANSFORM, 'version': version, 'count': len(records), 'reviewDate': '2026-09-30', 'license': 'ODbL-1.0', 'sources': sources, 'index': index, 'partitions': partitions, 'audit': audit_artifact, 'officialOverrides': official_artifact, 'sourceRegistry': sources_artifact, 'identity': identity_artifact, 'notice': notice_link, 'licenses': license_links, 'downloads': downloads}
+    manifest = {'schemaVersion': 1, 'transformationVersion': TRANSFORM, 'version': version, 'count': len(records), 'reviewDate': official_data['reviewDate'], 'license': 'ODbL-1.0', 'sources': sources, 'index': index, 'partitions': partitions, 'audit': audit_artifact, 'officialOverrides': official_artifact, 'sourceRegistry': sources_artifact, 'identity': identity_artifact, 'notice': notice_link, 'licenses': license_links, 'downloads': downloads}
     # 全部不可变产物完成后最后替换入口，失败时保留上次 manifest。
-    atomic_write(output / 'identity.json', encode(identity))
-    atomic_write(output / 'manifest.json', encode(manifest))
+    identity_alias = output / 'identity.json'
+    previous_identity = identity_alias.read_bytes() if identity_alias.exists() else None
+    atomic_write(identity_alias, encode(identity))
+    try:
+        atomic_write(output / 'manifest.json', encode(manifest))
+    except BaseException:
+        # 恢复输出别名本身；--identity 可以是另一个只读历史输入。
+        # 不可变快照留存，原 manifest 继续指向上次完整发布。
+        if previous_identity is None:
+            identity_alias.unlink()
+        else:
+            atomic_write(identity_alias, previous_identity)
+        raise
     return manifest, audit
 
 

@@ -1,0 +1,50 @@
+{
+  "checkedAt": "2026-10-01",
+  "baseCommit": "bca6137ae60d449628dd4e3c10508f222bf0d195",
+  "rentalVersion": "rental-v1-4292016845adde58",
+  "commands": {
+    "npm run check": "PASS",
+    "pythonDataTests": "PASS",
+    "webkitFocused": "PASS"
+  },
+  "unitTests": 362,
+  "dataTests": 63,
+  "chromium": {
+    "startTime": "2026-10-01T09:03:03.391Z",
+    "duration": 46809.365999999995,
+    "expected": 315,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "webkit": {
+    "startTime": "2026-10-01T09:04:24.116Z",
+    "duration": 24480.838,
+    "expected": 30,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "reviewFinding": {
+    "priority": "P2",
+    "status": "FIXED",
+    "descriptionZhHans": "JSON导入补充type属性，完整检查与WebKit检查通过。"
+  },
+  "sourcePriceStatus": "HTTP_403",
+  "releaseStatus": "LOCAL_UNCOMMITTED",
+  "notesZhHans": [
+    "浏览器使用离线灰色瓦片，验证页面及交互，不证明实时底图可用。",
+    "WebKit配置未设置项目名，原测试助手将截图写入chromium-default路径；本次保存的目录截图来自WebKit，已按真实浏览器重命名。",
+    "桌面Toyota详情截图来自Chromium全量检查；本次截图单独保存，历史已跟踪截图恢复为原始版本。",
+    "实体手机、母语真人、现场车辆入口与生产部署验收未执行。"
+  ],
+  "evidenceSha256": {
+    "check-final.log": "66fad55a8056f663884c3d85d600c1564230defee7034a7da085fa3519a8e77b",
+    "chromium-toyota-poplar-detail.png": "01344f236e85aadde4865ae2ee1e21dc8dbdbd27838a0e321c75a6ad3f059391",
+    "data-tests-final.log": "1d4cda5a7a83589bda02185ead4d24a62f44ab68a7c60180251dc7793906c6c6",
+    "independent-review.md": "aaf4d67c0dffbded399f22a1e2c5480739ef4ca881df0f61784f7fc988e6c100",
+    "webkit-directory-1280.png": "c1ef46caebaf7176ef94c31da143c4d50eaa24bde3f70323d6e3b31b9936b95d",
+    "webkit-directory-320.png": "6d3293e00949b1351f06c77338b091cf693588ea3d12a25c4cc792549b86d82c",
+    "webkit-final.log": "3824479db86277554b7f07e89a1e5c1e56a1cce777f7d49cc1e09ee17d0dbe9b"
+  }
+}

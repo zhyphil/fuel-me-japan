@@ -1,0 +1,31 @@
+{
+  "reviewDate": "2026-10-01",
+  "osmSnapshot": "2026-09-29T20:22:51Z",
+  "overtureRelease": "2026-09-23.1",
+  "inputs": {
+    "osm-rental-full.geojsonseq": {
+      "sha256": "1061fa31642b9c9e1774ffdc45002807a47dcbdb89404bc8354d708b9fb7d033",
+      "bytes": 1252012
+    },
+    "overture-car-rental-full.json": {
+      "sha256": "733771105ab2b4faa1bf4039009496eadeba43ffeae103cef9fa48086e0cf7fc",
+      "bytes": 6848965
+    },
+    "prefecture-boundaries.geojsonseq": {
+      "sha256": "e15a49f84820eed8d5d0e831d18f1965e85b507a0b7433cd6202e78bc1d1af59",
+      "bytes": 14291200
+    },
+    "osm-audit.json": {
+      "sha256": "4b559ac2b61f145ba37bbab3eb4fd7fd5e5108628fd2b230cd88284a6ed70ac6",
+      "bytes": 3584
+    },
+    "overture-inventory.json": {
+      "sha256": "1f9007829c99c8a8fffccd7d2f2f44e6a8769361769ba7da39d2321b5456174d",
+      "bytes": 3073
+    },
+    "reviewed-airports.json": {
+      "sha256": "97d3020ef623c10c0f5cfdcc958f7607d55ba1d6089d447665dc5aab1ce7b160",
+      "bytes": 20505
+    }
+  }
+}

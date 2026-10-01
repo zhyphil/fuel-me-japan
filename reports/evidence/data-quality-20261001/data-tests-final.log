@@ -1,0 +1,90 @@
+test_conditional_attributes_remain_unknown (test_importer.OsmTests.test_conditional_attributes_remain_unknown) ... ok
+test_count_gate_bootstrap_all_partitions_and_manual_reason (test_importer.OsmTests.test_count_gate_bootstrap_all_partitions_and_manual_reason) ... ok
+test_osm_requires_the_available_publisher_checksum (test_importer.OsmTests.test_osm_requires_the_available_publisher_checksum) ... ok
+test_service_never_collapses_mixed_or_conditional_evidence (test_importer.OsmTests.test_service_never_collapses_mixed_or_conditional_evidence) ... ok
+test_typed_dedup_surface_point_unknown_and_repairs (test_importer.OsmTests.test_typed_dedup_surface_point_unknown_and_repairs) ... ok
+test_unknown_mapping_and_conflicting_evidence (test_importer.OsmTests.test_unknown_mapping_and_conflicting_evidence) ... ok
+test_exact_47_by_3_units_dates_and_ignore_kerosene (test_importer.PriceTests.test_exact_47_by_3_units_dates_and_ignore_kerosene) ... ok
+test_failed_import_keeps_manifest_and_registry (test_importer.PriceTests.test_failed_import_keeps_manifest_and_registry) ... ok
+test_failed_pointer_promotion_restores_registry_and_previous_manifest (test_importer.PriceTests.test_failed_pointer_promotion_restores_registry_and_previous_manifest) ... ok
+test_http403_never_replaces_local_or_published_data (test_importer.PriceTests.test_http403_never_replaces_local_or_published_data) ... ok
+test_invalid_headers_missing_prefecture_nonnumeric_and_zero (test_importer.PriceTests.test_invalid_headers_missing_prefecture_nonnumeric_and_zero) ... ok
+test_invalid_workbook_download_keeps_destination_absent (test_importer.PriceTests.test_invalid_workbook_download_keeps_destination_absent) ... ok
+test_schema_missing_duplicate_nan_and_downgrade (test_importer.PriceTests.test_schema_missing_duplicate_nan_and_downgrade) ... ok
+test_source_proof_hash_domain_and_dates (test_importer.PriceTests.test_source_proof_hash_domain_and_dates) ... ok
+test_successful_download_and_same_input_retain_pointers_and_fetched_at (test_importer.PriceTests.test_successful_download_and_same_input_retain_pointers_and_fetched_at) ... ok
+test_unapproved_workbook_paths_are_rejected_before_transport (test_importer.PriceTests.test_unapproved_workbook_paths_are_rejected_before_transport) ... ok
+test_download_failures_keep_pointers_and_never_start_import (test_refresh_sources.RefreshFailureEvidenceTests.test_download_failures_keep_pointers_and_never_start_import) ... Validated workbook saved: /var/folders/x3/4w18d5zd22b9fgwfx232whhr0000gn/T/tmpq3_1rkj0/download.xlsx; run refresh prices to promote
+{
+  "stations": 16454,
+  "prices": 141,
+  "manifestSha256": "a10061440a398beebb737b7a629ea179af785050723dd711623c196d278a0943",
+  "assigned": 16454
+}
+Price input unchanged: no-op
+All input hashes unchanged; pointers and fetchedAt retained
+{"kind": "prices", "sourceUrl": "https://www.enecho.meti.go.jp/statistics/petroleum_and_lpgas/pl007/xlsx/260930.xlsx"}
+BLOCKED: HTTP Error 403: 403. No source substitution and no deployment; retain the published snapshot.
+{"kind": "prices", "sourceUrl": "https://www.enecho.meti.go.jp/statistics/petroleum_and_lpgas/pl007/xlsx/260930.xlsx"}
+BLOCKED: <urlopen error offline interrupted download>. No source substitution and no deployment; retain the published snapshot.
+{"kind": "prices", "sourceUrl": "https://www.enecho.meti.go.jp/statistics/petroleum_and_lpgas/pl007/xlsx/260930.xlsx"}
+BLOCKED: HTTP Error 302: Source redirects are not allowed. No source substitution and no deployment; retain the published snapshot.
+{"kind": "osm", "sourceUrl": "https://download.geofabrik.de/asia/japan-260929.osm.pbf"}
+BLOCKED: HTTP Error 403: 403. No source substitution and no deployment; retain the published snapshot.
+{"kind": "osm", "sourceUrl": "https://download.geofabrik.de/asia/japan-260929.osm.pbf"}
+BLOCKED: <urlopen error offline interrupted download>. No source substitution and no deployment; retain the published snapshot.
+{"kind": "osm", "sourceUrl": "https://download.geofabrik.de/asia/japan-260929.osm.pbf"}
+BLOCKED: HTTP Error 302: Source redirects are not allowed. No source substitution and no deployment; retain the published snapshot.
+ok
+test_index_denial_emits_blocked_report_and_keeps_both_pointers (test_refresh_sources.RefreshFailureEvidenceTests.test_index_denial_emits_blocked_report_and_keeps_both_pointers) ... BLOCKED: HTTP Error 403: 403. No source substitution and no deployment; retain the published snapshot.
+ok
+test_changed_layout_stops_instead_of_guessing_filename (test_refresh_sources.SourceDiscoveryTests.test_changed_layout_stops_instead_of_guessing_filename) ... ok
+test_osm_uses_dated_publisher_link_not_latest_alias_or_future_file (test_refresh_sources.SourceDiscoveryTests.test_osm_uses_dated_publisher_link_not_latest_alias_or_future_file) ... ok
+test_prices_reject_foreign_urls_wrong_dataset_and_invalid_dates (test_refresh_sources.SourceDiscoveryTests.test_prices_reject_foreign_urls_wrong_dataset_and_invalid_dates) ... ok
+test_bad_publisher_checksum_produces_no_proof (test_refresh_sources.SourceDownloadTests.test_bad_publisher_checksum_produces_no_proof) ... ok
+test_direct_downloads_preserve_limits_checksum_and_metadata (test_refresh_sources.SourceDownloadTests.test_direct_downloads_preserve_limits_checksum_and_metadata) ... ok
+test_redirect_target_is_never_requested_for_any_download (test_refresh_sources.SourceDownloadTests.test_redirect_target_is_never_requested_for_any_download) ... ok
+test_unapproved_initial_url_is_rejected_before_transport (test_refresh_sources.SourceDownloadTests.test_unapproved_initial_url_is_rejected_before_transport) ... ok
+test_all_downloads_hashes_counts_and_licenses (test_rental.PublishedRentalTests.test_all_downloads_hashes_counts_and_licenses) ... ok
+test_company_rule_isolation_and_counter_status (test_rental.PublishedRentalTests.test_company_rule_isolation_and_counter_status) ... ok
+test_every_source_accounted_for_and_original_licenses_retained (test_rental.PublishedRentalTests.test_every_source_accounted_for_and_original_licenses_retained) ... ok
+test_new_facilities_use_exact_reviewed_sources_and_phones (test_rental.PublishedRentalTests.test_new_facilities_use_exact_reviewed_sources_and_phones) ... ok
+test_old_times_details_and_all_prior_links_remain_unchanged_or_resolvable (test_rental.PublishedRentalTests.test_old_times_details_and_all_prior_links_remain_unchanged_or_resolvable) ... ok
+test_published_source_inputs_equal_pinned_reviewed_hashes_and_dates (test_rental.PublishedRentalTests.test_published_source_inputs_equal_pinned_reviewed_hashes_and_dates) ... ok
+test_seven_airports_official_evidence_no_entrance_claim (test_rental.PublishedRentalTests.test_seven_airports_official_evidence_no_entrance_claim) ... ok
+test_adjacent_same_company_and_generic_name_not_merged (test_rental.RentalDedupTests.test_adjacent_same_company_and_generic_name_not_merged) ... ok
+test_branch_url_across_times_domains_and_distance (test_rental.RentalDedupTests.test_branch_url_across_times_domains_and_distance) ... ok
+test_brand_does_not_override_branch_name (test_rental.RentalDedupTests.test_brand_does_not_override_branch_name) ... ok
+test_complete_link_prevents_chain_merge (test_rental.RentalDedupTests.test_complete_link_prevents_chain_merge) ... ok
+test_counter_never_merges_into_shop (test_rental.RentalDedupTests.test_counter_never_merges_into_shop) ... ok
+test_different_branch_url_blocks_other_matching_evidence (test_rental.RentalDedupTests.test_different_branch_url_blocks_other_matching_evidence) ... ok
+test_explicit_earth_car_sharing_domain_is_not_a_rental_branch (test_rental.RentalDedupTests.test_explicit_earth_car_sharing_domain_is_not_a_rental_branch) ... ok
+test_homepage_and_shared_toll_free_phone_are_not_identity (test_rental.RentalDedupTests.test_homepage_and_shared_toll_free_phone_are_not_identity) ... ok
+test_missing_coordinates_and_invalid_bounds_fail (test_rental.RentalDedupTests.test_missing_coordinates_and_invalid_bounds_fail) ... ok
+test_nonshared_phone_needs_branch_or_address (test_rental.RentalDedupTests.test_nonshared_phone_needs_branch_or_address) ... ok
+test_official_preserves_existing_ids_and_aliases (test_rental.RentalDedupTests.test_official_preserves_existing_ids_and_aliases) ... ok
+test_osm_same_id_prefers_area_preserves_variants_and_conflicts (test_rental.RentalDedupTests.test_osm_same_id_prefers_area_preserves_variants_and_conflicts) ... ok
+test_overture_category_country_and_language_map (test_rental.RentalDedupTests.test_overture_category_country_and_language_map) ... ok
+test_prototype_pollution_rejected (test_rental.RentalDedupTests.test_prototype_pollution_rejected) ... ok
+test_reviewed_cross_language_source_mapping_is_guarded (test_rental.RentalDedupTests.test_reviewed_cross_language_source_mapping_is_guarded) ... ok
+test_shared_local_phone_different_branches_not_merged (test_rental.RentalDedupTests.test_shared_local_phone_different_branches_not_merged) ... ok
+test_spatial_boundaries_unknown_and_ambiguous (test_rental.RentalDedupTests.test_spatial_boundaries_unknown_and_ambiguous) ... ok
+test_stable_id_after_rename_reorder_and_merge_alias (test_rental.RentalDedupTests.test_stable_id_after_rename_reorder_and_merge_alias) ... ok
+test_support_objects_excluded_and_official_never_upgrades_counter (test_rental.RentalDedupTests.test_support_objects_excluded_and_official_never_upgrades_counter) ... ok
+test_toyota_official_branch_identifiers_ignore_tracking (test_rental.RentalDedupTests.test_toyota_official_branch_identifiers_ignore_tracking) ... ok
+test_final_publication_failure_restores_identity_bytes_and_old_snapshots (test_rental.RentalPublicationTests.test_final_publication_failure_restores_identity_bytes_and_old_snapshots) ... ok
+test_final_publication_failure_restores_missing_identity_with_external_history (test_rental.RentalPublicationTests.test_final_publication_failure_restores_missing_identity_with_external_history) ... ok
+test_first_publication_failure_leaves_both_pointers_absent (test_rental.RentalPublicationTests.test_first_publication_failure_leaves_both_pointers_absent) ... ok
+test_success_and_same_input_keep_version_and_snapshot_bytes (test_rental.RentalPublicationTests.test_success_and_same_input_keep_version_and_snapshot_bytes) ... ok
+test_new_group_distance_still_limited_to_200m (test_rental.ReviewedAirportTests.test_new_group_distance_still_limited_to_200m) ... ok
+test_new_reviewed_keys_are_required_and_guarded (test_rental.ReviewedAirportTests.test_new_reviewed_keys_are_required_and_guarded) ... ok
+test_nippon_branch_urls_match_legacy_mapion_not_homepage (test_rental.ReviewedAirportTests.test_nippon_branch_urls_match_legacy_mapion_not_homepage) ... ok
+test_only_explicit_keys_merge_and_duplicate_ownership_is_rejected (test_rental.ReviewedAirportTests.test_only_explicit_keys_merge_and_duplicate_ownership_is_rejected) ... ok
+test_reviewed_fifteen_rows_with_original_times_dates (test_rental.ReviewedAirportTests.test_reviewed_fifteen_rows_with_original_times_dates) ... ok
+test_snapshot_hash_lock_rejects_changed_bytes_and_changed_osm_date (test_rental.ReviewedAirportTests.test_snapshot_hash_lock_rejects_changed_bytes_and_changed_osm_date) ... ok
+test_unreviewed_contract_changes_are_rejected (test_rental.ReviewedAirportTests.test_unreviewed_contract_changes_are_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 63 tests in 2.990s
+
+OK

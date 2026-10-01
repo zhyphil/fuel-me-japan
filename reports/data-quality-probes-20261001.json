@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-01",
+  "noteZhHans": "仅公开来源访问与文件完整性证据；不含私有邮件附件、网页正文、凭据，也不代表生产发布。",
+  "downloads": [
+    {
+      "name": "prices-index",
+      "url": "https://www.enecho.meti.go.jp/statistics/petroleum_and_lpgas/pl007/results.html",
+      "checkedAt": "2026-10-01T08:47:13.097587+00:00",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "name": "known-price-workbook",
+      "url": "https://www.enecho.meti.go.jp/statistics/petroleum_and_lpgas/pl007/xlsx/260930.xlsx",
+      "checkedAt": "2026-10-01T08:47:13.224334+00:00",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "name": "osm-checksum",
+      "url": "https://download.geofabrik.de/asia/japan-260929.osm.pbf.md5",
+      "checkedAt": "2026-10-01T08:47:13.308050+00:00",
+      "status": 200,
+      "bytes": 55,
+      "sha256": "8a81ac66be3ec217d190ffcc76a85eb6bf7688719b04ae86828380b37b6f1d52",
+      "publishedMD5": "bf5861e1ce700b629c9c471f2e510da4  japan-260929.osm.pbf"
+    }
+  ],
+  "officialPages": [
+    {
+      "name": "nippon-nrt",
+      "url": "https://store.nipponrentacar.co.jp/b/nrs/info/560379/",
+      "finalUrl": "https://store.nipponrentacar.co.jp/b/nrs/info/560379/",
+      "status": 200,
+      "sha256": "5c1bb1d084e648233e3b542b31143b1514d2f48db01b8f99e144b815f3c7687e",
+      "bytes": 28349
+    },
+    {
+      "name": "nippon-hnd",
+      "url": "https://store.nipponrentacar.co.jp/b/nrs/info/512479/",
+      "finalUrl": "https://store.nipponrentacar.co.jp/b/nrs/info/512479/",
+      "status": 200,
+      "sha256": "eea0124f3540257a95545afdfb41d611a0036f83c44d468dff6ecba5506cebd6",
+      "bytes": 28949
+    },
+    {
+      "name": "nippon-kix",
+      "url": "https://store.nipponrentacar.co.jp/b/nrs/info/340902/",
+      "finalUrl": "https://store.nipponrentacar.co.jp/b/nrs/info/340902/",
+      "status": 200,
+      "sha256": "531aad9146684e69cdc62b49703c227e3593be5d131f550437f5bf144d3a9e96",
+      "bytes": 27056
+    },
+    {
+      "name": "nippon-ngo",
+      "url": "https://store.nipponrentacar.co.jp/b/nrs/info/470186/",
+      "finalUrl": "https://store.nipponrentacar.co.jp/b/nrs/info/470186/",
+      "status": 200,
+      "sha256": "69fc8e9519a6831f2194932fafeff32971fb98344bbb4c45a1f3847bb78ed891",
+      "bytes": 23837
+    },
+    {
+      "name": "nippon-cts",
+      "url": "https://store.nipponrentacar.co.jp/b/nrs/info/810034/",
+      "finalUrl": "https://store.nipponrentacar.co.jp/b/nrs/info/810034/",
+      "status": 200,
+      "sha256": "e09ab3d2d1f7ec50dffdeb050a6ac67715c6bce0eb6a77a001f3e9ef0656bf12",
+      "bytes": 27231
+    },
+    {
+      "name": "nippon-fuk",
+      "url": "https://store.nipponrentacar.co.jp/b/nrs/info/011185/",
+      "finalUrl": "https://store.nipponrentacar.co.jp/b/nrs/info/011185/",
+      "status": 200,
+      "sha256": "0534858ba492e92c10f87cb4d9f917206ed71629ebad3afa7e218adc8d98a7eb",
+      "bytes": 28057
+    },
+    {
+      "name": "nippon-oka",
+      "url": "https://store.nipponrentacar.co.jp/b/nrs/info/020660/",
+      "finalUrl": "https://store.nipponrentacar.co.jp/b/nrs/info/020660/",
+      "status": 200,
+      "sha256": "525e33c3eeff2cb588aee5bbc35a5d5081abaf193e7e3f44b184002504f8f043",
+      "bytes": 26736
+    },
+    {
+      "name": "toyota-nrt",
+      "url": "https://rent.toyota.co.jp/shop/detail.aspx?rCode=63601&eCode=035",
+      "finalUrl": "https://rent.toyota.co.jp/shop/detail.aspx?rCode=63601&eCode=035",
+      "status": 200,
+      "sha256": "0db3fa30ba06816fa2bfcffa1a766b5b6798c025d8104b87947e360899f06f10",
+      "bytes": 42757
+    },
+    {
+      "name": "toyota-hnd",
+      "url": "https://rent.toyota.co.jp/shop/detail.aspx?rCode=63601&eCode=06V",
+      "finalUrl": "https://rent.toyota.co.jp/shop/detail.aspx?rCode=63601&eCode=06V",
+      "status": 200,
+      "sha256": "7becd9ed6e53aba41269c55ffb062ed2cf5b921d9eebff07f4febfb20fb100a9",
+      "bytes": 66550
+    },
+    {
+      "name": "toyota-cts",
+      "url": "https://rent.toyota.co.jp/shop/detail.aspx?rCode=61201&eCode=002",
+      "finalUrl": "https://rent.toyota.co.jp/shop/detail.aspx?rCode=61201&eCode=002",
+      "status": 200,
+      "sha256": "f5ee3dff734be220b4044d8f5150b4196e0f793e193bcdffef70ab004a15b8e9",
+      "bytes": 38436
+    },
+    {
+      "name": "toyota-oka",
+      "url": "https://rent.toyota.co.jp/shop/detail.aspx?rCode=69101&eCode=017",
+      "finalUrl": "https://rent.toyota.co.jp/shop/detail.aspx?rCode=69101&eCode=017",
+      "status": 200,
+      "sha256": "79e2bfccffef5fd226834d6ce01659e71f127a150b28a37790e4903fbbbd0ce4",
+      "bytes": 42025
+    },
+    {
+      "name": "toyota-kix",
+      "url": "https://www.r-shinosaka.jp/shop/kansaikukou/",
+      "finalUrl": "https://www.r-shinosaka.jp/shop/kansaikukou/",
+      "status": 200,
+      "sha256": "98efd34495a78ce3022dd17114086ef4e9dbfd3bafdfa27284074854c2d95c9c",
+      "bytes": 64311
+    },
+    {
+      "name": "toyota-ngo",
+      "url": "https://trl-aichi.co.jp/rent/shops/detail/6c17253b533318bf01beb68da475153f8f5d312e.html",
+      "finalUrl": "https://trl-aichi.co.jp/rent/shops/detail/6c17253b533318bf01beb68da475153f8f5d312e.html",
+      "status": 200,
+      "sha256": "8e2a656bba4ce08b261c82667dbafe2963a82435bca0b85ffb6cd0e36dd0e698",
+      "bytes": 54437
+    },
+    {
+      "name": "toyota-fuk",
+      "url": "https://rent.toyota.co.jp/shop/?airport=0074",
+      "finalUrl": "https://rent.toyota.co.jp/shop/?airport=0074",
+      "status": 200,
+      "sha256": "4a59f77da993120e4149b2a22e1b7732d460ee509fcee6231c83abfa33a9b35f",
+      "bytes": 36880
+    }
+  ],
+  "localArtifacts": {
+    "checkedAt": "2026-10-01",
+    "version": "rental-v1-4292016845adde58",
+    "downloads": 59,
+    "mismatches": [],
+    "noteZhHans": "根代理读取全部现有下载产物验证大小与SHA-256；只校验文件完整性，不代表资料事实或生产发布已验收。"
+  }
+}
