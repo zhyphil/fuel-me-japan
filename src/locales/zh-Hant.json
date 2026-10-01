@@ -448,6 +448,13 @@
   "rental.shop.toyota-naha-airport-seaside": "中央官網與經營公司的目前門市頁均列出與根50-132。官網要求還車時使用MAPCODE 33003370*73；請核對預約門市與當天指引。地圖沿用來源參考點，車輛入口未核實。",
   "pageLoadError": "頁面未能載入。請重試；如果仍無法開啟，請重新整理頁面。",
   "pageReload": "重新整理頁面",
-  "aboutAdsPrivacy": "頁面會載入 Google AdSense 程式碼以驗證網站，Google 會接收 IP 位址、來源網站等一般網路資訊。目前廣告請求維持暫停，等待審核及使用者同意設定完成。程式碼載入時，Google 可能讀取其網域下既有的 Cookie；這不表示你已同意個人化廣告。",
-  "aboutAdsPrivacyLink": "Google 如何使用合作網站的資訊"
+  "aboutAdsPrivacy": "頁面會載入 Google AdSense 和同意管理指令碼。Google 會接收 IP 位址、來源網站等一般網路資訊。本站目前仍待審核，廣告請求維持暫停。載入這些指令碼時，Google 可能讀取其網域下既有的 Cookie；這不代表你已同意個人化廣告。",
+  "aboutAdsPrivacyLink": "Google 如何使用合作網站的資訊",
+  "adPrivacyChoices": "隱私選擇",
+  "adPrivacyOpening": "正在開啟 Google 隱私設定…",
+  "adPrivacyUnavailable": "暫時無法開啟 Google 隱私設定，請稍後再試。你仍可繼續使用網站，這不代表同意廣告。",
+  "adPrivacyNotApplicable": "本次造訪不適用 Google 的歐洲同意訊息。資料使用說明請查看本站隱私說明及 Google 政策。",
+  "aboutAdsConsent": "在適用 Google 同意訊息的地區，你可以同意、拒絕或管理選項，並透過「隱私選擇」修改或撤回選擇。Google 可能透過 Cookie 或本機儲存保存你的選擇。本站不會向 Google 廣告傳送裝置的精確位置或用油偏好。網站審核期間，廣告請求繼續暫停。",
+  "adLabel": "廣告",
+  "adLayoutPreview": "廣告版面預覽 · 不傳送廣告請求"
 }

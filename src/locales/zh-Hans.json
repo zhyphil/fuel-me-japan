@@ -448,6 +448,13 @@
   "rental.shop.toyota-naha-airport-seaside": "中央官网和经营公司的当前门店页均列出与根50-132。官网要求还车时使用MAPCODE 33003370*73；请核对预约门店及当天指引。地图沿用来源参考点，车辆入口未核实。",
   "pageLoadError": "页面未能加载。请重试；如果仍无法打开，请刷新页面。",
   "pageReload": "刷新页面",
-  "aboutAdsPrivacy": "页面会加载 Google AdSense 脚本以验证网站，Google 会接收 IP 地址、来源站点等常规网络信息。目前广告请求保持暂停，等待审核及用户同意配置完成。脚本加载时，Google 可能读取其域下已有的 Cookie；这不表示你已同意个性化广告。",
-  "aboutAdsPrivacyLink": "Google 如何使用合作网站的信息"
+  "aboutAdsPrivacy": "页面会加载 Google AdSense 和同意管理脚本。Google 会接收 IP 地址、来源站点等常规网络信息。本站目前仍待审核，广告请求保持暂停。加载这些脚本时，Google 可能读取其域名下已有的 Cookie；这不代表你已同意个性化广告。",
+  "aboutAdsPrivacyLink": "Google 如何使用合作网站的信息",
+  "adPrivacyChoices": "隐私选择",
+  "adPrivacyOpening": "正在打开 Google 隐私设置…",
+  "adPrivacyUnavailable": "暂时无法打开 Google 隐私设置，请稍后重试。你仍可继续使用网站，这不代表同意广告。",
+  "adPrivacyNotApplicable": "本次访问不适用 Google 的欧洲同意消息。数据使用说明请查看本站隐私说明及 Google 政策。",
+  "aboutAdsConsent": "在适用 Google 同意消息的地区，你可以同意、拒绝或管理选项，并通过“隐私选择”修改或撤回选择。Google 可能通过 Cookie 或本地存储保存你的选择。本站不会向 Google 广告传送设备的精确位置或用油偏好。网站审核期间，广告请求继续暂停。",
+  "adLabel": "广告",
+  "adLayoutPreview": "广告布局预览 · 不发送广告请求"
 }

@@ -448,6 +448,13 @@
   "rental.shop.toyota-naha-airport-seaside": "Both current official branch pages list 与根50-132. Toyota specifies MAPCODE 33003370*73 for returns; check your booked branch and the instructions for your return day. The map retains a source reference point; the vehicle entrance has not been verified.",
   "pageLoadError": "This page could not be loaded. Try again, or reload the page if the problem continues.",
   "pageReload": "Reload page",
-  "aboutAdsPrivacy": "Pages load a Google AdSense script for site verification. Google receives normal network information, including your IP address and the referring site. Ad requests are currently paused while review and consent setup are pending. Google may read existing cookies on its domains when the script loads; this does not mean you have agreed to personalized ads.",
-  "aboutAdsPrivacyLink": "How Google uses information from partner sites"
+  "aboutAdsPrivacy": "Pages load Google AdSense and consent scripts. Google receives normal network information, including your IP address and the referring site. Ad requests are currently paused while site review is pending. Google may read existing cookies on its domains when these scripts load; this does not mean you have agreed to personalized ads.",
+  "aboutAdsPrivacyLink": "How Google uses information from partner sites",
+  "adPrivacyChoices": "Privacy choices",
+  "adPrivacyOpening": "Opening Google privacy settings…",
+  "adPrivacyUnavailable": "Google privacy settings are temporarily unavailable. Please try again later. You can still use the site; this does not grant advertising consent.",
+  "adPrivacyNotApplicable": "Google’s European consent message does not apply to this visit. For details about data use, see our privacy information and Google’s policy.",
+  "aboutAdsConsent": "Where Google’s consent message applies, you can consent, refuse or manage your options. Use “Privacy choices” to change or withdraw a choice. Google may store your choice in cookies or local storage. Our site does not pass your device’s precise location or fuel preferences to Google advertising. Ad requests remain paused while the site is under review.",
+  "adLabel": "Advertisement",
+  "adLayoutPreview": "Advertising layout preview · no ad requests"
 }

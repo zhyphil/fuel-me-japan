@@ -5,6 +5,7 @@ import { Icon } from "./components/Icon";
 import { analytics } from "./lib/analytics";
 import { LazyHome, type HomeComponent } from "./components/LazyHome";
 import { MyFuel } from "./components/MyFuel";
+import { PrivacyChoices } from "./components/PrivacyChoices";
 import { About } from "./components/About";
 import { RefuelGuide } from "./components/RefuelGuide";
 import { RentalDirectoryIntro, RentalDirectoryPending } from "./components/RentalDirectoryFrame";
@@ -107,6 +108,7 @@ export function App({ locale: initialLocale, initialRoute, rentalShell = false, 
       {!home && !informationPage && <Suspense fallback={<RentalShell route={route} />}>
         {rentalShell ? <RentalShell route={route} /> : <RentalBusiness route={route} fuel={selectedFuels.length === 1 ? selectedFuels[0] : null} />}
       </Suspense>}
+      {!home && route.kind !== "about" && <footer className="site-privacy-links"><a href={aboutHref(locale)}>{t.aboutPrivacyTitle}</a><PrivacyChoices locale={locale} /></footer>}
     </main>
     {home && myFuelTrigger && <MyFuel locale={locale} fuel={selectedFuels.length === 1 ? selectedFuels[0] : null} onFuelChange={(fuel) => changeFuels([fuel])} trigger={myFuelTrigger} onClose={() => setMyFuelTrigger(null)} />}
   </>;

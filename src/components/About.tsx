@@ -1,6 +1,7 @@
 import { messages, type Locale } from "../i18n";
 import brandSources from "../../public/brands/sources.json";
 import { aboutHref, guideHref, rentalHref } from "../lib/routes";
+import { PrivacyChoices } from "./PrivacyChoices";
 import { Icon, type IconName } from "./Icon";
 
 const contactEmail = "contact@fuel-me-japan.com";
@@ -36,10 +37,10 @@ export function About({ locale }: { locale: Locale }) {
           <li><a href="https://www.enecho.meti.go.jp/statistics/petroleum_and_lpgas/pl007/results.html" target="_blank" rel="noopener noreferrer">{t.aboutPriceSource}</a></li>
         </ul>
       </section>
-      <section className="about-panel" aria-labelledby="about-privacy-title">
+      <section className="about-panel" id="about-privacy" aria-labelledby="about-privacy-title">
         <h2 id="about-privacy-title">{t.aboutPrivacyTitle}</h2><p>{t.aboutPrivacy}</p><p>{t.aboutMapsPrivacy}</p>
         <a className="about-source-link" href="https://osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener noreferrer">{t.aboutMapPrivacyLink}</a>
-        <p>{t.aboutAdsPrivacy}</p>
+        <p>{t.aboutAdsPrivacy}</p><p>{t.aboutAdsConsent}</p><PrivacyChoices locale={locale} />
         <a className="about-source-link" href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">{t.aboutAdsPrivacyLink}</a>
       </section>
     </div>

@@ -1,0 +1,1766 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node@24/24.14.0_1/bin/node",
+      "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/node_modules/.bin/playwright",
+      "test",
+      "--config",
+      "/tmp/fmj-consent-evidence/webkit.config.mts"
+    ],
+    "configFile": "/tmp/fmj-consent-evidence/webkit.config.mts",
+    "rootDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/fmj-consent-evidence/webkit-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "Consent-mobile-WebKit",
+        "name": "Consent-mobile-WebKit",
+        "testDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "ad-privacy.spec.ts",
+          "sticky-header.spec.ts",
+          "station-detail-mobile.spec.ts",
+          "rental-pagination-layout.spec.ts",
+          "mobile-map-height.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/tmp/fmj-consent-evidence/webkit-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 2,
+    "webServer": {
+      "command": "npm run preview -- --port 4188 --strictPort",
+      "cwd": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan",
+      "url": "http://127.0.0.1:4188",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "ad-privacy.spec.ts",
+      "file": "ad-privacy.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "en: visitor can reopen Google's consent message without starting ads",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 560,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:33:56.278Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1878dbf829ba11f198a4-6a8903d0194037928dfc",
+          "file": "ad-privacy.spec.ts",
+          "line": 8,
+          "column": 31
+        },
+        {
+          "title": "zh-Hant: visitor can reopen Google's consent message without starting ads",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 571,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:33:56.278Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1878dbf829ba11f198a4-57a837628441f9530951",
+          "file": "ad-privacy.spec.ts",
+          "line": 8,
+          "column": 31
+        },
+        {
+          "title": "ko: visitor can reopen Google's consent message without starting ads",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 272,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:33:57.256Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1878dbf829ba11f198a4-747ef0df5e37eac4b8ea",
+          "file": "ad-privacy.spec.ts",
+          "line": 8,
+          "column": 31
+        },
+        {
+          "title": "zh-Hans: visitor can reopen Google's consent message without starting ads",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 268,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:33:57.266Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1878dbf829ba11f198a4-2da24b6b3566354dfdb5",
+          "file": "ad-privacy.spec.ts",
+          "line": 8,
+          "column": 31
+        },
+        {
+          "title": "th: visitor can reopen Google's consent message without starting ads",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 281,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:33:57.534Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1878dbf829ba11f198a4-6b85dc43c537c24f36bc",
+          "file": "ad-privacy.spec.ts",
+          "line": 8,
+          "column": 31
+        },
+        {
+          "title": "blocked consent service gives a useful message and does not trap the map or navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 5779,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:33:57.540Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1878dbf829ba11f198a4-e32372cce33cd87a538d",
+          "file": "ad-privacy.spec.ts",
+          "line": 24,
+          "column": 1
+        },
+        {
+          "title": "a late consent callback after timeout cannot unexpectedly reopen a message",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5567,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:33:57.819Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1878dbf829ba11f198a4-92e3a79bf41a943ebab7",
+          "file": "ad-privacy.spec.ts",
+          "line": 36,
+          "column": 1
+        },
+        {
+          "title": "consent bootstrap domain is allowed by production CSP while ad requests stay paused",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 221,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:03.324Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1878dbf829ba11f198a4-df3f968fc4cc896d80ae",
+          "file": "ad-privacy.spec.ts",
+          "line": 48,
+          "column": 1
+        },
+        {
+          "title": "European consent settings report when they do not apply and keep ads paused",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 235,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:03.391Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1878dbf829ba11f198a4-f1433b9a06eb3d4d14bd",
+          "file": "ad-privacy.spec.ts",
+          "line": 66,
+          "column": 1
+        },
+        {
+          "title": "revocation events cannot recursively reopen the consent message",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 249,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:03.549Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1878dbf829ba11f198a4-d865d2b5e4c03ce5ca4f",
+          "file": "ad-privacy.spec.ts",
+          "line": 77,
+          "column": 1
+        },
+        {
+          "title": "production guide has no ad preview, empty slot or ad request even with preview parameters",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 221,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:03.631Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1878dbf829ba11f198a4-a3e86b39f84dfb88347d",
+          "file": "ad-privacy.spec.ts",
+          "line": 95,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "mobile-map-height.spec.ts",
+      "file": "mobile-map-height.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "en: phone map fills spare height after resizing and loading a prefecture",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 419,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:03.805Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a1eeb01b3309d372f6fc-60674181fe1dd91eda85",
+          "file": "mobile-map-height.spec.ts",
+          "line": 29,
+          "column": 31
+        },
+        {
+          "title": "zh-Hant: phone map fills spare height after resizing and loading a prefecture",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 428,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:03.859Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a1eeb01b3309d372f6fc-89678ee5acf7e25f0e8d",
+          "file": "mobile-map-height.spec.ts",
+          "line": 29,
+          "column": 31
+        },
+        {
+          "title": "ko: phone map fills spare height after resizing and loading a prefecture",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 405,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:04.231Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a1eeb01b3309d372f6fc-e4b46291afe77d723aa0",
+          "file": "mobile-map-height.spec.ts",
+          "line": 29,
+          "column": 31
+        },
+        {
+          "title": "zh-Hans: phone map fills spare height after resizing and loading a prefecture",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 425,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:04.291Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a1eeb01b3309d372f6fc-621e76baffcaf79b7f5b",
+          "file": "mobile-map-height.spec.ts",
+          "line": 29,
+          "column": 31
+        },
+        {
+          "title": "th: phone map fills spare height after resizing and loading a prefecture",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 439,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:04.644Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a1eeb01b3309d372f6fc-44ee8cd2dd5d7e6119a3",
+          "file": "mobile-map-height.spec.ts",
+          "line": 29,
+          "column": 31
+        },
+        {
+          "title": "collapsed mobile browser chrome does not leave the small-viewport gap",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "Chromium-only emulation of the small/large viewport difference; WebKit resize cases run separately.",
+                  "location": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/mobile-map-height.spec.ts",
+                    "line": 44,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 139,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:04.720Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Chromium-only emulation of the small/large viewport difference; WebKit resize cases run separately.",
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/mobile-map-height.spec.ts",
+                        "line": 44,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "a1eeb01b3309d372f6fc-af4af49f4c9d071eec07",
+          "file": "mobile-map-height.spec.ts",
+          "line": 43,
+          "column": 1
+        },
+        {
+          "title": "short screens and rotation preserve usable map, controls and expandable data notes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 489,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:04.862Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a1eeb01b3309d372f6fc-71bdf68c91a91bfaae62",
+          "file": "mobile-map-height.spec.ts",
+          "line": 59,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "rental-pagination-layout.spec.ts",
+      "file": "rental-pagination-layout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "en 320px: compact pagination stays aligned on first, middle and last pages",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1282,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:05.090Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "af859ab66fb3e50be512-006634c304b48fbef6f2",
+          "file": "rental-pagination-layout.spec.ts",
+          "line": 30,
+          "column": 3
+        },
+        {
+          "title": "en 430px: compact pagination stays aligned on first, middle and last pages",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1259,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:05.358Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "af859ab66fb3e50be512-4faee0c43a15785b981f",
+          "file": "rental-pagination-layout.spec.ts",
+          "line": 30,
+          "column": 3
+        },
+        {
+          "title": "zh-Hant 320px: compact pagination stays aligned on first, middle and last pages",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1276,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:06.376Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "af859ab66fb3e50be512-3953db1c5fa94585db25",
+          "file": "rental-pagination-layout.spec.ts",
+          "line": 30,
+          "column": 3
+        },
+        {
+          "title": "zh-Hant 430px: compact pagination stays aligned on first, middle and last pages",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1306,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:06.621Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "af859ab66fb3e50be512-04655788df8482ebb6e5",
+          "file": "rental-pagination-layout.spec.ts",
+          "line": 30,
+          "column": 3
+        },
+        {
+          "title": "ko 320px: compact pagination stays aligned on first, middle and last pages",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1337,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:07.656Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "af859ab66fb3e50be512-480ac826a6c52f60388d",
+          "file": "rental-pagination-layout.spec.ts",
+          "line": 30,
+          "column": 3
+        },
+        {
+          "title": "ko 430px: compact pagination stays aligned on first, middle and last pages",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1319,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:07.931Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "af859ab66fb3e50be512-26115a96ec09f56511a0",
+          "file": "rental-pagination-layout.spec.ts",
+          "line": 30,
+          "column": 3
+        },
+        {
+          "title": "zh-Hans 320px: compact pagination stays aligned on first, middle and last pages",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1318,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:08.997Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "af859ab66fb3e50be512-7c0d2384f93e0220c186",
+          "file": "rental-pagination-layout.spec.ts",
+          "line": 30,
+          "column": 3
+        },
+        {
+          "title": "zh-Hans 430px: compact pagination stays aligned on first, middle and last pages",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1282,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:09.253Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "af859ab66fb3e50be512-37d2bd293726556f8969",
+          "file": "rental-pagination-layout.spec.ts",
+          "line": 30,
+          "column": 3
+        },
+        {
+          "title": "th 320px: compact pagination stays aligned on first, middle and last pages",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1300,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:10.318Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "af859ab66fb3e50be512-a6030636a65afd0d54df",
+          "file": "rental-pagination-layout.spec.ts",
+          "line": 30,
+          "column": 3
+        },
+        {
+          "title": "th 430px: compact pagination stays aligned on first, middle and last pages",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1343,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:10.539Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "af859ab66fb3e50be512-10240ff7ef938bb11adb",
+          "file": "rental-pagination-layout.spec.ts",
+          "line": 30,
+          "column": 3
+        },
+        {
+          "title": "shared return-candidate pagination fits 320px without hiding controls",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1110,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:11.623Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "af859ab66fb3e50be512-40c02aa3c791ae11006b",
+          "file": "rental-pagination-layout.spec.ts",
+          "line": 60,
+          "column": 33
+        },
+        {
+          "title": "shared return-candidate pagination fits 430px without hiding controls",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1122,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:11.887Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "af859ab66fb3e50be512-95f76f74ea3372f759e7",
+          "file": "rental-pagination-layout.spec.ts",
+          "line": 60,
+          "column": 33
+        },
+        {
+          "title": "pagination follows the result column width on desktop",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 2237,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:12.739Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "af859ab66fb3e50be512-f70e2f2e1dedb8e5a527",
+          "file": "rental-pagination-layout.spec.ts",
+          "line": 72,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "station-detail-mobile.spec.ts",
+      "file": "station-detail-mobile.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "mobile detail gives readable full-height content at 430px and restores the map",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 712,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:13.020Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "86da11c73ae2c3c849bb-c6f5832428e4097ed135",
+          "file": "station-detail-mobile.spec.ts",
+          "line": 26,
+          "column": 3
+        },
+        {
+          "title": "mobile detail gives readable full-height content at 390px and restores the map",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 690,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:13.736Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "86da11c73ae2c3c849bb-75781b39daaf0fe72be5",
+          "file": "station-detail-mobile.spec.ts",
+          "line": 26,
+          "column": 3
+        },
+        {
+          "title": "mobile detail gives readable full-height content at 320px and restores the map",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 639,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:14.431Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "86da11c73ae2c3c849bb-6f2ea424fc31fbf4ee7d",
+          "file": "station-detail-mobile.spec.ts",
+          "line": 26,
+          "column": 3
+        },
+        {
+          "title": "mobile detail scroll gestures over text and both edges stay inside the panel",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "Native touch injection requires CDP; WebKit layout and keyboard scrolling are covered separately.",
+                  "location": {
+                    "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/station-detail-mobile.spec.ts",
+                    "line": 58,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "skipped",
+                  "duration": 143,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:14.985Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Native touch injection requires CDP; WebKit layout and keyboard scrolling are covered separately.",
+                      "location": {
+                        "file": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/station-detail-mobile.spec.ts",
+                        "line": 58,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "86da11c73ae2c3c849bb-7840b201ad6004ed734c",
+          "file": "station-detail-mobile.spec.ts",
+          "line": 57,
+          "column": 1
+        },
+        {
+          "title": "detail adapts to browser height, landscape and desktop without a stale page lock",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 637,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:15.074Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "86da11c73ae2c3c849bb-d9b47f0fcfd7daf05b38",
+          "file": "station-detail-mobile.spec.ts",
+          "line": 86,
+          "column": 1
+        },
+        {
+          "title": "leaving home via browser history releases the detail overlay and page scroll",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 492,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:15.132Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "86da11c73ae2c3c849bb-ce8331946c29b0189b47",
+          "file": "station-detail-mobile.spec.ts",
+          "line": 108,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "sticky-header.spec.ts",
+      "file": "sticky-header.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "en: language and navigation remain usable after scrolling to the bottom",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 777,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:15.632Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bb6de7ffdf311b0835c6-e7b153ce761fa1bff94e",
+          "file": "sticky-header.spec.ts",
+          "line": 30,
+          "column": 31
+        },
+        {
+          "title": "zh-Hant: language and navigation remain usable after scrolling to the bottom",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 764,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:15.718Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bb6de7ffdf311b0835c6-2bf92cbe3bd99558211e",
+          "file": "sticky-header.spec.ts",
+          "line": 30,
+          "column": 31
+        },
+        {
+          "title": "ko: language and navigation remain usable after scrolling to the bottom",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 747,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:16.413Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bb6de7ffdf311b0835c6-ad55195c0a61669ef048",
+          "file": "sticky-header.spec.ts",
+          "line": 30,
+          "column": 31
+        },
+        {
+          "title": "zh-Hans: language and navigation remain usable after scrolling to the bottom",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 815,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:16.486Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bb6de7ffdf311b0835c6-f21022c724d76de7b493",
+          "file": "sticky-header.spec.ts",
+          "line": 30,
+          "column": 31
+        },
+        {
+          "title": "th: language and navigation remain usable after scrolling to the bottom",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 767,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:17.164Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bb6de7ffdf311b0835c6-10f555fea7f62145336f",
+          "file": "sticky-header.spec.ts",
+          "line": 30,
+          "column": 31
+        },
+        {
+          "title": "320px: header stays pinned across long pages and the map home",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3566,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:17.305Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bb6de7ffdf311b0835c6-5fd1eb71c7de4ca15b3a",
+          "file": "sticky-header.spec.ts",
+          "line": 58,
+          "column": 39
+        },
+        {
+          "title": "430px: header stays pinned across long pages and the map home",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 3585,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:17.936Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bb6de7ffdf311b0835c6-3069ac59c02193ed9d06",
+          "file": "sticky-header.spec.ts",
+          "line": 58,
+          "column": 39
+        },
+        {
+          "title": "1280px: header stays pinned across long pages and the map home",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3580,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:20.875Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bb6de7ffdf311b0835c6-94d6fe41639c403e7d80",
+          "file": "sticky-header.spec.ts",
+          "line": 58,
+          "column": 39
+        },
+        {
+          "title": "sticky map, anchors and responsive header height leave room for the header",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1629,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:21.525Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bb6de7ffdf311b0835c6-35b753c8d61559ee0fce",
+          "file": "sticky-header.spec.ts",
+          "line": 84,
+          "column": 1
+        },
+        {
+          "title": "prerendered header remains pinned without JavaScript",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Consent-mobile-WebKit",
+              "projectName": "Consent-mobile-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 370,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T15:34:23.158Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "bb6de7ffdf311b0835c6-63cd767f01984e31f157",
+          "file": "sticky-header.spec.ts",
+          "line": 105,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-01T15:33:55.572Z",
+    "duration": 28920.804,
+    "expected": 45,
+    "skipped": 2,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

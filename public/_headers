@@ -4,7 +4,7 @@
   Referrer-Policy: strict-origin-when-cross-origin
   X-Frame-Options: DENY
   Permissions-Policy: geolocation=(self), camera=(), microphone=()
-  Content-Security-Policy: default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com https://fundingchoicesmessages.google.com; style-src 'self'; img-src 'self' data: https://tile.openstreetmap.org; connect-src 'self' https://fundingchoicesmessages.google.com; frame-src 'self' https://fundingchoicesmessages.google.com; font-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'
 
 # Candidate details and their data are outside the approved indexed pages.
 /:locale/return-car/:id

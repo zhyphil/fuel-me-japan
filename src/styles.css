@@ -653,3 +653,16 @@ button:disabled { cursor: default; opacity: .6; }
 .brand-credits-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px; padding: 0; list-style: none; }
 .brand-credits-list li { display: grid; align-content: start; gap: 4px; overflow-wrap: anywhere; }
 .brand-credits-list span, .brand-credits-list a { font-size: 13px; }
+
+/* Consent controls stay in document flow, away from map and navigation controls. */
+.privacy-choices { min-width: 0; }
+.privacy-choices p { max-width: 720px; margin: 4px 0 8px; color: var(--muted); font-size: 12px; }
+.site-privacy-links { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 20px; margin-top: 24px; padding: 12px 0 max(12px, env(safe-area-inset-bottom)); border-top: 1px solid var(--line); font-size: 12px; }
+.site-privacy-links > a { display: inline-flex; align-items: center; min-height: 44px; }
+.about-panel:target { scroll-margin-top: calc(var(--site-header-height) + 16px); }
+
+/* A single in-content banner, separated from navigation and safety guidance.
+   Preview is local-development-only while AdSense review is pending. */
+.ad-placement { width: 100%; max-width: 970px; margin: 40px auto 16px; padding-top: 16px; border-top: 1px solid var(--line); }
+.ad-label { margin: 0 0 8px; font-size: 11px; color: var(--muted); text-align: center; }
+.ad-layout-preview { display: grid; place-items: center; min-height: 100px; padding: 16px; border: 1px dashed var(--line); border-radius: 8px; background: var(--white); color: var(--muted); font-size: 12px; text-align: center; }

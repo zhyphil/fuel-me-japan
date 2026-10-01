@@ -1,3 +1,4 @@
+import { PrivacyChoices } from "./PrivacyChoices";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { japaneseLabels, messages, type Locale } from "../i18n";
 import { analytics } from "../lib/analytics";
@@ -313,6 +314,7 @@ export function FindFuel({ active = true, locale, selectedFuels, onChangeFuels: 
     </div>
     {filterTrigger && <StationFilters locale={locale} stations={activeResults} query={query} applied={filters} trigger={filterTrigger} onClose={() => setFilterTrigger(null)} onApply={applyFilters} />}
     <details className="map-notes"><summary>{t.mapAbout}</summary>
+      <PrivacyChoices locale={locale} />
       <p>{t.lmStorageHelp}</p><p>{t.fpHelp}</p><p>{t.fpStorage}</p><button type="button" className="button button-quiet" onClick={onResetFuels}>{t.fpReset}</button><p>{t.fpComparison.replace("{count}", String([...priceViews.values()].filter((view) => view.tone !== "unknown").length))}</p>
       <p>{t.mapOverviewHelp}</p><p>{t.ffFilterHelp}</p><p>{favoritesActive ? t.lmFavoritesHelp : scope === "nearby" ? t.lmStraightLineHelp : t.ffNoDistance}</p>
       <p>{t.ffLocationPrivacy}</p><p>{t.mapPrivacy}</p><p>{t.ffCoverage}</p><p>{t.sourcesBody}</p>

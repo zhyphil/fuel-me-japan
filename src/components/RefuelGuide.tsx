@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { messages, type Locale } from "../i18n";
 import { analytics } from "../lib/analytics";
 import { fieldGuideProvenance, guideFuelLabels, guideLinks, guideMachineLabels, guideSteps } from "../lib/field-guide";
+import { GuideAdPlacement } from "./GuideAdPlacement";
 import { Icon } from "./Icon";
 
 export function RefuelGuide({ locale }: { locale: Locale }) {
@@ -37,6 +38,7 @@ export function RefuelGuide({ locale }: { locale: Locale }) {
         </div>
       </footer>
       <a className="button button-primary refuel-guide-complete" href={`/${locale}/`} onClick={() => analytics.track("refuel_guide_complete", { locale })}>{t.rgComplete}</a>
+      <GuideAdPlacement locale={locale} />
     </div>
   </article>;
 }

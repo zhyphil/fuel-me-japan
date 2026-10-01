@@ -1,0 +1,26 @@
+
+> fuel-me-japan@0.0.0 test:e2e
+> playwright test tests/e2e/ad-privacy.spec.ts --workers=2
+
+[WebServer] (node:3665) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 11 tests using 2 workers
+
+(node:3667) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3666) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/ad-privacy.spec.ts:8:31 › en: visitor can reopen Google's consent message without starting ads (409ms)
+  ✓   2 tests/e2e/ad-privacy.spec.ts:8:31 › zh-Hant: visitor can reopen Google's consent message without starting ads (412ms)
+  ✓   3 tests/e2e/ad-privacy.spec.ts:8:31 › ko: visitor can reopen Google's consent message without starting ads (198ms)
+  ✓   4 tests/e2e/ad-privacy.spec.ts:8:31 › zh-Hans: visitor can reopen Google's consent message without starting ads (219ms)
+  ✓   5 tests/e2e/ad-privacy.spec.ts:8:31 › th: visitor can reopen Google's consent message without starting ads (230ms)
+  ✓   7 tests/e2e/ad-privacy.spec.ts:36:1 › a late consent callback after timeout cannot unexpectedly reopen a message (5.5s)
+  ✓   6 tests/e2e/ad-privacy.spec.ts:24:1 › blocked consent service gives a useful message and does not trap the map or navigation (5.7s)
+  ✓   8 tests/e2e/ad-privacy.spec.ts:48:1 › consent bootstrap domain is allowed by production CSP while ad requests stay paused (179ms)
+  ✓   9 tests/e2e/ad-privacy.spec.ts:66:1 › European consent settings report when they do not apply and keep ads paused (202ms)
+  ✓  10 tests/e2e/ad-privacy.spec.ts:77:1 › revocation events cannot recursively reopen the consent message (207ms)
+  ✓  11 tests/e2e/ad-privacy.spec.ts:95:1 › production guide has no ad preview, empty slot or ad request even with preview parameters (164ms)
+
+  11 passed (7.7s)
