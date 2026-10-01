@@ -1,0 +1,16 @@
+{
+  "site": "fuel-me-japan.com",
+  "publisherId": "pub-8063428584007009",
+  "ownershipVerification": "PASS",
+  "successfulMethod": "META_TAG",
+  "reviewSubmission": "PASS",
+  "reviewOutcome": "PENDING",
+  "adServing": "NOT_ENABLED",
+  "visibleStatus": [
+    "En préparation",
+    "Valider la propriété du site",
+    "Examen demandé",
+    "Votre site est en cours d’examen en vue de diffuser des annonces"
+  ],
+  "note": "浏览器确认所有权与审核请求均为绿色勾选。首次ads.txt验证返回无法验证，改用同批上线的Meta后进入审核。未确认Google广告已展示；广告脚本与CMP尚未启用。"
+}

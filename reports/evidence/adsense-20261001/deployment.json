@@ -1,0 +1,9 @@
+{
+  "Id": "cf8b858b-c6f0-4271-9b8e-cbbfb6fe08a6",
+  "Environment": "Production",
+  "Branch": "main",
+  "Source": "3d29ed4",
+  "Deployment": "https://cf8b858b.fuel-me-japan.pages.dev",
+  "Status": "1 minute ago",
+  "Build": "https://dash.cloudflare.com/4d84d2f73decf12ea381b1896ceeb93a/pages/view/fuel-me-japan/cf8b858b-c6f0-4271-9b8e-cbbfb6fe08a6"
+}

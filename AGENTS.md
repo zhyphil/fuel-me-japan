@@ -155,3 +155,5 @@ Current authorization: **The user has now requested completion of all remaining 
 ## 当前任务：AdSense 站点接入
 
 2026-10-01 用户要求添加 Google 广告，并提供发布者 `pub-8063428584007009` 的 ads.txt 验证截图。本轮按实际后台仍需审核的状态，增加根路径 ads.txt、账户 Meta 与专用审核爬虫许可；保留页面 noindex、现有 CSP 与分析 no-op。按持续约定检查、提交、推送、部署后完成站点验证／请求审核。验证成功不等于获准投放；广告脚本、CMP、广告隐私披露与真实展示须在对应配置及审核完成后另行核实，不得记录为已上线广告。详见 `reports/adsense-setup-20261001.md`。
+
+2026-10-01 验证阶段结果：应用 `3d29ed4`、生产 `cf8b858b`；Google Meta 验证成功，后台已进入审核（两个绿色勾选）。ads.txt 已公开且HTTP检查通过，但首次后台ads.txt验证未被识别，不宣称其后台授权状态已更新。现有运行资源未加载广告；审核结论、广告脚本／布局、CMP与广告隐私说明仍需后续完成及验收。

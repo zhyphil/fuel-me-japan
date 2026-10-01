@@ -1,0 +1,257 @@
+{
+  "checkedAt": "2026-10-01T12:01:23.556673+00:00",
+  "applicationCommit": "3d29ed42e3eea83b64f51d94578ca78520a46670",
+  "deploymentUrl": "https://cf8b858b.fuel-me-japan.pages.dev",
+  "status": "PASS",
+  "checks": [
+    {
+      "url": "https://fuel-me-japan.com/en/about/",
+      "userAgent": "curl",
+      "status": "PASS",
+      "httpStatus": 200,
+      "mime": "text/html; charset=utf-8",
+      "sha256": "245777722dbc5a366b10ed9a541211dfb492d643ef1de7ba6b0f8d3cdf9d1359"
+    },
+    {
+      "url": "https://fuel-me-japan.com/en/",
+      "userAgent": "curl",
+      "status": "PASS",
+      "httpStatus": 200,
+      "mime": "text/html; charset=utf-8",
+      "sha256": "b4607a7bc188164c2b0309c789c989314451c5528cd2cf93630af0d28796ac4e"
+    },
+    {
+      "url": "https://fuel-me-japan.com/en/refuel-guide/",
+      "userAgent": "curl",
+      "status": "PASS",
+      "httpStatus": 200,
+      "mime": "text/html; charset=utf-8",
+      "sha256": "e28aa7b5be8bd6cc34dcbed0331fee3b4c41c5572a2bd223975334d3a03f7288"
+    },
+    {
+      "url": "https://fuel-me-japan.com/en/return-car/",
+      "userAgent": "curl",
+      "status": "PASS",
+      "httpStatus": 200,
+      "mime": "text/html; charset=utf-8",
+      "sha256": "0713cc11134436203bb9f8101f23e1e1b6b89283c8ff7646b10786a038568a35"
+    },
+    {
+      "url": "https://fuel-me-japan.com/",
+      "userAgent": "curl",
+      "status": "PASS",
+      "httpStatus": 200,
+      "mime": "text/html; charset=utf-8",
+      "sha256": "b4607a7bc188164c2b0309c789c989314451c5528cd2cf93630af0d28796ac4e"
+    },
+    {
+      "url": "https://fuel-me-japan.com/ko/about/",
+      "userAgent": "curl",
+      "status": "PASS",
+      "httpStatus": 200,
+      "mime": "text/html; charset=utf-8",
+      "sha256": "ce07b6a70f5bd8948c647370b0f390d0ea48e7c49c3c87696dd8651e1c919b79"
+    },
+    {
+      "url": "https://fuel-me-japan.com/ko/",
+      "userAgent": "curl",
+      "status": "PASS",
+      "httpStatus": 200,
+      "mime": "text/html; charset=utf-8",
+      "sha256": "ee8a09c3810d956392278266a8da5bfd5344bd49f3390d9b255586f485dda8ca"
+    },
+    {
+      "url": "https://fuel-me-japan.com/ko/refuel-guide/",
+      "userAgent": "curl",
+      "status": "PASS",
+      "httpStatus": 200,
+      "mime": "text/html; charset=utf-8",
+      "sha256": "9d7917624ef07743043d6b6b5257c6eab00c7a0404443fa0d1c57e79c45817d9"
+    },
+    {
+      "url": "https://fuel-me-japan.com/ko/return-car/",
+      "userAgent": "curl",
+      "status": "PASS",
+      "httpStatus": 200,
+      "mime": "text/html; charset=utf-8",
+      "sha256": "4e93c282c1025bb9fdeb15fe962ba03a7e57bbc5c3df1703592207065fa2abb4"
+    },
+    {
+      "url": "https://fuel-me-japan.com/th/about/",
+      "userAgent": "curl",
+      "status": "PASS",
+      "httpStatus": 200,
+      "mime": "text/html; charset=utf-8",
+      "sha256": "27d6b2cf9e99ae448c10605b30631307958f11bb0b42fcb6d5669eceba663247"
+    },
+    {
+      "url": "https://fuel-me-japan.com/th/",
+      "userAgent": "curl",
+      "status": "PASS",
+      "httpStatus": 200,
+      "mime": "text/html; charset=utf-8",
+      "sha256": "0136fed5c6e6cdf54f0e4ba2e7707db9606af77612a93106d6231e6c1985c3ea"
+    },
+    {
+      "url": "https://fuel-me-japan.com/th/refuel-guide/",
+      "userAgent": "curl",
+      "status": "PASS",
+      "httpStatus": 200,
+      "mime": "text/html; charset=utf-8",
+      "sha256": "2e1b589bad4caff4b4abb6a85bbe615893e7dcbcc8b5fd3ea78cb318bc36e651"
+    },
+    {
+      "url": "https://fuel-me-japan.com/th/return-car/",
+      "userAgent": "curl",
+      "status": "PASS",
+      "httpStatus": 200,
+      "mime": "text/html; charset=utf-8",
+      "sha256": "32e5341a53e8d6765e2eff0a383bbefaa4b7549135a118390f0f8f8029997862"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hans/about/",
+      "userAgent": "curl",
+      "status": "PASS",
+      "httpStatus": 200,
+      "mime": "text/html; charset=utf-8",
+      "sha256": "5142fabb9349aa3807f3f5b9e20735cb3c10cac8fab4aacf67206e39f83bc50b"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hans/",
+      "userAgent": "curl",
+      "status": "PASS",
+      "httpStatus": 200,
+      "mime": "text/html; charset=utf-8",
+      "sha256": "bcd00f437af9aa2111dc1af4b20fcd66a2de3116b5e40abce32c2674cbb01534"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hans/refuel-guide/",
+      "userAgent": "curl",
+      "status": "PASS",
+      "httpStatus": 200,
+      "mime": "text/html; charset=utf-8",
+      "sha256": "abfdf3c501c92c62c62aa9bcda116873bc7e89c17a9b6fa3354a97107b91c0b6"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hans/return-car/",
+      "userAgent": "curl",
+      "status": "PASS",
+      "httpStatus": 200,
+      "mime": "text/html; charset=utf-8",
+      "sha256": "4d71251ad3eeb398897ea85c4895ac006f8e7bedd90d9ea61bee7fb5504876d0"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hant/about/",
+      "userAgent": "curl",
+      "status": "PASS",
+      "httpStatus": 200,
+      "mime": "text/html; charset=utf-8",
+      "sha256": "cbf4dc7177a0299ce954cdd7616c870b598be078fd740964888c02da57944942"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hant/",
+      "userAgent": "curl",
+      "status": "PASS",
+      "httpStatus": 200,
+      "mime": "text/html; charset=utf-8",
+      "sha256": "9ac1404304458c09f0469f81c3fa05ae404f274356e1a6ff3fcc13cc701ec488"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hant/refuel-guide/",
+      "userAgent": "curl",
+      "status": "PASS",
+      "httpStatus": 200,
+      "mime": "text/html; charset=utf-8",
+      "sha256": "f819ff2b74f668ac1ea8320e6724438b41a1114e633126ed80ec29b17beacf97"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hant/return-car/",
+      "userAgent": "curl",
+      "status": "PASS",
+      "httpStatus": 200,
+      "mime": "text/html; charset=utf-8",
+      "sha256": "e8724543347121637a1b5fcc10f5a2aa5075062c77375b6c3a02785df6109b9f"
+    },
+    {
+      "url": "https://fuel-me-japan.com/ads.txt",
+      "userAgent": "curl",
+      "status": "PASS",
+      "httpStatus": 200,
+      "mime": "text/plain; charset=utf-8",
+      "sha256": "167521f9f95b76e7071d6e244f4db5e56f41539a20ae6a38dc16e1e7041f5e9b"
+    },
+    {
+      "url": "https://fuel-me-japan.com/robots.txt",
+      "userAgent": "curl",
+      "status": "PASS",
+      "httpStatus": 200,
+      "mime": "text/plain; charset=utf-8",
+      "sha256": "042912dc57e8e4cd247ab8e3365579b38eab4f68a2c40202c0b6fd0108026295"
+    },
+    {
+      "url": "https://fuel-me-japan.com/build-provenance.json",
+      "userAgent": "curl",
+      "status": "PASS",
+      "httpStatus": 200,
+      "mime": "application/json",
+      "sha256": "1439aff01551a3409df92f27d797fa4a07ba79564733935cd51919e9159aa546"
+    },
+    {
+      "url": "https://fuel-me-japan.com/en/return-car/toyota-naha-airport-seaside/",
+      "userAgent": "curl",
+      "status": "PASS",
+      "httpStatus": 200,
+      "mime": "text/html; charset=utf-8",
+      "sha256": "0713cc11134436203bb9f8101f23e1e1b6b89283c8ff7646b10786a038568a35"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hant/return-car/toyota-naha-airport-seaside/",
+      "userAgent": "curl",
+      "status": "PASS",
+      "httpStatus": 200,
+      "mime": "text/html; charset=utf-8",
+      "sha256": "e8724543347121637a1b5fcc10f5a2aa5075062c77375b6c3a02785df6109b9f"
+    },
+    {
+      "url": "https://fuel-me-japan.com/ko/return-car/toyota-naha-airport-seaside/",
+      "userAgent": "curl",
+      "status": "PASS",
+      "httpStatus": 200,
+      "mime": "text/html; charset=utf-8",
+      "sha256": "4e93c282c1025bb9fdeb15fe962ba03a7e57bbc5c3df1703592207065fa2abb4"
+    },
+    {
+      "url": "https://fuel-me-japan.com/zh-Hans/return-car/toyota-naha-airport-seaside/",
+      "userAgent": "curl",
+      "status": "PASS",
+      "httpStatus": 200,
+      "mime": "text/html; charset=utf-8",
+      "sha256": "4d71251ad3eeb398897ea85c4895ac006f8e7bedd90d9ea61bee7fb5504876d0"
+    },
+    {
+      "url": "https://fuel-me-japan.com/th/return-car/toyota-naha-airport-seaside/",
+      "userAgent": "curl",
+      "status": "PASS",
+      "httpStatus": 200,
+      "mime": "text/html; charset=utf-8",
+      "sha256": "32e5341a53e8d6765e2eff0a383bbefaa4b7549135a118390f0f8f8029997862"
+    },
+    {
+      "url": "https://fuel-me-japan.com/ads.txt",
+      "userAgent": "Mediapartners-Google",
+      "status": "PASS",
+      "httpStatus": 200,
+      "mime": "text/plain; charset=utf-8",
+      "sha256": "167521f9f95b76e7071d6e244f4db5e56f41539a20ae6a38dc16e1e7041f5e9b"
+    },
+    {
+      "url": "https://fuel-me-japan.com/ads.txt",
+      "userAgent": "Google-Display-Ads-Bot",
+      "status": "PASS",
+      "httpStatus": 200,
+      "mime": "text/plain; charset=utf-8",
+      "sha256": "167521f9f95b76e7071d6e244f4db5e56f41539a20ae6a38dc16e1e7041f5e9b"
+    }
+  ],
+  "note": "31项正式域名HTTP与内容指纹通过，包括21份页面、五语言深层路由、ads.txt、robots和构建来源；两个审核爬虫User-Agent均可获取ads.txt。"
+}
