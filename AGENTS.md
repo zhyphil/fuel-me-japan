@@ -104,3 +104,5 @@ Current authorization: **The user has now requested completion of all remaining 
 ## 最新授权：加载修复发布后暂停
 
 2026-10-01 用户明确要求“都修改好的时候，就commit push部署，然后做完就休息先”。允许提交、推送并部署已经完成的还车目录加载状态和布局稳定修复及其五语言文案、检查与报告。沿用既有 GitHub 仓库、Cloudflare Pages 生产项目及正式域名；完成线上验收和中文发布报告后停止，不自动继续新任务。
+
+2026-10-01 本次发布已完成：应用 `02fff4b`，生产部署 `6504d838`；180 项线上资源与实际浏览器检查通过，详见 `reports/rental-loading-release.md`。用户要求做完后休息，当前停止后续工作，等待新的明确要求。

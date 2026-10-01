@@ -1,0 +1,1659 @@
+{
+  "checkedAt": "2026-10-01T00:27:17.727352+00:00",
+  "productionUrl": "https://fuel-me-japan.com",
+  "applicationCommit": "02fff4bd93ba82afd07ddedeb62d0f1237134b65",
+  "note": "逐一读取正式域名资源，比较 HTTP 状态与本地已验收构建的 SHA-256；包含 5 种语言的门店详情深层地址。",
+  "checked": 180,
+  "passed": 180,
+  "failed": 0,
+  "bytes": 27519206,
+  "status": "PASS",
+  "results": [
+    {
+      "route": "/",
+      "localFile": "index.html",
+      "httpStatus": 200,
+      "sha256": "373b9564b3347906c4f659c1ed4d472789e9f845a0ed1101a046cd782ce748ef",
+      "expectedSha256": "373b9564b3347906c4f659c1ed4d472789e9f845a0ed1101a046cd782ce748ef",
+      "status": "PASS",
+      "bytes": 13064,
+      "xRobotsTag": []
+    },
+    {
+      "route": "/build-provenance.json",
+      "localFile": "build-provenance.json",
+      "httpStatus": 200,
+      "sha256": "398b960837f6f6faafd297acfe8ee81717472e922557bbaff9f733f7970a5350",
+      "expectedSha256": "398b960837f6f6faafd297acfe8ee81717472e922557bbaff9f733f7970a5350",
+      "status": "PASS",
+      "bytes": 2814
+    },
+    {
+      "route": "/runtime-map-provider.json",
+      "localFile": "runtime-map-provider.json",
+      "httpStatus": 200,
+      "sha256": "5f5b86a46a83a22dfa345fab478e98c359271bdb3e68aa90868c7a19461ae20e",
+      "expectedSha256": "5f5b86a46a83a22dfa345fab478e98c359271bdb3e68aa90868c7a19461ae20e",
+      "status": "PASS",
+      "bytes": 1297
+    },
+    {
+      "route": "/robots.txt",
+      "localFile": "robots.txt",
+      "httpStatus": 200,
+      "sha256": "331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1",
+      "expectedSha256": "331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1",
+      "status": "PASS",
+      "bytes": 26
+    },
+    {
+      "route": "/favicon.svg",
+      "localFile": "favicon.svg",
+      "httpStatus": 200,
+      "sha256": "762aa74e64d0ae226f0a2e43d8bdeee2bd7aab828aa6ed26e9bdf8376e91193d",
+      "expectedSha256": "762aa74e64d0ae226f0a2e43d8bdeee2bd7aab828aa6ed26e9bdf8376e91193d",
+      "status": "PASS",
+      "bytes": 267
+    },
+    {
+      "route": "/zh-Hans/",
+      "localFile": "zh-Hans/index.html",
+      "httpStatus": 200,
+      "sha256": "85be792b7b8947bd675c1999dc1abdd6d70259c1ec0f72f41cd7c2d7a2aa3763",
+      "expectedSha256": "85be792b7b8947bd675c1999dc1abdd6d70259c1ec0f72f41cd7c2d7a2aa3763",
+      "status": "PASS",
+      "bytes": 12786,
+      "xRobotsTag": []
+    },
+    {
+      "route": "/zh-Hant/",
+      "localFile": "zh-Hant/index.html",
+      "httpStatus": 200,
+      "sha256": "97e4671263265ab8666d4f9ae3366b3a3cc9b938fb6f0d52f5e3b2866dc499af",
+      "expectedSha256": "97e4671263265ab8666d4f9ae3366b3a3cc9b938fb6f0d52f5e3b2866dc499af",
+      "status": "PASS",
+      "bytes": 12793,
+      "xRobotsTag": []
+    },
+    {
+      "route": "/brands/kirkland.svg",
+      "localFile": "brands/kirkland.svg",
+      "httpStatus": 200,
+      "sha256": "61ba175f2251a524021a83a1ae691755c493216354d1676f0b3d6b203fbc922c",
+      "expectedSha256": "61ba175f2251a524021a83a1ae691755c493216354d1676f0b3d6b203fbc922c",
+      "status": "PASS",
+      "bytes": 21047
+    },
+    {
+      "route": "/brands/sources.json",
+      "localFile": "brands/sources.json",
+      "httpStatus": 200,
+      "sha256": "900b9b5d6e85c359087dd2743956de7d17785d785c130c42e067ce4749be59a6",
+      "expectedSha256": "900b9b5d6e85c359087dd2743956de7d17785d785c130c42e067ce4749be59a6",
+      "status": "PASS",
+      "bytes": 19170
+    },
+    {
+      "route": "/brands/iwatani.png",
+      "localFile": "brands/iwatani.png",
+      "httpStatus": 200,
+      "sha256": "f4856b3fa2301287d83a355c6a6ef8bff5fc7e8d54c8a7e28df2a57c33020dec",
+      "expectedSha256": "f4856b3fa2301287d83a355c6a6ef8bff5fc7e8d54c8a7e28df2a57c33020dec",
+      "status": "PASS",
+      "bytes": 50180
+    },
+    {
+      "route": "/brands/mobil.svg",
+      "localFile": "brands/mobil.svg",
+      "httpStatus": 200,
+      "sha256": "7cf59d7a456b01fb8ecae16201b714fc4cd1d06aa22eef9116ecd77cab23e7ec",
+      "expectedSha256": "7cf59d7a456b01fb8ecae16201b714fc4cd1d06aa22eef9116ecd77cab23e7ec",
+      "status": "PASS",
+      "bytes": 1578
+    },
+    {
+      "route": "/brands/eneos-symbol.svg",
+      "localFile": "brands/eneos-symbol.svg",
+      "httpStatus": 200,
+      "sha256": "cd6ed201e64afc02fbc4a953d747ce5a62c1215e946fe11d5a680506c926f2a2",
+      "expectedSha256": "cd6ed201e64afc02fbc4a953d747ce5a62c1215e946fe11d5a680506c926f2a2",
+      "status": "PASS",
+      "bytes": 48310
+    },
+    {
+      "route": "/brands/ja.svg",
+      "localFile": "brands/ja.svg",
+      "httpStatus": 200,
+      "sha256": "4ff389db3c46960db9e007040a57b644b51e08474780fdf8c1e0394594da0681",
+      "expectedSha256": "4ff389db3c46960db9e007040a57b644b51e08474780fdf8c1e0394594da0681",
+      "status": "PASS",
+      "bytes": 422
+    },
+    {
+      "route": "/brands/hokuren.svg",
+      "localFile": "brands/hokuren.svg",
+      "httpStatus": 200,
+      "sha256": "5bc0b16d7ee47f3a2c8ee7bad601d11da0e517b6930347ab9699eaa91c0fcb49",
+      "expectedSha256": "5bc0b16d7ee47f3a2c8ee7bad601d11da0e517b6930347ab9699eaa91c0fcb49",
+      "status": "PASS",
+      "bytes": 1442
+    },
+    {
+      "route": "/brands/esso.svg",
+      "localFile": "brands/esso.svg",
+      "httpStatus": 200,
+      "sha256": "980c40440046cdaa32707a70a3129dfa9fb96dd3061798c8801edc386281f286",
+      "expectedSha256": "980c40440046cdaa32707a70a3129dfa9fb96dd3061798c8801edc386281f286",
+      "status": "PASS",
+      "bytes": 5531
+    },
+    {
+      "route": "/brands/eneos.svg",
+      "localFile": "brands/eneos.svg",
+      "httpStatus": 200,
+      "sha256": "34bf2fb977e3778b5ac7c4e8e1a905a980d1eaee3f6de07cf3ef72467a44d52a",
+      "expectedSha256": "34bf2fb977e3778b5ac7c4e8e1a905a980d1eaee3f6de07cf3ef72467a44d52a",
+      "status": "PASS",
+      "bytes": 66794
+    },
+    {
+      "route": "/brands/lawson.svg",
+      "localFile": "brands/lawson.svg",
+      "httpStatus": 200,
+      "sha256": "053ee3b152dea6c3ead82e3b4f681275c9f695618183c3b93b310fab481a9cdb",
+      "expectedSha256": "053ee3b152dea6c3ead82e3b4f681275c9f695618183c3b93b310fab481a9cdb",
+      "status": "PASS",
+      "bytes": 7935
+    },
+    {
+      "route": "/brands/fuel-pump.svg",
+      "localFile": "brands/fuel-pump.svg",
+      "httpStatus": 200,
+      "sha256": "feece4dc13aae4369168c3f190ef667e9f9b294cfad7e1df45b0fd212e90c2fd",
+      "expectedSha256": "feece4dc13aae4369168c3f190ef667e9f9b294cfad7e1df45b0fd212e90c2fd",
+      "status": "PASS",
+      "bytes": 259
+    },
+    {
+      "route": "/brands/cosmo-symbol.svg",
+      "localFile": "brands/cosmo-symbol.svg",
+      "httpStatus": 200,
+      "sha256": "24c101c993663ed7abbc7e9b8892c4a03f6fc0458b5b761eddd698c84af5f065",
+      "expectedSha256": "24c101c993663ed7abbc7e9b8892c4a03f6fc0458b5b761eddd698c84af5f065",
+      "status": "PASS",
+      "bytes": 2497
+    },
+    {
+      "route": "/brands/idemitsu.svg",
+      "localFile": "brands/idemitsu.svg",
+      "httpStatus": 200,
+      "sha256": "3cd02f7be450e3a446e331c18b6f577500377a58680f8688e8df5d6dd2a21854",
+      "expectedSha256": "3cd02f7be450e3a446e331c18b6f577500377a58680f8688e8df5d6dd2a21854",
+      "status": "PASS",
+      "bytes": 3450
+    },
+    {
+      "route": "/brands/inpex.svg",
+      "localFile": "brands/inpex.svg",
+      "httpStatus": 200,
+      "sha256": "31d56f2e381d4d46217c91ab944e78f7b22879f083eb81029b182c5a9740b29c",
+      "expectedSha256": "31d56f2e381d4d46217c91ab944e78f7b22879f083eb81029b182c5a9740b29c",
+      "status": "PASS",
+      "bytes": 1656
+    },
+    {
+      "route": "/brands/costco.svg",
+      "localFile": "brands/costco.svg",
+      "httpStatus": 200,
+      "sha256": "9c769076aaad8c2cf16a888dee9326df7e67c4cf350fab0574209366e1fb61ac",
+      "expectedSha256": "9c769076aaad8c2cf16a888dee9326df7e67c4cf350fab0574209366e1fb61ac",
+      "status": "PASS",
+      "bytes": 7574
+    },
+    {
+      "route": "/brands/seven-eleven.svg",
+      "localFile": "brands/seven-eleven.svg",
+      "httpStatus": 200,
+      "sha256": "73afaaf71535251cbb57e5c97c146a7861f2ecf40149211f0b9fb2925c9bf5ad",
+      "expectedSha256": "73afaaf71535251cbb57e5c97c146a7861f2ecf40149211f0b9fb2925c9bf5ad",
+      "status": "PASS",
+      "bytes": 5550
+    },
+    {
+      "route": "/brands/tokyo-gas.svg",
+      "localFile": "brands/tokyo-gas.svg",
+      "httpStatus": 200,
+      "sha256": "f39810ff3d4f55bdd2a6257a4ad28868aa500916dcb68ebdc7216227e4cc26ae",
+      "expectedSha256": "f39810ff3d4f55bdd2a6257a4ad28868aa500916dcb68ebdc7216227e4cc26ae",
+      "status": "PASS",
+      "bytes": 2578
+    },
+    {
+      "route": "/brands/cosmo.svg",
+      "localFile": "brands/cosmo.svg",
+      "httpStatus": 200,
+      "sha256": "78a5b3920f15cfefe0edd95284a9bb48dc5c7981707776e8ae5e0aed94aa0562",
+      "expectedSha256": "78a5b3920f15cfefe0edd95284a9bb48dc5c7981707776e8ae5e0aed94aa0562",
+      "status": "PASS",
+      "bytes": 8871
+    },
+    {
+      "route": "/field-guides/refuel-sources.json",
+      "localFile": "field-guides/refuel-sources.json",
+      "httpStatus": 200,
+      "sha256": "d79a9b938a423175fe3168bcf760994b205d0e08bf8ec892de5ee720af150c34",
+      "expectedSha256": "d79a9b938a423175fe3168bcf760994b205d0e08bf8ec892de5ee720af150c34",
+      "status": "PASS",
+      "bytes": 4750
+    },
+    {
+      "route": "/icons/rental-car.svg",
+      "localFile": "icons/rental-car.svg",
+      "httpStatus": 200,
+      "sha256": "c94b540a6bbee6dc1150dc038f1f8b7eba482991b22aa263a9049e350353d89b",
+      "expectedSha256": "c94b540a6bbee6dc1150dc038f1f8b7eba482991b22aa263a9049e350353d89b",
+      "status": "PASS",
+      "bytes": 288
+    },
+    {
+      "route": "/ko/",
+      "localFile": "ko/index.html",
+      "httpStatus": 200,
+      "sha256": "8f9ba4224c829e617535c3c17f5d980ddda0ad79b34b9f837abb30e771350348",
+      "expectedSha256": "8f9ba4224c829e617535c3c17f5d980ddda0ad79b34b9f837abb30e771350348",
+      "status": "PASS",
+      "bytes": 13930,
+      "xRobotsTag": []
+    },
+    {
+      "route": "/en/",
+      "localFile": "en/index.html",
+      "httpStatus": 200,
+      "sha256": "373b9564b3347906c4f659c1ed4d472789e9f845a0ed1101a046cd782ce748ef",
+      "expectedSha256": "373b9564b3347906c4f659c1ed4d472789e9f845a0ed1101a046cd782ce748ef",
+      "status": "PASS",
+      "bytes": 13064,
+      "xRobotsTag": []
+    },
+    {
+      "route": "/data/.import.lock",
+      "localFile": "data/.import.lock",
+      "httpStatus": 200,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expectedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "PASS",
+      "bytes": 0
+    },
+    {
+      "route": "/data/source-registry.json",
+      "localFile": "data/source-registry.json",
+      "httpStatus": 200,
+      "sha256": "3ad895fc107a0ce94271817df97de8f6de23c43e8a222b1a594a37a5f6459a5b",
+      "expectedSha256": "3ad895fc107a0ce94271817df97de8f6de23c43e8a222b1a594a37a5f6459a5b",
+      "status": "PASS",
+      "bytes": 5783
+    },
+    {
+      "route": "/data/manifest.json",
+      "localFile": "data/manifest.json",
+      "httpStatus": 200,
+      "sha256": "334ce4620b9e85751876aa427b0d958eb8410d89af0bfb4fa488b2737869693d",
+      "expectedSha256": "334ce4620b9e85751876aa427b0d958eb8410d89af0bfb4fa488b2737869693d",
+      "status": "PASS",
+      "bytes": 23863
+    },
+    {
+      "route": "/data/OSM-NOTICE.txt",
+      "localFile": "data/OSM-NOTICE.txt",
+      "httpStatus": 200,
+      "sha256": "323d834a526942743a397f8cacb9f51a16550952c2bbe71ea640cc5ea2063c75",
+      "expectedSha256": "323d834a526942743a397f8cacb9f51a16550952c2bbe71ea640cc5ea2063c75",
+      "status": "PASS",
+      "bytes": 1320
+    },
+    {
+      "route": "/assets/index-BI7lR7RJ.css",
+      "localFile": "assets/index-BI7lR7RJ.css",
+      "httpStatus": 200,
+      "sha256": "66897b0018a627d82977b370a9c30367a759830ed02d8acbc3adc59fccb964dc",
+      "expectedSha256": "66897b0018a627d82977b370a9c30367a759830ed02d8acbc3adc59fccb964dc",
+      "status": "PASS",
+      "bytes": 63309
+    },
+    {
+      "route": "/assets/RentalBusiness-C8cChS5u.js",
+      "localFile": "assets/RentalBusiness-C8cChS5u.js",
+      "httpStatus": 200,
+      "sha256": "3d5c3a109bdb7c9a6db271932069dc299d9577e5d5a80b8b15e3ff69a8c8288f",
+      "expectedSha256": "3d5c3a109bdb7c9a6db271932069dc299d9577e5d5a80b8b15e3ff69a8c8288f",
+      "status": "PASS",
+      "bytes": 47861
+    },
+    {
+      "route": "/assets/rolldown-runtime-CbXtAM7H.js",
+      "localFile": "assets/rolldown-runtime-CbXtAM7H.js",
+      "httpStatus": 200,
+      "sha256": "bbf7c5086ae414dc3f33777e3eebf16ea8631325b8bb4690d25091c03567f31a",
+      "expectedSha256": "bbf7c5086ae414dc3f33777e3eebf16ea8631325b8bb4690d25091c03567f31a",
+      "status": "PASS",
+      "bytes": 589
+    },
+    {
+      "route": "/assets/index-Cze8kQbG.js",
+      "localFile": "assets/index-Cze8kQbG.js",
+      "httpStatus": 200,
+      "sha256": "5094f7cf21212c3fe2a7c466422864724e6cfcead647960bfe51c41770534a9c",
+      "expectedSha256": "5094f7cf21212c3fe2a7c466422864724e6cfcead647960bfe51c41770534a9c",
+      "status": "PASS",
+      "bytes": 523846
+    },
+    {
+      "route": "/assets/source-registry-D5z2JKpG.js",
+      "localFile": "assets/source-registry-D5z2JKpG.js",
+      "httpStatus": 200,
+      "sha256": "3627f667f6e5ab0dcd5f0a6e61aff3e0d5a512ff6e8a5df90f6149ea7fc4253d",
+      "expectedSha256": "3627f667f6e5ab0dcd5f0a6e61aff3e0d5a512ff6e8a5df90f6149ea7fc4253d",
+      "status": "PASS",
+      "bytes": 2893
+    },
+    {
+      "route": "/assets/leaflet-src-BF0sg77Q.js",
+      "localFile": "assets/leaflet-src-BF0sg77Q.js",
+      "httpStatus": 200,
+      "sha256": "be5f2e53cedfed275f96af7dceb4fdb7fb0a1f9a4ae967a9e9ae6efa4ec5f38b",
+      "expectedSha256": "be5f2e53cedfed275f96af7dceb4fdb7fb0a1f9a4ae967a9e9ae6efa4ec5f38b",
+      "status": "PASS",
+      "bytes": 148742
+    },
+    {
+      "route": "/th/",
+      "localFile": "th/index.html",
+      "httpStatus": 200,
+      "sha256": "7012933a77a1f204ca410321ac8b293993e4b242141846e72148d9fc2660609b",
+      "expectedSha256": "7012933a77a1f204ca410321ac8b293993e4b242141846e72148d9fc2660609b",
+      "status": "PASS",
+      "bytes": 18138,
+      "xRobotsTag": []
+    },
+    {
+      "route": "/th/about/",
+      "localFile": "th/about/index.html",
+      "httpStatus": 200,
+      "sha256": "e2b1d7cc7caf9c1502338a8cb7c03de605e1299a630cadd30a0f587ad957ae69",
+      "expectedSha256": "e2b1d7cc7caf9c1502338a8cb7c03de605e1299a630cadd30a0f587ad957ae69",
+      "status": "PASS",
+      "bytes": 20503,
+      "xRobotsTag": []
+    },
+    {
+      "route": "/th/refuel-guide/",
+      "localFile": "th/refuel-guide/index.html",
+      "httpStatus": 200,
+      "sha256": "dccaa56261834c257eb6d0d9ea52c96d5716f714a295a3b173affc4930962783",
+      "expectedSha256": "dccaa56261834c257eb6d0d9ea52c96d5716f714a295a3b173affc4930962783",
+      "status": "PASS",
+      "bytes": 10035,
+      "xRobotsTag": []
+    },
+    {
+      "route": "/th/return-car/",
+      "localFile": "th/return-car/index.html",
+      "httpStatus": 200,
+      "sha256": "ce1d6f90d84a0420b9fa5b9e78d59a439f35c79f4bcf0659b0260389ee43b040",
+      "expectedSha256": "ce1d6f90d84a0420b9fa5b9e78d59a439f35c79f4bcf0659b0260389ee43b040",
+      "status": "PASS",
+      "bytes": 9103,
+      "xRobotsTag": []
+    },
+    {
+      "route": "/data/rental/locations.json",
+      "localFile": "data/rental/locations.json",
+      "httpStatus": 200,
+      "sha256": "7939d345ce3c6c211e9ab895077626de1a7412b12d2ecbfb569664e0bbaddbf4",
+      "expectedSha256": "7939d345ce3c6c211e9ab895077626de1a7412b12d2ecbfb569664e0bbaddbf4",
+      "status": "PASS",
+      "bytes": 4518
+    },
+    {
+      "route": "/data/rental/NOTICE.txt",
+      "localFile": "data/rental/NOTICE.txt",
+      "httpStatus": 200,
+      "sha256": "2f11ed0065df2d2b4f1604565fff02172d6f2cc0ec0dd4c10e9324a0b0402c17",
+      "expectedSha256": "2f11ed0065df2d2b4f1604565fff02172d6f2cc0ec0dd4c10e9324a0b0402c17",
+      "status": "PASS",
+      "bytes": 1578
+    },
+    {
+      "route": "/data/schemas/price-file.schema.json",
+      "localFile": "data/schemas/price-file.schema.json",
+      "httpStatus": 200,
+      "sha256": "3d3089397cca773a1b0bd4e8cdc020b58d8194cf086324511e91f40485b326ce",
+      "expectedSha256": "3d3089397cca773a1b0bd4e8cdc020b58d8194cf086324511e91f40485b326ce",
+      "status": "PASS",
+      "bytes": 1856
+    },
+    {
+      "route": "/data/schemas/data-manifest.schema.json",
+      "localFile": "data/schemas/data-manifest.schema.json",
+      "httpStatus": 200,
+      "sha256": "2384a5fb01cabdf53e3eb4669ab81fce2560b4ca1b1a82a9a096777af36e8c31",
+      "expectedSha256": "2384a5fb01cabdf53e3eb4669ab81fce2560b4ca1b1a82a9a096777af36e8c31",
+      "status": "PASS",
+      "bytes": 4700
+    },
+    {
+      "route": "/data/schemas/station.schema.json",
+      "localFile": "data/schemas/station.schema.json",
+      "httpStatus": 200,
+      "sha256": "f0cc2726f660af73591a7f64adde44b78398005b5bfcd17601dc729b4faeb0a1",
+      "expectedSha256": "f0cc2726f660af73591a7f64adde44b78398005b5bfcd17601dc729b4faeb0a1",
+      "status": "PASS",
+      "bytes": 1998
+    },
+    {
+      "route": "/data/schemas/station-file.schema.json",
+      "localFile": "data/schemas/station-file.schema.json",
+      "httpStatus": 200,
+      "sha256": "63078d9c83159f7b49de79cfdce800eea7262b7d02a0b4346efc074a2aa579ba",
+      "expectedSha256": "63078d9c83159f7b49de79cfdce800eea7262b7d02a0b4346efc074a2aa579ba",
+      "status": "PASS",
+      "bytes": 2657
+    },
+    {
+      "route": "/data/schemas/source-registry.schema.json",
+      "localFile": "data/schemas/source-registry.schema.json",
+      "httpStatus": 200,
+      "sha256": "188832be0f18ddc100cff5148d93d417a9ec4c2938bd218ce312b38090dcdb44",
+      "expectedSha256": "188832be0f18ddc100cff5148d93d417a9ec4c2938bd218ce312b38090dcdb44",
+      "status": "PASS",
+      "bytes": 2628
+    },
+    {
+      "route": "/data/registry/3ad895fc107a0ce9.json",
+      "localFile": "data/registry/3ad895fc107a0ce9.json",
+      "httpStatus": 200,
+      "sha256": "3ad895fc107a0ce94271817df97de8f6de23c43e8a222b1a594a37a5f6459a5b",
+      "expectedSha256": "3ad895fc107a0ce94271817df97de8f6de23c43e8a222b1a594a37a5f6459a5b",
+      "status": "PASS",
+      "bytes": 5783
+    },
+    {
+      "route": "/data/manifests/334ce4620b9e85751876aa427b0d958eb8410d89af0bfb4fa488b2737869693d.json",
+      "localFile": "data/manifests/334ce4620b9e85751876aa427b0d958eb8410d89af0bfb4fa488b2737869693d.json",
+      "httpStatus": 200,
+      "sha256": "334ce4620b9e85751876aa427b0d958eb8410d89af0bfb4fa488b2737869693d",
+      "expectedSha256": "334ce4620b9e85751876aa427b0d958eb8410d89af0bfb4fa488b2737869693d",
+      "status": "PASS",
+      "bytes": 23863
+    },
+    {
+      "route": "/data/rental/nationwide/identity.json",
+      "localFile": "data/rental/nationwide/identity.json",
+      "httpStatus": 200,
+      "sha256": "4c203660a94b47ba0e16a01614cb9c41b9515c5ef6a71b2e8adeb971348d92f3",
+      "expectedSha256": "4c203660a94b47ba0e16a01614cb9c41b9515c5ef6a71b2e8adeb971348d92f3",
+      "status": "PASS",
+      "bytes": 629806
+    },
+    {
+      "route": "/data/rental/nationwide/NOTICE.txt",
+      "localFile": "data/rental/nationwide/NOTICE.txt",
+      "httpStatus": 200,
+      "sha256": "409fc999430a8f01b7fefcfde0c5cc00c6b99b92b68da88277f153d94d8039b5",
+      "expectedSha256": "409fc999430a8f01b7fefcfde0c5cc00c6b99b92b68da88277f153d94d8039b5",
+      "status": "PASS",
+      "bytes": 869
+    },
+    {
+      "route": "/data/rental/nationwide/manifest.json",
+      "localFile": "data/rental/nationwide/manifest.json",
+      "httpStatus": 200,
+      "sha256": "12966bc46700289ca56817c9249f62cfbb81958044ad12a9e93f471dfd80a463",
+      "expectedSha256": "12966bc46700289ca56817c9249f62cfbb81958044ad12a9e93f471dfd80a463",
+      "status": "PASS",
+      "bytes": 24034
+    },
+    {
+      "route": "/data/rental/nationwide/licenses/Foursquare-NOTICE.txt",
+      "localFile": "data/rental/nationwide/licenses/Foursquare-NOTICE.txt",
+      "httpStatus": 200,
+      "sha256": "1daba8e6d81743a8eee920a71aa5c81a4b0bb02e830c18f1aa9710347c996ff2",
+      "expectedSha256": "1daba8e6d81743a8eee920a71aa5c81a4b0bb02e830c18f1aa9710347c996ff2",
+      "status": "PASS",
+      "bytes": 1770
+    },
+    {
+      "route": "/data/rental/nationwide/licenses/CC0-1.0.txt",
+      "localFile": "data/rental/nationwide/licenses/CC0-1.0.txt",
+      "httpStatus": 200,
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+      "expectedSha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+      "status": "PASS",
+      "bytes": 7048
+    },
+    {
+      "route": "/data/rental/nationwide/licenses/ODbL-1.0.txt",
+      "localFile": "data/rental/nationwide/licenses/ODbL-1.0.txt",
+      "httpStatus": 200,
+      "sha256": "607680718977f6f6c9607972afd98f208573f19251315ed1362a8589b51beaf5",
+      "expectedSha256": "607680718977f6f6c9607972afd98f208573f19251315ed1362a8589b51beaf5",
+      "status": "PASS",
+      "bytes": 25278
+    },
+    {
+      "route": "/data/rental/nationwide/licenses/CDLA-Permissive-2.0.txt",
+      "localFile": "data/rental/nationwide/licenses/CDLA-Permissive-2.0.txt",
+      "httpStatus": 200,
+      "sha256": "4531a67d443284d93ffed0803df5b10634aff21c3d77e381f2d48af01d875868",
+      "expectedSha256": "4531a67d443284d93ffed0803df5b10634aff21c3d77e381f2d48af01d875868",
+      "status": "PASS",
+      "bytes": 2354
+    },
+    {
+      "route": "/data/rental/nationwide/licenses/Apache-2.0.txt",
+      "localFile": "data/rental/nationwide/licenses/Apache-2.0.txt",
+      "httpStatus": 200,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "expectedSha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "status": "PASS",
+      "bytes": 11358
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/sources.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/sources.json",
+      "httpStatus": 200,
+      "sha256": "c86d86c2197f71841262d32248b5117e424878c9f2a8789e4adfc0ddf76027d7",
+      "expectedSha256": "c86d86c2197f71841262d32248b5117e424878c9f2a8789e4adfc0ddf76027d7",
+      "status": "PASS",
+      "bytes": 5196
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/audit.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/audit.json",
+      "httpStatus": 200,
+      "sha256": "fdafe5f03d78223e29c07f65b6a20e3f98f6fa3b69f133e6e499c276bef2760c",
+      "expectedSha256": "fdafe5f03d78223e29c07f65b6a20e3f98f6fa3b69f133e6e499c276bef2760c",
+      "status": "PASS",
+      "bytes": 341116
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/identity.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/identity.json",
+      "httpStatus": 200,
+      "sha256": "4c203660a94b47ba0e16a01614cb9c41b9515c5ef6a71b2e8adeb971348d92f3",
+      "expectedSha256": "4c203660a94b47ba0e16a01614cb9c41b9515c5ef6a71b2e8adeb971348d92f3",
+      "status": "PASS",
+      "bytes": 629806
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/official-overrides.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/official-overrides.json",
+      "httpStatus": 200,
+      "sha256": "84bcd2e318288ab74194d6ede9ac1dca4ce324cb2948907bbde53009a10fa321",
+      "expectedSha256": "84bcd2e318288ab74194d6ede9ac1dca4ce324cb2948907bbde53009a10fa321",
+      "status": "PASS",
+      "bytes": 7754
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/index.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/index.json",
+      "httpStatus": 200,
+      "sha256": "0be2f0fba9b3bfa41e4ca60bfbba9ff68006301326d17b9042f7ccbcc0e89d01",
+      "expectedSha256": "0be2f0fba9b3bfa41e4ca60bfbba9ff68006301326d17b9042f7ccbcc0e89d01",
+      "status": "PASS",
+      "bytes": 3460282
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-21.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-21.json",
+      "httpStatus": 200,
+      "sha256": "3c813ac7548652003f310bdae559e13d608ccb768d5a10ae223125a6ba1d6ec7",
+      "expectedSha256": "3c813ac7548652003f310bdae559e13d608ccb768d5a10ae223125a6ba1d6ec7",
+      "status": "PASS",
+      "bytes": 159310
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-37.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-37.json",
+      "httpStatus": 200,
+      "sha256": "09d1e19dd25e257fd380980c35c4dad7734bdb341caa2118fd6f5a0fb3274228",
+      "expectedSha256": "09d1e19dd25e257fd380980c35c4dad7734bdb341caa2118fd6f5a0fb3274228",
+      "status": "PASS",
+      "bytes": 142674
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-17.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-17.json",
+      "httpStatus": 200,
+      "sha256": "ac53ba18a18d912bdafd1c3643a84cad1ed43611a7b652a2124a200f0c50b950",
+      "expectedSha256": "ac53ba18a18d912bdafd1c3643a84cad1ed43611a7b652a2124a200f0c50b950",
+      "status": "PASS",
+      "bytes": 121646
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-40.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-40.json",
+      "httpStatus": 200,
+      "sha256": "05d88c251f29e1c54d14237d1725d7c205b02c2f9f733a40f13b5fa3812977b4",
+      "expectedSha256": "05d88c251f29e1c54d14237d1725d7c205b02c2f9f733a40f13b5fa3812977b4",
+      "status": "PASS",
+      "bytes": 588669
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-01.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-01.json",
+      "httpStatus": 200,
+      "sha256": "36876661ca0c21b92e046a0db92c252b7714e308b85d28352f62765a509fcd3a",
+      "expectedSha256": "36876661ca0c21b92e046a0db92c252b7714e308b85d28352f62765a509fcd3a",
+      "status": "PASS",
+      "bytes": 1110479
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-41.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-41.json",
+      "httpStatus": 200,
+      "sha256": "2ea1b428efc9bd273ac13024f582a0fccfe34aab2164557fa71b504a9cee9c46",
+      "expectedSha256": "2ea1b428efc9bd273ac13024f582a0fccfe34aab2164557fa71b504a9cee9c46",
+      "status": "PASS",
+      "bytes": 98168
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-16.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-16.json",
+      "httpStatus": 200,
+      "sha256": "e54cc6c2a824edd2c23165b86e8bb5151edb67f2f12a1d7074932a061c6dbd9d",
+      "expectedSha256": "e54cc6c2a824edd2c23165b86e8bb5151edb67f2f12a1d7074932a061c6dbd9d",
+      "status": "PASS",
+      "bytes": 98475
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-36.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-36.json",
+      "httpStatus": 200,
+      "sha256": "9bc1170d25c475cf5ef15014f8061447bac4ad6f2f16daa002e1dcaf2d081303",
+      "expectedSha256": "9bc1170d25c475cf5ef15014f8061447bac4ad6f2f16daa002e1dcaf2d081303",
+      "status": "PASS",
+      "bytes": 72479
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-20.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-20.json",
+      "httpStatus": 200,
+      "sha256": "823236636889ce21f553e65a41305ce117fe3e8634fee0f89d4b0472d7cf8da4",
+      "expectedSha256": "823236636889ce21f553e65a41305ce117fe3e8634fee0f89d4b0472d7cf8da4",
+      "status": "PASS",
+      "bytes": 199807
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-11.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-11.json",
+      "httpStatus": 200,
+      "sha256": "140ba15c929f54f0aab708bcf8b1882f69bad1cd6ea959c457bad77bb9c4e13c",
+      "expectedSha256": "140ba15c929f54f0aab708bcf8b1882f69bad1cd6ea959c457bad77bb9c4e13c",
+      "status": "PASS",
+      "bytes": 608398
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-46.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-46.json",
+      "httpStatus": 200,
+      "sha256": "5cf36987cbe3f372650d903f120ecf7b19072a3f6a3523cd71cfd330cb91aa5b",
+      "expectedSha256": "5cf36987cbe3f372650d903f120ecf7b19072a3f6a3523cd71cfd330cb91aa5b",
+      "status": "PASS",
+      "bytes": 269578
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-07.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-07.json",
+      "httpStatus": 200,
+      "sha256": "37af36ac857751a023e5a68ffbd9626b9f50f6e7fde73d842e224ba6dd814f36",
+      "expectedSha256": "37af36ac857751a023e5a68ffbd9626b9f50f6e7fde73d842e224ba6dd814f36",
+      "status": "PASS",
+      "bytes": 178910
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-27.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-27.json",
+      "httpStatus": 200,
+      "sha256": "50908a0a2d213893c171a0018fdcc2c0be6b1585668b5ab40bfa2e6510ff852b",
+      "expectedSha256": "50908a0a2d213893c171a0018fdcc2c0be6b1585668b5ab40bfa2e6510ff852b",
+      "status": "PASS",
+      "bytes": 828000
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-31.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-31.json",
+      "httpStatus": 200,
+      "sha256": "0f6434c3318c703ea152c751f778ab061229cedf485fe6429827571112aa4eab",
+      "expectedSha256": "0f6434c3318c703ea152c751f778ab061229cedf485fe6429827571112aa4eab",
+      "status": "PASS",
+      "bytes": 87513
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-30.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-30.json",
+      "httpStatus": 200,
+      "sha256": "3c42c1e0682a2b6f1873a0f0ef1338d512fded0a299356eb7b66822868f8dffa",
+      "expectedSha256": "3c42c1e0682a2b6f1873a0f0ef1338d512fded0a299356eb7b66822868f8dffa",
+      "status": "PASS",
+      "bytes": 127561
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-26.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-26.json",
+      "httpStatus": 200,
+      "sha256": "969b1c20257c9573054aaffc4eea3d7a0c2911efd68e8899bdbf7fcaa3bd8d2d",
+      "expectedSha256": "969b1c20257c9573054aaffc4eea3d7a0c2911efd68e8899bdbf7fcaa3bd8d2d",
+      "status": "PASS",
+      "bytes": 243186
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-06.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-06.json",
+      "httpStatus": 200,
+      "sha256": "2f4b907e455158d759489c67d839e1618e208ccbbdf25f79837c08874bb0b0d9",
+      "expectedSha256": "2f4b907e455158d759489c67d839e1618e208ccbbdf25f79837c08874bb0b0d9",
+      "status": "PASS",
+      "bytes": 141605
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-47.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-47.json",
+      "httpStatus": 200,
+      "sha256": "3ff3700f4979dda9c185c9121a83c4de165c6c66224be2fe4b466de1b7557f1f",
+      "expectedSha256": "3ff3700f4979dda9c185c9121a83c4de165c6c66224be2fe4b466de1b7557f1f",
+      "status": "PASS",
+      "bytes": 766719
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-10.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-10.json",
+      "httpStatus": 200,
+      "sha256": "0467be7d22ed4f197676fbd4e0958bbbd4a245efb28eb7d727592c3375c17ee1",
+      "expectedSha256": "0467be7d22ed4f197676fbd4e0958bbbd4a245efb28eb7d727592c3375c17ee1",
+      "status": "PASS",
+      "bytes": 152018
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-05.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-05.json",
+      "httpStatus": 200,
+      "sha256": "1279d614a0553ade60f177974e863c75a64d93bb025cbf17cabccf9ef8ca923e",
+      "expectedSha256": "1279d614a0553ade60f177974e863c75a64d93bb025cbf17cabccf9ef8ca923e",
+      "status": "PASS",
+      "bytes": 167498
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-44.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-44.json",
+      "httpStatus": 200,
+      "sha256": "8b8d7e150f0eb4751122e898a1aac7778f15bdd6c615a05ec29283566f41bf71",
+      "expectedSha256": "8b8d7e150f0eb4751122e898a1aac7778f15bdd6c615a05ec29283566f41bf71",
+      "status": "PASS",
+      "bytes": 149731
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-13.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-13.json",
+      "httpStatus": 200,
+      "sha256": "aa87b733b55812150f6aaa676d0d752a39a8b5aae849ff53df3126ee19857251",
+      "expectedSha256": "aa87b733b55812150f6aaa676d0d752a39a8b5aae849ff53df3126ee19857251",
+      "status": "PASS",
+      "bytes": 1378124
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-29.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-29.json",
+      "httpStatus": 200,
+      "sha256": "a786496d7f9d4e1146f89c6311d6cadadbf206f062b7411377d9fe8e162dfebb",
+      "expectedSha256": "a786496d7f9d4e1146f89c6311d6cadadbf206f062b7411377d9fe8e162dfebb",
+      "status": "PASS",
+      "bytes": 116120
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-09.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-09.json",
+      "httpStatus": 200,
+      "sha256": "50b72434f561eff4100c15b27e7dff5c95f609cc74243bc2f20fa73d2e46b5dd",
+      "expectedSha256": "50b72434f561eff4100c15b27e7dff5c95f609cc74243bc2f20fa73d2e46b5dd",
+      "status": "PASS",
+      "bytes": 198827
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-33.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-33.json",
+      "httpStatus": 200,
+      "sha256": "ee7b32b9c22fdc27f8cb875f5ff30c477f4782c57d7fca0079135968eb62222e",
+      "expectedSha256": "ee7b32b9c22fdc27f8cb875f5ff30c477f4782c57d7fca0079135968eb62222e",
+      "status": "PASS",
+      "bytes": 226376
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-25.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-25.json",
+      "httpStatus": 200,
+      "sha256": "087e9283ceede2c98b9480201d8086a109cbe1e9afed62aa14ed48fb0295eccd",
+      "expectedSha256": "087e9283ceede2c98b9480201d8086a109cbe1e9afed62aa14ed48fb0295eccd",
+      "status": "PASS",
+      "bytes": 150894
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-24.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-24.json",
+      "httpStatus": 200,
+      "sha256": "e850895be6791b4a497def0959e429e2751b97298d1f9bc35c92c621687d1285",
+      "expectedSha256": "e850895be6791b4a497def0959e429e2751b97298d1f9bc35c92c621687d1285",
+      "status": "PASS",
+      "bytes": 159660
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-32.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-32.json",
+      "httpStatus": 200,
+      "sha256": "41fdd9daaa015d2d2985afeb1b046fe33a408a59fb364fff4bfdad5ef57263f9",
+      "expectedSha256": "41fdd9daaa015d2d2985afeb1b046fe33a408a59fb364fff4bfdad5ef57263f9",
+      "status": "PASS",
+      "bytes": 58300
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-08.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-08.json",
+      "httpStatus": 200,
+      "sha256": "e351176294afc5820abc6396b097b2e822fb98e221ea54409742776dd7b78992",
+      "expectedSha256": "e351176294afc5820abc6396b097b2e822fb98e221ea54409742776dd7b78992",
+      "status": "PASS",
+      "bytes": 203382
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/UNKNOWN.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/UNKNOWN.json",
+      "httpStatus": 200,
+      "sha256": "9fc8e4231b129345b2c11be2d4d35d85e9c5aa724ef25ce17dad540bbe22c891",
+      "expectedSha256": "9fc8e4231b129345b2c11be2d4d35d85e9c5aa724ef25ce17dad540bbe22c891",
+      "status": "PASS",
+      "bytes": 109
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-28.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-28.json",
+      "httpStatus": 200,
+      "sha256": "3e310d6aa64526e38a385803909aed38896db8a2d15a6c911021fe78bae9b1be",
+      "expectedSha256": "3e310d6aa64526e38a385803909aed38896db8a2d15a6c911021fe78bae9b1be",
+      "status": "PASS",
+      "bytes": 423274
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-12.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-12.json",
+      "httpStatus": 200,
+      "sha256": "c8d2c6419a996ef8041b5b47b1b308329a8d7b94b683dc031e9ecd7076efd69e",
+      "expectedSha256": "c8d2c6419a996ef8041b5b47b1b308329a8d7b94b683dc031e9ecd7076efd69e",
+      "status": "PASS",
+      "bytes": 574365
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-45.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-45.json",
+      "httpStatus": 200,
+      "sha256": "20201ce6f536bcb6de0e6b64c2b7e9ed611054d10e4ab8059d205ad460b9a438",
+      "expectedSha256": "20201ce6f536bcb6de0e6b64c2b7e9ed611054d10e4ab8059d205ad460b9a438",
+      "status": "PASS",
+      "bytes": 97801
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-04.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-04.json",
+      "httpStatus": 200,
+      "sha256": "ccf54201ff0666694a4d33680778b0ac2a5df3ea5fa54499ed03b1daa0696a96",
+      "expectedSha256": "ccf54201ff0666694a4d33680778b0ac2a5df3ea5fa54499ed03b1daa0696a96",
+      "status": "PASS",
+      "bytes": 414868
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-19.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-19.json",
+      "httpStatus": 200,
+      "sha256": "a661fc3c47db9a95d8d3acd2bf3c3db73a80bf91c26b4300b4538d3002f2ce25",
+      "expectedSha256": "a661fc3c47db9a95d8d3acd2bf3c3db73a80bf91c26b4300b4538d3002f2ce25",
+      "status": "PASS",
+      "bytes": 94570
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-35.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-35.json",
+      "httpStatus": 200,
+      "sha256": "166bb7f895518f1e97818927f0a2e3c9b81fd1db2dc530dac9f93e7a012e4bab",
+      "expectedSha256": "166bb7f895518f1e97818927f0a2e3c9b81fd1db2dc530dac9f93e7a012e4bab",
+      "status": "PASS",
+      "bytes": 144538
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-23.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-23.json",
+      "httpStatus": 200,
+      "sha256": "8a331ef1cdc49292812d69b9033adae8749ca71eea5ed703722f0e4d895c2f78",
+      "expectedSha256": "8a331ef1cdc49292812d69b9033adae8749ca71eea5ed703722f0e4d895c2f78",
+      "status": "PASS",
+      "bytes": 765191
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-03.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-03.json",
+      "httpStatus": 200,
+      "sha256": "8c498114a5ef6250c57c0d878f6a428d5d2c5a214e4b964e4a7315a9fe093387",
+      "expectedSha256": "8c498114a5ef6250c57c0d878f6a428d5d2c5a214e4b964e4a7315a9fe093387",
+      "status": "PASS",
+      "bytes": 174052
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-42.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-42.json",
+      "httpStatus": 200,
+      "sha256": "78d664086d5bbeb24bbecc73014ad809e638134ffb065808cc924b7c036f9a8b",
+      "expectedSha256": "78d664086d5bbeb24bbecc73014ad809e638134ffb065808cc924b7c036f9a8b",
+      "status": "PASS",
+      "bytes": 225341
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-15.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-15.json",
+      "httpStatus": 200,
+      "sha256": "2f5ab71d7df081422b80597a47e197565f17272e7ac82eda7bb813c60d10fc7f",
+      "expectedSha256": "2f5ab71d7df081422b80597a47e197565f17272e7ac82eda7bb813c60d10fc7f",
+      "status": "PASS",
+      "bytes": 240447
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-39.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-39.json",
+      "httpStatus": 200,
+      "sha256": "961bcbac399706b3451542f719fa9030592426e10e0e22d7430c9f5107ad8797",
+      "expectedSha256": "961bcbac399706b3451542f719fa9030592426e10e0e22d7430c9f5107ad8797",
+      "status": "PASS",
+      "bytes": 52633
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-38.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-38.json",
+      "httpStatus": 200,
+      "sha256": "3475e32cb81f3ca6c3bdc400d133fd5a3ba81e2f7be1a585acc6f6d86f41f0f3",
+      "expectedSha256": "3475e32cb81f3ca6c3bdc400d133fd5a3ba81e2f7be1a585acc6f6d86f41f0f3",
+      "status": "PASS",
+      "bytes": 120010
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-14.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-14.json",
+      "httpStatus": 200,
+      "sha256": "74deab1cbafdc56951e41fadbf001e84599a550bfd2714ba52d5dbcdd90b5c91",
+      "expectedSha256": "74deab1cbafdc56951e41fadbf001e84599a550bfd2714ba52d5dbcdd90b5c91",
+      "status": "PASS",
+      "bytes": 812745
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-43.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-43.json",
+      "httpStatus": 200,
+      "sha256": "88b1c78a48a0d2c3163e0e97a218c83418e6423216d209dc9b35842c0e06cbdf",
+      "expectedSha256": "88b1c78a48a0d2c3163e0e97a218c83418e6423216d209dc9b35842c0e06cbdf",
+      "status": "PASS",
+      "bytes": 168915
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-02.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-02.json",
+      "httpStatus": 200,
+      "sha256": "737b9fda71425f436c661a8839903962c54ca5c99c2c98f56b45e098cf4fe683",
+      "expectedSha256": "737b9fda71425f436c661a8839903962c54ca5c99c2c98f56b45e098cf4fe683",
+      "status": "PASS",
+      "bytes": 206020
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-22.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-22.json",
+      "httpStatus": 200,
+      "sha256": "f8ffdbfc569659348be1ae9bc358a76e206c2e5d43be41ccbcf851acfc60dfd4",
+      "expectedSha256": "f8ffdbfc569659348be1ae9bc358a76e206c2e5d43be41ccbcf851acfc60dfd4",
+      "status": "PASS",
+      "bytes": 348968
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-34.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-34.json",
+      "httpStatus": 200,
+      "sha256": "7277b89c01a6aaa3de4a513a4afd791d0cadc9cbdf47c293f04e46c179fde2c0",
+      "expectedSha256": "7277b89c01a6aaa3de4a513a4afd791d0cadc9cbdf47c293f04e46c179fde2c0",
+      "status": "PASS",
+      "bytes": 239031
+    },
+    {
+      "route": "/data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-18.json",
+      "localFile": "data/rental/nationwide/snapshots/rental-v1-1b43cbc1f43d95a5/partitions/JP-18.json",
+      "httpStatus": 200,
+      "sha256": "2ed9cfbbc651e5bcede654c93d7a4c402c9d718f05960c61dff70cabeb49175e",
+      "expectedSha256": "2ed9cfbbc651e5bcede654c93d7a4c402c9d718f05960c61dff70cabeb49175e",
+      "status": "PASS",
+      "bytes": 98929
+    },
+    {
+      "route": "/data/prices/archive/2026-09-30-febb0ebdd7d0.json",
+      "localFile": "data/prices/archive/2026-09-30-febb0ebdd7d0.json",
+      "httpStatus": 200,
+      "sha256": "febb0ebdd7d0a15903c5726747dce6dd1427a0ecc2e53002d0d30cb654a7111b",
+      "expectedSha256": "febb0ebdd7d0a15903c5726747dce6dd1427a0ecc2e53002d0d30cb654a7111b",
+      "status": "PASS",
+      "bytes": 37502
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-21.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-21.json",
+      "httpStatus": 200,
+      "sha256": "2ddebbbe97a479fb32f05e738b1f13151c6dba6f14705b0350ee031d85480b5d",
+      "expectedSha256": "2ddebbbe97a479fb32f05e738b1f13151c6dba6f14705b0350ee031d85480b5d",
+      "status": "PASS",
+      "bytes": 86176
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-37.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-37.json",
+      "httpStatus": 200,
+      "sha256": "6f8ccc77c3058ca57108f5ef9f92d011fa2f7bc8d86339cff18a35e28b8a2f5d",
+      "expectedSha256": "6f8ccc77c3058ca57108f5ef9f92d011fa2f7bc8d86339cff18a35e28b8a2f5d",
+      "status": "PASS",
+      "bytes": 110850
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/audit.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/audit.json",
+      "httpStatus": 200,
+      "sha256": "eb8dd2e3277b8787eafb61eb02443bb2f5be6801255136c0ad737487f1f2c703",
+      "expectedSha256": "eb8dd2e3277b8787eafb61eb02443bb2f5be6801255136c0ad737487f1f2c703",
+      "status": "PASS",
+      "bytes": 706
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-17.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-17.json",
+      "httpStatus": 200,
+      "sha256": "b9af1209e6f7a91932e3ffc0f8d2b0283d7128fab8fc3aae85186cae8aa6aa35",
+      "expectedSha256": "b9af1209e6f7a91932e3ffc0f8d2b0283d7128fab8fc3aae85186cae8aa6aa35",
+      "status": "PASS",
+      "bytes": 67602
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-40.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-40.json",
+      "httpStatus": 200,
+      "sha256": "0d38f886b45ce72ce53f475b9259583690d48ff6f6c9e4e583d92d1c88b9ddd6",
+      "expectedSha256": "0d38f886b45ce72ce53f475b9259583690d48ff6f6c9e4e583d92d1c88b9ddd6",
+      "status": "PASS",
+      "bytes": 121268
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-01.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-01.json",
+      "httpStatus": 200,
+      "sha256": "69201e1a2f3a41766d14ada3d34f704cd023d80b6509ebff607d8768b79a8add",
+      "expectedSha256": "69201e1a2f3a41766d14ada3d34f704cd023d80b6509ebff607d8768b79a8add",
+      "status": "PASS",
+      "bytes": 518304
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-41.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-41.json",
+      "httpStatus": 200,
+      "sha256": "2981a99f602d8ab7819847bad0c123e4870108c0ae39db7b1aaba4bd9ffc1b9e",
+      "expectedSha256": "2981a99f602d8ab7819847bad0c123e4870108c0ae39db7b1aaba4bd9ffc1b9e",
+      "status": "PASS",
+      "bytes": 29334
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-16.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-16.json",
+      "httpStatus": 200,
+      "sha256": "daaf48e384ea3c6c4f1593ff5ca4cf1381c5930af2153e766268a9e33eb1e934",
+      "expectedSha256": "daaf48e384ea3c6c4f1593ff5ca4cf1381c5930af2153e766268a9e33eb1e934",
+      "status": "PASS",
+      "bytes": 54931
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-36.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-36.json",
+      "httpStatus": 200,
+      "sha256": "45181381b476e11ba915dc7f9fa380bd38a10ee9301fb92dfee4e473a994404b",
+      "expectedSha256": "45181381b476e11ba915dc7f9fa380bd38a10ee9301fb92dfee4e473a994404b",
+      "status": "PASS",
+      "bytes": 76666
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-20.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-20.json",
+      "httpStatus": 200,
+      "sha256": "15146fb609cd25140c207603140d9608dd6ecd28d852970e926d170f5af787a0",
+      "expectedSha256": "15146fb609cd25140c207603140d9608dd6ecd28d852970e926d170f5af787a0",
+      "status": "PASS",
+      "bytes": 164998
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-11.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-11.json",
+      "httpStatus": 200,
+      "sha256": "177be48b2cd8e5dbc7f6b347524e9add67d95c5ae9b605e9156a89467b78b08e",
+      "expectedSha256": "177be48b2cd8e5dbc7f6b347524e9add67d95c5ae9b605e9156a89467b78b08e",
+      "status": "PASS",
+      "bytes": 285724
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-46.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-46.json",
+      "httpStatus": 200,
+      "sha256": "4b8dfc240da50b8d5b2379618565dc76927675ee41f772a292f95c9b75d5c1fe",
+      "expectedSha256": "4b8dfc240da50b8d5b2379618565dc76927675ee41f772a292f95c9b75d5c1fe",
+      "status": "PASS",
+      "bytes": 178184
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-07.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-07.json",
+      "httpStatus": 200,
+      "sha256": "2ab90e6c587472be1e9e6f1af843fbf425b8f3ba3d3e40faefae6fa6f376f00d",
+      "expectedSha256": "2ab90e6c587472be1e9e6f1af843fbf425b8f3ba3d3e40faefae6fa6f376f00d",
+      "status": "PASS",
+      "bytes": 132898
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-27.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-27.json",
+      "httpStatus": 200,
+      "sha256": "d5a3f54f629d7f7c005f39cefe76b88e3cde309a0c19c62be9f8d6140131d97f",
+      "expectedSha256": "d5a3f54f629d7f7c005f39cefe76b88e3cde309a0c19c62be9f8d6140131d97f",
+      "status": "PASS",
+      "bytes": 339473
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-31.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-31.json",
+      "httpStatus": 200,
+      "sha256": "a3137502dc494b4c95fabbf390d11a66615287f31c2b807a9140836a1d39c980",
+      "expectedSha256": "a3137502dc494b4c95fabbf390d11a66615287f31c2b807a9140836a1d39c980",
+      "status": "PASS",
+      "bytes": 44465
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-30.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-30.json",
+      "httpStatus": 200,
+      "sha256": "5c7450c2225ddf6e5738c0b65eae433a3d703e6a06f1923aab10588daeb41df9",
+      "expectedSha256": "5c7450c2225ddf6e5738c0b65eae433a3d703e6a06f1923aab10588daeb41df9",
+      "status": "PASS",
+      "bytes": 74604
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-26.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-26.json",
+      "httpStatus": 200,
+      "sha256": "c6bd7ee0db9d8529cdf3070af011c407b7cd8610c9e70058a28e085b57bf50a8",
+      "expectedSha256": "c6bd7ee0db9d8529cdf3070af011c407b7cd8610c9e70058a28e085b57bf50a8",
+      "status": "PASS",
+      "bytes": 137209
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-06.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-06.json",
+      "httpStatus": 200,
+      "sha256": "68803d3c4c50a657ef7c67188c9ffaf50c6298d027808c364c4ded7b05cec4f2",
+      "expectedSha256": "68803d3c4c50a657ef7c67188c9ffaf50c6298d027808c364c4ded7b05cec4f2",
+      "status": "PASS",
+      "bytes": 143109
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-47.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-47.json",
+      "httpStatus": 200,
+      "sha256": "f563d52de0c4931c12851a27d4011226cb9642dce43539bf54f36ac35b87f0ab",
+      "expectedSha256": "f563d52de0c4931c12851a27d4011226cb9642dce43539bf54f36ac35b87f0ab",
+      "status": "PASS",
+      "bytes": 128081
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-10.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-10.json",
+      "httpStatus": 200,
+      "sha256": "6ed188eac5bfc5957baab99ac21c78c7cd04bbd2131a676d3f33889f864cd2c6",
+      "expectedSha256": "6ed188eac5bfc5957baab99ac21c78c7cd04bbd2131a676d3f33889f864cd2c6",
+      "status": "PASS",
+      "bytes": 143301
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-05.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-05.json",
+      "httpStatus": 200,
+      "sha256": "a2b98aefa932f222b6469d3f8c405f454ba5a429a6e6cd6dc0ea41b49a541601",
+      "expectedSha256": "a2b98aefa932f222b6469d3f8c405f454ba5a429a6e6cd6dc0ea41b49a541601",
+      "status": "PASS",
+      "bytes": 135209
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-44.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-44.json",
+      "httpStatus": 200,
+      "sha256": "b3be65c4a3ead70b54af58e5d91257058597c735a425d668da963e5e9ebc512e",
+      "expectedSha256": "b3be65c4a3ead70b54af58e5d91257058597c735a425d668da963e5e9ebc512e",
+      "status": "PASS",
+      "bytes": 51662
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-13.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-13.json",
+      "httpStatus": 200,
+      "sha256": "39c94b0723096fc817be99e1e18be5286dd224948f54b1212c679fcf064b6aa5",
+      "expectedSha256": "39c94b0723096fc817be99e1e18be5286dd224948f54b1212c679fcf064b6aa5",
+      "status": "PASS",
+      "bytes": 363375
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-29.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-29.json",
+      "httpStatus": 200,
+      "sha256": "b72ac1a64aa2e7be77208be980115f61b9e66e99720f641e734fdee0d0c3df46",
+      "expectedSha256": "b72ac1a64aa2e7be77208be980115f61b9e66e99720f641e734fdee0d0c3df46",
+      "status": "PASS",
+      "bytes": 61431
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-09.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-09.json",
+      "httpStatus": 200,
+      "sha256": "7b6a2422fb4b62e54d29fe2961567b159e5f35c8b38affafa417a1147998977d",
+      "expectedSha256": "7b6a2422fb4b62e54d29fe2961567b159e5f35c8b38affafa417a1147998977d",
+      "status": "PASS",
+      "bytes": 110707
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-33.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-33.json",
+      "httpStatus": 200,
+      "sha256": "afecb491e079f9c076aa8418445813b839367aef211e4c34f9a6279e533db965",
+      "expectedSha256": "afecb491e079f9c076aa8418445813b839367aef211e4c34f9a6279e533db965",
+      "status": "PASS",
+      "bytes": 137541
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-25.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-25.json",
+      "httpStatus": 200,
+      "sha256": "a8b629627ca9ea73f6ff42d7f7897e534bfdd00474c919e49926d72a79890680",
+      "expectedSha256": "a8b629627ca9ea73f6ff42d7f7897e534bfdd00474c919e49926d72a79890680",
+      "status": "PASS",
+      "bytes": 80308
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-24.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-24.json",
+      "httpStatus": 200,
+      "sha256": "4c0f8afc6d19c0a59a88ebfeabd19055b67a8225b6785ee36779b740ed3208cf",
+      "expectedSha256": "4c0f8afc6d19c0a59a88ebfeabd19055b67a8225b6785ee36779b740ed3208cf",
+      "status": "PASS",
+      "bytes": 104722
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-32.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-32.json",
+      "httpStatus": 200,
+      "sha256": "15f21b8af7b26baf5cadce85e426ca711fb3e88476f5122404d6ddb74054b14f",
+      "expectedSha256": "15f21b8af7b26baf5cadce85e426ca711fb3e88476f5122404d6ddb74054b14f",
+      "status": "PASS",
+      "bytes": 36651
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-08.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-08.json",
+      "httpStatus": 200,
+      "sha256": "685db8bbd907136cc45e11ee5fc3f8d22260a3f55463d9fa8fe62c4ea2d7de45",
+      "expectedSha256": "685db8bbd907136cc45e11ee5fc3f8d22260a3f55463d9fa8fe62c4ea2d7de45",
+      "status": "PASS",
+      "bytes": 143121
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/UNKNOWN.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/UNKNOWN.json",
+      "httpStatus": 200,
+      "sha256": "107707602dc9483a83292c6342751bb4a87f66133836837b8b6217cfc2217cf0",
+      "expectedSha256": "107707602dc9483a83292c6342751bb4a87f66133836837b8b6217cfc2217cf0",
+      "status": "PASS",
+      "bytes": 109
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-28.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-28.json",
+      "httpStatus": 200,
+      "sha256": "b5e314120849caf77e83d4390741366a360b4a9f6aa08370359515072c0ec179",
+      "expectedSha256": "b5e314120849caf77e83d4390741366a360b4a9f6aa08370359515072c0ec179",
+      "status": "PASS",
+      "bytes": 232180
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-12.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-12.json",
+      "httpStatus": 200,
+      "sha256": "a9d046a2c80200282b7175ce59fbb065e42ffd446929ef9e4e366858024dafc8",
+      "expectedSha256": "a9d046a2c80200282b7175ce59fbb065e42ffd446929ef9e4e366858024dafc8",
+      "status": "PASS",
+      "bytes": 309245
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-45.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-45.json",
+      "httpStatus": 200,
+      "sha256": "5b03a72da95a1b6dd4dd8ece2f9d93f67fd2a678d51e435ab30b4a39b6cad248",
+      "expectedSha256": "5b03a72da95a1b6dd4dd8ece2f9d93f67fd2a678d51e435ab30b4a39b6cad248",
+      "status": "PASS",
+      "bytes": 68666
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-04.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-04.json",
+      "httpStatus": 200,
+      "sha256": "8c3590289fef6bdcab94d67f10d69d8c9d0f13a3c9309ef9f3bd59d44031b205",
+      "expectedSha256": "8c3590289fef6bdcab94d67f10d69d8c9d0f13a3c9309ef9f3bd59d44031b205",
+      "status": "PASS",
+      "bytes": 265769
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-19.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-19.json",
+      "httpStatus": 200,
+      "sha256": "f7af1d73bb82049e5e4fa92efc4ec306e4a103e10aa66999ab3df4c50125327e",
+      "expectedSha256": "f7af1d73bb82049e5e4fa92efc4ec306e4a103e10aa66999ab3df4c50125327e",
+      "status": "PASS",
+      "bytes": 107546
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-35.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-35.json",
+      "httpStatus": 200,
+      "sha256": "59c8f366818fe9c1851ee8ce15dfcb7e9239ca06deb734f27aa15d9231a17b73",
+      "expectedSha256": "59c8f366818fe9c1851ee8ce15dfcb7e9239ca06deb734f27aa15d9231a17b73",
+      "status": "PASS",
+      "bytes": 74924
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-23.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-23.json",
+      "httpStatus": 200,
+      "sha256": "1c800ee0e5704ff138db63fb043bd9b1c262b01ccb5621a698e99ba9ea4bbcd3",
+      "expectedSha256": "1c800ee0e5704ff138db63fb043bd9b1c262b01ccb5621a698e99ba9ea4bbcd3",
+      "status": "PASS",
+      "bytes": 330172
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-03.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-03.json",
+      "httpStatus": 200,
+      "sha256": "5d142612f790072fc056febb23447787ab509bac6e35d72f6e4e49515a14e048",
+      "expectedSha256": "5d142612f790072fc056febb23447787ab509bac6e35d72f6e4e49515a14e048",
+      "status": "PASS",
+      "bytes": 78434
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-42.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-42.json",
+      "httpStatus": 200,
+      "sha256": "1a901cabd7965d096dad7ece2559d0732c1b63e7587cd9e63d257b89119c1114",
+      "expectedSha256": "1a901cabd7965d096dad7ece2559d0732c1b63e7587cd9e63d257b89119c1114",
+      "status": "PASS",
+      "bytes": 58482
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-15.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-15.json",
+      "httpStatus": 200,
+      "sha256": "9aac868febdbc8d4c78263c45a7577743fa2ab2a85a1f9919a1b523bfbca1821",
+      "expectedSha256": "9aac868febdbc8d4c78263c45a7577743fa2ab2a85a1f9919a1b523bfbca1821",
+      "status": "PASS",
+      "bytes": 126269
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-39.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-39.json",
+      "httpStatus": 200,
+      "sha256": "37b256cbd55dbaa7576e558871287545f48e6dd379797626134b5a92846cf062",
+      "expectedSha256": "37b256cbd55dbaa7576e558871287545f48e6dd379797626134b5a92846cf062",
+      "status": "PASS",
+      "bytes": 52178
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-38.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-38.json",
+      "httpStatus": 200,
+      "sha256": "661119197eb65545232fe823b1ce1a7111dd17b31cf7a1648f5be156ec00077d",
+      "expectedSha256": "661119197eb65545232fe823b1ce1a7111dd17b31cf7a1648f5be156ec00077d",
+      "status": "PASS",
+      "bytes": 88245
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-14.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-14.json",
+      "httpStatus": 200,
+      "sha256": "009a691cb662405ee9a87a53930c80898577749dea2614a3b3b1d8cfdebe081d",
+      "expectedSha256": "009a691cb662405ee9a87a53930c80898577749dea2614a3b3b1d8cfdebe081d",
+      "status": "PASS",
+      "bytes": 363760
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-43.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-43.json",
+      "httpStatus": 200,
+      "sha256": "e51a9a7f03c17cdb0901221de718953ebdd5bf9efb34de8e4bfa1950e3588993",
+      "expectedSha256": "e51a9a7f03c17cdb0901221de718953ebdd5bf9efb34de8e4bfa1950e3588993",
+      "status": "PASS",
+      "bytes": 60596
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-02.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-02.json",
+      "httpStatus": 200,
+      "sha256": "a61409f10984a2840bf9e10733607f38a2fdd94de65dea16d606f36dba5ccd9d",
+      "expectedSha256": "a61409f10984a2840bf9e10733607f38a2fdd94de65dea16d606f36dba5ccd9d",
+      "status": "PASS",
+      "bytes": 134059
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-22.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-22.json",
+      "httpStatus": 200,
+      "sha256": "e5f3b8f1a409ea9b3e4674b75a86996c1bfd254f74b619eae7434dd5a94c0976",
+      "expectedSha256": "e5f3b8f1a409ea9b3e4674b75a86996c1bfd254f74b619eae7434dd5a94c0976",
+      "status": "PASS",
+      "bytes": 350557
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-34.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-34.json",
+      "httpStatus": 200,
+      "sha256": "ce3fa1edf80ba62d92f4d47525815c9d71db308ec5f55eed9ac8e9f51b1b1561",
+      "expectedSha256": "ce3fa1edf80ba62d92f4d47525815c9d71db308ec5f55eed9ac8e9f51b1b1561",
+      "status": "PASS",
+      "bytes": 95669
+    },
+    {
+      "route": "/data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-18.json",
+      "localFile": "data/stations/2026-09-29-c083bcad49fa-m01-data-v2/JP-18.json",
+      "httpStatus": 200,
+      "sha256": "8c997e2d66bfbfaa6972583143570fdc09224b64fd12578f4eb4d08c5a3fe862",
+      "expectedSha256": "8c997e2d66bfbfaa6972583143570fdc09224b64fd12578f4eb4d08c5a3fe862",
+      "status": "PASS",
+      "bytes": 58784
+    },
+    {
+      "route": "/en/about/",
+      "localFile": "en/about/index.html",
+      "httpStatus": 200,
+      "sha256": "d410c728d302fbdc17a20666972de739ec2a2c207593bc0f1a8c1c631432c265",
+      "expectedSha256": "d410c728d302fbdc17a20666972de739ec2a2c207593bc0f1a8c1c631432c265",
+      "status": "PASS",
+      "bytes": 13638,
+      "xRobotsTag": []
+    },
+    {
+      "route": "/en/refuel-guide/",
+      "localFile": "en/refuel-guide/index.html",
+      "httpStatus": 200,
+      "sha256": "dacb00cbc306f4cbf1731670aaa949aa4b87533ebcb584eee0358fdf08fdefab",
+      "expectedSha256": "dacb00cbc306f4cbf1731670aaa949aa4b87533ebcb584eee0358fdf08fdefab",
+      "status": "PASS",
+      "bytes": 6931,
+      "xRobotsTag": []
+    },
+    {
+      "route": "/en/return-car/",
+      "localFile": "en/return-car/index.html",
+      "httpStatus": 200,
+      "sha256": "d2b8ddbb39df5e9c6ae4a64260d923ea4b4741211f5aef7384ed6312d7c737a5",
+      "expectedSha256": "d2b8ddbb39df5e9c6ae4a64260d923ea4b4741211f5aef7384ed6312d7c737a5",
+      "status": "PASS",
+      "bytes": 8033,
+      "xRobotsTag": []
+    },
+    {
+      "route": "/ko/about/",
+      "localFile": "ko/about/index.html",
+      "httpStatus": 200,
+      "sha256": "cdd6cd2fe7a448930e12feb48ac3d9be79e23cf1eee15a8d8ce2c5fbdf1d0922",
+      "expectedSha256": "cdd6cd2fe7a448930e12feb48ac3d9be79e23cf1eee15a8d8ce2c5fbdf1d0922",
+      "status": "PASS",
+      "bytes": 14387,
+      "xRobotsTag": []
+    },
+    {
+      "route": "/ko/refuel-guide/",
+      "localFile": "ko/refuel-guide/index.html",
+      "httpStatus": 200,
+      "sha256": "1529bc49f9404a773433e5b505de80288b9afc0f20cf65a70d0a33d847d9432e",
+      "expectedSha256": "1529bc49f9404a773433e5b505de80288b9afc0f20cf65a70d0a33d847d9432e",
+      "status": "PASS",
+      "bytes": 7364,
+      "xRobotsTag": []
+    },
+    {
+      "route": "/ko/return-car/",
+      "localFile": "ko/return-car/index.html",
+      "httpStatus": 200,
+      "sha256": "f2efc41740316825f62584a546f4381266ec269d560570729352ab682d233ce8",
+      "expectedSha256": "f2efc41740316825f62584a546f4381266ec269d560570729352ab682d233ce8",
+      "status": "PASS",
+      "bytes": 8150,
+      "xRobotsTag": []
+    },
+    {
+      "route": "/zh-Hant/about/",
+      "localFile": "zh-Hant/about/index.html",
+      "httpStatus": 200,
+      "sha256": "551068b34408f9e468b1a799db7edddc924fd22abe698a985dd368d6be6aaeba",
+      "expectedSha256": "551068b34408f9e468b1a799db7edddc924fd22abe698a985dd368d6be6aaeba",
+      "status": "PASS",
+      "bytes": 13131,
+      "xRobotsTag": []
+    },
+    {
+      "route": "/zh-Hant/refuel-guide/",
+      "localFile": "zh-Hant/refuel-guide/index.html",
+      "httpStatus": 200,
+      "sha256": "406050022e1ff142e76a62deec85637ab73ee9a6ace0c0c40fa1ca296071bc25",
+      "expectedSha256": "406050022e1ff142e76a62deec85637ab73ee9a6ace0c0c40fa1ca296071bc25",
+      "status": "PASS",
+      "bytes": 6734,
+      "xRobotsTag": []
+    },
+    {
+      "route": "/zh-Hant/return-car/",
+      "localFile": "zh-Hant/return-car/index.html",
+      "httpStatus": 200,
+      "sha256": "c33a980b78cdc65008c934ad189e199a7618e7b2246cd2168f4ade689778eaa5",
+      "expectedSha256": "c33a980b78cdc65008c934ad189e199a7618e7b2246cd2168f4ade689778eaa5",
+      "status": "PASS",
+      "bytes": 7962,
+      "xRobotsTag": []
+    },
+    {
+      "route": "/zh-Hans/about/",
+      "localFile": "zh-Hans/about/index.html",
+      "httpStatus": 200,
+      "sha256": "a76d4f0cf6386701b52c28d74846d87a513ae555b5fbd2a98e32c39305e6dd54",
+      "expectedSha256": "a76d4f0cf6386701b52c28d74846d87a513ae555b5fbd2a98e32c39305e6dd54",
+      "status": "PASS",
+      "bytes": 13134,
+      "xRobotsTag": []
+    },
+    {
+      "route": "/zh-Hans/refuel-guide/",
+      "localFile": "zh-Hans/refuel-guide/index.html",
+      "httpStatus": 200,
+      "sha256": "d0409ca558f854861c4a503e0c02a3d7494209b0782a9df23329cdf006972aec",
+      "expectedSha256": "d0409ca558f854861c4a503e0c02a3d7494209b0782a9df23329cdf006972aec",
+      "status": "PASS",
+      "bytes": 6734,
+      "xRobotsTag": []
+    },
+    {
+      "route": "/zh-Hans/return-car/",
+      "localFile": "zh-Hans/return-car/index.html",
+      "httpStatus": 200,
+      "sha256": "9a9a52581e277a9f05c3b5c73b8a6a42b25608ee990bd73b7a9327bc9a5e1530",
+      "expectedSha256": "9a9a52581e277a9f05c3b5c73b8a6a42b25608ee990bd73b7a9327bc9a5e1530",
+      "status": "PASS",
+      "bytes": 7965,
+      "xRobotsTag": []
+    },
+    {
+      "route": "/en/return-car/times-naha-airport/",
+      "localFile": "en/return-car/index.html",
+      "httpStatus": 200,
+      "sha256": "d2b8ddbb39df5e9c6ae4a64260d923ea4b4741211f5aef7384ed6312d7c737a5",
+      "expectedSha256": "d2b8ddbb39df5e9c6ae4a64260d923ea4b4741211f5aef7384ed6312d7c737a5",
+      "status": "PASS",
+      "bytes": 8033,
+      "xRobotsTag": []
+    },
+    {
+      "route": "/zh-Hant/return-car/times-naha-airport/",
+      "localFile": "zh-Hant/return-car/index.html",
+      "httpStatus": 200,
+      "sha256": "c33a980b78cdc65008c934ad189e199a7618e7b2246cd2168f4ade689778eaa5",
+      "expectedSha256": "c33a980b78cdc65008c934ad189e199a7618e7b2246cd2168f4ade689778eaa5",
+      "status": "PASS",
+      "bytes": 7962,
+      "xRobotsTag": []
+    },
+    {
+      "route": "/ko/return-car/times-naha-airport/",
+      "localFile": "ko/return-car/index.html",
+      "httpStatus": 200,
+      "sha256": "f2efc41740316825f62584a546f4381266ec269d560570729352ab682d233ce8",
+      "expectedSha256": "f2efc41740316825f62584a546f4381266ec269d560570729352ab682d233ce8",
+      "status": "PASS",
+      "bytes": 8150,
+      "xRobotsTag": []
+    },
+    {
+      "route": "/zh-Hans/return-car/times-naha-airport/",
+      "localFile": "zh-Hans/return-car/index.html",
+      "httpStatus": 200,
+      "sha256": "9a9a52581e277a9f05c3b5c73b8a6a42b25608ee990bd73b7a9327bc9a5e1530",
+      "expectedSha256": "9a9a52581e277a9f05c3b5c73b8a6a42b25608ee990bd73b7a9327bc9a5e1530",
+      "status": "PASS",
+      "bytes": 7965,
+      "xRobotsTag": []
+    },
+    {
+      "route": "/th/return-car/times-naha-airport/",
+      "localFile": "th/return-car/index.html",
+      "httpStatus": 200,
+      "sha256": "ce1d6f90d84a0420b9fa5b9e78d59a439f35c79f4bcf0659b0260389ee43b040",
+      "expectedSha256": "ce1d6f90d84a0420b9fa5b9e78d59a439f35c79f4bcf0659b0260389ee43b040",
+      "status": "PASS",
+      "bytes": 9103,
+      "xRobotsTag": []
+    }
+  ]
+}

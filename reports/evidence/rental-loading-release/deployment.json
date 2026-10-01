@@ -1,0 +1,9 @@
+{
+  "Id": "6504d838-274c-42bb-9230-370abd2ff730",
+  "Environment": "Production",
+  "Branch": "main",
+  "Source": "02fff4b",
+  "Deployment": "https://6504d838.fuel-me-japan.pages.dev",
+  "Status": "26 seconds ago",
+  "Build": "https://dash.cloudflare.com/4d84d2f73decf12ea381b1896ceeb93a/pages/view/fuel-me-japan/6504d838-274c-42bb-9230-370abd2ff730"
+}

@@ -1,0 +1,60 @@
+{
+  "note": "正式域名实际浏览器检查；首次导航观察到禁用表单、加载文字与占位说明，数据就绪后显示7353条；搜索不存在的名称后显示空结果。",
+  "url": "https://fuel-me-japan.com/zh-Hans/return-car/?q=no-rental-with-this-name-999999",
+  "loadedCount": "7,353 条匹配记录",
+  "emptyCount": "0 条匹配记录",
+  "emptyText": "没有匹配记录，请调整地区、公司或名称。",
+  "loadingSpinnersAfterSearch": 0,
+  "loadedFrame": [
+    {
+      "bottom": 304.53125,
+      "height": 181.53125,
+      "left": 16.46875,
+      "right": 517.53125,
+      "selector": ".rental-intro",
+      "top": 123,
+      "width": 501.0625,
+      "x": 16.46875,
+      "y": 123
+    },
+    {
+      "bottom": 640.125,
+      "height": 311.59375,
+      "left": 16.46875,
+      "right": 517.53125,
+      "selector": ".rental-filters",
+      "top": 328.53125,
+      "width": 501.0625,
+      "x": 16.46875,
+      "y": 328.53125
+    }
+  ],
+  "emptyFrame": [
+    {
+      "bottom": 304.53125,
+      "height": 181.53125,
+      "left": 16.46875,
+      "right": 517.53125,
+      "selector": ".rental-intro",
+      "top": 123,
+      "width": 501.0625,
+      "x": 16.46875,
+      "y": 123
+    },
+    {
+      "bottom": 640.125,
+      "height": 311.59375,
+      "left": 16.46875,
+      "right": 517.53125,
+      "selector": ".rental-filters",
+      "top": 328.53125,
+      "width": 501.0625,
+      "x": 16.46875,
+      "y": 328.53125
+    }
+  ],
+  "frameStable": true,
+  "resetCount": "7,353 条匹配记录",
+  "status": "PASS",
+  "finalUrl": "https://fuel-me-japan.com/zh-Hans/return-car/"
+}

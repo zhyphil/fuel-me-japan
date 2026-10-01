@@ -38,3 +38,7 @@
 - [本地实际显示](evidence/rental-loading/local-preview.png)
 
 本轮没有 commit、push 或部署；此次修复可在 [本地还车目录](http://127.0.0.1:4174/zh-Hans/return-car/) 审核。
+
+## 后续发布状态
+
+2026-10-01 用户随后明确授权提交、推送、部署并在完成后休息。应用 `02fff4b` 已发布到正式域名，Cloudflare 生产部署 `6504d838`；180 项线上资源比对与实际浏览器验收通过。当前发布状态详见[发布报告](rental-loading-release.md)，以上本地验收过程保留为历史记录。
