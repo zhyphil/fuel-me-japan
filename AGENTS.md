@@ -131,3 +131,10 @@ Current authorization: **The user has now requested completion of all remaining 
 2026-10-01 用户选择“补核剩余机场门店资料”。本轮已复查6家，新增Toyota成田、中部、福冈国际线三家有限事实；关西Toyota、福冈Nippon、那霸Toyota Seaside保留。官方有限事实合计18家，车辆入口全部未实测；新数据 `rental-v1-2769bcab1437116e` 共7,383条。没有扩展车辆推荐、即时价格或全国坐标修正。
 
 完整检查362单元／323 Chromium、63数据、39 WebKit通过；原15家资料与历史链接保留。报告见 `reports/rental-airport-followup-20261001.md`。当前改动未commit、push或部署，线上仍为上一批发布版本；主目录历史改动、冻结规格及既有报告不覆盖。不要把3家仍保留的候选、官网参考坐标或测地系换算视为已核实的车辆入口。
+
+
+## 当前发布状态：机场补核已上线
+
+2026-10-01 用户新增持续授权：每项任务符合要求且验证通过后自动Conventional Commit、push及部署，无需逐次通知；当前有效约定见本文件前部。本轮已发布三家机场Toyota补核和补充资料链接修正。应用 `3b37ab4`、Production部署 `bee65057`，正式域名296项资源／深层URL检查及三家详情、Toyota＋FUK搜索全部通过。18家官方有限事实的入口仍未现场核实，另3家疑点保留。
+
+本条更新上一条本地完成状态；报告 `reports/airport-followup-release-20261001.md`。后续发布报告的纯文档提交已按相同Conventional Commits规则推送，不改变本次运行资源。

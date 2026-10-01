@@ -1,0 +1,56 @@
+{
+  "checkedAt": "2026-10-01T10:32:11.507Z",
+  "status": "PASS",
+  "note": "真实正式域名浏览器验证，无外部请求拦截；只读取门店资料并操作站内搜索，未发起导航、预订或对外消息。",
+  "branches": [
+    {
+      "id": "toyota-narita-airport",
+      "url": "https://fuel-me-japan.com/zh-Hans/return-car/toyota-narita-airport/",
+      "title": "トヨタレンタカー 成田空港店 | Fuel Me Japan",
+      "nearbyStationCount": 25,
+      "supplementalLinks": [
+        {
+          "text": "租车公司还车指引",
+          "href": "https://rent.toyota.co.jp/shop/route/1_0020.html"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "toyota-chubu-centrair-airport",
+      "url": "https://fuel-me-japan.com/zh-Hans/return-car/toyota-chubu-centrair-airport/",
+      "title": "トヨタレンタカー 中部国際空港店 | Fuel Me Japan",
+      "nearbyStationCount": 15,
+      "supplementalLinks": [
+        {
+          "text": "官方门店详情",
+          "href": "https://trl-aichi.co.jp/rent/shops/detail/6c17253b533318bf01beb68da475153f8f5d312e.html"
+        },
+        {
+          "text": "租车公司还车图（PDF）",
+          "href": "https://trl-aichi.co.jp/rent/5883328c02c9cd16e4ae865e91c405184d76eb4d.pdf"
+        },
+        {
+          "text": "机场官方车辆返还指引",
+          "href": "https://www.centrair.jp/access/rental-car/return-route.html"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "toyota-fukuoka-airport-international",
+      "url": "https://fuel-me-japan.com/zh-Hans/return-car/toyota-fukuoka-airport-international/",
+      "title": "トヨタレンタカー 福岡INTERNATIONAL店 | Fuel Me Japan",
+      "nearbyStationCount": 25,
+      "supplementalLinks": [],
+      "status": "PASS"
+    }
+  ],
+  "search": {
+    "company": "toyota",
+    "airport": "FUK",
+    "count": 1,
+    "openedCorrectDetail": true
+  },
+  "errors": []
+}

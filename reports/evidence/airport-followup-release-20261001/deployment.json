@@ -1,0 +1,9 @@
+{
+  "Id": "bee65057-82a5-4d14-8027-7378ab79c3df",
+  "Environment": "Production",
+  "Branch": "main",
+  "Source": "3b37ab4",
+  "Deployment": "https://bee65057.fuel-me-japan.pages.dev",
+  "Status": "49 seconds ago",
+  "Build": "https://dash.cloudflare.com/4d84d2f73decf12ea381b1896ceeb93a/pages/view/fuel-me-japan/bee65057-82a5-4d14-8027-7378ab79c3df"
+}
