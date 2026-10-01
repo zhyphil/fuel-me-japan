@@ -1,0 +1,1427 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node@24/24.14.0_1/bin/node",
+      "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/node_modules/.bin/playwright",
+      "test",
+      "--config",
+      "/tmp/fmj-airport-followup-20261001/webkit.config.mts"
+    ],
+    "configFile": "/tmp/fmj-airport-followup-20261001/webkit.config.mts",
+    "rootDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/fmj-airport-followup-20261001/webkit-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "Airport-WebKit",
+        "name": "Airport-WebKit",
+        "testDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "rental-directory.spec.ts",
+          "return-car.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/tmp/fmj-airport-followup-20261001/webkit.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 2,
+    "webServer": {
+      "command": "npm run preview -- --port 4173 --strictPort",
+      "cwd": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan",
+      "url": "http://127.0.0.1:4173",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "rental-directory.spec.ts",
+      "file": "rental-directory.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "en: 320px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1800,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:10:42.370Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-7ae8d0210417f4793f44",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "en: 390px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1674,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:10:42.367Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-fe8f9476cdae266733b5",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "en: 1280px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1564,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:10:45.715Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-41925ba1a79ce4c4a3ae",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "zh-Hant: 320px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1435,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:10:45.841Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-86b70d451022d7127c52",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "zh-Hant: 390px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1466,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:10:47.281Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-53f9ff92454fec65809f",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "zh-Hant: 1280px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1579,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:10:47.284Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-c80a7830c470671fe357",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "ko: 320px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1430,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:10:48.751Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-48f0a050b497d6c7fd9a",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "ko: 390px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1415,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:10:48.868Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-13c55dc677e0a46078eb",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "ko: 1280px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1543,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:10:50.185Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-cf8edf2e5eab9835aa34",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "zh-Hans: 320px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1444,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:10:50.287Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-b5ccd73c2be6586c7dee",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "zh-Hans: 390px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1514,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:10:51.732Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-8821f09f255986d908ed",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "zh-Hans: 1280px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1609,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:10:51.735Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-6d17807fc261a5181833",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "th: 320px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1463,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:10:53.250Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-18d57c4af274a34ecff9",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "th: 390px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1495,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:10:53.348Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-2beb612bc725e472d441",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "th: 1280px directory combines region/company/name, resets, paginates and fits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1533,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:10:54.717Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-e4683dc9e0c5ca3513e3",
+          "file": "rental-directory.spec.ts",
+          "line": 71,
+          "column": 69
+        },
+        {
+          "title": "nippon-chubu-centrair-airport: official detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1247,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:10:54.847Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-fa022dea8e40303d2625",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "nippon-haneda-airport: official detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1283,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:10:56.099Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-9c4dd04befb12c580f11",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "nippon-kansai-airport: official detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1281,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:10:56.254Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-d2d66612c9fa162aa012",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "nippon-naha-airport-toyosaki: official detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1256,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:10:57.386Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-45a46324793316b35a24",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "nippon-narita-airport: official detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1257,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:10:57.541Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-047d345b438a3c13e2bd",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "nippon-new-chitose-airport: official detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1258,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:10:58.647Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-d16fb53fbee96e146946",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "times-chubu-centrair-airport: official detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1313,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:10:58.802Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-f7c300d2b5e3e9eefa21",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "times-fukuoka-airport-international: official detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1443,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:10:59.910Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-c65057419a871dd2f7e7",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "times-haneda-airport: official detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1333,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:11:00.121Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-a9c7defae61246b156fa",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "times-kansai-airport: official detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1248,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:11:01.357Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-a6bed0fff3e9bfc1dfe3",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "times-naha-airport: official detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1240,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:11:01.458Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-e78ef7cd558670022697",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "times-narita-airport: official detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1261,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:11:02.610Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-62ef3fd0bad8a5b5af72",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "times-new-chitose-airport: official detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1247,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:11:02.703Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-146e4f7cdbd7eab72bce",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "toyota-chubu-centrair-airport: official detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1248,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:11:03.875Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-dbcbac7c5b9030b8d465",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "toyota-fukuoka-airport-international: official detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1242,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:11:03.954Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-d2e8c8ce19434c6334eb",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "toyota-haneda-airport-international: official detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1263,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:11:05.127Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-bc381fcef51ebdcd0d1d",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "toyota-narita-airport: official detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1248,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:11:05.200Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-cacbc2369f7a6b54523a",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "toyota-new-chitose-airport-poplar: official detail is directly addressable, refreshable and honest about the entrance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1270,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:11:06.395Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-0848dd40f4a70f38016e",
+          "file": "rental-directory.spec.ts",
+          "line": 111,
+          "column": 40
+        },
+        {
+          "title": "en: supplemented airport notes and distinct source links fit a narrow detail",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1436,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:11:06.452Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-4c64babfe570c0d0e3a7",
+          "file": "rental-directory.spec.ts",
+          "line": 153,
+          "column": 31
+        },
+        {
+          "title": "zh-Hant: supplemented airport notes and distinct source links fit a narrow detail",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1448,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:11:07.669Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-187d6d0ec7c2f356047e",
+          "file": "rental-directory.spec.ts",
+          "line": 153,
+          "column": 31
+        },
+        {
+          "title": "ko: supplemented airport notes and distinct source links fit a narrow detail",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1405,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:11:07.892Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-843310a896d5a89f01f2",
+          "file": "rental-directory.spec.ts",
+          "line": 153,
+          "column": 31
+        },
+        {
+          "title": "zh-Hans: supplemented airport notes and distinct source links fit a narrow detail",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1387,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:11:09.122Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-7ab435a743a9a880ec26",
+          "file": "rental-directory.spec.ts",
+          "line": 153,
+          "column": 31
+        },
+        {
+          "title": "th: supplemented airport notes and distinct source links fit a narrow detail",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1452,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:11:09.301Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8d8e4246faf9b9c3676e-24ede2f51e179ada57a4",
+          "file": "rental-directory.spec.ts",
+          "line": 153,
+          "column": 31
+        }
+      ]
+    },
+    {
+      "title": "return-car.spec.ts",
+      "file": "return-car.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "all reviewed shipped branches load real station candidates and keep every return destination distinct",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Airport-WebKit",
+              "projectName": "Airport-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 6118,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T10:11:10.522Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "31236a6e4cfe49b47b8c-436892325dd1bb89aa2c",
+          "file": "return-car.spec.ts",
+          "line": 207,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-01T10:10:41.625Z",
+    "duration": 35054.599,
+    "expected": 39,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

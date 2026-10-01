@@ -1,0 +1,16 @@
+import { defineConfig, devices } from "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/node_modules/@playwright/test/index.mjs";
+export default defineConfig({
+  testDir: "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+  testMatch: ["rental-directory.spec.ts", "return-car.spec.ts"],
+  grep: /official detail is directly addressable|directory combines region|supplemented airport notes|all reviewed shipped branches/,
+  fullyParallel: true, workers: 2, retries: 0,
+  reporter: [["list"], ["json", { outputFile: "/tmp/fmj-airport-followup-20261001/webkit.json" }]],
+  outputDir: "/tmp/fmj-airport-followup-20261001/webkit-artifacts",
+  use: { baseURL: "http://127.0.0.1:4173", screenshot: "only-on-failure" },
+  projects: [{ name: "Airport-WebKit", use: { ...devices["iPhone 13"], browserName: "webkit" } }],
+  webServer: {
+    command: "npm run preview -- --port 4173 --strictPort",
+    cwd: "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan",
+    url: "http://127.0.0.1:4173", reuseExistingServer: false,
+  },
+});

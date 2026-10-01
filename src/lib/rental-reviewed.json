@@ -404,6 +404,101 @@
         "osm-n5694008999",
         "overture-4d9dcc03-5ea5-48d8-881e-e8fa8078150b"
       ]
+    },
+    "toyota-narita-airport": {
+      "attributes": {
+        "id": "toyota-narita-airport",
+        "airportCode": "NRT",
+        "companyId": "toyota",
+        "prefectureCode": "JP-12",
+        "nameJa": "トヨタレンタカー 成田空港店",
+        "addressJa": "千葉県成田市取香530-13",
+        "lat": 35.7843254,
+        "lon": 140.3833355,
+        "officialCheckUrl": "https://rent.toyota.co.jp/shop/detail.aspx?rCode=63601&eCode=035",
+        "checkedAt": "2026-10-01",
+        "positionKind": "SHOP_REFERENCE",
+        "returnLocationStatus": "OFFICIAL_FACILITY_CHECKED",
+        "vehicleEntranceStatus": "NOT_VERIFIED",
+        "supplementarySourceUrls": [
+          "https://rent.toyota.co.jp/shop/route/1_0020.html"
+        ],
+        "sourceId": "toyota-official",
+        "recordId": "63601:035",
+        "summaryKey": "rental.shop.toyota-narita-airport",
+        "officialPhone": "0476-32-1020"
+      },
+      "sourceId": "toyota-official",
+      "recordId": "63601:035",
+      "summaryKey": "rental.shop.toyota-narita-airport",
+      "websiteUrl": "https://rent.toyota.co.jp/",
+      "reviewedSourceKeys": [
+        "osm-n4457845665",
+        "overture-0a8f2512-0716-483d-8534-247665ccc295"
+      ]
+    },
+    "toyota-chubu-centrair-airport": {
+      "attributes": {
+        "id": "toyota-chubu-centrair-airport",
+        "airportCode": "NGO",
+        "companyId": "toyota",
+        "prefectureCode": "JP-23",
+        "nameJa": "トヨタレンタカー 中部国際空港店",
+        "addressJa": "愛知県常滑市セントレア1-1 マルチアクセスターミナルビル1F",
+        "lat": 34.8600197,
+        "lon": 136.8160248,
+        "officialCheckUrl": "https://rent.toyota.co.jp/shop/detail.aspx?rCode=64701&eCode=053",
+        "checkedAt": "2026-10-01",
+        "positionKind": "FACILITY_REFERENCE",
+        "returnLocationStatus": "OFFICIAL_FACILITY_CHECKED",
+        "vehicleEntranceStatus": "NOT_VERIFIED",
+        "supplementarySourceUrls": [
+          "https://trl-aichi.co.jp/rent/shops/detail/6c17253b533318bf01beb68da475153f8f5d312e.html",
+          "https://trl-aichi.co.jp/rent/5883328c02c9cd16e4ae865e91c405184d76eb4d.pdf",
+          "https://www.centrair.jp/access/rental-car/return-route.html"
+        ],
+        "sourceId": "toyota-official",
+        "recordId": "64701:053",
+        "summaryKey": "rental.shop.toyota-chubu-centrair-airport",
+        "officialPhone": "0569-38-0100"
+      },
+      "sourceId": "toyota-official",
+      "recordId": "64701:053",
+      "summaryKey": "rental.shop.toyota-chubu-centrair-airport",
+      "websiteUrl": "https://rent.toyota.co.jp/",
+      "reviewedSourceKeys": [
+        "osm-n11197679909"
+      ]
+    },
+    "toyota-fukuoka-airport-international": {
+      "attributes": {
+        "id": "toyota-fukuoka-airport-international",
+        "airportCode": "FUK",
+        "companyId": "toyota",
+        "prefectureCode": "JP-40",
+        "nameJa": "トヨタレンタカー 福岡INTERNATIONAL店",
+        "addressJa": "福岡県福岡市博多区東那珂二丁目22番3号",
+        "lat": 33.5815304,
+        "lon": 130.4436313,
+        "officialCheckUrl": "https://rent.toyota.co.jp/shop/detail.aspx?rCode=68101&eCode=068",
+        "checkedAt": "2026-10-01",
+        "positionKind": "SHOP_REFERENCE",
+        "returnLocationStatus": "OFFICIAL_FACILITY_CHECKED",
+        "vehicleEntranceStatus": "NOT_VERIFIED",
+        "supplementarySourceUrls": [],
+        "sourceId": "toyota-official",
+        "recordId": "68101:068",
+        "summaryKey": "rental.shop.toyota-fukuoka-airport-international",
+        "officialPhone": "092-778-0100"
+      },
+      "sourceId": "toyota-official",
+      "recordId": "68101:068",
+      "summaryKey": "rental.shop.toyota-fukuoka-airport-international",
+      "websiteUrl": "https://rent.toyota.co.jp/",
+      "reviewedSourceKeys": [
+        "osm-n13357237818",
+        "overture-619e2992-fa38-4d6c-a0f8-31cf9f93e4b9"
+      ]
     }
   }
 }

@@ -29,15 +29,15 @@ describe("nationwide rental artifacts", () => {
       expect(createHash("sha256").update(bytes).digest("hex")).toBe(a.sha256);
     }
   });
-  it("retains fifteen reviewed facilities across three companies and no verified vehicle entrance", () => {
+  it("retains eighteen reviewed facilities across three companies and no verified vehicle entrance", () => {
     const official = records.filter(r => r.verification === "OFFICIAL_FACILITY_CHECKED");
     expect([...new Set(official.map(r => r.airportCode))].sort()).toEqual(["CTS", "FUK", "HND", "KIX", "NGO", "NRT", "OKA"]);
     expect(records.every(r => r.vehicleEntranceStatus === "NOT_VERIFIED")).toBe(true);
     expect(official.find(r => r.id === "times-kansai-airport")?.positionKind).toBe("FACILITY_REFERENCE");
-    expect(official).toHaveLength(15);
+    expect(official).toHaveLength(18);
     expect(official.filter(r => r.companyId === "times")).toHaveLength(7);
     expect(official.filter(r => r.companyId === "nippon")).toHaveLength(6);
-    expect(official.filter(r => r.companyId === "toyota")).toHaveLength(2);
+    expect(official.filter(r => r.companyId === "toyota")).toHaveLength(5);
     for (const r of official) expect(r.official?.checkedAt).toBe(r.companyId === "times" ? "2026-09-30" : "2026-10-01");
   });
   it("uses each branch summary, official link and reviewed phone without Times rules leaking", () => {
@@ -163,7 +163,7 @@ describe("strict parsers reject corruption", () => {
 describe("search, aliases, freshness and lazy requests", () => {
   it("treats a complete supported airport code as an exact airport lookup", () => {
     expect(searchRentals(index, { query: "ＯＫＡ", limit: 10000 }).map(row => row.id)).toEqual(["nippon-naha-airport-toyosaki", "times-naha-airport"]);
-    expect(searchRentals(index, { query: "fuk", limit: 10000 }).map(row => row.id)).toEqual(["times-fukuoka-airport-international"]);
+    expect(searchRentals(index, { query: "fuk", limit: 10000 }).map(row => row.id)).toEqual(["times-fukuoka-airport-international", "toyota-fukuoka-airport-international"]);
     expect(searchRentals(index, { query: "Fukuoka", limit: 10000 }).length).toBeGreaterThan(1);
   });
   it("searches original/language names, company, airport and address with NFKC normalization", () => {

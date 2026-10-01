@@ -205,7 +205,7 @@ test("leaving while a branch request is pending aborts it and cannot restore its
 });
 
 test("all reviewed shipped branches load real station candidates and keep every return destination distinct", async ({ page }, testInfo) => {
-  test.setTimeout(60_000); // 15 distinct facilities and complete return flows.
+  test.setTimeout(60_000); // All reviewed facilities and complete return flows.
   await rentalFixtures(page); await page.setViewportSize({ width: 1280, height: 900 });
   for (const branch of officialBranches) {
     const detail = await openDetail(page, branch, "zh-Hans");

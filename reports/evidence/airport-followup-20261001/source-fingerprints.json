@@ -1,0 +1,198 @@
+{
+  "checkedAt": "2026-10-01",
+  "note": "仅保存公开来源网址、获取时间和内容指纹；不发布官网正文、地图图片或PDF。HTTP 200不表示资料获授权或门店位置已核验。",
+  "sources": [
+    {
+      "name": "toyota-fuk",
+      "url": "https://rent.toyota.co.jp/shop/detail.aspx?rCode=68101&eCode=068",
+      "status": 200,
+      "bytes": 56748,
+      "sha256": "edd6a868cb1e9987176924c1bff544996b3753fef5c676b9a101321af7372a1a",
+      "fetchedAt": "2026-10-01T09:47:06.620156+00:00"
+    },
+    {
+      "name": "toyota-oka",
+      "url": "https://rent.toyota.co.jp/shop/detail.aspx?rCode=69101&eCode=017",
+      "status": 200,
+      "bytes": 42025,
+      "sha256": "8ae060531780e16b4822f7c5d8dd275becee4a401c22e36c7a6ac0aa2d7fc3bc",
+      "fetchedAt": "2026-10-01T09:47:07.413285+00:00"
+    },
+    {
+      "name": "toyota-nrt",
+      "url": "https://rent.toyota.co.jp/shop/detail.aspx?rCode=63601&eCode=035",
+      "status": 200,
+      "bytes": 42757,
+      "sha256": "67548dee9ae30470c038081edb764f546dde2e53d1b0980a9dfd09d4cbf7e7a1",
+      "fetchedAt": "2026-10-01T09:47:08.091991+00:00"
+    },
+    {
+      "name": "nippon-fuk",
+      "url": "https://store.nipponrentacar.co.jp/b/nrs/info/011185/",
+      "status": 200,
+      "bytes": 28057,
+      "sha256": "664cb7fb2c0dd4258f29b7ffbc29e98516b4aec91abe40261cb651602bce8868",
+      "fetchedAt": "2026-10-01T09:47:08.964600+00:00"
+    },
+    {
+      "name": "toyota-map-common",
+      "url": "https://rent.toyota.co.jp/js/mapMaster/mapCommon.js",
+      "status": 200,
+      "bytes": 21248,
+      "sha256": "c468a623ff010dfe79a0e9c2c7b3ec8066ae39cc5c59bbe01a4c378aebed9dd2",
+      "fetchedAt": "2026-10-01T09:48:47.533155+00:00"
+    },
+    {
+      "name": "toyota-map-display",
+      "url": "https://rent.toyota.co.jp/js/mapMaster/mapDisplay.js",
+      "status": 200,
+      "bytes": 20357,
+      "sha256": "3538f271f4a3b750ebad79ba1cad0ca38a0ee9fda5ec326dc4b001928b29d7da",
+      "fetchedAt": "2026-10-01T09:48:47.893525+00:00"
+    },
+    {
+      "name": "toyota-shop-map",
+      "url": "https://rent.toyota.co.jp/js/shop/shopMap.js",
+      "status": 200,
+      "bytes": 1679,
+      "sha256": "ecde17c3b135fe144dcac7377d64e459c4b0bd6b5d4837e4644c5c4a7d4e38c5",
+      "fetchedAt": "2026-10-01T09:48:48.248401+00:00"
+    },
+    {
+      "name": "toyota-atp-spider",
+      "url": "https://raw.githubusercontent.com/alltheplaces/alltheplaces/master/locations/spiders/toyota_rent_a_car_jp.py",
+      "status": 200,
+      "bytes": 4812,
+      "sha256": "52d48fc20e4f68d445b99917bbca5f913917dcb84a6b8cde5336692a9da53ac0",
+      "fetchedAt": "2026-10-01T09:49:49.029741+00:00"
+    },
+    {
+      "name": "toyota-ngo-return",
+      "url": "https://trl-aichi.co.jp/rent/5883328c02c9cd16e4ae865e91c405184d76eb4d.pdf",
+      "status": 200,
+      "bytes": 2004118,
+      "sha256": "29e7756dfab3b6749087eb73b30b53d6b9df91948b12b9fb0521d9dedebf15f9",
+      "fetchedAt": "2026-10-01T09:49:55.903599+00:00"
+    },
+    {
+      "name": "gsi-agreement",
+      "url": "https://vldb.gsi.go.jp/sokuchi/surveycalc/agreement.html",
+      "status": 200,
+      "bytes": 4288,
+      "sha256": "4e705cf905e24f787fcd57a4c3048461fb5c4f86456556e578f52abd3637a58b",
+      "fetchedAt": "2026-10-01T09:54:20.910916+00:00"
+    },
+    {
+      "name": "toyota-kix-map",
+      "url": "https://www.r-shinosaka.jp/wp-content/uploads/2024/02/%E9%96%A2%E7%A9%BA_%E5%9C%B0%E5%9B%B3-3-scaled.jpg",
+      "status": 200,
+      "bytes": 182261,
+      "sha256": "61fb57c7ecb2d31ccb73e04659042418a258c296b7c0197d2b8b3408dc6d4efb",
+      "fetchedAt": "2026-10-01T09:54:24.065036+00:00"
+    },
+    {
+      "name": "toyota-kix",
+      "url": "https://rent.toyota.co.jp/shop/detail.aspx?rCode=65302&eCode=400",
+      "status": 200,
+      "bytes": 39301,
+      "sha256": "de3e237d9f63eb683c7f0af8f249e99177fc2056c25cd81b0f49b37f3ad69084",
+      "fetchedAt": "2026-10-01T09:54:24.564091+00:00"
+    },
+    {
+      "name": "toyota-ngo",
+      "url": "https://trl-aichi.co.jp/rent/shops/detail/6c17253b533318bf01beb68da475153f8f5d312e.html",
+      "status": 200,
+      "bytes": 54437,
+      "sha256": "8e2a656bba4ce08b261c82667dbafe2963a82435bca0b85ffb6cd0e36dd0e698",
+      "fetchedAt": "2026-10-01T09:54:25.938681+00:00"
+    },
+    {
+      "name": "toyota-fuk-gsi",
+      "url": "https://vldb.gsi.go.jp/sokuchi/surveycalc/tky2jgd/tky2jgd.pl?outputType=json&sokuti=1&Place=1&latitude=33.5780652778&longitude=130.4459480556",
+      "status": 200,
+      "bytes": 90,
+      "sha256": "2fa01858bc6487965fe8fd6d09965876a487aac55b0dfb634d2ebcf1602ffed9",
+      "fetchedAt": "2026-10-01T09:55:13.114771+00:00"
+    },
+    {
+      "name": "toyota-nrt-gsi",
+      "url": "https://vldb.gsi.go.jp/sokuchi/surveycalc/tky2jgd/tky2jgd.pl?outputType=json&sokuti=1&Place=1&latitude=35.7810950000&longitude=140.3867136111",
+      "status": 200,
+      "bytes": 90,
+      "sha256": "86b3cb66a27a14f01454f3f5b27ce48fca6b9b3e39677c78835a04c22c24fb55",
+      "fetchedAt": "2026-10-01T09:55:19.009707+00:00"
+    },
+    {
+      "name": "toyota-oka-gsi",
+      "url": "https://vldb.gsi.go.jp/sokuchi/surveycalc/tky2jgd/tky2jgd.pl?outputType=json&sokuti=1&Place=1&latitude=26.1681883333&longitude=127.6534777778",
+      "status": 200,
+      "bytes": 90,
+      "sha256": "94ec23f108acaf9038ab1eb5450d4cd90374fd172490abd6bcf2806a46215616",
+      "fetchedAt": "2026-10-01T09:55:24.961706+00:00"
+    },
+    {
+      "name": "toyota-kix-gsi",
+      "url": "https://vldb.gsi.go.jp/sokuchi/surveycalc/tky2jgd/tky2jgd.pl?outputType=json&sokuti=1&Place=1&latitude=34.4333005556&longitude=135.2452183333",
+      "status": 200,
+      "bytes": 90,
+      "sha256": "9691e1c19d82635a65f237e5e56a941a258693bd66fe4936f31f7aaed5273f22",
+      "fetchedAt": "2026-10-01T09:55:30.916914+00:00"
+    },
+    {
+      "name": "okinawa-facilities-2024",
+      "url": "https://www.pref.okinawa.lg.jp/_res/projects/default_project/_page_/001/004/763/r06nanbu.pdf",
+      "status": 200,
+      "bytes": 1203979,
+      "sha256": "f87066d34de304049fb9e353159fbc5d7691bab5dd7e13cd9f7c994fb1a40443",
+      "fetchedAt": "2026-10-01T09:56:54.854372+00:00"
+    },
+    {
+      "name": "toyota-ngo-central",
+      "url": "https://rent.toyota.co.jp/shop/detail.aspx?rCode=64701&eCode=053",
+      "status": 200,
+      "bytes": 39177,
+      "sha256": "02de2ee148c2a236bc42a0245a87d703e57ef737be572367a2dc2acb43e676fa",
+      "fetchedAt": "2026-10-01T09:58:01.836075+00:00"
+    },
+    {
+      "name": "toyota-nrt-return",
+      "url": "https://rent.toyota.co.jp/shop/route/1_0020.html",
+      "status": 200,
+      "bytes": 13705,
+      "sha256": "68e4bfe8389e852056385388b08ecbff9aa4a89902b4ce381cf8be828829fc9c",
+      "fetchedAt": "2026-10-01T09:58:02.200793+00:00"
+    },
+    {
+      "name": "hertz-nrt",
+      "url": "https://www.hertz.com/us/en/location/japan/chiba/nrtt50",
+      "status": 200,
+      "bytes": 12765,
+      "sha256": "8eb7e8636f1addaaf6c8578f24d6f402d099e963a5d91ff79978830e8ac38086",
+      "fetchedAt": "2026-10-01T09:58:02.828394+00:00"
+    },
+    {
+      "name": "toyota-oka-recruit",
+      "url": "https://trl-okinawa-recruit.jp/-/top/index.html",
+      "status": 200,
+      "bytes": 44568,
+      "sha256": "4aebb8fb91c5f7c055c52fdf979502993d3d0c985feef8e4aaebbff9061ebe69",
+      "fetchedAt": "2026-10-01T09:58:04.808375+00:00"
+    },
+    {
+      "name": "toyota-ngo-gsi",
+      "url": "https://vldb.gsi.go.jp/sokuchi/surveycalc/tky2jgd/tky2jgd.pl?outputType=json&sokuti=1&Place=1&latitude=34.8566252778&longitude=136.8191850000",
+      "status": 200,
+      "bytes": 107,
+      "sha256": "b4f1a6ee32da38ec24f6e628d497917d41254b06d530614e201cf64d983d9660",
+      "fetchedAt": "2026-10-01T09:58:50.332488+00:00"
+    },
+    {
+      "name": "nippon-fuk-gsi",
+      "url": "https://vldb.gsi.go.jp/sokuchi/surveycalc/tky2jgd/tky2jgd.pl?outputType=json&sokuti=1&Place=1&latitude=33.5810684681&longitude=130.4420486111",
+      "status": 200,
+      "bytes": 90,
+      "sha256": "2625a0a662f3774aae32e067cadb10bff280b225180b3823ae99d72ac06a1a33",
+      "fetchedAt": "2026-10-01T09:58:56.275923+00:00"
+    }
+  ]
+}

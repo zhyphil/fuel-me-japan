@@ -373,7 +373,7 @@
   "rdCounterHelp": "此记录是接待柜台，并非已核实的车辆返还地点，无法开启返店导航。请向租车公司确认实际还车地址。",
   "rdRecordedWebsite": "已记录网站",
   "rdReturnNotes": "已核对的还车安排",
-  "rdScope": "官方核对涵盖七机场15家设施的地址与归还安排：7家Times、6家Nippon、2家Toyota。新增设施地图点沿用OSM／Overture参考位置，不是已核验车辆入口，也不代表完整门店覆盖。",
+  "rdScope": "官方核对涵盖七机场18家设施的地址与归还安排：7家Times、6家Nippon、5家Toyota。新增设施地图点沿用OSM／Overture参考位置，不是已核验车辆入口，也不代表完整门店覆盖。",
   "rdAirportDirections": "机场官方车辆返还指引",
   "rdRuleSource": "来源：Times 还车用油条款",
   "rdContractRules": "请依自己的预约与租车合同确认油量、收据要求及是否可在此还车；此处未核实该门店的加油政策。",
@@ -437,5 +437,12 @@
   "rental.shop.toyota-haneda-airport-international": "归还至羽田1-15-11国际线门店，不能直接还车至机场，也不能在营业时间外还车。门店公布接驳范围为第二、第三航站楼；不要与羽田国内线店混淆。",
   "rental.shop.toyota-new-chitose-airport-poplar": "归还至美々758-137的Poplar（ポプラ）门店，按门店安排乘接驳车前往新千岁机场。不要与Suzuran（すずらん）门店混淆；官网列明11月10日休业，出行前请核对预约日期。",
   "rdOfficialWebsite": "官方网站 ↗",
-  "rdStale": "资料已满90天。使用前请向相应租车公司重新核对门店、归还安排及适用的用油／收据要求。"
+  "rdStale": "资料已满90天。使用前请向相应租车公司重新核对门店、归还安排及适用的用油／收据要求。",
+  "rental.shop.toyota-narita-airport": "归还至取香530-13的成田机场门店，不能直接在航站楼还车。办完手续后由门店安排接驳；第三航站楼旅客需从第二航站楼转乘机场循环巴士或使用连通步道。",
+  "rental.shop.toyota-chubu-centrair-airport": "官方返还图要求将车辆停在Access Plaza一楼门店旁的租车停车区，并使用租车专用入口（レンタカー専用入口）。第一航站楼国际线出发柜台与TOYOTA SHARE停车位不是本门店的返还目的地；请按预约和现场指引办理。地图仅为设施参考点。",
+  "rental.shop.toyota-fukuoka-airport-international": "官方列明東那珂2-22-3的福岡INTERNATIONAL门店可办理还车，并提供福冈机场国际线免费接驳。航站楼一楼联合案内柜台用于接驳接待；还车请核对预约门店和当天指引。地图仅为门店参考点，车辆入口未核实。",
+  "rdCompanyReturnDirections": "租车公司还车指引",
+  "rdCompanyReturnMap": "租车公司还车图（PDF）",
+  "rdOfficialShopDetails": "官方门店详情",
+  "rdSupplementarySource": "补充官方资料"
 }

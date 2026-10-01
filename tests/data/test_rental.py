@@ -209,10 +209,10 @@ class ReviewedAirportTests(unittest.TestCase):
         self.path = ROOT / 'data/curation/rental-airports.json'
         self.data = json.loads(self.path.read_text())
 
-    def test_reviewed_fifteen_rows_with_original_times_dates(self):
+    def test_reviewed_eighteen_rows_with_original_times_dates(self):
         data = rental.official_rows(self.path)
-        self.assertEqual(len(data['records']), 15)
-        self.assertEqual(Counter(r['companyId'] for r in data['records']), {'times': 7, 'nippon': 6, 'toyota': 2})
+        self.assertEqual(len(data['records']), 18)
+        self.assertEqual(Counter(r['companyId'] for r in data['records']), {'times': 7, 'nippon': 6, 'toyota': 5})
         self.assertTrue(all(r['checkedAt'] == '2026-09-30' for r in data['records'] if r['companyId'] == 'times'))
 
     def test_nippon_branch_urls_match_legacy_mapion_not_homepage(self):
@@ -403,7 +403,7 @@ class PublishedRentalTests(unittest.TestCase):
         members = [s for r in self.records for s in r['sources']]
         self.assertEqual(len({s['key'] for s in members}), len(members))
         self.assertEqual(sum(s['sourceId'] in {'osm', 'overture'} for s in members) + self.audit['excludedCount'], self.audit['inputObjectsTotalKnown'])
-        self.assertEqual(self.audit['count'] + self.audit['sourceObjectsMerged'], self.audit['retainedSourceObjects'] + 15)
+        self.assertEqual(self.audit['count'] + self.audit['sourceObjectsMerged'], self.audit['retainedSourceObjects'] + 18)
         identity = self.load(self.manifest['identity'])
         for r in self.records:
             for s in r['sources']:
@@ -419,7 +419,7 @@ class PublishedRentalTests(unittest.TestCase):
     def test_seven_airports_official_evidence_no_entrance_claim(self):
         official = [r for r in self.records if r['verification'] == 'OFFICIAL_FACILITY_CHECKED']
         self.assertEqual({r['airportCode'] for r in official}, {'NRT', 'HND', 'KIX', 'NGO', 'CTS', 'FUK', 'OKA'})
-        self.assertEqual(len(official), 15)
+        self.assertEqual(len(official), 18)
         self.assertTrue({'times-naha-airport', 'times-new-chitose-airport', 'times-fukuoka-airport-international'} <= {r['id'] for r in official})
         for r in official:
             self.assertEqual(r['official']['checkedAt'], '2026-09-30' if r['companyId'] == 'times' else '2026-10-01')
@@ -432,19 +432,22 @@ class PublishedRentalTests(unittest.TestCase):
         self.assertIn('成田', nrt['names']['primary'])
         self.assertNotIn('宮崎', nrt['names']['primary'])
 
-    def test_old_times_details_and_all_prior_links_remain_unchanged_or_resolvable(self):
-        previous = DATA / 'snapshots/rental-v1-1b43cbc1f43d95a5'
-        old = [r for path in (previous / 'partitions').glob('*.json') for r in json.loads(path.read_text())['records']]
+    def test_old_official_details_and_all_prior_links_remain_unchanged_or_resolvable(self):
         current = {r['id']: r for r in self.records}
         aliases = {a: r['id'] for r in self.records for a in r['aliases']}
-        for r in old:
-            for key in [r['id'], *r['aliases']]:
-                self.assertIn(aliases.get(key, key), current)
-            if r['official']:
-                self.assertEqual(current[r['id']], r)
-        old_members = {s['key']: s for r in old for s in r['sources'] if s['sourceId'] in {'osm', 'overture'}}
         new_members = {s['key']: s for r in self.records for s in r['sources'] if s['sourceId'] in {'osm', 'overture'}}
-        self.assertEqual(old_members, new_members)
+        for version in ('rental-v1-1b43cbc1f43d95a5', 'rental-v1-4292016845adde58'):
+            with self.subTest(previous=version):
+                previous = DATA / 'snapshots' / version
+                old = [r for path in (previous / 'partitions').glob('*.json') for r in json.loads(path.read_text())['records']]
+                self.assertTrue(old)
+                for r in old:
+                    for key in [r['id'], *r['aliases']]:
+                        self.assertIn(aliases.get(key, key), current)
+                    if r['official']:
+                        self.assertEqual(current[r['id']], r)
+                old_members = {s['key']: s for r in old for s in r['sources'] if s['sourceId'] in {'osm', 'overture'}}
+                self.assertEqual(old_members, new_members)
 
     def test_published_source_inputs_equal_pinned_reviewed_hashes_and_dates(self):
         sources = self.load(self.manifest['sourceRegistry'])

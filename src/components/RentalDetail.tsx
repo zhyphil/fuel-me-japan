@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { messages, type Locale } from "../i18n";
+import { messages, type Locale, type MessageKey } from "../i18n";
 import { prefectureName } from "../lib/find-fuel";
 import { findRentalById, loadRentalLocation, rentalNeedsRecheck, rentalRuleFor, rentalOfficialWebsite, type RentalIndex, type RentalManifest, type RentalLocation } from "../lib/rental";
 import { rentalName, rentalStatus } from "../lib/rental-view";
@@ -7,6 +7,15 @@ import { navigate, rentalHref, safeWebsite, updateRouteMetadata, type AppRoute }
 import type { FuelType, PartitionCode } from "../lib/stations";
 import { RentalMap } from "./RentalMap";
 import { ReturnCar } from "./ReturnCar";
+
+// Labels describe the reviewed document, not merely the airport of its branch.
+const supplementaryLabels: Partial<Record<string, MessageKey>> = {
+  "https://www.centrair.jp/en/access/rental-car/return-route.html": "rdAirportDirections",
+  "https://www.centrair.jp/access/rental-car/return-route.html": "rdAirportDirections",
+  "https://rent.toyota.co.jp/shop/route/1_0020.html": "rdCompanyReturnDirections",
+  "https://trl-aichi.co.jp/rent/shops/detail/6c17253b533318bf01beb68da475153f8f5d312e.html": "rdOfficialShopDetails",
+  "https://trl-aichi.co.jp/rent/5883328c02c9cd16e4ae865e91c405184d76eb4d.pdf": "rdCompanyReturnMap",
+};
 
 export function RentalNotFound({ locale }: { locale: Locale }) { const t = messages[locale]; return <section className="rental-not-found" role="status"><h1>{t.rdNotFound}</h1><p>{t.rdNotFoundHelp}</p><a className="button" href={rentalHref(locale)}>{t.rdBackDirectory}</a></section>; }
 export function RentalDetail({ manifest, index, route, tileUrl, fuel }: { manifest: RentalManifest; index: RentalIndex; route: AppRoute; tileUrl: string | null | undefined; fuel: FuelType | null }) {
@@ -39,7 +48,7 @@ export function RentalDetail({ manifest, index, route, tileUrl, fuel }: { manife
       {!location && !error && <p role="status">{t.rcLoading}</p>}
       {error && <div role="alert"><p>{t.rcError}</p><button className="button" type="button" onClick={() => { setError(false); setAttempt(value => value + 1); }}>{t.ffRetry}</button></div>}
       {location && <><div className="rental-websites">{!official && !location.websites.some(url => safeWebsite(url)) && <p>{t.rdRecordedWebsite}: {t.ffUnknown}</p>}{officialWebsite && <a href={officialWebsite} target="_blank" rel="noopener noreferrer">{t.rdOfficialWebsite}</a>}{location.websites.filter(url => safeWebsite(url) && !official).map((url, i) => <a key={url} href={safeWebsite(url)!} target="_blank" rel="noopener noreferrer">{t.rdRecordedWebsite} {i + 1}<span className="field-help">{new URL(url).hostname}</span></a>)}</div>
-        {official && <aside className="rental-official-notes"><h2>{t.rdReturnNotes}</h2><p>{t[official.summaryKey]}</p><p>{t.rdScope}</p><p>{t.rcChecked.replace("{date}", official.checkedAt)}</p>{rentalNeedsRecheck(official.checkedAt) && <p role="alert">{t.rdStale}</p>}{official.supplementaryUrls.map(url => <p key={url}><a href={url} target="_blank" rel="noopener noreferrer">{t.rdAirportDirections}</a></p>)}</aside>}
+        {official && <aside className="rental-official-notes"><h2>{t.rdReturnNotes}</h2><p>{t[official.summaryKey]}</p><p>{t.rdScope}</p><p>{t.rcChecked.replace("{date}", official.checkedAt)}</p>{rentalNeedsRecheck(official.checkedAt) && <p role="alert">{t.rdStale}</p>}{official.supplementaryUrls.map(url => <p key={url}><a href={url} target="_blank" rel="noopener noreferrer">{t[supplementaryLabels[url] ?? "rdSupplementarySource"]}</a></p>)}</aside>}
         <aside className="return-car-rules">{rule ? <><p>{t.rcRules}</p><dl className="refuel-guide-labels"><div><dt lang="ja">満タン</dt><dd>{t.rgFullTank}</dd></div><div><dt lang="ja">領収書 / レシート</dt><dd>{t.rcReceipt}</dd></div></dl><a href={rule.url} target="_blank" rel="noopener noreferrer">{t.rdRuleSource}</a>{rentalNeedsRecheck(rule.checkedAt) && <p role="alert">{t.rdStale}</p>}</> : <p>{t.rdContractRules}</p>}</aside>
         <details className="rental-record-sources"><summary>{t.rdRecordSources}</summary><ul>{location.sources.map(source => <li key={source.key}><a href={safeWebsite(source.url) || undefined} target="_blank" rel="noopener noreferrer">{source.sourceId}: {source.recordId}</a><p><time dateTime={source.sourceDate}>{source.sourceDate}</time> · {source.licenses.join(", ")}</p></li>)}</ul></details>
       </>}

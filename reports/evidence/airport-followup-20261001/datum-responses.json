@@ -1,0 +1,47 @@
+{
+  "note": "国土地理院TKY2JGD公开服务的原始响应，仅用于Tokyo Datum至JGD2000的位置交叉核对；未写回产品坐标。中部机场返回海域错误，不能视为换算成功。",
+  "attribution": "国土地理院 測量計算サイト TKY2JGD",
+  "url": "https://vldb.gsi.go.jp/sokuchi/surveycalc/main.html",
+  "responses": {
+    "toyota-kix-gsi": {
+      "OutputData": {
+        "ellipsoid": "GRS80",
+        "latitude": "34.436579211",
+        "longitude": "135.242436442"
+      }
+    },
+    "toyota-oka-gsi": {
+      "OutputData": {
+        "ellipsoid": "GRS80",
+        "latitude": "26.172111892",
+        "longitude": "127.651623978"
+      }
+    },
+    "toyota-ngo-gsi": {
+      "OutputData": {
+        "ErrMsg": "010:指定された座標は海域のため、変換できませんでした。"
+      }
+    },
+    "nippon-fuk-gsi": {
+      "OutputData": {
+        "ellipsoid": "GRS80",
+        "latitude": "33.584360028",
+        "longitude": "130.439716967"
+      }
+    },
+    "toyota-nrt-gsi": {
+      "OutputData": {
+        "ellipsoid": "GRS80",
+        "latitude": "35.784333811",
+        "longitude": "140.383417708"
+      }
+    },
+    "toyota-fuk-gsi": {
+      "OutputData": {
+        "ellipsoid": "GRS80",
+        "latitude": "33.581357214",
+        "longitude": "130.443616217"
+      }
+    }
+  }
+}

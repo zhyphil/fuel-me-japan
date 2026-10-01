@@ -373,7 +373,7 @@
   "rdCounterHelp": "이 기록은 접수 카운터이며 확인된 차량 반납 장소가 아닙니다. 반납 길찾기를 제공하지 않습니다. 렌터카 회사에 실제 반납 주소를 확인하세요.",
   "rdRecordedWebsite": "기록된 웹사이트",
   "rdReturnNotes": "확인된 반납 안내",
-  "rdScope": "공식 확인 범위는 7개 공항의 시설 15곳(Times 7곳, Nippon 6곳, Toyota 2곳)의 주소와 반납 안내입니다. 추가 시설의 지도 위치는 기존 OSM/Overture 참고점을 사용하며 확인된 차량 입구가 아닙니다. 모든 지점을 포함하지 않습니다.",
+  "rdScope": "공식 확인 범위는 7개 공항의 시설 18곳(Times 7곳, Nippon 6곳, Toyota 5곳)의 주소와 반납 안내입니다. 추가 시설의 지도 위치는 기존 OSM/Overture 참고점을 사용하며 확인된 차량 입구가 아닙니다. 모든 지점을 포함하지 않습니다.",
   "rdAirportDirections": "공항 공식 차량 반납 경로",
   "rdRuleSource": "출처: Times 반납 연료 약관",
   "rdContractRules": "연료량, 영수증 요구 사항과 이 지점의 반납 가능 여부는 예약 및 계약으로 확인하세요. 이 지점의 연료 정책은 확인되지 않았습니다.",
@@ -437,5 +437,12 @@
   "rental.shop.toyota-haneda-airport-international": "羽田1-15-11의 국제선 지점에 반납하세요. 공항 자체나 지점 영업시간 외에는 반납할 수 없습니다. 지점이 안내하는 셔틀 운행 대상은 제2·제3터미널입니다. 하네다 국내선 지점과 혼동하지 마세요.",
   "rental.shop.toyota-new-chitose-airport-poplar": "美々758-137의 Poplar(ポプラ) 지점에 반납하고 직원 안내에 따라 신치토세공항 셔틀을 이용하세요. Suzuran(すずらん) 지점과 혼동하지 마세요. 공식 페이지에 11월 10일 휴무로 기재되어 있으니 출발 전 예약 날짜를 확인하세요.",
   "rdOfficialWebsite": "공식 웹사이트 ↗",
-  "rdStale": "확인한 지 90일 이상 지났습니다. 사용 전에 해당 렌터카 회사에 지점, 반납 방법 및 적용되는 연료·영수증 조건을 다시 확인하세요."
+  "rdStale": "확인한 지 90일 이상 지났습니다. 사용 전에 해당 렌터카 회사에 지점, 반납 방법 및 적용되는 연료·영수증 조건을 다시 확인하세요.",
+  "rental.shop.toyota-narita-airport": "터미널에 직접 반납하지 말고 取香530-13의 나리타공항 지점에 반납하세요. 절차를 마친 뒤 지점 안내에 따라 셔틀을 이용하세요. 제3터미널 이용객은 제2터미널에서 공항 순환버스나 연결 통로를 이용해야 합니다.",
+  "rental.shop.toyota-chubu-centrair-airport": "공식 반납 안내도는 Access Plaza 1층 지점 옆 렌터카 주차 구역에 주차하고 렌터카 전용 입구(レンタカー専用入口)를 이용하도록 안내합니다. 제1터미널 국제선 출발 카운터와 TOYOTA SHARE 주차 구역은 이 지점의 반납 장소가 아닙니다. 예약 내용과 현장 안내를 따르세요. 지도는 시설 참고 위치입니다.",
+  "rental.shop.toyota-fukuoka-airport-international": "공식 페이지는 東那珂2-22-3의 福岡INTERNATIONAL 지점에서 반납할 수 있으며 후쿠오카공항 국제선 무료 셔틀을 제공한다고 안내합니다. 터미널 1층 공동 안내 카운터는 셔틀 접수용입니다. 예약한 지점과 반납일 안내를 확인하세요. 지도는 지점 참고 위치이며 차량 입구는 확인되지 않았습니다.",
+  "rdCompanyReturnDirections": "렌터카 회사의 반납 안내",
+  "rdCompanyReturnMap": "렌터카 회사의 반납 안내도(PDF)",
+  "rdOfficialShopDetails": "공식 지점 상세 정보",
+  "rdSupplementarySource": "추가 공식 자료"
 }

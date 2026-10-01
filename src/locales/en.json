@@ -373,7 +373,7 @@
   "rdCounterHelp": "This record is a reception counter, not a verified vehicle-return site. Return navigation is unavailable. Ask your rental company for the actual vehicle-return address.",
   "rdRecordedWebsite": "Recorded website",
   "rdReturnNotes": "Return arrangements checked",
-  "rdScope": "Official checks cover addresses and return arrangements for 15 facilities across seven airports: 7 Times, 6 Nippon and 2 Toyota. New facilities retain OSM/Overture map reference points, not verified vehicle entrances. This is not complete branch coverage.",
+  "rdScope": "Official checks cover addresses and return arrangements for 18 facilities across seven airports: 7 Times, 6 Nippon and 5 Toyota. New facilities retain OSM/Overture map reference points, not verified vehicle entrances. This is not complete branch coverage.",
   "rdAirportDirections": "Airport’s official vehicle-return directions",
   "rdRuleSource": "Source: Times fuel-return terms",
   "rdContractRules": "Confirm fuel level, receipt requirements and return eligibility with your own booking and rental contract. No branch-specific fuel policy has been verified here.",
@@ -437,5 +437,12 @@
   "rental.shop.toyota-haneda-airport-international": "Return to the international-terminal branch at 羽田1-15-11. Returns at the airport itself or outside branch opening hours are not accepted. The branch lists shuttle service to Terminals 2 and 3; do not confuse it with the Haneda domestic-terminal branch.",
   "rental.shop.toyota-new-chitose-airport-poplar": "Return to the Poplar (ポプラ) branch at 美々758-137, then follow staff arrangements for the shuttle to New Chitose Airport. Do not confuse it with Suzuran (すずらん). The official page lists closure on November 10; confirm your booking date before travel.",
   "rdOfficialWebsite": "Official website ↗",
-  "rdStale": "This information is at least 90 days old. Recheck the branch, return arrangements and applicable fuel/receipt terms with your rental company before use."
+  "rdStale": "This information is at least 90 days old. Recheck the branch, return arrangements and applicable fuel/receipt terms with your rental company before use.",
+  "rental.shop.toyota-narita-airport": "Return to the Narita Airport branch at 取香530-13, not directly to a terminal. After the return procedure, follow the branch arrangements for the shuttle. For Terminal 3, transfer from Terminal 2 by airport shuttle bus or the connecting walkway.",
+  "rental.shop.toyota-chubu-centrair-airport": "The official return guide directs you to park beside the branch on the first floor of Access Plaza and use the rental-car entrance (レンタカー専用入口). The international departure counter in Terminal 1 and TOYOTA SHARE parking are not this branch’s return destination. Follow your booking and on-site signs. The map is a facility reference point.",
+  "rental.shop.toyota-fukuoka-airport-international": "The official page lists returns at the 福岡INTERNATIONAL branch at 東那珂2-22-3 and free shuttle service for Fukuoka Airport’s international terminal. The shared desk on the terminal’s first floor handles shuttle reception. Check your booked branch and the instructions for your return day. The map is a branch reference point; its vehicle entrance has not been verified.",
+  "rdCompanyReturnDirections": "Rental company’s return directions",
+  "rdCompanyReturnMap": "Rental company’s return map (PDF)",
+  "rdOfficialShopDetails": "Official branch details",
+  "rdSupplementarySource": "Additional official information"
 }

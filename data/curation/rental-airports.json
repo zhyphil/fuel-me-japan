@@ -1,6 +1,6 @@
 {
   "reviewDate": "2026-10-01",
-  "scope": "保留原7家Times；新增6家Nippon和2家Toyota有限官方事实。七机场均已检索，但福冈本次候选存在坐标或匹配冲突，未提升核验状态。车辆入口均未核实。",
+  "scope": "七机场共18条有限官方事实：7家Times、6家Nippon、5家Toyota。本轮补核剩余6家，明确成田、中部、福冈Toyota的既有候选映射；关西Toyota、福冈Nippon、那霸Seaside的身份或位置问题继续保留。全部车辆入口未核实。",
   "records": [
     {
       "id": "times-narita-airport",
@@ -392,6 +392,107 @@
       "recordId": "61201:002",
       "summaryKey": "rental.shop.toyota-new-chitose-airport-poplar",
       "officialPhone": "0123-23-0100"
+    },
+    {
+      "id": "toyota-narita-airport",
+      "airportCode": "NRT",
+      "companyId": "toyota",
+      "prefectureCode": "JP-12",
+      "nameJa": "トヨタレンタカー 成田空港店",
+      "addressJa": "千葉県成田市取香530-13",
+      "lat": 35.7843254,
+      "lon": 140.3833355,
+      "possibleOsmMatch": null,
+      "officialCheckUrl": "https://rent.toyota.co.jp/shop/detail.aspx?rCode=63601&eCode=035",
+      "checkedAt": "2026-10-01",
+      "coordinateEvidence": "沿用OSM n4457845665参考点；官方Tokyo Datum坐标经国土地理院TKY2JGD换算后相距约7米，只作位置交叉核对。没有用换算点替换原坐标，未核实车辆入口。详见reports/rental-airport-followup-20261001.md。",
+      "positionKind": "SHOP_REFERENCE",
+      "returnLocationStatus": "OFFICIAL_FACILITY_CHECKED",
+      "vehicleEntranceStatus": "NOT_VERIFIED",
+      "notesZhHans": "归还至取香530-13的成田机场门店，不能直接在航站楼还车。办完手续后由门店安排接驳；第三航站楼旅客需从第二航站楼转乘机场循环巴士或使用连通步道。",
+      "supplementarySourceUrls": [
+        "https://rent.toyota.co.jp/shop/route/1_0020.html"
+      ],
+      "reviewedSourceMatches": [
+        {
+          "key": "osm-n4457845665",
+          "reasonZhHans": "明确的成田空港店分店名；官方测地系换算参考点距该点约7米。OSM operator=Hertz可由Hertz官方NRTT50页同一530-13地址和0476-32-1020电话交叉解释；另有Overture同地址同电话记录位于约6米处。只作门店参考，不把机场柜台或入口混入。"
+        },
+        {
+          "key": "overture-0a8f2512-0716-483d-8534-247665ccc295",
+          "reasonZhHans": "Toyota公司、取香530-13完整地址及0476-32-1020电话与官方63601/035一致，距保留的OSM参考点约6米。原始邮编及其他属性完整保留。"
+        }
+      ],
+      "sourceId": "toyota-official",
+      "recordId": "63601:035",
+      "summaryKey": "rental.shop.toyota-narita-airport",
+      "officialPhone": "0476-32-1020"
+    },
+    {
+      "id": "toyota-chubu-centrair-airport",
+      "airportCode": "NGO",
+      "companyId": "toyota",
+      "prefectureCode": "JP-23",
+      "nameJa": "トヨタレンタカー 中部国際空港店",
+      "addressJa": "愛知県常滑市セントレア1-1 マルチアクセスターミナルビル1F",
+      "lat": 34.8600197,
+      "lon": 136.8160248,
+      "possibleOsmMatch": null,
+      "officialCheckUrl": "https://rent.toyota.co.jp/shop/detail.aspx?rCode=64701&eCode=053",
+      "checkedAt": "2026-10-01",
+      "coordinateEvidence": "沿用OSM n11197679909参考点；原记录电话与官方分店一致，距经营公司网页所含设施参考点约2米。官方返还PDF用于区分门店旁停车区、租车专用入口、国际线出发柜台和TOYOTA SHARE；没有从图片取点或核实入口。",
+      "positionKind": "FACILITY_REFERENCE",
+      "returnLocationStatus": "OFFICIAL_FACILITY_CHECKED",
+      "vehicleEntranceStatus": "NOT_VERIFIED",
+      "notesZhHans": "官方返还图要求将车辆停在Access Plaza一楼门店旁的租车停车区，并使用租车专用入口（レンタカー専用入口）。第一航站楼国际线出发柜台与TOYOTA SHARE停车位不是本门店的返还目的地；请按预约和现场指引办理。地图仅为设施参考点。",
+      "supplementarySourceUrls": [
+        "https://trl-aichi.co.jp/rent/shops/detail/6c17253b533318bf01beb68da475153f8f5d312e.html",
+        "https://trl-aichi.co.jp/rent/5883328c02c9cd16e4ae865e91c405184d76eb4d.pdf",
+        "https://www.centrair.jp/access/rental-car/return-route.html"
+      ],
+      "reviewedSourceMatches": [
+        {
+          "key": "osm-n11197679909",
+          "reasonZhHans": "Toyota公司及电话+81-569-38-0100与官方64701/053的0569-38-0100一致。其位置距经营公司公布的门店参考点约2米，官方返还图明确门店邻接还车停车区。采用设施参考点，不采用约748米外的Overture同名记录。"
+        }
+      ],
+      "sourceId": "toyota-official",
+      "recordId": "64701:053",
+      "summaryKey": "rental.shop.toyota-chubu-centrair-airport",
+      "officialPhone": "0569-38-0100"
+    },
+    {
+      "id": "toyota-fukuoka-airport-international",
+      "airportCode": "FUK",
+      "companyId": "toyota",
+      "prefectureCode": "JP-40",
+      "nameJa": "トヨタレンタカー 福岡INTERNATIONAL店",
+      "addressJa": "福岡県福岡市博多区東那珂二丁目22番3号",
+      "lat": 33.5815304,
+      "lon": 130.4436313,
+      "possibleOsmMatch": null,
+      "officialCheckUrl": "https://rent.toyota.co.jp/shop/detail.aspx?rCode=68101&eCode=068",
+      "checkedAt": "2026-10-01",
+      "coordinateEvidence": "沿用OSM n13357237818参考点；官网Tokyo Datum坐标经国土地理院TKY2JGD换算后相距约19米，与现有OSM/Foursquare点一致。未吸收约440米外直接照搬旧测地系数值的AllThePlaces候选，未调整距离阈值或原始坐标。",
+      "positionKind": "SHOP_REFERENCE",
+      "returnLocationStatus": "OFFICIAL_FACILITY_CHECKED",
+      "vehicleEntranceStatus": "NOT_VERIFIED",
+      "notesZhHans": "官方列明東那珂2-22-3的福岡INTERNATIONAL门店可办理还车，并提供福冈机场国际线免费接驳。航站楼一楼联合案内柜台用于接驳接待；还车请核对预约门店和当天指引。地图仅为门店参考点，车辆入口未核实。",
+      "supplementarySourceUrls": [],
+      "reviewedSourceMatches": [
+        {
+          "key": "osm-n13357237818",
+          "reasonZhHans": "OSM官方链接包含同一分店编号68101/068，电话+81-92-778-0100一致；官方坐标换算后距该参考点约19米。"
+        },
+        {
+          "key": "overture-619e2992-fa38-4d6c-a0f8-31cf9f93e4b9",
+          "reasonZhHans": "Foursquare来源的完整门店名、東那珂2-22-3地址、092-778-0100电话及官方68101/068链接全部一致；与OSM点约4米，保留既有合并成员。"
+        }
+      ],
+      "sourceId": "toyota-official",
+      "recordId": "68101:068",
+      "summaryKey": "rental.shop.toyota-fukuoka-airport-international",
+      "officialPhone": "092-778-0100"
     }
   ]
 }

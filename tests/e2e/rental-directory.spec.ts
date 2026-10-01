@@ -128,7 +128,7 @@ for (const branch of officialBranches) test(`${branch.id}: official detail is di
     await expect(detail.locator(".rental-official-notes")).toContainText("vehicle entrance");
     expect(branch.positionKind).toBe("FACILITY_REFERENCE");
   }
-  if (branch.airportCode === "NGO") await expect(detail.getByRole("link", { name: messages.en.rdAirportDirections })).toHaveAttribute("href", "https://www.centrair.jp/en/access/rental-car/return-route.html");
+  if (branch.airportCode === "NGO") await expect(detail.getByRole("link", { name: messages.en.rdAirportDirections })).toHaveAttribute("href", branch.companyId === "toyota" ? "https://www.centrair.jp/access/rental-car/return-route.html" : "https://www.centrair.jp/en/access/rental-car/return-route.html");
   const website = branch.companyId === "toyota" ? "https://rent.toyota.co.jp/" : branch.companyId === "times" ? "https://www.timescar-rental.com/en/" : location.official!.url;
   await expect(detail.getByRole("link", { name: messages.en.rdOfficialWebsite, exact: true })).toHaveAttribute("href", website);
   if (branch.companyId !== "times") {
@@ -148,6 +148,25 @@ for (const branch of officialBranches) test(`${branch.id}: official detail is di
   await page.reload();
   await expect(detail.locator("#return-fuel")).toBeVisible(); await expect(detail.locator("h1")).toHaveText(branch.names.primary!);
   expect(partitionRequests).toEqual([expectedPartition, expectedPartition]); expect(errors).toEqual([]);
+});
+
+for (const locale of locales) test(`${locale}: supplemented airport notes and distinct source links fit a narrow detail`, async ({ page }) => {
+  await rentalFixtures(page); await stationFixtures(page, { empty: true });
+  await page.setViewportSize({ width: 320, height: 844 });
+  const t = messages[locale];
+  for (const id of ["toyota-narita-airport", "toyota-chubu-centrair-airport", "toyota-fukuoka-airport-international"]) {
+    const branch = officialBranches.find(row => row.id === id)!;
+    await page.goto(detailPath(branch, locale));
+    const detail = page.getByTestId("rental-detail");
+    await expect(detail.locator(".rental-official-notes")).toContainText(t[rentalLocation(branch).official!.summaryKey]);
+    if (id === "toyota-chubu-centrair-airport") {
+      await expect(detail.getByRole("link", { name: t.rdCompanyReturnMap, exact: true })).toHaveAttribute("href", "https://trl-aichi.co.jp/rent/5883328c02c9cd16e4ae865e91c405184d76eb4d.pdf");
+      await expect(detail.getByRole("link", { name: t.rdOfficialShopDetails, exact: true })).toHaveAttribute("href", "https://trl-aichi.co.jp/rent/shops/detail/6c17253b533318bf01beb68da475153f8f5d312e.html");
+      await expect(detail.getByRole("link", { name: t.rdAirportDirections, exact: true })).toHaveAttribute("href", "https://www.centrair.jp/access/rental-car/return-route.html");
+    }
+    if (id === "toyota-narita-airport") await expect(detail.getByRole("link", { name: t.rdCompanyReturnDirections, exact: true })).toHaveAttribute("href", "https://rent.toyota.co.jp/shop/route/1_0020.html");
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  }
 });
 
 for (const locale of locales) test(`${locale}: locale links retain detail ID/query and synchronize metadata on directory navigation`, async ({ page }) => {

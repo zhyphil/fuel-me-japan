@@ -1,0 +1,76 @@
+{
+  "note": "本地构建的中文桌面和窄屏视觉复核；外部请求已拦截，地图为灰色离线测试瓦片。",
+  "results": [
+    {
+      "id": "toyota-narita-airport",
+      "engine": "chromium",
+      "width": 1280,
+      "title": "トヨタレンタカー 成田空港店 | Fuel Me Japan",
+      "supplementalLinks": [
+        {
+          "text": "租车公司还车指引",
+          "href": "https://rent.toyota.co.jp/shop/route/1_0020.html"
+        }
+      ],
+      "overflow": false,
+      "errors": [],
+      "screenshot": "chromium-toyota-narita-airport-1280.png"
+    },
+    {
+      "id": "toyota-chubu-centrair-airport",
+      "engine": "chromium",
+      "width": 1280,
+      "title": "トヨタレンタカー 中部国際空港店 | Fuel Me Japan",
+      "supplementalLinks": [
+        {
+          "text": "官方门店详情",
+          "href": "https://trl-aichi.co.jp/rent/shops/detail/6c17253b533318bf01beb68da475153f8f5d312e.html"
+        },
+        {
+          "text": "租车公司还车图（PDF）",
+          "href": "https://trl-aichi.co.jp/rent/5883328c02c9cd16e4ae865e91c405184d76eb4d.pdf"
+        },
+        {
+          "text": "机场官方车辆返还指引",
+          "href": "https://www.centrair.jp/access/rental-car/return-route.html"
+        }
+      ],
+      "overflow": false,
+      "errors": [],
+      "screenshot": "chromium-toyota-chubu-centrair-airport-1280.png"
+    },
+    {
+      "id": "toyota-fukuoka-airport-international",
+      "engine": "chromium",
+      "width": 1280,
+      "title": "トヨタレンタカー 福岡INTERNATIONAL店 | Fuel Me Japan",
+      "supplementalLinks": [],
+      "overflow": false,
+      "errors": [],
+      "screenshot": "chromium-toyota-fukuoka-airport-international-1280.png"
+    },
+    {
+      "id": "toyota-chubu-centrair-airport",
+      "engine": "webkit",
+      "width": 320,
+      "title": "トヨタレンタカー 中部国際空港店 | Fuel Me Japan",
+      "supplementalLinks": [
+        {
+          "text": "官方门店详情",
+          "href": "https://trl-aichi.co.jp/rent/shops/detail/6c17253b533318bf01beb68da475153f8f5d312e.html"
+        },
+        {
+          "text": "租车公司还车图（PDF）",
+          "href": "https://trl-aichi.co.jp/rent/5883328c02c9cd16e4ae865e91c405184d76eb4d.pdf"
+        },
+        {
+          "text": "机场官方车辆返还指引",
+          "href": "https://www.centrair.jp/access/rental-car/return-route.html"
+        }
+      ],
+      "overflow": false,
+      "errors": [],
+      "screenshot": "webkit-toyota-chubu-centrair-airport-320.png"
+    }
+  ]
+}

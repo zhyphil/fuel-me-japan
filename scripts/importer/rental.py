@@ -386,7 +386,7 @@ def official_attributes(fact):
 def official_rows(path):
     data = read(path)
     expected = REVIEWED['records']
-    require(data['reviewDate'] == REVIEWED['reviewDate'] and len(data['records']) == len(expected), '仅接受本批已审核15条事实')
+    require(data['reviewDate'] == REVIEWED['reviewDate'] and len(data['records']) == len(expected), '仅接受本批已审核18条事实')
     require({r['id'] for r in data['records']} == set(expected), '官方门店白名单不符')
     owners = set()
     for r in data['records']:
@@ -597,7 +597,7 @@ def generate(osm_path, overture_path, boundaries_path, official_path, licenses_p
     inventory = read(inventory_path)
     require(inventory.get('release') == RELEASE and len(inventory.get('files', [])) == 16, '缺少已固定 Overture 下载清单')
     inputs.append({'name': inventory_path.name, 'sha256': sha(inventory_path.read_bytes()), 'bytes': inventory_path.stat().st_size})
-    sources_doc = {'osmUpstreamGeometryAudit': {'inputPbfSha256': upstream['inputPbfSha256'], 'osmSnapshot': upstream['osmSnapshot'], 'independentPbfObjectCount': upstream['independentPbfObjectCount'], 'taggedWithoutExportedGeometry': missing, 'note': '沿用已交接的PBF与几何导出核对；本节点未重新读取PBF。完整导出文件哈希单列于inputs，不能和早期导出哈希混用。'}, 'overtureInventory': inventory, 'schemaVersion': 1, 'sources': sources, 'inputs': inputs, 'overtureRelease': RELEASE, 'upstreamLicenses': LICENSES, 'license': 'ODbL-1.0', 'modifications': '日本分类筛选、排除明确共享汽车及停业点、几何选取、严格行政区归属、保守分店去重、稳定ID、有限官方事实叠加。置信度不作为核验。', 'refreshPolicy': '手动获取和复核；默认日期不刷新。官方事实90天起提示重新核对。', 'scope': '七机场共15条有限官方事实：旧7家Times、新6家Nippon和2家Toyota。核对地址与归还安排；新增坐标沿用OSM/Overture参考点，不是已核验入口。全国候选不是完整营业门店清单。'}
+    sources_doc = {'osmUpstreamGeometryAudit': {'inputPbfSha256': upstream['inputPbfSha256'], 'osmSnapshot': upstream['osmSnapshot'], 'independentPbfObjectCount': upstream['independentPbfObjectCount'], 'taggedWithoutExportedGeometry': missing, 'note': '沿用已交接的PBF与几何导出核对；本节点未重新读取PBF。完整导出文件哈希单列于inputs，不能和早期导出哈希混用。'}, 'overtureInventory': inventory, 'schemaVersion': 1, 'sources': sources, 'inputs': inputs, 'overtureRelease': RELEASE, 'upstreamLicenses': LICENSES, 'license': 'ODbL-1.0', 'modifications': '日本分类筛选、排除明确共享汽车及停业点、几何选取、严格行政区归属、保守分店去重、稳定ID、有限官方事实叠加。置信度不作为核验。', 'refreshPolicy': '手动获取和复核；默认日期不刷新。官方事实90天起提示重新核对。', 'scope': '七机场共18条有限官方事实：7家Times、6家Nippon和5家Toyota。核对地址与归还安排；新增坐标沿用OSM/Overture参考点，不是已核验入口。全国候选不是完整营业门店清单。'}
     version = TRANSFORM + '-' + sha(encode({'records': records, 'audit': audit, 'sources': sources_doc, 'identity': identity}))[:16]
     prefix = 'snapshots/' + version + '/'
     def artifact(name, data, count=None):

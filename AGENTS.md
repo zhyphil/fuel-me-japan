@@ -1,5 +1,16 @@
 # Fuel Me Japan — implementation boundaries
 
+## 持续发布约定（2026-10-01，优先于历史仅本地限制）
+
+用户明确要求：“以后每个任务检查好了，一切验证都通过符合预期任务要求之后，都自动 conventional commit，然后push 部署，不用等我手动告知。”
+
+- 每项已授权任务达到要求并完成相称检查后，自动使用 Conventional Commits 格式提交，推送既有GitHub仓库，并部署到既有Cloudflare Pages生产项目 `fuel-me-japan` 与 `fuel-me-japan.com`；无需再次请求发布确认。
+- 沿用当前开发分支与 `main` 的既有发布流程；确认远端无冲突再快进推送，不强推、不覆盖他人或主目录未提交的改动。已确认相同最终源码的有效检查可复用，不为重复流程而重跑全部测试。
+- 部署后核对正式域名、实际资源版本与受影响功能，生成中文完成／发布报告；发布报告的纯文档补充提交也自动推送，不需重复部署相同运行资源。
+- 检查失败、真实权限或外部阻塞须如实报告，不将未通过项标为通过。已明确保留的未知数据与范围限制继续保留，不以完成发布为由编造资料。
+- 此为后续已授权任务的默认交付流程，不授权自动新增功能、改变数据许可、放开noindex、启用分析或主动发送对外消息。用户以后明确要求暂停或仅本地处理时，以最新要求为准。
+
+
 Read every file in `Fuel-Me-Japan-M0-Handoff-Package/00–10` (actual filenames are numbered 00 through 10) before changing scope. `10-CLAUDE-CODEX-HANDOFF.md` defines the handoff requirements.
 
 Current authorization: **The user has now requested completion of all remaining tasks in TASKS.md: manual-only M0.2 cleanup, mobile/browser verification, existing data-refresh reliability, M0.3 refuelling guidance and M0.4 return-car refuelling. Finish checks, Chinese reports, commit/push and deployment to the existing production project. Stop adding features after M0.4. Vehicle-based recommendations and manufacturer data enquiries remain deferred.** No UHR game-engine rules apply here.
@@ -113,3 +124,10 @@ Current authorization: **The user has now requested completion of all remaining 
 2026-10-01 用户要求继续后，已按既定流程提交、推送和部署已完成的数据质量维护、七机场有限事实扩充及当前语言文字显示。应用 `114fc73`，Cloudflare Production部署 `d10c74c3`；正式域名243项资源／深层URL完整性核对与实际页面操作通过。新增8家官方有限事实与既有7家Times合计15家，车辆入口仍未现场核实。报告见 `reports/data-quality-language-release-20261001.md`；后续证据提交不改变应用部署版本。
 
 本条更新此前暂停／仅本地完成的历史状态。此次发布完成后停止，不自动新增功能、接入gogo.gs、推进车型资料、绕过官方价403、开放noindex或启用分析。主目录既有改动不覆盖。
+
+
+## 最新任务：剩余机场门店补核已本地完成
+
+2026-10-01 用户选择“补核剩余机场门店资料”。本轮已复查6家，新增Toyota成田、中部、福冈国际线三家有限事实；关西Toyota、福冈Nippon、那霸Toyota Seaside保留。官方有限事实合计18家，车辆入口全部未实测；新数据 `rental-v1-2769bcab1437116e` 共7,383条。没有扩展车辆推荐、即时价格或全国坐标修正。
+
+完整检查362单元／323 Chromium、63数据、39 WebKit通过；原15家资料与历史链接保留。报告见 `reports/rental-airport-followup-20261001.md`。当前改动未commit、push或部署，线上仍为上一批发布版本；主目录历史改动、冻结规格及既有报告不覆盖。不要把3家仍保留的候选、官网参考坐标或测地系换算视为已核实的车辆入口。
