@@ -50,6 +50,7 @@ try {
       if(path==='return-car/') await expect(page.locator('.rental-card')).toHaveCount(25);
       else if(path.includes('times-naha')) await expect(page.locator('#return-fuel')).toBeVisible();
       else if(!path) await expect(page.locator('.map-surface.leaflet-container')).toBeVisible();
+      console.log(JSON.stringify({path,width,loaded:await page.evaluate(()=>({styles:[...document.styleSheets].map(sheet=>sheet.href),scripts:[...document.scripts].map(script=>script.src),position:getComputedStyle(document.querySelector('.site-header')).position}))}));
       const initialHeader=await pinned();
       const main=await page.locator('#main').boundingBox();
       assert.ok(main.y>=initialHeader.height-1,'正文不能被页头遮挡');

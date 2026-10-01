@@ -1,0 +1,30 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+ExpectError: expect(received).toBeLessThan(expected)
+
+Expected: < 1
+Received:   1940
+
+Call Log:
+- Timeout 5000ms exceeded while waiting on the predicate
+    at captureRawStack (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/node_modules/playwright-core/lib/coreBundle.js:8588:17)
+    at callMatcherAsStep (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/node_modules/playwright/lib/matchers/expect.js:13310:57)
+    at Object.toBeLessThan (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/node_modules/playwright/lib/matchers/expect.js:13302:23)
+    at pinned (/private/tmp/fmj-sticky-header-20261001/production-smoke.mjs:31:74)
+    at /private/tmp/fmj-sticky-header-20261001/production-smoke.mjs:58:26 {
+  matcherResult: {
+    pass: false,
+    message: 'expect(received).toBeLessThan(expected)\n' +
+      '\n' +
+      'Expected: < 1\n' +
+      'Received:   1940\n' +
+      '\n' +
+      'Call Log:\n' +
+      '- Timeout 5000ms exceeded while waiting on the predicate',
+    name: 'toBeLessThan'
+  }
+}
+
+Node.js v24.14.0

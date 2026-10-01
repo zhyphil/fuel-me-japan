@@ -1,0 +1,16 @@
+{"path":"about/","width":430,"loaded":{"styles":["https://fuel-me-japan.com/assets/index-ubLmRuYY.css"],"scripts":["https://fuel-me-japan.com/assets/index-CMw3m_1T.js"],"position":"fixed"}}
+{"path":"refuel-guide/","width":430,"loaded":{"styles":["https://fuel-me-japan.com/assets/index-ubLmRuYY.css"],"scripts":["https://fuel-me-japan.com/assets/index-CMw3m_1T.js"],"position":"fixed"}}
+{"path":"return-car/","width":430,"loaded":{"styles":["https://fuel-me-japan.com/assets/index-ubLmRuYY.css"],"scripts":["https://fuel-me-japan.com/assets/index-CMw3m_1T.js"],"position":"fixed"}}
+{"path":"return-car/times-naha-airport/","width":430,"loaded":{"styles":["https://fuel-me-japan.com/assets/index-ubLmRuYY.css"],"scripts":["https://fuel-me-japan.com/assets/index-CMw3m_1T.js"],"position":"fixed"}}
+{"path":"","width":430,"loaded":{"styles":["https://fuel-me-japan.com/assets/index-ubLmRuYY.css"],"scripts":["https://fuel-me-japan.com/assets/index-CMw3m_1T.js"],"position":"fixed"}}
+{"path":"about/","width":320,"loaded":{"styles":["https://fuel-me-japan.com/assets/index-ubLmRuYY.css"],"scripts":["https://fuel-me-japan.com/assets/index-CMw3m_1T.js"],"position":"fixed"}}
+{"path":"refuel-guide/","width":320,"loaded":{"styles":["https://fuel-me-japan.com/assets/index-ubLmRuYY.css"],"scripts":["https://fuel-me-japan.com/assets/index-CMw3m_1T.js"],"position":"fixed"}}
+{"path":"return-car/","width":320,"loaded":{"styles":["https://fuel-me-japan.com/assets/index-ubLmRuYY.css"],"scripts":["https://fuel-me-japan.com/assets/index-CMw3m_1T.js"],"position":"fixed"}}
+{"path":"return-car/times-naha-airport/","width":320,"loaded":{"styles":["https://fuel-me-japan.com/assets/index-ubLmRuYY.css"],"scripts":["https://fuel-me-japan.com/assets/index-CMw3m_1T.js"],"position":"fixed"}}
+{"path":"","width":320,"loaded":{"styles":["https://fuel-me-japan.com/assets/index-ubLmRuYY.css"],"scripts":["https://fuel-me-japan.com/assets/index-CMw3m_1T.js"],"position":"fixed"}}
+{"path":"about/","width":1280,"loaded":{"styles":["https://fuel-me-japan.com/assets/index-ubLmRuYY.css"],"scripts":["https://fuel-me-japan.com/assets/index-CMw3m_1T.js"],"position":"fixed"}}
+{"path":"refuel-guide/","width":1280,"loaded":{"styles":["https://fuel-me-japan.com/assets/index-ubLmRuYY.css"],"scripts":["https://fuel-me-japan.com/assets/index-CMw3m_1T.js"],"position":"fixed"}}
+{"path":"return-car/","width":1280,"loaded":{"styles":["https://fuel-me-japan.com/assets/index-ubLmRuYY.css"],"scripts":["https://fuel-me-japan.com/assets/index-CMw3m_1T.js"],"position":"fixed"}}
+{"path":"return-car/times-naha-airport/","width":1280,"loaded":{"styles":["https://fuel-me-japan.com/assets/index-ubLmRuYY.css"],"scripts":["https://fuel-me-japan.com/assets/index-CMw3m_1T.js"],"position":"fixed"}}
+{"path":"","width":1280,"loaded":{"styles":["https://fuel-me-japan.com/assets/index-ubLmRuYY.css"],"scripts":["https://fuel-me-japan.com/assets/index-CMw3m_1T.js"],"position":"fixed"}}
+{"status":"PASS","httpCount":19,"productionUI":"PASS","layouts":15}

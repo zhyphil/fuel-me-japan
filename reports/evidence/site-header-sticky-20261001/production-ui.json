@@ -1,0 +1,121 @@
+{
+  "status": "PASS",
+  "description": "正式网站真实资源与数据，Chromium 手机和桌面视口模拟；不是实体 iPhone 验收。",
+  "checkedAt": "2026-10-01T13:51:59.680Z",
+  "checks": [
+    "320／430／1280px下五类页面滚到底部，Logo、语言与所有导航持续可见且可点",
+    "正文顶部预留实际页头高度，无横向溢出",
+    "打开语言菜单不改变页面滚动位置，菜单完整位于视口",
+    "页面底部切换语言后保留About路径",
+    "通过固定导航进入加油指引",
+    "页面无脚本异常"
+  ],
+  "layouts": [
+    {
+      "path": "/zh-Hans/about/",
+      "width": 430,
+      "scrollY": 1940,
+      "headerHeight": 103,
+      "headerY": 0
+    },
+    {
+      "path": "/zh-Hans/refuel-guide/",
+      "width": 430,
+      "scrollY": 908,
+      "headerHeight": 103,
+      "headerY": 0
+    },
+    {
+      "path": "/zh-Hans/return-car/",
+      "width": 430,
+      "scrollY": 1026,
+      "headerHeight": 103,
+      "headerY": 0
+    },
+    {
+      "path": "/zh-Hans/return-car/times-naha-airport/",
+      "width": 430,
+      "scrollY": 2811,
+      "headerHeight": 103,
+      "headerY": 0
+    },
+    {
+      "path": "/zh-Hans/",
+      "width": 430,
+      "scrollY": 0,
+      "headerHeight": 103,
+      "headerY": 0
+    },
+    {
+      "path": "/zh-Hans/about/",
+      "width": 320,
+      "scrollY": 2280,
+      "headerHeight": 111.59375,
+      "headerY": 0
+    },
+    {
+      "path": "/zh-Hans/refuel-guide/",
+      "width": 320,
+      "scrollY": 1198,
+      "headerHeight": 111.59375,
+      "headerY": 0
+    },
+    {
+      "path": "/zh-Hans/return-car/",
+      "width": 320,
+      "scrollY": 1051,
+      "headerHeight": 111.59375,
+      "headerY": 0
+    },
+    {
+      "path": "/zh-Hans/return-car/times-naha-airport/",
+      "width": 320,
+      "scrollY": 3091,
+      "headerHeight": 111.59375,
+      "headerY": 0
+    },
+    {
+      "path": "/zh-Hans/",
+      "width": 320,
+      "scrollY": 23,
+      "headerHeight": 111.59375,
+      "headerY": 0
+    },
+    {
+      "path": "/zh-Hans/about/",
+      "width": 1280,
+      "scrollY": 874,
+      "headerHeight": 65,
+      "headerY": 0
+    },
+    {
+      "path": "/zh-Hans/refuel-guide/",
+      "width": 1280,
+      "scrollY": 710,
+      "headerHeight": 65,
+      "headerY": 0
+    },
+    {
+      "path": "/zh-Hans/return-car/",
+      "width": 1280,
+      "scrollY": 440,
+      "headerHeight": 65,
+      "headerY": 0
+    },
+    {
+      "path": "/zh-Hans/return-car/times-naha-airport/",
+      "width": 1280,
+      "scrollY": 1821,
+      "headerHeight": 65,
+      "headerY": 0
+    },
+    {
+      "path": "/zh-Hans/",
+      "width": 1280,
+      "scrollY": 0,
+      "headerHeight": 65,
+      "headerY": 0
+    }
+  ],
+  "pageErrors": []
+}

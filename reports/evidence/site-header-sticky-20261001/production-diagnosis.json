@@ -1,0 +1,130 @@
+{
+  "description": "首次生产验收的页头置顶断言失败，未保存当次浏览器资源版本，原因未确认。随后记录实际资源并检查，页头固定正常；未修改应用源码或放宽断言，完整重测通过。",
+  "observations": [
+    {
+      "path": "about/",
+      "state": {
+        "html": "<html lang=\"zh-Hans\" data-fixed-header=\"\" style=\"--site-header-height: 103px;\"><head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta name=\"theme-color\" content=\"#173f37\">\n    <meta name=\"robots\" content=\"index, follow\">\n    <meta name=\"google-adsense-account\" content=\"ca-pub-8063428584007009\">\n    <meta name=\"description\" content=\"为赴日自驾游客提供多语言加油信息，帮助你找到加油站、安排还车前加油，并读懂现场日文标识。\">\n    <title>关于 Fuel Me Japan | Fuel Me Japan</title>\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon.svg\">\n    <script type=\"module\" crossorigin=\"\" src=\"/assets/index-CMw3m_1T.js\"></script>\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/",
+        "styles": [
+          "https://fuel-me-japan.com/assets/index-ubLmRuYY.css"
+        ],
+        "position": "fixed",
+        "top": "0px",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 430,
+          "height": 103,
+          "top": 0,
+          "right": 430,
+          "bottom": 103,
+          "left": 0
+        },
+        "scrollY": 1940,
+        "resources": [
+          "https://fuel-me-japan.com/assets/index-CMw3m_1T.js"
+        ]
+      }
+    },
+    {
+      "path": "refuel-guide/",
+      "state": {
+        "html": "<html lang=\"zh-Hans\" data-fixed-header=\"\" style=\"--site-header-height: 103px;\"><head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta name=\"theme-color\" content=\"#173f37\">\n    <meta name=\"robots\" content=\"index, follow\">\n    <meta name=\"google-adsense-account\" content=\"ca-pub-8063428584007009\">\n    <meta name=\"description\" content=\"了解在日本加油的五个步骤、常见日文标识与注意事项。\">\n    <title>加油指引 | Fuel Me Japan</title>\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon.svg\">\n    <script type=\"module\" crossorigin=\"\" src=\"/assets/index-CMw3m_1T.js\"></script>\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/rolldown-runtime-CbXtAM7H.js\">\n",
+        "styles": [
+          "https://fuel-me-japan.com/assets/index-ubLmRuYY.css"
+        ],
+        "position": "fixed",
+        "top": "0px",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 430,
+          "height": 103,
+          "top": 0,
+          "right": 430,
+          "bottom": 103,
+          "left": 0
+        },
+        "scrollY": 908,
+        "resources": [
+          "https://fuel-me-japan.com/assets/index-CMw3m_1T.js"
+        ]
+      }
+    },
+    {
+      "path": "return-car/",
+      "state": {
+        "html": "<html lang=\"zh-Hans\" data-fixed-header=\"\" style=\"--site-header-height: 103px;\"><head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta name=\"theme-color\" content=\"#173f37\">\n    <meta name=\"robots\" content=\"index, follow\">\n    <meta name=\"google-adsense-account\" content=\"ca-pub-8063428584007009\">\n    <meta name=\"description\" content=\"搜索日本已记录的租车地点，核对预约的还车地址，再找附近加油站。\">\n    <title>查找还车门店 | Fuel Me Japan</title>\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon.svg\">\n    <script type=\"module\" crossorigin=\"\" src=\"/assets/index-CMw3m_1T.js\"></script>\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/rolldown-runtime-CbXtAM",
+        "styles": [
+          "https://fuel-me-japan.com/assets/index-ubLmRuYY.css"
+        ],
+        "position": "fixed",
+        "top": "0px",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 430,
+          "height": 103,
+          "top": 0,
+          "right": 430,
+          "bottom": 103,
+          "left": 0
+        },
+        "scrollY": 541,
+        "resources": [
+          "https://fuel-me-japan.com/assets/index-CMw3m_1T.js"
+        ]
+      }
+    },
+    {
+      "path": "return-car/times-naha-airport/",
+      "state": {
+        "html": "<html lang=\"zh-Hans\" data-fixed-header=\"\" style=\"--site-header-height: 103px;\"><head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta name=\"theme-color\" content=\"#173f37\">\n    <meta name=\"robots\" content=\"noindex, nofollow\">\n    <meta name=\"google-adsense-account\" content=\"ca-pub-8063428584007009\">\n    <meta name=\"description\" content=\"搜索日本已记录的租车地点，核对预约的还车地址，再找附近加油站。\">\n    <title>查找还车门店 | Fuel Me Japan</title>\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon.svg\">\n    <script type=\"module\" crossorigin=\"\" src=\"/assets/index-CMw3m_1T.js\"></script>\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/rolldown-runtime-Cb",
+        "styles": [
+          "https://fuel-me-japan.com/assets/index-ubLmRuYY.css"
+        ],
+        "position": "fixed",
+        "top": "0px",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 430,
+          "height": 103,
+          "top": 0,
+          "right": 430,
+          "bottom": 103,
+          "left": 0
+        },
+        "scrollY": 0,
+        "resources": [
+          "https://fuel-me-japan.com/assets/index-CMw3m_1T.js"
+        ]
+      }
+    },
+    {
+      "path": "",
+      "state": {
+        "html": "<html lang=\"zh-Hans\"><head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta name=\"theme-color\" content=\"#173f37\">\n    <meta name=\"robots\" content=\"index, follow\">\n    <meta name=\"google-adsense-account\" content=\"ca-pub-8063428584007009\">\n    <meta name=\"description\" content=\"在地图上查找日本加油站。选择地区或主动使用定位，查看有日期的参考信息，未知信息如实标明。\">\n    <title>日本加油站地图 — Fuel Me Japan</title>\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon.svg\">\n    <script type=\"module\" crossorigin=\"\" src=\"/assets/index-CMw3m_1T.js\"></script>\n    <link rel=\"modulepreload\" crossorigin=\"\" href=\"/assets/rolldown-runtime-CbXtAM7H.js\">\n    <link rel=\"stylesheet\" crossorig",
+        "styles": [
+          "https://fuel-me-japan.com/assets/index-ubLmRuYY.css"
+        ],
+        "position": "sticky",
+        "top": "0px",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "width": 430,
+          "height": 103,
+          "top": 0,
+          "right": 430,
+          "bottom": 103,
+          "left": 0
+        },
+        "scrollY": 0,
+        "resources": [
+          "https://fuel-me-japan.com/assets/index-CMw3m_1T.js"
+        ]
+      }
+    }
+  ]
+}
