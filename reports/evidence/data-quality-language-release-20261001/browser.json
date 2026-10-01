@@ -1,0 +1,41 @@
+{
+  "recordedAt": "2026-10-01T09:39:56.592009+00:00",
+  "productionUrl": "https://fuel-me-japan.com",
+  "applicationCommit": "114fc7338c4a0cf3e7b6830cf81648451f75ccee",
+  "method": "通过真实应用内浏览器操作和可见页面核对；未调用定位。",
+  "checks": [
+    {
+      "name": "中文首页显示当前语言",
+      "result": "PASS",
+      "observed": "页头显示地球图标、简体中文和下拉箭头；地图目录完成加载。",
+      "screenshot": "production-home.jpg"
+    },
+    {
+      "name": "切换到英文",
+      "result": "PASS",
+      "observed": "打开语言菜单并点击English后进入/en/，页头同步显示English。"
+    },
+    {
+      "name": "新增羽田门店直达",
+      "result": "PASS",
+      "url": "https://fuel-me-japan.com/zh-Hans/return-car/nippon-haneda-airport/",
+      "observed": "ニッポンレンタカー 羽田空港，地址東京都大田区羽田5-2-1、电话050-1712-2661、官方门店链接及2026年10月1日核对日期均正常；车辆入口仍未核实；按各公司合同核对的提示正常。",
+      "screenshot": "production-rental.jpg"
+    },
+    {
+      "name": "附近加油站加载",
+      "result": "PASS",
+      "observed": "新增羽田门店附近候选加载，当前页25条、共6页。"
+    },
+    {
+      "name": "交付页面",
+      "result": "PASS",
+      "observed": "返回中文首页并保留正式页面供用户查看。"
+    }
+  ],
+  "limitations": [
+    "未进行实体手机、母语真人或现场车辆入口验收。",
+    "实时油价未接入。"
+  ],
+  "status": "PASS"
+}

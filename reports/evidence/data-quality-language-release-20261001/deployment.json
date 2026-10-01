@@ -1,0 +1,9 @@
+{
+  "Id": "d10c74c3-03c2-4b3f-a3be-af9b297fa26c",
+  "Environment": "Production",
+  "Branch": "main",
+  "Source": "114fc73",
+  "Deployment": "https://d10c74c3.fuel-me-japan.pages.dev",
+  "Status": "27 seconds ago",
+  "Build": "https://dash.cloudflare.com/4d84d2f73decf12ea381b1896ceeb93a/pages/view/fuel-me-japan/d10c74c3-03c2-4b3f-a3be-af9b297fa26c"
+}
