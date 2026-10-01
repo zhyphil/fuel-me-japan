@@ -1,2 +1,9 @@
+# AdSense site verification and content review only.
+User-agent: Mediapartners-Google
+User-agent: Google-Display-Ads-Bot
+Allow: /
+
+# Keep the existing search-preview restriction.
 User-agent: *
+Allow: /ads.txt
 Disallow: /
