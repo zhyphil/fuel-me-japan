@@ -100,9 +100,11 @@ const escape = (value: string) =>
         char
       ]!,
   );
+const sitemapUrls = new Set<string>();
 function render(locale: Locale, kind: "home" | "directory" | "guide" | "about" = "home") {
   const suffix = { home: "", directory: "return-car/", guide: "refuel-guide/", about: "about/" }[kind];
   const routePath = `/${locale}/${suffix}`;
+  sitemapUrls.add(`${siteOrigin}${routePath}`);
   const title = kind === "home" ? messages[locale].pageTitle : `${kind === "guide" ? messages[locale].rgTitle : kind === "about" ? messages[locale].aboutTitle : messages[locale].rdTitle} | Fuel Me Japan`;
   const description = kind === "home" ? messages[locale].description : kind === "guide" ? messages[locale].rgIntro : kind === "about" ? messages[locale].aboutIntro : messages[locale].rdIntro;
   return shell
@@ -135,6 +137,13 @@ for (const locale of locales) {
   await writeFile(`dist/${locale}/about/index.html`, render(locale, "about"));
 }
 await writeFile("dist/index.html", render("en"));
+// Only canonical prerendered business pages belong in this sitemap.
+// The root duplicates /en/; query variants and client-only details are excluded.
+// Omit lastmod rather than presenting the build time as a content update.
+await writeFile(
+  "dist/sitemap.xml",
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[...sitemapUrls].sort().map(url => `  <url><loc>${escape(url)}</loc></url>`).join("\n")}\n</urlset>\n`,
+);
 await writeFile(
   "dist/build-provenance.json",
   JSON.stringify(

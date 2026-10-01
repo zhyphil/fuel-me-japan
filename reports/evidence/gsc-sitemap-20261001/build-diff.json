@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "unchangedFiles": 338,
+  "changed": [
+    "build-provenance.json",
+    "robots.txt"
+  ],
+  "added": [
+    "sitemap.xml"
+  ],
+  "note": "与上一批部署相比，网页HTML、JS、CSS、数据和图标全部相同；只新增sitemap，修改robots和构建时间。"
+}

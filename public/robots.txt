@@ -6,4 +6,7 @@ Allow: /
 # Keep the existing search-preview restriction.
 User-agent: *
 Allow: /ads.txt
+Allow: /sitemap.xml
 Disallow: /
+
+Sitemap: https://fuel-me-japan.com/sitemap.xml

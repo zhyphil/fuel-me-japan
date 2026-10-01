@@ -1,0 +1,27 @@
+{
+  "sitemapValidation": "PASS",
+  "urls": [
+    "https://fuel-me-japan.com/en/",
+    "https://fuel-me-japan.com/en/about/",
+    "https://fuel-me-japan.com/en/refuel-guide/",
+    "https://fuel-me-japan.com/en/return-car/",
+    "https://fuel-me-japan.com/ko/",
+    "https://fuel-me-japan.com/ko/about/",
+    "https://fuel-me-japan.com/ko/refuel-guide/",
+    "https://fuel-me-japan.com/ko/return-car/",
+    "https://fuel-me-japan.com/th/",
+    "https://fuel-me-japan.com/th/about/",
+    "https://fuel-me-japan.com/th/refuel-guide/",
+    "https://fuel-me-japan.com/th/return-car/",
+    "https://fuel-me-japan.com/zh-Hans/",
+    "https://fuel-me-japan.com/zh-Hans/about/",
+    "https://fuel-me-japan.com/zh-Hans/refuel-guide/",
+    "https://fuel-me-japan.com/zh-Hans/return-car/",
+    "https://fuel-me-japan.com/zh-Hant/",
+    "https://fuel-me-japan.com/zh-Hant/about/",
+    "https://fuel-me-japan.com/zh-Hant/refuel-guide/",
+    "https://fuel-me-japan.com/zh-Hant/return-car/"
+  ],
+  "indexing": "PENDING_USER_DECISION",
+  "note": "20个规范URL、XML、静态页面与多语言集合核对通过；页面禁止收录及禁止抓取仍保留。"
+}
