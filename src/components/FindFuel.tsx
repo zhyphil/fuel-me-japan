@@ -5,6 +5,7 @@ import { formatOpeningHours } from "../lib/opening-hours";
 import { fuelTypes, isPriceStale, navigationUrl, prefecturalPrices, prefectureName, prefectures } from "../lib/find-fuel";
 import { isJapanCoordinates, loadDataManifest, loadNearbyStations, loadOfficialPrices, loadPrefectureStations, type Coordinates, type DataManifest, type FuelType, type PrefectureCode, type PriceFile, type Station, type TriState } from "../lib/stations";
 import { FuelMap, type FuelMapHandle } from "./FuelMap";
+import { MapDetailPanel } from "./MapDetailPanel";
 import { StationMiniMap } from "./StationMiniMap";
 import { isFuelType } from "../lib/fuel-preference";
 import { allFuelPriceViews, STATION_QUOTES, type FuelPriceViews } from "../lib/station-price-view";
@@ -26,7 +27,7 @@ const fuelKeys = { REGULAR: "ffRegular", HIGH_OCTANE: "ffHighOctane", DIESEL: "f
 const fuelJapanese = { REGULAR: japaneseLabels.regular, HIGH_OCTANE: japaneseLabels.highOctane, DIESEL: japaneseLabels.diesel };
 const fuelFields = { REGULAR: "fuelRegular", HIGH_OCTANE: "fuelHighOctane", DIESEL: "fuelDiesel" } as const;
 
-export function FindFuel({ locale, selectedFuels, onChangeFuels: changeFuels, onResetFuels, mapTileUrl, onTileProvider, onOpenMyFuel }: { onOpenMyFuel: (trigger: HTMLButtonElement) => void; locale: Locale; selectedFuels: FuelType[]; onChangeFuels: (fuels: FuelType[]) => void; onResetFuels: () => void; mapTileUrl: string | null | undefined; onTileProvider: (url: string | null | undefined) => void }) {
+export function FindFuel({ active = true, locale, selectedFuels, onChangeFuels: changeFuels, onResetFuels, mapTileUrl, onTileProvider, onOpenMyFuel }: { active?: boolean; onOpenMyFuel: (trigger: HTMLButtonElement) => void; locale: Locale; selectedFuels: FuelType[]; onChangeFuels: (fuels: FuelType[]) => void; onResetFuels: () => void; mapTileUrl: string | null | undefined; onTileProvider: (url: string | null | undefined) => void }) {
   const t = messages[locale];
   const selectedFuel = selectedFuels[0];
   const [normalStatus, setStatus] = useState<Status>("overviewLoading");
@@ -49,6 +50,7 @@ export function FindFuel({ locale, selectedFuels, onChangeFuels: changeFuels, on
   useEffect(() => { setLimit(25); }, [selectedFuels]);
   const [selected, setSelected] = useState<Result | null>(null);
   const [members, setMembers] = useState<Station[] | null>(null);
+  useEffect(() => { if (!active) { setSelected(null); setMembers(null); } }, [active]);
   const [regionOptions, setRegionOptions] = useState<PrefectureCode[] | null>(null);
   const [view, setView] = useState<"map" | "list">("map");
   const [viewRevision, setViewRevision] = useState(0);
@@ -59,8 +61,6 @@ export function FindFuel({ locale, selectedFuels, onChangeFuels: changeFuels, on
   const locationTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const lastSearch = useRef<Search | null>(null);
   const map = useRef<FuelMapHandle>(null);
-  const detailPanel = useRef<HTMLElement>(null);
-  useEffect(() => { if (detailPanel.current) detailPanel.current.scrollTop = 0; }, [selected?.id]);
   const regionSelect = useRef<HTMLSelectElement>(null);
   const origin = useRef<{ kind: "map" | "list" | "members" | "thumbnail"; id: string; view: "map" | "list" } | null>(null);
   useEffect(() => {
@@ -246,7 +246,7 @@ export function FindFuel({ locale, selectedFuels, onChangeFuels: changeFuels, on
   const sorted = useMemo(() => listMode === "nearest" ? sortNearest(filtered) : listMode === "cheapest" ? cheapest.stations : filtered, [listMode, filtered, cheapest]);
   const appliedCount = activeFilterCount(filters);
   const busy = status === "location" || status === "loading" || status === "overviewLoading";
-  const drawer = Boolean(selected || members);
+  const drawer = active && Boolean(selected || members);
   const hasPriceStack = selected && selectedFuels.filter((fuel) => pricesByFuel[fuel].get(selected.id)?.status === "valid").length > 1;
   const overview = !favoritesActive && scope === "overview";
   const previewId = view === "list" && !drawer && !overview && preview?.stations === filtered && preview.revision === viewRevision && preview.mode === listMode ? preview.id : undefined;
@@ -306,9 +306,9 @@ export function FindFuel({ locale, selectedFuels, onChangeFuels: changeFuels, on
           {filtered.length > limit && <button type="button" className="button" onClick={() => setLimit((count) => count + 25)}>{t.ffShowMore}</button>}
         </>}
       </div>}
-      {drawer && <aside ref={detailPanel} className="map-detail-panel" onKeyDown={(event) => { if (event.key === "Escape") { event.stopPropagation(); if (selected) closeDetail(); else closeMembers(); } }}>
+      {drawer && <MapDetailPanel labelledBy={selected ? "station-title" : "members-title"} onClose={selected ? closeDetail : closeMembers}>
         {selected && activeManifest ? <StationDetail key={selected.id} station={selected} fuels={selectedFuels} priceViews={pricesByFuel} manifest={activeManifest} locale={locale} onBack={closeDetail} favorite={favoriteButton(selected)} /> : members && <ClusterMembers favoriteButton={favoriteButton} fuels={selectedFuels} priceViews={pricesByFuel} stations={members} locale={locale} onClose={closeMembers} onStation={(station) => openStation(station, "members")} />}
-      </aside>}
+      </MapDetailPanel>}
       {view === "map" && status === "ready" && !filtered.length && <div className="map-empty" role="status">{favoritesActive ? favorites.entries.length === 0 ? t.lmEmpty : activeResults.length ? t.lmNoMatch : t.lmNoAvailable : t.ffNoResults}</div>}
     </div>
     {filterTrigger && <StationFilters locale={locale} stations={activeResults} query={query} applied={filters} trigger={filterTrigger} onClose={() => setFilterTrigger(null)} onApply={applyFilters} />}
@@ -339,7 +339,7 @@ function ClusterMembers({ favoriteButton, stations, locale, fuels, priceViews, o
   const heading = useRef<HTMLHeadingElement>(null);
   useEffect(() => { heading.current?.focus({ preventScroll: true }); }, []);
   const t = messages[locale];
-  return <section className="cluster-members" aria-labelledby="members-title"><button type="button" className="button button-quiet" onClick={onClose}>{t.mapCloseMembers}</button><h2 id="members-title" ref={heading} tabIndex={-1}>{t.mapMembersTitle.replace("{count}", stations.length.toLocaleString(locale))}</h2><ul className="station-list">{stations.map((station) => <li className="station-row" key={station.id}><StationCard station={station} locale={locale} fuels={fuels} priceViews={priceViews} id={`members-${station.id}`} onClick={() => onStation(station)} />{favoriteButton(station)}</li>)}</ul></section>;
+  return <section className="cluster-members" aria-labelledby="members-title"><header className="map-detail-header"><button type="button" className="button button-quiet detail-close" onClick={onClose}>{t.mapCloseMembers}</button></header><div className="map-detail-scroll"><h2 id="members-title" ref={heading} tabIndex={-1}>{t.mapMembersTitle.replace("{count}", stations.length.toLocaleString(locale))}</h2><ul className="station-list">{stations.map((station) => <li className="station-row" key={station.id}><StationCard station={station} locale={locale} fuels={fuels} priceViews={priceViews} id={`members-${station.id}`} onClick={() => onStation(station)} />{favoriteButton(station)}</li>)}</ul></div></section>;
 }
 
 function FuelLabel({ fuel, locale }: { fuel: FuelType; locale: Locale }) {
@@ -351,8 +351,8 @@ function StationDetail({ favorite, station, manifest, locale, fuels, priceViews,
   useEffect(() => { heading.current?.focus({ preventScroll: true }); }, []);
   const tri = (value: TriState) => t[value === "YES" ? "ffYes" : value === "NO" ? "ffNo" : "ffUnknown"];
   return <article className="station-detail" aria-labelledby="station-title">
-    <button className="button button-quiet detail-close" type="button" onClick={onBack}>{t.mapCloseDetail}</button>
-    {favorite}
+    <header className="map-detail-header"><button className="button button-quiet detail-close" type="button" onClick={onBack}>{t.mapCloseDetail}</button>{favorite}</header>
+    <div className="map-detail-scroll">
     <h3 id="station-title" tabIndex={-1} ref={heading} lang={station.name ? "ja" : undefined}>{station.name || t.ffUnnamed}</h3>
     <p>{station.originalBrand || t.ffUnknown}</p>
     {station.distanceKm !== undefined && <p className="distance">{t.ffStraightLine} · {station.distanceKm.toLocaleString(locale, { maximumFractionDigits: 1 })} {t.ffKm}</p>}
@@ -373,6 +373,7 @@ function StationDetail({ favorite, station, manifest, locale, fuels, priceViews,
     <h4>{t.ffNavigate}</h4><p className="field-help">{t.ffNavigationHelp}</p>
     <div className="link-buttons">{(["google", "apple"] as const).map((provider) => <a key={provider} className={`button${provider === "google" ? " button-primary" : ""}`} href={navigationUrl(provider, station)} target="_blank" rel="noopener noreferrer" onClick={() => analytics.track("navigate_click", { locale })}>{t[provider === "google" ? "ffGoogle" : "ffApple"]}</a>)}</div>
     <p className="field-help">{t.ffStationUpdated} <time dateTime={station.sourceUpdatedAt}>{station.sourceUpdatedAt}</time></p>
+    </div>
   </article>;
 }
 

@@ -62,7 +62,7 @@ export function LazyHome({ initialComponent, initialError = false, active, ...pr
   useEffect(() => { if (active && Home) setMounted(true); }, [active, Home]);
   // Finishing a request after the visitor has left home must not initialize an
   // invisible map. Once actually shown, keep the same instance on later routes.
-  if (Home) return mounted || active ? <Home {...props} /> : null;
+  if (Home) return mounted || active ? <Home {...props} active={active} /> : null;
   const t = messages[props.locale];
   return <section className="notice-box" aria-label={t.navFindFuel} aria-busy={reloading}>
     <h1>{t.mapTitle}</h1>

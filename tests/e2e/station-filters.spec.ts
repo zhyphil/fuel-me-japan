@@ -12,7 +12,7 @@ const manifest: DataManifest = JSON.parse(readFileSync("public/data/manifest.jso
 const partition = manifest.stations.partitions.find((entry) => entry.code === "JP-01")!;
 const real: StationFile = JSON.parse(readFileSync(`public${partition.path}`, "utf8"));
 const trigger = (page: Page) => page.locator(".station-filter-trigger:visible");
-const panel = (page: Page) => page.getByRole("dialog");
+const panel = (page: Page) => page.locator(".station-filters-dialog");
 // Use exact label text while allowing the separate count and Japanese safety label.
 const selectOption = (page: Page, label: string) => panel(page).locator(".filter-option").filter({ has: page.locator(".filter-option-label", { hasText: new RegExp(`^${label}$`) }) });
 async function open(page: Page) { await trigger(page).click(); await expect(panel(page)).toBeVisible(); }
@@ -67,7 +67,7 @@ test("draft, cancel, reset and apply keep loaded counts and map/list totals cons
   await open(page); await expect(selectOption(page, "ENEOS")).toHaveAttribute("aria-pressed", "false");
   await selectOption(page, "ENEOS").click(); await apply(page, 30);
   await expect(page.locator(".map-status p")).toHaveText(en.mapResultCount.replace("{count}", "30"));
-  await expect(page.locator(".map-pin-cluster")).toHaveText("30");
+  await expect(page.locator(".map-pin-cluster")).toHaveText(["30"]);
   await page.getByRole("button", { name: en.mapList, exact: true }).click();
   await expect(page.locator(".station-list .station-card")).toHaveCount(25);
   await page.getByRole("button", { name: en.ffShowMore, exact: true }).click();
@@ -86,8 +86,11 @@ test("draft, cancel, reset and apply keep loaded counts and map/list totals cons
 });
 
 test("payment union, service AND, zero results, independent query and stale detail cleanup", async ({ page }) => {
+  // Desktop keeps the map filters available beside the open details.
+  await page.setViewportSize({ width: 1280, height: 900 });
   await fixture(page); await load(page);
   await open(page); await selectOption(page, "ENEOS").click(); await apply(page, 30);
+  await expect(page.locator(".map-pin-cluster")).toHaveText(["30"]);
   for (let click = 0; click < 3; click++) { await page.locator(".map-pin-cluster").click(); await waitForMapAnimation(page); }
   await expect(page.locator(".cluster-members")).toBeVisible();
   await page.locator(".cluster-members .station-card").first().click();
@@ -121,8 +124,11 @@ test("payment union, service AND, zero results, independent query and stale deta
 });
 
 test("applying unchanged filters closes cluster members and station details", async ({ page }) => {
+  // Desktop keeps the map filters available beside the open details.
+  await page.setViewportSize({ width: 1280, height: 900 });
   await fixture(page); await load(page);
   await open(page); await selectOption(page, "ENEOS").click(); await apply(page, 30);
+  await expect(page.locator(".map-pin-cluster")).toHaveText(["30"]);
   for (let click = 0; click < 3; click++) { await page.locator(".map-pin-cluster").click(); await waitForMapAnimation(page); }
   await expect(page.locator(".cluster-members")).toBeVisible();
   await open(page); await apply(page, 30);

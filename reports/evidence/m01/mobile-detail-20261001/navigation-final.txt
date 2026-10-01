@@ -1,0 +1,10 @@
+[WebServer] (node:63725) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:63746) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/e2e/find-fuel.spec.ts:119:1 › explicit mocked location sorts real stations; navigation sends destination only and origin stays private (1.0s)
+
+  1 passed (2.0s)

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "description": "本地自动验证通过；实体 iPhone 15 Pro Max Chrome 的修复后手势体验仍待用户复测。",
+  "unitTests": 363,
+  "chromiumTests": 348,
+  "webkitTests": 10,
+  "viewportWidths": [
+    320,
+    390,
+    430
+  ],
+  "landscapeViewport": {
+    "width": 932,
+    "height": 430
+  },
+  "touchInput": "Chromium 原生触摸事件注入：正文左侧、中间、右侧均可滚动；背景位置不变。",
+  "webkitLimit": "WebKit 验证布局、键盘滚动、关闭恢复、浏览器返回和高度变化；不代表实体 iPhone 触摸验收。Apple Maps 原生应用接管不要求弹出浏览器新标签，保留目的地与隐私参数断言。",
+  "deployment": "PENDING"
+}

@@ -98,7 +98,7 @@ test("manual prefecture fetches one region; city/address search and detail never
     await expect(page.locator(".station-facts > div").filter({ has: page.getByText(label, { exact: true }) }).locator("dd")).toHaveText(stateCopy[value]);
   }
   for (const [label, value] of [["レギュラー", recorded.fuelRegular], ["ハイオク", recorded.fuelHighOctane], ["軽油", recorded.fuelDiesel]] as const) {
-    await expect(page.locator(".station-detail > .station-facts > div").filter({ hasText: label }).locator("dd")).toHaveText(stateCopy[value]);
+    await expect(page.locator(".station-detail .map-detail-scroll > .station-facts > div").filter({ hasText: label }).locator("dd")).toHaveText(stateCopy[value]);
   }
   if (recorded.openingHours) {
     const original = page.locator(".hours-original summary");
@@ -106,17 +106,17 @@ test("manual prefecture fetches one region; city/address search and detail never
     await expect(page.locator(".hours-fact code")).toHaveText(recorded.openingHours);
     await expect(page.locator(".hours-fact code")).toBeVisible();
   } else await expect(page.locator(".hours-fact dd")).toHaveText(en.ffUnknown);
+  await page.getByRole("button", { name: en.mapCloseDetail }).click();
+  await expect(page.locator(`[id="list-${recorded.id}"]`)).toBeFocused();
+  await expect(page.locator("#station-search")).toHaveValue(recorded.address!);
   await page.locator(".map-notes > summary").click();
   await expect(page.locator(".find-attribution")).toContainText("© OpenStreetMap contributors");
   await expect(page.locator(".find-attribution a[href='https://opendatacommons.org/licenses/odbl/1-0/']")).toBeVisible();
   await expect(page.locator("a[href*='gogo.gs']")).toHaveCount(0);
-  await page.getByRole("button", { name: en.mapCloseDetail }).click();
-  await expect(page.locator(`[id="list-${recorded.id}"]`)).toBeFocused();
-  await expect(page.locator("#station-search")).toHaveValue(recorded.address!);
   await cleanOrigin(page);
 });
 
-test("explicit mocked location sorts real stations; navigation sends destination only and origin stays private", async ({ page, context }) => {
+test("explicit mocked location sorts real stations; navigation sends destination only and origin stays private", async ({ page, context, browserName }) => {
   const requests: string[] = [];
   context.on("request", (request) => requests.push(`${request.url()} ${request.postData() ?? ""}`));
   await open(page);
@@ -145,7 +145,10 @@ test("explicit mocked location sorts real stations; navigation sends destination
     expect(url.searchParams.has("saddr")).toBe(false);
     expect([...url.searchParams.keys()].sort()).toEqual(key === "destination" ? ["api", "destination", "travelmode"] : ["daddr", "dirflg"]);
     await expect(link).toHaveAttribute("rel", "noopener noreferrer");
-    const popupPromise = page.waitForEvent("popup");
+    // Apple Maps can be handed to the native app before WebKit emits a page event.
+    // Keep destination/privacy assertions above; Chromium verifies both offline popups.
+    if (browserName === "webkit" && key === "daddr") continue;
+    const popupPromise = context.waitForEvent("page");
     await link.click();
     const popup = await popupPromise;
     await popup.waitForLoadState();
@@ -158,6 +161,7 @@ test("explicit mocked location sorts real stations; navigation sends destination
   expect(fetches.every((url) => url.startsWith("http://127.0.0.1:") && !url.includes("?"))).toBe(true);
   expect(requests.some((url) => /overpass|analytics|collect\?/.test(url))).toBe(false);
   await cleanOrigin(page);
+  await page.getByRole("button", { name: en.mapCloseDetail }).click();
   await page.getByRole("button", { name: en.mapOverview, exact: true }).click();
   await expect(page.locator("#prefecture")).toHaveValue("");
   await expect(page.locator(".map-pin-region, .map-pin-region-group").first()).toBeVisible();

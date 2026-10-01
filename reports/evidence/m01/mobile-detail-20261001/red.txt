@@ -1,0 +1,34 @@
+[WebServer] (node:58775) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:58776) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/station-detail-mobile.spec.ts:26:3 › mobile detail gives readable full-height content at 430px and restores the map (704ms)
+
+
+  1) tests/e2e/station-detail-mobile.spec.ts:26:3 › mobile detail gives readable full-height content at 430px and restores the map
+
+    Error: expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 741
+    Received:    843.03125
+
+      31 |     const box = (await panel.boundingBox())!;
+      32 |     expect(box.y).toBeGreaterThanOrEqual(0);
+    > 33 |     expect(box.y + box.height).toBeLessThanOrEqual(size.height + 1);
+         |                                ^
+      34 |     expect(box.height).toBeGreaterThanOrEqual(size.height * .95);
+      35 |     await expect(page.locator("#station-title")).toBeFocused();
+      36 |     const scroll = page.locator(".map-detail-scroll");
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/station-detail-mobile.spec.ts:33:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/station-detail-mobile-mobi-0319d--430px-and-restores-the-map/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/station-detail-mobile-mobi-0319d--430px-and-restores-the-map/error-context.md
+
+  1 failed
+    tests/e2e/station-detail-mobile.spec.ts:26:3 › mobile detail gives readable full-height content at 430px and restores the map

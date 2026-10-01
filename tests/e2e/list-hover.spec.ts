@@ -198,7 +198,7 @@ test("closing cluster members does not revive an earlier hover preview", async (
   await expect(group).toHaveAccessibleName("3 overlapping station records. Open member list.");
   await group.press("Enter");
   await expect(page.locator(".cluster-members .station-card")).toHaveCount(3);
-  await page.locator(".cluster-members > button").click();
+  await page.locator(".cluster-members .detail-close").click();
   await expect(page.locator(".map-workspace.show-list")).toBeVisible();
   await settleLayout(page);
   await expect(page.locator(".map-pin-station.is-preview")).toHaveCount(0);

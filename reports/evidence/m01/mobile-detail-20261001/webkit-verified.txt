@@ -1,0 +1,21 @@
+[WebServer] (node:63169) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 10 tests using 2 workers
+
+(node:63186) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:63187) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [Mobile-detail-WebKit] › tests/e2e/find-fuel.spec.ts:64:1 › manual prefecture fetches one region; city/address search and detail never invent distance (2.9s)
+  ✓   2 [Mobile-detail-WebKit] › tests/e2e/find-fuel.spec.ts:119:1 › explicit mocked location sorts real stations; navigation sends destination only and origin stays private (3.2s)
+  ✓   3 [Mobile-detail-WebKit] › tests/e2e/map-home.spec.ts:173:3 › map and detail at 320px keep attribution and sheet visible without horizontal overflow (1.2s)
+  ✓   4 [Mobile-detail-WebKit] › tests/e2e/map-home.spec.ts:173:3 › map and detail at 390px keep attribution and sheet visible without horizontal overflow (1.4s)
+  ✓   5 [Mobile-detail-WebKit] › tests/e2e/map-home.spec.ts:173:3 › map and detail at 1280px keep attribution and sheet visible without horizontal overflow (1.9s)
+  ✓   6 [Mobile-detail-WebKit] › tests/e2e/station-detail-mobile.spec.ts:26:3 › mobile detail gives readable full-height content at 430px and restores the map (1.7s)
+  ✓   8 [Mobile-detail-WebKit] › tests/e2e/station-detail-mobile.spec.ts:26:3 › mobile detail gives readable full-height content at 320px and restores the map (1.2s)
+  ✓   7 [Mobile-detail-WebKit] › tests/e2e/station-detail-mobile.spec.ts:26:3 › mobile detail gives readable full-height content at 390px and restores the map (1.4s)
+  ✓  10 [Mobile-detail-WebKit] › tests/e2e/station-detail-mobile.spec.ts:108:1 › leaving home via browser history releases the detail overlay and page scroll (482ms)
+  ✓   9 [Mobile-detail-WebKit] › tests/e2e/station-detail-mobile.spec.ts:86:1 › detail adapts to browser height, landscape and desktop without a stale page lock (729ms)
+
+  10 passed (12.1s)
