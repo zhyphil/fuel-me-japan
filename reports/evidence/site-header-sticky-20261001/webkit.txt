@@ -1,0 +1,21 @@
+[WebServer] (node:72101) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 10 tests using 2 workers
+
+(node:72105) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:72106) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 [Sticky-header-WebKit] › tests/e2e/sticky-header.spec.ts:30:31 › zh-Hant: language and navigation remain usable after scrolling to the bottom (1.2s)
+  ✓   1 [Sticky-header-WebKit] › tests/e2e/sticky-header.spec.ts:30:31 › en: language and navigation remain usable after scrolling to the bottom (1.2s)
+  ✓   3 [Sticky-header-WebKit] › tests/e2e/sticky-header.spec.ts:30:31 › ko: language and navigation remain usable after scrolling to the bottom (770ms)
+  ✓   4 [Sticky-header-WebKit] › tests/e2e/sticky-header.spec.ts:30:31 › zh-Hans: language and navigation remain usable after scrolling to the bottom (818ms)
+  ✓   5 [Sticky-header-WebKit] › tests/e2e/sticky-header.spec.ts:30:31 › th: language and navigation remain usable after scrolling to the bottom (778ms)
+  ✓   6 [Sticky-header-WebKit] › tests/e2e/sticky-header.spec.ts:58:39 › 320px: header stays pinned across long pages and the map home (3.8s)
+  ✓   7 [Sticky-header-WebKit] › tests/e2e/sticky-header.spec.ts:58:39 › 430px: header stays pinned across long pages and the map home (3.7s)
+  ✓   9 [Sticky-header-WebKit] › tests/e2e/sticky-header.spec.ts:84:1 › sticky map, anchors and responsive header height leave room for the header (1.7s)
+  ✓  10 [Sticky-header-WebKit] › tests/e2e/sticky-header.spec.ts:105:1 › prerendered header remains pinned without JavaScript (397ms)
+  ✓   8 [Sticky-header-WebKit] › tests/e2e/sticky-header.spec.ts:58:39 › 1280px: header stays pinned across long pages and the map home (3.8s)
+
+  10 passed (11.6s)

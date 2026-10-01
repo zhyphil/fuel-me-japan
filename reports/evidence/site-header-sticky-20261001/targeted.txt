@@ -1,0 +1,47 @@
+[WebServer] (node:71055) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 24 tests using 8 workers
+
+(node:71063) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:71067) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:71066) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:71062) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:71060) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:71061) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:71065) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:71064) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   8 tests/e2e/list-minimap.spec.ts:104:1 › mini-map tile errors do not cover filter or location controls (903ms)
+  ✓   1 tests/e2e/list-minimap.spec.ts:24:3 › list and mini-map at 320px share usable space with independent list scrolling (1.0s)
+  ✓   4 tests/e2e/list-minimap.spec.ts:24:3 › list and mini-map at 390px share usable space with independent list scrolling (1.1s)
+  ✓   3 tests/e2e/list-minimap.spec.ts:24:3 › list and mini-map at 768px share usable space with independent list scrolling (1.1s)
+  ✓   6 tests/e2e/list-minimap.spec.ts:83:1 › favorites and query synchronize mini-map markers without loading another partition (1.1s)
+  ✓   7 tests/e2e/list-minimap.spec.ts:63:1 › a mini-map marker opens details then returns to the same list and marker focus (1.1s)
+  ✓   2 tests/e2e/list-minimap.spec.ts:24:3 › list and mini-map at 1280px share usable space with independent list scrolling (1.2s)
+  ✓  13 tests/e2e/station-detail-mobile.spec.ts:108:1 › leaving home via browser history releases the detail overlay and page scroll (460ms)
+  ✓   9 tests/e2e/station-detail-mobile.spec.ts:26:3 › mobile detail gives readable full-height content at 430px and restores the map (709ms)
+  ✓   5 tests/e2e/list-minimap.spec.ts:120:1 › mini-map cluster details return through members to the list (1.8s)
+  ✓  10 tests/e2e/station-detail-mobile.spec.ts:26:3 › mobile detail gives readable full-height content at 390px and restores the map (745ms)
+  ✓  11 tests/e2e/station-detail-mobile.spec.ts:26:3 › mobile detail gives readable full-height content at 320px and restores the map (704ms)
+  ✓  14 tests/e2e/station-detail-mobile.spec.ts:86:1 › detail adapts to browser height, landscape and desktop without a stale page lock (746ms)
+  ✓  15 tests/e2e/sticky-header.spec.ts:30:31 › en: language and navigation remain usable after scrolling to the bottom (753ms)
+  ✓  16 tests/e2e/sticky-header.spec.ts:30:31 › zh-Hant: language and navigation remain usable after scrolling to the bottom (769ms)
+  ✓  17 tests/e2e/sticky-header.spec.ts:30:31 › ko: language and navigation remain usable after scrolling to the bottom (770ms)
+  ✓  18 tests/e2e/sticky-header.spec.ts:30:31 › zh-Hans: language and navigation remain usable after scrolling to the bottom (800ms)
+  ✓  19 tests/e2e/sticky-header.spec.ts:30:31 › th: language and navigation remain usable after scrolling to the bottom (817ms)
+  ✓  24 tests/e2e/sticky-header.spec.ts:105:1 › prerendered header remains pinned without JavaScript (323ms)
+  ✓  12 tests/e2e/station-detail-mobile.spec.ts:57:1 › mobile detail scroll gestures over text and both edges stay inside the panel (2.2s)
+  ✓  23 tests/e2e/sticky-header.spec.ts:84:1 › sticky map, anchors and responsive header height leave room for the header (1.5s)
+  ✓  20 tests/e2e/sticky-header.spec.ts:58:39 › 320px: header stays pinned across long pages and the map home (3.4s)
+  ✓  21 tests/e2e/sticky-header.spec.ts:58:39 › 430px: header stays pinned across long pages and the map home (3.5s)
+  ✓  22 tests/e2e/sticky-header.spec.ts:58:39 › 1280px: header stays pinned across long pages and the map home (3.6s)
+
+  24 passed (6.9s)

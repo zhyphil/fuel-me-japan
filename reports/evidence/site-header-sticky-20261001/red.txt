@@ -1,0 +1,38 @@
+[WebServer] (node:68580) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:68581) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/sticky-header.spec.ts:26:31 › zh-Hans: language and navigation remain usable after scrolling to the bottom (5.7s)
+
+
+  1) tests/e2e/sticky-header.spec.ts:26:31 › zh-Hans: language and navigation remain usable after scrolling to the bottom
+
+    Error: expect(received).toBeLessThan(expected)
+
+    Expected: < 1
+    Received:   1600
+
+    Call Log:
+    - Timeout 5000ms exceeded while waiting on the predicate
+
+       5 | async function expectPinned(page: Page) {
+       6 |   const header = page.locator(".site-header");
+    >  7 |   await expect.poll(async () => Math.abs((await header.boundingBox())!.y)).toBeLessThan(1);
+         |                                                                            ^
+       8 |   const box = (await header.boundingBox())!;
+       9 |   for (const selector of [".brand", ".locale-trigger", ".primary-navigation a"]) {
+      10 |     for (const control of await header.locator(selector).all()) {
+        at expectPinned (/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/sticky-header.spec.ts:7:76)
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/sticky-header.spec.ts:47:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/sticky-header-zh-Hans-lang-1db03-ter-scrolling-to-the-bottom/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/sticky-header-zh-Hans-lang-1db03-ter-scrolling-to-the-bottom/error-context.md
+
+  1 failed
+    tests/e2e/sticky-header.spec.ts:26:31 › zh-Hans: language and navigation remain usable after scrolling to the bottom

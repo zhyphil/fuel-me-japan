@@ -44,6 +44,28 @@ export function App({ locale: initialLocale, initialRoute, rentalShell = false, 
     window.addEventListener("popstate", sync); window.addEventListener(routeEvent, sync); document.addEventListener("click", click);
     return () => { history.scrollRestoration = prior; window.removeEventListener("popstate", sync); window.removeEventListener(routeEvent, sync); document.removeEventListener("click", click); };
   }, []);
+  const headerRef = useRef<HTMLElement>(null);
+  useEffect(() => {
+    const header = headerRef.current;
+    if (!header) return;
+    const html = document.documentElement;
+    const style = html.style;
+    const previousFixed = html.hasAttribute("data-fixed-header");
+    const previousHeight = style.getPropertyValue("--site-header-height");
+    const measure = () => style.setProperty("--site-header-height", `${header.getBoundingClientRect().height}px`);
+    measure();
+    // Reserve the measured space before removing the header from normal flow.
+    html.setAttribute("data-fixed-header", "");
+    // Localized navigation can wrap, and device rotation changes the number of rows.
+    const observer = new ResizeObserver(measure);
+    observer.observe(header);
+    return () => {
+      observer.disconnect();
+      if (!previousFixed) html.removeAttribute("data-fixed-header");
+      if (previousHeight) style.setProperty("--site-header-height", previousHeight);
+      else style.removeProperty("--site-header-height");
+    };
+  }, []);
   const previousPath = useRef(route.pathname);
   useEffect(() => {
     const pathChanged = previousPath.current !== route.pathname; previousPath.current = route.pathname;
@@ -65,7 +87,7 @@ export function App({ locale: initialLocale, initialRoute, rentalShell = false, 
   useEffect(() => { analytics.track("landing_view", { locale }); }, [locale]);
   return <>
     <a className="skip-link" href="#main">{t.skip}</a>
-    <header className="site-header map-header">
+    <header ref={headerRef} className="site-header map-header">
       <a className="brand" href={`/${locale}/`} aria-label="Fuel Me Japan"><span className="brand-mark"><Icon name="pump" /></span><span>Fuel Me <b>Japan</b><i aria-hidden="true" /></span></a>
       <nav className="primary-navigation" aria-label={t.navPrimary}>
         <a id="find-fuel-link" href={`/${locale}/`} aria-current={home ? "page" : undefined}>{t.navFindFuel}</a>
