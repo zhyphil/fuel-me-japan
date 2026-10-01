@@ -3,7 +3,7 @@ import { messages, type Locale } from "./i18n";
 import { LocaleSwitcher } from "./components/LocaleSwitcher";
 import { Icon } from "./components/Icon";
 import { analytics } from "./lib/analytics";
-import { FindFuel } from "./components/FindFuel";
+import { LazyHome, type HomeComponent } from "./components/LazyHome";
 import { MyFuel } from "./components/MyFuel";
 import { About } from "./components/About";
 import { RefuelGuide } from "./components/RefuelGuide";
@@ -14,7 +14,7 @@ import type { FuelType } from "./lib/stations";
 import { aboutHref, guideHref, localizedHref, navigate, parseRoute, rentalHref, routeEvent, updateRouteMetadata, type AppRoute } from "./lib/routes";
 const RentalBusiness = lazy(() => import("./components/RentalBusiness"));
 
-export function App({ locale: initialLocale, initialRoute, rentalShell = false }: { locale: Locale; initialRoute?: AppRoute; rentalShell?: boolean }) {
+export function App({ locale: initialLocale, initialRoute, rentalShell = false, initialHome, initialHomeError = false }: { locale: Locale; initialRoute?: AppRoute; rentalShell?: boolean; initialHome?: HomeComponent; initialHomeError?: boolean }) {
   const [route, setRoute] = useState(() => initialRoute ?? parseRoute(`/${initialLocale}/`));
   const locale = route.locale;
   const home = route.kind === "home";
@@ -77,7 +77,7 @@ export function App({ locale: initialLocale, initialRoute, rentalShell = false }
     </header>
     <main id="main" className={home ? "map-main" : informationPage ? "information-main" : "rental-main"} tabIndex={-1}>
       {(homeVisited || home) && <div className="fuel-home-host" hidden={!home}>
-      <FindFuel onOpenMyFuel={setMyFuelTrigger} locale={locale} mapTileUrl={mapTileUrl} onTileProvider={setMapTileUrl} selectedFuels={selectedFuels} onChangeFuels={changeFuels} onResetFuels={resetFuels} />
+      <LazyHome initialComponent={initialHome} initialError={initialHomeError} active={home} onOpenMyFuel={setMyFuelTrigger} locale={locale} mapTileUrl={mapTileUrl} onTileProvider={setMapTileUrl} selectedFuels={selectedFuels} onChangeFuels={changeFuels} onResetFuels={resetFuels} />
       <noscript><p className="notice-box">{t.ffNoJavaScript}</p></noscript>
       </div>}
       {route.kind === "guide" && <RefuelGuide locale={locale} />}

@@ -138,3 +138,8 @@ Current authorization: **The user has now requested completion of all remaining 
 2026-10-01 用户新增持续授权：每项任务符合要求且验证通过后自动Conventional Commit、push及部署，无需逐次通知；当前有效约定见本文件前部。本轮已发布三家机场Toyota补核和补充资料链接修正。应用 `3b37ab4`、Production部署 `bee65057`，正式域名296项资源／深层URL检查及三家详情、Toyota＋FUK搜索全部通过。18家官方有限事实的入口仍未现场核实，另3家疑点保留。
 
 本条更新上一条本地完成状态；报告 `reports/airport-followup-release-20261001.md`。后续发布报告的纯文档提交已按相同Conventional Commits规则推送，不改变本次运行资源。
+
+
+## 2026-10-01 四项后续迭代授权
+
+用户已同意按建议继续：移动端性能实测与必要优化、实体手机与用户验收准备、gogo.gs合作条件评估、剩余机场门店核对。验收通过后沿用自动Conventional Commit、push、部署及线上验证约定。性能测量只在本地测试环境采样，不改变生产分析no-op或定位隐私。用户可用iPhone Safari和Android Chrome，但设备实际结果须由本人测试后记录，不能以模拟器代替。私有gogo.gs方案与商务评估不提交公开仓库；本轮不签约、付费、发送邮件或建立报价后端。机场范围仍为既定七机场；证据不足者保留未核验，车辆入口不推定。

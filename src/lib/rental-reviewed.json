@@ -499,6 +499,37 @@
         "osm-n13357237818",
         "overture-619e2992-fa38-4d6c-a0f8-31cf9f93e4b9"
       ]
+    },
+    "toyota-naha-airport-seaside": {
+      "attributes": {
+        "id": "toyota-naha-airport-seaside",
+        "airportCode": "OKA",
+        "companyId": "toyota",
+        "prefectureCode": "JP-47",
+        "nameJa": "トヨタレンタカー 那覇空港シーサイド店",
+        "addressJa": "沖縄県豊見城市字与根50番地132",
+        "lat": 26.172538,
+        "lon": 127.651773,
+        "officialCheckUrl": "https://rent.toyota.co.jp/shop/detail.aspx?rCode=69101&eCode=017",
+        "checkedAt": "2026-10-01",
+        "positionKind": "SHOP_REFERENCE",
+        "returnLocationStatus": "OFFICIAL_FACILITY_CHECKED",
+        "vehicleEntranceStatus": "NOT_VERIFIED",
+        "supplementarySourceUrls": [
+          "https://www.oki-toyota-rent.jp/company.php"
+        ],
+        "sourceId": "toyota-official",
+        "recordId": "69101:017",
+        "summaryKey": "rental.shop.toyota-naha-airport-seaside",
+        "officialPhone": "098-850-0080"
+      },
+      "sourceId": "toyota-official",
+      "recordId": "69101:017",
+      "summaryKey": "rental.shop.toyota-naha-airport-seaside",
+      "websiteUrl": "https://rent.toyota.co.jp/",
+      "reviewedSourceKeys": [
+        "overture-70194bc0-00f5-4063-852c-9f71e55a54b5"
+      ]
     }
   }
 }

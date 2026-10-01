@@ -373,7 +373,7 @@
   "rdCounterHelp": "This record is a reception counter, not a verified vehicle-return site. Return navigation is unavailable. Ask your rental company for the actual vehicle-return address.",
   "rdRecordedWebsite": "Recorded website",
   "rdReturnNotes": "Return arrangements checked",
-  "rdScope": "Official checks cover addresses and return arrangements for 18 facilities across seven airports: 7 Times, 6 Nippon and 5 Toyota. New facilities retain OSM/Overture map reference points, not verified vehicle entrances. This is not complete branch coverage.",
+  "rdScope": "Official checks cover addresses and return arrangements for 19 facilities across seven airports: 7 Times, 6 Nippon and 6 Toyota. New facilities retain OSM/Overture map reference points, not verified vehicle entrances. This is not complete branch coverage.",
   "rdAirportDirections": "Airport’s official vehicle-return directions",
   "rdRuleSource": "Source: Times fuel-return terms",
   "rdContractRules": "Confirm fuel level, receipt requirements and return eligibility with your own booking and rental contract. No branch-specific fuel policy has been verified here.",
@@ -444,5 +444,8 @@
   "rdCompanyReturnDirections": "Rental company’s return directions",
   "rdCompanyReturnMap": "Rental company’s return map (PDF)",
   "rdOfficialShopDetails": "Official branch details",
-  "rdSupplementarySource": "Additional official information"
+  "rdSupplementarySource": "Additional official information",
+  "rental.shop.toyota-naha-airport-seaside": "Both current official branch pages list 与根50-132. Toyota specifies MAPCODE 33003370*73 for returns; check your booked branch and the instructions for your return day. The map retains a source reference point; the vehicle entrance has not been verified.",
+  "pageLoadError": "This page could not be loaded. Try again, or reload the page if the problem continues.",
+  "pageReload": "Reload page"
 }

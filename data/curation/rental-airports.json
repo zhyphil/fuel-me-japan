@@ -1,6 +1,6 @@
 {
   "reviewDate": "2026-10-01",
-  "scope": "七机场共18条有限官方事实：7家Times、6家Nippon、5家Toyota。本轮补核剩余6家，明确成田、中部、福冈Toyota的既有候选映射；关西Toyota、福冈Nippon、那霸Seaside的身份或位置问题继续保留。全部车辆入口未核实。",
+  "scope": "七机场共19条有限官方事实：7家Times、6家Nippon、6家Toyota。本轮依据两个当前官方门店页补核那霸Toyota Seaside；原始地址差异保留。关西Toyota、福冈Nippon身份或位置问题继续保留。全部车辆入口未核实。",
   "records": [
     {
       "id": "times-narita-airport",
@@ -493,6 +493,37 @@
       "recordId": "68101:068",
       "summaryKey": "rental.shop.toyota-fukuoka-airport-international",
       "officialPhone": "092-778-0100"
+    },
+    {
+      "id": "toyota-naha-airport-seaside",
+      "airportCode": "OKA",
+      "companyId": "toyota",
+      "prefectureCode": "JP-47",
+      "nameJa": "トヨタレンタカー 那覇空港シーサイド店",
+      "addressJa": "沖縄県豊見城市字与根50番地132",
+      "lat": 26.172538,
+      "lon": 127.651773,
+      "possibleOsmMatch": null,
+      "officialCheckUrl": "https://rent.toyota.co.jp/shop/detail.aspx?rCode=69101&eCode=017",
+      "checkedAt": "2026-10-01",
+      "coordinateEvidence": "沿用Overture 70194bc0-00f5-4063-852c-9f71e55a54b5参考点。完整分店名和098-850-0080电话与两个当前官方门店页一致；参考点距此前官方坐标测地系换算结果约50米。原始50-112地址在sources.attributes中保留；当前中央官网和经营公司营业门店页均为50-132，不把旧号认定为笔误或移址。还车MAPCODE不用于推算入口。",
+      "positionKind": "SHOP_REFERENCE",
+      "returnLocationStatus": "OFFICIAL_FACILITY_CHECKED",
+      "vehicleEntranceStatus": "NOT_VERIFIED",
+      "notesZhHans": "中央官网和经营公司的当前门店页均列出与根50-132。官网要求还车时使用MAPCODE 33003370*73；请核对预约门店及当天指引。地图沿用来源参考点，车辆入口未核实。",
+      "supplementarySourceUrls": [
+        "https://www.oki-toyota-rent.jp/company.php"
+      ],
+      "reviewedSourceMatches": [
+        {
+          "key": "overture-70194bc0-00f5-4063-852c-9f71e55a54b5",
+          "reasonZhHans": "完整日文分店名、098-850-0080电话和Toyota公司身份与中央官网69101/017及经营公司当前门店页一致；两个当前营业资料来源一致列50-132。原始50-112仍保留作冲突追溯，没有批量改地址、坐标或认定车辆入口。"
+        }
+      ],
+      "sourceId": "toyota-official",
+      "recordId": "69101:017",
+      "summaryKey": "rental.shop.toyota-naha-airport-seaside",
+      "officialPhone": "098-850-0080"
     }
   ]
 }

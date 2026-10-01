@@ -430,8 +430,8 @@ test("cluster keyboard activation offers bounded members and clears them on filt
   await members.getByRole("button", { name: messages.en.rdMore, exact: true }).click();
   expect(await members.locator("li").count()).toBeGreaterThan(20); expect(await members.locator("li").count()).toBeLessThanOrEqual(40);
   await search(page, "OKA"); await expect(members).toHaveCount(0);
-  await expect(directory.locator(".rental-card")).toHaveCount(2);
-  expect(await directory.locator(".rental-card").evaluateAll(nodes => nodes.map(node => node.getAttribute("data-rental-id")).sort())).toEqual(["nippon-naha-airport-toyosaki", "times-naha-airport"]);
+  await expect(directory.locator(".rental-card")).toHaveCount(3);
+  expect(await directory.locator(".rental-card").evaluateAll(nodes => nodes.map(node => node.getAttribute("data-rental-id")).sort())).toEqual(["nippon-naha-airport-toyosaki", "times-naha-airport", "toyota-naha-airport-seaside"]);
   expect(await instance!.evaluate(node => node.isConnected)).toBe(true);
 });
 

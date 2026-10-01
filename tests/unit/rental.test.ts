@@ -29,15 +29,15 @@ describe("nationwide rental artifacts", () => {
       expect(createHash("sha256").update(bytes).digest("hex")).toBe(a.sha256);
     }
   });
-  it("retains eighteen reviewed facilities across three companies and no verified vehicle entrance", () => {
+  it("retains nineteen reviewed facilities across three companies and no verified vehicle entrance", () => {
     const official = records.filter(r => r.verification === "OFFICIAL_FACILITY_CHECKED");
     expect([...new Set(official.map(r => r.airportCode))].sort()).toEqual(["CTS", "FUK", "HND", "KIX", "NGO", "NRT", "OKA"]);
     expect(records.every(r => r.vehicleEntranceStatus === "NOT_VERIFIED")).toBe(true);
     expect(official.find(r => r.id === "times-kansai-airport")?.positionKind).toBe("FACILITY_REFERENCE");
-    expect(official).toHaveLength(18);
+    expect(official).toHaveLength(19);
     expect(official.filter(r => r.companyId === "times")).toHaveLength(7);
     expect(official.filter(r => r.companyId === "nippon")).toHaveLength(6);
-    expect(official.filter(r => r.companyId === "toyota")).toHaveLength(5);
+    expect(official.filter(r => r.companyId === "toyota")).toHaveLength(6);
     for (const r of official) expect(r.official?.checkedAt).toBe(r.companyId === "times" ? "2026-09-30" : "2026-10-01");
   });
   it("uses each branch summary, official link and reviewed phone without Times rules leaking", () => {
@@ -56,6 +56,20 @@ describe("nationwide rental artifacts", () => {
     expect(narita.sources.find(s => s.sourceId === "overture")!.attributes.phones).not.toEqual(narita.phones);
     const toyota = records.find(r => r.id === "toyota-haneda-airport-international")!;
     expect(toyota.sources.find(s => s.sourceId === "toyota-official")!.recordId).toBe("63601:06V");
+  });
+  it("keeps Seaside's old address and URL alias while overlaying current official facts", () => {
+    const originalId = "rental-overture-70194bc0-00f5-4063-852c-9f71e55a54b5";
+    const row = records.find(r => r.id === "toyota-naha-airport-seaside")!;
+    expect(findRentalById(index, originalId)?.id).toBe(row.id);
+    expect(row.address).toBe("沖縄県豊見城市字与根50番地132");
+    const original = row.sources.find(s => s.sourceId === "overture")!;
+    expect(JSON.stringify(original.attributes)).toContain("50番112 Yone");
+    expect(row.lat).toBe(26.172538);
+    expect(row.lon).toBe(127.651773);
+    expect(row.vehicleEntranceStatus).toBe("NOT_VERIFIED");
+    expect(row.official?.supplementaryUrls).toContain("https://www.oki-toyota-rent.jp/company.php");
+    expect(row.sources.find(s => s.sourceId === "toyota-official")?.recordId).toBe("69101:017");
+    for (const locale of locales) expect(messages[locale][row.official!.summaryKey]).toContain("33003370*73");
   });
   it("keeps counters unverified and unavailable as return destinations", () => {
     const counters = records.filter(r => r.candidateStatus === "COUNTER_ONLY");
@@ -162,7 +176,7 @@ describe("strict parsers reject corruption", () => {
 
 describe("search, aliases, freshness and lazy requests", () => {
   it("treats a complete supported airport code as an exact airport lookup", () => {
-    expect(searchRentals(index, { query: "ＯＫＡ", limit: 10000 }).map(row => row.id)).toEqual(["nippon-naha-airport-toyosaki", "times-naha-airport"]);
+    expect(searchRentals(index, { query: "ＯＫＡ", limit: 10000 }).map(row => row.id)).toEqual(["nippon-naha-airport-toyosaki", "times-naha-airport", "toyota-naha-airport-seaside"]);
     expect(searchRentals(index, { query: "fuk", limit: 10000 }).map(row => row.id)).toEqual(["times-fukuoka-airport-international", "toyota-fukuoka-airport-international"]);
     expect(searchRentals(index, { query: "Fukuoka", limit: 10000 }).length).toBeGreaterThan(1);
   });

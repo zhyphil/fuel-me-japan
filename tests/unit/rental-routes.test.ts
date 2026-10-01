@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { App } from "../../src/App";
+import { FindFuel } from "../../src/components/FindFuel";
 import { locales, messages } from "../../src/i18n";
 import { parseRoute, rentalHref, localizedHref, safeWebsite } from "../../src/lib/routes";
 import { readRentalQuery, rentalQueryString } from "../../src/lib/rental-view";
@@ -18,7 +19,7 @@ describe("independent rental routes", () => {
     const route = parseRoute(path, "?region=JP-12&q=NRT&page=2");
     expect(route).toMatchObject({ kind: "detail", locale, id: "times-narita-airport" });
     expect(localizedHref(route, "th")).toBe("/th/return-car/times-narita-airport/?region=JP-12&q=NRT&page=2");
-    const home = renderToStaticMarkup(createElement(App, { locale }));
+    const home = renderToStaticMarkup(createElement(App, { locale, initialHome: FindFuel }));
     expect(home).toContain(`href="/${locale}/return-car/"`);
     expect(home).not.toContain('return-car-dialog');
     expect(home.match(/class="locale-switcher"/g)).toHaveLength(1);

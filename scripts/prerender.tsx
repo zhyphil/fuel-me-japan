@@ -1,6 +1,7 @@
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { renderToString } from "react-dom/server";
 import { App } from "../src/App";
+import { FindFuel } from "../src/components/FindFuel";
 import { locales, messages, type Locale } from "../src/i18n";
 import { createHash } from "node:crypto";
 import { parseDataManifest, parseStationFile, parsePriceFile, type Artifact } from "../src/lib/stations";
@@ -63,6 +64,33 @@ parsePriceFile(await checkedArtifact(manifest.prices), manifest.prices);
 await readFile(`dist${manifest.stations.noticeUrl}`, "utf8");
 const siteOrigin = "https://fuel-me-japan.com";
 const shell = await readFile("dist/index.html", "utf8");
+// Preload only code needed by the current map route. Follow static imports
+// from the build manifest so extracted dependencies do not form a waterfall.
+// This never preloads data, map tiles, or code for another business page.
+interface BuildChunk { file: string; imports?: string[] }
+const buildManifest: Record<string, BuildChunk> = JSON.parse(await readFile("dist/.vite/manifest.json", "utf8"));
+const homeChunkKey = "src/components/FindFuel.tsx";
+const homeChunk = buildManifest[homeChunkKey];
+if (!homeChunk) throw new Error("找站组件构建文件缺失");
+const homeModule = `/${homeChunk.file}`;
+function routeModules(key: string): string[] {
+  const files = new Set<string>();
+  function include(moduleKey: string) {
+    const chunk = buildManifest[moduleKey];
+    if (!chunk) throw new Error("页面组件依赖文件缺失");
+    if (files.has(chunk.file)) return;
+    files.add(chunk.file);
+    for (const dependency of chunk.imports ?? []) include(dependency);
+  }
+  include(key);
+  if (key === homeChunkKey) include("src/lib/source-registry.ts");
+  // Both map routes immediately need Leaflet after mounting. Fetch its local
+  // code in parallel; evaluation and tile requests remain in the component.
+  include("node_modules/leaflet/dist/leaflet-src.js");
+  return [...files];
+}
+const homePreloads = routeModules(homeChunkKey);
+const rentalPreloads = routeModules("src/components/RentalBusiness.tsx");
 if (!/<meta\s+name="robots"\s+content="noindex(?:,\s*nofollow)?"\s*\/?>/.test(shell)) throw new Error("M0.1 preview must remain noindex until user acceptance");
 const escape = (value: string) =>
   value.replace(
@@ -89,11 +117,11 @@ function render(locale: Locale, kind: "home" | "directory" | "guide" | "about" =
     )
     .replace(
       "</head>",
-      `<link rel="canonical" href="${siteOrigin}${routePath}" />\n${locales.map((language) => `<link rel="alternate" hreflang="${language}" href="${siteOrigin}/${language}/${suffix}" />`).join("\n")}<link rel="alternate" hreflang="x-default" href="${siteOrigin}/en/${suffix}" /></head>`,
+      `${(kind === "home" ? homePreloads : kind === "directory" ? rentalPreloads : []).map(file => `<link rel="modulepreload" crossorigin href="/${file}" />`).join("\n")}<link rel="canonical" href="${siteOrigin}${routePath}" />\n${locales.map((language) => `<link rel="alternate" hreflang="${language}" href="${siteOrigin}/${language}/${suffix}" />`).join("\n")}<link rel="alternate" hreflang="x-default" href="${siteOrigin}/en/${suffix}" /></head>`,
     )
     .replace(
       '<div id="root"></div>',
-      `<div id="root">${renderToString(<App locale={locale} initialRoute={parseRoute(routePath)} rentalShell={kind === "directory"} />)}</div>`,
+      `<div id="root" data-home-module="${homeModule}" data-home-modules="${escape(JSON.stringify(homePreloads.map(file => `/${file}`)))}">${renderToString(<App locale={locale} initialRoute={parseRoute(routePath)} rentalShell={kind === "directory"} initialHome={kind === "home" ? FindFuel : undefined} />)}</div>`,
     );
 }
 for (const locale of locales) {
@@ -121,7 +149,7 @@ await writeFile(
       stationCount: manifest.stations.count,
       priceRecordCount: manifest.prices.count,
       fieldGuides: { refuel: { path: "/field-guides/refuel-sources.json", sha256: createHash("sha256").update(guideSourceBytes).digest("hex"), reviewDate: fieldGuideProvenance.reviewDate, transformationVersion: fieldGuideProvenance.transformationVersion } },
-      rentalLocations: { path: rentalManifestUrl, sha256: createHash("sha256").update(rentalBytes).digest("hex"), count: rentalManifest.count, reviewDate: rentalManifest.reviewDate, transformationVersion: rentalManifest.transformationVersion, version: rentalManifest.version, sourceIds: rentalManifest.sources.map(source => source.id), counterCount: rentalIndex.records.filter(row => row.candidateStatus === "COUNTER_ONLY").length, officialFacilityCount: reviewedRentals.length, reviewedAirports: [...new Set(reviewedRentals.map(row => row.airportCode))].sort(), note: "全国候选库；七机场共18条有限官方事实（7家Times、6家Nippon、5家Toyota），核对地址及归还安排；新增坐标沿用来源参考点，全部车辆入口未核实。非完整覆盖或公司整库授权。" },
+      rentalLocations: { path: rentalManifestUrl, sha256: createHash("sha256").update(rentalBytes).digest("hex"), count: rentalManifest.count, reviewDate: rentalManifest.reviewDate, transformationVersion: rentalManifest.transformationVersion, version: rentalManifest.version, sourceIds: rentalManifest.sources.map(source => source.id), counterCount: rentalIndex.records.filter(row => row.candidateStatus === "COUNTER_ONLY").length, officialFacilityCount: reviewedRentals.length, reviewedAirports: [...new Set(reviewedRentals.map(row => row.airportCode))].sort(), note: "全国候选库；七机场共19条有限官方事实（7家Times、6家Nippon、6家Toyota），核对地址及归还安排；新增坐标沿用来源参考点，全部车辆入口未核实。非完整覆盖或公司整库授权。" },
       surveyDate: manifest.prices.surveyDate,
       publishedAt: manifest.prices.publishedAt,
       note: "OSM 覆盖不完整；官方都道府县参考价与站点数据分开存储。没有站点即时报价。导入器不执行定时调度或部署。",

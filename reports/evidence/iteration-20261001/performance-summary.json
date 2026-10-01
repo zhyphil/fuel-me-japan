@@ -1,0 +1,74 @@
+{
+  "home": {
+    "before": {
+      "samples": 5,
+      "readyMedianMs": 1968.1000000238419,
+      "lcpMedianMs": 2068,
+      "jsEncodedBytes": 210398,
+      "layoutShiftSumMax": 0.007260215561039339,
+      "pageErrors": 0,
+      "horizontalOverflows": 0,
+      "interactions": {
+        "list": 108,
+        "zoom": 392,
+        "tokyoReady": 371
+      }
+    },
+    "after": {
+      "samples": 5,
+      "readyMedianMs": 2001.3999999761581,
+      "lcpMedianMs": 2016,
+      "jsEncodedBytes": 214045,
+      "layoutShiftSumMax": 0.007260215561039339,
+      "pageErrors": 0,
+      "horizontalOverflows": 0,
+      "interactions": {
+        "list": 103,
+        "zoom": 395,
+        "tokyoReady": 375
+      }
+    }
+  },
+  "directory": {
+    "before": {
+      "samples": 5,
+      "readyMedianMs": 5024.299999952316,
+      "lcpMedianMs": 580,
+      "jsEncodedBytes": 226767,
+      "layoutShiftSumMax": 0,
+      "pageErrors": 0,
+      "horizontalOverflows": 0,
+      "interactions": {
+        "airportSearch": 67,
+        "paginate": 130,
+        "companyFilter": 63
+      }
+    },
+    "after": {
+      "samples": 5,
+      "readyMedianMs": 4919.599999904633,
+      "lcpMedianMs": 776,
+      "jsEncodedBytes": 214969,
+      "layoutShiftSumMax": 0,
+      "pageErrors": 0,
+      "horizontalOverflows": 0,
+      "interactions": {
+        "airportSearch": 70,
+        "paginate": 137,
+        "companyFilter": 68
+      }
+    }
+  },
+  "entry": {
+    "before": {
+      "file": "index-BAan_IXB.js",
+      "rawBytes": 545456,
+      "gzipBytes": 165817
+    },
+    "after": {
+      "file": "index-BoBNpEJM.js",
+      "rawBytes": 485842,
+      "gzipBytes": 148267
+    }
+  }
+}

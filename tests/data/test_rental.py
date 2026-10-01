@@ -209,10 +209,10 @@ class ReviewedAirportTests(unittest.TestCase):
         self.path = ROOT / 'data/curation/rental-airports.json'
         self.data = json.loads(self.path.read_text())
 
-    def test_reviewed_eighteen_rows_with_original_times_dates(self):
+    def test_reviewed_nineteen_rows_with_original_times_dates(self):
         data = rental.official_rows(self.path)
-        self.assertEqual(len(data['records']), 18)
-        self.assertEqual(Counter(r['companyId'] for r in data['records']), {'times': 7, 'nippon': 6, 'toyota': 5})
+        self.assertEqual(len(data['records']), 19)
+        self.assertEqual(Counter(r['companyId'] for r in data['records']), {'times': 7, 'nippon': 6, 'toyota': 6})
         self.assertTrue(all(r['checkedAt'] == '2026-09-30' for r in data['records'] if r['companyId'] == 'times'))
 
     def test_nippon_branch_urls_match_legacy_mapion_not_homepage(self):
@@ -249,7 +249,7 @@ class ReviewedAirportTests(unittest.TestCase):
         with self.assertRaises(ValueError): rental.apply_official([[source]], {'records': [fact, fact]}, audit())
 
     def test_new_group_distance_still_limited_to_200m(self):
-        fact = self.data['records'][-1]
+        fact = next(r for r in self.data['records'] if r['id'] == 'toyota-fukuoka-airport-international')
         a, b = [self.candidate(fact, match) for match in fact['reviewedSourceMatches']]
         b['lat'] += .0019
         self.assertLess(rental.distance(b, fact), 250)
@@ -403,7 +403,7 @@ class PublishedRentalTests(unittest.TestCase):
         members = [s for r in self.records for s in r['sources']]
         self.assertEqual(len({s['key'] for s in members}), len(members))
         self.assertEqual(sum(s['sourceId'] in {'osm', 'overture'} for s in members) + self.audit['excludedCount'], self.audit['inputObjectsTotalKnown'])
-        self.assertEqual(self.audit['count'] + self.audit['sourceObjectsMerged'], self.audit['retainedSourceObjects'] + 18)
+        self.assertEqual(self.audit['count'] + self.audit['sourceObjectsMerged'], self.audit['retainedSourceObjects'] + 19)
         identity = self.load(self.manifest['identity'])
         for r in self.records:
             for s in r['sources']:
@@ -419,7 +419,7 @@ class PublishedRentalTests(unittest.TestCase):
     def test_seven_airports_official_evidence_no_entrance_claim(self):
         official = [r for r in self.records if r['verification'] == 'OFFICIAL_FACILITY_CHECKED']
         self.assertEqual({r['airportCode'] for r in official}, {'NRT', 'HND', 'KIX', 'NGO', 'CTS', 'FUK', 'OKA'})
-        self.assertEqual(len(official), 18)
+        self.assertEqual(len(official), 19)
         self.assertTrue({'times-naha-airport', 'times-new-chitose-airport', 'times-fukuoka-airport-international'} <= {r['id'] for r in official})
         for r in official:
             self.assertEqual(r['official']['checkedAt'], '2026-09-30' if r['companyId'] == 'times' else '2026-10-01')

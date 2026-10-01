@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { App } from "../../src/App";
+import { FindFuel } from "../../src/components/FindFuel";
 import { locales, messages } from "../../src/i18n";
 import { localizedHref, parseRoute } from "../../src/lib/routes";
 
@@ -22,7 +23,7 @@ describe("shared navigation and independent refuelling guide", () => {
     expect(nav).toContain(`href="/${locale}/refuel-guide/" aria-current="page"`);
   });
   it.each(locales)("%s keeps My Fuel inside the station search page", locale => {
-    const home = renderToStaticMarkup(createElement(App, { locale }));
+    const home = renderToStaticMarkup(createElement(App, { locale, initialHome: FindFuel }));
     const header = home.match(/<header class="site-header[^>]*>([\s\S]*?)<\/header>/)?.[1];
     expect(header).toContain('class="primary-navigation"');
     expect(header).not.toContain("my-fuel-trigger");

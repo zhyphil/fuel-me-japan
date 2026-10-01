@@ -1,0 +1,34 @@
+[
+  {
+    "file": "toyota-oka-operator.html",
+    "url": "https://www.oki-toyota-rent.jp/company.php",
+    "checkedAt": "2026-10-01",
+    "status": 200,
+    "bytes": 70067,
+    "sha256": "9b14d12d7b7e1c774d14fc45ed5cb984b48e04cabbe547e9d59f1d8623e4a812"
+  },
+  {
+    "file": "toyota-oka-central.html",
+    "url": "https://rent.toyota.co.jp/shop/detail.aspx?rCode=69101&eCode=017",
+    "checkedAt": "2026-10-01",
+    "status": 200,
+    "bytes": 42025,
+    "sha256": "f28360fde425b68f3e95479a1e0902b7a5eae32a1f9d5d0b644d02a98a6ea7b9"
+  },
+  {
+    "file": "toyota-kix-return.html",
+    "url": "https://rent.toyota.co.jp/shop/route/1_0028.html",
+    "checkedAt": "2026-10-01",
+    "status": 200,
+    "bytes": 12182,
+    "sha256": "eefa512e1591e9db9b2a11461ac1f735cbec3535258db72d080574eab2d567d7"
+  },
+  {
+    "file": "toyota-kix-return.png",
+    "url": "https://rent.toyota.co.jp/img/other/shop/route/img_route28_01.png",
+    "checkedAt": "2026-10-01",
+    "status": 200,
+    "bytes": 87433,
+    "sha256": "61445fb5ce82441d22909fdc9d04fe532d3d598d0c32b16ae41d1bf8a50fb638"
+  }
+]

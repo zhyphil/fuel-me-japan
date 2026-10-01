@@ -1,0 +1,3492 @@
+{
+  "profile": {
+    "viewport": "iPhone13 Chromium emulation",
+    "cpuSlowdown": 4,
+    "latencyMs": 150,
+    "downloadBytesPerSec": 200000,
+    "cache": "disabled",
+    "tiles": "synthetic offline PNG; not live OSM",
+    "server": "gzip local static",
+    "milestone": "MutationObserver records first overview marker; directory requires first card and first map marker",
+    "repeats": "five alternating pairs per scenario",
+    "note": "Same device/network and cold browser cache; after includes one additional reviewed overlay but no new upstream dataset; synthetic interaction wall times are not field INP"
+  },
+  "results": [
+    {
+      "variant": "before",
+      "kind": "home",
+      "repeat": 0,
+      "readyMs": 2037.7999999523163,
+      "lcp": 2136,
+      "shifts": [
+        {
+          "time": 2027,
+          "value": 0.007260215561039339
+        }
+      ],
+      "longTasks": [
+        {
+          "time": 1288.8999999761581,
+          "duration": 57
+        }
+      ],
+      "events": [
+        {
+          "name": "pointerdown",
+          "duration": 16,
+          "id": 8105
+        },
+        {
+          "name": "pointerup",
+          "duration": 16,
+          "id": 8105
+        },
+        {
+          "name": "click",
+          "duration": 16,
+          "id": 8105
+        }
+      ],
+      "resources": [
+        {
+          "name": "/assets/index-BAan_IXB.js",
+          "type": "script",
+          "start": 199.79999995231628,
+          "end": 1283.2999999523163,
+          "encoded": 165817,
+          "decoded": 545456
+        },
+        {
+          "name": "/assets/rolldown-runtime-CbXtAM7H.js",
+          "type": "other",
+          "start": 200.29999995231628,
+          "end": 375.2999999523163,
+          "encoded": 368,
+          "decoded": 589
+        },
+        {
+          "name": "/assets/index-DNiOdrNs.css",
+          "type": "link",
+          "start": 201,
+          "end": 539.2999999523163,
+          "encoded": 16377,
+          "decoded": 63487
+        },
+        {
+          "name": "/assets/leaflet-src-BF0sg77Q.js",
+          "type": "script",
+          "start": 1388.7999999523163,
+          "end": 1822,
+          "encoded": 42964,
+          "decoded": 148742
+        },
+        {
+          "name": "/runtime-map-provider.json",
+          "type": "fetch",
+          "start": 1389.3999999761581,
+          "end": 1560.7000000476837,
+          "encoded": 888,
+          "decoded": 1297
+        },
+        {
+          "name": "/data/manifest.json",
+          "type": "fetch",
+          "start": 1391.6000000238419,
+          "end": 1628.1000000238419,
+          "encoded": 6797,
+          "decoded": 23863
+        },
+        {
+          "name": "/data/registry/3ad895fc107a0ce9.json",
+          "type": "fetch",
+          "start": 1635.8999999761581,
+          "end": 1815.3999999761581,
+          "encoded": 1951,
+          "decoded": 5783
+        },
+        {
+          "name": "/assets/source-registry-Ckbh9xwj.js",
+          "type": "script",
+          "start": 1823.8999999761581,
+          "end": 1987.3999999761581,
+          "encoded": 1249,
+          "decoded": 2893
+        },
+        {
+          "name": "/3/6/2.png",
+          "type": "img",
+          "start": 1868,
+          "end": 2167.899999976158,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/3.png",
+          "type": "img",
+          "start": 1868.1000000238419,
+          "end": 2114.399999976158,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/2.png",
+          "type": "img",
+          "start": 1868.1000000238419,
+          "end": 2153,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/6/3.png",
+          "type": "img",
+          "start": 1868.1000000238419,
+          "end": 2196.899999976158,
+          "encoded": 0,
+          "decoded": 0
+        }
+      ],
+      "readyDOM": 2037.7999999523163,
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 648
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 648
+        }
+      ],
+      "overflow": false,
+      "interactions": [
+        {
+          "name": "tokyoReady",
+          "ms": 366
+        },
+        {
+          "name": "zoom",
+          "ms": 410
+        },
+        {
+          "name": "list",
+          "ms": 115
+        }
+      ],
+      "errors": []
+    },
+    {
+      "variant": "after",
+      "kind": "home",
+      "repeat": 0,
+      "readyMs": 1988,
+      "lcp": 2004,
+      "shifts": [
+        {
+          "time": 1978.1000000238419,
+          "value": 0.007260215561039339
+        }
+      ],
+      "longTasks": [],
+      "events": [
+        {
+          "name": "pointerdown",
+          "duration": 16,
+          "id": 4086
+        },
+        {
+          "name": "pointerup",
+          "duration": 16,
+          "id": 4086
+        },
+        {
+          "name": "click",
+          "duration": 16,
+          "id": 4086
+        },
+        {
+          "name": "pointerdown",
+          "duration": 64,
+          "id": 4093
+        },
+        {
+          "name": "pointerup",
+          "duration": 64,
+          "id": 4093
+        },
+        {
+          "name": "click",
+          "duration": 64,
+          "id": 4093
+        }
+      ],
+      "resources": [
+        {
+          "name": "/assets/index-BoBNpEJM.js",
+          "type": "script",
+          "start": 168.69999992847443,
+          "end": 1499.1000000238419,
+          "encoded": 148267,
+          "decoded": 485842
+        },
+        {
+          "name": "/assets/rolldown-runtime-CbXtAM7H.js",
+          "type": "other",
+          "start": 169.19999992847443,
+          "end": 337.7999999523163,
+          "encoded": 368,
+          "decoded": 589
+        },
+        {
+          "name": "/assets/FindFuel-jCiHGn8l.js",
+          "type": "other",
+          "start": 169.19999992847443,
+          "end": 652.1999999284744,
+          "encoded": 15615,
+          "decoded": 51328
+        },
+        {
+          "name": "/assets/index-DNiOdrNs.css",
+          "type": "link",
+          "start": 169.19999992847443,
+          "end": 674.8999999761581,
+          "encoded": 16377,
+          "decoded": 63487
+        },
+        {
+          "name": "/assets/source-registry-7E4U7HMm.js",
+          "type": "other",
+          "start": 169.29999995231628,
+          "end": 375.60000002384186,
+          "encoded": 1242,
+          "decoded": 2893
+        },
+        {
+          "name": "/assets/StationMiniMap-CdDMXTZZ.js",
+          "type": "other",
+          "start": 169.29999995231628,
+          "end": 457,
+          "encoded": 5589,
+          "decoded": 13690
+        },
+        {
+          "name": "/assets/leaflet-src-BF0sg77Q.js",
+          "type": "other",
+          "start": 169.29999995231628,
+          "end": 1020.5,
+          "encoded": 42964,
+          "decoded": 148742
+        },
+        {
+          "name": "/runtime-map-provider.json",
+          "type": "fetch",
+          "start": 1579.6000000238419,
+          "end": 1739.2999999523163,
+          "encoded": 888,
+          "decoded": 1297
+        },
+        {
+          "name": "/data/manifest.json",
+          "type": "fetch",
+          "start": 1581,
+          "end": 1777.6000000238419,
+          "encoded": 6797,
+          "decoded": 23863
+        },
+        {
+          "name": "/3/6/2.png",
+          "type": "img",
+          "start": 1757.2999999523163,
+          "end": 2047.6000000238419,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/3.png",
+          "type": "img",
+          "start": 1757.3999999761581,
+          "end": 1994.2999999523163,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/2.png",
+          "type": "img",
+          "start": 1757.3999999761581,
+          "end": 2025.2999999523163,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/6/3.png",
+          "type": "img",
+          "start": 1757.3999999761581,
+          "end": 2077.600000023842,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/data/registry/3ad895fc107a0ce9.json",
+          "type": "fetch",
+          "start": 1780.7999999523163,
+          "end": 1949.3999999761581,
+          "encoded": 1951,
+          "decoded": 5783
+        }
+      ],
+      "readyDOM": 1988,
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 748
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 748
+        }
+      ],
+      "overflow": false,
+      "interactions": [
+        {
+          "name": "tokyoReady",
+          "ms": 367
+        },
+        {
+          "name": "zoom",
+          "ms": 395
+        },
+        {
+          "name": "list",
+          "ms": 122
+        }
+      ],
+      "errors": []
+    },
+    {
+      "variant": "before",
+      "kind": "directory",
+      "repeat": 0,
+      "readyMs": 5021.199999928474,
+      "lcp": 736,
+      "shifts": [],
+      "longTasks": [
+        {
+          "time": 4411.699999928474,
+          "duration": 95
+        },
+        {
+          "time": 4507.899999976158,
+          "duration": 74
+        }
+      ],
+      "events": [
+        {
+          "name": "pointerdown",
+          "duration": 88,
+          "id": 874
+        },
+        {
+          "name": "pointerup",
+          "duration": 88,
+          "id": 874
+        },
+        {
+          "name": "click",
+          "duration": 88,
+          "id": 874
+        },
+        {
+          "name": "pointerdown",
+          "duration": 24,
+          "id": 881
+        },
+        {
+          "name": "pointerup",
+          "duration": 24,
+          "id": 881
+        },
+        {
+          "name": "click",
+          "duration": 24,
+          "id": 881
+        }
+      ],
+      "resources": [
+        {
+          "name": "/assets/index-BAan_IXB.js",
+          "type": "script",
+          "start": 174.39999997615814,
+          "end": 1259.8999999761581,
+          "encoded": 165817,
+          "decoded": 545456
+        },
+        {
+          "name": "/assets/rolldown-runtime-CbXtAM7H.js",
+          "type": "other",
+          "start": 175.10000002384186,
+          "end": 353.7999999523163,
+          "encoded": 368,
+          "decoded": 589
+        },
+        {
+          "name": "/assets/index-DNiOdrNs.css",
+          "type": "link",
+          "start": 175.10000002384186,
+          "end": 518.1999999284744,
+          "encoded": 16377,
+          "decoded": 63487
+        },
+        {
+          "name": "/assets/RentalBusiness-gczfWw0k.js",
+          "type": "script",
+          "start": 1315.2999999523163,
+          "end": 1568.2999999523163,
+          "encoded": 17618,
+          "decoded": 63407
+        },
+        {
+          "name": "/data/rental/nationwide/manifest.json",
+          "type": "fetch",
+          "start": 1626.8999999761581,
+          "end": 1815.1000000238419,
+          "encoded": 4424,
+          "decoded": 24497
+        },
+        {
+          "name": "/runtime-map-provider.json",
+          "type": "fetch",
+          "start": 1627.6000000238419,
+          "end": 1793.3999999761581,
+          "encoded": 888,
+          "decoded": 1297
+        },
+        {
+          "name": "/data/rental/nationwide/snapshots/rental-v1-2769bcab1437116e/index.json",
+          "type": "fetch",
+          "start": 1824.3999999761581,
+          "end": 4388.5,
+          "encoded": 481784,
+          "decoded": 3460763
+        },
+        {
+          "name": "/icons/rental-car.svg",
+          "type": "img",
+          "start": 4582.699999928474,
+          "end": 4739.600000023842,
+          "encoded": 207,
+          "decoded": 288
+        },
+        {
+          "name": "/assets/leaflet-src-BF0sg77Q.js",
+          "type": "script",
+          "start": 4599.699999928474,
+          "end": 4964.899999976158,
+          "encoded": 42964,
+          "decoded": 148742
+        },
+        {
+          "name": "/3/6/2.png",
+          "type": "img",
+          "start": 5007.5,
+          "end": 5294.899999976158,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/2.png",
+          "type": "img",
+          "start": 5007.600000023842,
+          "end": 5273,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/6/3.png",
+          "type": "img",
+          "start": 5008.100000023842,
+          "end": 5325.600000023842,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/3.png",
+          "type": "img",
+          "start": 5008.299999952316,
+          "end": 5264.699999928474,
+          "encoded": 0,
+          "decoded": 0
+        }
+      ],
+      "readyDOM": 5021.199999928474,
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 736
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 736
+        }
+      ],
+      "overflow": false,
+      "interactions": [
+        {
+          "name": "paginate",
+          "ms": 144
+        },
+        {
+          "name": "companyFilter",
+          "ms": 69
+        },
+        {
+          "name": "airportSearch",
+          "ms": 57
+        }
+      ],
+      "errors": []
+    },
+    {
+      "variant": "after",
+      "kind": "directory",
+      "repeat": 0,
+      "readyMs": 4889.399999976158,
+      "lcp": 776,
+      "shifts": [],
+      "longTasks": [
+        {
+          "time": 4660.699999928474,
+          "duration": 96
+        },
+        {
+          "time": 4757.299999952316,
+          "duration": 65
+        }
+      ],
+      "events": [
+        {
+          "name": "pointerdown",
+          "duration": 72,
+          "id": 6112
+        },
+        {
+          "name": "pointerup",
+          "duration": 72,
+          "id": 6112
+        },
+        {
+          "name": "click",
+          "duration": 72,
+          "id": 6112
+        }
+      ],
+      "resources": [
+        {
+          "name": "/assets/index-BoBNpEJM.js",
+          "type": "script",
+          "start": 167.59999990463257,
+          "end": 1500.3999999761581,
+          "encoded": 148267,
+          "decoded": 485842
+        },
+        {
+          "name": "/assets/rolldown-runtime-CbXtAM7H.js",
+          "type": "other",
+          "start": 167.89999997615814,
+          "end": 338.39999997615814,
+          "encoded": 368,
+          "decoded": 589
+        },
+        {
+          "name": "/assets/StationMiniMap-CdDMXTZZ.js",
+          "type": "other",
+          "start": 168,
+          "end": 472.1999999284744,
+          "encoded": 5589,
+          "decoded": 13690
+        },
+        {
+          "name": "/assets/index-DNiOdrNs.css",
+          "type": "link",
+          "start": 168,
+          "end": 705.5,
+          "encoded": 16377,
+          "decoded": 63487
+        },
+        {
+          "name": "/assets/RentalBusiness-CKCbfSag.js",
+          "type": "other",
+          "start": 168,
+          "end": 713,
+          "encoded": 17781,
+          "decoded": 64415
+        },
+        {
+          "name": "/assets/leaflet-src-BF0sg77Q.js",
+          "type": "other",
+          "start": 168.09999990463257,
+          "end": 975.6999999284744,
+          "encoded": 42964,
+          "decoded": 148742
+        },
+        {
+          "name": "/data/rental/nationwide/manifest.json",
+          "type": "fetch",
+          "start": 1865.3999999761581,
+          "end": 2055.6999999284744,
+          "encoded": 4421,
+          "decoded": 24497
+        },
+        {
+          "name": "/runtime-map-provider.json",
+          "type": "fetch",
+          "start": 1866.0999999046326,
+          "end": 2032.8999999761581,
+          "encoded": 888,
+          "decoded": 1297
+        },
+        {
+          "name": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/index.json",
+          "type": "fetch",
+          "start": 2065.6999999284744,
+          "end": 4634.5,
+          "encoded": 481806,
+          "decoded": 3460908
+        },
+        {
+          "name": "/icons/rental-car.svg",
+          "type": "img",
+          "start": 4821.799999952316,
+          "end": 4980,
+          "encoded": 207,
+          "decoded": 288
+        },
+        {
+          "name": "/3/6/2.png",
+          "type": "img",
+          "start": 4876,
+          "end": 5159.899999976158,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/2.png",
+          "type": "img",
+          "start": 4876.799999952316,
+          "end": 5152.099999904633,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/6/3.png",
+          "type": "img",
+          "start": 4876.799999952316,
+          "end": 5190.299999952316,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/3.png",
+          "type": "img",
+          "start": 4876.899999976158,
+          "end": 5115.399999976158,
+          "encoded": 0,
+          "decoded": 0
+        }
+      ],
+      "readyDOM": 4889.399999976158,
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 776
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 776
+        }
+      ],
+      "overflow": false,
+      "interactions": [
+        {
+          "name": "paginate",
+          "ms": 137
+        },
+        {
+          "name": "companyFilter",
+          "ms": 61
+        },
+        {
+          "name": "airportSearch",
+          "ms": 60
+        }
+      ],
+      "errors": []
+    },
+    {
+      "variant": "after",
+      "kind": "home",
+      "repeat": 1,
+      "readyMs": 2001.3000000715256,
+      "lcp": 2016,
+      "shifts": [
+        {
+          "time": 1986.6000000238419,
+          "value": 0.007260215561039339
+        }
+      ],
+      "longTasks": [],
+      "events": [
+        {
+          "name": "pointerdown",
+          "duration": 16,
+          "id": 7197
+        },
+        {
+          "name": "pointerup",
+          "duration": 16,
+          "id": 7197
+        },
+        {
+          "name": "click",
+          "duration": 16,
+          "id": 7197
+        }
+      ],
+      "resources": [
+        {
+          "name": "/assets/index-BoBNpEJM.js",
+          "type": "script",
+          "start": 167.39999997615814,
+          "end": 1500.8999999761581,
+          "encoded": 148267,
+          "decoded": 485842
+        },
+        {
+          "name": "/assets/rolldown-runtime-CbXtAM7H.js",
+          "type": "other",
+          "start": 167.5,
+          "end": 346.2000000476837,
+          "encoded": 368,
+          "decoded": 589
+        },
+        {
+          "name": "/assets/FindFuel-jCiHGn8l.js",
+          "type": "other",
+          "start": 167.5,
+          "end": 652.3000000715256,
+          "encoded": 15615,
+          "decoded": 51328
+        },
+        {
+          "name": "/assets/index-DNiOdrNs.css",
+          "type": "link",
+          "start": 167.5,
+          "end": 668.3999999761581,
+          "encoded": 16377,
+          "decoded": 63487
+        },
+        {
+          "name": "/assets/StationMiniMap-CdDMXTZZ.js",
+          "type": "other",
+          "start": 167.60000002384186,
+          "end": 457.2000000476837,
+          "encoded": 5589,
+          "decoded": 13690
+        },
+        {
+          "name": "/assets/source-registry-7E4U7HMm.js",
+          "type": "other",
+          "start": 167.70000004768372,
+          "end": 374.5,
+          "encoded": 1242,
+          "decoded": 2893
+        },
+        {
+          "name": "/assets/leaflet-src-BF0sg77Q.js",
+          "type": "other",
+          "start": 167.70000004768372,
+          "end": 1020.1000000238419,
+          "encoded": 42964,
+          "decoded": 148742
+        },
+        {
+          "name": "/runtime-map-provider.json",
+          "type": "fetch",
+          "start": 1581.5,
+          "end": 1747.3000000715256,
+          "encoded": 888,
+          "decoded": 1297
+        },
+        {
+          "name": "/data/manifest.json",
+          "type": "fetch",
+          "start": 1583.2000000476837,
+          "end": 1785.5,
+          "encoded": 6797,
+          "decoded": 23863
+        },
+        {
+          "name": "/3/7/2.png",
+          "type": "img",
+          "start": 1765,
+          "end": 2031.8999999761581,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/6/2.png",
+          "type": "img",
+          "start": 1765,
+          "end": 2055.5,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/6/3.png",
+          "type": "img",
+          "start": 1765,
+          "end": 2077.3000000715256,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/3.png",
+          "type": "img",
+          "start": 1765.3999999761581,
+          "end": 2003.3000000715256,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/data/registry/3ad895fc107a0ce9.json",
+          "type": "fetch",
+          "start": 1788.8000000715256,
+          "end": 1956.8999999761581,
+          "encoded": 1951,
+          "decoded": 5783
+        }
+      ],
+      "readyDOM": 2001.3000000715256,
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 740
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 740
+        }
+      ],
+      "overflow": false,
+      "interactions": [
+        {
+          "name": "tokyoReady",
+          "ms": 377
+        },
+        {
+          "name": "zoom",
+          "ms": 393
+        },
+        {
+          "name": "list",
+          "ms": 96
+        }
+      ],
+      "errors": []
+    },
+    {
+      "variant": "before",
+      "kind": "home",
+      "repeat": 1,
+      "readyMs": 1953,
+      "lcp": 2052,
+      "shifts": [
+        {
+          "time": 1941.7999999523163,
+          "value": 0.007260215561039339
+        }
+      ],
+      "longTasks": [],
+      "events": [
+        {
+          "name": "pointerdown",
+          "duration": 16,
+          "id": 2835
+        },
+        {
+          "name": "pointerup",
+          "duration": 16,
+          "id": 2835
+        },
+        {
+          "name": "click",
+          "duration": 16,
+          "id": 2835
+        }
+      ],
+      "resources": [
+        {
+          "name": "/assets/index-BAan_IXB.js",
+          "type": "script",
+          "start": 167.89999997615814,
+          "end": 1252,
+          "encoded": 165817,
+          "decoded": 545456
+        },
+        {
+          "name": "/assets/rolldown-runtime-CbXtAM7H.js",
+          "type": "other",
+          "start": 168,
+          "end": 345.59999990463257,
+          "encoded": 368,
+          "decoded": 589
+        },
+        {
+          "name": "/assets/index-DNiOdrNs.css",
+          "type": "link",
+          "start": 168,
+          "end": 501.89999997615814,
+          "encoded": 16377,
+          "decoded": 63487
+        },
+        {
+          "name": "/assets/leaflet-src-BF0sg77Q.js",
+          "type": "script",
+          "start": 1329.0999999046326,
+          "end": 1762.3999999761581,
+          "encoded": 42964,
+          "decoded": 148742
+        },
+        {
+          "name": "/runtime-map-provider.json",
+          "type": "fetch",
+          "start": 1329.3999999761581,
+          "end": 1500.5,
+          "encoded": 888,
+          "decoded": 1297
+        },
+        {
+          "name": "/data/manifest.json",
+          "type": "fetch",
+          "start": 1330.6999999284744,
+          "end": 1568.3999999761581,
+          "encoded": 6797,
+          "decoded": 23863
+        },
+        {
+          "name": "/data/registry/3ad895fc107a0ce9.json",
+          "type": "fetch",
+          "start": 1572.0999999046326,
+          "end": 1748.2999999523163,
+          "encoded": 1951,
+          "decoded": 5783
+        },
+        {
+          "name": "/assets/source-registry-Ckbh9xwj.js",
+          "type": "script",
+          "start": 1750.5,
+          "end": 1913,
+          "encoded": 1249,
+          "decoded": 2893
+        },
+        {
+          "name": "/3/6/2.png",
+          "type": "img",
+          "start": 1801,
+          "end": 2085.1999999284744,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/3.png",
+          "type": "img",
+          "start": 1801.6999999284744,
+          "end": 2040.2999999523163,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/2.png",
+          "type": "img",
+          "start": 1801.6999999284744,
+          "end": 2062.2999999523163,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/6/3.png",
+          "type": "img",
+          "start": 1801.6999999284744,
+          "end": 2114.899999976158,
+          "encoded": 0,
+          "decoded": 0
+        }
+      ],
+      "readyDOM": 1953,
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 568
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 568
+        }
+      ],
+      "overflow": false,
+      "interactions": [
+        {
+          "name": "tokyoReady",
+          "ms": 369
+        },
+        {
+          "name": "zoom",
+          "ms": 390
+        },
+        {
+          "name": "list",
+          "ms": 121
+        }
+      ],
+      "errors": []
+    },
+    {
+      "variant": "after",
+      "kind": "directory",
+      "repeat": 1,
+      "readyMs": 4916.200000047684,
+      "lcp": 764,
+      "shifts": [],
+      "longTasks": [
+        {
+          "time": 4665.899999976158,
+          "duration": 101
+        },
+        {
+          "time": 4769.600000023842,
+          "duration": 71
+        }
+      ],
+      "events": [
+        {
+          "name": "pointerdown",
+          "duration": 72,
+          "id": 2291
+        },
+        {
+          "name": "pointerup",
+          "duration": 72,
+          "id": 2291
+        },
+        {
+          "name": "click",
+          "duration": 72,
+          "id": 2291
+        },
+        {
+          "name": "pointerdown",
+          "duration": 24,
+          "id": 2298
+        },
+        {
+          "name": "pointerup",
+          "duration": 24,
+          "id": 2298
+        },
+        {
+          "name": "click",
+          "duration": 24,
+          "id": 2298
+        }
+      ],
+      "resources": [
+        {
+          "name": "/assets/rolldown-runtime-CbXtAM7H.js",
+          "type": "other",
+          "start": 168.70000004768372,
+          "end": 345.5,
+          "encoded": 368,
+          "decoded": 589
+        },
+        {
+          "name": "/assets/index-DNiOdrNs.css",
+          "type": "link",
+          "start": 168.70000004768372,
+          "end": 697,
+          "encoded": 16377,
+          "decoded": 63487
+        },
+        {
+          "name": "/assets/index-BoBNpEJM.js",
+          "type": "script",
+          "start": 168.70000004768372,
+          "end": 1500.6000000238419,
+          "encoded": 148267,
+          "decoded": 485842
+        },
+        {
+          "name": "/assets/RentalBusiness-CKCbfSag.js",
+          "type": "other",
+          "start": 169.39999997615814,
+          "end": 712.1000000238419,
+          "encoded": 17781,
+          "decoded": 64415
+        },
+        {
+          "name": "/assets/StationMiniMap-CdDMXTZZ.js",
+          "type": "other",
+          "start": 169.5,
+          "end": 472.2000000476837,
+          "encoded": 5589,
+          "decoded": 13690
+        },
+        {
+          "name": "/assets/leaflet-src-BF0sg77Q.js",
+          "type": "other",
+          "start": 169.5,
+          "end": 975.6000000238419,
+          "encoded": 42964,
+          "decoded": 148742
+        },
+        {
+          "name": "/data/rental/nationwide/manifest.json",
+          "type": "fetch",
+          "start": 1873.7000000476837,
+          "end": 2063.100000023842,
+          "encoded": 4421,
+          "decoded": 24497
+        },
+        {
+          "name": "/runtime-map-provider.json",
+          "type": "fetch",
+          "start": 1873.8000000715256,
+          "end": 2041.1000000238419,
+          "encoded": 888,
+          "decoded": 1297
+        },
+        {
+          "name": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/index.json",
+          "type": "fetch",
+          "start": 2073.600000023842,
+          "end": 4642.300000071526,
+          "encoded": 481806,
+          "decoded": 3460908
+        },
+        {
+          "name": "/icons/rental-car.svg",
+          "type": "img",
+          "start": 4841.300000071526,
+          "end": 4994.399999976158,
+          "encoded": 207,
+          "decoded": 288
+        },
+        {
+          "name": "/3/7/2.png",
+          "type": "img",
+          "start": 4901.899999976158,
+          "end": 5190.600000023842,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/6/2.png",
+          "type": "img",
+          "start": 4901.899999976158,
+          "end": 5220.399999976158,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/6/3.png",
+          "type": "img",
+          "start": 4902,
+          "end": 5242.600000023842,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/3.png",
+          "type": "img",
+          "start": 4902.700000047684,
+          "end": 5160,
+          "encoded": 0,
+          "decoded": 0
+        }
+      ],
+      "readyDOM": 4916.200000047684,
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 764
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 764
+        }
+      ],
+      "overflow": false,
+      "interactions": [
+        {
+          "name": "paginate",
+          "ms": 135
+        },
+        {
+          "name": "companyFilter",
+          "ms": 61
+        },
+        {
+          "name": "airportSearch",
+          "ms": 70
+        }
+      ],
+      "errors": []
+    },
+    {
+      "variant": "before",
+      "kind": "directory",
+      "repeat": 1,
+      "readyMs": 5028.100000023842,
+      "lcp": 580,
+      "shifts": [],
+      "longTasks": [
+        {
+          "time": 4413.600000023842,
+          "duration": 100
+        },
+        {
+          "time": 4514.299999952316,
+          "duration": 71
+        }
+      ],
+      "events": [
+        {
+          "name": "pointerdown",
+          "duration": 72,
+          "id": 4804
+        },
+        {
+          "name": "pointerup",
+          "duration": 72,
+          "id": 4804
+        },
+        {
+          "name": "click",
+          "duration": 72,
+          "id": 4804
+        }
+      ],
+      "resources": [
+        {
+          "name": "/assets/index-BAan_IXB.js",
+          "type": "script",
+          "start": 177.60000002384186,
+          "end": 1260.5,
+          "encoded": 165817,
+          "decoded": 545456
+        },
+        {
+          "name": "/assets/rolldown-runtime-CbXtAM7H.js",
+          "type": "other",
+          "start": 178,
+          "end": 352.2999999523163,
+          "encoded": 368,
+          "decoded": 589
+        },
+        {
+          "name": "/assets/index-DNiOdrNs.css",
+          "type": "link",
+          "start": 178,
+          "end": 516.7000000476837,
+          "encoded": 16377,
+          "decoded": 63487
+        },
+        {
+          "name": "/assets/RentalBusiness-gczfWw0k.js",
+          "type": "script",
+          "start": 1318.2999999523163,
+          "end": 1567.7000000476837,
+          "encoded": 17618,
+          "decoded": 63407
+        },
+        {
+          "name": "/data/rental/nationwide/manifest.json",
+          "type": "fetch",
+          "start": 1628.7999999523163,
+          "end": 1815.6000000238419,
+          "encoded": 4424,
+          "decoded": 24497
+        },
+        {
+          "name": "/runtime-map-provider.json",
+          "type": "fetch",
+          "start": 1628.8999999761581,
+          "end": 1791.7999999523163,
+          "encoded": 888,
+          "decoded": 1297
+        },
+        {
+          "name": "/data/rental/nationwide/snapshots/rental-v1-2769bcab1437116e/index.json",
+          "type": "fetch",
+          "start": 1825.2000000476837,
+          "end": 4387.299999952316,
+          "encoded": 481784,
+          "decoded": 3460763
+        },
+        {
+          "name": "/icons/rental-car.svg",
+          "type": "img",
+          "start": 4585.899999976158,
+          "end": 4748.100000023842,
+          "encoded": 207,
+          "decoded": 288
+        },
+        {
+          "name": "/assets/leaflet-src-BF0sg77Q.js",
+          "type": "script",
+          "start": 4603.600000023842,
+          "end": 4973,
+          "encoded": 42964,
+          "decoded": 148742
+        },
+        {
+          "name": "/3/7/2.png",
+          "type": "img",
+          "start": 5015.700000047684,
+          "end": 5295.799999952316,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/6/2.png",
+          "type": "img",
+          "start": 5015.700000047684,
+          "end": 5310.5,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/3.png",
+          "type": "img",
+          "start": 5015.799999952316,
+          "end": 5257.700000047684,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/6/3.png",
+          "type": "img",
+          "start": 5015.799999952316,
+          "end": 5331.799999952316,
+          "encoded": 0,
+          "decoded": 0
+        }
+      ],
+      "readyDOM": 5028.100000023842,
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 580
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 580
+        }
+      ],
+      "overflow": false,
+      "interactions": [
+        {
+          "name": "paginate",
+          "ms": 130
+        },
+        {
+          "name": "companyFilter",
+          "ms": 73
+        },
+        {
+          "name": "airportSearch",
+          "ms": 80
+        }
+      ],
+      "errors": []
+    },
+    {
+      "variant": "before",
+      "kind": "home",
+      "repeat": 2,
+      "readyMs": 1978.2999999523163,
+      "lcp": 2096,
+      "shifts": [
+        {
+          "time": 1956.7000000476837,
+          "value": 0.007260215561039339
+        }
+      ],
+      "longTasks": [],
+      "events": [
+        {
+          "name": "pointerdown",
+          "duration": 16,
+          "id": 4500
+        },
+        {
+          "name": "pointerup",
+          "duration": 16,
+          "id": 4500
+        },
+        {
+          "name": "click",
+          "duration": 16,
+          "id": 4500
+        }
+      ],
+      "resources": [
+        {
+          "name": "/assets/index-BAan_IXB.js",
+          "type": "script",
+          "start": 178.39999997615814,
+          "end": 1260.7999999523163,
+          "encoded": 165817,
+          "decoded": 545456
+        },
+        {
+          "name": "/assets/rolldown-runtime-CbXtAM7H.js",
+          "type": "other",
+          "start": 178.5,
+          "end": 352.7000000476837,
+          "encoded": 368,
+          "decoded": 589
+        },
+        {
+          "name": "/assets/index-DNiOdrNs.css",
+          "type": "link",
+          "start": 178.60000002384186,
+          "end": 509.7000000476837,
+          "encoded": 16377,
+          "decoded": 63487
+        },
+        {
+          "name": "/assets/leaflet-src-BF0sg77Q.js",
+          "type": "script",
+          "start": 1342.8999999761581,
+          "end": 1778.2999999523163,
+          "encoded": 42964,
+          "decoded": 148742
+        },
+        {
+          "name": "/runtime-map-provider.json",
+          "type": "fetch",
+          "start": 1343.6000000238419,
+          "end": 1515.2999999523163,
+          "encoded": 888,
+          "decoded": 1297
+        },
+        {
+          "name": "/data/manifest.json",
+          "type": "fetch",
+          "start": 1345.5,
+          "end": 1582,
+          "encoded": 6797,
+          "decoded": 23863
+        },
+        {
+          "name": "/data/registry/3ad895fc107a0ce9.json",
+          "type": "fetch",
+          "start": 1586.2000000476837,
+          "end": 1762.7000000476837,
+          "encoded": 1951,
+          "decoded": 5783
+        },
+        {
+          "name": "/assets/source-registry-Ckbh9xwj.js",
+          "type": "script",
+          "start": 1764.8999999761581,
+          "end": 1927.6000000238419,
+          "encoded": 1249,
+          "decoded": 2893
+        },
+        {
+          "name": "/3/7/2.png",
+          "type": "img",
+          "start": 1821.1000000238419,
+          "end": 2085.7000000476837,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/6/2.png",
+          "type": "img",
+          "start": 1821.1000000238419,
+          "end": 2107.100000023842,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/6/3.png",
+          "type": "img",
+          "start": 1821.1000000238419,
+          "end": 2137.7000000476837,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/3.png",
+          "type": "img",
+          "start": 1821.2000000476837,
+          "end": 2077.399999976158,
+          "encoded": 0,
+          "decoded": 0
+        }
+      ],
+      "readyDOM": 1978.2999999523163,
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 584
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 584
+        }
+      ],
+      "overflow": false,
+      "interactions": [
+        {
+          "name": "tokyoReady",
+          "ms": 371
+        },
+        {
+          "name": "zoom",
+          "ms": 394
+        },
+        {
+          "name": "list",
+          "ms": 101
+        }
+      ],
+      "errors": []
+    },
+    {
+      "variant": "after",
+      "kind": "home",
+      "repeat": 2,
+      "readyMs": 2003,
+      "lcp": 2036,
+      "shifts": [
+        {
+          "time": 1993.7000000476837,
+          "value": 0.007260215561039339
+        }
+      ],
+      "longTasks": [],
+      "events": [],
+      "resources": [
+        {
+          "name": "/assets/rolldown-runtime-CbXtAM7H.js",
+          "type": "other",
+          "start": 169.20000004768372,
+          "end": 338.10000002384186,
+          "encoded": 368,
+          "decoded": 589
+        },
+        {
+          "name": "/assets/index-BoBNpEJM.js",
+          "type": "script",
+          "start": 169.20000004768372,
+          "end": 1500,
+          "encoded": 148267,
+          "decoded": 485842
+        },
+        {
+          "name": "/assets/index-DNiOdrNs.css",
+          "type": "link",
+          "start": 169.30000007152557,
+          "end": 675.7000000476837,
+          "encoded": 16377,
+          "decoded": 63487
+        },
+        {
+          "name": "/assets/FindFuel-jCiHGn8l.js",
+          "type": "other",
+          "start": 169.70000004768372,
+          "end": 653.2000000476837,
+          "encoded": 15615,
+          "decoded": 51328
+        },
+        {
+          "name": "/assets/source-registry-7E4U7HMm.js",
+          "type": "other",
+          "start": 169.80000007152557,
+          "end": 375.2000000476837,
+          "encoded": 1242,
+          "decoded": 2893
+        },
+        {
+          "name": "/assets/StationMiniMap-CdDMXTZZ.js",
+          "type": "other",
+          "start": 169.80000007152557,
+          "end": 457.89999997615814,
+          "encoded": 5589,
+          "decoded": 13690
+        },
+        {
+          "name": "/assets/leaflet-src-BF0sg77Q.js",
+          "type": "other",
+          "start": 170.10000002384186,
+          "end": 1019.8999999761581,
+          "encoded": 42964,
+          "decoded": 148742
+        },
+        {
+          "name": "/runtime-map-provider.json",
+          "type": "fetch",
+          "start": 1584.3000000715256,
+          "end": 1747.5,
+          "encoded": 888,
+          "decoded": 1297
+        },
+        {
+          "name": "/data/manifest.json",
+          "type": "fetch",
+          "start": 1586.3000000715256,
+          "end": 1785.6000000238419,
+          "encoded": 6797,
+          "decoded": 23863
+        },
+        {
+          "name": "/3/6/2.png",
+          "type": "img",
+          "start": 1765.3000000715256,
+          "end": 2048.100000023842,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/2.png",
+          "type": "img",
+          "start": 1765.7000000476837,
+          "end": 2040.7000000476837,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/3.png",
+          "type": "img",
+          "start": 1765.8000000715256,
+          "end": 2017.5,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/6/3.png",
+          "type": "img",
+          "start": 1765.8000000715256,
+          "end": 2077.7000000476837,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/data/registry/3ad895fc107a0ce9.json",
+          "type": "fetch",
+          "start": 1788.8999999761581,
+          "end": 1958.2000000476837,
+          "encoded": 1951,
+          "decoded": 5783
+        }
+      ],
+      "readyDOM": 2003,
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 752
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 752
+        }
+      ],
+      "overflow": false,
+      "interactions": [
+        {
+          "name": "tokyoReady",
+          "ms": 373
+        },
+        {
+          "name": "zoom",
+          "ms": 406
+        },
+        {
+          "name": "list",
+          "ms": 101
+        }
+      ],
+      "errors": []
+    },
+    {
+      "variant": "before",
+      "kind": "directory",
+      "repeat": 2,
+      "readyMs": 5017.199999928474,
+      "lcp": 572,
+      "shifts": [],
+      "longTasks": [
+        {
+          "time": 4410.600000023842,
+          "duration": 96
+        },
+        {
+          "time": 4507.699999928474,
+          "duration": 66
+        }
+      ],
+      "events": [
+        {
+          "name": "pointerdown",
+          "duration": 72,
+          "id": 2489
+        },
+        {
+          "name": "pointerup",
+          "duration": 72,
+          "id": 2489
+        },
+        {
+          "name": "click",
+          "duration": 72,
+          "id": 2489
+        },
+        {
+          "name": "pointerdown",
+          "duration": 24,
+          "id": 2496
+        },
+        {
+          "name": "pointerup",
+          "duration": 24,
+          "id": 2496
+        },
+        {
+          "name": "click",
+          "duration": 24,
+          "id": 2496
+        }
+      ],
+      "resources": [
+        {
+          "name": "/assets/index-BAan_IXB.js",
+          "type": "script",
+          "start": 169.19999992847443,
+          "end": 1253.1000000238419,
+          "encoded": 165817,
+          "decoded": 545456
+        },
+        {
+          "name": "/assets/rolldown-runtime-CbXtAM7H.js",
+          "type": "other",
+          "start": 169.29999995231628,
+          "end": 345.60000002384186,
+          "encoded": 368,
+          "decoded": 589
+        },
+        {
+          "name": "/assets/index-DNiOdrNs.css",
+          "type": "link",
+          "start": 169.29999995231628,
+          "end": 510.1999999284744,
+          "encoded": 16377,
+          "decoded": 63487
+        },
+        {
+          "name": "/assets/RentalBusiness-gczfWw0k.js",
+          "type": "script",
+          "start": 1316.2999999523163,
+          "end": 1567.6999999284744,
+          "encoded": 17618,
+          "decoded": 63407
+        },
+        {
+          "name": "/data/rental/nationwide/manifest.json",
+          "type": "fetch",
+          "start": 1626.3999999761581,
+          "end": 1814.3999999761581,
+          "encoded": 4424,
+          "decoded": 24497
+        },
+        {
+          "name": "/runtime-map-provider.json",
+          "type": "fetch",
+          "start": 1627,
+          "end": 1793.2999999523163,
+          "encoded": 888,
+          "decoded": 1297
+        },
+        {
+          "name": "/data/rental/nationwide/snapshots/rental-v1-2769bcab1437116e/index.json",
+          "type": "fetch",
+          "start": 1823.7999999523163,
+          "end": 4387.199999928474,
+          "encoded": 481784,
+          "decoded": 3460763
+        },
+        {
+          "name": "/icons/rental-car.svg",
+          "type": "img",
+          "start": 4573.799999952316,
+          "end": 4732.699999928474,
+          "encoded": 207,
+          "decoded": 288
+        },
+        {
+          "name": "/assets/leaflet-src-BF0sg77Q.js",
+          "type": "script",
+          "start": 4591.100000023842,
+          "end": 4958.299999952316,
+          "encoded": 42964,
+          "decoded": 148742
+        },
+        {
+          "name": "/3/6/2.png",
+          "type": "img",
+          "start": 5004.299999952316,
+          "end": 5318.100000023842,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/3.png",
+          "type": "img",
+          "start": 5004.5,
+          "end": 5258.299999952316,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/2.png",
+          "type": "img",
+          "start": 5004.5,
+          "end": 5288.399999976158,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/6/3.png",
+          "type": "img",
+          "start": 5004.5,
+          "end": 5340.100000023842,
+          "encoded": 0,
+          "decoded": 0
+        }
+      ],
+      "readyDOM": 5017.199999928474,
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 572
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 572
+        }
+      ],
+      "overflow": false,
+      "interactions": [
+        {
+          "name": "paginate",
+          "ms": 129
+        },
+        {
+          "name": "companyFilter",
+          "ms": 63
+        },
+        {
+          "name": "airportSearch",
+          "ms": 68
+        }
+      ],
+      "errors": []
+    },
+    {
+      "variant": "after",
+      "kind": "directory",
+      "repeat": 2,
+      "readyMs": 4921,
+      "lcp": 776,
+      "shifts": [],
+      "longTasks": [
+        {
+          "time": 4667.199999928474,
+          "duration": 103
+        },
+        {
+          "time": 4771,
+          "duration": 73
+        }
+      ],
+      "events": [
+        {
+          "name": "pointerdown",
+          "duration": 72,
+          "id": 5432
+        },
+        {
+          "name": "pointerup",
+          "duration": 72,
+          "id": 5432
+        },
+        {
+          "name": "click",
+          "duration": 72,
+          "id": 5432
+        },
+        {
+          "name": "pointerdown",
+          "duration": 24,
+          "id": 5439
+        },
+        {
+          "name": "pointerup",
+          "duration": 24,
+          "id": 5439
+        },
+        {
+          "name": "click",
+          "duration": 24,
+          "id": 5439
+        }
+      ],
+      "resources": [
+        {
+          "name": "/assets/index-BoBNpEJM.js",
+          "type": "script",
+          "start": 168.29999995231628,
+          "end": 1500.6000000238419,
+          "encoded": 148267,
+          "decoded": 485842
+        },
+        {
+          "name": "/assets/rolldown-runtime-CbXtAM7H.js",
+          "type": "other",
+          "start": 168.39999997615814,
+          "end": 345,
+          "encoded": 368,
+          "decoded": 589
+        },
+        {
+          "name": "/assets/index-DNiOdrNs.css",
+          "type": "link",
+          "start": 169,
+          "end": 705.1999999284744,
+          "encoded": 16377,
+          "decoded": 63487
+        },
+        {
+          "name": "/assets/StationMiniMap-CdDMXTZZ.js",
+          "type": "other",
+          "start": 169.10000002384186,
+          "end": 472.6999999284744,
+          "encoded": 5589,
+          "decoded": 13690
+        },
+        {
+          "name": "/assets/RentalBusiness-CKCbfSag.js",
+          "type": "other",
+          "start": 169.10000002384186,
+          "end": 712.6000000238419,
+          "encoded": 17781,
+          "decoded": 64415
+        },
+        {
+          "name": "/assets/leaflet-src-BF0sg77Q.js",
+          "type": "other",
+          "start": 169.10000002384186,
+          "end": 975.6999999284744,
+          "encoded": 42964,
+          "decoded": 148742
+        },
+        {
+          "name": "/data/rental/nationwide/manifest.json",
+          "type": "fetch",
+          "start": 1864.7999999523163,
+          "end": 2055.1999999284744,
+          "encoded": 4421,
+          "decoded": 24497
+        },
+        {
+          "name": "/runtime-map-provider.json",
+          "type": "fetch",
+          "start": 1865.3999999761581,
+          "end": 2033.6000000238419,
+          "encoded": 888,
+          "decoded": 1297
+        },
+        {
+          "name": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/index.json",
+          "type": "fetch",
+          "start": 2065.600000023842,
+          "end": 4635.699999928474,
+          "encoded": 481806,
+          "decoded": 3460908
+        },
+        {
+          "name": "/icons/rental-car.svg",
+          "type": "img",
+          "start": 4844,
+          "end": 5002,
+          "encoded": 207,
+          "decoded": 288
+        },
+        {
+          "name": "/3/6/2.png",
+          "type": "img",
+          "start": 4904.399999976158,
+          "end": 5294.5,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/2.png",
+          "type": "img",
+          "start": 4904.5,
+          "end": 5264.600000023842,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/3.png",
+          "type": "img",
+          "start": 4904.899999976158,
+          "end": 5235.699999928474,
+          "encoded": 0,
+          "decoded": 0
+        }
+      ],
+      "readyDOM": 4921,
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 776
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 776
+        }
+      ],
+      "overflow": false,
+      "interactions": [
+        {
+          "name": "paginate",
+          "ms": 125
+        },
+        {
+          "name": "companyFilter",
+          "ms": 68
+        },
+        {
+          "name": "airportSearch",
+          "ms": 70
+        }
+      ],
+      "errors": []
+    },
+    {
+      "variant": "after",
+      "kind": "home",
+      "repeat": 3,
+      "readyMs": 2003.3999999761581,
+      "lcp": 2052,
+      "shifts": [
+        {
+          "time": 1990.2999999523163,
+          "value": 0.007260215561039339
+        }
+      ],
+      "longTasks": [],
+      "events": [
+        {
+          "name": "pointerdown",
+          "duration": 16,
+          "id": 6094
+        },
+        {
+          "name": "pointerup",
+          "duration": 16,
+          "id": 6094
+        },
+        {
+          "name": "click",
+          "duration": 16,
+          "id": 6094
+        }
+      ],
+      "resources": [
+        {
+          "name": "/assets/index-BoBNpEJM.js",
+          "type": "script",
+          "start": 168.79999995231628,
+          "end": 1499.3999999761581,
+          "encoded": 148267,
+          "decoded": 485842
+        },
+        {
+          "name": "/assets/rolldown-runtime-CbXtAM7H.js",
+          "type": "other",
+          "start": 168.89999997615814,
+          "end": 338.2000000476837,
+          "encoded": 368,
+          "decoded": 589
+        },
+        {
+          "name": "/assets/FindFuel-jCiHGn8l.js",
+          "type": "other",
+          "start": 169,
+          "end": 653.1000000238419,
+          "encoded": 15615,
+          "decoded": 51328
+        },
+        {
+          "name": "/assets/index-DNiOdrNs.css",
+          "type": "link",
+          "start": 169,
+          "end": 674.8999999761581,
+          "encoded": 16377,
+          "decoded": 63487
+        },
+        {
+          "name": "/assets/StationMiniMap-CdDMXTZZ.js",
+          "type": "other",
+          "start": 169.10000002384186,
+          "end": 457.7999999523163,
+          "encoded": 5589,
+          "decoded": 13690
+        },
+        {
+          "name": "/assets/source-registry-7E4U7HMm.js",
+          "type": "other",
+          "start": 169.79999995231628,
+          "end": 375.10000002384186,
+          "encoded": 1242,
+          "decoded": 2893
+        },
+        {
+          "name": "/assets/leaflet-src-BF0sg77Q.js",
+          "type": "other",
+          "start": 169.79999995231628,
+          "end": 1020.6000000238419,
+          "encoded": 42964,
+          "decoded": 148742
+        },
+        {
+          "name": "/runtime-map-provider.json",
+          "type": "fetch",
+          "start": 1584.7000000476837,
+          "end": 1748.2000000476837,
+          "encoded": 888,
+          "decoded": 1297
+        },
+        {
+          "name": "/data/manifest.json",
+          "type": "fetch",
+          "start": 1586.5,
+          "end": 1785.6000000238419,
+          "encoded": 6797,
+          "decoded": 23863
+        },
+        {
+          "name": "/3/6/2.png",
+          "type": "img",
+          "start": 1764.7999999523163,
+          "end": 2078,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/3.png",
+          "type": "img",
+          "start": 1764.8999999761581,
+          "end": 2032.7000000476837,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/2.png",
+          "type": "img",
+          "start": 1764.8999999761581,
+          "end": 2063.399999976158,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/6/3.png",
+          "type": "img",
+          "start": 1764.8999999761581,
+          "end": 2099.2999999523163,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/data/registry/3ad895fc107a0ce9.json",
+          "type": "fetch",
+          "start": 1789.5,
+          "end": 1957.7999999523163,
+          "encoded": 1951,
+          "decoded": 5783
+        }
+      ],
+      "readyDOM": 2003.3999999761581,
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 744
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 744
+        }
+      ],
+      "overflow": false,
+      "interactions": [
+        {
+          "name": "tokyoReady",
+          "ms": 375
+        },
+        {
+          "name": "zoom",
+          "ms": 395
+        },
+        {
+          "name": "list",
+          "ms": 103
+        }
+      ],
+      "errors": []
+    },
+    {
+      "variant": "before",
+      "kind": "home",
+      "repeat": 3,
+      "readyMs": 1968.1000000238419,
+      "lcp": 2068,
+      "shifts": [
+        {
+          "time": 1951.1000000238419,
+          "value": 0.007260215561039339
+        }
+      ],
+      "longTasks": [],
+      "events": [
+        {
+          "name": "pointerdown",
+          "duration": 16,
+          "id": 3496
+        },
+        {
+          "name": "pointerup",
+          "duration": 16,
+          "id": 3496
+        },
+        {
+          "name": "click",
+          "duration": 16,
+          "id": 3496
+        },
+        {
+          "name": "pointerdown",
+          "duration": 56,
+          "id": 3503
+        },
+        {
+          "name": "pointerup",
+          "duration": 56,
+          "id": 3503
+        },
+        {
+          "name": "click",
+          "duration": 56,
+          "id": 3503
+        }
+      ],
+      "resources": [
+        {
+          "name": "/assets/index-BAan_IXB.js",
+          "type": "script",
+          "start": 167.79999995231628,
+          "end": 1251.8999999761581,
+          "encoded": 165817,
+          "decoded": 545456
+        },
+        {
+          "name": "/assets/rolldown-runtime-CbXtAM7H.js",
+          "type": "other",
+          "start": 168.19999992847443,
+          "end": 345.89999997615814,
+          "encoded": 368,
+          "decoded": 589
+        },
+        {
+          "name": "/assets/index-DNiOdrNs.css",
+          "type": "link",
+          "start": 168.19999992847443,
+          "end": 502,
+          "encoded": 16377,
+          "decoded": 63487
+        },
+        {
+          "name": "/assets/leaflet-src-BF0sg77Q.js",
+          "type": "script",
+          "start": 1337.7999999523163,
+          "end": 1770.6999999284744,
+          "encoded": 42964,
+          "decoded": 148742
+        },
+        {
+          "name": "/runtime-map-provider.json",
+          "type": "fetch",
+          "start": 1338.5,
+          "end": 1508.1999999284744,
+          "encoded": 888,
+          "decoded": 1297
+        },
+        {
+          "name": "/data/manifest.json",
+          "type": "fetch",
+          "start": 1340.6000000238419,
+          "end": 1575.1999999284744,
+          "encoded": 6797,
+          "decoded": 23863
+        },
+        {
+          "name": "/data/registry/3ad895fc107a0ce9.json",
+          "type": "fetch",
+          "start": 1579.3999999761581,
+          "end": 1755.1999999284744,
+          "encoded": 1951,
+          "decoded": 5783
+        },
+        {
+          "name": "/assets/source-registry-Ckbh9xwj.js",
+          "type": "script",
+          "start": 1759.1999999284744,
+          "end": 1920.7999999523163,
+          "encoded": 1249,
+          "decoded": 2893
+        },
+        {
+          "name": "/3/7/2.png",
+          "type": "img",
+          "start": 1817.1999999284744,
+          "end": 2077.899999976158,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/6/2.png",
+          "type": "img",
+          "start": 1817.1999999284744,
+          "end": 2108.100000023842,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/3.png",
+          "type": "img",
+          "start": 1817.2999999523163,
+          "end": 2055.1999999284744,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/6/3.png",
+          "type": "img",
+          "start": 1817.2999999523163,
+          "end": 2130.600000023842,
+          "encoded": 0,
+          "decoded": 0
+        }
+      ],
+      "readyDOM": 1968.1000000238419,
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 596
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 596
+        }
+      ],
+      "overflow": false,
+      "interactions": [
+        {
+          "name": "tokyoReady",
+          "ms": 374
+        },
+        {
+          "name": "zoom",
+          "ms": 392
+        },
+        {
+          "name": "list",
+          "ms": 108
+        }
+      ],
+      "errors": []
+    },
+    {
+      "variant": "after",
+      "kind": "directory",
+      "repeat": 3,
+      "readyMs": 4923.600000023842,
+      "lcp": 768,
+      "shifts": [],
+      "longTasks": [
+        {
+          "time": 4667.400000095367,
+          "duration": 103
+        },
+        {
+          "time": 4771.100000023842,
+          "duration": 75
+        }
+      ],
+      "events": [
+        {
+          "name": "pointerdown",
+          "duration": 88,
+          "id": 2190
+        },
+        {
+          "name": "pointerup",
+          "duration": 88,
+          "id": 2190
+        },
+        {
+          "name": "click",
+          "duration": 88,
+          "id": 2190
+        },
+        {
+          "name": "pointerdown",
+          "duration": 24,
+          "id": 2197
+        },
+        {
+          "name": "pointerup",
+          "duration": 24,
+          "id": 2197
+        },
+        {
+          "name": "click",
+          "duration": 24,
+          "id": 2197
+        }
+      ],
+      "resources": [
+        {
+          "name": "/assets/index-BoBNpEJM.js",
+          "type": "script",
+          "start": 169.5,
+          "end": 1501,
+          "encoded": 148267,
+          "decoded": 485842
+        },
+        {
+          "name": "/assets/rolldown-runtime-CbXtAM7H.js",
+          "type": "other",
+          "start": 169.60000002384186,
+          "end": 345.40000009536743,
+          "encoded": 368,
+          "decoded": 589
+        },
+        {
+          "name": "/assets/StationMiniMap-CdDMXTZZ.js",
+          "type": "other",
+          "start": 170.30000007152557,
+          "end": 473.5,
+          "encoded": 5589,
+          "decoded": 13690
+        },
+        {
+          "name": "/assets/index-DNiOdrNs.css",
+          "type": "link",
+          "start": 170.30000007152557,
+          "end": 697.2000000476837,
+          "encoded": 16377,
+          "decoded": 63487
+        },
+        {
+          "name": "/assets/RentalBusiness-CKCbfSag.js",
+          "type": "other",
+          "start": 170.30000007152557,
+          "end": 711.8000000715256,
+          "encoded": 17781,
+          "decoded": 64415
+        },
+        {
+          "name": "/assets/leaflet-src-BF0sg77Q.js",
+          "type": "other",
+          "start": 170.30000007152557,
+          "end": 974.9000000953674,
+          "encoded": 42964,
+          "decoded": 148742
+        },
+        {
+          "name": "/runtime-map-provider.json",
+          "type": "fetch",
+          "start": 1867.5,
+          "end": 2033.5,
+          "encoded": 888,
+          "decoded": 1297
+        },
+        {
+          "name": "/data/rental/nationwide/manifest.json",
+          "type": "fetch",
+          "start": 1867.5,
+          "end": 2055.100000023842,
+          "encoded": 4421,
+          "decoded": 24497
+        },
+        {
+          "name": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/index.json",
+          "type": "fetch",
+          "start": 2067.100000023842,
+          "end": 4635.800000071526,
+          "encoded": 481806,
+          "decoded": 3460908
+        },
+        {
+          "name": "/icons/rental-car.svg",
+          "type": "img",
+          "start": 4846.300000071526,
+          "end": 5010,
+          "encoded": 207,
+          "decoded": 288
+        },
+        {
+          "name": "/3/7/2.png",
+          "type": "img",
+          "start": 4908.5,
+          "end": 5175.800000071526,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/6/2.png",
+          "type": "img",
+          "start": 4908.5,
+          "end": 5205.900000095367,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/3.png",
+          "type": "img",
+          "start": 4909,
+          "end": 5167.400000095367,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/6/3.png",
+          "type": "img",
+          "start": 4909,
+          "end": 5228.100000023842,
+          "encoded": 0,
+          "decoded": 0
+        }
+      ],
+      "readyDOM": 4923.600000023842,
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 768
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 768
+        }
+      ],
+      "overflow": false,
+      "interactions": [
+        {
+          "name": "paginate",
+          "ms": 155
+        },
+        {
+          "name": "companyFilter",
+          "ms": 69
+        },
+        {
+          "name": "airportSearch",
+          "ms": 66
+        }
+      ],
+      "errors": []
+    },
+    {
+      "variant": "before",
+      "kind": "directory",
+      "repeat": 3,
+      "readyMs": 5024.299999952316,
+      "lcp": 584,
+      "shifts": [],
+      "longTasks": [
+        {
+          "time": 4414.299999952316,
+          "duration": 99
+        },
+        {
+          "time": 4515.199999928474,
+          "duration": 69
+        }
+      ],
+      "events": [
+        {
+          "name": "pointerdown",
+          "duration": 72,
+          "id": 1638
+        },
+        {
+          "name": "pointerup",
+          "duration": 72,
+          "id": 1638
+        },
+        {
+          "name": "click",
+          "duration": 72,
+          "id": 1638
+        }
+      ],
+      "resources": [
+        {
+          "name": "/assets/rolldown-runtime-CbXtAM7H.js",
+          "type": "other",
+          "start": 171,
+          "end": 338.5,
+          "encoded": 368,
+          "decoded": 589
+        },
+        {
+          "name": "/assets/index-BAan_IXB.js",
+          "type": "script",
+          "start": 171,
+          "end": 1252.1999999284744,
+          "encoded": 165817,
+          "decoded": 545456
+        },
+        {
+          "name": "/assets/index-DNiOdrNs.css",
+          "type": "link",
+          "start": 171.19999992847443,
+          "end": 510.2999999523163,
+          "encoded": 16377,
+          "decoded": 63487
+        },
+        {
+          "name": "/assets/RentalBusiness-gczfWw0k.js",
+          "type": "script",
+          "start": 1312.1999999284744,
+          "end": 1560.2999999523163,
+          "encoded": 17618,
+          "decoded": 63407
+        },
+        {
+          "name": "/data/rental/nationwide/manifest.json",
+          "type": "fetch",
+          "start": 1623.1999999284744,
+          "end": 1815.7999999523163,
+          "encoded": 4424,
+          "decoded": 24497
+        },
+        {
+          "name": "/runtime-map-provider.json",
+          "type": "fetch",
+          "start": 1623.2999999523163,
+          "end": 1793.2999999523163,
+          "encoded": 888,
+          "decoded": 1297
+        },
+        {
+          "name": "/data/rental/nationwide/snapshots/rental-v1-2769bcab1437116e/index.json",
+          "type": "fetch",
+          "start": 1823.8999999761581,
+          "end": 4386.899999976158,
+          "encoded": 481784,
+          "decoded": 3460763
+        },
+        {
+          "name": "/icons/rental-car.svg",
+          "type": "img",
+          "start": 4584.799999952316,
+          "end": 4747.399999976158,
+          "encoded": 207,
+          "decoded": 288
+        },
+        {
+          "name": "/assets/leaflet-src-BF0sg77Q.js",
+          "type": "script",
+          "start": 4601.899999976158,
+          "end": 4972.299999952316,
+          "encoded": 42964,
+          "decoded": 148742
+        },
+        {
+          "name": "/3/6/2.png",
+          "type": "img",
+          "start": 5013,
+          "end": 5303.399999976158,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/3.png",
+          "type": "img",
+          "start": 5013.099999904633,
+          "end": 5265.699999928474,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/2.png",
+          "type": "img",
+          "start": 5013.099999904633,
+          "end": 5294.5,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/6/3.png",
+          "type": "img",
+          "start": 5013.099999904633,
+          "end": 5332.199999928474,
+          "encoded": 0,
+          "decoded": 0
+        }
+      ],
+      "readyDOM": 5024.299999952316,
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 584
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 584
+        }
+      ],
+      "overflow": false,
+      "interactions": [
+        {
+          "name": "paginate",
+          "ms": 122
+        },
+        {
+          "name": "companyFilter",
+          "ms": 59
+        },
+        {
+          "name": "airportSearch",
+          "ms": 64
+        }
+      ],
+      "errors": []
+    },
+    {
+      "variant": "before",
+      "kind": "home",
+      "repeat": 4,
+      "readyMs": 1951.1999999284744,
+      "lcp": 2068,
+      "shifts": [
+        {
+          "time": 1932.7999999523163,
+          "value": 0.007260215561039339
+        }
+      ],
+      "longTasks": [],
+      "events": [
+        {
+          "name": "pointerdown",
+          "duration": 16,
+          "id": 2148
+        },
+        {
+          "name": "pointerup",
+          "duration": 16,
+          "id": 2148
+        },
+        {
+          "name": "click",
+          "duration": 16,
+          "id": 2148
+        }
+      ],
+      "resources": [
+        {
+          "name": "/assets/index-BAan_IXB.js",
+          "type": "script",
+          "start": 168.09999990463257,
+          "end": 1253.3999999761581,
+          "encoded": 165817,
+          "decoded": 545456
+        },
+        {
+          "name": "/assets/rolldown-runtime-CbXtAM7H.js",
+          "type": "other",
+          "start": 168.19999992847443,
+          "end": 345.59999990463257,
+          "encoded": 368,
+          "decoded": 589
+        },
+        {
+          "name": "/assets/index-DNiOdrNs.css",
+          "type": "link",
+          "start": 168.29999995231628,
+          "end": 503.2999999523163,
+          "encoded": 16377,
+          "decoded": 63487
+        },
+        {
+          "name": "/assets/leaflet-src-BF0sg77Q.js",
+          "type": "script",
+          "start": 1331.3999999761581,
+          "end": 1763.1999999284744,
+          "encoded": 42964,
+          "decoded": 148742
+        },
+        {
+          "name": "/runtime-map-provider.json",
+          "type": "fetch",
+          "start": 1332.1999999284744,
+          "end": 1500.0999999046326,
+          "encoded": 888,
+          "decoded": 1297
+        },
+        {
+          "name": "/data/manifest.json",
+          "type": "fetch",
+          "start": 1333,
+          "end": 1568.2999999523163,
+          "encoded": 6797,
+          "decoded": 23863
+        },
+        {
+          "name": "/data/registry/3ad895fc107a0ce9.json",
+          "type": "fetch",
+          "start": 1572.8999999761581,
+          "end": 1747.1999999284744,
+          "encoded": 1951,
+          "decoded": 5783
+        },
+        {
+          "name": "/assets/source-registry-Ckbh9xwj.js",
+          "type": "script",
+          "start": 1749.0999999046326,
+          "end": 1904.6999999284744,
+          "encoded": 1249,
+          "decoded": 2893
+        },
+        {
+          "name": "/3/6/2.png",
+          "type": "img",
+          "start": 1803.8999999761581,
+          "end": 2100.1999999284744,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/3.png",
+          "type": "img",
+          "start": 1804.5,
+          "end": 2055.7999999523163,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/2.png",
+          "type": "img",
+          "start": 1804.5,
+          "end": 2084.6999999284744,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/6/3.png",
+          "type": "img",
+          "start": 1804.5,
+          "end": 2123.2999999523163,
+          "encoded": 0,
+          "decoded": 0
+        }
+      ],
+      "readyDOM": 1951.1999999284744,
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 576
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 576
+        }
+      ],
+      "overflow": false,
+      "interactions": [
+        {
+          "name": "tokyoReady",
+          "ms": 377
+        },
+        {
+          "name": "zoom",
+          "ms": 392
+        },
+        {
+          "name": "list",
+          "ms": 96
+        }
+      ],
+      "errors": []
+    },
+    {
+      "variant": "after",
+      "kind": "home",
+      "repeat": 4,
+      "readyMs": 2001.3999999761581,
+      "lcp": 2016,
+      "shifts": [
+        {
+          "time": 1983,
+          "value": 0.007260215561039339
+        }
+      ],
+      "longTasks": [],
+      "events": [
+        {
+          "name": "pointerdown",
+          "duration": 16,
+          "id": 8014
+        },
+        {
+          "name": "pointerup",
+          "duration": 16,
+          "id": 8014
+        },
+        {
+          "name": "click",
+          "duration": 16,
+          "id": 8014
+        },
+        {
+          "name": "pointerdown",
+          "duration": 56,
+          "id": 8021
+        },
+        {
+          "name": "pointerup",
+          "duration": 56,
+          "id": 8021
+        },
+        {
+          "name": "click",
+          "duration": 56,
+          "id": 8021
+        }
+      ],
+      "resources": [
+        {
+          "name": "/assets/index-BoBNpEJM.js",
+          "type": "script",
+          "start": 166.39999997615814,
+          "end": 1500.8999999761581,
+          "encoded": 148267,
+          "decoded": 485842
+        },
+        {
+          "name": "/assets/rolldown-runtime-CbXtAM7H.js",
+          "type": "other",
+          "start": 167.20000004768372,
+          "end": 344.5,
+          "encoded": 368,
+          "decoded": 589
+        },
+        {
+          "name": "/assets/FindFuel-jCiHGn8l.js",
+          "type": "other",
+          "start": 167.20000004768372,
+          "end": 652.7000000476837,
+          "encoded": 15615,
+          "decoded": 51328
+        },
+        {
+          "name": "/assets/index-DNiOdrNs.css",
+          "type": "link",
+          "start": 167.20000004768372,
+          "end": 675.7999999523163,
+          "encoded": 16377,
+          "decoded": 63487
+        },
+        {
+          "name": "/assets/source-registry-7E4U7HMm.js",
+          "type": "other",
+          "start": 167.29999995231628,
+          "end": 376,
+          "encoded": 1242,
+          "decoded": 2893
+        },
+        {
+          "name": "/assets/StationMiniMap-CdDMXTZZ.js",
+          "type": "other",
+          "start": 167.29999995231628,
+          "end": 457.89999997615814,
+          "encoded": 5589,
+          "decoded": 13690
+        },
+        {
+          "name": "/assets/leaflet-src-BF0sg77Q.js",
+          "type": "other",
+          "start": 167.39999997615814,
+          "end": 1020.7000000476837,
+          "encoded": 42964,
+          "decoded": 148742
+        },
+        {
+          "name": "/runtime-map-provider.json",
+          "type": "fetch",
+          "start": 1579.7999999523163,
+          "end": 1739.5,
+          "encoded": 888,
+          "decoded": 1297
+        },
+        {
+          "name": "/data/manifest.json",
+          "type": "fetch",
+          "start": 1581.7000000476837,
+          "end": 1777.2999999523163,
+          "encoded": 6797,
+          "decoded": 23863
+        },
+        {
+          "name": "/3/6/2.png",
+          "type": "img",
+          "start": 1758.3999999761581,
+          "end": 2040.2999999523163,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/3.png",
+          "type": "img",
+          "start": 1758.5,
+          "end": 2010.3999999761581,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/2.png",
+          "type": "img",
+          "start": 1758.5,
+          "end": 2025.7999999523163,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/6/3.png",
+          "type": "img",
+          "start": 1758.5,
+          "end": 2069.2999999523163,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/data/registry/3ad895fc107a0ce9.json",
+          "type": "fetch",
+          "start": 1780.8999999761581,
+          "end": 1950.5,
+          "encoded": 1951,
+          "decoded": 5783
+        }
+      ],
+      "readyDOM": 2001.3999999761581,
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 752
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 752
+        }
+      ],
+      "overflow": false,
+      "interactions": [
+        {
+          "name": "tokyoReady",
+          "ms": 387
+        },
+        {
+          "name": "zoom",
+          "ms": 411
+        },
+        {
+          "name": "list",
+          "ms": 107
+        }
+      ],
+      "errors": []
+    },
+    {
+      "variant": "before",
+      "kind": "directory",
+      "repeat": 4,
+      "readyMs": 5031.5,
+      "lcp": 568,
+      "shifts": [],
+      "longTasks": [
+        {
+          "time": 4416.100000023842,
+          "duration": 101
+        },
+        {
+          "time": 4517.899999976158,
+          "duration": 74
+        }
+      ],
+      "events": [
+        {
+          "name": "pointerdown",
+          "duration": 112,
+          "id": 2331
+        },
+        {
+          "name": "pointerup",
+          "duration": 112,
+          "id": 2331
+        },
+        {
+          "name": "click",
+          "duration": 112,
+          "id": 2331
+        },
+        {
+          "name": "pointerdown",
+          "duration": 32,
+          "id": 2338
+        },
+        {
+          "name": "pointerup",
+          "duration": 32,
+          "id": 2338
+        },
+        {
+          "name": "click",
+          "duration": 32,
+          "id": 2338
+        }
+      ],
+      "resources": [
+        {
+          "name": "/assets/index-BAan_IXB.js",
+          "type": "script",
+          "start": 169.29999995231628,
+          "end": 1253.3999999761581,
+          "encoded": 165817,
+          "decoded": 545456
+        },
+        {
+          "name": "/assets/rolldown-runtime-CbXtAM7H.js",
+          "type": "other",
+          "start": 170,
+          "end": 345.89999997615814,
+          "encoded": 368,
+          "decoded": 589
+        },
+        {
+          "name": "/assets/index-DNiOdrNs.css",
+          "type": "link",
+          "start": 170,
+          "end": 509.7000000476837,
+          "encoded": 16377,
+          "decoded": 63487
+        },
+        {
+          "name": "/assets/RentalBusiness-gczfWw0k.js",
+          "type": "script",
+          "start": 1308.3999999761581,
+          "end": 1559.7000000476837,
+          "encoded": 17618,
+          "decoded": 63407
+        },
+        {
+          "name": "/data/rental/nationwide/manifest.json",
+          "type": "fetch",
+          "start": 1619,
+          "end": 1807.6000000238419,
+          "encoded": 4424,
+          "decoded": 24497
+        },
+        {
+          "name": "/runtime-map-provider.json",
+          "type": "fetch",
+          "start": 1619.2000000476837,
+          "end": 1784.7999999523163,
+          "encoded": 888,
+          "decoded": 1297
+        },
+        {
+          "name": "/data/rental/nationwide/snapshots/rental-v1-2769bcab1437116e/index.json",
+          "type": "fetch",
+          "start": 1817.2000000476837,
+          "end": 4388.5,
+          "encoded": 481784,
+          "decoded": 3460763
+        },
+        {
+          "name": "/icons/rental-car.svg",
+          "type": "img",
+          "start": 4591.700000047684,
+          "end": 4747.100000023842,
+          "encoded": 207,
+          "decoded": 288
+        },
+        {
+          "name": "/assets/leaflet-src-BF0sg77Q.js",
+          "type": "script",
+          "start": 4612.299999952316,
+          "end": 4980.100000023842,
+          "encoded": 42964,
+          "decoded": 148742
+        },
+        {
+          "name": "/3/6/2.png",
+          "type": "img",
+          "start": 5020.100000023842,
+          "end": 5302.399999976158,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/3.png",
+          "type": "img",
+          "start": 5020.5,
+          "end": 5250,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/2.png",
+          "type": "img",
+          "start": 5020.5,
+          "end": 5280.100000023842,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/6/3.png",
+          "type": "img",
+          "start": 5020.5,
+          "end": 5332.5,
+          "encoded": 0,
+          "decoded": 0
+        }
+      ],
+      "readyDOM": 5031.5,
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 568
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 568
+        }
+      ],
+      "overflow": false,
+      "interactions": [
+        {
+          "name": "paginate",
+          "ms": 163
+        },
+        {
+          "name": "companyFilter",
+          "ms": 63
+        },
+        {
+          "name": "airportSearch",
+          "ms": 67
+        }
+      ],
+      "errors": []
+    },
+    {
+      "variant": "after",
+      "kind": "directory",
+      "repeat": 4,
+      "readyMs": 4919.599999904633,
+      "lcp": 788,
+      "shifts": [],
+      "longTasks": [
+        {
+          "time": 4671.5,
+          "duration": 99
+        },
+        {
+          "time": 4771.399999976158,
+          "duration": 70
+        }
+      ],
+      "events": [
+        {
+          "name": "pointerdown",
+          "duration": 80,
+          "id": 4581
+        },
+        {
+          "name": "pointerup",
+          "duration": 80,
+          "id": 4581
+        },
+        {
+          "name": "click",
+          "duration": 80,
+          "id": 4581
+        }
+      ],
+      "resources": [
+        {
+          "name": "/assets/index-BoBNpEJM.js",
+          "type": "script",
+          "start": 169.69999992847443,
+          "end": 1500.7999999523163,
+          "encoded": 148267,
+          "decoded": 485842
+        },
+        {
+          "name": "/assets/rolldown-runtime-CbXtAM7H.js",
+          "type": "other",
+          "start": 170.39999997615814,
+          "end": 337.2999999523163,
+          "encoded": 368,
+          "decoded": 589
+        },
+        {
+          "name": "/assets/index-DNiOdrNs.css",
+          "type": "link",
+          "start": 170.39999997615814,
+          "end": 705.8999999761581,
+          "encoded": 16377,
+          "decoded": 63487
+        },
+        {
+          "name": "/assets/RentalBusiness-CKCbfSag.js",
+          "type": "other",
+          "start": 170.39999997615814,
+          "end": 712.8999999761581,
+          "encoded": 17781,
+          "decoded": 64415
+        },
+        {
+          "name": "/assets/StationMiniMap-CdDMXTZZ.js",
+          "type": "other",
+          "start": 170.5,
+          "end": 472.5,
+          "encoded": 5589,
+          "decoded": 13690
+        },
+        {
+          "name": "/assets/leaflet-src-BF0sg77Q.js",
+          "type": "other",
+          "start": 170.5,
+          "end": 975.7999999523163,
+          "encoded": 42964,
+          "decoded": 148742
+        },
+        {
+          "name": "/data/rental/nationwide/manifest.json",
+          "type": "fetch",
+          "start": 1868.6999999284744,
+          "end": 2062.5,
+          "encoded": 4421,
+          "decoded": 24497
+        },
+        {
+          "name": "/runtime-map-provider.json",
+          "type": "fetch",
+          "start": 1869.3999999761581,
+          "end": 2039.8999999761581,
+          "encoded": 888,
+          "decoded": 1297
+        },
+        {
+          "name": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/index.json",
+          "type": "fetch",
+          "start": 2079.1999999284744,
+          "end": 4643.399999976158,
+          "encoded": 481806,
+          "decoded": 3460908
+        },
+        {
+          "name": "/icons/rental-car.svg",
+          "type": "img",
+          "start": 4841.399999976158,
+          "end": 4994.799999952316,
+          "encoded": 207,
+          "decoded": 288
+        },
+        {
+          "name": "/3/6/2.png",
+          "type": "img",
+          "start": 4902.5,
+          "end": 5219.799999952316,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/3.png",
+          "type": "img",
+          "start": 4902.599999904633,
+          "end": 5168.399999976158,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/7/2.png",
+          "type": "img",
+          "start": 4902.599999904633,
+          "end": 5197.599999904633,
+          "encoded": 0,
+          "decoded": 0
+        },
+        {
+          "name": "/3/6/3.png",
+          "type": "img",
+          "start": 4902.599999904633,
+          "end": 5242.699999928474,
+          "encoded": 0,
+          "decoded": 0
+        }
+      ],
+      "readyDOM": 4919.599999904633,
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 788
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 788
+        }
+      ],
+      "overflow": false,
+      "interactions": [
+        {
+          "name": "paginate",
+          "ms": 140
+        },
+        {
+          "name": "companyFilter",
+          "ms": 79
+        },
+        {
+          "name": "airportSearch",
+          "ms": 83
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

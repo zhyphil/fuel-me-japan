@@ -373,7 +373,7 @@
   "rdCounterHelp": "이 기록은 접수 카운터이며 확인된 차량 반납 장소가 아닙니다. 반납 길찾기를 제공하지 않습니다. 렌터카 회사에 실제 반납 주소를 확인하세요.",
   "rdRecordedWebsite": "기록된 웹사이트",
   "rdReturnNotes": "확인된 반납 안내",
-  "rdScope": "공식 확인 범위는 7개 공항의 시설 18곳(Times 7곳, Nippon 6곳, Toyota 5곳)의 주소와 반납 안내입니다. 추가 시설의 지도 위치는 기존 OSM/Overture 참고점을 사용하며 확인된 차량 입구가 아닙니다. 모든 지점을 포함하지 않습니다.",
+  "rdScope": "공식 확인 범위는 7개 공항의 시설 19곳(Times 7곳, Nippon 6곳, Toyota 6곳)의 주소와 반납 안내입니다. 추가 시설의 지도 위치는 기존 OSM/Overture 참고점을 사용하며 확인된 차량 입구가 아닙니다. 모든 지점을 포함하지 않습니다.",
   "rdAirportDirections": "공항 공식 차량 반납 경로",
   "rdRuleSource": "출처: Times 반납 연료 약관",
   "rdContractRules": "연료량, 영수증 요구 사항과 이 지점의 반납 가능 여부는 예약 및 계약으로 확인하세요. 이 지점의 연료 정책은 확인되지 않았습니다.",
@@ -444,5 +444,8 @@
   "rdCompanyReturnDirections": "렌터카 회사의 반납 안내",
   "rdCompanyReturnMap": "렌터카 회사의 반납 안내도(PDF)",
   "rdOfficialShopDetails": "공식 지점 상세 정보",
-  "rdSupplementarySource": "추가 공식 자료"
+  "rdSupplementarySource": "추가 공식 자료",
+  "rental.shop.toyota-naha-airport-seaside": "중앙 공식 사이트와 운영 회사의 현재 지점 페이지 모두 주소를 与根50-132로 안내합니다. 반납 시 MAPCODE 33003370*73을 사용하라는 공식 안내가 있으니 예약 지점과 당일 안내를 확인하세요. 지도는 기존 출처의 참고 위치이며 차량 입구는 확인되지 않았습니다.",
+  "pageLoadError": "페이지를 불러오지 못했습니다. 다시 시도하고, 문제가 계속되면 페이지를 새로고침하세요.",
+  "pageReload": "페이지 새로고침"
 }

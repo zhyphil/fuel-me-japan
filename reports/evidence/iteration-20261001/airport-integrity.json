@@ -1,0 +1,543 @@
+{
+  "checkedAt": "2026-10-01",
+  "version": "rental-v1-e1fc384a2c662459",
+  "count": 7383,
+  "officialCount": 19,
+  "unchangedPreviousOfficialRecords": 18,
+  "unchangedOriginalSourceMembers": 7434,
+  "resolvablePreviousIds": 7403,
+  "reproduction": {
+    "status": "PASS",
+    "identicalFiles": 61,
+    "files": [
+      "NOTICE.txt",
+      "identity.json",
+      "licenses/Apache-2.0.txt",
+      "licenses/CC0-1.0.txt",
+      "licenses/CDLA-Permissive-2.0.txt",
+      "licenses/Foursquare-NOTICE.txt",
+      "licenses/ODbL-1.0.txt",
+      "manifest.json",
+      "snapshots/rental-v1-e1fc384a2c662459/audit.json",
+      "snapshots/rental-v1-e1fc384a2c662459/identity.json",
+      "snapshots/rental-v1-e1fc384a2c662459/index.json",
+      "snapshots/rental-v1-e1fc384a2c662459/official-overrides.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-01.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-02.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-03.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-04.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-05.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-06.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-07.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-08.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-09.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-10.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-11.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-12.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-13.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-14.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-15.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-16.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-17.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-18.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-19.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-20.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-21.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-22.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-23.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-24.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-25.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-26.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-27.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-28.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-29.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-30.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-31.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-32.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-33.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-34.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-35.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-36.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-37.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-38.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-39.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-40.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-41.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-42.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-43.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-44.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-45.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-46.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/JP-47.json",
+      "snapshots/rental-v1-e1fc384a2c662459/partitions/UNKNOWN.json",
+      "snapshots/rental-v1-e1fc384a2c662459/sources.json"
+    ]
+  },
+  "downloads": [
+    {
+      "bytes": 3460908,
+      "count": 7383,
+      "sha256": "86517f043a54658c0747550d66fe6fb99bd0a341ce46a173f67da5880793790b",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/index.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 1112430,
+      "count": 546,
+      "sha256": "2a4a5c93c0b77cee74bbae9ca6d0fa80e63a40e0491b76b0393aa5acb64ed790",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-01.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 206020,
+      "count": 110,
+      "sha256": "f9eebb3c3ef166141ddab09a99640adacdcf39f615aec756f3b2254918fa72fe",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-02.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 174052,
+      "count": 91,
+      "sha256": "366dfc56c5eb3dfd90dd6310bd01a804efad1b1a32f49a6612d2a99b65a41fe7",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-03.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 414868,
+      "count": 232,
+      "sha256": "4f83c0ea05add3d3195eb8c26fbeeff4f05c55ada1e4597c72258edbf26d574d",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-04.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 167498,
+      "count": 93,
+      "sha256": "51405c41bcd5e311885af91c8713107710c36cef4c572a792a397d67cf8a8ccb",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-05.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 141605,
+      "count": 86,
+      "sha256": "9e8c80963f697f0dc2b467f1816a55058b582f78e8c1ecf4717832692be49d93",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-06.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 178910,
+      "count": 98,
+      "sha256": "592e2c18d4197020e680beac74b095f473c0b1af03218602ff55605a86c48c65",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-07.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 203382,
+      "count": 105,
+      "sha256": "7311b551d77e4cfd61ecbb9b3353abd7dab46c152fc65588cd95d2f78fcd0cf2",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-08.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 198827,
+      "count": 105,
+      "sha256": "487d59fd9d588373df82d0d5b2030cf7810febc1e09db9b391e2860f2e319ff9",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-09.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 152018,
+      "count": 78,
+      "sha256": "d467a7ab36d08442fe79d21a78a63aff6cfbf6572b792da54516329d38a265ab",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-10.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 608398,
+      "count": 311,
+      "sha256": "07d27c18b1832f777b138e6030ef15573f3e407c0b89eaf3dafba7670b3a394b",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-11.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 576385,
+      "count": 310,
+      "sha256": "28636f0269ef334b5585323e65602a8893f681a87f214ec91e4059f1b121762c",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-12.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 1380511,
+      "count": 756,
+      "sha256": "42e542910fdd312ac002ef881775824221c9e2798d9bac3890b23a79600f5fc2",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-13.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 812745,
+      "count": 428,
+      "sha256": "a0459fdc45a2247202ba506a2e0d35170303d990b630ae1073038d6d60d932fd",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-14.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 240447,
+      "count": 127,
+      "sha256": "54de601a33a9fd2417d54bb069ecd489f57fa40726b57efed8edca39a741e0ed",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-15.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 98475,
+      "count": 50,
+      "sha256": "bebd95395a7ac6ed225a87913b601aaf37d62ef6e2ac8d814a490c269c7c4078",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-16.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 121646,
+      "count": 62,
+      "sha256": "c42e8dbb75f72162fb93204b090d81359c354a862cfd946c0572b6f5703259ce",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-17.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 98929,
+      "count": 55,
+      "sha256": "d10d1648ce0f1dfec444ac73efbdd32d579bd623e818c30698f9cb93b1e2ecd3",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-18.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 94570,
+      "count": 50,
+      "sha256": "778c41a45a5c8948aeeb69d5f72cd7ed770e407e57c2287eb635d69e9c08e331",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-19.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 199807,
+      "count": 108,
+      "sha256": "443eca78266b14b615c2e021dfd3c4fb08064266e6590b3d51cba0dc0f908506",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-20.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 159310,
+      "count": 75,
+      "sha256": "5577c4e5b92db9126b1f1aa0a9ee7649c3573c7f7a377511e5c964f68b06bc81",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-21.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 348968,
+      "count": 185,
+      "sha256": "bc358f918c5d41cf68cc0e5cf66cad6754d6dce51fa985aeff0f6b0d6d7663b3",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-22.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 768455,
+      "count": 388,
+      "sha256": "9d8e540a4f0c506cb0666ee32e54f05d8319a448023f534c1cb5d7a09a89bb72",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-23.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 159660,
+      "count": 84,
+      "sha256": "582fe7249a626df983e531e770cca990fd0d14daddbf9a11eb4e8a72710788ee",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-24.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 150894,
+      "count": 86,
+      "sha256": "aa5a7412da0356e14abab304c73fe963f1c44ea22ec5e89229fc9c226ec72bd8",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-25.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 243186,
+      "count": 127,
+      "sha256": "1dc30efcb94c206b1f9b98c4fc15e6e10ca9ac1c1e6cc006e8552edcd70b7d52",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-26.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 829252,
+      "count": 433,
+      "sha256": "9a71591e913d0c4719e9618a699fb24d726e5bea7ba93210f127b2edac9d95f2",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-27.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 423274,
+      "count": 224,
+      "sha256": "b3241c7fc67eeff18ba64ead8b3e3ba10a4716522bed7a4b75e73c025490cd95",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-28.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 116120,
+      "count": 69,
+      "sha256": "c523911ca412e4800fa507362022599e4d8b1d81aadf8501f87d4edf7fef56d3",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-29.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 127561,
+      "count": 66,
+      "sha256": "341b90dcf26024e3bb828d04bd99162a2b13ce87e433b1394b336c5710ab1e2b",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-30.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 87513,
+      "count": 45,
+      "sha256": "cc7d69b0294075feacfbcdafdc9b610abbd95b39271382917cbdfc89fc543138",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-31.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 58300,
+      "count": 29,
+      "sha256": "4f5ed6bb05e4505cee2fb59a1ad10fb0e9e147e1b5a3ba20890b805f9d1b0558",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-32.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 226376,
+      "count": 127,
+      "sha256": "1bd752612bfecb34173475f4bd7b4bf020ffd38a0126288c5a1275a61e60f8ff",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-33.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 239031,
+      "count": 120,
+      "sha256": "fd868aaa0b73cc319fe22b755f07c684cc3065d23836962480177283c9a89ba9",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-34.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 144538,
+      "count": 75,
+      "sha256": "41f97dc98831a8d15aec65b90bd331db5c29f74c5e8da2d4619a67377ef99544",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-35.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 72479,
+      "count": 38,
+      "sha256": "598efcdb40eaba9816faba9d8e1f98d781d2064ae14caef9a9a2c14b68f298f6",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-36.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 142674,
+      "count": 78,
+      "sha256": "0e2f3cff3a7b498dcc1c12fcfdf6162e632db0b68199f76d8a69bac937520592",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-37.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 120010,
+      "count": 62,
+      "sha256": "a5fb2e0dff92f661e540e5b4580e44756ee0143d73bc2a8de68f3a2e053d03a5",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-38.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 52633,
+      "count": 26,
+      "sha256": "6d096d6cb182ba818a13672d7193d86214e57aec2b1a491a593b346a383bd588",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-39.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 590048,
+      "count": 296,
+      "sha256": "642d2c8b96c423dcd081ff6e56a971a2cb97c641a3d0e834acfc278c644bb4d3",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-40.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 98168,
+      "count": 46,
+      "sha256": "17b34c2e157355947b0a9040ef9970ed4ca302e3b89ac5ed9166d558cfc2b4dc",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-41.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 225341,
+      "count": 113,
+      "sha256": "5d9a853e5c9d28ad05c2b02ac7aae0ed0df1418818282ba7fcc9f28a20cf2e61",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-42.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 168915,
+      "count": 80,
+      "sha256": "552bb10e6e857c6c8fd175e2c48ca851490aac3b60e526139bb96db32a918f9a",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-43.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 149731,
+      "count": 78,
+      "sha256": "4b32573470845a6c47df21cbb5428ea3486e45dee0cfe4d48574feecbd578a7d",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-44.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 97801,
+      "count": 48,
+      "sha256": "3878359f07b52e58ff7bd6adee7eaeb8e22cf701db9a690ea78bfe2131f3eabf",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-45.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 269578,
+      "count": 146,
+      "sha256": "5d0d62226509d3b33274d6585d6a516a0c63038b6c2f51fd5260503e631181dc",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-46.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 769317,
+      "count": 438,
+      "sha256": "5d8020d9aeb2d958f02a7826549d091c5357b9580225a8509e9db68f119264a6",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/JP-47.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 109,
+      "count": 0,
+      "sha256": "a1466bec3e91be025907103d3af8394fa3bb1a8fe63d772841de52a5628cf5fe",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/partitions/UNKNOWN.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 360537,
+      "sha256": "b342a259a2336f4f4bde33d3112c5df8e1bb54009a3cb5e384b444ae37f6aff4",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/audit.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 27108,
+      "sha256": "9c6bd9e5d01126f528c73685b6c97d1df5d3718c22bcd8ff28550fc702467d84",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/official-overrides.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 5788,
+      "sha256": "e56bf7a3f4b351c13f8e0ed5b766465574d6764bcdc6164cdf31c568c6393c06",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/sources.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 631512,
+      "sha256": "36a46c7d42ba985d11fef8b837411b6fbd97f049d801f07cdc742087c0b23366",
+      "url": "/data/rental/nationwide/snapshots/rental-v1-e1fc384a2c662459/identity.json",
+      "status": "PASS"
+    },
+    {
+      "bytes": 869,
+      "sha256": "409fc999430a8f01b7fefcfde0c5cc00c6b99b92b68da88277f153d94d8039b5",
+      "url": "/data/rental/nationwide/NOTICE.txt",
+      "status": "PASS"
+    },
+    {
+      "bytes": 25278,
+      "sha256": "607680718977f6f6c9607972afd98f208573f19251315ed1362a8589b51beaf5",
+      "url": "/data/rental/nationwide/licenses/ODbL-1.0.txt",
+      "status": "PASS"
+    },
+    {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "url": "/data/rental/nationwide/licenses/Apache-2.0.txt",
+      "status": "PASS"
+    },
+    {
+      "bytes": 2354,
+      "sha256": "4531a67d443284d93ffed0803df5b10634aff21c3d77e381f2d48af01d875868",
+      "url": "/data/rental/nationwide/licenses/CDLA-Permissive-2.0.txt",
+      "status": "PASS"
+    },
+    {
+      "bytes": 7048,
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+      "url": "/data/rental/nationwide/licenses/CC0-1.0.txt",
+      "status": "PASS"
+    },
+    {
+      "bytes": 1770,
+      "sha256": "1daba8e6d81743a8eee920a71aa5c81a4b0bb02e830c18f1aa9710347c996ff2",
+      "url": "/data/rental/nationwide/licenses/Foursquare-NOTICE.txt",
+      "status": "PASS"
+    }
+  ],
+  "heldCandidates": [
+    {
+      "key": "osm-n13022441226",
+      "id": "rental-osm-n13022441226",
+      "verification": "NOT_VERIFIED"
+    },
+    {
+      "key": "overture-d77b2f74-7d3b-440d-a00b-d49697fbbad0",
+      "id": "rental-overture-d77b2f74-7d3b-440d-a00b-d49697fbbad0",
+      "verification": "NOT_VERIFIED"
+    },
+    {
+      "key": "overture-1f8a429f-0570-48b1-a64c-9691763a8cfc",
+      "id": "rental-overture-1f8a429f-0570-48b1-a64c-9691763a8cfc",
+      "verification": "NOT_VERIFIED"
+    },
+    {
+      "key": "overture-88dbd895-dd55-4cb7-b8e5-9870bc3eeea2",
+      "id": "rental-overture-88dbd895-dd55-4cb7-b8e5-9870bc3eeea2",
+      "verification": "NOT_VERIFIED"
+    }
+  ],
+  "sources": [
+    {
+      "file": "toyota-oka-operator.html",
+      "url": "https://www.oki-toyota-rent.jp/company.php",
+      "checkedAt": "2026-10-01",
+      "status": 200,
+      "bytes": 70067,
+      "sha256": "9b14d12d7b7e1c774d14fc45ed5cb984b48e04cabbe547e9d59f1d8623e4a812"
+    },
+    {
+      "file": "toyota-oka-central.html",
+      "url": "https://rent.toyota.co.jp/shop/detail.aspx?rCode=69101&eCode=017",
+      "checkedAt": "2026-10-01",
+      "status": 200,
+      "bytes": 42025,
+      "sha256": "f28360fde425b68f3e95479a1e0902b7a5eae32a1f9d5d0b644d02a98a6ea7b9"
+    },
+    {
+      "file": "toyota-kix-return.html",
+      "url": "https://rent.toyota.co.jp/shop/route/1_0028.html",
+      "checkedAt": "2026-10-01",
+      "status": 200,
+      "bytes": 12182,
+      "sha256": "eefa512e1591e9db9b2a11461ac1f735cbec3535258db72d080574eab2d567d7"
+    },
+    {
+      "file": "toyota-kix-return.png",
+      "url": "https://rent.toyota.co.jp/img/other/shop/route/img_route28_01.png",
+      "checkedAt": "2026-10-01",
+      "status": 200,
+      "bytes": 87433,
+      "sha256": "61445fb5ce82441d22909fdc9d04fe532d3d598d0c32b16ae41d1bf8a50fb638"
+    }
+  ],
+  "notes": [
+    "两个当前营业门店官方页均为50-132；原始50-112仍保留，不推断差异原因。",
+    "所有车辆入口仍未核实；没有从MAPCODE解码入口或批量更改坐标。",
+    "官方页面和示意图仅作人工研究，未复制入公开仓库。",
+    "此前官方坐标换算距离约50米仅为交叉参考，不是实测入口。"
+  ]
+}

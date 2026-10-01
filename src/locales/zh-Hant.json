@@ -373,7 +373,7 @@
   "rdCounterHelp": "此筆資料是接待櫃台，並非已核實的車輛返還地點，無法開啟返店導航。請向租車公司確認實際還車地址。",
   "rdRecordedWebsite": "已記錄網站",
   "rdReturnNotes": "已核對的還車安排",
-  "rdScope": "官方核對涵蓋七機場18家設施的地址與歸還安排：7家Times、6家Nippon、5家Toyota。新增設施地圖點沿用OSM／Overture參考位置，不是已核驗車輛入口，也不代表完整門市涵蓋。",
+  "rdScope": "官方核對涵蓋七機場19家設施的地址與歸還安排：7家Times、6家Nippon、6家Toyota。新增設施地圖點沿用OSM／Overture參考位置，不是已核驗車輛入口，也不代表完整門市涵蓋。",
   "rdAirportDirections": "機場官方車輛返還指引",
   "rdRuleSource": "來源：Times 還車用油條款",
   "rdContractRules": "請依自己的預約與租車合約確認油量、收據要求及是否可在此還車；此處未核實該門店的加油政策。",
@@ -444,5 +444,8 @@
   "rdCompanyReturnDirections": "租車公司還車指引",
   "rdCompanyReturnMap": "租車公司還車圖（PDF）",
   "rdOfficialShopDetails": "官方門市詳情",
-  "rdSupplementarySource": "補充官方資料"
+  "rdSupplementarySource": "補充官方資料",
+  "rental.shop.toyota-naha-airport-seaside": "中央官網與經營公司的目前門市頁均列出與根50-132。官網要求還車時使用MAPCODE 33003370*73；請核對預約門市與當天指引。地圖沿用來源參考點，車輛入口未核實。",
+  "pageLoadError": "頁面未能載入。請重試；如果仍無法開啟，請重新整理頁面。",
+  "pageReload": "重新整理頁面"
 }
