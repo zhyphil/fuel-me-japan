@@ -10,6 +10,9 @@ for (const locale of locales) test(`reviewed airport hours and correct return le
     for (const line of messages[locale][ops.hoursKey].split("\n")) await expect(detail.getByTestId("rental-hours")).toContainText(line);
     const lead = detail.getByTestId("rental-return-lead");
     await expect(lead).toContainText(ops.returnLeadMinutes === null ? messages[locale].ffUnknown : messages[locale].rdReturnLeadMinutes.replace("{minutes}", String(ops.returnLeadMinutes)));
+    const location = rentalLocation(row);
+    await expect(detail.locator(".rental-official-notes")).toContainText(messages[locale].rcChecked.replace("{date}", location.official!.checkedAt));
+    if (location.returnRule) await expect(detail.locator(".return-car-rules")).toContainText(messages[locale].rdRuleChecked.replace("{date}", location.returnRule.checkedAt));
     expect((await observations(page)).geolocationCalls).toBe(0);
   }
 });
@@ -30,4 +33,15 @@ for (const locale of locales) test(`station exceptions, original evidence and na
   await card.getByRole("button",{name: `${messages[locale].rcSelect}: エアカーゴSS`, exact:true}).click();
   await expect(page.locator(".return-navigation")).toBeVisible();
   expect((await observations(page)).geolocationCalls).toBe(0);
+});
+
+test("branch details and company rules show their independent source check dates", async ({page}) => {
+  await fixtures(page);
+  const row = rentalIndex.records.find(row => row.id === "times-naha-airport")!;
+  const location = rentalLocation(row);
+  expect(location.official!.checkedAt).toBe("2026-10-01");
+  expect(location.returnRule!.checkedAt).toBe("2026-09-30");
+  const detail = await openDetail(page, row, "en");
+  await expect(detail.locator(".rental-official-notes")).toContainText("Branch details checked: 2026-10-01");
+  await expect(detail.locator(".return-car-rules")).toContainText("Company refuelling rules checked: 2026-09-30");
 });
