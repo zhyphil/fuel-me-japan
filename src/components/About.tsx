@@ -39,6 +39,8 @@ export function About({ locale }: { locale: Locale }) {
       <section className="about-panel" aria-labelledby="about-privacy-title">
         <h2 id="about-privacy-title">{t.aboutPrivacyTitle}</h2><p>{t.aboutPrivacy}</p><p>{t.aboutMapsPrivacy}</p>
         <a className="about-source-link" href="https://osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener noreferrer">{t.aboutMapPrivacyLink}</a>
+        <p>{t.aboutAdsPrivacy}</p>
+        <a className="about-source-link" href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">{t.aboutAdsPrivacyLink}</a>
       </section>
     </div>
     <details className="about-panel brand-credits" id="brand-credits">

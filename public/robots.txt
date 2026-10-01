@@ -54,6 +54,7 @@ Allow: /field-guides/
 Allow: /favicon.svg
 Allow: /runtime-map-provider.json
 Allow: /ads.txt
+Allow: /adsense-verification.js
 Allow: /robots.txt
 Allow: /sitemap.xml
 Disallow: /

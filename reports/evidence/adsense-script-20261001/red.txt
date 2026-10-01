@@ -1,0 +1,55 @@
+[WebServer] (node:74012) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:74013) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/e2e/adsense-script.spec.ts:7:1 › the delivered static pages each include one async publisher script in the head (23ms)
+
+
+  1) tests/e2e/adsense-script.spec.ts:7:1 › the delivered static pages each include one async publisher script in the head
+
+    Error: expect(received).toHaveLength(expected)
+
+    Expected length: 2
+    Received length: 1
+    Received array:  ["<!doctype html>
+    <html lang=\"en\">
+      <head>
+        <meta charset=\"UTF-8\" />
+        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+        <meta name=\"theme-color\" content=\"#173f37\" />
+        <meta name=\"robots\" content=\"index, follow\" />
+        <meta name=\"google-adsense-account\" content=\"ca-pub-8063428584007009\" />
+        <meta name=\"description\" content=\"Explore fuel stations in Japan on a map. Choose a prefecture or explicitly use your location, with dated references and honest unknowns.\" />
+        <title>Japan fuel station map — Fuel Me Japan</title>
+        <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon.svg\" />
+        <script type=\"module\" crossorigin src=\"/assets/index-CMw3m_1T.js\"></script>
+        <link rel=\"modulepreload\" crossorigin href=\"/assets/rolldown-runtime-CbXtAM7H.js\">
+        <link rel=\"stylesheet\" crossorigin href=\"/assets/index-ubLmRuYY.css\">
+      <link rel=\"modulepreload\" crossorigin href=\"/assets/FindFuel-m6w64MIx.js\" />
+    <link rel=\"modulepreload\" crossorigin href=\"/assets/rolldown-runtime-CbXtAM7H.js\" />
+    <link rel=\"modulepreload\" crossorigin href=\"/assets/index-CMw3m_1T.js\" />
+    <link rel=\"modulepreload\" crossorigin href=\"/assets/StationMiniMap-DKUDOwzL.js\" />
+    <link rel=\"modulepreload\" crossorigin href=\"/assets/source-registry-C72hXypH.js\" />
+    <link rel=\"modulepreload\" crossorigin href=\"/assets/leaflet-src-BF0sg77Q.js\" /><link rel=\"canonical\" href=\"https://fuel-me-japan.com/en/\" />
+    <link rel=\"alternate\" hreflang=\"en\" href=\"https://fuel-me-japan.com/en/\" />
+    <link rel=\"alternate\" hreflang=\"zh-Hant\" href=\"https://fuel-me-japan.com/zh-Hant/\" />
+    <link rel=\"alternate\" hreflang=\"ko\" href=\"https://fuel-me-japan.com/ko/\" />
+    <link rel=\"alternate\" hreflang=\"zh-Hans\" href=\"https://fuel-me-japan.com/zh-Hans/\" />
+    <link rel=\"alternate\" hreflang=\"th\" href=\"https://fuel-me-japan.com/th/\" /><link rel=\"alternate\" hreflang=\"x-default\" href=\"https://fuel-me-japan.com/en/\" />"]
+
+      11 |     const html = await response.text();
+      12 |     const head = html.split("</head>")[0];
+    > 13 |     expect(head.split(adScript)).toHaveLength(2);
+         |                                  ^
+      14 |     const tag = head.match(/<script[^>]*src="https:\/\/pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js[^>]*>/)?.[0];
+      15 |     expect(tag).toMatch(/\basync\b/);
+      16 |     expect(tag).toContain('crossorigin="anonymous"');
+        at /Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e/adsense-script.spec.ts:13:34
+
+    Error Context: test-results/adsense-script-the-deliver-6c3d2-ublisher-script-in-the-head/error-context.md
+
+  1 failed
+    tests/e2e/adsense-script.spec.ts:7:1 › the delivered static pages each include one async publisher script in the head

@@ -8,6 +8,7 @@ export async function interceptExternal(context: BrowserContext) {
     const host = new URL(route.request().url()).hostname;
     if (host === "127.0.0.1" || host === "localhost") await route.continue();
     else if (host === "tile.openstreetmap.org") await route.fulfill({ status: 200, contentType: "image/png", body: offlineTile });
+    else if (host === "pagead2.googlesyndication.com") await route.fulfill({ status: 200, contentType: "application/javascript", body: "/* Offline AdSense boundary: no advertising or tracking. */" });
     else await route.fulfill({ status: 200, contentType: "text/plain", body: "Offline external navigation interception" });
   });
 }

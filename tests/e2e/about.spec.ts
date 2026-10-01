@@ -16,11 +16,11 @@ for (const locale of locales) for (const width of [320, 1280]) {
     const article = page.getByRole("article", { name: t.aboutTitle, exact: true });
     await expect(article).toBeVisible();
     await expect(page.getByRole("heading", { level: 1 })).toHaveText(t.aboutTitle);
-    for (const key of ["aboutIntro", "aboutMission", "aboutStationData", "aboutRentalData", "aboutPriceData", "aboutLimits", "aboutFuelSafety", "aboutPrivacy", "aboutMapsPrivacy", "aboutIndependent"] as const) {
+    for (const key of ["aboutIntro", "aboutMission", "aboutStationData", "aboutRentalData", "aboutPriceData", "aboutLimits", "aboutFuelSafety", "aboutPrivacy", "aboutMapsPrivacy", "aboutAdsPrivacy", "aboutIndependent"] as const) {
       await expect(article.getByText(t[key], { exact: true })).toBeVisible();
     }
     await expect(article.getByRole("link", { name: "contact@fuel-me-japan.com", exact: true })).toHaveAttribute("href", "mailto:contact@fuel-me-japan.com");
-    await expect(article.locator('a[target="_blank"][rel="noopener noreferrer"]:visible')).toHaveCount(4);
+    await expect(article.locator('a[target="_blank"][rel="noopener noreferrer"]:visible')).toHaveCount(5);
     await expect(page.locator(".my-fuel-trigger, .rental-business, .leaflet-container, form")).toHaveCount(0);
     const nav = page.getByRole("navigation", { name: t.navPrimary, exact: true });
     await expect(nav.getByRole("link")).toHaveText([t.navFindFuel, t.rcTitle, t.rgTitle, t.navAbout]);

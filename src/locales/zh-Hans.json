@@ -414,7 +414,7 @@
   "aboutLimits": "站点与门店记录可能有缺漏或过期。收录不代表仍在营业或接受还车，地图坐标也不等于已核实的车辆入口。请以现场告示、你的预约和租车合同为准。",
   "aboutFuelSafety": "“我的用油”保存的是你手动选择的显示偏好，不会自动判断车辆用油。实际油种请核对油箱盖与租车合同。",
   "aboutIndependent": "Fuel Me Japan 是独立的信息项目，不代表所展示的加油站、租车公司或资料来源机构。",
-  "aboutPrivacyTitle": "定位与本地设置",
+  "aboutPrivacyTitle": "定位、本地设置与外部服务",
   "aboutPrivacy": "无需注册账号。油种偏好与加油站收藏保存在当前浏览器，不会自动跨设备同步。只有你主动点击定位按钮，网站才会请求定位权限；精确位置不持久保存，也不传入统计事件。",
   "aboutMapsPrivacy": "加载地图会向 OpenStreetMap 发送底图请求及 IP 地址等常规网络信息，这些请求可能反映你正在浏览的区域。",
   "aboutMapPrivacyLink": "OpenStreetMap 隐私说明",
@@ -447,5 +447,7 @@
   "rdSupplementarySource": "补充官方资料",
   "rental.shop.toyota-naha-airport-seaside": "中央官网和经营公司的当前门店页均列出与根50-132。官网要求还车时使用MAPCODE 33003370*73；请核对预约门店及当天指引。地图沿用来源参考点，车辆入口未核实。",
   "pageLoadError": "页面未能加载。请重试；如果仍无法打开，请刷新页面。",
-  "pageReload": "刷新页面"
+  "pageReload": "刷新页面",
+  "aboutAdsPrivacy": "页面会加载 Google AdSense 脚本以验证网站，Google 会接收 IP 地址、来源站点等常规网络信息。目前广告请求保持暂停，等待审核及用户同意配置完成。脚本加载时，Google 可能读取其域下已有的 Cookie；这不表示你已同意个性化广告。",
+  "aboutAdsPrivacyLink": "Google 如何使用合作网站的信息"
 }

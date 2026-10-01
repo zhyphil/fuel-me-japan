@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "description": "本地构建采用生产 CSP，真实 Google 启动与后续脚本返回 HTTP 200。",
+  "checkedAt": "2026-10-01T14:12:01.573Z",
+  "responses": [
+    {
+      "url": "http://127.0.0.1:4192/zh-Hans/about/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4192/adsense-verification.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4192/assets/index-ubLmRuYY.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4192/assets/rolldown-runtime-CbXtAM7H.js",
+      "status": 200
+    },
+    {
+      "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8063428584007009",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4192/assets/index-r7ugC2wH.js",
+      "status": 200
+    },
+    {
+      "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202609250101/show_ads_impl_fy2021.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4192/favicon.svg",
+      "status": 200
+    }
+  ]
+}

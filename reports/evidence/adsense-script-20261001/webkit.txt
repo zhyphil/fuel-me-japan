@@ -1,0 +1,18 @@
+[WebServer] (node:76622) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 7 tests using 2 workers
+
+(node:76633) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:76634) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 [AdSense-WebKit] › tests/e2e/adsense-script.spec.ts:7:1 › the delivered static pages each include one async publisher script in the head (131ms)
+  ✓  1 [AdSense-WebKit] › tests/e2e/adsense-script.spec.ts:20:31 › en: production policy permits the tag once and keeps ad requests paused before it executes (628ms)
+  ✓  3 [AdSense-WebKit] › tests/e2e/adsense-script.spec.ts:20:31 › zh-Hant: production policy permits the tag once and keeps ad requests paused before it executes (506ms)
+  ✓  4 [AdSense-WebKit] › tests/e2e/adsense-script.spec.ts:20:31 › ko: production policy permits the tag once and keeps ad requests paused before it executes (275ms)
+  ✓  5 [AdSense-WebKit] › tests/e2e/adsense-script.spec.ts:20:31 › zh-Hans: production policy permits the tag once and keeps ad requests paused before it executes (263ms)
+  ✓  6 [AdSense-WebKit] › tests/e2e/adsense-script.spec.ts:20:31 › th: production policy permits the tag once and keeps ad requests paused before it executes (300ms)
+  ✓  7 [AdSense-WebKit] › tests/e2e/adsense-script.spec.ts:45:1 › blocked advertising script does not block the map, language menu or navigation (363ms)
+
+  7 passed (2.3s)

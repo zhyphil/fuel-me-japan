@@ -176,3 +176,8 @@ Current authorization: **The user has now requested completion of all remaining 
 用户的明确授权已落实：应用`cdb7177`推送main与当前分支，生产部署`2cad1d21`，36项线上HTTP／哈希核对通过，20个主页面已允许收录。完整检查363单元、342 Chromium及lint／typecheck／构建通过；详情、参数、数据和部署别名边界保留。
 
 GSC重新提交已受理，但本轮实际读取仍失败，发现0页；12:56 UTC的sitemap和12:57 UTC的中文首页Google实时测试仍报告robots阻止。当前线上规则允许这两个地址，Google缓存文件版本不可查，不能确定缓存为根因。网站发布完成，Google读取与收录尚未验收通过；下次复查应先确认GSC的robots实际抓取记录，不重复改动或扩大已授权范围。中文证据见`reports/search-indexing-20261001.md`。此前等待用户开放收录的状态已经解除。
+
+
+## 当前任务：尝试用户指定的AdSense代码验证
+
+2026-10-01 用户提供确切的AdSense异步脚本，要求“用这个代码去试一试”。允许将此脚本加入静态head，最小放行Google脚本来源，并补充五语言外部服务说明；按持续约定检查、提交、推送、部署后尝试后台代码验证。本轮广告请求保持暂停，审核／CMP／真实展示分别验收，不因验证成功自动记录为已投放。此条覆盖此前尚未添加广告脚本的历史状态；不扩展其他业务功能。见 `reports/adsense-script-20261001.md`。

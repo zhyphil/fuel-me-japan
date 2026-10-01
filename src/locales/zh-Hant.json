@@ -414,7 +414,7 @@
   "aboutLimits": "站點與門店記錄可能有缺漏或過時。收錄不代表仍在營業或接受還車，地圖座標也不等於已核實的車輛入口。請以現場告示、你的預約與租車合約為準。",
   "aboutFuelSafety": "「我的用油」儲存的是你手動選擇的顯示偏好，不會自動判斷車輛用油。實際油種請核對油箱蓋與租車合約。",
   "aboutIndependent": "Fuel Me Japan 是獨立的資訊專案，不代表所顯示的加油站、租車公司或資料來源機構。",
-  "aboutPrivacyTitle": "定位與本機設定",
+  "aboutPrivacyTitle": "定位、本機設定與外部服務",
   "aboutPrivacy": "無需註冊帳號。油種偏好與加油站收藏儲存在目前的瀏覽器，不會自動跨裝置同步。只有你主動點選定位按鈕，網站才會要求定位權限；精確位置不會持久儲存，也不會傳入統計事件。",
   "aboutMapsPrivacy": "載入地圖會向 OpenStreetMap 傳送底圖請求與 IP 位址等一般網路資訊，這些請求可能反映你正在瀏覽的區域。",
   "aboutMapPrivacyLink": "OpenStreetMap 隱私說明",
@@ -447,5 +447,7 @@
   "rdSupplementarySource": "補充官方資料",
   "rental.shop.toyota-naha-airport-seaside": "中央官網與經營公司的目前門市頁均列出與根50-132。官網要求還車時使用MAPCODE 33003370*73；請核對預約門市與當天指引。地圖沿用來源參考點，車輛入口未核實。",
   "pageLoadError": "頁面未能載入。請重試；如果仍無法開啟，請重新整理頁面。",
-  "pageReload": "重新整理頁面"
+  "pageReload": "重新整理頁面",
+  "aboutAdsPrivacy": "頁面會載入 Google AdSense 程式碼以驗證網站，Google 會接收 IP 位址、來源網站等一般網路資訊。目前廣告請求維持暫停，等待審核及使用者同意設定完成。程式碼載入時，Google 可能讀取其網域下既有的 Cookie；這不表示你已同意個人化廣告。",
+  "aboutAdsPrivacyLink": "Google 如何使用合作網站的資訊"
 }

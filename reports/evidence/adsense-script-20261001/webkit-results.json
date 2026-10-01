@@ -1,0 +1,330 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node@24/24.14.0_1/bin/node",
+      "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/node_modules/.bin/playwright",
+      "test",
+      "--config",
+      "/tmp/fmj-adsense-script-20261001/webkit.config.mts"
+    ],
+    "configFile": "/tmp/fmj-adsense-script-20261001/webkit.config.mts",
+    "rootDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/fmj-adsense-script-20261001/webkit-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "AdSense-WebKit",
+        "name": "AdSense-WebKit",
+        "testDir": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "adsense-script.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/tmp/fmj-adsense-script-20261001/webkit-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 2,
+    "webServer": {
+      "command": "npm run preview -- --port 4188 --strictPort",
+      "cwd": "/Users/haoyuzuo/.codex/worktrees/fuel-find/Fuel Me Japan",
+      "url": "http://127.0.0.1:4188",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "adsense-script.spec.ts",
+      "file": "adsense-script.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "the delivered static pages each include one async publisher script in the head",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "AdSense-WebKit",
+              "projectName": "AdSense-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 131,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T14:11:09.438Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ff09a330a286aae31e22-ef5efc87d4570a24425e",
+          "file": "adsense-script.spec.ts",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "en: production policy permits the tag once and keeps ad requests paused before it executes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "AdSense-WebKit",
+              "projectName": "AdSense-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 628,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T14:11:09.437Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ff09a330a286aae31e22-5ec8efa574bd85b3cfef",
+          "file": "adsense-script.spec.ts",
+          "line": 20,
+          "column": 31
+        },
+        {
+          "title": "zh-Hant: production policy permits the tag once and keeps ad requests paused before it executes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "AdSense-WebKit",
+              "projectName": "AdSense-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 506,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T14:11:09.864Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ff09a330a286aae31e22-c8bf994cbc28c17d52c9",
+          "file": "adsense-script.spec.ts",
+          "line": 20,
+          "column": 31
+        },
+        {
+          "title": "ko: production policy permits the tag once and keeps ad requests paused before it executes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "AdSense-WebKit",
+              "projectName": "AdSense-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 275,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T14:11:10.360Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ff09a330a286aae31e22-fe5a8ddb56272ad67ac1",
+          "file": "adsense-script.spec.ts",
+          "line": 20,
+          "column": 31
+        },
+        {
+          "title": "zh-Hans: production policy permits the tag once and keeps ad requests paused before it executes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "AdSense-WebKit",
+              "projectName": "AdSense-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 263,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T14:11:10.375Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ff09a330a286aae31e22-982c2c7c7d39e4c47ad6",
+          "file": "adsense-script.spec.ts",
+          "line": 20,
+          "column": 31
+        },
+        {
+          "title": "th: production policy permits the tag once and keeps ad requests paused before it executes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "AdSense-WebKit",
+              "projectName": "AdSense-WebKit",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 300,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T14:11:10.639Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ff09a330a286aae31e22-e7cf4cbbcb75fef54d19",
+          "file": "adsense-script.spec.ts",
+          "line": 20,
+          "column": 31
+        },
+        {
+          "title": "blocked advertising script does not block the map, language menu or navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "AdSense-WebKit",
+              "projectName": "AdSense-WebKit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 363,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-01T14:11:10.643Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ff09a330a286aae31e22-99d29e61c10b89c08d4c",
+          "file": "adsense-script.spec.ts",
+          "line": 45,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-01T14:11:08.758Z",
+    "duration": 2279.647,
+    "expected": 7,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

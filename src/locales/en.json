@@ -414,7 +414,7 @@
   "aboutLimits": "Records may be incomplete or out of date. A listing does not confirm that a business is open or accepts rental returns, and a map point is not a verified vehicle entrance. Check local signs, your booking and your rental agreement.",
   "aboutFuelSafety": "My Fuel saves your manually selected display preference; it does not identify the fuel your vehicle needs. Check the fuel-door label and rental agreement.",
   "aboutIndependent": "Fuel Me Japan is an independent information project. It does not represent the fuel stations, rental companies or source organizations shown on the site.",
-  "aboutPrivacyTitle": "Location and local settings",
+  "aboutPrivacyTitle": "Location, local settings and external services",
   "aboutPrivacy": "No account is required. Fuel preferences and station favorites are stored in the current browser and do not automatically sync across devices. The site requests location permission only when you press the location button. Precise location is not saved persistently or included in analytics events.",
   "aboutMapsPrivacy": "Loading a map sends tile requests and normal network information, including your IP address, to OpenStreetMap. These requests can reveal the area you are viewing.",
   "aboutMapPrivacyLink": "OpenStreetMap privacy policy",
@@ -447,5 +447,7 @@
   "rdSupplementarySource": "Additional official information",
   "rental.shop.toyota-naha-airport-seaside": "Both current official branch pages list 与根50-132. Toyota specifies MAPCODE 33003370*73 for returns; check your booked branch and the instructions for your return day. The map retains a source reference point; the vehicle entrance has not been verified.",
   "pageLoadError": "This page could not be loaded. Try again, or reload the page if the problem continues.",
-  "pageReload": "Reload page"
+  "pageReload": "Reload page",
+  "aboutAdsPrivacy": "Pages load a Google AdSense script for site verification. Google receives normal network information, including your IP address and the referring site. Ad requests are currently paused while review and consent setup are pending. Google may read existing cookies on its domains when the script loads; this does not mean you have agreed to personalized ads.",
+  "aboutAdsPrivacyLink": "How Google uses information from partner sites"
 }

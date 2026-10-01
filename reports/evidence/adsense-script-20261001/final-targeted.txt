@@ -1,0 +1,34 @@
+[WebServer] (node:76848) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 11 tests using 8 workers
+
+(node:76858) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:76856) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:76853) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:76857) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:76855) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:76851) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:76854) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:76852) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   8 tests/e2e/adsense-script.spec.ts:7:1 › the delivered static pages each include one async publisher script in the head (77ms)
+  ✓   9 tests/e2e/sitemap.spec.ts:54:1 › robots advertises the production sitemap and allows only approved page paths plus rendering resources (28ms)
+  ✓   5 tests/e2e/adsense-script.spec.ts:20:31 › zh-Hans: production policy permits the tag once and keeps ad requests paused before it executes (558ms)
+  ✓   3 tests/e2e/adsense-script.spec.ts:20:31 › en: production policy permits the tag once and keeps ad requests paused before it executes (539ms)
+  ✓   2 tests/e2e/adsense-script.spec.ts:20:31 › th: production policy permits the tag once and keeps ad requests paused before it executes (501ms)
+  ✓   6 tests/e2e/adsense-script.spec.ts:20:31 › ko: production policy permits the tag once and keeps ad requests paused before it executes (532ms)
+  ✓   4 tests/e2e/adsense-script.spec.ts:20:31 › zh-Hant: production policy permits the tag once and keeps ad requests paused before it executes (423ms)
+  ✓   7 tests/e2e/adsense-script.spec.ts:45:1 › blocked advertising script does not block the map, language menu or navigation (650ms)
+  ✓  10 tests/e2e/sitemap.spec.ts:71:1 › root and slash aliases keep the same canonical URL after JavaScript runs (495ms)
+  ✓  11 tests/e2e/sitemap.spec.ts:80:1 › queries, detail pages and missing routes stay noindex and navigation restores the public page policy (578ms)
+  ✓   1 tests/e2e/sitemap.spec.ts:7:1 › sitemap contains canonical public pages with reciprocal languages and indexing enabled (1.4s)
+
+  11 passed (2.4s)
